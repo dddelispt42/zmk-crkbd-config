@@ -56,16 +56,16 @@
                 numnav_layer {
                         label = "NUMNAV";
 //    -----------------------------------------------------------------------------------------
-//     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   |   [    |
+//     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   | LBKT   |
 //     |  LALT  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     |  LFT  |  DWN  |   UP  |  RGT  |       |        |
 //     |        | BTCLR | OUTBT | OUTUSB|       |       |     |       |       |       |       | RGUI  |        |
 //                              |       |       |       |     | SPC/RC|  L3   |       |
-            bindings = <
+                        bindings = <
        &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
 &kp LALT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
  &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &kp RGUI  &trans
                           	    &trans  &trans  &trans        &hm RCTRL SPACE &mo 3 &trans
-            >;
+                        >;
                 };
 
                 symbol_layer {
