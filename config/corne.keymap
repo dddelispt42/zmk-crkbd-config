@@ -8,49 +8,133 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define QWERTY 0
+#define NUMNAV 1
+#define SYMBOL 2
+#define FUNADJ 3
+#define CONFIG 4
+#define MSOUTL 5
+
+// TODO: define 3x tap dance for caps lock
+// TODO: add mouse support - if available in ZMK - or reconfig layer
+
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        tdcaps: tap_dance_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_caps";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&kp LSHIFT>, <&kp CAPS>;
+        };
+    };
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
+    keymap {
+        compatible = "zmk,keymap";
 
-                raise_layer {
+        qwerty_layer {
+            label = "QWERTY"
+//    -----------------------------------------------------------------------------------------
+//     | TAB/L4 |   Q   |   W   |   E   |   R   |   T   |     |   Y   |   U    |   I   |   O   |   P   | DEL/L4 |
+//     | ESC/LA | A/LA  | S/LC  | D/LG  | F/LS  |   G   |     |   H   | J/RS   | K/LG  | L/RC  | ;/RA  |   '    |
+//     |  SHFT  | Z/LS  |   X   |   C   |   V   |   B   |     |   N   |   M    |   ,   |   .   | //RS  | RET/RS |
+//                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
+            bindings = <
+&lt CONFIG TAB  &kp Q   &kp W   &kp E   &kp R   &kp T         &kp Y   &kp U    &kp I   &kp O   &kp P   &lt CONFIG DEL
+&hm LALT ESC &hm LALT A &hm LCTRL S &hm LGUI D &hm LSHFT F &kp G &kp H &hm RSHFT J &hm LGUI K &hm RCTRL L &hm RALT SEMI &hm RALT SQT
+    &kp LSHFT &hm LSHIFT Z  &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA &kp DOT &hm RSHIFT FSLH &hm RSHIFT RET
+             &hm LGUI RBRC  &mo NUMNAV  &hm LCTRL BSPC          &kp SPACE &mo SYMBOL   &hm LGUI BSLH
+            >;
+        };
+
+        numnav_layer {
+            label. "NUMNAV"
+//    -----------------------------------------------------------------------------------------
+//     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   |   [    |
+//     |  LALT  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     |  LFT  |  DWN  |   UP  |  RGT  |       |        |
+//     |        | BTCLR | OUTBT | OUTUSB|       |       |     |       |       |       |       | RGUI  |        |
+//                              |       |       |       |     | SPC/RC|  L3   |       |
+            bindings = <
+       &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
+&kp LALT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+ &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &RGUI  &trans
+                          	    &trans  &trans  &trans        &hm RCTRL SPACE &mo FUNADJ &trans
+            >;
+        };
+
+        symbol_layer {
+            label. "SYMBOL"
+//    -----------------------------------------------------------------------------------------
+//     |        |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |        |
+//     |        |       |       |       |       |       |     |   -   |   =   |   {   |   }   | " | " |   ~    |
+//     |        |       |       |       |       |       |     |   _   |   +   |   [   |   ]   |   \   |   `    |
+//                              |       |       |  SPC  |     |  ENT  |       |  ALT  |
+            bindings = <
+     &trans   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
+  &trans &none &kp LA(N8) &kp LA(N7) &kp MULTIPLY &kp LC(LA(LG(A)))  &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE &kp TILDE
+  &trans &none &kp LA(N9) &kp LA(N0) &kp LPAR   &kp LC(LA(LG(B)))    &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
+                    	   &trans &mo FUNADJ &hm RCTRL BSPC   &trans  &trans   &trans
+            >;
+        };
+
+        funadj_layer {
+            label. "FUNADJ"
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
+//  |   TAB  |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |  BKSP  |
+//  |  CTRL  |       |       |       |       |       |     |   -   |   =   |   [   |   ]   |   \   |   `    |
+//  |  SHFT  |       |       |       |       |       |     |   _   |   +   |   {   |   }   |  " | "  |   ~    |
+//                           |  GUI  |       |  SPC  |     |  ENT  |       |  ALT  |
+            bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+            >;
         };
+
+        config_layer {
+            label. "CONFIG"
+// -----------------------------------------------------------------------------------------
+//  |   TAB  |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   |  BKSP  |
+//  |  BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     |  LFT  |  DWN  |   UP  |  RGT  |       |        |
+//  |  SHFT  |       |       |       |       |       |     |       |       |       |       |       |        |
+//                           |  GUI  |       |  SPC  |     |  ENT  |       |  ALT  |
+            bindings = <
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+            >;
+        };
+
+        msoutl_layer {
+            label. "MSOUTL"
+// -----------------------------------------------------------------------------------------
+//  |   TAB  |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |  BKSP  |
+//  |  CTRL  |       |       |       |       |       |     |   -   |   =   |   [   |   ]   |   \   |   `    |
+//  |  SHFT  |       |       |       |       |       |     |   _   |   +   |   {   |   }   |  " | "  |   ~    |
+//                           |  GUI  |       |  SPC  |     |  ENT  |       |  ALT  |
+            bindings = <
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+            >;
+        };
+
+//    conditional_layers {
+//        compatible = "zmk,conditional-layers";
+//        tri_layer {
+//            if-layers = <1 2>;
+//            then-layer = <3>;
+//        };
+//    };
 };
