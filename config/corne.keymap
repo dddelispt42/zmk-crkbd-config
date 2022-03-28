@@ -15,9 +15,6 @@
 #define CONFIG 4
 #define MSOUTL 5
 
-// TODO: define 3x tap dance for caps lock
-// TODO: add mouse support - if available in ZMK - or reconfig layer
-
 / {
     behaviors {
         hm: homerow_mods {
@@ -27,13 +24,6 @@
             tapping_term_ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
-        tdcaps: tap_dance_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_caps";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&kp LSHIFT>, <&kp CAPS>;
         };
     };
 
@@ -51,82 +41,7 @@
 &lt CONFIG TAB  &kp Q   &kp W   &kp E   &kp R   &kp T         &kp Y   &kp U    &kp I   &kp O   &kp P   &lt CONFIG DEL
 &hm LALT ESC &hm LALT A &hm LCTRL S &hm LGUI D &hm LSHFT F &kp G &kp H &hm RSHFT J &hm LGUI K &hm RCTRL L &hm RALT SEMI &hm RALT SQT
     &kp LSHFT &hm LSHIFT Z  &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA &kp DOT &hm RSHIFT FSLH &hm RSHIFT RET
-             &hm LGUI RBRC  &mo NUMNAV  &hm LCTRL BSPC          &kp SPACE &mo SYMBOL   &hm LGUI BSLH
-            >;
-        };
-
-        numnav_layer {
-            label. "NUMNAV"
-//    -----------------------------------------------------------------------------------------
-//     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   |   [    |
-//     |  LALT  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     |  LFT  |  DWN  |   UP  |  RGT  |       |        |
-//     |        | BTCLR | OUTBT | OUTUSB|       |       |     |       |       |       |       | RGUI  |        |
-//                              |       |       |       |     | SPC/RC|  L3   |       |
-            bindings = <
-       &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
-&kp LALT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
- &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &RGUI  &trans
-                          	    &trans  &trans  &trans        &hm RCTRL SPACE &mo FUNADJ &trans
-            >;
-        };
-
-        symbol_layer {
-            label. "SYMBOL"
-//    -----------------------------------------------------------------------------------------
-//     |        |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |        |
-//     |        |       |       |       |       |       |     |   -   |   =   |   {   |   }   | " | " |   ~    |
-//     |        |       |       |       |       |       |     |   _   |   +   |   [   |   ]   |   \   |   `    |
-//                              |       |       |  SPC  |     |  ENT  |       |  ALT  |
-            bindings = <
-     &trans   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-  &trans &none &kp LA(N8) &kp LA(N7) &kp MULTIPLY &kp LC(LA(LG(A)))  &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE &kp TILDE
-  &trans &none &kp LA(N9) &kp LA(N0) &kp LPAR   &kp LC(LA(LG(B)))    &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
-                    	   &trans &mo FUNADJ &hm RCTRL BSPC   &trans  &trans   &trans
-            >;
-        };
-
-        funadj_layer {
-            label. "FUNADJ"
-// -----------------------------------------------------------------------------------------
-//  |   TAB  |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |  BKSP  |
-//  |  CTRL  |       |       |       |       |       |     |   -   |   =   |   [   |   ]   |   \   |   `    |
-//  |  SHFT  |       |       |       |       |       |     |   _   |   +   |   {   |   }   |  " | "  |   ~    |
-//                           |  GUI  |       |  SPC  |     |  ENT  |       |  ALT  |
-            bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-            >;
-        };
-
-        config_layer {
-            label. "CONFIG"
-// -----------------------------------------------------------------------------------------
-//  |   TAB  |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   |  BKSP  |
-//  |  BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     |  LFT  |  DWN  |   UP  |  RGT  |       |        |
-//  |  SHFT  |       |       |       |       |       |     |       |       |       |       |       |        |
-//                           |  GUI  |       |  SPC  |     |  ENT  |       |  ALT  |
-            bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-            >;
-        };
-
-        msoutl_layer {
-            label. "MSOUTL"
-// -----------------------------------------------------------------------------------------
-//  |   TAB  |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |  BKSP  |
-//  |  CTRL  |       |       |       |       |       |     |   -   |   =   |   [   |   ]   |   \   |   `    |
-//  |  SHFT  |       |       |       |       |       |     |   _   |   +   |   {   |   }   |  " | "  |   ~    |
-//                           |  GUI  |       |  SPC  |     |  ENT  |       |  ALT  |
-            bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+             &hm LGUI RBRC  &trans  &hm LCTRL BSPC          &kp SPACE &trans   &hm LGUI BSLH
             >;
         };
 
