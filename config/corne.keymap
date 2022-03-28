@@ -62,8 +62,10 @@
 //                              |       |       |       |     | SPC/RC|  L3   |       |
                         bindings = <
        &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
-&kp LALT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
- &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &kp RGUI  &trans
+       &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
+       &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
+// &kp LALT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+ // &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &kp RGUI  &trans
                           	    &trans  &trans  &trans        &hm RCTRL SPACE &mo 3 &trans
                         >;
                 };
