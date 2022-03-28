@@ -40,16 +40,16 @@
 
                 default_layer {
                         label = "QWERTY";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+//    -----------------------------------------------------------------------------------------
+//     | TAB/L4 |   Q   |   W   |   E   |   R   |   T   |     |   Y   |   U    |   I   |   O   |   P   | DEL/L4 |
+//     | ESC/LA | A/LA  | S/LC  | D/LG  | F/LS  |   G   |     |   H   | J/RS   | K/LG  | L/RC  | ;/RA  |   '    |
+//     |  SHFT  | Z/LS  |   X   |   C   |   V   |   B   |     |   N   |   M    |   ,   |   .   | //RS  | RET/RS |
+//                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
                         bindings = <
 &lt 4 TAB  &kp Q   &kp W   &kp E   &kp R   &kp T         &kp Y   &kp U    &kp I   &kp O   &kp P   &lt 4 DEL
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+&hm LALT ESC &hm LALT A &hm LCTRL S &hm LGUI D &hm LSHFT F &kp G &kp H &hm RSHFT J &hm LGUI K &hm RCTRL L &hm RALT SEMI &hm RALT SQT
+    &kp LSHFT &hm LSHIFT Z  &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA &kp DOT &hm RSHIFT FSLH &hm RSHIFT RET
+             &hm LGUI RBRC  &mo 1  &hm LCTRL BSPC          &kp SPACE &mo 2   &hm LGUI BSLH
                         >;
                 };
                 numnav_layer {
