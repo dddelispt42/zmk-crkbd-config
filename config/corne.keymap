@@ -9,7 +9,32 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define QWERTY 0
+#define NUMNAV 1
+#define SYMBOL 2
+#define FUNADJ 3
+#define CONFIG 4
+#define MSOUTL 5
+
 / {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        tdcaps: tap_dance_caps {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_caps";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&kp LSHIFT>, <&kp CAPS>;
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
