@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+// #include <dt-bindings/zmk/mouse.h>
 
 #define QWERTY 0
 #define NUMNAV 1
@@ -17,15 +18,43 @@
 #define CONFIG 4
 #define MSOUTL 5
 
+// TODO: carry home row mods into all relevant layer
+// TODO: move bluetooth into own config layer
+// TODO: make media key layer
+// TODO: define 6th column alternative
+// TODO: check mouse.h - maybe only missing in documen™!⅞°
+// // TODO: align with QMK keymaps
+// TODO: define 3x tap dance for caps lock
+// TODO: add mouse support - if available in ZMK - or reconfig layer
+
 / {
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
+            label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+        hs: homerow_shifts {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFTS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+        hsl: homerow_shifts_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_SHIFTS_LAYER";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&to>;
         };
         tdcaps: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
@@ -47,9 +76,9 @@
 //     |  SHFT  | Z/LS  |   X   |   C   |   V   |   B   |     |   N   |   M    |   ,   |   .   | //RS  | RET/RS |
 //                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
                         bindings = <
-&lt 4 TAB  &kp Q   &kp W   &kp E   &kp R   &kp T         &kp Y   &kp U    &kp I   &kp O   &kp P   &lt 4 DEL
+&hsl 4 TAB  &kp Q   &kp W   &kp E   &kp R   &kp T         &kp Y   &kp U    &kp I   &kp O   &kp P   &hsl 4 DEL
 &hm LALT ESC &hm LALT A &hm LCTRL S &hm LGUI D &hm LSHFT F &kp G &kp H &hm RSHFT J &hm LGUI K &hm RCTRL L &hm RALT SEMI &hm RALT SQT
-    &kp LSHFT &hm LSHIFT Z  &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA &kp DOT &hm RSHIFT FSLH &hm RSHIFT RET
+    &kp LSHFT &hs LSHIFT Z  &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA &kp DOT &hs RSHIFT FSLH &hs RSHIFT RET
              &hm LGUI RBRC  &mo 1  &hm LCTRL BSPC          &kp SPACE &mo 2   &hm LGUI BSLH
                         >;
                 };
@@ -77,8 +106,8 @@
 //     |        |       |       |       |       |       |     |   _   |   +   |   [   |   ]   |   \   |   `    |
 //                              |       |       |  SPC  |     |  ENT  |       |  ALT  |
                         bindings = <
-     &trans   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR &trans
-  &trans &trans &kp RA(N8) &kp RA(N7) &kp KP_MULTIPLY &kp LC(LA(LG(A)))  &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE &kp TILDE
+     &trans   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &trans
+  &trans &trans &kp RA(N8) &kp RA(N7) &kp STAR &kp LC(LA(LG(A)))  &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE &kp TILDE
   &trans &trans &kp RA(N9) &kp RA(N0) &kp LPAR   &kp LC(LA(LG(B)))    &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
                         &trans &mo 3 &hm RCTRL BSPC   &trans  &trans   &trans
                         >;
