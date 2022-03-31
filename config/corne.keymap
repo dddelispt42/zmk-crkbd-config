@@ -16,7 +16,8 @@
 #define SYMBOL 2
 #define FUNADJ 3
 #define CONFIG 4
-#define MSOUTL 5
+#define BLUETH 5
+#define MSOUTL 6
 
 // TODO: carry home row mods into all relevant layer
 // TODO: move bluetooth into own config layer
@@ -26,6 +27,8 @@
 // // TODO: align with QMK keymaps
 // TODO: define 3x tap dance for caps lock
 // TODO: add mouse support - if available in ZMK - or reconfig layer
+// TODO: fix CAG-A/B to LT/GT in number layer
+// TODO: define config and media layer
 
 / {
     behaviors {
@@ -71,15 +74,15 @@
                 default_layer {
                         label = "QWERTY";
 //    -----------------------------------------------------------------------------------------
-//     | TAB/L4 |   Q   |   W   |   E   |   R   |   T   |     |   Y   |   U    |   I   |   O   |   P   | DEL/L4 |
+//     | TAB/L4 |   Q   |   W   |   E   |   R   | T/L6  |     | Y/L6  |   U    |   I   |   O   |   P   | DEL/L4 |
 //     | ESC/LA | A/LA  | S/LC  | D/LG  | F/LS  |   G   |     |   H   | J/RS   | K/LG  | L/RC  | ;/RA  |   '    |
 //     |  SHFT  | Z/LS  |   X   |   C   |   V   |   B   |     |   N   |   M    |   ,   |   .   | //RS  | RET/RS |
 //                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
                         bindings = <
-&hsl 4 TAB  &kp Q   &kp W   &kp E   &kp R   &kp T         &kp Y   &kp U    &kp I   &kp O   &kp P   &hsl 4 DEL
+&lt 4 TAB  &kp Q   &kp W   &kp E   &kp R   &lt 5 T         &lt 5 Y   &kp U    &kp I   &kp O   &kp P   &lt 4 DEL
 &hm LALT ESC &hm LALT A &hm LCTRL S &hm LGUI D &hm LSHFT F &kp G &kp H &hm RSHFT J &hm LGUI K &hm RCTRL L &hm RALT SEMI &hm RALT SQT
     &kp LSHFT &hs LSHIFT Z  &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA &kp DOT &hs RSHIFT FSLH &hs RSHIFT RET
-             &hm LGUI RBRC  &mo 1  &hm LCTRL BSPC          &kp SPACE &mo 2   &hm LGUI BSLH
+             &hm LGUI RBKT  &mo 1  &hm LCTRL BSPC          &kp SPACE &mo 2   &hm LGUI BSLH
                         >;
                 };
 
@@ -87,12 +90,12 @@
                         label = "NUMNAV";
 //    -----------------------------------------------------------------------------------------
 //     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   | LBKT   |
-//     |  LALT  |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |     |  LFT  |  DWN  |   UP  |  RGT  |       |        |
-//     |        | BTCLR | OUTBT | OUTUSB|       |       |     |       |       |       |       | RGUI  |        |
+//     |  LALT  |       |       |       |       |       |     |  LFT  |  DWN  |   UP  |  RGT  |       |        |
+//     |        |       |       |       |       |       |     |       |       |       |       | RGUI  |        |
 //                              |       |       |       |     | SPC/RC|  L3   |       |
                         bindings = <
        &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
- &kp LALT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+ &kp LALT &trans &trans &trans &trans &trans &kp LEFT &hm RSHIFT DOWN &hm LGUI UP &hm RCTRL RIGHT &kp RALT &trans
  &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &kp RGUI  &trans
                           	    &trans  &trans  &trans        &hm RCTRL SPACE &mo 3 &trans
                         >;
@@ -107,8 +110,8 @@
 //                              |       |       |  SPC  |     |  ENT  |       |  ALT  |
                         bindings = <
      &trans   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &trans
-  &trans &trans &kp RA(N8) &kp RA(N7) &kp STAR &kp LC(LA(LG(A)))  &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE &kp TILDE
-  &trans &trans &kp RA(N9) &kp RA(N0) &kp LPAR   &kp LC(LA(LG(B)))    &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
+  &trans &kp LT &kp RA(N8) &kp RA(N7) &kp STAR &kp LC(LA(LG(A)))  &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE &kp TILDE
+  &trans &kp GT &kp RA(N9) &kp RA(N0) &kp LPAR   &kp LC(LA(LG(B)))    &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
                         &trans &mo 3 &hm RCTRL BSPC   &trans  &trans   &trans
                         >;
                 };
@@ -140,6 +143,21 @@
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
+
+                bt_layer {
+                        label = "BLUETH";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      | BT0 | BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |      |
+// |      | CLR | BLE | USB |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+       &trans   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
+ &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans
+ &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                          	    &trans  &trans  &trans        &trans &trans &trans
                         >;
                 };
         };
