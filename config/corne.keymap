@@ -20,15 +20,17 @@
 #define MSOUTL 6
 
 // TODO: carry home row mods into all relevant layer
-// TODO: move bluetooth into own config layer
+// TODO: remove keys from 6th column
 // TODO: make media key layer
 // TODO: define 6th column alternative
 // TODO: check mouse.h - maybe only missing in documen™!⅞°
-// // TODO: align with QMK keymaps
+// TODO: align with QMK keymaps
 // TODO: define 3x tap dance for caps lock
 // TODO: add mouse support - if available in ZMK - or reconfig layer
 // TODO: fix CAG-A/B to LT/GT in number layer
 // TODO: define config and media layer
+// TODO: move lt --> hsl
+// TODO: add symbols from 6th row key and thumbkey (which are TAB and ESC now)
 
 / {
     behaviors {
@@ -74,15 +76,15 @@
                 default_layer {
                         label = "QWERTY";
 //    -----------------------------------------------------------------------------------------
-//     | TAB/L4 |   Q   |   W   |   E   |   R   | T/L6  |     | Y/L6  |   U    |   I   |   O   |   P   | DEL/L4 |
-//     | ESC/LA | A/LA  | S/LC  | D/LG  | F/LS  |   G   |     |   H   | J/RS   | K/LG  | L/RC  | ;/RA  |   '    |
-//     |  SHFT  | Z/LS  |   X   |   C   |   V   |   B   |     |   N   |   M    |   ,   |   .   | //RS  | RET/RS |
+//     | TAB    |   Q   |   W   | E/L6  | R/L5  | T/L4  |     | Y/L4  |  U/L5  | I/L6  |   O   |   P   |  DEL   |
+//     | ESC/LA | A/LG  | S/LC  | D/LA  | F/LS  |   G   |     |   H   |  J/RS  | K/LA  | L/LC  | ;/RG  |   '    |
+//     |  SHFT  | Z/LS  | X/RC  | C/RA  |   V   |   B   |     |   N   |   M    | ,/RA  | ./RC  | //RS  | RET/RS |
 //                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
                         bindings = <
-&lt 4 TAB  &kp Q   &kp W   &kp E   &kp R   &lt 5 T         &lt 5 Y   &kp U    &kp I   &kp O   &kp P   &lt 4 DEL
-&hm LALT ESC &hm LALT A &hm LCTRL S &hm LGUI D &hm LSHFT F &kp G &kp H &hm RSHFT J &hm LGUI K &hm RCTRL L &hm RALT SEMI &hm RALT SQT
-    &kp LSHFT &hs LSHIFT Z  &kp X   &kp C   &kp V   &kp B     &kp N   &kp M   &kp COMMA &kp DOT &hs RSHIFT FSLH &hs RSHIFT RET
-             &hm LGUI RBKT  &mo 1  &hm LCTRL BSPC          &kp SPACE &mo 2   &hm LGUI BSLH
+&kp TAB  &kp Q   &kp W   &lt 6 E   &lt 5 R   &lt 4 T         &lt 4 Y   &lt 5 U    &lt 6 I   &kp O   &kp P   &kp DEL
+&hm LALT ESC &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G  &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm LGUI SEMI &hm RALT SQT
+&kp LSHFT &hs RGUI Z  &hm RCTRL X &hm RALT C &kp V       &kp B  &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hs RGUI FSLH &hs RSHFT RET
+             &hm LGUI TAB  &mo 1  &hm LCTRL BSPC          &kp SPACE &lt 2 RET  &hm LGUI ESC
                         >;
                 };
 
@@ -90,14 +92,14 @@
                         label = "NUMNAV";
 //    -----------------------------------------------------------------------------------------
 //     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   | LBKT   |
-//     |  LALT  |       |       |       |       |       |     |  LFT  |  DWN  |   UP  |  RGT  |       |        |
-//     |        |       |       |       |       |       |     |       |       |       |       | RGUI  |        |
-//                              |       |       |       |     | SPC/RC|  L3   |       |
+//     |        |       |       |       |       |       |     | LFT/RS| DWN/LA|  UP/LC|  GT/LG|       |        |
+//     |        |       |       |       |       |       |     |       |       |       |       |       |        |
+//                              |       |       |       |     |       | RET/L3|       |
                         bindings = <
        &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
- &kp LALT &trans &trans &trans &trans &trans &kp LEFT &hm RSHIFT DOWN &hm LGUI UP &hm RCTRL RIGHT &kp RALT &trans
- &trans &trans &trans &trans &trans &trans    &trans  &trans  &trans  &trans  &kp RGUI  &trans
-                          	    &trans  &trans  &trans        &hm RCTRL SPACE &mo 3 &trans
+ &trans &trans &trans &trans &trans &trans &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &trans
+ &trans &trans &trans &trans &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                          	    &trans  &trans  &trans        &trans &lt 3 RET &trans
                         >;
                 };
 
@@ -105,28 +107,28 @@
                         label = "SYMBOL";
 //    -----------------------------------------------------------------------------------------
 //     |        |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |        |
-//     |        |       |       |       |       |       |     |   -   |   =   |   {   |   }   | " | " |   ~    |
-//     |        |       |       |       |       |       |     |   _   |   +   |   [   |   ]   |   \   |   `    |
-//                              |       |       |  SPC  |     |  ENT  |       |  ALT  |
+//     |        |   <   |   [   |   {   |   <   |       |     |   -   |   =   |   {   |   }   | " | " |   ~    |
+//     |        |   >   |   ]   |   }   |   >   |       |     |   _   |   +   |   [   |   ]   |   \   |   `    |
+//                              |       |  L3   |  DEL  |     |       |       |       |
                         bindings = <
      &trans   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &trans
-  &trans &kp LT &kp RA(N8) &kp RA(N7) &kp STAR &kp LC(LA(LG(A)))  &kp MINUS &kp EQUAL &kp LBRC &kp RBRC &kp PIPE &kp GRAVE
-  &trans &kp GT &kp RA(N9) &kp RA(N0) &kp LPAR   &kp LC(LA(LG(B)))    &kp UNDER &kp PLUS  &kp LBKT &kp RBKT &kp BSLH &kp TILDE
-                        &trans &mo 3 &hm RCTRL BSPC   &trans  &trans   &trans
+  &trans &hm LGUI NON_US_BSLH &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp LC(LA(LG(A)))  &kp MINUS &hm RSHFT EQUAL &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE &kp GRAVE
+  &trans &hm RGUI LS(NON_US_BSLH) &hm RCTRL RA(N9) &hm RALT RA(N0) &kp LPAR   &kp LC(LA(LG(B)))   &kp UNDER &kp PLUS  &hm RALT LBKT &hm RCTRL RBKT &hm RGUI BSLH &kp TILDE
+                        &trans &mo 3 &hm RCTRL DEL   &trans  &trans   &trans
                         >;
                 };
 
                 funadj_layer {
                         label = "FUNADJ";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | PSCRN|
+// |      | F11 | F12 | F13 | F14 | F15 |   | F16 | F17 | F18 | F19 | F20 | PSCRN|
+// |      |     |     |     |     |     |   | HOME| PDN | PUP | END | INS | BREAK|
+//                    |     |     |     |   |     |     |     |
                         bindings = <
    &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp PSCRN
-   &trans &kp F11 &kp F12 &kp F13 &kp F14 &kp F15   &kp F16 &kp F17 &kp F18 &kp F19 &kp F20 &kp SLCK
-   &trans &trans   &trans &trans   &trans   &trans      &kp HOME &kp PG_DN &kp PG_UP &kp END &kp INS &kp PAUSE_BREAK
+   &trans &hm LGUI F11 &hm LCTRL F12 &hm LALT F13 &hm LSHFT F14 &kp F15  &kp F16 &hm RSHFT F17 &hm LALT F18 &hm LCTRL F19 &hm LGUI F20 &kp SLCK
+   &trans &trans   &trans &trans   &trans   &trans                        &kp HOME &kp PG_DN &hm RALT PG_UP &hm RCTRL END &hm RGUI INS &kp PAUSE_BREAK
                     	     &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
@@ -158,6 +160,21 @@
  &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans
  &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans
                           	    &trans  &trans  &trans        &trans &trans &trans
+                        >;
+                };
+
+                outl_layer {
+                        label = "MSOUTL";
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
+                     &trans &trans &trans   &trans &trans &trans
                         >;
                 };
         };
