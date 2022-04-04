@@ -19,18 +19,14 @@
 #define BLUETH 5
 #define MSOUTL 6
 
-// TODO: carry home row mods into all relevant layer
-// TODO: remove keys from 6th column
-// TODO: make media key layer
-// TODO: define 6th column alternative
-// TODO: check mouse.h - maybe only missing in documen™!⅞°
-// TODO: align with QMK keymaps
-// TODO: define 3x tap dance for caps lock
-// TODO: add mouse support - if available in ZMK - or reconfig layer
 // TODO: fix CAG-A/B to LT/GT in number layer
-// TODO: define config and media layer
 // TODO: move lt --> hsl
 // TODO: add symbols from 6th row key and thumbkey (which are TAB and ESC now)
+// TODO: tap dance for C_BRI_UP/MAX DN/MIN
+// TODO: align with QMK keymaps
+// TODO: remove keys from 6th column
+// TODO: check mouse.h - maybe only missing in documen™!⅞°
+// TODO: add mouse support - if available in ZMK - or reconfig layer
 
 / {
     behaviors {
@@ -99,7 +95,7 @@
        &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
  &trans &trans &trans &trans &trans &trans &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &trans
  &trans &trans &trans &trans &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                          	    &trans  &trans  &trans        &trans &lt 3 RET &trans
+                                 &trans  &trans  &trans        &trans &lt 3 RET &trans
                         >;
                 };
 
@@ -123,28 +119,28 @@
 // -----------------------------------------------------------------------------------------
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | PSCRN|
 // |      | F11 | F12 | F13 | F14 | F15 |   | F16 | F17 | F18 | F19 | F20 | PSCRN|
-// |      |     |     |     |     |     |   | HOME| PDN | PUP | END | INS | BREAK|
+// | CAPS | F21 | F22 | F23 | F24 |     |   | HOME| PDN | PUP | END | INS | BREAK|
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp PSCRN
-   &trans &hm LGUI F11 &hm LCTRL F12 &hm LALT F13 &hm LSHFT F14 &kp F15  &kp F16 &hm RSHFT F17 &hm LALT F18 &hm LCTRL F19 &hm LGUI F20 &kp SLCK
-   &trans &trans   &trans &trans   &trans   &trans                        &kp HOME &kp PG_DN &hm RALT PG_UP &hm RCTRL END &hm RGUI INS &kp PAUSE_BREAK
-                    	     &trans &trans   &trans   &trans   &trans    &trans
+&trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp PSCRN
+&trans &hm LGUI F11 &hm LCTRL F12 &hm LALT F13 &hm LSHFT F14 &kp F15  &kp F16 &hm RSHFT F17 &hm LALT F18 &hm LCTRL F19 &hm LGUI F20 &kp SLCK
+&kp CAPS &hm RGUI F21 &hm RCTRL F22 &hm RALT F23 &kp F24 &trans  &kp HOME &kp PG_DN &hm RALT PG_UP &hm RCTRL END &hm RGUI INS &kp PAUSE_BREAK
+                            &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
 
                 config_layer {
                         label = "CONFIG";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                    	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+ &trans &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &trans &trans &trans
+ &kp C_PWR &kp C_SLEEP &kp K_LOCK &kp CAPS &trans &trans  &kp C_MUTE &trans &kp C_PP &trans &trans &kp C_EJECT
+                &trans &bootloader &reset   &reset &bootloader &trans
                         >;
                 };
 
@@ -159,7 +155,7 @@
        &trans   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
  &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans
  &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                          	    &trans  &trans  &trans        &trans &trans &trans
+                                 &trans  &trans  &trans        &trans &trans &trans
                         >;
                 };
 
