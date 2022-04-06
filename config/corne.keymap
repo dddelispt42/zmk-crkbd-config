@@ -72,29 +72,29 @@
                 default_layer {
                         label = "QWERTY";
 //    -----------------------------------------------------------------------------------------
-//     | TAB    |   Q   |   W   | E/L6  | R/L5  | T/L4  |     | Y/L4  |  U/L5  | I/L6  |   O   |   P   |  DEL   |
-//     | ESC/LA | A/LG  | S/LC  | D/LA  | F/LS  |   G   |     |   H   |  J/RS  | K/LA  | L/LC  | ;/RG  |   '    |
-//     |  SHFT  | Z/LS  | X/RC  | C/RA  |   V   |   B   |     |   N   |   M    | ,/RA  | ./RC  | //RS  | RET/RS |
+//     |        |   Q   |   W   | E/L6  | R/L5  | T/L4  |     | Y/L4  |  U/L5  | I/L6  |   O   |   P   |        |
+//     |        | A/LG  | S/LC  | D/LA  | F/LS  |   G   |     |   H   |  J/RS  | K/LA  | L/LC  | ;/RG  |        |
+//     |        | Z/LS  | X/RC  | C/RA  |   V   |   B   |     |   N   |   M    | ,/RA  | ./RC  | //RS  |        |
 //                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
                         bindings = <
-&kp TAB  &kp Q   &kp W   &lt 6 E   &lt 5 R   &lt 4 T         &lt 4 Y   &lt 5 U    &lt 6 I   &kp O   &kp P   &kp DEL
-&hm LALT ESC &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G  &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm LGUI SEMI &hm RALT SQT
-&kp LSHFT &hs RGUI Z  &hm RCTRL X &hm RALT C &kp V       &kp B  &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hs RGUI FSLH &hs RSHFT RET
-             &hm LGUI TAB  &mo 1  &hm LCTRL BSPC          &kp SPACE &lt 2 RET  &hm LGUI ESC
+&none &kp Q   &kp W   &lt 6 E   &lt 5 R   &lt 4 T             &lt 4 Y   &lt 5 U    &lt 6 I   &kp O   &kp P   &none
+&none &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm RGUI SEMI &none
+&none &kp Z &hm RCTRL X &hm RALT C &kp V       &kp B          &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hm K_CMENU FSLH &none
+                        &kp TAB  &mo 1  &kp BSPC              &kp SPACE &lt 2 RET  &kp ESC
                         >;
                 };
 
                 numnav_layer {
                         label = "NUMNAV";
 //    -----------------------------------------------------------------------------------------
-//     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   | LBKT   |
+//     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   |        |
 //     |        |       |       |       |       |       |     | LFT/RS| DWN/LA|  UP/LC|  GT/LG|       |        |
 //     |        |       |       |       |       |       |     |       |       |       |       |       |        |
 //                              |       |       |       |     |       | RET/L3|       |
                         bindings = <
-       &trans   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp LBKT
- &trans &trans &trans &trans &trans &trans &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &trans
- &trans &trans &trans &trans &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans
+ &none &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
+ &none &trans &trans &trans &trans &trans &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &none
+ &none &trans &trans &trans &trans &trans    &trans  &trans  &trans  &trans  &trans  &none
                                  &trans  &trans  &trans        &trans &lt 3 RET &trans
                         >;
                 };
@@ -103,13 +103,13 @@
                         label = "SYMBOL";
 //    -----------------------------------------------------------------------------------------
 //     |        |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |        |
-//     |        |   <   |   [   |   {   |   <   |       |     |   -   |   =   |   {   |   }   | " | " |   ~    |
-//     |        |   >   |   ]   |   }   |   >   |       |     |   _   |   +   |   [   |   ]   |   \   |   `    |
+//     |        |   º   |   [   |   {   |   (   |   <   |     |   -   |   =   |   {   |   }   | " | " |        |
+//     |        |   ª   |   ]   |   }   |   )   |   >   |     |   _   |   +   |   [   |   ]   |   \   |        |
 //                              |       |  L3   |  DEL  |     |       |       |       |
                         bindings = <
-     &trans   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &trans
-  &trans &hm LGUI NON_US_BSLH &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp LC(LA(LG(A)))  &kp MINUS &hm RSHFT EQUAL &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE &kp GRAVE
-  &trans &hm RGUI LS(NON_US_BSLH) &hm RCTRL RA(N9) &hm RALT RA(N0) &kp LPAR   &kp LC(LA(LG(B)))   &kp UNDER &kp PLUS  &hm RALT LBKT &hm RCTRL RBKT &hm RGUI BSLH &kp TILDE
+  &none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
+  &none &hm LGUI SQT &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp NON_US_BSLH  &kp MINUS &hm RSHFT EQUAL &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE &none
+  &none &hm RGUI LS(SQT) &hm RCTRL RA(N9) &hm RALT RA(N0) &kp LPAR   &kp LS(NON_US_BSLH)   &kp UNDER &kp PLUS  &hm RALT LBKT &hm RCTRL RBKT &hm RGUI BSLH &none
                         &trans &mo 3 &hm RCTRL DEL   &trans  &trans   &trans
                         >;
                 };
@@ -117,15 +117,15 @@
                 funadj_layer {
                         label = "FUNADJ";
 // -----------------------------------------------------------------------------------------
-// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | PSCRN|
-// |      | F11 | F12 | F13 | F14 | F15 |   | F16 | F17 | F18 | F19 | F20 | PSCRN|
-// | CAPS | F21 | F22 | F23 | F24 |     |   | HOME| PDN | PUP | END | INS | BREAK|
+// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
+// |      | F11 | F12 | F13 | F14 | F15 |   | F16 | F17 | F18 | F19 | F20 |      |
+// |      |PSCRN|SLCK |BREAK|     | CAPS|   | HOME| PDN | PUP | END | INS |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp PSCRN
-&trans &hm LGUI F11 &hm LCTRL F12 &hm LALT F13 &hm LSHFT F14 &kp F15  &kp F16 &hm RSHFT F17 &hm LALT F18 &hm LCTRL F19 &hm LGUI F20 &kp SLCK
-&kp CAPS &hm RGUI F21 &hm RCTRL F22 &hm RALT F23 &kp F24 &trans  &kp HOME &kp PG_DN &hm RALT PG_UP &hm RCTRL END &hm RGUI INS &kp PAUSE_BREAK
-                            &trans &trans   &trans   &trans   &trans    &trans
+&none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &none
+&none &hm LGUI F11 &hm LCTRL F12 &hm LALT F13 &hm LSHFT F14 &kp F15  &kp F16 &hm RSHFT F17 &hm LALT F18 &hm LCTRL F19 &hm LGUI F20 &none
+&none &hm RGUI PSCRN &hm RCTRL SLCK &hm RALT PAUSE_BREAK &trans &kp CAPS  &kp HOME &kp PG_DN &hm RALT PG_UP &hm RCTRL END &hm RGUI INS &none
+                       &trans &trans &trans  &trans &trans &trans
                         >;
                 };
 
@@ -137,9 +137,9 @@
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- &trans &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans &trans
- &trans &trans &trans &trans &trans &trans  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &trans &trans &trans
- &kp C_PWR &kp C_SLEEP &kp K_LOCK &kp CAPS &trans &trans  &kp C_MUTE &trans &kp C_PP &trans &trans &kp C_EJECT
+ &none &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans &none
+ &none &trans &trans &trans &trans &trans  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &trans &trans &none
+ &none &kp C_PWR &kp C_SLEEP &kp K_LOCK &trans &trans  &kp C_MUTE &trans &kp C_PP &trans &kp C_EJECT &none
                 &trans &bootloader &reset   &reset &bootloader &trans
                         >;
                 };
@@ -152,10 +152,10 @@
 // |      | CLR | BLE | USB |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-       &trans   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans
- &trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &trans
- &trans &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans  &trans  &trans        &trans &trans &trans
+ &none   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &none
+ &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &none
+ &none &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &trans  &none
+                      &trans &trans &trans        &trans &trans &trans
                         >;
                 };
 
@@ -167,10 +167,10 @@
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
- &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
- &trans &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &trans
-                     &trans &trans &trans   &trans &trans &trans
+ &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
+ &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
+ &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
+                     &trans &trans &trans  &trans &trans &trans
                         >;
                 };
         };
