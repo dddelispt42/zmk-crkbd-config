@@ -19,14 +19,12 @@
 #define BLUETH 5
 #define MSOUTL 6
 
-// TODO: fix CAG-A/B to LT/GT in number layer
 // TODO: move lt --> hsl
-// TODO: add symbols from 6th row key and thumbkey (which are TAB and ESC now)
 // TODO: tap dance for C_BRI_UP/MAX DN/MIN
 // TODO: align with QMK keymaps
-// TODO: remove keys from 6th column
 // TODO: check mouse.h - maybe only missing in documen™!⅞°
 // TODO: add mouse support - if available in ZMK - or reconfig layer
+// TODO: add generic mechansim to lock layers
 
 / {
     behaviors {
@@ -74,7 +72,7 @@
 //    -----------------------------------------------------------------------------------------
 //     |        |   Q   |   W   | E/L6  | R/L5  | T/L4  |     | Y/L4  |  U/L5  | I/L6  |   O   |   P   |        |
 //     |        | A/LG  | S/LC  | D/LA  | F/LS  |   G   |     |   H   |  J/RS  | K/LA  | L/LC  | ;/RG  |        |
-//     |        | Z/LS  | X/RC  | C/RA  |   V   |   B   |     |   N   |   M    | ,/RA  | ./RC  | //RS  |        |
+//     |        | Z/LS  | X/RC  | C/RA  |   V   |   B   |     |   N   |   M    | ,/RA  | ./RC  | //MENU|        |
 //                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
                         bindings = <
 &none &kp Q   &kp W   &lt 6 E   &lt 5 R   &lt 4 T             &lt 4 Y   &lt 5 U    &lt 6 I   &kp O   &kp P   &none
@@ -89,13 +87,13 @@
 //    -----------------------------------------------------------------------------------------
 //     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   |        |
 //     |        |       |       |       |       |       |     | LFT/RS| DWN/LA|  UP/LC|  GT/LG|       |        |
-//     |        |       |       |       |       |       |     |       |       |       |       |       |        |
+//     |        |       |       |       |       |       |     |   «   |   º   |       |       |       |        |
 //                              |       |       |       |     |       | RET/L3|       |
                         bindings = <
  &none &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &trans &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &none
- &none &trans &trans &trans &trans &trans    &kp EQUAL  &kp PLUS  &trans  &trans  &trans  &none
-                                 &trans  &trans  &trans        &trans &lt 3 RET &trans
+ &none &trans &trans &trans &trans &trans    &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
+                            &to NUMNAV  &trans  &trans        &trans &lt 3 RET &to QWERTY
                         >;
                 };
 
@@ -103,13 +101,13 @@
                         label = "SYMBOL";
 //    -----------------------------------------------------------------------------------------
 //     |        |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |        |
-//     |        |   º   |   [   |   {   |   (   |   <   |     |   -   |   =   |   {   |   }   | " | " |        |
-//     |        |   ª   |   ]   |   }   |   )   |   >   |     |   _   |   +   |   [   |   ]   |   \   |        |
+//     |        |   <   |   [   |   {   |   (   |   `   |     |   -   |   =   |   {   |   }   | " | " |        |
+//     |        |   >   |   ]   |   }   |   )   |   ~   |     |   _   |   +   |   [   |   ]   |   \   |        |
 //                              |       |  L3   |  DEL  |     |       |       |       |
                         bindings = <
   &none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
-  &none &hm LGUI SQT &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp NON_US_BSLH  &kp MINUS &hm RSHFT GRAVE &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE &none
-  &none &hm RGUI LS(SQT) &hm RCTRL RA(N9) &hm RALT RA(N0) &kp LPAR   &kp LS(NON_US_BSLH)   &kp UNDER &kp TILDE  &hm RALT LBKT &hm RCTRL RBKT &hm RGUI BSLH &none
+  &none &hm LGUI NON_US_BSLH &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp RBKT  &kp MINUS &hm RSHFT GRAVE &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE &none
+  &none &hm RGUI LS(NON_US_BSLH) &hm RCTRL RA(N9) &hm RALT RA(N0) &kp LPAR   &kp BSLH  &kp UNDER &kp TILDE  &hm RALT LBKT &hm RCTRL RBKT &hm RGUI BSLH &none
                         &trans &mo 3 &hm RCTRL DEL   &trans  &trans   &trans
                         >;
                 };
@@ -125,7 +123,7 @@
 &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &none
 &none &hm LGUI F11 &hm LCTRL F12 &hm LALT F13 &hm LSHFT F14 &kp F15  &kp F16 &hm RSHFT F17 &hm LALT F18 &hm LCTRL F19 &hm LGUI F20 &none
 &none &hm RGUI PSCRN &hm RCTRL SLCK &hm RALT PAUSE_BREAK &trans &kp CAPS  &kp HOME &kp PG_DN &hm RALT PG_UP &hm RCTRL END &hm RGUI INS &none
-                       &trans &trans &trans  &trans &trans &trans
+                       &to FUNADJ &trans &trans  &trans &trans &to QWERTY
                         >;
                 };
 
@@ -153,8 +151,8 @@
 //                    |     |     |     |   |     |     |     |
                         bindings = <
  &none   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &none
- &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &trans &trans &trans &trans &trans &none
- &none &bt BT_CLR &out OUT_BLE &out OUT_USB &trans &trans    &trans  &trans  &trans  &trans  &trans  &none
+ &none &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+ &none &trans &trans &out OUT_USB &out OUT_BLE &bt BT_CLR    &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &trans  &trans  &none
                       &trans &trans &trans        &trans &trans &trans
                         >;
                 };
