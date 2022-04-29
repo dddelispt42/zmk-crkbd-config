@@ -91,8 +91,8 @@
 //                              |       |       |       |     |       | RET/L3|       |
                         bindings = <
  &none &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
- &none &trans &trans &trans &trans &trans &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &none
- &none &trans &trans &trans &trans &trans    &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
+ &none &trans &trans &trans &trans &kp ESC &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &none
+ &none &trans &trans &trans &trans &kp TAB    &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
                             &to NUMNAV  &trans  &trans        &trans &lt 3 RET &to QWERTY
                         >;
                 };
