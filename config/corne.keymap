@@ -18,6 +18,11 @@
 #define CONFIG 4
 #define BLUETH 5
 #define MSOUTL 6
+#define LOCK   7
+
+#define COMBO_TIMEOUT 200
+#define MACRO_TAP 10
+#define MACRO_WAIT 0
 
 // TODO: move lt --> hsl
 // TODO: tap dance for C_BRI_UP/MAX DN/MIN
@@ -27,6 +32,83 @@
 // TODO: add generic mechansim to lock layers
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_toggle_lock_left {
+                  timeout-ms = <50>;
+                  key-positions = <0 4 24>;
+                  bindings = <&tog LOCK>;
+        };
+        combo_toggle_lock_right {
+                  timeout-ms = <50>;
+                  key-positions = <5 9 29>;
+                  bindings = <&tog LOCK>;
+        };
+    };
+
+    macros {
+        ZMK_MACRO(m_fyi,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &kp F &sk LCTRL &kp O &sk LCTRL &kp S &kp R &kp D &kp N &kp M &kp S &kp S &kp A &sk LSHIFT &kp TAB &sk LSHIFT &kp TAB &sk LSHIFT &kp TAB &sk LSHIFT &kp TAB &sk LSHIFT &kp TAB &kp F &kp Y &kp I>;
+                )
+        ZMK_MACRO(m_today,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp F2 &sk LCTRL &sk LSHIFT &kp N1>;
+                )
+        ZMK_MACRO(m_week,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp F3 &sk LCTRL &sk LSHIFT &kp N1>;
+                )
+        ZMK_MACRO(m_month,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp F3 &sk LCTRL &sk LSHIFT &kp N1>;
+                )
+        ZMK_MACRO(m_proc,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp N2>;
+                )
+        ZMK_MACRO(m_arch,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp N3>;
+                )
+        ZMK_MACRO(m_plm,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp N4>;
+                )
+        ZMK_MACRO(m_lt,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp N5>;
+                )
+        ZMK_MACRO(m_cust,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp N6>;
+                )
+        ZMK_MACRO(m_info,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp N7>;
+                )
+        ZMK_MACRO(m_env,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp N8>;
+                )
+        ZMK_MACRO(m_choose,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&sk LCTRL &sk LSHIFT &kp N9>;
+                )
+    };
+
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -75,10 +157,10 @@
 //     |        | Z/LS  | X/RC  | C/RA  |   V   |   B   |     |   N   |   M    | ,/RA  | ./RC  | //MENU|        |
 //                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
                         bindings = <
-&none &kp Q   &kp W   &lt 6 E   &lt 5 R   &lt 4 T             &lt 4 Y   &lt 5 U    &lt 6 I   &kp O   &kp P   &none
+&none &kp Q   &kp W   &lt MSOUTL E   &lt BLUETH R   &lt CONFIG T             &lt CONFIG Y   &lt BLUETH U    &lt MSOUTL I   &kp O   &kp P   &none
 &none &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm RGUI SEMI &none
 &none &kp Z &hm RCTRL X &hm RALT C &kp V       &kp B          &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hm K_CMENU FSLH &none
-                        &kp TAB  &mo 1  &kp BSPC              &kp SPACE &lt 2 RET  &kp ESC
+                        &kp TAB  &mo NUMNAV  &kp BSPC              &kp SPACE &lt SYMBOL RET  &kp ESC
                         >;
                 };
 
@@ -93,7 +175,7 @@
  &none &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &kp ESC &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &none
  &none &trans &trans &trans &trans &kp TAB    &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
-                            &to NUMNAV  &trans  &trans        &trans &lt 3 RET &to QWERTY
+                            &to NUMNAV  &trans  &trans        &trans &lt SYMBOL RET &to QWERTY
                         >;
                 };
 
@@ -108,7 +190,7 @@
   &none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
   &none &hm LGUI NON_US_BSLH &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp RBKT  &kp MINUS &hm RSHFT GRAVE &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE &none
   &none &hm RGUI LS(NON_US_BSLH) &hm RCTRL RA(N9) &hm RALT RA(N0) &kp LPAR   &kp BSLH  &kp UNDER &kp TILDE  &hm RALT LBKT &hm RCTRL RBKT &hm RGUI BSLH &none
-                        &trans &mo 3 &hm RCTRL DEL   &trans  &trans   &trans
+                        &trans &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &trans
                         >;
                 };
 
@@ -144,11 +226,6 @@
 
                 bt_layer {
                         label = "BLUETH";
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      | BT0 | BT1 | BT2 | BT3 | BT4 |   |     |     |     |     |     |      |
-// |      | CLR | BLE | USB |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
                         bindings = <
  &none   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &none
  &none &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
@@ -159,16 +236,22 @@
 
                 outl_layer {
                         label = "MSOUTL";
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
                         bindings = <
- &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
- &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
- &none &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans &none
-                     &trans &trans &trans  &trans &trans &trans
+ &none &none &none &m_env &m_proc &m_today  &none &none &m_info &none &m_plm &none
+ &none &m_arch &m_choose &none &m_fyi &m_week  &none &none &none &m_lt &none &none
+ &none &none &none &m_cust &none &m_month  &none &none &none &none &none &none
+                     &none &none &none  &none &none &none
+                        >;
+                };
+        };
+
+                lock_layer {
+                        label = "LOCK";
+                        bindings = <
+ &none &none &none &none &none &none  &none &none &none &none &none &none
+ &none &none &none &none &none &none  &none &none &none &none &none &none
+ &none &none &none &none &none &none  &none &none &none &none &none &none
+                     &none &none &none  &none &none &none
                         >;
                 };
         };
