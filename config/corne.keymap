@@ -210,7 +210,7 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <200>;
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
         lkm: layer_key_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -219,7 +219,7 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <200>;
             flavor = "hold-preferred";
-            bindings = <&kp>, <&to>;
+            bindings = <&mo>, <&kp>;
         };
         tdcaps: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
