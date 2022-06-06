@@ -203,22 +203,22 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hs: homerow_shifts {
+        urm: upper_row_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFTS";
+            label = "UPPER_ROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <200>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-        hsl: homerow_shifts_layer {
+        lkm: layer_key_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_SHIFTS_LAYER";
+            label = "LAYER_KEY_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&to>;
         };
         tdcaps: tap_dance_caps {
@@ -241,10 +241,10 @@
 //     |        | Z/LS  | X/RC  | C/RA  |   V   |   B   |     |   N   |   M    | ,/RA  | ./RC  | //MENU|        |
 //                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
                         bindings = <
-&none &kp Q   &kp W   &lt MSOUTL E   &lt BLUETH R   &lt CONFIG T             &lt CONFIG Y   &lt BLUETH U    &lt MSOUTL I   &kp O   &kp P   &none
+&none &kp Q   &kp W   &urm MSOUTL E   &urm BLUETH R   &urm CONFIG T             &urm CONFIG Y   &urm BLUETH U    &urm MSOUTL I   &kp O   &kp P   &none
 &none &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm RGUI SEMI &none
 &none &kp Z &hm RCTRL X &hm RALT C &kp V       &kp B          &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hm K_CMENU FSLH &none
-                        &kp TAB  &mo NUMNAV  &kp BSPC              &kp SPACE &lt SYMBOL RET  &kp ESC
+                        &kp TAB  &mo NUMNAV  &kp BSPC              &kp SPACE &lkm SYMBOL RET  &kp ESC
                         >;
                 };
 
@@ -259,7 +259,7 @@
  &none &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &kp ESC &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &none
  &none &trans &trans &trans &trans &kp TAB    &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
-                            &to NUMNAV  &trans  &trans        &trans &lt FUNADJ RET &to QWERTY
+                            &to NUMNAV  &trans  &trans        &trans &lkm FUNADJ RET &to QWERTY
                         >;
                 };
 
