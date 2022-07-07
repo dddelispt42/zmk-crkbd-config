@@ -24,10 +24,9 @@
 #define MACRO_TAP 10
 #define MACRO_WAIT 0
 
-// TODO: move lt --> hsl
 // TODO: tap dance for C_BRI_UP/MAX DN/MIN
 // TODO: align with QMK keymaps
-// TODO: check mouse.h - maybe only missing in documen™!⅞°
+// TODO: check mouse.h - maybe only missing in documen
 // TODO: add mouse support - if available in ZMK - or reconfig layer
 // TODO: add generic mechansim to lock layers
 
@@ -58,6 +57,11 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <4 5>;
                   bindings = <&kp TAB>;
+        };
+        combo_ret {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <6 7>;
+                  bindings = <&kp RET>;
         };
     };
 
@@ -212,15 +216,15 @@
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
         };
-        lkm: layer_key_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_KEY_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick_tap_ms = <200>;
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-        };
+        /* lkm: layer_key_mods { */
+        /*     compatible = "zmk,behavior-hold-tap"; */
+        /*     label = "LAYER_KEY_MODS"; */
+        /*     #binding-cells = <2>; */
+        /*     tapping-term-ms = <200>; */
+        /*     quick_tap_ms = <200>; */
+        /*     flavor = "hold-preferred"; */
+        /*     bindings = <&mo>, <&kp>; */
+        /* }; */
         tdcaps: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_caps";
@@ -244,7 +248,7 @@
 &none &kp Q   &kp W   &urm MSOUTL E   &urm BLUETH R   &urm CONFIG T             &urm CONFIG Y   &urm BLUETH U    &urm MSOUTL I   &kp O   &kp P   &none
 &none &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm RGUI SEMI &none
 &none &kp Z &hm RCTRL X &hm RALT C &kp V       &kp B          &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hm K_CMENU FSLH &none
-                        &kp TAB  &mo NUMNAV  &kp BSPC              &kp SPACE &lkm SYMBOL RET  &kp ESC
+                        &kp TAB  &mo NUMNAV  &kp BSPC              &kp SPACE &mo SYMBOL &kp ESC
                         >;
                 };
 
@@ -259,7 +263,7 @@
  &none &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &kp ESC &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &none
  &none &trans &trans &trans &trans &kp TAB    &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
-                            &to NUMNAV  &trans  &trans        &trans &lkm FUNADJ RET &to QWERTY
+                            &to NUMNAV  &trans  &trans        &trans &mo FUNADJ &to QWERTY
                         >;
                 };
 
