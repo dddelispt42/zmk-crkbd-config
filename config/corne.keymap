@@ -16,15 +16,15 @@
 #define SYMBOL 2
 #define FUNADJ 3
 #define CONFIG 4
-#define BLUETH 5
+#define WMCFG  5
 #define MSOUTL 6
-#define LOCK   7
+#define BLUETH 7
+#define LOCK   8
 
 #define COMBO_TIMEOUT 50
 #define MACRO_TAP 10
 #define MACRO_WAIT 0
 
-// TODO: tap dance for C_BRI_UP/MAX DN/MIN
 // TODO: align with QMK keymaps
 // TODO: check mouse.h - maybe only missing in documen
 // TODO: add mouse support - if available in ZMK - or reconfig layer
@@ -219,15 +219,6 @@
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
         };
-        /* lkm: layer_key_mods { */
-        /*     compatible = "zmk,behavior-hold-tap"; */
-        /*     label = "LAYER_KEY_MODS"; */
-        /*     #binding-cells = <2>; */
-        /*     tapping-term-ms = <200>; */
-        /*     quick_tap_ms = <200>; */
-        /*     flavor = "hold-preferred"; */
-        /*     bindings = <&mo>, <&kp>; */
-        /* }; */
         tdcaps: tap_dance_caps {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_caps";
@@ -242,13 +233,13 @@
 
                 default_layer {
                         label = "QWERTY";
-//    -----------------------------------------------------------------------------------------
-//     |        |   Q   |   W   | E/L6  | R/L5  | T/L4  |     | Y/L4  |  U/L5  | I/L6  |   O   |   P   |        |
-//     |        | A/LG  | S/LC  | D/LA  | F/LS  |   G   |     |   H   |  J/RS  | K/LA  | L/LC  | ;/RG  |        |
-//     |        | Z/LS  | X/RC  | C/RA  |   V   |   B   |     |   N   |   M    | ,/RA  | ./RC  | //MENU|        |
-//                      |  /LG  |  L1   | S/LC  |                     | SPACE  |  L2   | \/LG  |
+// -------------------------------------------------------------------------------
+// |      |  Q  |W/L7 |E/L6 |R/L5 |T/L4 |   |Y/L4 |U/L5 |I/L6 |O/L7 |  P  |      |
+// |      |A/LG |S/LC |D/LA |F/LS |  G  |   |  H  |J/RS |K/LA |L/LC |;/RG |      |
+// |      |Z/LS |X/RC |C/RA |  V  |  B  |   |  N  | M   |,/RA |./RC |//MENU|     |
+//              | /LG | L1  |S/LC |               |SPACE| L2  |\/LG |
                         bindings = <
-&none &kp Q   &kp W   &urm MSOUTL E   &urm BLUETH R   &urm CONFIG T             &urm CONFIG Y   &urm BLUETH U    &urm MSOUTL I   &kp O   &kp P   &none
+&none &kp Q &urm BLUETH W &urm MSOUTL E &urm WMCFG R &urm CONFIG T  &urm CONFIG Y &urm WMCFG U &urm MSOUTL I &urm BLUETH O &kp P &none
 &none &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm RGUI SEMI &none
 &none &kp Z &hm RCTRL X &hm RALT C &kp V       &kp B          &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hm K_CMENU FSLH &none
                         &kp TAB  &mo NUMNAV  &kp BSPC              &kp SPACE &mo SYMBOL &kp ESC
@@ -256,12 +247,12 @@
                 };
 
                 numnav_layer {
-                        label = "NUMNAV";
-//    -----------------------------------------------------------------------------------------
-//     |        |   1   |   2   |   3   |   4   |   5   |     |   6   |   7   |   8   |   9   |   0   |        |
-//     |        |       |       |       |       |       |     | LFT/RS| DWN/LA|  UP/LC|  GT/LG|       |        |
-//     |        |       |       |       |       |       |     |   «   |   º   |       |       |       |        |
-//                              |       |       |       |     |       | RET/L3|       |
+                        label = "NUMNAV";6
+// -------------------------------------------------------------------------------
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+// |      |     |     |     |     |     |   |LF/RS|DN/LA|UP/LC|GT/LG|     |      |
+// |      |     |     |     |     |     |   |  «  |  º  |     |     |     |      |
+//                    |     |     |     |   |     |RT/L3|     |
                         bindings = <
  &none &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &kp ESC &kp LEFT &hm RSHFT DOWN &hm LALT UP &hm LCTRL RIGHT &trans &none
@@ -272,11 +263,11 @@
 
                 symbol_layer {
                         label = "SYMBOL";
-//    -----------------------------------------------------------------------------------------
-//     |        |   !   |   @   |   #   |   $   |   %   |     |   ^   |   &   |   *   |   (   |   )   |        |
-//     |        |   <   |   [   |   {   |   (   |   `   |     |   -   |   =   |   {   |   }   | " | " |        |
-//     |        |   >   |   ]   |   }   |   )   |   ~   |     |   _   |   +   |   [   |   ]   |   \   |        |
-//                              |       |  L3   |  DEL  |     |       |       |       |
+// -------------------------------------------------------------------------------
+// |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
+// |      |  <  |  [  |  {  |  (  |  `  |   |  -  |  =  |  {  |  }  |" | "|      |
+// |      |  >  |  ]  |  }  |  )  |  ~  |   |  _  |  +  |  [  |  ]  |  \  |      |
+//                    |     | L3  | DEL |   |     |     |     |
                         bindings = <
   &none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
   &none &hm LGUI NON_US_BSLH &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp RBKT  &kp MINUS &hm RSHFT GRAVE &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE &none
@@ -287,7 +278,7 @@
 
                 funadj_layer {
                         label = "FUNADJ";
-// -----------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
 // |      | F11 | F12 | F13 | F14 | F15 |   | F16 | F17 | F18 | F19 | F20 |      |
 // |      |PSCRN|SLCK |BREAK|     | CAPS|   | HOME| PDN | PUP | END | INS |      |
@@ -302,10 +293,10 @@
 
                 config_layer {
                         label = "CONFIG";
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// -------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   | VUP | NXT | BUP |     |     |      |
+// |      |     |     |     |     |     |   | VDN | PRE | BDN |     |     |      |
+// |      | PWR | SLP | LCK |     |     |   | MT  |     | PP  |     | EJC |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
  &none &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans &none
@@ -315,23 +306,48 @@
                         >;
                 };
 
-                bt_layer {
-                        label = "BLUETH";
+                wmcfg_layer {
+                        label = "WMCFG";
+// -------------------------------------------------------------------------------
+// |      |S-F13|S-F14|S-F15|S-F16|S-F17|   |S-F18|S-F19|S-F20|S-F21|S-F22|      |
+// |      |A-F13|A-F14|A-F15|A-F16|A-F17|   |A-F18|A-F19|A-F20|A-F21|A-F22|      |
+// |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
- &none   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &none
- &none &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
- &none &trans &trans &out OUT_USB &out OUT_BLE &bt BT_CLR    &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &trans  &trans  &none
+ &none &kp LS(F13) &kp LS(F14) &kp LS(F15) &kp LS(F16) &kp LS(F17) &kp LS(F18) &kp LS(F19) &kp LS(F20) &kp LS(F21) &kp LS(F22)  &none
+ &none &kp LA(F13) &kp LA(F14) &kp LA(F15) &kp LA(F16) &kp LA(F17) &kp LA(F18) &kp LA(F19) &kp LA(F20) &kp LA(F21) &kp LA(F22)  &none
+ &none &kp LC(F13) &kp LC(F14) &kp LC(F15) &kp LC(F16) &kp LC(F17) &kp LC(F18) &kp LC(F19) &kp LC(F20) &kp LC(F21) &kp LC(F22)  &none
                       &trans &trans &trans        &trans &trans &trans
                         >;
                 };
 
                 outl_layer {
                         label = "MSOUTL";
+// -------------------------------------------------------------------------------
+// |      |     |     | ENV | PROC|  TD |   |     |     | INFO|     | PLM |      |
+// |      | ARCH| SEL |     | FYI |  W  |   |     |     |     | LT  |     |      |
+// |      |     |     | CUST|     |  M  |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
                         bindings = <
  &none &none &none &m_env &m_proc &m_today  &none &none &m_info &none &m_plm &none
  &none &m_arch &m_choose &none &m_fyi &m_week  &none &none &none &m_lt &none &none
  &none &none &none &m_cust &none &m_month  &none &none &none &none &none &none
                      &none &none &none  &none &none &none
+                        >;
+                };
+
+                bt_layer {
+                        label = "BLUETH";
+// -------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      | #4  | #3  | #2  | #1  | #0  |   | #0  | #1  | #2  | #3  | #4  |      |
+// |      |     |     | USB | BLE | CLR |   | CLR | BLE | USB |     |     |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+ &none   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &none
+ &none &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
+ &none &trans &trans &out OUT_USB &out OUT_BLE &bt BT_CLR    &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &trans  &trans  &none
+                      &trans &trans &trans        &trans &trans &trans
                         >;
                 };
 
