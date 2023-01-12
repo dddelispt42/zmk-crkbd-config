@@ -314,9 +314,9 @@
 // |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- &none &kp LS(F13) &kp LS(F14) &kp LS(F15) &kp LS(F16) &kp LS(F17) &kp LS(F18) &kp LS(F19) &kp LS(F20) &kp LS(F21) &kp LS(F22)  &none
- &none &kp LA(F13) &kp LA(F14) &kp LA(F15) &kp LA(F16) &kp LA(F17) &kp LA(F18) &kp LA(F19) &kp LA(F20) &kp LA(F21) &kp LA(F22)  &none
- &none &kp LC(F13) &kp LC(F14) &kp LC(F15) &kp LC(F16) &kp LC(F17) &kp LC(F18) &kp LC(F19) &kp LC(F20) &kp LC(F21) &kp LC(F22)  &none
+ &none &kp LS(LA(TAB)) &kp LS(F14) &kp LS(F15) &kp LS(F16) &kp LA(TAB) &kp LS(F18) &kp LS(F19) &kp LS(F20) &kp LS(F21) &kp LS(F22)  &none
+ &none &kp LG(LS(LEFT)) &kp LA(F14) &kp LA(F15) &kp LA(F16) &kp LG(LS(RIGHT)) &kp LA(F18) &kp LA(F19) &kp LA(F20) &kp LA(F21) &kp LA(F22)  &none
+ &none &kp LG(LC(LEFT)) &kp LC(F14) &kp LC(F15) &kp LC(F16) &kp LG(LC(LEFT)) &kp LC(F18) &kp LC(F19) &kp LC(F20) &kp LC(F21) &kp LC(F22)  &none
                       &trans &trans &trans        &trans &trans &trans
                         >;
                 };
