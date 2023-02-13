@@ -18,8 +18,9 @@
 #define CONFIG 4
 #define WMCFG  5
 #define MSOUTL 6
-#define BLUETH 7
-#define LOCK   8
+#define MACROS 7
+#define BLUETH 8
+#define LOCK   9
 
 #define COMBO_TIMEOUT 50
 #define MACRO_TAP 10
@@ -71,7 +72,9 @@
                 tap-ms = <MACRO_TAP>;
                 bindings
                     = <&sk LCTRL &kp F &sk LCTRL &kp O &sk LCTRL &kp S &kp R &kp D &kp N &kp M &kp S &kp S &kp A>
-                    , <&macro_wait_time 200>
+                    , <&macro_wait_time 100>
+                    , <&sk LCTRL &kp K>
+                    , <&macro_wait_time 100>
                     , <&sk LSHIFT &kp TAB>
                     , <&macro_wait_time 50>
                     , <&sk LSHIFT &kp TAB>
@@ -239,7 +242,7 @@
 // |      |Z/LS |X/RC |C/RA |  V  |  B  |   |  N  | M   |,/RA |./RC |//MENU|     |
 //              | /LG | L1  |S/LC |               |SPACE| L2  |\/LG |
                         bindings = <
-&none &kp Q &urm BLUETH W &urm MSOUTL E &urm WMCFG R &urm CONFIG T  &urm CONFIG Y &urm WMCFG U &urm MSOUTL I &urm BLUETH O &kp P &none
+&none &urm BLUETH Q &urm MACROS W &urm MSOUTL E &urm WMCFG R &urm CONFIG T  &urm CONFIG Y &urm WMCFG U &urm MSOUTL I &urm MACROS O &urm BLUETH P &none
 &none &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm RGUI SEMI &none
 &none &kp Z &hm RCTRL X &hm RALT C &kp V       &kp B          &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hm K_CMENU FSLH &none
                         &kp TAB  &mo NUMNAV  &kp BSPC              &kp SPACE &mo SYMBOL &kp ESC
@@ -333,6 +336,21 @@
  &none &m_arch &m_choose &none &m_fyi &m_week  &none &none &none &m_lt &none &none
  &none &none &none &m_cust &none &m_month  &none &none &none &none &none &none
                      &none &none &none  &none &none &none
+                        >;
+                };
+
+                macros_layer {
+                        label = "MACROS";
+// -------------------------------------------------------------------------------
+// |      |S-F13|S-F14|S-F15|S-F16|S-F17|   |S-F18|S-F19|S-F20|S-F21|S-F22|      |
+// |      |A-F13|A-F14|A-F15|A-F16|A-F17|   |A-F18|A-F19|A-F20|A-F21|A-F22|      |
+// |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+ &none &kp LG(LS(F13)) &kp LG(LS(F14)) &kp LG(LS(F15)) &kp LG(LS(F16)) &kp LG(LS(F17)) &kp LG(LS(F18)) &kp LG(LS(F19)) &kp LG(LS(F20)) &kp LG(LS(F21)) &kp LG(LS(F22))  &none
+ &none &kp LG(LA(F13)) &kp LG(LA(F14)) &kp LG(LA(F15)) &kp LG(LA(F16)) &kp LG(LA(F17)) &kp LG(LA(F18)) &kp LG(LA(F19)) &kp LG(LA(F20)) &kp LG(LA(F21)) &kp LG(LA(F22))  &none
+ &none &kp LG(LC(F13)) &kp LG(LC(F14)) &kp LG(LC(F15)) &kp LG(LC(F16)) &kp LG(LC(F17)) &kp LG(LC(F18)) &kp LG(LC(F19)) &kp LG(LC(F20)) &kp LG(LC(F21)) &kp LG(LC(F22))  &none
+                      &trans &trans &trans        &trans &trans &trans
                         >;
                 };
 
