@@ -72,22 +72,16 @@
                 tap-ms = <MACRO_TAP>;
                 bindings
                     = <&sk LCTRL &kp F &sk LCTRL &kp O &sk LCTRL &kp S &kp R &kp D &kp N &kp M &kp S &kp S &kp A>
+                    , <&macro_wait_time 200>
+                    , <&kp RET>
                     , <&macro_wait_time 100>
-                    , <&sk LCTRL &kp K>
+                    , <&sk LSHIFT &kp TAB>
+                    , <&sk LSHIFT &kp TAB>
+                    , <&sk LSHIFT &kp TAB>
+                    , <&sk LSHIFT &kp TAB>
+                    , <&sk LSHIFT &kp TAB>
                     , <&macro_wait_time 100>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&macro_wait_time 50>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&macro_wait_time 50>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&macro_wait_time 50>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&macro_wait_time 50>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&macro_wait_time 50>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&macro_wait_time 50>
-                    , <&sk LSHIFT &kp F &sk LSHIFT &kp Y &sk LSHIFT &kp I>
+                    , <&kp F &kp Y &kp I>
                     ;
                 )
         ZMK_MACRO(m_today,
