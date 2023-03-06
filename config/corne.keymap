@@ -67,23 +67,6 @@
     };
 
     macros {
-        ZMK_MACRO(m_fyi,
-                wait-ms = <MACRO_WAIT>;
-                tap-ms = <MACRO_TAP>;
-                bindings
-                    = <&sk LCTRL &kp F &sk LCTRL &kp O &sk LCTRL &kp S &kp R &kp D &kp N &kp M &kp S &kp S &kp A>
-                    , <&macro_wait_time 200>
-                    , <&kp RET>
-                    , <&macro_wait_time 100>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&sk LSHIFT &kp TAB>
-                    , <&macro_wait_time 100>
-                    , <&kp F &kp Y &kp I>
-                    ;
-                )
         ZMK_MACRO(m_today,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
