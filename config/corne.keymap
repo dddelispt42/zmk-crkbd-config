@@ -334,12 +334,12 @@
 // -------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      | #4  | #3  | #2  | #1  | #0  |   | #0  | #1  | #2  | #3  | #4  |      |
-// |      |     |     | USB | BLE | CLR |   | CLR | BLE | USB |     |     |      |
+// |      | BL  | RST | USB | BLE | CLR |   | CLR | BLE | USB | RST | BL  |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
  &none   &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &none
  &none &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
- &none &trans &trans &out OUT_USB &out OUT_BLE &bt BT_CLR    &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &trans  &trans  &none
+ &none &bootloader &reset &out OUT_USB &out OUT_BLE &bt BT_CLR    &bt BT_CLR  &out OUT_BLE  &out OUT_USB  &reset  &bootloader  &none
                       &none &trans &trans        &trans &trans &none
                         >;
                 };
