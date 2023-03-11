@@ -78,31 +78,37 @@
         combo_toggle_lock_left {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <1 5 38>;  // NOT-FOR-SWEEP
+                  key-positions = <0 4 31>;  // NOT-FOR-CORNE
                   bindings = <&tog LOCK>;
         };
         combo_toggle_lock_right {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <6 10 39>;  // NOT-FOR-SWEEP
+                  key-positions = <5 9 32>;  // NOT-FOR-CORNE
                   bindings = <&tog LOCK>;
         };
         combo_esc {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <1 2>;  // NOT-FOR-SWEEP
+                  key-positions = <0 1>;  // NOT-FOR-CORNE
                   bindings = <&kp ESC>;
         };
         combo_tab {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <4 5>;  // NOT-FOR-SWEEP
+                  key-positions = <3 4>;  // NOT-FOR-CORNE
                   bindings = <&kp TAB>;
         };
         combo_ret {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <6 7>;  // NOT-FOR-SWEEP
+                  key-positions = <5 6>;  // NOT-FOR-CORNE
                   bindings = <&kp RET>;
         };
         combo_caps {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <16 19>;  // NOT-FOR-SWEEP
+                  key-positions = <13 16>;  // NOT-FOR-CORNE
                   bindings = <&kp CAPS>;
         };
     };
@@ -253,10 +259,10 @@
 // |      |Z/LS |X/RC |C/RA |  V  |  B  |   |  N  | M   |,/RA |./RC |//MENU|     |
 //              | /LG | L1  |S/LC |               |SPACE| L2  |\/LG |
                         bindings = <
-&none &urm BLUETH Q &urm MACROS W &urm MSOUTL E &urm WMCFG R &urm CONFIG T  &urm CONFIG Y &urm WMCFG U &urm MSOUTL I &urm MACROS O &urm BLUETH P &none
-&none &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm RGUI SEMI &none
-&none &kp Z &hm RCTRL X &hm RALT C &kp V       &kp B          &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hm K_CMENU FSLH &none
-                        &none  &mo NUMNAV  &kp BSPC              &kp SPACE &mo SYMBOL &none
+DK &urm BLUETH Q &urm MACROS W &urm MSOUTL E &urm WMCFG R &urm CONFIG T  &urm CONFIG Y &urm WMCFG U &urm MSOUTL I &urm MACROS O &urm BLUETH P DK
+DK &hm LGUI A &hm LCTRL S &hm LALT D &hm LSHFT F &kp G     &kp H &hm RSHFT J &hm LALT K &hm LCTRL L &hm RGUI SEMI DK
+DK &kp Z &hm RCTRL X &hm RALT C &kp V       &kp B          &kp N   &kp M   &hm RALT COMMA &hm RCTRL DOT &hm K_CMENU FSLH DK
+                        DK  &mo NUMNAV  &kp BSPC              &kp SPACE &mo SYMBOL DK
                         >;
                 };
 
@@ -268,10 +274,10 @@
 // |      |     |     |     |     |     |   |  «  |  º  |     |     |     |      |
 //                    |     |     |     |   |     |RT/L3|     |
                         bindings = <
- &none &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
- &none &trans &trans &trans &trans &kp ESC     &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
- &none &trans &trans &trans &trans &kp TAB     &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
-                     &none  &trans  &trans     &trans &mo FUNADJ &none
+ DK &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  DK
+ DK &trans &trans &trans &trans &kp ESC     &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
+ DK &trans &trans &trans &trans &kp TAB     &kp EQUAL  &kp SQT  &trans  &trans  &trans  DK
+                     DK  &trans  &trans     &trans &mo FUNADJ DK
                         >;
                 };
 
@@ -283,10 +289,10 @@
 // |      |  >  |  ]  |  }  |  )  |  ~  |   |  _  |  +  |  [  |  ]  |  \  |      |
 //                    |     | L3  | DEL |   |     |     |     |
                         bindings = <
-&none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
-&none &hm LGUI NON_US_BSLH &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp RBKT  &kp MINUS &hm RSHFT GRAVE &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE &none
-&none &hm RGUI LS(NON_US_BSLH) &hm RCTRL RA(N9) &hm RALT RA(N0) &kp LPAR   &kp BSLH  &kp UNDER &kp TILDE  &hm RALT LBKT &hm RCTRL RBKT &hm RGUI BSLH &none
-                        &none &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &none
+DK   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR DK
+DK &hm LGUI NON_US_BSLH &hm LCTRL RA(N8) &hm LALT RA(N7) &hm LSHFT STAR &kp RBKT  &kp MINUS &hm RSHFT GRAVE &hm LALT LBRC &hm LCTRL RBRC &hm LGUI PIPE DK
+DK &hm RGUI LS(NON_US_BSLH) &hm RCTRL RA(N9) &hm RALT RA(N0) &kp LPAR   &kp BSLH  &kp UNDER &kp TILDE  &hm RALT LBKT &hm RCTRL RBKT &hm RGUI BSLH DK
+                        DK &mo FUNADJ &hm RCTRL DEL   &trans  &trans   DK
                         >;
                 };
 
@@ -298,10 +304,10 @@
 // |      |PSCRN|SLCK |BREAK|     | CAPS|   | HOME| PDN | PUP | END | INS |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &none
-&none HRML(F11, F12, F13, F14) &kp F15         &kp F16 HRMR(F17, F18, F19, F20) &none
-&none LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END, INS) &none
-                       &none &trans &trans  &trans &trans &none
+DK &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 DK
+DK HRML(F11, F12, F13, F14) &kp F15         &kp F16 HRMR(F17, F18, F19, F20) DK
+DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END, INS) DK
+                       DK &trans &trans  &trans &trans DK
                         >;
                 };
 
@@ -313,10 +319,10 @@
 // |      | PWR | SLP | LCK |     |     |   | MT  |     | PP  |     | EJC |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans &none
-&none &trans &trans &trans &trans &trans  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &trans &trans &none
-&none &kp C_PWR &kp C_SLEEP &kp K_LOCK &trans &trans  &kp C_MUTE &trans &kp C_PP &trans &kp C_EJECT &none
-                &none &bootloader &reset   &reset &bootloader &none
+DK &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans DK
+DK &trans &trans &trans &trans &trans  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &trans &trans DK
+DK &kp C_PWR &kp C_SLEEP &kp K_LOCK &trans &trans  &kp C_MUTE &trans &kp C_PP &trans &kp C_EJECT DK
+                DK &bootloader &reset   &reset &bootloader DK
                         >;
                 };
 
@@ -328,10 +334,10 @@
 // |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none UM1(F13) UM1(F14) UM1(F15) UM1(F16) UM1(F17) UM1(F18) UM1(F19) UM1(F20) UM1(F21) UM1(F22)  &none
-&none HM1(F13) HM1(F14) HM1(F15) HM1(F16) HM1(F17) HM1(F18) HM1(F19) HM1(F20) HM1(F21) HM1(F22)  &none
-&none LM1(F13) LM1(F14) LM1(F15) LM1(F16) LM1(F17) LM1(F18) LM1(F19) LM1(F20) LM1(F21) LM1(F22)  &none
-                      &none &trans &trans        &trans &trans &none
+DK UM1(F13) UM1(F14) UM1(F15) UM1(F16) UM1(F17) UM1(F18) UM1(F19) UM1(F20) UM1(F21) UM1(F22)  DK
+DK HM1(F13) HM1(F14) HM1(F15) HM1(F16) HM1(F17) HM1(F18) HM1(F19) HM1(F20) HM1(F21) HM1(F22)  DK
+DK LM1(F13) LM1(F14) LM1(F15) LM1(F16) LM1(F17) LM1(F18) LM1(F19) LM1(F20) LM1(F21) LM1(F22)  DK
+                      DK &trans &trans        &trans &trans DK
                         >;
                 };
 
@@ -343,10 +349,10 @@
 // |      |     |     | CUST|     |  M  |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none &none &none &m_env &m_proc &m_today  &none &none &m_info &none &m_plm &none
-&none &m_arch &m_choose &none &kp LS(F24) &m_week  &none &none &none &m_lt &none &none
-&none &none &none &m_cust &none &m_month  &none &none &none &none &none &none
-                     &none &none &none  &none &none &none
+DK &none &none &m_env &m_proc &m_today  &none &none &m_info &none &m_plm DK
+DK &m_arch &m_choose &none &kp LS(F24) &m_week  &none &none &none &m_lt &none DK
+DK &none &none &m_cust &none &m_month  &none &none &none &none &none DK
+                     DK &none &none  &none &none DK
                         >;
                 };
 
@@ -358,10 +364,10 @@
 // |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none UM2(F13) UM2(F14) UM2(F15) UM2(F16) UM2(F17) UM2(F18) UM2(F19) UM2(F20) UM2(F21) UM2(F22)  &none
-&none HM2(F13) HM2(F14) HM2(F15) HM2(F16) HM2(F17) HM2(F18) HM2(F19) HM2(F20) HM2(F21) HM2(F22)  &none
-&none LM2(F13) LM2(F14) LM2(F15) LM2(F16) LM2(F17) LM2(F18) LM2(F19) LM2(F20) LM2(F21) LM2(F22)  &none
-                      &none &trans &trans        &trans &trans &none
+DK UM2(F13) UM2(F14) UM2(F15) UM2(F16) UM2(F17) UM2(F18) UM2(F19) UM2(F20) UM2(F21) UM2(F22)  DK
+DK HM2(F13) HM2(F14) HM2(F15) HM2(F16) HM2(F17) HM2(F18) HM2(F19) HM2(F20) HM2(F21) HM2(F22)  DK
+DK LM2(F13) LM2(F14) LM2(F15) LM2(F16) LM2(F17) LM2(F18) LM2(F19) LM2(F20) LM2(F21) LM2(F22)  DK
+                      DK &trans &trans        &trans &trans DK
                         >;
                 };
 
@@ -373,20 +379,20 @@
 // |      | BL  | RST | USB | BLE | CLR |   | CLR | BLE | USB | RST | BL  |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none   &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
-&none BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4) &none
-&none &bootloader &reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &reset  &bootloader  &none
-                      &none &none &none        &none &none &none
+DK   &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  DK
+DK BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4) DK
+DK &bootloader &reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &reset  &bootloader  DK
+                      DK &none &none        &none &none DK
                         >;
                 };
 
                 lock_layer {
                         label = "LOCK";
                         bindings = <
-&none &none &none &none &none &none  &none &none &none &none &none &none
-&none &none &none &none &none &none  &none &none &none &none &none &none
-&none &none &none &none &none &none  &none &none &none &none &none &none
-                  &none &none &none  &none &none &none
+DK &none &none &none &none &none  &none &none &none &none &none DK
+DK &none &none &none &none &none  &none &none &none &none &none DK
+DK &none &none &none &none &none  &none &none &none &none &none DK
+                  DK &none &none  &none &none DK
                         >;
                 };
         };
