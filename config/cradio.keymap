@@ -316,7 +316,7 @@
  &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans 
  &trans &trans &trans &trans &trans  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &trans &trans 
  &kp C_PWR &kp C_SLEEP &kp K_LOCK &trans &trans  &kp C_MUTE &trans &kp C_PP &trans &kp C_EJECT 
-                 &bootloader &reset   &reset &bootloader 
+                 &trans &trans   &trans &trans 
                         >;
                 };
 
@@ -375,7 +375,7 @@
                         bindings = <
    &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  
  BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4) 
- &bootloader &reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &reset  &bootloader  
+ &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader  
                        &none &none        &none &none 
                         >;
                 };
