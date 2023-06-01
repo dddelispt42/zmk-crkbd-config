@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-// #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define QWERTY 0
 #define NUMNAV 1
@@ -275,8 +275,8 @@ DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) DK
 //                    |     |     |     |   |     |RT/L3|     |
                         bindings = <
  DK &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  DK
- DK &trans &trans &trans &trans &kp ESC     &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
- DK &trans &trans &trans &trans &kp TAB     &kp EQUAL  &kp SQT  &trans  &trans  &trans  DK
+ DK &mwh SCROLL_UP &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT     &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
+ DK &mwh SCROLL_DOWN &trans &mkp RCLK &mkp MCLK &mkp LCLK     &kp EQUAL  &kp SQT  &trans  &trans  &trans  DK
                      DK  &trans  &trans     &trans &mo FUNADJ DK
                         >;
                 };
