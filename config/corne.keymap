@@ -14,20 +14,21 @@
 #define NUMNAV 1
 #define SYMBOL 2
 #define FUNADJ 3
-#define CONFIG 4
-#define WMCFG  5
-#define MSOUTL 6
-#define MACROS 7
-#define BLUETH 8
-#define LOCK   9
+#define MOUSE  4
+#define MEDIA  5
+#define WMCFG  6
+#define MSOUTL 7
+#define MACROS 8
+#define BLUETH 9
+#define LOCK   10
 
 #define COMBO_TIMEOUT 50
 #define MACRO_TAP 10
 #define MACRO_WAIT 0
 
 // Upper row mods macro
-#define URML(k1,k2,k3,k4,k5) &urm BLUETH k1  &urm MACROS k2  &urm MSOUTL k3  &urm WMCFG  k4  &urm CONFIG k5
-#define URMR(k1,k2,k3,k4,k5) &urm CONFIG k1  &urm WMCFG  k2  &urm MSOUTL k3  &urm MACROS k4  &urm BLUETH k5
+#define URML(k1,k2,k3,k4,k5) &urm BLUETH k1  &urm MACROS k2  &urm MSOUTL k3  &urm WMCFG  k4  &urm MEDIA k5
+#define URMR(k1,k2,k3,k4,k5) &urm MEDIA k1  &urm WMCFG  k2  &urm MSOUTL k3  &urm MACROS k4  &urm BLUETH k5
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &hm LGUI   k1  &hm LCTRL k2  &hm LALT  k3  &hm LSHIFT k4
 #define HRMR(k1,k2,k3,k4) &hm RSHIFT k1  &hm LALT  k2  &hm LCTRL k3  &hm RGUI   k4
@@ -57,8 +58,6 @@
 #define OUTUSB &out OUT_USB
 #define OUTBLE &out OUT_BLE
 
-// TODO: check mouse.h - maybe only missing in documen
-// TODO: add mouse support - if available in ZMK - or reconfig layer
 // TODO: add generic mechansim to lock layers
 
 / {
@@ -248,15 +247,15 @@
                 default_layer {
                         label = "QWERTY";
 // -------------------------------------------------------------------------------
-// |      |  Q  |W/L7 |E/L6 |R/L5 |T/L4 |   |Y/L4 |U/L5 |I/L6 |O/L7 |  P  |      |
+// |      |Q/L9 |W/L8 |E/L7 |R/L6 |T/L5 |   |Y/L5 |U/L6 |I/L7 |O/L8 |P/L9 |      |
 // |      |A/LG |S/LC |D/LA |F/LS |  G  |   |  H  |J/RS |K/LA |L/LC |;/RG |      |
 // |      |Z/LS |X/RC |C/RA |  V  |  B  |   |  N  | M   |,/RA |./RC |//MENU|     |
-//              | /LG | L1  |S/LC |               |SPACE| L2  |\/LG |
+//              |     | L1  |S/LC |              |SPC/L4| L2  |     |
                         bindings = <
-&none URML(Q, W, E, R, T)  URMR(Y, U, I, O, P) &none
+&none URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) &none
 &none HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) &none
 &none LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) &none
-                        &none  &mo NUMNAV  &kp BSPC              &kp SPACE &mo SYMBOL &none
+  &none &mo NUMNAV  &kp BSPC     &urm MOUSE SPACE &mo SYMBOL &none
                         >;
                 };
 
@@ -264,14 +263,14 @@
                         label = "NUMNAV";
 // -------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |     |     |     |     |     |   |LF/RS|DN/LA|UP/LC|GT/LG|     |      |
-// |      |     |     |     |     |     |   |  «  |  º  |     |     |     |      |
-//                    |     |     |     |   |     |RT/L3|     |
+// |      |     |     |     |     | RPT |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
+// |      |     |     |     |     | RPT |   |  «  |  º  |     |     |     |      |
+//                    |     |     |     |   |     | L3  |     |
                         bindings = <
- &none &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
- &none &mwh SCROLL_UP &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT     &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
- &none &mwh SCROLL_DOWN &trans &mkp RCLK &mkp MCLK &mkp LCLK     &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
-                     &none  &trans  &trans     &trans &mo FUNADJ &none
+ &none &kp N1 &kp N2 &kp N3  &kp N4 &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
+ &none &trans &trans &trans &trans &key_repeat  &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
+ &none &trans &trans &trans &trans &key_repeat  &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
+                     &none  &trans  &trans      &trans &mo FUNADJ &none
                         >;
                 };
 
@@ -305,8 +304,23 @@
                         >;
                 };
 
+                numnav_layer {
+                        label = "MOUSE";
+// -------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      | SUP | LC  | LA  | LS  |     |   | LF  | DN  | UP  | RT  | SUP |      |
+// |      | SDN |     | RCLK| MCLK| LCLK|   | LCLK| MCLK| RCLK|     | SDN |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+ &none &trans &trans &trans  &trans &trans     &trans  &trans  &trans  &trans  &trans  &none
+ &none &mwh SCROLL_UP &kp LC &kp LA &kp LS &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCROLL_UP &none
+ &none &mwh SCROLL_DOWN &trans &mkp RCLK &mkp MCLK &mkp LCLK   &mkp LCLK  &mkp MCLK &mkp RCLK &trans &mwh SCROLL_DOWN &none
+                     &none  &trans  &trans     &trans &trans &none
+                        >;
+                };
+
                 config_layer {
-                        label = "CONFIG";
+                        label = "MEDIA";
 // -------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   | VUP | NXT | BUP |     |     |      |
 // |      |     |     |     |     |     |   | VDN | PRE | BDN |     |     |      |
