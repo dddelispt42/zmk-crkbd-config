@@ -310,7 +310,7 @@ DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END,
                         >;
                 };
 
-                numnav_layer {
+                mouse_layer {
                         label = "MOUSE";
 // -------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
@@ -319,7 +319,7 @@ DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END,
 //                    |     |     |     |   |     |     |     |
                         bindings = <
  DK &trans &trans &trans  &trans &trans     &trans  &trans  &trans  &trans  &trans  DK
- DK &mwh SCROLL_UP &kp LC &kp LA &kp LS &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCROLL_UP DK
+ DK &mwh SCROLL_UP &kp LCTRL &kp LALT &kp LSHIFT &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCROLL_UP DK
  DK &mwh SCROLL_DOWN &trans &mkp RCLK &mkp MCLK &mkp LCLK   &mkp LCLK  &mkp MCLK &mkp RCLK &trans &mwh SCROLL_DOWN DK
                      DK  &trans  &trans     &trans &trans DK
                         >;
