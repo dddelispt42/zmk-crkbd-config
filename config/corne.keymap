@@ -261,7 +261,7 @@
 &none URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) &none
 &none HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) &none
 &none LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) &none
-  &none &mo NUMNAV  &kp BSPC     &urm MOUSE SPACE &mo SYMBOL &none
+  &key_repeat &mo NUMNAV  &kp BSPC     &urm MOUSE SPACE &mo SYMBOL &key_repeat
                         >;
                 };
 
@@ -276,7 +276,7 @@
  &none &kp N1 &kp N2 &kp N3  &kp N4 &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &key_repeat  &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
  &none &trans &trans &trans &trans &key_repeat  &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
-                     &none  &trans  &trans      &trans &mo FUNADJ &none
+                     &key_repeat  &trans  &trans      &trans &mo FUNADJ &key_repeat
                         >;
                 };
 
@@ -291,7 +291,7 @@
 &none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
 &none HRML(NON_US_BSLH, RA(N8), RA(N7), STAR) &kp RBKT  &kp MINUS HRMR(GRAVE, LBRC, RBRC, PIPE) &none
 &none LRML(LS(NON_US_BSLH), RA(N9), RA(N0), LPAR) &kp BSLH  &kp UNDER LRMR(TILDE, LBKT, RBKT, BSLH) &none
-                        &none &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &none
+                        &key_repeat &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
                         >;
                 };
 
@@ -306,7 +306,7 @@
 &none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &none
 &none HRML(F11, F12, F13, F14) &kp F15         &kp F16 HRMR(F17, F18, F19, F20) &none
 &none LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END, INS) &none
-                       &none &trans &trans  &trans &trans &none
+                       &key_repeat &trans &trans  &trans &trans &key_repeat
                         >;
                 };
 
@@ -321,7 +321,7 @@
  &none &trans &trans &trans  &trans &trans     &trans  &trans  &trans  &trans  &trans  &none
  &none &mwh SCROLL_UP &kp LCTRL &kp LALT &kp LSHIFT &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCROLL_UP &none
  &none &mwh SCROLL_DOWN &trans &mkp RCLK &mkp MCLK &mkp LCLK   &mkp LCLK  &mkp MCLK &mkp RCLK &trans &mwh SCROLL_DOWN &none
-                     &none  &trans  &trans     &trans &trans &none
+                     &key_repeat  &trans  &trans     &trans &trans &key_repeat
                         >;
                 };
 
@@ -336,7 +336,7 @@
 &none &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans &none
 &none &trans &trans &trans &trans &trans  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &trans &trans &none
 &none &kp C_PWR &kp C_SLEEP &kp K_LOCK &trans &trans  &kp C_MUTE &trans &kp C_PP &trans &kp C_EJECT &none
-                &none &trans &trans   &trans &trans &none
+                &key_repeat &trans &trans   &trans &trans &key_repeat
                         >;
                 };
 
@@ -351,7 +351,7 @@
 &none UM1(F13) UM1(F14) UM1(F15) UM1(F16) UM1(F17) UM1(F18) UM1(F19) UM1(F20) UM1(F21) UM1(F22)  &none
 &none HM1(F13) HM1(F14) HM1(F15) HM1(F16) HM1(F17) HM1(F18) HM1(F19) HM1(F20) HM1(F21) HM1(F22)  &none
 &none LM1(F13) LM1(F14) LM1(F15) LM1(F16) LM1(F17) LM1(F18) LM1(F19) LM1(F20) LM1(F21) LM1(F22)  &none
-                      &none &trans &trans        &trans &trans &none
+                      &key_repeat &trans &trans        &trans &trans &key_repeat
                         >;
                 };
 
@@ -366,7 +366,7 @@
 &none &none &none &m_env &m_proc &m_today  &none &none &m_info &none &m_plm &none
 &none &m_arch &m_choose &none &kp LS(F24) &m_week  &none &none &none &m_lt &none &none
 &none &none &none &m_cust &none &m_month  &none &none &none &none &none &none
-                     &none &none &none  &none &none &none
+                     &key_repeat &none &none  &none &none &key_repeat
                         >;
                 };
 
@@ -381,7 +381,7 @@
 &none UM2(F13) UM2(F14) UM2(F15) UM2(F16) UM2(F17) UM2(F18) UM2(F19) UM2(F20) UM2(F21) UM2(F22)  &none
 &none HM2(F13) HM2(F14) HM2(F15) HM2(F16) HM2(F17) HM2(F18) HM2(F19) HM2(F20) HM2(F21) HM2(F22)  &none
 &none LM2(F13) LM2(F14) LM2(F15) LM2(F16) LM2(F17) LM2(F18) LM2(F19) LM2(F20) LM2(F21) LM2(F22)  &none
-                      &none &trans &trans        &trans &trans &none
+                      &key_repeat &trans &trans        &trans &trans &key_repeat
                         >;
                 };
 
@@ -396,7 +396,7 @@
 &none   &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
 &none BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4) &none
 &none &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader  &none
-                      &none &none &unstick        &unstick &none &none
+                      &key_repeat &none &unstick        &unstick &none &key_repeat
                         >;
                 };
 
@@ -406,7 +406,7 @@
 &none &none &none &none &none &none  &none &none &none &none &none &none
 &none &none &none &none &none &none  &none &none &none &none &none &none
 &none &none &none &none &none &none  &none &none &none &none &none &none
-                  &none &none &none  &none &none &none
+                  &key_repeat &none &none  &none &none &key_repeat
                         >;
                 };
         };
