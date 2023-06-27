@@ -239,6 +239,12 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
+        unstick: unstick {
+            label = "ZM_unstick";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
+        };
     };
 
         keymap {
@@ -390,7 +396,7 @@
 &none   &none  &none  &none  &none  &none        &none  &none  &none  &none  &none  &none
 &none BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4) &none
 &none &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader  &none
-                      &none &none &none        &none &none &none
+                      &none &none &unstick        &unstick &none &none
                         >;
                 };
 
