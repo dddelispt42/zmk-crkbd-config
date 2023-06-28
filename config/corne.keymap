@@ -104,6 +104,16 @@
                   key-positions = <16 19>;  // NOT-FOR-SWEEP
                   bindings = <&kp CAPS>;
         };
+        combo_repeat_left {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <15 16>;  // NOT-FOR-SWEEP
+                  bindings = <&key_repeat>;
+        };
+        combo_repeat_right {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <19 20>;  // NOT-FOR-SWEEP
+                  bindings = <&key_repeat>;
+        };
     };
 
     macros {
