@@ -110,6 +110,18 @@
                   key-positions = <13 16>;  // NOT-FOR-CORNE
                   bindings = <&kp CAPS>;
         };
+        combo_repeat_left {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <15 16>;  // NOT-FOR-SWEEP
+                  key-positions = <12 13>;  // NOT-FOR-CORNE
+                  bindings = <&key_repeat>;
+        };
+        combo_repeat_right {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <19 20>;  // NOT-FOR-SWEEP
+                  key-positions = <16 17>;  // NOT-FOR-CORNE
+                  bindings = <&key_repeat>;
+        };
     };
 
     macros {
