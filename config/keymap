@@ -292,7 +292,7 @@ DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) DK
 //                    |     |     |     |   |     | L3  |     |
                         bindings = <
  DK &kp N1 &kp N2 &kp N3  &kp N4 &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  DK
- DK &trans &trans &trans &trans &kp RA(TILDE) &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
+ DK &trans &trans &trans &trans &kp RA(LBKT) &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
  DK &trans &trans &trans &trans &kp RA(S)    &kp EQUAL  &kp SQT  &trans  &trans  &trans  DK
                      RK  &trans  &trans      &trans &mo FUNADJ RK
                         >;
