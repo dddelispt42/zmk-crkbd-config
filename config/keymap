@@ -287,13 +287,13 @@ DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) DK
                         label = "NUMNAV";
 // -------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |     |     |     |     | RPT |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
-// |      |     |     |     |     | RPT |   |  «  |  º  |     |     |     |      |
+// |      |     |     |     |     |  ü  |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
+// |      |     |     |     |     |  ß  |   |  «  |  º  |     |     |     |      |
 //                    |     |     |     |   |     | L3  |     |
                         bindings = <
  DK &kp N1 &kp N2 &kp N3  &kp N4 &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  DK
- DK &trans &trans &trans &trans &key_repeat  &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
- DK &trans &trans &trans &trans &key_repeat  &kp EQUAL  &kp SQT  &trans  &trans  &trans  DK
+ DK &trans &trans &trans &trans &kp RA(TILDE) &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
+ DK &trans &trans &trans &trans &kp RA(S)    &kp EQUAL  &kp SQT  &trans  &trans  &trans  DK
                      RK  &trans  &trans      &trans &mo FUNADJ RK
                         >;
                 };
@@ -301,9 +301,9 @@ DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) DK
                 symbol_layer {
                         label = "SYMBOL";
 // -------------------------------------------------------------------------------
-// |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
-// |      |  <  |  [  |  {  |  (  |  `  |   |  -  |  =  |  {  |  }  |" | "|      |
-// |      |  >  |  ]  |  }  |  )  |  ~  |   |  _  |  +  |  [  |  ]  |  \  |      |
+// |      |  !  |  "@ |  #  |  $  |  %  |   |  &^ |  /& |  (* |  )( |  =) |      |
+// |      |  <  |  [  |  {  |  (  |  `  |   |  '- |  \= |  *{ |  `} |  ^| |      |
+// |      |  >  |  ]  |  }  |  )  |  ~  |   |  ?_ |  |+ |  +[ |  '] |  ~\ |      |
 //                    |     | L3  | DEL |   |     |     |     |
                         bindings = <
 DK   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR DK
