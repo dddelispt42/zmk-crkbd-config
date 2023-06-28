@@ -279,13 +279,13 @@
                         label = "NUMNAV";
 // -------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |     |     |     |     | RPT |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
-// |      |     |     |     |     | RPT |   |  «  |  º  |     |     |     |      |
+// |      |     |     |     |     |  ü  |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
+// |      |     |     |     |     |  ß  |   |  «  |  º  |     |     |     |      |
 //                    |     |     |     |   |     | L3  |     |
                         bindings = <
  &none &kp N1 &kp N2 &kp N3  &kp N4 &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
- &none &trans &trans &trans &trans &key_repeat  &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
- &none &trans &trans &trans &trans &key_repeat  &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
+ &none &trans &trans &trans &trans &kp RA(TILDE) &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
+ &none &trans &trans &trans &trans &kp RA(S)    &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
                      &key_repeat  &trans  &trans      &trans &mo FUNADJ &key_repeat
                         >;
                 };
@@ -293,9 +293,9 @@
                 symbol_layer {
                         label = "SYMBOL";
 // -------------------------------------------------------------------------------
-// |      |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
-// |      |  <  |  [  |  {  |  (  |  `  |   |  -  |  =  |  {  |  }  |" | "|      |
-// |      |  >  |  ]  |  }  |  )  |  ~  |   |  _  |  +  |  [  |  ]  |  \  |      |
+// |      |  !  |  "@ |  #  |  $  |  %  |   |  &^ |  /& |  (* |  )( |  =) |      |
+// |      |  <  |  [  |  {  |  (  |  `  |   |  '- |  \= |  *{ |  `} |  ^| |      |
+// |      |  >  |  ]  |  }  |  )  |  ~  |   |  ?_ |  |+ |  +[ |  '] |  ~\ |      |
 //                    |     | L3  | DEL |   |     |     |     |
                         bindings = <
 &none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
