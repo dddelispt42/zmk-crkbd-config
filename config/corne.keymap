@@ -416,7 +416,7 @@
 &none &none &none &none &none &none  &none &none &none &none &none &none
 &none &none &none &none &none &none  &none &none &none &none &none &none
 &none &none &none &none &none &none  &none &none &none &none &none &none
-                  &key_repeat &none &none  &none &none &key_repeat
+                  &none &none &none  &none &none &none
                         >;
                 };
         };

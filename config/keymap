@@ -424,7 +424,7 @@ DK &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_res
 DK &none &none &none &none &none  &none &none &none &none &none DK
 DK &none &none &none &none &none  &none &none &none &none &none DK
 DK &none &none &none &none &none  &none &none &none &none &none DK
-                  RK &none &none  &none &none RK
+                  DK &none &none  &none &none DK
                         >;
                 };
         };
