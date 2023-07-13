@@ -248,7 +248,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-        hms: homerow_mods {
+        hms: homerow_mod_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
