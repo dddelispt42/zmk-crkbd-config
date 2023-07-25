@@ -106,13 +106,43 @@
         };
         combo_repeat_left {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <15 16>;  // NOT-FOR-SWEEP
+                  key-positions = <16 17>;  // NOT-FOR-SWEEP
                   bindings = <&key_repeat>;
         };
         combo_repeat_right {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <19 20>;  // NOT-FOR-SWEEP
+                  key-positions = <18 19>;  // NOT-FOR-SWEEP
                   bindings = <&key_repeat>;
+        };
+        combo_repeat_sz {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <3 4>;  // NOT-FOR-SWEEP
+                  bindings = <&kp RA(S)>;
+        };
+        combo_repeat_umlaut {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <15 16>;  // NOT-FOR-SWEEP
+                  bindings = <&kp RA(LBKT)>;
+        };
+        combo_repeat_tilde {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <27 28>;  // NOT-FOR-SWEEP
+                  bindings = <&kp BSLH>;
+        };
+        combo_repeat_laccent {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <7 8>;  // NOT-FOR-SWEEP
+                  bindings = <&kp RBRC>;
+        };
+        combo_repeat_raccent {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <19 20>;  // NOT-FOR-SWEEP
+                  bindings = <&kp RBKT>;
+        };
+        combo_repeat_lraccent {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <31 32>;  // NOT-FOR-SWEEP
+                  bindings = <&kp PIPE>;
         };
     };
 
