@@ -99,6 +99,11 @@
                   key-positions = <5 6>;  // NOT-FOR-CORNE
                   bindings = <&kp RET>;
         };
+        combo_at {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <23 24>;  // NOT-FOR-CORNE
+                  bindings = <&kp RA(N2)>;
+        };
         combo_caps {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <13 16>;  // NOT-FOR-CORNE
@@ -114,35 +119,25 @@
                   key-positions = <15 16>;  // NOT-FOR-CORNE
                   bindings = <&key_repeat>;
         };
-        combo_repeat_sz {
-                  timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <21 22>;  // NOT-FOR-CORNE
-                  bindings = <&kp RA(S)>;
-        };
         combo_repeat_umlaut {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <12 13>;  // NOT-FOR-CORNE
                   bindings = <&kp RA(LBKT)>;
         };
-        combo_repeat_tilde {
+        combo_repeat_sz {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <22 23>;  // NOT-FOR-CORNE
-                  bindings = <&kp BSLH>;
+                  bindings = <&kp RA(S)>;
         };
-        combo_repeat_laccent {
-                  timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <6 7>;  // NOT-FOR-CORNE
-                  bindings = <&kp RBRC>;
-        };
-        combo_repeat_raccent {
+        combo_repeat_accent {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <16 17>;  // NOT-FOR-CORNE
                   bindings = <&kp RBKT>;
         };
-        combo_repeat_lraccent {
+        combo_repeat_tilde {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <26 27>;  // NOT-FOR-CORNE
-                  bindings = <&kp PIPE>;
+                  bindings = <&kp BSLH>;
         };
     };
 
