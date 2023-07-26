@@ -116,7 +116,7 @@
         };
         combo_repeat_sz {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <2 3>;  // NOT-FOR-CORNE
+                  key-positions = <21 22>;  // NOT-FOR-CORNE
                   bindings = <&kp RA(S)>;
         };
         combo_repeat_umlaut {
