@@ -156,7 +156,7 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <25 26>;  // NOT-FOR-SWEEP
                   key-positions = <20 21>;  // NOT-FOR-CORNE
-                  bindings = <&kp RA(PSCRN)>;
+                  bindings = <&kp PSCRN>;
         };
     };
 
@@ -421,14 +421,14 @@ DK LM1(F13) LM1(F14) LM1(F15) LM1(F16) LM1(F17) LM1(F18) LM1(F19) LM1(F20) LM1(F
                 outl_layer {
                         label = "MSOUTL";
 // -------------------------------------------------------------------------------
-// |      |     |     | ENV | PROC|  TD |   |     |     | INFO|     | PLM |      |
+// |      |     |     | ENV | PROC|  TD |   | CAL |     | INFO|     | PLM |      |
 // |      | ARCH| SEL |     |S-F24|  W  |   |     |     |     | LT  |     |      |
-// |      |     |     | CUST|     |  M  |   |     |     |     |     |     |      |
+// |      | <-- |     | CUST|     |  M  |   | INB | NXT | PRV | FSEL| --> |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-DK &none &none &m_env &m_proc &m_today  &none &none &m_info &none &m_plm DK
+DK &none &none &m_env &m_proc &m_today  &kp LC(N2) &none &m_info &none &m_plm DK
 DK &m_arch &m_choose &none &kp LS(F24) &m_week  &none &none &none &m_lt &none DK
-DK &none &none &m_cust &none &m_month  &none &none &none &none &none DK
+DK &kp LS(F6) &none &m_cust &none &m_month  &kp LC(LS(I)) &kp LA(LEFT) &kp LA(RIGHT) &kp LC(LS(Y)) &kp F6 DK
                      RK &none &none  &none &none RK
                         >;
                 };
