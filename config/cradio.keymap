@@ -139,6 +139,11 @@
                   key-positions = <26 27>;  // NOT-FOR-CORNE
                   bindings = <&kp BSLH>;
         };
+        combo_repeat_prtwin {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <20 21>;  // NOT-FOR-CORNE
+                  bindings = <&kp RA(PSCRN)>;
+        };
     };
 
     macros {
