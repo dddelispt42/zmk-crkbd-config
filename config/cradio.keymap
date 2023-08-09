@@ -142,7 +142,7 @@
         combo_repeat_prtwin {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <20 21>;  // NOT-FOR-CORNE
-                  bindings = <&kp RA(PSCRN)>;
+                  bindings = <&kp PSCRN>;
         };
     };
 
@@ -407,14 +407,14 @@
                 outl_layer {
                         label = "MSOUTL";
 // -------------------------------------------------------------------------------
-// |      |     |     | ENV | PROC|  TD |   |     |     | INFO|     | PLM |      |
+// |      |     |     | ENV | PROC|  TD |   | CAL |     | INFO|     | PLM |      |
 // |      | ARCH| SEL |     |S-F24|  W  |   |     |     |     | LT  |     |      |
-// |      |     |     | CUST|     |  M  |   |     |     |     |     |     |      |
+// |      | <-- |     | CUST|     |  M  |   | INB | NXT | PRV | FSEL| --> |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- &none &none &m_env &m_proc &m_today  &none &none &m_info &none &m_plm 
+ &none &none &m_env &m_proc &m_today  &kp LC(N2) &none &m_info &none &m_plm 
  &m_arch &m_choose &none &kp LS(F24) &m_week  &none &none &none &m_lt &none 
- &none &none &m_cust &none &m_month  &none &none &none &none &none 
+ &kp LS(F6) &none &m_cust &none &m_month  &kp LC(LS(I)) &kp LA(LEFT) &kp LA(RIGHT) &kp LC(LS(Y)) &kp F6 
                       &none &none  &none &none 
                         >;
                 };
