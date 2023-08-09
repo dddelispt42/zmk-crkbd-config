@@ -139,6 +139,11 @@
                   key-positions = <31 32>;  // NOT-FOR-SWEEP
                   bindings = <&kp BSLH>;
         };
+        combo_repeat_prtwin {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <25 26>;  // NOT-FOR-SWEEP
+                  bindings = <&kp RA(PSCRN)>;
+        };
     };
 
     macros {
