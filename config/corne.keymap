@@ -117,7 +117,7 @@
                   key-positions = <16 19>;  // NOT-FOR-SWEEP
                   layers = <QWERTY>;
                   // bindings = <&kp CAPS>;
-                  bindings = <&num_word>;
+                  bindings = <&caps_word>;
         };
         combo_repeat_left {
                   timeout-ms = <COMBO_TIMEOUT>;
@@ -329,9 +329,9 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
-        num_word: behavior_num_word {
+        caps_word: behavior_caps_word {
             compatible = "zmk,behavior-caps-word";
-            label = "NUM_WORD";
+            label = "CAPS_WORD";
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE UNDERSCORE MINUS>;
         };
