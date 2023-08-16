@@ -23,6 +23,7 @@
 #define LOCK   10
 
 #define COMBO_TIMEOUT 50
+#define SPLIT_COMBO_TIMEOUT 75
 #define MACRO_TAP 10
 #define MACRO_WAIT 0
 
@@ -113,7 +114,7 @@
                   bindings = <&kp RA(N2)>;
         };
         combo_caps {
-                  timeout-ms = <COMBO_TIMEOUT>;
+                  timeout-ms = <SPLIT_COMBO_TIMEOUT>;
                   key-positions = <13 16>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
                   // bindings = <&kp CAPS>;
