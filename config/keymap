@@ -59,7 +59,7 @@
 #define OUTBLE &out OUT_BLE
 
 // TODO: add generic mechanism to lock layers
-// TODO: add 2x rotary encoder - use C_FF/C_RW or LANG1/LANG2 as free keycodes for AHK
+// TODO: add 2x rotary encoder - use Fxx or LANG1/LANG2 as free keycodes for AHK
 // TODO: add leader key: move AHK into keyboard to use all all machines - use C_AL_CALC/C_AC_SEARCH/C_AL_CAL
 
 / {
@@ -94,21 +94,21 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <1 2>;  // NOT-FOR-SWEEP
                   key-positions = <0 1>;  // NOT-FOR-CORNE
-                  layers = <QWERTY NUMNAV SYMBOL>;
+                  layers = <QWERTY>;
                   bindings = <&kp ESC>;
         };
         combo_tab {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <4 5>;  // NOT-FOR-SWEEP
                   key-positions = <3 4>;  // NOT-FOR-CORNE
-                  layers = <QWERTY NUMNAV SYMBOL>;
+                  layers = <QWERTY>;
                   bindings = <&kp TAB>;
         };
         combo_ret {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <6 7>;  // NOT-FOR-SWEEP
                   key-positions = <5 6>;  // NOT-FOR-CORNE
-                  layers = <QWERTY NUMNAV SYMBOL>;
+                  layers = <QWERTY>;
                   bindings = <&kp RET>;
         };
         combo_at {
@@ -130,14 +130,14 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <16 17>;  // NOT-FOR-SWEEP
                   key-positions = <13 14>;  // NOT-FOR-CORNE
-                  layers = <QWERTY NUMNAV SYMBOL>;
+                  layers = <QWERTY>;
                   bindings = <&key_repeat>;
         };
         combo_repeat_right {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <18 19>;  // NOT-FOR-SWEEP
                   key-positions = <15 16>;  // NOT-FOR-CORNE
-                  layers = <QWERTY NUMNAV SYMBOL>;
+                  layers = <QWERTY>;
                   bindings = <&key_repeat>;
         };
         combo_umlaut {
@@ -145,7 +145,7 @@
                   key-positions = <15 16>;  // NOT-FOR-SWEEP
                   key-positions = <12 13>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
-                  bindings = <&kp RA(LBKT)>;
+                  bindings = <&hm LA(LSHIFT) RA(LBKT)>;
         };
         combo_sz {
                   timeout-ms = <COMBO_TIMEOUT>;
@@ -159,7 +159,7 @@
                   key-positions = <19 20>;  // NOT-FOR-SWEEP
                   key-positions = <16 17>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
-                  bindings = <&kp RBKT>;
+                  bindings = <&hm LA(RSHIFT) RBKT>;
         };
         combo_tilde {
                   timeout-ms = <COMBO_TIMEOUT>;
@@ -195,6 +195,13 @@
                   key-positions = <28 29>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
                   bindings = <&kp LC(V)>;
+        };
+        combo_leader {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <30 31>;  // NOT-FOR-SWEEP
+                  key-positions = <25 26>;  // NOT-FOR-CORNE
+                  layers = <QWERTY>;
+                  bindings = <&kp F23>; // INFO: F23 is ZMK leader key
         };
     };
 
@@ -350,7 +357,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "CAPS_WORD";
             #binding-cells = <0>;
-            continue-list = <BACKSPACE DELETE UNDERSCORE MINUS>;
+            continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
         };
     };
 
@@ -376,14 +383,14 @@ DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) DK
                         label = "NUMNAV";
 // -------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
-// |      |     |     |     |     |  ü  |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
-// |      |     |     |     |     |  ß  |   |  «  |  º  |     |     |     |      |
+// |      |     |     |     |     |     |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
+// |      |     |     |     |     |     |   |  «  |  º  |     |     |     |      |
 //                    |     |     |     |   |     | L3  |     |
                         bindings = <
- DK &kp N1 &kp N2 &kp N3  &kp N4 &kp N5      &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  DK
- DK &trans &trans &trans &trans &kp RA(LBKT) &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
- DK &trans &trans &trans &trans &kp RA(S)    &kp EQUAL  &kp SQT  &trans  &trans  &trans  DK
-                     RKL  &trans  &trans      &trans &mo FUNADJ RKR
+ DK &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  DK
+ DK &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) DK
+ DK &trans &trans &trans &trans &trans      &kp EQUAL  &kp SQT  &trans  &trans  &trans  DK
+                     RKL  &trans  &trans    &trans &mo FUNADJ RKR
                         >;
                 };
 
@@ -427,7 +434,7 @@ DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_UP, PG_DN, END,
                         bindings = <
  DK &trans &trans &trans  &trans &trans     &trans  &trans  &trans  &trans  &trans  DK
  DK &mwh SCROLL_UP &kp LCTRL &kp LALT &kp LSHIFT &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCROLL_UP DK
- DK &mwh SCROLL_DOWN &trans &mkp RCLK &mkp MCLK &mkp LCLK   &mkp LCLK  &mkp MCLK &mkp RCLK &trans &mwh SCROLL_DOWN DK
+ DK &mwh SCROLL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &trans   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &mwh SCROLL_DOWN DK
                      DK  &trans  &trans     &trans &trans DK
                         >;
                 };
@@ -440,9 +447,9 @@ DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_UP, PG_DN, END,
 // |      | PWR | SLP | LCK |     |     |   | MT  |     | PP  |     | EJC |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-DK &trans &trans &trans &trans &trans  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &trans &trans DK
-DK &trans &trans &trans &trans &trans  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &trans &trans DK
-DK &kp C_PWR &kp C_SLEEP &kp K_LOCK &trans &trans  &kp C_MUTE &kp LC(LA(M)) &kp C_PP &trans &kp C_EJECT DK
+DK &kp C_MEDIA_HOME &kp C_MEDIA_WWW &kp C_MEDIA_TV &kp C_MEDIA_COMPUTER &kp C_MEDIA_PHONE  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &kp C_FF &kp C_PWR DK
+DK &kp C_MEDIA_GAMES &kp C_MEDIA_MESSAGES &kp CHANNEL_INC &kp C_CHANNEL_DEC &kp C_MEDIA_GUIDE  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &kp C_RW &kp C_SLEEP DK
+DK &trans &trans &trans &trans &trans  &kp C_MUTE &kp LC(LA(M)) &kp C_PP &kp C_EJECT &kp K_LOCK DK
                 DK &trans &trans   &trans &trans DK
                         >;
                 };
