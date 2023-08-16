@@ -448,7 +448,7 @@ DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_UP, PG_DN, END,
 //                    |     |     |     |   |     |     |     |
                         bindings = <
 DK &kp C_MEDIA_HOME &kp C_MEDIA_WWW &kp C_MEDIA_TV &kp C_MEDIA_COMPUTER &kp C_MEDIA_PHONE  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &kp C_FF &kp C_PWR DK
-DK &kp C_MEDIA_GAMES &kp C_MEDIA_MESSAGES &kp CHANNEL_INC &kp C_CHANNEL_DEC &kp C_MEDIA_GUIDE  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &kp C_RW &kp C_SLEEP DK
+DK &kp C_MEDIA_GAMES &kp C_MEDIA_MESSAGES &kp C_CHANNEL_INC &kp C_CHANNEL_DEC &kp C_MEDIA_GUIDE  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &kp C_RW &kp C_SLEEP DK
 DK &trans &trans &trans &trans &trans  &kp C_MUTE &kp LC(LA(M)) &kp C_PP &kp C_EJECT &kp K_LOCK DK
                 DK &trans &trans   &trans &trans DK
                         >;
