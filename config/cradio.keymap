@@ -97,13 +97,13 @@
         };
         combo_tab {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <3 4>;  // NOT-FOR-CORNE
+                  key-positions = <2 3 4>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
                   bindings = <&kp TAB>;
         };
         combo_ret {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <5 6>;  // NOT-FOR-CORNE
+                  key-positions = <5 6 7>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
                   bindings = <&kp RET>;
         };
@@ -164,19 +164,19 @@
         };
         combo_ctrlc {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <8 9>;  // NOT-FOR-CORNE
+                  key-positions = <7 8 9>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
                   bindings = <&kp LC(C)>;
         };
         combo_ctrlx {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <18 19>;  // NOT-FOR-CORNE
+                  key-positions = <17 18 19>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
                   bindings = <&kp LC(X)>;
         };
         combo_ctrlv {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <28 29>;  // NOT-FOR-CORNE
+                  key-positions = <27 28 29>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
                   bindings = <&kp LC(V)>;
         };
