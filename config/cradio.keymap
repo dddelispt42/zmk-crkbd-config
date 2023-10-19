@@ -80,36 +80,42 @@
         combo_toggle_lock_left {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <0 4 31>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY LOCK>;
                   bindings = <&tog LOCK>;
         };
         combo_toggle_lock_right {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <5 9 32>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY LOCK>;
                   bindings = <&tog LOCK>;
         };
         combo_esc {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <0 1>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp ESC>;
         };
         combo_tab {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <2 3 4>;  // NOT-FOR-CORNE
+                  key-positions = <3 4>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp TAB>;
         };
         combo_ret {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <5 6 7>;  // NOT-FOR-CORNE
+                  key-positions = <5 6>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp RET>;
         };
         combo_at {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <23 24>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp RA(N2)>;
         };
@@ -123,66 +129,77 @@
         combo_repeat_left {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <13 14>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&key_repeat>;
         };
         combo_repeat_right {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <15 16>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&key_repeat>;
         };
         combo_umlaut {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <12 13>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&hm LA(LSHIFT) RA(LBKT)>;
         };
         combo_sz {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <22 23>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp RA(S)>;
         };
         combo_accent {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <16 17>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&hm LA(RSHIFT) RBKT>;
         };
         combo_tilde {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <26 27>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp BSLH>;
         };
         combo_prtwin {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <20 21>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp PSCRN>;
         };
         combo_ctrlc {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <7 8 9>;  // NOT-FOR-CORNE
+                  key-positions = <7 8>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp LC(C)>;
         };
         combo_ctrlx {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <17 18 19>;  // NOT-FOR-CORNE
+                  key-positions = <17 18>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
+                  require-prior-idle-ms = <150>;
                   bindings = <&kp LC(X)>;
         };
         combo_ctrlv {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <27 28 29>;  // NOT-FOR-CORNE
+                  key-positions = <27 28>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp LC(V)>;
         };
         combo_leader {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <25 26>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp F23>; // INFO: F23 is ZMK leader key
         };
@@ -309,6 +326,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <210>;
             quick_tap_ms = <210>;
+            require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -316,9 +334,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
             quick_tap_ms = <175>;
-            flavor = "tap-preferred";
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
         urm: upper_row_mods {
@@ -327,6 +346,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick_tap_ms = <250>;
+            require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
