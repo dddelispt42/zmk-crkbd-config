@@ -335,6 +335,36 @@
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
+        ZMK_MACRO(m_emoj_tu,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp RA(N9) &kp E &kp T &kp U &kp SPACE &kp BSPC>;
+                )
+        ZMK_MACRO(m_emoj_j,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp RA(N9) &kp E &kp J &kp SPACE &kp BSPC>;
+                )
+        ZMK_MACRO(m_emoj_l,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp RA(N9) &kp E &kp L &kp SPACE &kp BSPC>;
+                )
+        ZMK_MACRO(m_emoj_h,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp RA(N9) &kp E &kp H &kp SPACE &kp BSPC>;
+                )
+        ZMK_MACRO(m_emoj_s,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp RA(N9) &kp E &kp S &kp SPACE &kp BSPC>;
+                )
+        ZMK_MACRO(m_emoj_w,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp RA(N9) &kp E &kp W &kp SPACE &kp BSPC>;
+                )
     };
 
     behaviors {
@@ -498,8 +528,8 @@ DK LM1(F13) LM1(F14) LM1(F15) LM1(F16) LM1(F17) LM1(F18) LM1(F19) LM1(F20) LM1(F
 // |      | <-- |     | CUST|     |  M  |   | INB | NXT | PRV | FSEL| --> |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-DK &none &none &m_env &m_proc &m_today  &kp LC(N2) &none &m_info &none &m_plm DK
-DK &m_arch &m_choose &none &kp LS(F24) &m_week  &none &none &none &m_lt &none DK
+DK &none &none &m_env &m_proc &m_today  &kp LC(N2) &m_emoj_tu &m_info &m_emoj_j &m_plm DK
+DK &m_arch &m_choose &none &kp LS(F24) &m_week  &m_emoj_h &m_emoj_w &m_emoj_s &m_lt &m_emoj_l DK
 DK &kp LS(F6) &none &m_cust &none &m_month  &kp LC(LS(I)) &kp LA(LEFT) &kp LA(RIGHT) &kp LC(LS(Y)) &kp F6 DK
                      DK &none &none  &none &none DK
                         >;
