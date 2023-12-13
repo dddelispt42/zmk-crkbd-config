@@ -523,8 +523,8 @@ DK LM1(F13) LM1(F14) LM1(F15) LM1(F16) LM1(F17) LM1(F18) LM1(F19) LM1(F20) LM1(F
                 outl_layer {
                         label = "MSOUTL";
 // -------------------------------------------------------------------------------
-// |      |     |     | ENV | PROC|  TD |   | CAL |     | INFO|     | PLM |      |
-// |      | ARCH| SEL |     |S-F24|  W  |   |     |     |     | LT  |     |      |
+// |      |     |     | ENV | PROC|  TD |   | CAL | 👍  | INFO| 😜  | PLM |      |
+// |      | ARCH| SEL |     |S-F24|  W  |   |😊   | 😉 | 😢  | LT  | 🤣  |      |
 // |      | <-- |     | CUST|     |  M  |   | INB | NXT | PRV | FSEL| --> |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
