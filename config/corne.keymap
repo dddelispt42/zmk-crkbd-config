@@ -505,8 +505,8 @@
                 outl_layer {
                         label = "MSOUTL";
 // -------------------------------------------------------------------------------
-// |      |     |     | ENV | PROC|  TD |   | CAL |     | INFO|     | PLM |      |
-// |      | ARCH| SEL |     |S-F24|  W  |   |     |     |     | LT  |     |      |
+// |      |     |     | ENV | PROC|  TD |   | CAL | 👍  | INFO| 😜  | PLM |      |
+// |      | ARCH| SEL |     |S-F24|  W  |   | 😊  | 😉  | 😢  | LT  | 🤣  |      |
 // |      | <-- |     | CUST|     |  M  |   | INB | NXT | PRV | FSEL| --> |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
