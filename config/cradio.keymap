@@ -177,21 +177,21 @@
         };
         combo_ctrlc {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <7 8>;  // NOT-FOR-CORNE
+                  key-positions = <6 7 8>;  // NOT-FOR-CORNE
                   require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp LC(C)>;
         };
         combo_ctrlx {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <17 18>;  // NOT-FOR-CORNE
+                  key-positions = <16 17 18>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
                   require-prior-idle-ms = <150>;
                   bindings = <&kp LC(X)>;
         };
         combo_ctrlv {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <27 28>;  // NOT-FOR-CORNE
+                  key-positions = <26 27 28>;  // NOT-FOR-CORNE
                   require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp LC(V)>;
