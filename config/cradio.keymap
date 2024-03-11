@@ -407,12 +407,12 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
-        // caps_word: behavior_caps_word {
-            // compatible = "zmk,behavior-caps-word";
-            // label = "CAPS_WORD";
-            // #binding-cells = <0>;
-            // continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
-        // };
+        caps_word: behavior_caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
+        };
     };
 
         keymap {
