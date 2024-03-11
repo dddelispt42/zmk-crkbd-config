@@ -125,7 +125,7 @@
                   layers = <QWERTY>;
                   bindings = <&kp CAPS>;
                   // bindings = <&caps_word>;
-        // };
+        };
         combo_repeat_left {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <16 17>;  // NOT-FOR-SWEEP
