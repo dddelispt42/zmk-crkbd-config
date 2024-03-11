@@ -428,12 +428,12 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
-        caps_word: behavior_caps_word {
-            compatible = "zmk,behavior-caps-word";
-            label = "CAPS_WORD";
-            #binding-cells = <0>;
-            continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
-        };
+        // caps_word: behavior_caps_word {
+            // compatible = "zmk,behavior-caps-word";
+            // label = "CAPS_WORD";
+            // #binding-cells = <0>;
+            // continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
+        // };
     };
 
         keymap {
@@ -502,14 +502,14 @@ DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_UP, PG_DN, END,
                 mouse_layer {
                         label = "MOUSE";
 // -------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      | SUP | LC  | LA  | LS  |     |   | LF  | DN  | UP  | RT  | SUP |      |
-// |      | SDN |     | RCLK| MCLK| LCLK|   | LCLK| MCLK| RCLK|     | SDN |      |
+// |      |     |     |  `  |  ´  |  ^  |   |     |     |     |     |     |      |
+// |      | SUP | LC  | LA  | LS  |  ¨  |   | LF  | DN  | UP  | RT  | SUP |      |
+// |      | SDN | RCLK| MCLK| LCLK|  ~  |   |     | LCLK| MCLK| RCLK| SDN |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- DK &trans &trans &trans  &trans &trans     &trans  &trans  &trans  &trans  &trans  DK
- DK &msc SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &trans  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP DK
- DK &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &trans   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN DK
+ DK &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &trans  &trans  &trans  &trans  &trans  DK
+ DK &msc SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP DK
+ DK &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN DK
                      DK  &trans  &trans     &trans &trans DK
                         >;
                 };
