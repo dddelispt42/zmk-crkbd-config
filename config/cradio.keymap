@@ -123,8 +123,8 @@
                   timeout-ms = <SPLIT_COMBO_TIMEOUT>;
                   key-positions = <13 16>;  // NOT-FOR-CORNE
                   layers = <QWERTY>;
-                  bindings = <&kp CAPS>;
-                  // bindings = <&caps_word>;
+                  // bindings = <&kp CAPS>;
+                  bindings = <&caps_word>;
         };
         combo_repeat_left {
                   timeout-ms = <COMBO_TIMEOUT>;
@@ -579,3 +579,5 @@
                 };
         };
 };
+
+// vim: ft=c
