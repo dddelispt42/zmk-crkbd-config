@@ -142,13 +142,13 @@
                   layers = <QWERTY>;
                   bindings = <&key_repeat>;
         };
-        combo_umlaut {
-                  timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <15 16>;  // NOT-FOR-SWEEP
-                  require-prior-idle-ms = <150>;
-                  layers = <QWERTY>;
-                  bindings = <&hm LA(LSHIFT) RA(LBKT)>;
-        };
+        // combo_umlaut {
+        //           timeout-ms = <COMBO_TIMEOUT>;
+        //           key-positions = <15 16>;  // NOT-FOR-SWEEP
+        //           require-prior-idle-ms = <150>;
+        //           layers = <QWERTY>;
+        //           bindings = <&hm LA(LSHIFT) RA(LBKT)>;
+        // };
         combo_sz {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <27 28>;  // NOT-FOR-SWEEP
@@ -156,20 +156,20 @@
                   layers = <QWERTY>;
                   bindings = <&kp RA(S)>;
         };
-        combo_accent {
-                  timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <19 20>;  // NOT-FOR-SWEEP
-                  require-prior-idle-ms = <150>;
-                  layers = <QWERTY>;
-                  bindings = <&hm LA(RSHIFT) RBKT>;
-        };
-        combo_tilde {
-                  timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <31 32>;  // NOT-FOR-SWEEP
-                  require-prior-idle-ms = <150>;
-                  layers = <QWERTY>;
-                  bindings = <&kp BSLH>;
-        };
+        // combo_accent {
+        //           timeout-ms = <COMBO_TIMEOUT>;
+        //           key-positions = <19 20>;  // NOT-FOR-SWEEP
+        //           require-prior-idle-ms = <150>;
+        //           layers = <QWERTY>;
+        //           bindings = <&hm LA(RSHIFT) RBKT>;
+        // };
+        // combo_tilde {
+        //           timeout-ms = <COMBO_TIMEOUT>;
+        //           key-positions = <31 32>;  // NOT-FOR-SWEEP
+        //           require-prior-idle-ms = <150>;
+        //           layers = <QWERTY>;
+        //           bindings = <&kp BSLH>;
+        // };
         combo_prtwin {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <25 26>;  // NOT-FOR-SWEEP
