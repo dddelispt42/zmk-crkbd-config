@@ -62,6 +62,7 @@
 // TODO: add generic mechanism to lock layers
 // TODO: add 2x rotary encoder - use Fxx or LANG1/LANG2 as free keycodes for AHK
 // TODO: add leader key: move AHK into keyboard to use all all machines - use C_AL_CALC/C_AC_SEARCH/C_AL_CAL
+// TODO: add trackball
 
 / {
 // -------------------CORNE---------------------------------------
