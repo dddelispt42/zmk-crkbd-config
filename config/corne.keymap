@@ -63,6 +63,7 @@
 // TODO: add 2x rotary encoder - use Fxx or LANG1/LANG2 as free keycodes for AHK
 // TODO: add leader key: move AHK into keyboard to use all all machines - use C_AL_CALC/C_AC_SEARCH/C_AL_CAL
 // TODO: add trackball
+// TODO: make mouse move/scroll work again
 
 / {
 // -------------------CORNE---------------------------------------
@@ -122,10 +123,10 @@
         };
         combo_caps {
                   timeout-ms = <SPLIT_COMBO_TIMEOUT>;
-                  key-positions = <16 19>;  // NOT-FOR-SWEEP
+                  key-positions = <17 18>;  // NOT-FOR-SWEEP
                   layers = <QWERTY>;
                   // bindings = <&kp CAPS>;
-                  bindings = <&caps_word>;
+                  bindings = <&capsw>;
         };
         combo_repeat_left {
                   timeout-ms = <COMBO_TIMEOUT>;
@@ -408,7 +409,7 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
-        caps_word: behavior_caps_word {
+        capsw: behavior_caps_word {
             compatible = "zmk,behavior-caps-word";
             label = "CAPS_WORD";
             #binding-cells = <0>;
@@ -486,11 +487,12 @@
 // |      | SUP | LC  | LA  | LS  |  ¨  |   | LF  | DN  | UP  | RT  | SUP |      |
 // |      | SDN | RCLK| MCLK| LCLK|  ~  |   |     | LCLK| MCLK| RCLK| SDN |      |
 //                    |     |     |     |   |     |     |     |
+ // &none &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &trans  &trans  &trans  &trans  &trans  &none
+ // &none &msc SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP &none
+ // &none &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN &none
                         bindings = <
  &none &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &trans  &trans  &trans  &trans  &trans  &none
- // &none &mwh SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCRL_UP &none
- &none &trans &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans &none
- // &none &mwh SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &mwh SCRL_DOWN &none
+ &none &trans &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &trans &trans &trans &trans &trans &none
  &none &trans &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &trans &none
                      &none  &trans  &trans     &trans &trans &none
                         >;
