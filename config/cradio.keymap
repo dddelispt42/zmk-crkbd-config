@@ -488,8 +488,10 @@
 //                    |     |     |     |   |     |     |     |
                         bindings = <
   &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &trans  &trans  &trans  &trans  &trans  
-  &mwh SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCRL_UP 
-  &mwh SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &mwh SCRL_DOWN 
+ //  &mwh SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCRL_UP 
+  &trans &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans 
+ //  &mwh SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &mwh SCRL_DOWN 
+  &trans &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &trans 
                        &trans  &trans     &trans &trans 
                         >;
                 };

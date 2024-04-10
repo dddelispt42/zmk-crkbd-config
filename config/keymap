@@ -509,8 +509,10 @@ DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_UP, PG_DN, END,
 //                    |     |     |     |   |     |     |     |
                         bindings = <
  DK &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &trans  &trans  &trans  &trans  &trans  DK
- DK &mwh SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCRL_UP DK
- DK &mwh SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &mwh SCRL_DOWN DK
+ // DK &mwh SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mwh SCRL_UP DK
+ DK &trans &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans DK
+ // DK &mwh SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &mwh SCRL_DOWN DK
+ DK &trans &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &trans DK
                      DK  &trans  &trans     &trans &trans DK
                         >;
                 };
