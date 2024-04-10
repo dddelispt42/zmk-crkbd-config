@@ -1,21 +1,14 @@
 ---
 manifest:
-  # remotes:
-  #   - name: zmkfirmware
-  #     url-base: https://github.com/zmkfirmware
-  # projects:
-  #   - name: zmk
-  #     remote: zmkfirmware
-  #     revision: main
-  #     import: app/west.yml
-  # self:
-  #   path: config
   remotes:
-    - name: urob
-      url-base: https://github.com/urob
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+  #   - name: urob
+  #     url-base: https://github.com/urob
   projects:
     - name: zmk
-      remote: urob
+      remote: zmkfirmware
+      # remote: urob
       revision: main
       import: app/west.yml
   self:
