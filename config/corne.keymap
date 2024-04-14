@@ -373,7 +373,7 @@
     };
 
     behaviors {
-        spc_ret: backspace_delete {
+        spc_ret: space_return {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp RET>;
@@ -413,7 +413,7 @@
             quick_tap_ms = <175>;
             require-prior-idle-ms = <125>;
             flavor = "balanced";
-            bindings = <&ssk>, <&kp>;
+            bindings = <&skq>, <&kp>;
         };
         urm: upper_row_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -428,12 +428,12 @@
         skm: space_key_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_KEY_MOD";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             tapping-term-ms = <250>;
             quick_tap_ms = <250>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
-            bindings = <&mo MOUSE &spc_ret>;
+            bindings = <&mo>, <&spc_ret>;
         };
         unstick: unstick {
             label = "ZM_unstick";
@@ -463,7 +463,7 @@
 &none URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) &none
 &none HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) &none
 &none LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) &none
-  &kp F23 &mo NUMNAV  &bspc_del   &skm &mo SYMBOL &key_repeat
+  &kp F23 &mo NUMNAV  &bspc_del   &skm MOUSE 0 &mo SYMBOL &key_repeat
                         >;
                 };
 
