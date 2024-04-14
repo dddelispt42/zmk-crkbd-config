@@ -373,6 +373,28 @@
     };
 
     behaviors {
+        spc_ret: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp RET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <500>;
+            quick-release;
+            ignore-modifiers;
+        };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -391,7 +413,7 @@
             quick_tap_ms = <175>;
             require-prior-idle-ms = <125>;
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
+            bindings = <&ssk>, <&kp>;
         };
         urm: upper_row_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -403,11 +425,21 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
+        skm: space_key_mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_KEY_MOD";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            quick_tap_ms = <250>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&mo MOUSE &spc_ret>;
+        };
         unstick: unstick {
             label = "ZM_unstick";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
+            bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI &kp LGUI>;
         };
         capsw: behavior_caps_word {
             compatible = "zmk,behavior-caps-word";
@@ -431,7 +463,7 @@
 &none URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) &none
 &none HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) &none
 &none LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) &none
-  &kp F23 &mo NUMNAV  &kp BSPC     &urm MOUSE SPACE &mo SYMBOL &key_repeat
+  &kp F23 &mo NUMNAV  &bspc_del   &skm &mo SYMBOL &key_repeat
                         >;
                 };
 
@@ -483,7 +515,7 @@
                 mouse_layer {
                         label = "MOUSE";
 // -------------------------------------------------------------------------------
-// |      |     |     |  `  |  ´  |  ^  |   |     |     |     |     |     |      |
+// |      |     |     |  `  |  ´  |  ^  |   | HOME| PGUP| PGDN| END |     |      |
 // |      | SUP | LC  | LA  | LS  |  ¨  |   | LF  | DN  | UP  | RT  | SUP |      |
 // |      | SDN | RCLK| MCLK| LCLK|  ~  |   |     | LCLK| MCLK| RCLK| SDN |      |
 //                    |     |     |     |   |     |     |     |
@@ -491,8 +523,8 @@
  // &none &msc SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP &none
  // &none &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN &none
                         bindings = <
- &none &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &trans  &trans  &trans  &trans  &trans  &none
- &none &trans &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &trans &trans &trans &trans &trans &none
+ &none &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)  &kp HOME &kp PG_UP &kp PG_DN &kp END &trans &none
+ &none &trans &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &trans  &trans  &trans  &trans  &trans  &none
  &none &trans &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &trans &none
                      &none  &trans  &trans     &trans &trans &none
                         >;
