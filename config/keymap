@@ -59,6 +59,18 @@
 #define OUTUSB &out OUT_USB
 #define OUTBLE &out OUT_BLE
 
+#define MY_LEADER(NAME, KEYS, BINDINGS, LAYERS) \
+    leader_##NAME { \
+        key-positions = <KEYS>; \
+        bindings = <BINDINGS>; \
+        layers = <LAYERS>; \
+    };
+
+&leader {
+    timeout-ms = <1000>;
+    timerless;
+};
+
 // TODO: add generic mechanism to lock layers
 // TODO: add 2x rotary encoder - use Fxx or LANG1/LANG2 as free keycodes for AHK
 // TODO: add leader key: move AHK into keyboard to use all all machines - use C_AL_CALC/C_AC_SEARCH/C_AL_CAL
@@ -245,7 +257,7 @@
                   key-positions = <25 26>;  // NOT-FOR-CORNE
                   require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
-                  bindings = <&kp F23>; // INFO: F23 is ZMK leader key
+                  bindings = <&leader>;
         };
     };
 
@@ -454,7 +466,8 @@
             quick_tap_ms = <250>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&spc_ret>;
+            // bindings = <&mo>, <&spc_ret>;
+            bindings = <&mo>, <&kp>;
         };
         unstick: unstick {
             label = "ZM_unstick";
@@ -468,6 +481,11 @@
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
         };
+    };
+
+    leader_sequences {
+        compatible = "zmk,leader-sequences";
+        MY_LEADER(close, 1, &kp LA(F4), QWERTY)
     };
 
         keymap {
@@ -484,7 +502,7 @@
 DK URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) DK
 DK HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) DK
 DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) DK
-  RKL &mo NUMNAV  &bspc_del   &skm MOUSE 0 &mo SYMBOL RKR
+  RKL &mo NUMNAV  &bspc_del   &skm MOUSE SPACE &mo SYMBOL RKR
                         >;
                 };
 

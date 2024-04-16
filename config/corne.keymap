@@ -59,6 +59,18 @@
 #define OUTUSB &out OUT_USB
 #define OUTBLE &out OUT_BLE
 
+#define MY_LEADER(NAME, KEYS, BINDINGS, LAYERS) \
+    leader_##NAME { \
+        key-positions = <KEYS>; \
+        bindings = <BINDINGS>; \
+        layers = <LAYERS>; \
+    };
+
+&leader {
+    timeout-ms = <1000>;
+    timerless;
+};
+
 // TODO: add generic mechanism to lock layers
 // TODO: add 2x rotary encoder - use Fxx or LANG1/LANG2 as free keycodes for AHK
 // TODO: add leader key: move AHK into keyboard to use all all machines - use C_AL_CALC/C_AC_SEARCH/C_AL_CAL
@@ -224,7 +236,7 @@
                   key-positions = <30 31>;  // NOT-FOR-SWEEP
                   require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
-                  bindings = <&kp F23>; // INFO: F23 is ZMK leader key
+                  bindings = <&leader>;
         };
     };
 
@@ -433,7 +445,8 @@
             quick_tap_ms = <250>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
-            bindings = <&mo>, <&spc_ret>;
+            // bindings = <&mo>, <&spc_ret>;
+            bindings = <&mo>, <&kp>;
         };
         unstick: unstick {
             label = "ZM_unstick";
@@ -447,6 +460,11 @@
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
         };
+    };
+
+    leader_sequences {
+        compatible = "zmk,leader-sequences";
+        MY_LEADER(close, 1, &kp LA(F4), QWERTY)
     };
 
         keymap {
@@ -463,7 +481,7 @@
 &none URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) &none
 &none HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) &none
 &none LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) &none
-  &kp F23 &mo NUMNAV  &bspc_del   &skm MOUSE 0 &mo SYMBOL &key_repeat
+  &leader &mo NUMNAV  &bspc_del   &skm MOUSE SPACE &mo SYMBOL &key_repeat
                         >;
                 };
 
@@ -478,7 +496,7 @@
  &none &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
  &none &trans &trans &trans &trans &trans      &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
-                     &kp F23  &trans  &trans    &trans &mo FUNADJ &key_repeat
+                     &leader  &trans  &trans    &trans &mo FUNADJ &key_repeat
                         >;
                 };
 
@@ -493,7 +511,7 @@
 &none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
 &none HRML(NON_US_BSLH, RA(N8), RA(N7), STAR) &kp RBKT  &kp MINUS HRMR(GRAVE, LBRC, RBRC, PIPE) &none
 &none LRML(LS(NON_US_BSLH), RA(N9), RA(N0), LPAR) &kp BSLH  &kp UNDER LRMR(TILDE, LBKT, RBKT, BSLH) &none
-                        &kp F23 &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
+                        &leader &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
                         >;
                 };
 
