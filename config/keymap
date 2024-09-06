@@ -99,7 +99,7 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <1 2>;  // NOT-FOR-SWEEP
                   key-positions = <0 1>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp ESC>;
         };
@@ -107,7 +107,7 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <4 5>;  // NOT-FOR-SWEEP
                   key-positions = <3 4>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp TAB>;
         };
@@ -115,7 +115,7 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <6 7>;  // NOT-FOR-SWEEP
                   key-positions = <5 6>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp RET>;
         };
@@ -123,7 +123,7 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <28 29>;  // NOT-FOR-SWEEP
                   key-positions = <23 24>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp RA(N2)>;
         };
@@ -163,7 +163,7 @@
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <27 28>;  // NOT-FOR-SWEEP
                   key-positions = <22 23>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp RA(S)>;
         };
@@ -190,6 +190,14 @@
                   require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp PSCRN>;
+        };
+        combo_underscope {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <31 32>;  // NOT-FOR-SWEEP
+                  key-positions = <26 27>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <50>;
+                  layers = <QWERTY>;
+                  bindings = <&kp LS(FSLH)>;
         };
         combo_ctrlshiftc_left {
                   timeout-ms = <COMBO_TIMEOUT>;
@@ -424,6 +432,16 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
+        trm: thumb_row_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_ROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick_tap_ms = <250>;
+            require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
         unstick: unstick {
             label = "ZM_unstick";
             compatible = "zmk,behavior-macro";
@@ -452,7 +470,7 @@
 DK URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) DK
 DK HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) DK
 DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) DK
-  RKL &mo NUMNAV  &kp BSPC     &urm MOUSE SPACE &mo SYMBOL RKR
+  RKL &mo NUMNAV  &kp BSPC     &trm MOUSE SPACE &mo SYMBOL RKR
                         >;
                 };
 

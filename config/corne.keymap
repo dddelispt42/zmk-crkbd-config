@@ -96,28 +96,28 @@
         combo_esc {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <1 2>;  // NOT-FOR-SWEEP
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp ESC>;
         };
         combo_tab {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <4 5>;  // NOT-FOR-SWEEP
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp TAB>;
         };
         combo_ret {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <6 7>;  // NOT-FOR-SWEEP
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp RET>;
         };
         combo_at {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <28 29>;  // NOT-FOR-SWEEP
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp RA(N2)>;
         };
@@ -152,7 +152,7 @@
         combo_sz {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <27 28>;  // NOT-FOR-SWEEP
-                  require-prior-idle-ms = <150>;
+                  require-prior-idle-ms = <100>;
                   layers = <QWERTY>;
                   bindings = <&kp RA(S)>;
         };
@@ -176,6 +176,13 @@
                   require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp PSCRN>;
+        };
+        combo_underscope {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <31 32>;  // NOT-FOR-SWEEP
+                  require-prior-idle-ms = <50>;
+                  layers = <QWERTY>;
+                  bindings = <&kp LS(FSLH)>;
         };
         combo_ctrlshiftc_left {
                   timeout-ms = <COMBO_TIMEOUT>;
@@ -403,6 +410,16 @@
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
+        trm: thumb_row_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB_ROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick_tap_ms = <250>;
+            require-prior-idle-ms = <50>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
         unstick: unstick {
             label = "ZM_unstick";
             compatible = "zmk,behavior-macro";
@@ -431,7 +448,7 @@
 &none URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) &none
 &none HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) &none
 &none LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) &none
-  &kp F23 &mo NUMNAV  &kp BSPC     &urm MOUSE SPACE &mo SYMBOL &key_repeat
+  &kp F23 &mo NUMNAV  &kp BSPC     &trm MOUSE SPACE &mo SYMBOL &key_repeat
                         >;
                 };
 
