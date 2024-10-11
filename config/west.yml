@@ -9,8 +9,8 @@ manifest:
     #   url-base: https://github.com/dddelispt42
   projects:
     - name: zmk
-      # remote: zmkfirmware
-      remote: urob
+      remote: zmkfirmware
+      # remote: urob
       # remote: dddelispt42
       revision: main
       import: app/west.yml
