@@ -1,10 +1,10 @@
 ---
 manifest:
   remotes:
-    # - name: zmkfirmware
-    #   url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    # - name: urob
+    #   url-base: https://github.com/urob
     # - name: dddelispt42
     #   url-base: https://github.com/dddelispt42
   projects:
