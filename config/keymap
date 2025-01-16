@@ -135,6 +135,34 @@
                   // bindings = <&kp CAPS>;
                   bindings = <&capsw>;
         };
+        combo_del {
+                  timeout-ms = <SPLIT_COMBO_TIMEOUT>;
+                  key-positions = <8 9>;  // NOT-FOR-SWEEP
+                  key-positions = <7 8>;  // NOT-FOR-CORNE
+                  layers = <QWERTY>;
+                  bindings = <&kp DEL>;
+        };
+        combo_bspc {
+                  timeout-ms = <SPLIT_COMBO_TIMEOUT>;
+                  key-positions = <7 8>;  // NOT-FOR-SWEEP
+                  key-positions = <6 7>;  // NOT-FOR-CORNE
+                  layers = <QWERTY>;
+                  bindings = <&kp BSPC>;
+        };
+        combo_ctrlbspc {
+                  timeout-ms = <SPLIT_COMBO_TIMEOUT>;
+                  key-positions = <19 20>;  // NOT-FOR-SWEEP
+                  key-positions = <16 17>;  // NOT-FOR-CORNE
+                  layers = <QWERTY>;
+                  bindings = <&kp LC(BSPC)>;
+        };
+        combo_altbspc {
+                  timeout-ms = <SPLIT_COMBO_TIMEOUT>;
+                  key-positions = <31 32>;  // NOT-FOR-SWEEP
+                  key-positions = <26 27>;  // NOT-FOR-CORNE
+                  layers = <QWERTY>;
+                  bindings = <&kp LA(BSPC)>;
+        };
         combo_repeat_left {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <16 17>;  // NOT-FOR-SWEEP
@@ -183,6 +211,22 @@
         //           layers = <QWERTY>;
         //           bindings = <&kp BSLH>;
         // };
+        combo_pup {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <3 4>;  // NOT-FOR-SWEEP
+                  key-positions = <2 3>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
+                  layers = <QWERTY>;
+                  bindings = <&kp PG_UP>;
+        };
+        combo_down {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <15 16>;  // NOT-FOR-SWEEP
+                  key-positions = <12 13>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
+                  layers = <QWERTY>;
+                  bindings = <&kp PG_DN>;
+        };
         combo_prtwin {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <25 26>;  // NOT-FOR-SWEEP
@@ -191,10 +235,10 @@
                   layers = <QWERTY>;
                   bindings = <&kp PSCRN>;
         };
-        combo_underscope {
+        combo_underscore {
                   timeout-ms = <COMBO_TIMEOUT>;
-                  key-positions = <31 32>;  // NOT-FOR-SWEEP
-                  key-positions = <26 27>;  // NOT-FOR-CORNE
+                  key-positions = <32 33>;  // NOT-FOR-SWEEP
+                  key-positions = <27 28>;  // NOT-FOR-CORNE
                   require-prior-idle-ms = <50>;
                   layers = <QWERTY>;
                   bindings = <&kp LS(FSLH)>;
