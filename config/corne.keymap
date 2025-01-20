@@ -442,6 +442,11 @@
                 tap-ms = <MACRO_TAP>;
                 bindings = <&kp RA(N9) &kp E &kp W &kp SPACE &kp BSPC>;
                 )
+        ZMK_MACRO(m_dblclk,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&mkp LCLK &mkp LCLK>;
+                )
     };
 
     behaviors {
@@ -574,8 +579,8 @@
  // &none &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN &none
                         bindings = <
  &none &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &none
- &none &trans &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans &none
- &none &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 &none
+ &none &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5 &none
+ &none &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 &none
                      &none  &trans  &trans     &trans &trans &none
                         >;
                 };
