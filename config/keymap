@@ -473,6 +473,11 @@
                 tap-ms = <MACRO_TAP>;
                 bindings = <&kp RA(N9) &kp E &kp W &kp SPACE &kp BSPC>;
                 )
+        ZMK_MACRO(m_dblclk,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&mkp LCLK &mkp LCLK>;
+                )
     };
 
     behaviors {
@@ -605,8 +610,8 @@ DK LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END,
  // DK &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN DK
                         bindings = <
  DK &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  DK
- DK &trans &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &trans DK
- DK &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 DK
+ DK &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5 DK
+ DK &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 DK
                      DK  &trans  &trans     &trans &trans DK
                         >;
                 };
