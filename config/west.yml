@@ -1,18 +1,26 @@
 ---
 manifest:
+  defaults:
+    remote: zmkfirmware
+    revision: main
+    # revision: v0.1
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # - name: urob
-    #   url-base: https://github.com/urob
-    # - name: dddelispt42
-    #   url-base: https://github.com/dddelispt42
+    - name: urob
+      url-base: https://github.com/urob
+    - name: dddelispt42
+      url-base: https://github.com/dddelispt42
   projects:
     - name: zmk
       remote: zmkfirmware
       # remote: urob
       # remote: dddelispt42
-      revision: main
+      # revision: main
+      # revision: v0.1+mouse
       import: app/west.yml
+    - name: zmk-leader-key
+      remote: urob
+      # revision: v0.1+locality
   self:
     path: config
