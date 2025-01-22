@@ -1,0 +1,516 @@
+layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
+layers:
+  QWERTY:
+  - ''
+  - {t: Q, h: BLUETH}
+  - {t: W, h: MACROS}
+  - {t: E, h: MSOUTL}
+  - {t: R, h: WMCFG}
+  - {t: T, h: MEDIA}
+  - {t: Y, h: MEDIA}
+  - {t: U, h: WMCFG}
+  - {t: I, h: MSOUTL}
+  - {t: O, h: MACROS}
+  - {t: P, h: BLUETH}
+  - ''
+  - ''
+  - {t: A, h: '$$mdi:penguin$$'}
+  - {t: S, h: LCTRL}
+  - {t: D, h: LALT}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: LALT}
+  - {t: L, h: LCTRL}
+  - {t: ;, h: '$$mdi:penguin$$'}
+  - ''
+  - ''
+  - Z
+  - {t: X, h: RCTRL}
+  - {t: C, h: RALT}
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', h: RALT}
+  - {t: ., h: RCTRL}
+  - {t: /, h: CMENU}
+  - ''
+  - ''
+  - NUMNAV
+  - {t: '$$mdi:keyboard-backspace$$', s: DELETE}
+  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
+  - SYMBOL
+  - $$mdi:repeat$$
+  NUMNAV:
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT
+  - {t: DOWN, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: UP, h: LALT}
+  - {t: RIGHT, h: LCTRL}
+  - {t: RIGHT, h: '$$mdi:penguin$$'}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '='
+  - ''''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - FUNADJ
+  - $$mdi:repeat$$
+  SYMBOL:
+  - ''
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - ''
+  - ''
+  - {t: '|', h: '$$mdi:penguin$$'}
+  - {t: AGr+8, h: LCTRL}
+  - {t: AGr+7, h: LALT}
+  - {t: '*', h: '$$mdi:apple-keyboard-shift$$'}
+  - ']'
+  - '-'
+  - {t: '`', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '{', h: LALT}
+  - {t: '}', h: LCTRL}
+  - {t: '|', h: '$$mdi:penguin$$'}
+  - ''
+  - ''
+  - S+|
+  - {t: AGr+9, h: RCTRL}
+  - {t: AGr+0, h: RALT}
+  - (
+  - \
+  - _
+  - '~'
+  - {t: '[', h: RALT}
+  - {t: ']', h: RCTRL}
+  - {t: \, h: CMENU}
+  - ''
+  - ''
+  - FUNADJ
+  - {t: DEL, h: RCTRL}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - $$mdi:repeat$$
+  FUNADJ:
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - ''
+  - ''
+  - {t: F11, h: '$$mdi:penguin$$'}
+  - {t: F12, h: LCTRL}
+  - {t: F13, h: LALT}
+  - {t: F14, h: '$$mdi:apple-keyboard-shift$$'}
+  - F15
+  - F16
+  - {t: F17, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: F18, h: LALT}
+  - {t: F19, h: LCTRL}
+  - {t: F20, h: '$$mdi:penguin$$'}
+  - ''
+  - ''
+  - PSCRN
+  - {t: SLCK, h: RCTRL}
+  - {t: PAUSE BREAK, h: RALT}
+  - CAPS
+  - {t: ▽, type: trans}
+  - HOME
+  - PG DN
+  - {t: PG UP, h: RALT}
+  - {t: END, h: RCTRL}
+  - {t: INS, h: CMENU}
+  - ''
+  - ''
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  MOUSE:
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - S+]
+  - ']'
+  - S+\
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - '&mkp MB5'
+  - LCTRL
+  - LALT
+  - $$mdi:apple-keyboard-shift$$
+  - AGr+[
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - '&mkp MB5'
+  - ''
+  - ''
+  - '&mkp MB4'
+  - '&mkp RCLK'
+  - '&mkp MCLK'
+  - '&mkp LCLK'
+  - \
+  - '&m_dblclk'
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - '&mkp MB4'
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - ''
+  MEDIA:
+  - ''
+  - MEDIA HOME
+  - MEDIA WWW
+  - MEDIA TV
+  - MEDIA COMPUTER
+  - {t: MEDIA PHONE, type: held}
+  - VOL UP
+  - NEXT
+  - BRI UP
+  - FF
+  - PWR
+  - ''
+  - ''
+  - MEDIA GAMES
+  - MEDIA MESSAGES
+  - CHANNEL INC
+  - CHANNEL DEC
+  - MEDIA GUIDE
+  - VOL DN
+  - PREV
+  - BRI DN
+  - RW
+  - SLEEP
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - MUTE
+  - CA+M
+  - PP
+  - EJECT
+  - LOCK
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  WMCFG:
+  - ''
+  - S+F13
+  - S+F14
+  - S+F15
+  - {t: S+F16, type: held}
+  - S+F17
+  - S+F18
+  - S+F19
+  - S+F20
+  - S+F21
+  - S+F22
+  - ''
+  - ''
+  - A+F13
+  - A+F14
+  - A+F15
+  - A+F16
+  - A+F17
+  - A+F18
+  - A+F19
+  - A+F20
+  - A+F21
+  - A+F22
+  - ''
+  - ''
+  - C+F13
+  - C+F14
+  - C+F15
+  - C+F16
+  - C+F17
+  - C+F18
+  - C+F19
+  - C+F20
+  - C+F21
+  - C+F22
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  MSOUTL:
+  - ''
+  - ''
+  - ''
+  - {t: '&m_env', type: held}
+  - '&m_proc'
+  - '&m_today'
+  - C+2
+  - '&m_emoj_tu'
+  - '&m_info'
+  - '&m_emoj_j'
+  - '&m_plm'
+  - ''
+  - ''
+  - '&m_arch'
+  - '&m_choose'
+  - ''
+  - S+F24
+  - '&m_week'
+  - '&m_emoj_h'
+  - '&m_emoj_w'
+  - '&m_emoj_s'
+  - '&m_lt'
+  - '&m_emoj_l'
+  - ''
+  - ''
+  - S+F6
+  - ''
+  - '&m_cust'
+  - ''
+  - '&m_month'
+  - CS+I
+  - A+LEFT
+  - A+RIGHT
+  - CS+Y
+  - F6
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  MACROS:
+  - ''
+  - GS+F13
+  - {t: GS+F14, type: held}
+  - GS+F15
+  - GS+F16
+  - GS+F17
+  - GS+F18
+  - GS+F19
+  - GS+F20
+  - GS+F21
+  - GS+F22
+  - ''
+  - ''
+  - GA+F13
+  - GA+F14
+  - GA+F15
+  - GA+F16
+  - GA+F17
+  - GA+F18
+  - GA+F19
+  - GA+F20
+  - GA+F21
+  - GA+F22
+  - ''
+  - ''
+  - GC+F13
+  - GC+F14
+  - GC+F15
+  - GC+F16
+  - GC+F17
+  - GC+F18
+  - GC+F19
+  - GC+F20
+  - GC+F21
+  - GC+F22
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  BLUETH:
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - $$mdi:keyboard-settings$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '4'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - $$mdi:cog-transfer$$
+  - $$mdi:restart$$
+  - $$mdi:usb$$
+  - $$mdi:bluetooth$$
+  - $$mdi:bluetooth-transfer$$
+  - $$mdi:bluetooth-transfer$$
+  - $$mdi:bluetooth$$
+  - $$mdi:usb$$
+  - $$mdi:restart$$
+  - $$mdi:cog-transfer$$
+  - ''
+  - ''
+  - ''
+  - ModKey Reset
+  - ModKey Reset
+  - ''
+  - ''
+  LOCK: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+    '', '', '']
+combos:
+- p: [1, 5, 38]
+  k: $$mdi:lock$$
+  l: [QWERTY, LOCK]
+- p: [6, 10, 39]
+  k: $$mdi:lock$$
+  l: [QWERTY, LOCK]
+- p: [1, 2]
+  k: ESC
+  l: [QWERTY]
+- p: [13, 14]
+  k: $$mdi:keyboard-tab$$
+  l: [QWERTY]
+- p: [6, 7]
+  k: RET
+  l: [QWERTY]
+- p: [26, 27]
+  k: AGr+2
+  l: [QWERTY]
+- p: [17, 18]
+  k: '&capsw'
+  l: [QWERTY]
+- p: [7, 8, 9]
+  k: BSPC
+  l: [QWERTY]
+- p: [19, 20, 21]
+  k: C+BSPC
+  l: [QWERTY]
+- p: [31, 32, 33]
+  k: A+BSPC
+  l: [QWERTY]
+- p: [8, 9, 10]
+  k: DEL
+  l: [QWERTY]
+- p: [20, 21, 22]
+  k: C+DEL
+  l: [QWERTY]
+- p: [32, 33, 34]
+  k: A+DEL
+  l: [QWERTY]
+- p: [18, 19]
+  k: $$mdi:repeat$$
+  l: [QWERTY]
+- p: [27, 28]
+  k: AGr+S
+  l: [QWERTY]
+- p: [4, 5]
+  k: PG UP
+  l: [QWERTY]
+- p: [16, 17]
+  k: PG DN
+  l: [QWERTY]
+- p: [25, 26]
+  k: PSCRN
+  l: [QWERTY]
+- p: [32, 33]
+  k: S+/
+  l: [QWERTY]
+- p: [3, 4, 5]
+  k: CS+X
+  l: [QWERTY]
+- p: [15, 16, 17]
+  k: CS+C
+  l: [QWERTY]
+- p: [27, 28, 29]
+  k: CS+V
+  l: [QWERTY]
+- p: [6, 7, 8]
+  k: CS+X
+  l: [QWERTY]
+- p: [18, 19, 20]
+  k: CS+C
+  l: [QWERTY]
+- p: [30, 31, 32]
+  k: CS+V
+  l: [QWERTY]
+- p: [1, 2, 3]
+  k: C+A
+  l: [QWERTY]
+- p: [13, 14, 15]
+  k: C+Z
+  l: [QWERTY]
