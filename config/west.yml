@@ -9,6 +9,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: joelspadin
+      url-base: https://github.com/joelspadin
     - name: dddelispt42
       url-base: https://github.com/dddelispt42
   projects:
@@ -16,11 +18,16 @@ manifest:
       remote: zmkfirmware
       # remote: urob
       # remote: dddelispt42
-      # revision: main
       # revision: v0.1+mouse
       import: app/west.yml
+    - name: zmk-helpers
+      remote: urob
+    - name: zmk-locales
+      remote: joelspadin
     - name: zmk-leader-key
       remote: urob
       # revision: v0.1+locality
+    - name: zmk-auto-layer
+      remote: urob
   self:
     path: config
