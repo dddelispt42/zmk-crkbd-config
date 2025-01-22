@@ -63,18 +63,18 @@
 // define AHK macro keys
 
 // upper row for WMCFG layer (i.e. macro layer #1)
-#define UM1(k) &kp LS(k)
+#define MU1(k) &kp LS(k)
 // home row for WMCFG layer (i.e. macro layer #1)
-#define HM1(k) &kp LA(k)
+#define MH1(k) &kp LA(k)
 // lower row for WMCFG layer (i.e. macro layer #1)
-#define LM1(k) &kp LC(k)
+#define ML1(k) &kp LC(k)
 
 // upper row for WMCFG layer (i.e. macro layer #2)
-#define UM2(k) &kp LG(LS(k))
+#define MU2(k) &kp LG(LS(k))
 // home row for WMCFG layer (i.e. macro layer #2)
-#define HM2(k) &kp LG(LA(k))
+#define MH2(k) &kp LG(LA(k))
 // lower row for WMCFG layer (i.e. macro layer #2)
-#define LM2(k) &kp LG(LC(k))
+#define ML2(k) &kp LG(LC(k))
 
 // more macros to shorten the definitions
 #define BTSEL(profile) &bt BT_SEL profile
@@ -667,9 +667,9 @@
 // |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none UM1(F13) UM1(F14) UM1(F15) UM1(F16) UM1(F17) UM1(F18) UM1(F19) UM1(F20) UM1(F21) UM1(F22)  &none
-&none HM1(F13) HM1(F14) HM1(F15) HM1(F16) HM1(F17) HM1(F18) HM1(F19) HM1(F20) HM1(F21) HM1(F22)  &none
-&none LM1(F13) LM1(F14) LM1(F15) LM1(F16) LM1(F17) LM1(F18) LM1(F19) LM1(F20) LM1(F21) LM1(F22)  &none
+&none MU1(F13) MU1(F14) MU1(F15) MU1(F16) MU1(F17) MU1(F18) MU1(F19) MU1(F20) MU1(F21) MU1(F22)  &none
+&none MH1(F13) MH1(F14) MH1(F15) MH1(F16) MH1(F17) MH1(F18) MH1(F19) MH1(F20) MH1(F21) MH1(F22)  &none
+&none ML1(F13) ML1(F14) ML1(F15) ML1(F16) ML1(F17) ML1(F18) ML1(F19) ML1(F20) ML1(F21) ML1(F22)  &none
                       &none &trans &trans        &trans &trans &none
                         >;
                 };
@@ -697,9 +697,9 @@
 // |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none UM2(F13) UM2(F14) UM2(F15) UM2(F16) UM2(F17) UM2(F18) UM2(F19) UM2(F20) UM2(F21) UM2(F22)  &none
-&none HM2(F13) HM2(F14) HM2(F15) HM2(F16) HM2(F17) HM2(F18) HM2(F19) HM2(F20) HM2(F21) HM2(F22)  &none
-&none LM2(F13) LM2(F14) LM2(F15) LM2(F16) LM2(F17) LM2(F18) LM2(F19) LM2(F20) LM2(F21) LM2(F22)  &none
+&none MU2(F13) MU2(F14) MU2(F15) MU2(F16) MU2(F17) MU2(F18) MU2(F19) MU2(F20) MU2(F21) MU2(F22)  &none
+&none MH2(F13) MH2(F14) MH2(F15) MH2(F16) MH2(F17) MH2(F18) MH2(F19) MH2(F20) MH2(F21) MH2(F22)  &none
+&none ML2(F13) ML2(F14) ML2(F15) ML2(F16) ML2(F17) ML2(F18) ML2(F19) ML2(F20) ML2(F21) ML2(F22)  &none
                       &none &trans &trans        &trans &trans &none
                         >;
                 };
