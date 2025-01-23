@@ -23,7 +23,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: K, h: LALT}
   - {t: L, h: LCTRL}
-  - {t: ;, h: '$$mdi:penguin$$'}
+  - {t: ' C CEDILLA', h: '$$mdi:penguin$$'}
   - ''
   - ''
   - Z
@@ -35,12 +35,12 @@ layers:
   - M
   - {t: ',', h: RALT}
   - {t: ., h: RCTRL}
-  - {t: /, h: CMENU}
+  - {t: ' MINUS', h: CMENU}
   - ''
   - ''
   - NUMNAV
   - {t: '$$mdi:keyboard-backspace$$', s: DELETE}
-  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
+  - '&skm 4'
   - SYMBOL
   - $$mdi:repeat$$
   NUMNAV:
@@ -62,11 +62,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT
-  - {t: DOWN, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: UP, h: LALT}
-  - {t: RIGHT, h: LCTRL}
-  - {t: RIGHT, h: '$$mdi:penguin$$'}
+  - ⬅️
+  - {t: ⬇️, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ⬆️, h: LALT}
+  - {t: ➡️, h: LCTRL}
+  - {t: ➡️, h: '$$mdi:penguin$$'}
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -212,7 +212,7 @@ layers:
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
   MEDIA:
@@ -305,7 +305,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: '&m_env', type: held}
+  - {t: 📥test, type: held}
   - '&m_proc'
   - '&m_today'
   - C+2
@@ -393,7 +393,7 @@ layers:
   - ''
   - ''
   - ''
-  - $$mdi:keyboard-settings$$
+  - ⌨️ (ZMK Studio)
   - ''
   - ''
   - ''
@@ -401,16 +401,16 @@ layers:
   - ''
   - ''
   - ''
-  - {t: BT, h: '4'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - ⌨️ 4 (🪟)
+  - ⌨️ 3 (tablet)
+  - ⌨️ 2 (💻)
+  - ⌨️ 1 (📱)
+  - ⌨️ 0 (👨‍💻)
+  - ⌨️ 0 (👨‍💻)
+  - ⌨️ 1 (📱)
+  - ⌨️ 2 (💻)
+  - ⌨️ 3 (tablet)
+  - ⌨️ 4 (🪟)
   - ''
   - ''
   - $$mdi:cog-transfer$$
