@@ -39,7 +39,33 @@ draw_config:
 parse_config:
   preprocess: true
   skip_binding_parsing: false
-  raw_binding_map: {"&key_repeat": "$$mdi:repeat$$", "&sys_reset": "$$mdi:restart$$", "&bootloader": "$$mdi:cog-transfer$$", "&kp LGUI": "$$mdi:penguin$$", "&kp RGUI": "$$mdi:penguin$$", "&kp LSHIFT": "$$mdi:apple-keyboard-shift$$", "&kp RSHIFT": "$$mdi:apple-keyboard-shift$$", "&kp BACKSPACE": "$$mdi:keyboard-backspace$$", "&kp TAB": "$$mdi:keyboard-tab$$", "&kp PT_SPACE": "$$mdi:keyboard-space$$", "&tog LOCK": "$$mdi:lock$$", "&studio_unlock": "$$mdi:keyboard-settings$$", "&unstick": "ModKey Reset", "&bt BT_CLR": "$$mdi:bluetooth-transfer$$", "&out OUT_USB": "$$mdi:usb$$", "&out OUT_BLE": "$$mdi:bluetooth$$"}
+  raw_binding_map: 
+    "&key_repeat": "$$mdi:repeat$$"
+    "&sys_reset": "$$mdi:restart$$"
+    "&bootloader": "$$mdi:cog-transfer$$"
+    "&kp LGUI": "$$mdi:penguin$$"
+    "&kp RGUI": "$$mdi:penguin$$"
+    "&kp LSHIFT": "$$mdi:apple-keyboard-shift$$"
+    "&kp RSHIFT": "$$mdi:apple-keyboard-shift$$"
+    "&kp BACKSPACE": "$$mdi:keyboard-backspace$$"
+    "&kp TAB": "$$mdi:keyboard-tab$$"
+    "&kp PT_SPACE": "$$mdi:keyboard-space$$"
+    "&tog LOCK": "$$mdi:lock$$"
+    "&studio_unlock": "⌨️ (ZMK Studio)"
+    "&unstick": "ModKey Reset"
+    "&bt BT_CLR": "$$mdi:bluetooth-transfer$$"
+    "&out OUT_USB": "$$mdi:usb$$"
+    "&out OUT_BLE": "$$mdi:bluetooth$$"
+    "&bt BT_SEL 0": "⌨️ 0 (👨‍💻)"
+    "&bt BT_SEL 1": "⌨️ 1 (📱)"
+    "&bt BT_SEL 2": "⌨️ 2 (💻)"
+    "&bt BT_SEL 3": "⌨️ 3 (tablet)"
+    "&bt BT_SEL 4": "⌨️ 4 (🪟)"
+    "&m_env": "📥test"
+    "&kp LEFT": "⬅️"
+    "&kp RIGHT": "➡️"
+    "&kp UP": "⬆️"
+    "&kp DOWN": "⬇️"
   sticky_label: sticky
   toggle_label: toggle
   tap_toggle_label: tap-toggle

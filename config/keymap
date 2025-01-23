@@ -563,8 +563,8 @@
             quick_tap_ms = <250>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
-            // bindings = <&mo>, <&spc_ret>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&spc_ret>;
+            // bindings = <&mo>, <&kp>;
         };
         unstick: unstick {
             label = "ZM_unstick";
@@ -606,9 +606,9 @@
 //              |     | L1  |S/LC |              |SPC/L4| L2  |     |
                         bindings = <
 DK URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) DK
-DK HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, SEMI) DK
-DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, FSLH) DK
-  RKL &mo NUMNAV  &bspc_del     &skm MOUSE PT_SPACE &mo SYMBOL RKR
+DK HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, PT_C_CEDILLA) DK
+DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, PT_MINUS) DK
+  RKL &mo NUMNAV  &bspc_del     &skm MOUSE &mo SYMBOL RKR
                         >;
                 };
 
