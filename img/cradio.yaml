@@ -33,7 +33,7 @@ layers:
   - {t: ' MINUS', h: CMENU}
   - NUMNAV
   - {t: '$$mdi:keyboard-backspace$$', s: DELETE}
-  - '&skm 4'
+  - {t: '$$mdi:keyboard-space$$', h: MOUSE, s: RET}
   - SYMBOL
   NUMNAV:
   - '1'
@@ -173,7 +173,7 @@ layers:
   - '&mkp MB4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   MEDIA:
   - MEDIA HOME
