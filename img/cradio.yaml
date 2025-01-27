@@ -33,7 +33,7 @@ layers:
   - {t: ' MINUS', h: CMENU}
   - NUMNAV
   - {t: '$$mdi:keyboard-backspace$$', s: DELETE}
-  - {t: '$$mdi:keyboard-space$$', h: MOUSE, s: RET}
+  - {t: SPACE, h: MOUSE}
   - SYMBOL
   NUMNAV:
   - '1'
