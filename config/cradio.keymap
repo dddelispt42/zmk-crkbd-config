@@ -469,14 +469,6 @@
     };
 
     behaviors {
-        /*spc_ret: space_return {*/
-        /*    compatible = "zmk,behavior-mod-morph";*/
-        /*    label = "SPACE_RET";*/
-        /*    #binding-cells = <0>;*/
-        /*    bindings = <&kp PT_SPACE>, <&kp RET>;*/
-        /*    mods = <(MOD_LSFT|MOD_RSFT)>;*/
-        /*    /*keep-mods = <(MOD_RSFT)>;*/*/
-        /*};*/
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DELETE";
