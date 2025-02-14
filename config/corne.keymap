@@ -431,10 +431,60 @@
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
+        ZMK_MACRO(m_maillist,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp LS(F6)>;
+                )
+        ZMK_MACRO(m_mailtext,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp F6>;
+                )
+        ZMK_MACRO(m_teamfwd,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp LS(F24)>;
+                )
+        ZMK_MACRO(m_calendar,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp LC(N2)>;
+                )
+        ZMK_MACRO(m_inbox,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp LC(LS(I))>;
+                )
+        ZMK_MACRO(m_dirprev,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp LA(LEFT)>;
+                )
+        ZMK_MACRO(m_dirnext,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp LC(RIGHT)>;
+                )
+        ZMK_MACRO(m_mailcp,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp LC(LS(Y))>;
+                )
+        ZMK_MACRO(m_emoj_td,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp RA(N9) &kp E &kp T &kp D &kp SPACE &kp BSPC>;
+                )
         ZMK_MACRO(m_emoj_tu,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
                 bindings = <&kp RA(N9) &kp E &kp T &kp U &kp SPACE &kp BSPC>;
+                )
+        ZMK_MACRO(m_emoj_u,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp RA(N9) &kp E &kp T &kp SPACE &kp BSPC>;
                 )
         ZMK_MACRO(m_emoj_j,
                 wait-ms = <MACRO_WAIT>;
@@ -469,6 +519,13 @@
     };
 
     behaviors {
+        spc_ret: space_return {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_RET";
+            #binding-cells = <0>;
+            bindings = <&kp PT_SPACE>, <&kp RET>;
+            mods = <(MOD_LALT)>;
+        };
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DELETE";
@@ -675,9 +732,9 @@
 // |      | <-- |     | CUST|     |  M  |   | INB | NXT | PRV | FSEL| --> |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-&none &none &none &m_env &m_proc &m_today  &kp LC(N2) &m_emoj_tu &m_info &m_emoj_j &m_plm &none
-&none &m_arch &m_choose &none &kp LS(F24) &m_week  &m_emoj_h &m_emoj_w &m_emoj_s &m_lt &m_emoj_l &none
-&none &kp LS(F6) &none &m_cust &none &m_month  &kp LC(LS(I)) &kp LA(LEFT) &kp LA(RIGHT) &kp LC(LS(Y)) &kp F6 &none
+&none &m_emoj_td &m_emoj_tu &m_env &m_proc &m_today  &m_calendar &m_emoj_u &m_info &m_emoj_j &m_plm &none
+&none &m_arch &m_choose &none &m_teamfwd &m_week  &m_emoj_h &m_emoj_w &m_emoj_s &m_lt &m_emoj_l &none
+&none &m_maillist &none &m_cust &none &m_month  &m_inbox &m_dirprev &m_dirnext &m_mailcp &m_mailtext &none
                      &none &none &none  &none &none &none
                         >;
                 };
