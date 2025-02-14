@@ -12,28 +12,28 @@ layers:
   - {t: O, h: MACROS}
   - {t: P, h: BLUETH}
   - {t: A, h: '$$mdi:penguin$$'}
-  - {t: S, h: LCTRL}
-  - {t: D, h: LALT}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - H
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: K, h: LALT}
-  - {t: L, h: LCTRL}
-  - {t: ' C CEDILLA', h: '$$mdi:penguin$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: Ç, h: '$$mdi:penguin$$'}
   - Z
-  - {t: X, h: RCTRL}
-  - {t: C, h: RALT}
+  - {t: X, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-option$$'}
   - V
   - B
   - N
   - M
-  - {t: ',', h: RALT}
-  - {t: ., h: RCTRL}
-  - {t: ' MINUS', h: CMENU}
+  - {t: ',', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ., h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '-', h: CMENU}
   - NUMNAV
-  - {t: '$$mdi:keyboard-backspace$$', s: DELETE}
-  - {t: SPACE, h: MOUSE}
+  - {t: '$$mdi:backspace-outline$$', s: '$$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
   - SYMBOL
   NUMNAV:
   - '1'
@@ -53,8 +53,8 @@ layers:
   - {t: ▽, type: trans}
   - ⬅️
   - {t: ⬇️, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: ⬆️, h: LALT}
-  - {t: ➡️, h: LCTRL}
+  - {t: ⬆️, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ➡️, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ➡️, h: '$$mdi:penguin$$'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -82,27 +82,27 @@ layers:
   - (
   - )
   - {t: '|', h: '$$mdi:penguin$$'}
-  - {t: AGr+8, h: LCTRL}
-  - {t: AGr+7, h: LALT}
+  - {t: AGr+8, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: AGr+7, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '*', h: '$$mdi:apple-keyboard-shift$$'}
   - ']'
   - '-'
   - {t: '`', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '{', h: LALT}
-  - {t: '}', h: LCTRL}
+  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '|', h: '$$mdi:penguin$$'}
   - S+|
-  - {t: AGr+9, h: RCTRL}
-  - {t: AGr+0, h: RALT}
+  - {t: AGr+9, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: AGr+0, h: '$$mdi:apple-keyboard-option$$'}
   - (
   - \
   - _
   - '~'
-  - {t: '[', h: RALT}
-  - {t: ']', h: RCTRL}
+  - {t: '[', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
   - {t: \, h: CMENU}
   - FUNADJ
-  - {t: DEL, h: RCTRL}
+  - {t: DEL, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
   - {type: held}
   FUNADJ:
@@ -117,24 +117,24 @@ layers:
   - F9
   - F10
   - {t: F11, h: '$$mdi:penguin$$'}
-  - {t: F12, h: LCTRL}
-  - {t: F13, h: LALT}
+  - {t: F12, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F13, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F14, h: '$$mdi:apple-keyboard-shift$$'}
   - F15
   - F16
   - {t: F17, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: F18, h: LALT}
-  - {t: F19, h: LCTRL}
+  - {t: F18, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F19, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F20, h: '$$mdi:penguin$$'}
   - PSCRN
-  - {t: SLCK, h: RCTRL}
-  - {t: PAUSE BREAK, h: RALT}
+  - {t: SLCK, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: PAUSE BREAK, h: '$$mdi:apple-keyboard-option$$'}
   - CAPS
   - {t: ▽, type: trans}
-  - HOME
+  - Home
   - PG DN
-  - {t: PG UP, h: RALT}
-  - {t: END, h: RCTRL}
+  - {t: PG UP, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: End, h: '$$mdi:apple-keyboard-control$$'}
   - {t: INS, h: CMENU}
   - {type: held}
   - {t: ▽, type: trans}
@@ -152,8 +152,8 @@ layers:
   - '&msc SCRL_RIGHT'
   - {t: ▽, type: trans}
   - '&mkp MB5'
-  - LCTRL
-  - LALT
+  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
   - AGr+[
   - '&mmv MOVE_LEFT'
@@ -181,31 +181,31 @@ layers:
   - MEDIA TV
   - MEDIA COMPUTER
   - {t: MEDIA PHONE, type: held}
-  - VOL UP
-  - NEXT
-  - BRI UP
-  - FF
-  - PWR
+  - {t: 🔊 Up, type: held alternate}
+  - ⏭️ Next
+  - 💡 Up
+  - ⏩ Fast Forward
+  - 🔘 Power
   - MEDIA GAMES
   - MEDIA MESSAGES
   - CHANNEL INC
   - CHANNEL DEC
   - MEDIA GUIDE
-  - VOL DN
-  - PREV
-  - BRI DN
-  - RW
-  - SLEEP
+  - 🔉 Down
+  - ⏮️ Prev
+  - 💡 Down
+  - ⏪ Rewind
+  - 💤 Sleep
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - MUTE
-  - CA+M
-  - PP
-  - EJECT
-  - LOCK
+  - 🔇 Mute
+  - 🎤 MicMute
+  - ⏯️ PlayPause
+  - ⏏️ Eject
+  - 🔐 Lock
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -217,7 +217,7 @@ layers:
   - {t: S+F16, type: held}
   - S+F17
   - S+F18
-  - S+F19
+  - {t: S+F19, type: held alternate}
   - S+F20
   - S+F21
   - S+F22
@@ -246,36 +246,36 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   MSOUTL:
+  - 👎
+  - 👍
+  - {t: 📩 ENV, type: held}
+  - 📩 Process
+  - 📅 Today
+  - 📅 Cal
+  - 🤔
+  - {t: 📰 Info, type: held alternate}
+  - 😜
+  - 👨‍🏫
+  - 📝 Arch
+  - 📁 Select
   - ''
+  - 👨‍🔧 Team
+  - 📆 Soon
+  - 😀
+  - 😉
+  - 😟
+  - 👨‍💼 LT
+  - 🤣
+  - 📑👈 List
   - ''
-  - {t: 📥test, type: held}
-  - '&m_proc'
-  - '&m_today'
-  - C+2
-  - '&m_emoj_tu'
-  - '&m_info'
-  - '&m_emoj_j'
-  - '&m_plm'
-  - '&m_arch'
-  - '&m_choose'
+  - 💲 Customer
   - ''
-  - S+F24
-  - '&m_week'
-  - '&m_emoj_h'
-  - '&m_emoj_w'
-  - '&m_emoj_s'
-  - '&m_lt'
-  - '&m_emoj_l'
-  - S+F6
-  - ''
-  - '&m_cust'
-  - ''
-  - '&m_month'
-  - CS+I
-  - A+LEFT
-  - A+RIGHT
-  - CS+Y
-  - F6
+  - 📆 Later
+  - 📥 Inbox
+  - 🗂️🔼 Prev
+  - 🗂️🔽 Next
+  - ✉️✉️ Copy
+  - 👉🖹 Content
   - ''
   - ''
   - ''
@@ -289,7 +289,7 @@ layers:
   - GS+F18
   - GS+F19
   - GS+F20
-  - GS+F21
+  - {t: GS+F21, type: held alternate}
   - GS+F22
   - GA+F13
   - GA+F14
@@ -320,22 +320,22 @@ layers:
   - ''
   - ''
   - ''
-  - ⌨️ (ZMK Studio)
+  - ⌨️ ZMK Studio
   - ''
   - ''
   - ''
   - ''
-  - ''
-  - ⌨️ 4 (🪟)
-  - ⌨️ 3 (tablet)
-  - ⌨️ 2 (💻)
-  - ⌨️ 1 (📱)
-  - ⌨️ 0 (👨‍💻)
-  - ⌨️ 0 (👨‍💻)
-  - ⌨️ 1 (📱)
-  - ⌨️ 2 (💻)
-  - ⌨️ 3 (tablet)
-  - ⌨️ 4 (🪟)
+  - {type: held alternate}
+  - ⌨️ 4 🪟
+  - ⌨️ 3 tablet
+  - ⌨️ 2 💻
+  - ⌨️ 1 📱
+  - ⌨️ 0 👨‍💻
+  - ⌨️ 0 👨‍💻
+  - ⌨️ 1 📱
+  - ⌨️ 2 💻
+  - ⌨️ 3 tablet
+  - ⌨️ 4 🪟
   - $$mdi:cog-transfer$$
   - $$mdi:restart$$
   - $$mdi:usb$$
@@ -354,12 +354,12 @@ layers:
 combos:
 - p: [0, 4, 31]
   k: $$mdi:lock$$
-  l: [QWERTY, LOCK]
+  l: [LOCK]
 - p: [5, 9, 32]
   k: $$mdi:lock$$
-  l: [QWERTY, LOCK]
+  l: [LOCK]
 - p: [0, 1]
-  k: ESC
+  k: Esc
   l: [QWERTY]
 - p: [10, 11]
   k: $$mdi:keyboard-tab$$
@@ -376,21 +376,27 @@ combos:
 - p: [6, 7, 8]
   k: BSPC
   l: [QWERTY]
+  a: top
 - p: [16, 17, 18]
   k: C+BSPC
   l: [QWERTY]
+  a: bottom
 - p: [26, 27, 28]
   k: A+BSPC
   l: [QWERTY]
+  a: bottom
 - p: [7, 8, 9]
   k: DEL
   l: [QWERTY]
+  a: top
 - p: [17, 18, 19]
   k: C+DEL
   l: [QWERTY]
+  a: bottom
 - p: [27, 28, 29]
   k: A+DEL
   l: [QWERTY]
+  a: bottom
 - p: [15, 16]
   k: $$mdi:repeat$$
   l: [QWERTY]
@@ -412,24 +418,32 @@ combos:
 - p: [2, 3, 4]
   k: CS+X
   l: [QWERTY]
+  a: top
 - p: [12, 13, 14]
   k: CS+C
   l: [QWERTY]
+  a: bottom
 - p: [22, 23, 24]
   k: CS+V
   l: [QWERTY]
+  a: bottom
 - p: [5, 6, 7]
   k: CS+X
   l: [QWERTY]
+  a: top
 - p: [15, 16, 17]
   k: CS+C
   l: [QWERTY]
+  a: bottom
 - p: [25, 26, 27]
   k: CS+V
   l: [QWERTY]
+  a: bottom
 - p: [0, 1, 2]
-  k: C+A
+  k: tmux prefix
   l: [QWERTY]
+  a: top
 - p: [10, 11, 12]
   k: C+Z
   l: [QWERTY]
+  a: bottom
