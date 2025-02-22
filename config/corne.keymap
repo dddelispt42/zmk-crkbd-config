@@ -641,7 +641,7 @@
                         bindings = <
  &none &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
- &none &trans &trans &trans &trans &trans      &kp EQUAL  &kp SQT  &trans  &trans  &trans  &none
+ &none &trans &trans &trans &trans &trans      &kp PT_LAQUO &kp PT_ORDF &trans &trans &trans &none
                      &none  &trans  &trans    &trans &mo FUNADJ &key_repeat
                         >;
                 };
@@ -654,9 +654,9 @@
 // |      |  >  |  ]  |  }  |  )  |  ~  |   |  ?_ |  |+ |  +[ |  '] |  ~\ |      |
 //                    |     | L3  | DEL |   |     |     |     |
                         bindings = <
-&none   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &none
-&none HRML(NON_US_BSLH, RA(N8), RA(N7), STAR) &kp RBKT  &kp MINUS HRMR(GRAVE, LBRC, RBRC, PIPE) &none
-&none LRML(LS(NON_US_BSLH), RA(N9), RA(N0), LPAR) &kp BSLH  &kp UNDER LRMR(TILDE, LBKT, RBKT, BSLH) &none
+&none &kp PT_EXCL &kp PT_DQT &kp PT_HASH &kp PT_DLLR &kp PT_PRCNT  &kp PT_AMPS &kp PT_FSLH &kp PT_LPAR &kp PT_RPAR &kp PT_EQUAL &none
+&none HRML(PT_LT, PT_LBKT, PT_LBRC, PT_LPAR) &kp PT_GRAVE  &kp PT_SQT HRMR(PT_BSLH, PT_STAR, PT_GRAVE, PT_CARET) &none
+&none LRML(PT_GT, PT_RBKT, PT_RBRC, PT_RPAR) &kp PT_TILDE  &kp PT_QMARK LRMR(PT_PIPE, PT_PLUS, PT_EURO, PT_SECT) &none
                         &none &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
                         >;
                 };
@@ -687,9 +687,9 @@
  // &none &msc SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP &none
  // &none &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN &none
                         bindings = <
- &none &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &none
- &none &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5 &none
- &none &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 &none
+ &none &trans &trans &kp PT_ACUTE  &kp PT_GRAVE &kp PT_CARET     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &none
+ &none &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp PT_UMLAUT  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5 &none
+ &none &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp PT_TILDE   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 &none
                      &none  &trans  &trans     &trans &trans &none
                         >;
                 };

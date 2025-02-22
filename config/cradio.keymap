@@ -624,10 +624,10 @@
 // |      |Z/LS |X/RC |C/RA |  V  |  B  |   |  N  | M   |,/RA |./RC |//MENU|     |
 //              |     | L1  |S/LC |              |SPC/L4| L2  |     |
                         bindings = <
- URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) 
- HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, PT_C_CEDILLA) 
- LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, PT_MINUS) 
-   &mo NUMNAV  &bspc_del     &skm MOUSE SPACE &mo SYMBOL 
+ URML(Q, W, E, R, T)        URMR(Y, U, I, O, P)
+ HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, PT_C_CEDILLA)
+ LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, PT_MINUS)
+   &mo NUMNAV  &bspc_del     &skm MOUSE SPACE &mo SYMBOL
                         >;
                 };
 
@@ -639,10 +639,10 @@
 // |      |     |     |     |     |     |   |  «  |  º  |     |     |     |      |
 //                    |     |     |     |   |     | L3  |     |
                         bindings = <
-  &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  
-  &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) 
-  &trans &trans &trans &trans &trans      &kp EQUAL  &kp SQT  &trans  &trans  &trans  
-                       &trans  &trans    &trans &mo FUNADJ 
+  &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+  &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT)
+  &trans &trans &trans &trans &trans      &kp PT_LAQUO &kp PT_ORDF &trans &trans &trans
+                       &trans  &trans    &trans &mo FUNADJ
                         >;
                 };
 
@@ -654,10 +654,10 @@
 // |      |  >  |  ]  |  }  |  )  |  ~  |   |  ?_ |  |+ |  +[ |  '] |  ~\ |      |
 //                    |     | L3  | DEL |   |     |     |     |
                         bindings = <
-   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR 
- HRML(NON_US_BSLH, RA(N8), RA(N7), STAR) &kp RBKT  &kp MINUS HRMR(GRAVE, LBRC, RBRC, PIPE) 
- LRML(LS(NON_US_BSLH), RA(N9), RA(N0), LPAR) &kp BSLH  &kp UNDER LRMR(TILDE, LBKT, RBKT, BSLH) 
-                         &mo FUNADJ &hm RCTRL DEL   &trans  &trans   
+ &kp PT_EXCL &kp PT_DQT &kp PT_HASH &kp PT_DLLR &kp PT_PRCNT  &kp PT_AMPS &kp PT_FSLH &kp PT_LPAR &kp PT_RPAR &kp PT_EQUAL
+ HRML(PT_LT, PT_LBKT, PT_LBRC, PT_LPAR) &kp PT_GRAVE  &kp PT_SQT HRMR(PT_BSLH, PT_STAR, PT_GRAVE, PT_CARET)
+ LRML(PT_GT, PT_RBKT, PT_RBRC, PT_RPAR) &kp PT_TILDE  &kp PT_QMARK LRMR(PT_PIPE, PT_PLUS, PT_EURO, PT_SECT)
+                         &mo FUNADJ &hm RCTRL DEL   &trans  &trans
                         >;
                 };
 
@@ -669,10 +669,10 @@
 // |      |PSCRN|SLCK |BREAK|     | CAPS|   | HOME| PDN | PUP | END | INS |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
- HRML(F11, F12, F13, F14) &kp F15         &kp F16 HRMR(F17, F18, F19, F20) 
- LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END, INS) 
-                        &trans &trans  &trans &trans 
+ &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
+ HRML(F11, F12, F13, F14) &kp F15         &kp F16 HRMR(F17, F18, F19, F20)
+ LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END, INS)
+                        &trans &trans  &trans &trans
                         >;
                 };
 
@@ -683,14 +683,14 @@
 // |      | SUP | LC  | LA  | LS  |  ¨  |   | LF  | DN  | UP  | RT  | SUP |      |
 // |      | SDN | RCLK| MCLK| LCLK|  ~  |   |     | LCLK| MCLK| RCLK| SDN |      |
 //                    |     |     |     |   |     |     |     |
- //  &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &trans  &trans  &trans  &trans  &trans  
- //  &msc SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP 
- //  &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN 
+ //  &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &trans  &trans  &trans  &trans  &trans
+ //  &msc SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP
+ //  &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN
                         bindings = <
-  &trans &trans &kp LS(RBKT)  &kp RBKT &kp LS(BSLH)     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  
-  &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5 
-  &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4 
-                       &trans  &trans     &trans &trans 
+  &trans &trans &kp PT_ACUTE  &kp PT_GRAVE &kp PT_CARET     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+  &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp PT_UMLAUT  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5
+  &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp PT_TILDE   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4
+                       &trans  &trans     &trans &trans
                         >;
                 };
 
@@ -702,10 +702,10 @@
 // |      | PWR | SLP | LCK |     |     |   | MT  |     | PP  |     | EJC |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- &kp C_MEDIA_HOME &kp C_MEDIA_WWW &kp C_MEDIA_TV &kp C_MEDIA_COMPUTER &kp C_MEDIA_PHONE  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &kp C_FF &kp C_PWR 
- &kp C_MEDIA_GAMES &kp C_MEDIA_MESSAGES &kp C_CHANNEL_INC &kp C_CHANNEL_DEC &kp C_MEDIA_GUIDE  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &kp C_RW &kp C_SLEEP 
- &trans &trans &trans &trans &trans  &kp C_MUTE &kp LC(LA(M)) &kp C_PP &kp C_EJECT &kp K_LOCK 
-                 &trans &trans   &trans &trans 
+ &kp C_MEDIA_HOME &kp C_MEDIA_WWW &kp C_MEDIA_TV &kp C_MEDIA_COMPUTER &kp C_MEDIA_PHONE  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &kp C_FF &kp C_PWR
+ &kp C_MEDIA_GAMES &kp C_MEDIA_MESSAGES &kp C_CHANNEL_INC &kp C_CHANNEL_DEC &kp C_MEDIA_GUIDE  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &kp C_RW &kp C_SLEEP
+ &trans &trans &trans &trans &trans  &kp C_MUTE &kp LC(LA(M)) &kp C_PP &kp C_EJECT &kp K_LOCK
+                 &trans &trans   &trans &trans
                         >;
                 };
 
@@ -717,10 +717,10 @@
 // |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- MU1(F13) MU1(F14) MU1(F15) MU1(F16) MU1(F17) MU1(F18) MU1(F19) MU1(F20) MU1(F21) MU1(F22)  
- MH1(F13) MH1(F14) MH1(F15) MH1(F16) MH1(F17) MH1(F18) MH1(F19) MH1(F20) MH1(F21) MH1(F22)  
- ML1(F13) ML1(F14) ML1(F15) ML1(F16) ML1(F17) ML1(F18) ML1(F19) ML1(F20) ML1(F21) ML1(F22)  
-                       &trans &trans        &trans &trans 
+ MU1(F13) MU1(F14) MU1(F15) MU1(F16) MU1(F17) MU1(F18) MU1(F19) MU1(F20) MU1(F21) MU1(F22)
+ MH1(F13) MH1(F14) MH1(F15) MH1(F16) MH1(F17) MH1(F18) MH1(F19) MH1(F20) MH1(F21) MH1(F22)
+ ML1(F13) ML1(F14) ML1(F15) ML1(F16) ML1(F17) ML1(F18) ML1(F19) ML1(F20) ML1(F21) ML1(F22)
+                       &trans &trans        &trans &trans
                         >;
                 };
 
@@ -732,10 +732,10 @@
 // |      | <-- |     | CUST|     |  M  |   | INB | NXT | PRV | FSEL| --> |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- &m_emoj_td &m_emoj_tu &m_env &m_proc &m_today  &m_calendar &m_emoj_u &m_info &m_emoj_j &m_plm 
- &m_arch &m_choose &none &m_teamfwd &m_week  &m_emoj_h &m_emoj_w &m_emoj_s &m_lt &m_emoj_l 
- &m_maillist &none &m_cust &none &m_month  &m_inbox &m_dirprev &m_dirnext &m_mailcp &m_mailtext 
-                      &none &none  &none &none 
+ &m_emoj_td &m_emoj_tu &m_env &m_proc &m_today  &m_calendar &m_emoj_u &m_info &m_emoj_j &m_plm
+ &m_arch &m_choose &none &m_teamfwd &m_week  &m_emoj_h &m_emoj_w &m_emoj_s &m_lt &m_emoj_l
+ &m_maillist &none &m_cust &none &m_month  &m_inbox &m_dirprev &m_dirnext &m_mailcp &m_mailtext
+                      &none &none  &none &none
                         >;
                 };
 
@@ -747,10 +747,10 @@
 // |      |C-F13|C-F14|C-F15|C-F16|C-F17|   |C-F18|C-F19|C-F20|C-F21|C-F22|      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- MU2(F13) MU2(F14) MU2(F15) MU2(F16) MU2(F17) MU2(F18) MU2(F19) MU2(F20) MU2(F21) MU2(F22)  
- MH2(F13) MH2(F14) MH2(F15) MH2(F16) MH2(F17) MH2(F18) MH2(F19) MH2(F20) MH2(F21) MH2(F22)  
- ML2(F13) ML2(F14) ML2(F15) ML2(F16) ML2(F17) ML2(F18) ML2(F19) ML2(F20) ML2(F21) ML2(F22)  
-                       &trans &trans        &trans &trans 
+ MU2(F13) MU2(F14) MU2(F15) MU2(F16) MU2(F17) MU2(F18) MU2(F19) MU2(F20) MU2(F21) MU2(F22)
+ MH2(F13) MH2(F14) MH2(F15) MH2(F16) MH2(F17) MH2(F18) MH2(F19) MH2(F20) MH2(F21) MH2(F22)
+ ML2(F13) ML2(F14) ML2(F15) ML2(F16) ML2(F17) ML2(F18) ML2(F19) ML2(F20) ML2(F21) ML2(F22)
+                       &trans &trans        &trans &trans
                         >;
                 };
 
@@ -762,20 +762,20 @@
 // |      | BL  | RST | USB | BLE | CLR |   | CLR | BLE | USB | RST | BL  |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
- &none  &none  &none  &none  &studio_unlock   &none  &none  &none  &none  &none  
- BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4) 
- &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader  
-                       &none &unstick        &unstick &none 
+ &none  &none  &none  &none  &studio_unlock   &none  &none  &none  &none  &none
+ BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4)
+ &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader
+                       &none &unstick        &unstick &none
                         >;
                 };
 
                 lock_layer {
                         label = "LOCK";
                         bindings = <
- &none &none &none &none &none  &none &none &none &none &none 
- &none &none &none &none &none  &none &none &none &none &none 
- &none &none &none &none &none  &none &none &none &none &none 
-                   &none &none  &none &none 
+ &none &none &none &none &none  &none &none &none &none &none
+ &none &none &none &none &none  &none &none &none &none &none
+ &none &none &none &none &none  &none &none &none &none &none
+                   &none &none  &none &none
                         >;
                 };
                 extra1 {

@@ -124,7 +124,7 @@ draw_config:
 parse_config:
   preprocess: true
   skip_binding_parsing: false
-  raw_binding_map: 
+  raw_binding_map:
     "&key_repeat": "$$mdi:repeat$$"
     "&sys_reset": "$$mdi:restart$$"
     "&bootloader": "$$mdi:cog-transfer$$"
