@@ -61,8 +61,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '='
-  - ''''
+  - ' LAQUO'
+  - ' ORDF'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -71,36 +71,36 @@ layers:
   - {t: ▽, type: trans}
   - FUNADJ
   SYMBOL:
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - '&'
-  - '*'
-  - (
-  - )
-  - {t: '|', h: '$$mdi:penguin$$'}
-  - {t: AGr+8, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: AGr+7, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '*', h: '$$mdi:apple-keyboard-shift$$'}
-  - ']'
-  - '-'
-  - {t: '`', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '|', h: '$$mdi:penguin$$'}
-  - S+|
-  - {t: AGr+9, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: AGr+0, h: '$$mdi:apple-keyboard-option$$'}
-  - (
-  - \
-  - _
-  - '~'
-  - {t: '[', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: \, h: CMENU}
+  - ' EXCL'
+  - ' DQT'
+  - ' HASH'
+  - ' DLLR'
+  - ' PRCNT'
+  - ' AMPS'
+  - ' FSLH'
+  - ' LPAR'
+  - ' RPAR'
+  - ' EQUAL'
+  - {t: ' LT', h: '$$mdi:penguin$$'}
+  - {t: ' LBKT', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ' LBRC', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ' LPAR', h: '$$mdi:apple-keyboard-shift$$'}
+  - ' GRAVE'
+  - ' SQT'
+  - {t: ' BSLH', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ' STAR', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ' GRAVE', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ' CARET', h: '$$mdi:penguin$$'}
+  - ' GT'
+  - {t: ' RBKT', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ' RBRC', h: '$$mdi:apple-keyboard-option$$'}
+  - ' RPAR'
+  - ' TILDE'
+  - ' QMARK'
+  - ' PIPE'
+  - {t: ' PLUS', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ' EURO', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ' SECT', h: CMENU}
   - FUNADJ
   - {t: DEL, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
@@ -143,9 +143,9 @@ layers:
   MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - S+]
-  - ']'
-  - S+\
+  - ' ACUTE'
+  - ' GRAVE'
+  - ' CARET'
   - '&msc SCRL_LEFT'
   - '&msc SCRL_DOWN'
   - '&msc SCRL_UP'
@@ -155,7 +155,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
-  - AGr+[
+  - ' UMLAUT'
   - '&mmv MOVE_LEFT'
   - '&mmv MOVE_DOWN'
   - '&mmv MOVE_UP'
@@ -165,7 +165,7 @@ layers:
   - '&mkp RCLK'
   - '&mkp MCLK'
   - '&mkp LCLK'
-  - \
+  - ' TILDE'
   - '&m_dblclk'
   - '&mkp LCLK'
   - '&mkp MCLK'
