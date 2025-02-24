@@ -61,8 +61,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ' LAQUO'
-  - ' ORDF'
+  - «
+  - º
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -71,36 +71,36 @@ layers:
   - {t: ▽, type: trans}
   - FUNADJ
   SYMBOL:
-  - ' EXCL'
-  - ' DQT'
-  - ' HASH'
-  - ' DLLR'
-  - ' PRCNT'
-  - ' AMPS'
-  - ' FSLH'
-  - ' LPAR'
-  - ' RPAR'
-  - ' EQUAL'
-  - {t: ' LT', h: '$$mdi:penguin$$'}
-  - {t: ' LBKT', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ' LBRC', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ' LPAR', h: '$$mdi:apple-keyboard-shift$$'}
-  - ' GRAVE'
-  - ' SQT'
-  - {t: ' BSLH', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: ' STAR', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ' GRAVE', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ' CARET', h: '$$mdi:penguin$$'}
-  - ' GT'
-  - {t: ' RBKT', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ' RBRC', h: '$$mdi:apple-keyboard-option$$'}
-  - ' RPAR'
-  - ' TILDE'
-  - ' QMARK'
-  - ' PIPE'
-  - {t: ' PLUS', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ' EURO', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ' SECT', h: CMENU}
+  - '!'
+  - '"'
+  - '#'
+  - $
+  - '%'
+  - '&'
+  - /
+  - (
+  - )
+  - '='
+  - {t: <, h: '$$mdi:penguin$$'}
+  - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: (, h: '$$mdi:apple-keyboard-shift$$'}
+  - '`'
+  - ''''
+  - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '*', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '`', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ^, h: '$$mdi:penguin$$'}
+  - '>'
+  - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
+  - )
+  - '~'
+  - '?'
+  - '|'
+  - {t: +, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: €, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: §, h: CMENU}
   - FUNADJ
   - {t: DEL, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
@@ -143,34 +143,34 @@ layers:
   MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ' ACUTE'
-  - ' GRAVE'
-  - ' CARET'
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_UP'
-  - '&msc SCRL_RIGHT'
+  - ´
+  - '`'
+  - ^
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
+  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
   - {t: ▽, type: trans}
-  - '&mkp MB5'
+  - {t: '$$mdi:cursor-default-click$$', s: '5', type: sym_sub_text}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
-  - ' UMLAUT'
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_UP'
-  - '&mmv MOVE_RIGHT'
-  - '&mkp MB5'
-  - '&mkp MB4'
-  - '&mkp RCLK'
-  - '&mkp MCLK'
-  - '&mkp LCLK'
-  - ' TILDE'
-  - '&m_dblclk'
-  - '&mkp LCLK'
-  - '&mkp MCLK'
-  - '&mkp RCLK'
-  - '&mkp MB4'
+  - ¨
+  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
+  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
+  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
+  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
+  - {t: '$$mdi:cursor-default-click$$', s: '5', type: sym_sub_text}
+  - {t: '$$mdi:cursor-default-click$$', s: '4', type: sym_sub_text}
+  - {t: '$$mdi:cursor-default-click$$', s: R, type: sym_sub_text}
+  - {t: '$$mdi:cursor-default-click$$', s: M, type: sym_sub_text}
+  - {t: '$$mdi:cursor-default-click$$', s: L, type: sym_sub_text}
+  - '~'
+  - {t: '$$mdi:cursor-default-click$$', s: 2x, type: sym_sub_text}
+  - {t: '$$mdi:cursor-default-click$$', s: L, type: sym_sub_text}
+  - {t: '$$mdi:cursor-default-click$$', s: M, type: sym_sub_text}
+  - {t: '$$mdi:cursor-default-click$$', s: R, type: sym_sub_text}
+  - {t: '$$mdi:cursor-default-click$$', s: '4', type: sym_sub_text}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -326,24 +326,24 @@ layers:
   - ''
   - ''
   - {type: held alternate}
-  - ⌨️ 4 🪟
-  - ⌨️ 3 tablet
-  - ⌨️ 2 💻
-  - ⌨️ 1 📱
-  - ⌨️ 0 👨‍💻
-  - ⌨️ 0 👨‍💻
-  - ⌨️ 1 📱
-  - ⌨️ 2 💻
-  - ⌨️ 3 tablet
-  - ⌨️ 4 🪟
+  - {t: '$$mdi:bluetooth-connect$$', s: '4', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '3', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '2', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '1', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '0', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '0', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '1', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '2', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '3', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-connect$$', s: '4', type: sym_sub_text}
   - $$mdi:cog-transfer$$
   - $$mdi:restart$$
-  - $$mdi:usb$$
-  - $$mdi:bluetooth$$
-  - $$mdi:bluetooth-transfer$$
-  - $$mdi:bluetooth-transfer$$
-  - $$mdi:bluetooth$$
-  - $$mdi:usb$$
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:bluetooth$$', type: sym_by_sym}
+  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
+  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:bluetooth$$', type: sym_by_sym}
+  - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
   - $$mdi:restart$$
   - $$mdi:cog-transfer$$
   - ''
@@ -365,13 +365,13 @@ combos:
   k: $$mdi:keyboard-tab$$
   l: [QWERTY]
 - p: [5, 6]
-  k: RET
+  k: ⮐
   l: [QWERTY]
 - p: [21, 22]
-  k: AGr+2
+  k: '@'
   l: [QWERTY]
 - p: [14, 15]
-  k: '&capsw'
+  k: {t: '$$mdi:apple-keyboard-caps$$', s: W, type: sym_sub_text}
   l: [QWERTY]
 - p: [6, 7, 8]
   k: BSPC
@@ -401,7 +401,7 @@ combos:
   k: $$mdi:repeat$$
   l: [QWERTY]
 - p: [22, 23]
-  k: AGr+S
+  k: ß
   l: [QWERTY]
 - p: [3, 4]
   k: PG UP
@@ -413,7 +413,7 @@ combos:
   k: PSCRN
   l: [QWERTY]
 - p: [27, 28]
-  k: S+/
+  k: _
   l: [QWERTY]
 - p: [2, 3, 4]
   k: CS+X
@@ -440,7 +440,7 @@ combos:
   l: [QWERTY]
   a: bottom
 - p: [0, 1, 2]
-  k: tmux prefix
+  k: C+A
   l: [QWERTY]
   a: top
 - p: [10, 11, 12]
