@@ -141,7 +141,7 @@
                   key-positions = <26 27>;  // NOT-FOR-SWEEP
                   require-prior-idle-ms = <120>;
                   layers = <QWERTY>;
-                  bindings = <&kp RA(N2)>;
+                  bindings = <&kp PT_AT>;
         };
         combo_capsword {
                   timeout-ms = <SPLIT_COMBO_TIMEOUT>;
@@ -250,7 +250,7 @@
                   key-positions = <32 33>;  // NOT-FOR-SWEEP
                   require-prior-idle-ms = <50>;
                   layers = <QWERTY>;
-                  bindings = <&kp LS(FSLH)>;
+                  bindings = <&kp PT_UNDER>;
         };
         combo_ctrlshiftx_left {
                   timeout-ms = <COMBO_TIMEOUT>;

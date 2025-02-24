@@ -1,9 +1,9 @@
 draw_config:
-  key_w: 60.0
-  key_h: 56.0
+  key_w: 70.0
+  key_h: 60.0
   split_gap: 30.0
-  combo_w: 28.0
-  combo_h: 26.0
+  combo_w: 30.0
+  combo_h: 28.0
   key_rx: 6.0
   key_ry: 6.0
   dark_mode: false
@@ -128,24 +128,17 @@ parse_config:
     "&key_repeat": "$$mdi:repeat$$"
     "&sys_reset": "$$mdi:restart$$"
     "&bootloader": "$$mdi:cog-transfer$$"
-    # "&kp LGUI": "$$mdi:penguin$$"
-    # "&kp RGUI": "$$mdi:penguin$$"
-    # "&kp LSHIFT": "$$mdi:apple-keyboard-shift$$"
-    # "&kp RSHIFT": "$$mdi:apple-keyboard-shift$$"
-    # "&kp BACKSPACE": "$$mdi:keyboard-backspace$$"
-    # "&kp TAB": "$$mdi:keyboard-tab$$"
-    # "&kp PT_SPACE": "$$mdi:keyboard-space$$"
     "&tog LOCK": "$$mdi:lock$$"
     "&studio_unlock": "⌨️ ZMK Studio"
     "&unstick": "ModKey Reset"
-    "&bt BT_CLR": "$$mdi:bluetooth-transfer$$"
-    "&out OUT_USB": "$$mdi:usb$$"
-    "&out OUT_BLE": "$$mdi:bluetooth$$"
-    "&bt BT_SEL 0": "⌨️ 0 👨‍💻"
-    "&bt BT_SEL 1": "⌨️ 1 📱"
-    "&bt BT_SEL 2": "⌨️ 2 💻"
-    "&bt BT_SEL 3": "⌨️ 3 tablet"
-    "&bt BT_SEL 4": "⌨️ 4 🪟"
+    # "&bt BT_CLR": "$$mdi:bluetooth-transfer$$"
+    # "&out OUT_USB": "$$mdi:usb$$"
+    # "&out OUT_BLE": "$$mdi:bluetooth$$"
+    # "&bt BT_SEL 0": "⌨️ 0 👨‍💻"
+    # "&bt BT_SEL 1": "⌨️ 1 📱"
+    # "&bt BT_SEL 2": "⌨️ 2 💻"
+    # "&bt BT_SEL 3": "⌨️ 3 tablet"
+    # "&bt BT_SEL 4": "⌨️ 4 🪟"
     "&kp C_NEXT": "⏭️ Next"
     "&kp C_BRI_UP": "💡 Up"
     "&kp C_FF": "⏩ Fast Forward"
@@ -194,6 +187,108 @@ parse_config:
     "&kp RIGHT": "➡️"
     "&kp UP": "⬆️"
     "&kp DOWN": "⬇️"
+    '&out OUT_BLE':
+      tap: $$mdi:keyboard$$
+      shifted: $$mdi:bluetooth$$
+      type: sym_by_sym
+    '&out OUT_USB':
+      tap: $$mdi:keyboard$$
+      shifted: $$mdi:usb$$
+      type: sym_by_sym
+    '&out OUT_TOG':
+      tap: $$mdi:toggle-switch$$
+      hold: $$mdi:bluetooth$$
+      shifted: $$mdi:usb$$
+      type: toggle
+    '&capsw':
+      tap: $$mdi:apple-keyboard-caps$$
+      shifted: "W"
+      type: sym_sub_text
+    '&m_dblclk':
+      tap: $$mdi:cursor-default-click$$
+      shifted: "2x"
+      type: sym_sub_text
+    '&mkp LCLK':
+      tap: $$mdi:cursor-default-click$$
+      shifted: "L"
+      type: sym_sub_text
+    '&mkp MCLK':
+      tap: $$mdi:cursor-default-click$$
+      shifted: "M"
+      type: sym_sub_text
+    '&mkp RCLK':
+      tap: $$mdi:cursor-default-click$$
+      shifted: "R"
+      type: sym_sub_text
+    '&mkp MB4':
+      tap: $$mdi:cursor-default-click$$
+      shifted: "4"
+      type: sym_sub_text
+    '&mkp MB5':
+      tap: $$mdi:cursor-default-click$$
+      shifted: "5"
+      type: sym_sub_text
+    '&bt BT_CLR':
+      tap: $$mdi:bluetooth-settings$$
+      shifted: $$mdi:close-thick$$
+      type: sym_sub_text
+    '&bt BT_CLR_ALL':
+      tap: $$mdi:bluetooth-settings$$
+      shifted: $$mdi:close-thick$$
+      hold: $$mdi:asterisk$$
+      type: sym_sub_text
+    '&bt BT_SEL 0':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '0'
+      type: sym_sub_text
+    '&bt BT_SEL 1':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '1'
+      type: sym_sub_text
+    '&bt BT_SEL 2':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '2'
+      type: sym_sub_text
+    '&bt BT_SEL 3':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '3'
+      type: sym_sub_text
+    '&bt BT_SEL 4':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '4'
+      type: sym_sub_text
+    '&msc SCRL_LEFT':
+      tap: '$$mdi:mouse-scroll-wheel$$'
+      shifted: $$mdi:arrow-left$$
+      type:    sym_by_sym
+    '&msc SCRL_UP':
+      tap: '$$mdi:mouse-scroll-wheel$$'
+      shifted: $$mdi:arrow-up$$
+      type:    sym_by_sym
+    '&msc SCRL_DOWN':
+      tap: '$$mdi:mouse-scroll-wheel$$'
+      shifted: $$mdi:arrow-down$$
+      type:    sym_by_sym
+    '&msc SCRL_RIGHT':
+      tap: '$$mdi:mouse-scroll-wheel$$'
+      shifted: $$mdi:arrow-right$$
+      type:    sym_by_sym
+    '&mmv MOVE_LEFT':
+      tap:     $$mdi:tortoise$$
+      shifted: $$mdi:arrow-left$$
+      type:    sym_by_sym
+    '&mmv MOVE_RIGHT':
+      tap:     $$mdi:tortoise$$
+      shifted: $$mdi:arrow-right$$
+      type:    sym_by_sym
+    '&mmv MOVE_UP':
+      tap:     $$mdi:tortoise$$
+      shifted: $$mdi:arrow-up$$
+      type:    sym_by_sym
+    '&mmv MOVE_DOWN':
+      tap:     $$mdi:tortoise$$
+      shifted: $$mdi:arrow-down$$
+      type:    sym_by_sym
   sticky_label: sticky
   toggle_label: $$mdi:toggle-switch$$
   tap_toggle_label: tap-toggle
@@ -290,36 +385,54 @@ parse_config:
   zmk_keycode_map:
     EXCLAMATION: '!'
     EXCL: '!'
+    PT_EXCL: '!'
     AT_SIGN: '@'
     AT: '@'
+    PT_AT: '@'
     HASH: '#'
+    PT_HASH: '#'
     POUND: '#'
     DOLLAR: $
     DLLR: $
+    PT_DLLR: $
     PERCENT: '%'
     PRCNT: '%'
+    PT_PRCNT: '%'
     CARET: ^
+    PT_CARET: ^
     AMPERSAND: '&'
     AMPS: '&'
+    PT_AMPS: '&'
     ASTERISK: '*'
     ASTRK: '*'
     STAR: '*'
+    PT_STAR: '*'
     LEFT_PARENTHESIS: (
     LPAR: (
+    PT_LPAR: (
     RIGHT_PARENTHESIS: )
     RPAR: )
+    PT_RPAR: )
     EQUAL: '='
+    PT_EQUAL: '='
     PLUS: +
+    PT_PLUS: +
     MINUS: '-'
+    PT_MINUS: '-'
     UNDERSCORE: _
     UNDER: _
+    PT_UNDER: _
     SLASH: /
     FSLH: /
+    PT_FSLH: /
     QUESTION: '?'
     QMARK: '?'
+    PT_QMARK: '?'
     BACKSLASH: \
     BSLH: \
+    PT_BSLH: \
     PIPE: '|'
+    PT_PIPE: '|'
     NON_US_BACKSLASH: \
     PIPE2: '|'
     NON_US_BSLH: '|'
@@ -328,28 +441,45 @@ parse_config:
     COLON: ':'
     SINGLE_QUOTE: ''''
     SQT: ''''
+    PT_SQT: ''''
     APOSTROPHE: ''''
     APOS: ''''
     DOUBLE_QUOTES: '"'
     DQT: '"'
+    PT_DQT: '"'
     COMMA: ','
     LESS_THAN: <
     LT: <
+    PT_LT: <
     PERIOD: .
     DOT: .
+    PT_DOT: .
     GREATER_THAN: '>'
     GT: '>'
+    PT_GT: '>'
     LEFT_BRACKET: '['
     LBKT: '['
+    PT_LBKT: '['
     LEFT_BRACE: '{'
     LBRC: '{'
+    PT_LBRC: '{'
     RIGHT_BRACKET: ']'
     RBKT: ']'
+    PT_RBKT: ']'
     RIGHT_BRACE: '}'
     RBRC: '}'
+    PT_RBRC: '}'
     GRAVE: '`'
+    PT_GRAVE: '`'
+    PT_ACUTE: '´'
+    PT_UMLAUT: '¨'
     TILDE: '~'
+    PT_TILDE: '~'
     NON_US_HASH: '#'
+    PT_LAQUO: '«'
+    PT_ORDF: 'º'
+    PT_EURO: '€'
+    PT_SECT: '§'
     NUHS: '#'
     TILDE2: '~'
     PAGE_UP: 'PgUp'
@@ -376,6 +506,7 @@ parse_config:
     LEFT: $$mdi:arrow-left$$
     RIGHT: $$mdi:arrow-right$$
     RETURN: ⮐
+    RET: ⮐
     KP_NUMLOCK: Numlock
     TAB: $$mdi:keyboard-tab$$
     LEFT_GUI: $$mdi:penguin$$
@@ -396,7 +527,7 @@ parse_config:
     RCTRL: $$mdi:apple-keyboard-control$$
     LCTRL: $$mdi:apple-keyboard-control$$
     LEFT_CONTROL: $$mdi:apple-keyboard-control$$
-    LC(A): 'tmux prefix'
+    RA(S): 'ß'
   zmk_combos:
     combo_toggle_lock_left: { align: mid, layers: [LOCK]}
     combo_toggle_lock_right: { align: mid, layers: [LOCK]}
