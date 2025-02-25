@@ -32,7 +32,7 @@ layers:
   - {t: ., h: '$$mdi:apple-keyboard-control$$'}
   - {t: '-', h: CMENU}
   - NUMNAV
-  - {t: ^, s: '~'}
+  - {t: '$$mdi:backspace-outline$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE}
   - SYMBOL
   NUMNAV:
@@ -85,7 +85,7 @@ layers:
   - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
   - {t: (, h: '$$mdi:apple-keyboard-shift$$'}
-  - '`'
+  - {t: '`', s: ´}
   - ''''
   - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '*', h: '$$mdi:apple-keyboard-option$$'}
@@ -95,7 +95,7 @@ layers:
   - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
   - )
-  - '~'
+  - {t: '~', s: ^}
   - '?'
   - '|'
   - {t: +, h: '$$mdi:apple-keyboard-option$$'}
@@ -143,9 +143,9 @@ layers:
   MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '`'
-  - ´
-  - ^
+  - {t: '`', s: ´}
+  - {t: ´, s: '`'}
+  - {t: ^, s: '~'}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
@@ -165,7 +165,7 @@ layers:
   - {t: '$$mdi:cursor-default-click$$', s: R, type: sym_sub_text}
   - {t: '$$mdi:cursor-default-click$$', s: M, type: sym_sub_text}
   - {t: '$$mdi:cursor-default-click$$', s: L, type: sym_sub_text}
-  - '~'
+  - {t: '~', s: ^}
   - {t: '$$mdi:cursor-default-click$$', s: 2x, type: sym_sub_text}
   - {t: '$$mdi:cursor-default-click$$', s: L, type: sym_sub_text}
   - {t: '$$mdi:cursor-default-click$$', s: M, type: sym_sub_text}
