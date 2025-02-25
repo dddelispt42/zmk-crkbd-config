@@ -481,28 +481,28 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             /*keep-mods = <(MOD_RSFT)>;*/
         };
-        bspc_del: acute_grave {
+        acute_grave: acute_grave {
             compatible = "zmk,behavior-mod-morph";
             label = "ACUTE_GRAVE";
             #binding-cells = <0>;
             bindings = <&kp PT_ACUTE>, <&kp PT_GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        bspc_del: grave_acute {
+        grave_acute: grave_acute {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_ACUTE";
             #binding-cells = <0>;
             bindings = <&kp PT_GRAVE>, <&kp PT_ACUTE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        bspc_del: tilde_caret {
+        tilde_caret: tilde_caret {
             compatible = "zmk,behavior-mod-morph";
             label = "TILDE_CARET";
             #binding-cells = <0>;
             bindings = <&kp PT_TILDE>, <&kp PT_CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        bspc_del: caret_tilde {
+        caret_tilde: caret_tilde {
             compatible = "zmk,behavior-mod-morph";
             label = "CARET_TILDE";
             #binding-cells = <0>;
@@ -630,8 +630,8 @@
 //                    |     | L3  | DEL |   |     |     |     |
                         bindings = <
  &kp PT_EXCL &kp PT_DQT &kp PT_HASH &kp PT_DLLR &kp PT_PRCNT  &kp PT_AMPS &kp PT_FSLH &kp PT_LPAR &kp PT_RPAR &kp PT_EQUAL
- HRML(PT_LT, PT_LBKT, PT_LBRC, PT_LPAR) &kp PT_GRAVE  &kp PT_SQT HRMR(PT_BSLH, PT_STAR, PT_GRAVE, PT_CARET)
- LRML(PT_GT, PT_RBKT, PT_RBRC, PT_RPAR) &kp PT_TILDE  &kp PT_QMARK LRMR(PT_PIPE, PT_PLUS, PT_EURO, PT_SECT)
+ HRML(PT_LT, PT_LBKT, PT_LBRC, PT_LPAR) &grave_acute  &kp PT_SQT HRMR(PT_BSLH, PT_STAR, PT_GRAVE, PT_CARET)
+ LRML(PT_GT, PT_RBKT, PT_RBRC, PT_RPAR) &tilde_caret  &kp PT_QMARK LRMR(PT_PIPE, PT_PLUS, PT_EURO, PT_SECT)
                          &mo FUNADJ &hm RCTRL DEL   &trans  &trans
                         >;
                 };
@@ -662,9 +662,9 @@
  //  &msc SCRL_UP &kp LCTRL &kp LALT &kp LSHIFT &kp RA(LBKT)  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &msc SCRL_UP
  //  &msc SCRL_DOWN &mkp RCLK &mkp MCLK &mkp LCLK &kp BSLH   &trans  &mkp LCLK &mkp MCLK &mkp RCLK &msc SCRL_DOWN
                         bindings = <
-  &trans &trans &kp PT_GRAVE  &kp PT_ACUTE &kp PT_CARET     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
+  &trans &trans &grave_acute  &acute_grave &caret_tilde  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
   &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp PT_UMLAUT  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5
-  &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp PT_TILDE   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4
+  &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &tilde_caret   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4
                        &trans  &trans     &trans &trans
                         >;
                 };
