@@ -74,8 +74,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - «
-  - º
+  - {t: «, s: ' RAQUO'}
+  - {t: º, s: ' ORDM'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -108,8 +108,8 @@ layers:
   - ''''
   - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '*', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '`', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ^, h: '$$mdi:penguin$$'}
+  - {t: '@', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: _, h: '$$mdi:penguin$$'}
   - ''
   - ''
   - '>'
@@ -448,9 +448,6 @@ combos:
 - p: [6, 7]
   k: ⮐
   l: [QWERTY]
-- p: [26, 27]
-  k: '@'
-  l: [QWERTY]
 - p: [17, 18]
   k: $$mdi:alphabetical-variant$$
   l: [QWERTY]
@@ -477,9 +474,6 @@ combos:
   l: [QWERTY]
 - p: [25, 26]
   k: PSCRN
-  l: [QWERTY]
-- p: [33, 34]
-  k: _
   l: [QWERTY]
 - p: [14, 15, 16]
   k: {t: CS+C, s: CS+X}
