@@ -53,6 +53,11 @@ draw_config:
       font-size: 10px;
       opacity: 1.0;
     }
+    .hold {
+      translate: 0px -8px;
+      font-size: 10px;
+      opacity: 1.0;
+    }
     .combo.sym_sub_text.tap {
       translate: -1px 1px;
     }
@@ -181,6 +186,9 @@ parse_config:
     "&m_emoj_s": "😟"
     "&m_emoj_l": "🤣"
     "&m_emoj_j": "😜"
+    "&td_ctrl_cx":
+      tap: "CS+C"
+      shifted: "CS+X"
     "&kp PT_C_CEDILLA": "Ç"
     "&kp PT_MINUS": "-"
     "&kp LEFT": "⬅️"
@@ -200,10 +208,7 @@ parse_config:
       hold: $$mdi:bluetooth$$
       shifted: $$mdi:usb$$
       type: toggle
-    '&capsw':
-      tap: $$mdi:apple-keyboard-caps$$
-      shifted: "W"
-      type: sym_sub_text
+    '&capsw': $$mdi:alphabetical-variant$$
     '&m_dblclk':
       tap: $$mdi:cursor-default-click$$
       shifted: "2x"
@@ -536,26 +541,21 @@ parse_config:
     # combo_ret: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_at: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_capsword: { align: top, o: 3.00, arc_scale: 1.00}
-    combo_bspc: { align: top, o: 0.00, arc_scale: 1.00}
-    combo_ctrlbspc: { align: bottom, o: 0.00, arc_scale: 1.00}
-    combo_altbspc: { align: bottom, o: 0.00, arc_scale: 1.00}
-    combo_del: { align: top, o: 0.00, arc_scale: 1.00}
-    combo_ctrldel: { align: bottom, o: 0.00, arc_scale: 1.00}
-    combo_altdel: { align: bottom, o: 0.00, arc_scale: 1.00}
+    combo_bspc: { align: mid, o: 0.00, arc_scale: 1.00}
+    combo_ctrlbspc: { align: mid, o: 0.00, arc_scale: 1.00}
+    combo_del: { align: mid, o: 0.00, arc_scale: 1.00}
     # combo_repeat_right: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_sz: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_pup: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_down: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_prtwin: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_underscore: { align: top, o: 3.00, arc_scale: 1.00}
-    combo_ctrlshiftx_left: { align: top, o: 0.00, arc_scale: 1.00}
-    combo_ctrlshiftc_left: { align: bottom, o: 0.00, arc_scale: 1.00}
-    combo_ctrlshiftv_left: { align: bottom, o: 0.00, arc_scale: 1.00}
-    combo_ctrlshiftx_right: { align: top, o: 0.00, arc_scale: 1.00}
-    combo_ctrlshiftc_right: { align: bottom, o: 0.00, arc_scale: 1.00}
-    combo_ctrlshiftv_right: { align: bottom, o: 0.00, arc_scale: 1.00}
-    combo_ctrla: { align: top, o: 0.00, arc_scale: 1.00}
-    combo_ctrlz: { align: bottom, o: 0.00, arc_scale: 1.00}
+    # combo_ctrlshiftx: { align: top, o: 0.00, arc_scale: 1.00}
+    # combo_ctrlshiftc: { align: top, o: 1.20, arc_scale: 1.00}
+    combo_ctrlshiftcx: { align: top, o: 1.30, arc_scale: 1.00}
+    combo_ctrlshiftv: { align: bottom, o: 0.30, arc_scale: 1.00}
+    combo_ctrla: { align: mid, o: 0.00, arc_scale: 1.00}
+    combo_ctrlz: { align: mid, o: 0.00, arc_scale: 1.00}
     # combo_leader: { align: top, o: 3.00, arc_scale: 1.00}
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []
