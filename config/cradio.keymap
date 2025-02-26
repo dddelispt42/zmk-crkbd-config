@@ -145,7 +145,7 @@
         combo_capsword {
                   timeout-ms = <SPLIT_COMBO_TIMEOUT>;
                   key-positions = <14 15>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <120>;
+                  require-prior-idle-ms = <200>;
                   layers = <QWERTY>;
                   // bindings = <&kp CAPS>;
                   bindings = <&capsw>;
@@ -153,20 +153,21 @@
         combo_bspc {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <18 19>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <100>;
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp BSPC>;
         };
         combo_ctrlbspc {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <16 17>;  // NOT-FOR-CORNE
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp LC(BSPC)>;
         };
         combo_del {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <8 9>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <100>;
+                  require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   bindings = <&kp DEL>;
         };
@@ -222,7 +223,7 @@
         combo_ctrlshiftcx {
                   timeout-ms = <COMBO_TIMEOUT>;
                   key-positions = <11 12 13>;  // NOT-FOR-CORNE
-                  require-prior-idle-ms = <150>;
+                  // require-prior-idle-ms = <150>;
                   layers = <QWERTY>;
                   /*bindings = <&kp LC(LS(C))>;*/
                   bindings = <&td_ctrl_cx>;
@@ -463,7 +464,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTRLC_CTRLX";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <350>;
             bindings = <&kp LC(LS(C))>, <&kp LC(LS(X))>;
         };
         spc_ret: space_return {
