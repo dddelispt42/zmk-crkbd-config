@@ -293,7 +293,7 @@
                     , <&macro_release &kp LCTRL>
                     , <&macro_wait_time 300>
                     , <&macro_press &kp LCTRL &kp LSHIFT>
-                    , <&macro_tap &kp N1>
+                    , <&macro_tap &kp N8>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
@@ -306,7 +306,7 @@
                     , <&macro_release &kp LCTRL>
                     , <&macro_wait_time 300>
                     , <&macro_press &kp LCTRL &kp LSHIFT>
-                    , <&macro_tap &kp N1>
+                    , <&macro_tap &kp N8>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
@@ -319,7 +319,7 @@
                     , <&macro_release &kp LCTRL>
                     , <&macro_wait_time 300>
                     , <&macro_press &kp LCTRL &kp LSHIFT>
-                    , <&macro_tap &kp N1>
+                    , <&macro_tap &kp N8>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
@@ -328,7 +328,7 @@
                 tap-ms = <MACRO_TAP>;
                 bindings
                     = <&macro_press &kp LCTRL &kp LSHIFT>
-                    , <&macro_tap &kp N2>
+                    , <&macro_tap &kp N7>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
@@ -337,7 +337,7 @@
                 tap-ms = <MACRO_TAP>;
                 bindings
                     = <&macro_press &kp LCTRL &kp LSHIFT>
-                    , <&macro_tap &kp N3>
+                    , <&macro_tap &kp N6>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
@@ -364,7 +364,7 @@
                 tap-ms = <MACRO_TAP>;
                 bindings
                     = <&macro_press &kp LCTRL &kp LSHIFT>
-                    , <&macro_tap &kp N6>
+                    , <&macro_tap &kp N2>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
@@ -373,7 +373,7 @@
                 tap-ms = <MACRO_TAP>;
                 bindings
                     = <&macro_press &kp LCTRL &kp LSHIFT>
-                    , <&macro_tap &kp N7>
+                    , <&macro_tap &kp N3>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
@@ -382,7 +382,7 @@
                 tap-ms = <MACRO_TAP>;
                 bindings
                     = <&macro_press &kp LCTRL &kp LSHIFT>
-                    , <&macro_tap &kp N8>
+                    , <&macro_tap &kp N1>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
                 )
