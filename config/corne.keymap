@@ -517,11 +517,11 @@
             bindings = <&kp PT_LAQUO>, <&kp PT_RAQUO>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        ordf_ordm: ordf_ordm {
+        ordm_ordf: ordm_ordf {
             compatible = "zmk,behavior-mod-morph";
-            label = "ORDF_ORDM";
+            label = "ORDM_ORDF";
             #binding-cells = <0>;
-            bindings = <&kp PT_ORDF>, <&kp PT_ORDM>;
+            bindings = <&kp PT_ORDM>, <&kp PT_ORDF>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         hm: homerow_mods {
@@ -631,7 +631,7 @@
                         bindings = <
  &none &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &none
  &none &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT) &none
- &none &trans &trans &trans &trans &trans      &laquo_raquo &ordf_ordm &trans &trans &trans &none
+ &none &trans &trans &trans &trans &trans      &laquo_raquo &ordm_ordf &trans &trans &trans &none
                      &none  &trans  &trans    &trans &mo FUNADJ &key_repeat
                         >;
                 };
