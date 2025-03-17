@@ -772,8 +772,8 @@ rect.held, rect.combo.held {
 <g transform="translate(630, 158)" class="key keypos-31">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">º</text>
-<text x="0" y="-26" class="key shifted"> ORDM</text>
+<text x="0" y="-4" class="key tap">ORDM</text>
+<text x="0" y="-26" class="key shifted">º</text>
 </g>
 <g transform="translate(690, 150)" class="key trans keypos-32">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans side"/>

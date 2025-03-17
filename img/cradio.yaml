@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: ferris_rotated}
+layout: {zmk_keyboard: cradio}
 layers:
   QWERTY:
   - {t: Q, h: BLUETH}
@@ -62,7 +62,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: «, s: ' RAQUO'}
-  - {t: º, s: ' ORDM'}
+  - {t: ' ORDM', s: º}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
