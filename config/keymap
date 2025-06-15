@@ -271,16 +271,6 @@
                   layers = <QWERTY>;
                   bindings = <&kp LC(Z)>;
         };
-        // TODO(heiko): zmk bug with leader key model (urob also not working)
-        //combo_leader {
-        //          timeout-ms = <COMBO_TIMEOUT>;
-        //          key-positions = <30 31>;  // NOT-FOR-SWEEP
-        //          key-positions = <25 26>;  // NOT-FOR-CORNE
-        //          require-prior-idle-ms = <150>;
-        //          layers = <QWERTY>;
-        //          /*bindings = <&kp F23>; // INFO: F23 is ZMK leader key*/
-        //          bindings = <&leader1>;
-        //};
     };
 
     macros {
@@ -622,13 +612,6 @@
             boot { sequence = <B O O T>; bindings = <&bootloader>; };
             reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
         };
-        /* leader2: leader2 { */
-        /*     compatible = "zmk,behavior-leader-key"; */
-        /*     #binding-cells = <0>; */
-        /*     de_ae { sequence = <A E>; bindings = <&de_ae>; }; */
-        /*     de_oe { sequence = <O E>; bindings = <&de_oe>; }; */
-        /*     de_ue { sequence = <U E>; bindings = <&de_ue>; }; */
-        /* }; */
         // TODO(heiko): zmk bug with leader key model (urob also not working)
         leader1: leader1 {
             compatible = "zmk,behavior-leader-key";
@@ -642,13 +625,14 @@
             boot { sequence = <B O O T>; bindings = <&bootloader>; };
             reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
         };
-        /* leader2: leader2 { */
-        /*     compatible = "zmk,behavior-leader-key"; */
-        /*     #binding-cells = <0>; */
-        /*     de_ae { sequence = <A E>; bindings = <&de_ae>; }; */
-        /*     de_oe { sequence = <O E>; bindings = <&de_oe>; }; */
-        /*     de_ue { sequence = <U E>; bindings = <&de_ue>; }; */
-        /* }; */
+
+        leader2: leader2 {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            de_ae { sequence = <A E>; bindings = <&de_ae>; };
+            de_oe { sequence = <O E>; bindings = <&de_oe>; };
+            de_ue { sequence = <U E>; bindings = <&de_ue>; };
+        };
     };
 
         keymap {
