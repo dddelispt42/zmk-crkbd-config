@@ -13,6 +13,8 @@ manifest:
       url-base: https://github.com/joelspadin
     - name: dddelispt42
       url-base: https://github.com/dddelispt42
+    - name: m165437
+      url-base: https://github.com/M165437
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -29,5 +31,9 @@ manifest:
       # revision: v0.1+locality
     - name: zmk-auto-layer
       remote: urob
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
+
   self:
     path: config
