@@ -37,7 +37,7 @@ layers:
   - {t: ., h: '$$mdi:apple-keyboard-control$$'}
   - {t: '-', h: CMENU}
   - ''
-  - ''
+  - '&leader1'
   - NUMNAV
   - {t: '$$mdi:backspace-outline$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE}
