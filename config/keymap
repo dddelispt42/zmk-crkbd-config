@@ -271,16 +271,6 @@
                   layers = <QWERTY>;
                   bindings = <&kp LC(Z)>;
         };
-        // TODO(heiko): zmk bug with leader key model (urob also not working)
-        //combo_leader {
-        //          timeout-ms = <COMBO_TIMEOUT>;
-        //          key-positions = <30 31>;  // NOT-FOR-SWEEP
-        //          key-positions = <25 26>;  // NOT-FOR-CORNE
-        //          require-prior-idle-ms = <150>;
-        //          layers = <QWERTY>;
-        //          /*bindings = <&kp F23>; // INFO: F23 is ZMK leader key*/
-        //          bindings = <&leader1>;
-        //};
     };
 
     macros {
@@ -610,38 +600,20 @@
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
         };
-        leader1: leader1 {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-            usb { sequence = <U S B>; bindings = <&out OUT_USB>; };
-            ble { sequence = <B L E>; bindings = <&out OUT_BLE>; };
-            bt0 { sequence = <B N0>; bindings = <&bt BT_SEL 0>; };
-            bt1 { sequence = <B N1>; bindings = <&bt BT_SEL 1>; };
-            bt2 { sequence = <B N2>; bindings = <&bt BT_SEL 2>; };
-            btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
-            boot { sequence = <B O O T>; bindings = <&bootloader>; };
-            reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
-        };
-        /* leader2: leader2 { */
+        // TODO(heiko): zmk bug with leader key model (urob also not working)
+        /* leader1: leader1 { */
         /*     compatible = "zmk,behavior-leader-key"; */
         /*     #binding-cells = <0>; */
-        /*     de_ae { sequence = <A E>; bindings = <&de_ae>; }; */
-        /*     de_oe { sequence = <O E>; bindings = <&de_oe>; }; */
-        /*     de_ue { sequence = <U E>; bindings = <&de_ue>; }; */
+        /*     usb { sequence = <U S B>; bindings = <&out OUT_USB>; }; */
+        /*     ble { sequence = <B L E>; bindings = <&out OUT_BLE>; }; */
+        /*     bt0 { sequence = <B N0>; bindings = <&bt BT_SEL 0>; }; */
+        /*     bt1 { sequence = <B N1>; bindings = <&bt BT_SEL 1>; }; */
+        /*     bt2 { sequence = <B N2>; bindings = <&bt BT_SEL 2>; }; */
+        /*     btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; }; */
+        /*     boot { sequence = <B O O T>; bindings = <&bootloader>; }; */
+        /*     reset { sequence = <R E S E T>; bindings = <&sys_reset>; }; */
         /* }; */
-        // TODO(heiko): zmk bug with leader key model (urob also not working)
-        leader1: leader1 {
-            compatible = "zmk,behavior-leader-key";
-            #binding-cells = <0>;
-            usb { sequence = <U S B>; bindings = <&out OUT_USB>; };
-            ble { sequence = <B L E>; bindings = <&out OUT_BLE>; };
-            bt0 { sequence = <B N0>; bindings = <&bt BT_SEL 0>; };
-            bt1 { sequence = <B N1>; bindings = <&bt BT_SEL 1>; };
-            bt2 { sequence = <B N2>; bindings = <&bt BT_SEL 2>; };
-            btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
-            boot { sequence = <B O O T>; bindings = <&bootloader>; };
-            reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
-        };
+        /**/
         /* leader2: leader2 { */
         /*     compatible = "zmk,behavior-leader-key"; */
         /*     #binding-cells = <0>; */
@@ -665,7 +637,7 @@
 DK URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) DK
 DK HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, PT_C_CEDILLA) DK
 DK LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, PT_MINUS) DK
-  &leader1 &mo NUMNAV  &bspc_del     &skm MOUSE SPACE &mo SYMBOL RKR
+  RKL &mo NUMNAV  &bspc_del     &skm MOUSE SPACE &mo SYMBOL RKR
                         >;
                 };
 
