@@ -127,7 +127,10 @@ draw_config:
     material: https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/{}/default/48px.svg
   use_local_cache: true
 parse_config:
-  zmk_additional_includes: ["zmk-helpers/include"]
+  zmk_additional_includes: 
+    - "modules/zmk/zmk-helpers/include"
+    - "zmk-helpers/include"
+    - "../zmk-helpers/include/"
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
