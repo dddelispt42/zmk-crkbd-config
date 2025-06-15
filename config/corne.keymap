@@ -587,6 +587,7 @@
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
         };
+        // TODO(heiko): zmk bug with leader key model (urob also not working)
         leader1: leader1 {
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
@@ -606,20 +607,6 @@
         /*     de_oe { sequence = <O E>; bindings = <&de_oe>; }; */
         /*     de_ue { sequence = <U E>; bindings = <&de_ue>; }; */
         /* }; */
-        // TODO(heiko): zmk bug with leader key model (urob also not working)
-        //leader1: leader1 {
-        //    compatible = "zmk,behavior-leader-key";
-        //    #binding-cells = <0>;
-        //    usb { sequence = <U S B>; bindings = <&out OUT_USB>; };
-        //    ble { sequence = <B L E>; bindings = <&out OUT_BLE>; };
-        //    bt0 { sequence = <B N0>; bindings = <&bt BT_SEL 0>; };
-        //    bt1 { sequence = <B N1>; bindings = <&bt BT_SEL 1>; };
-        //    bt2 { sequence = <B N2>; bindings = <&bt BT_SEL 2>; };
-        //    btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
-        //    boot { sequence = <B O O T>; bindings = <&bootloader>; };
-        //    reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
-        //    test { sequence = <T E S T>; bindings = <&kp X &kp X &kp X>; };
-        //};
     };
 
         keymap {
@@ -636,7 +623,7 @@
 &none URML(Q, W, E, R, T)        URMR(Y, U, I, O, P) &none
 &none HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, PT_C_CEDILLA) &none
 &none LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, PT_MINUS) &none
-  &leader1 &mo NUMNAV  &bspc_del     &skm MOUSE SPACE &mo SYMBOL &key_repeat
+  &none &mo NUMNAV  &bspc_del     &skm MOUSE SPACE &mo SYMBOL &key_repeat
                         >;
                 };
 
