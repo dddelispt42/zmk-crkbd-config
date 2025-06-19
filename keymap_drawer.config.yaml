@@ -128,9 +128,7 @@ draw_config:
   use_local_cache: true
 parse_config:
   zmk_additional_includes: 
-    - "modules/zmk/zmk-helpers/include"
     - "zmk-helpers/include"
-    - "../zmk-helpers/include/"
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:

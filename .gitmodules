@@ -1,0 +1,4 @@
+[submodule "config/zmk-helpers-repo"]
+	path = config/zmk-helpers-repo
+	url = https://github.com/urob/zmk-helpers
+	branch = v2
