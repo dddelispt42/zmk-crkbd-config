@@ -3,9 +3,14 @@
 
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/34.h"
+#include "zmk-helpers/unicode-chars/currency.dtsi"
 #include "zmk-helpers/unicode-chars/german.dtsi"
+#include "zmk-helpers/unicode-chars/greek.dtsi"
+#include "zmk-helpers/unicode-chars/portuguese.dtsi"
+#include "zmk-helpers/unicode-chars/spanish.dtsi"
 
 #define ___ &trans
+#define XXX &none
 
 #define DEF 0
 #define NAV 1
