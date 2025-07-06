@@ -29,6 +29,10 @@ include:
   #   shield: [ "corne_left", "corne_right" ]
   # - board: [ "nice_nano_v2" ]
   #   shield: [ "cradio_left", "cradio_right" ]
+  # - board: seeeduino_xiao_ble
+  #   shield: corne_dongle prospector_adapter
+  # - board: seeeduino_xiao_ble
+  #   shield: cradio_dongle prospector_adapter
   - board: seeeduino_xiao_ble
     shield: corne_dongle prospector_adapter
   - board: seeeduino_xiao_ble
