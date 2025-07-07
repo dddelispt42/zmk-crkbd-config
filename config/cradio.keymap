@@ -4,6 +4,10 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
 
+#ifndef KEYMAP_DRAWER
+#include <locale/keys_pt.h>
+#endif
+
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/34.h"
 #include "zmk-helpers/unicode-chars/currency.dtsi"
@@ -20,10 +24,6 @@
 /* #undef ZMK_POINTING_DEFAULT_SCRL_VAL */
 /* #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10 */
 /* #include <dt-bindings/zmk/pointing.h> */
-
-#ifndef KEYMAP_DRAWER
-#include <locale/keys_pt.h>
-#endif
 
 #include "zmk-helpers/key-labels/34.h"
 
