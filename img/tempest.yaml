@@ -1,7 +1,6 @@
-layout: {zmk_keyboard: corne}
+layout: {zmk_keyboard: tempest}
 layers:
   QWERTY:
-  - ''
   - {t: Q, h: BLUETH}
   - {t: W, h: MACROS}
   - {t: E, h: MSOUTL}
@@ -12,8 +11,6 @@ layers:
   - {t: I, h: MSOUTL}
   - {t: O, h: MACROS}
   - {t: P, h: BLUETH}
-  - ''
-  - ''
   - {t: A, h: '$$mdi:penguin$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
   - {t: D, h: '$$mdi:apple-keyboard-option$$'}
@@ -24,8 +21,6 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: Ç, h: '$$mdi:penguin$$'}
-  - ''
-  - ''
   - Z
   - {t: X, h: '$$mdi:apple-keyboard-control$$'}
   - {t: C, h: '$$mdi:apple-keyboard-option$$'}
@@ -37,14 +32,12 @@ layers:
   - {t: ., h: '$$mdi:apple-keyboard-control$$'}
   - {t: '-', h: CMENU}
   - ''
-  - ''
   - NUMNAV
   - {t: '$$mdi:backspace-outline$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE}
   - SYMBOL
   - $$mdi:repeat$$
   NUMNAV:
-  - ''
   - '1'
   - '2'
   - '3'
@@ -55,8 +48,6 @@ layers:
   - '8'
   - '9'
   - '0'
-  - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -67,8 +58,6 @@ layers:
   - {t: ⬆️, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ➡️, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ➡️, h: '$$mdi:penguin$$'}
-  - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -80,14 +69,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - ''
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - FUNADJ
   - $$mdi:repeat$$
   SYMBOL:
-  - ''
   - '!'
   - '"'
   - '#'
@@ -98,8 +85,6 @@ layers:
   - (
   - )
   - '='
-  - ''
-  - ''
   - {t: <, h: '$$mdi:penguin$$'}
   - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
@@ -110,8 +95,6 @@ layers:
   - {t: '*', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '@', h: '$$mdi:apple-keyboard-control$$'}
   - {t: _, h: '$$mdi:penguin$$'}
-  - ''
-  - ''
   - '>'
   - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
@@ -123,14 +106,12 @@ layers:
   - {t: €, h: '$$mdi:apple-keyboard-control$$'}
   - {t: §, h: CMENU}
   - ''
-  - ''
   - FUNADJ
   - {t: DEL, h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
   - {type: held}
   - $$mdi:repeat$$
   FUNADJ:
-  - ''
   - F1
   - F2
   - F3
@@ -141,8 +122,6 @@ layers:
   - F8
   - F9
   - F10
-  - ''
-  - ''
   - {t: F11, h: '$$mdi:penguin$$'}
   - {t: F12, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F13, h: '$$mdi:apple-keyboard-option$$'}
@@ -153,8 +132,6 @@ layers:
   - {t: F18, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F19, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F20, h: '$$mdi:penguin$$'}
-  - ''
-  - ''
   - PSCRN
   - {t: SLCK, h: '$$mdi:apple-keyboard-control$$'}
   - {t: PAUSE BREAK, h: '$$mdi:apple-keyboard-option$$'}
@@ -166,14 +143,12 @@ layers:
   - {t: End, h: '$$mdi:apple-keyboard-control$$'}
   - {t: INS, h: CMENU}
   - ''
-  - ''
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - $$mdi:repeat$$
   MOUSE:
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '`', s: ´}
@@ -184,8 +159,6 @@ layers:
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
   - {t: ▽, type: trans}
-  - ''
-  - ''
   - {t: '$$mdi:cursor-default-click$$', s: '5', type: sym_sub_text}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-option$$
@@ -196,8 +169,6 @@ layers:
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
   - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
   - {t: '$$mdi:cursor-default-click$$', s: '5', type: sym_sub_text}
-  - ''
-  - ''
   - {t: '$$mdi:cursor-default-click$$', s: '4', type: sym_sub_text}
   - {t: '$$mdi:cursor-default-click$$', s: R, type: sym_sub_text}
   - {t: '$$mdi:cursor-default-click$$', s: M, type: sym_sub_text}
@@ -209,14 +180,12 @@ layers:
   - {t: '$$mdi:cursor-default-click$$', s: R, type: sym_sub_text}
   - {t: '$$mdi:cursor-default-click$$', s: '4', type: sym_sub_text}
   - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - $$mdi:repeat$$
   MEDIA:
-  - ''
   - MEDIA HOME
   - MEDIA WWW
   - MEDIA TV
@@ -227,8 +196,6 @@ layers:
   - 💡 Up
   - ⏩ Fast Forward
   - 🔘 Power
-  - ''
-  - ''
   - MEDIA GAMES
   - MEDIA MESSAGES
   - CHANNEL INC
@@ -239,8 +206,6 @@ layers:
   - 💡 Down
   - ⏪ Rewind
   - 💤 Sleep
-  - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -252,14 +217,12 @@ layers:
   - ⏏️ Eject
   - 🔐 Lock
   - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:repeat$$
   WMCFG:
-  - ''
   - S+F13
   - S+F14
   - S+F15
@@ -270,8 +233,6 @@ layers:
   - S+F20
   - S+F21
   - S+F22
-  - ''
-  - ''
   - A+F13
   - A+F14
   - A+F15
@@ -282,8 +243,6 @@ layers:
   - A+F20
   - A+F21
   - A+F22
-  - ''
-  - ''
   - C+F13
   - C+F14
   - C+F15
@@ -295,14 +254,12 @@ layers:
   - C+F21
   - C+F22
   - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:repeat$$
   MSOUTL:
-  - ''
   - 👎
   - 👍
   - {t: 📩 ENV, type: held}
@@ -313,8 +270,6 @@ layers:
   - {t: 📰 Info, type: held alternate}
   - 😜
   - 👨‍🏫
-  - ''
-  - ''
   - 📝 Arch
   - 📁 Select
   - ''
@@ -325,8 +280,6 @@ layers:
   - 😟
   - 👨‍💼 LT
   - 🤣
-  - ''
-  - ''
   - 📑👈 List
   - ''
   - 💲 Customer
@@ -342,10 +295,8 @@ layers:
   - ''
   - ''
   - ''
-  - ''
   - $$mdi:repeat$$
   MACROS:
-  - ''
   - GS+F13
   - {t: GS+F14, type: held}
   - GS+F15
@@ -356,8 +307,6 @@ layers:
   - GS+F20
   - {t: GS+F21, type: held alternate}
   - GS+F22
-  - ''
-  - ''
   - GA+F13
   - GA+F14
   - GA+F15
@@ -368,8 +317,6 @@ layers:
   - GA+F20
   - GA+F21
   - GA+F22
-  - ''
-  - ''
   - GC+F13
   - GC+F14
   - GC+F15
@@ -381,14 +328,12 @@ layers:
   - GC+F21
   - GC+F22
   - ''
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:repeat$$
   BLUETH:
-  - ''
   - {type: held}
   - ''
   - ''
@@ -399,8 +344,6 @@ layers:
   - ''
   - ''
   - {type: held alternate}
-  - ''
-  - ''
   - {t: '$$mdi:bluetooth-connect$$', s: '4', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-connect$$', s: '3', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-connect$$', s: '2', type: sym_sub_text}
@@ -411,8 +354,6 @@ layers:
   - {t: '$$mdi:bluetooth-connect$$', s: '2', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-connect$$', s: '3', type: sym_sub_text}
   - {t: '$$mdi:bluetooth-connect$$', s: '4', type: sym_sub_text}
-  - ''
-  - ''
   - $$mdi:cog-transfer$$
   - $$mdi:restart$$
   - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
@@ -423,71 +364,69 @@ layers:
   - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
   - $$mdi:restart$$
   - $$mdi:cog-transfer$$
-  - ''
   - ''
   - ''
   - ModKey Reset
   - ModKey Reset
   - ''
   - $$mdi:repeat$$
-  LOCK: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-    '', '', '$$mdi:repeat$$']
+  LOCK: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '$$mdi:repeat$$']
 combos:
-- p: [1, 5, 38]
+- p: [0, 4, 32]
   k: $$mdi:lock$$
   l: [LOCK]
-- p: [6, 10, 39]
+- p: [5, 9, 33]
   k: $$mdi:lock$$
   l: [LOCK]
-- p: [1, 2]
+- p: [0, 1]
   k: Esc
   l: [QWERTY]
-- p: [13, 14]
+- p: [10, 11]
   k: $$mdi:keyboard-tab$$
   l: [QWERTY]
-- p: [6, 7]
+- p: [5, 6]
   k: ⮐
   l: [QWERTY]
-- p: [17, 18]
+- p: [14, 15]
   k: $$mdi:alphabetical-variant$$
   l: [QWERTY]
-- p: [21, 22]
+- p: [18, 19]
   k: BSPC
   l: [QWERTY]
-- p: [19, 20]
+- p: [16, 17]
   k: C+BSPC
   l: [QWERTY]
-- p: [9, 10]
+- p: [8, 9]
   k: DEL
   l: [QWERTY]
-- p: [18, 19]
+- p: [15, 16]
   k: $$mdi:repeat$$
   l: [QWERTY]
-- p: [27, 28]
+- p: [22, 23]
   k: ß
   l: [QWERTY]
-- p: [4, 5]
+- p: [3, 4]
   k: PG UP
   l: [QWERTY]
-- p: [16, 17]
+- p: [13, 14]
   k: PG DN
   l: [QWERTY]
-- p: [25, 26]
+- p: [20, 21]
   k: PSCRN
   l: [QWERTY]
-- p: [14, 15, 16]
+- p: [11, 12, 13]
   k: {t: CS+C, s: CS+X}
   l: [QWERTY]
   a: top
   o: 1.3
-- p: [26, 27, 28]
+- p: [21, 22, 23]
   k: CS+V
   l: [QWERTY]
   a: bottom
   o: 0.3
-- p: [31, 32]
+- p: [26, 27]
   k: C+A
   l: [QWERTY]
-- p: [32, 33]
+- p: [27, 28]
   k: C+Z
   l: [QWERTY]

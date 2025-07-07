@@ -1,412 +1,147 @@
 layout: {zmk_keyboard: cradio}
 layers:
-  QWERTY:
-  - {t: Q, h: BLUETH}
-  - {t: W, h: MACROS}
-  - {t: E, h: MSOUTL}
-  - {t: R, h: WMCFG}
-  - {t: T, h: MEDIA}
-  - {t: Y, h: MEDIA}
-  - {t: U, h: WMCFG}
-  - {t: I, h: MSOUTL}
-  - {t: O, h: MACROS}
-  - {t: P, h: BLUETH}
-  - {t: A, h: '$$mdi:penguin$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
-  - G
-  - H
-  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: Ç, h: '$$mdi:penguin$$'}
-  - Z
-  - {t: X, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: C, h: '$$mdi:apple-keyboard-option$$'}
-  - V
+  default_layer:
+  - Q
+  - W
+  - F
+  - P
   - B
-  - N
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - {t: A, h: '$$mdi:penguin$$'}
+  - {t: R, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
+  - G
   - M
-  - {t: ',', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ., h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '-', h: CMENU}
-  - NUMNAV
-  - {t: '$$mdi:backspace-outline$$', s: '$$mdi:backspace-reverse-outline$$'}
-  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
-  - SYMBOL
-  NUMNAV:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
+  - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: O, h: '$$mdi:penguin$$'}
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - ','
+  - .
+  - ;
+  - {t: '$$mdi:keyboard-space$$', h: nav_layer}
+  - ⮐
+  - {t: BSPC, h: num_layer, s: DEL}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  nav_layer:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PG UP
+  - Home
+  - ⬆️
+  - End
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:penguin$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  - {t: ▽, type: trans}
+  - PG DN
+  - ⬅️
+  - ⬇️
+  - ➡️
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  num_layer:
+  - Esc
   - '7'
   - '8'
   - '9'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - $$mdi:keyboard-tab$$
+  - '4'
+  - '5'
+  - '6'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-control$$', h: sticky}
+  - {t: '$$mdi:apple-keyboard-option$$', h: sticky}
+  - {t: '$$mdi:penguin$$', h: sticky}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ⬅️
-  - {t: ⬇️, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: ⬆️, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ➡️, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ➡️, h: '$$mdi:penguin$$'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: «, s: ' RAQUO'}
-  - {t: ' ORDM', s: º}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - FUNADJ
-  SYMBOL:
-  - '!'
-  - '"'
-  - '#'
-  - $
-  - '%'
-  - '&'
-  - /
-  - (
-  - )
-  - '='
-  - {t: <, h: '$$mdi:penguin$$'}
-  - {t: '[', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: (, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '`', s: ´}
-  - ''''
-  - {t: \, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '*', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '@', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: _, h: '$$mdi:penguin$$'}
-  - '>'
-  - {t: ']', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
-  - )
-  - {t: '~', s: ^}
-  - '?'
-  - '|'
-  - {t: +, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: €, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: §, h: CMENU}
-  - FUNADJ
-  - {t: DEL, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: ▽, type: trans}
-  - {type: held}
-  FUNADJ:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
-  - F9
-  - F10
-  - {t: F11, h: '$$mdi:penguin$$'}
-  - {t: F12, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F13, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F14, h: '$$mdi:apple-keyboard-shift$$'}
-  - F15
-  - F16
-  - {t: F17, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: F18, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F19, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F20, h: '$$mdi:penguin$$'}
-  - PSCRN
-  - {t: SLCK, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: PAUSE BREAK, h: '$$mdi:apple-keyboard-option$$'}
-  - CAPS
-  - {t: ▽, type: trans}
-  - Home
-  - PG DN
-  - {t: PG UP, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: End, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: INS, h: CMENU}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  MOUSE:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '`', s: ´}
-  - {t: ´, s: '`'}
-  - {t: ^, s: '~'}
-  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
-  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
-  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
-  - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:cursor-default-click$$', s: '5', type: sym_sub_text}
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-shift$$
-  - ¨
-  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-left$$', type: sym_by_sym}
-  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
-  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
-  - {t: '$$mdi:tortoise$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
-  - {t: '$$mdi:cursor-default-click$$', s: '5', type: sym_sub_text}
-  - {t: '$$mdi:cursor-default-click$$', s: '4', type: sym_sub_text}
-  - {t: '$$mdi:cursor-default-click$$', s: R, type: sym_sub_text}
-  - {t: '$$mdi:cursor-default-click$$', s: M, type: sym_sub_text}
-  - {t: '$$mdi:cursor-default-click$$', s: L, type: sym_sub_text}
-  - {t: '~', s: ^}
-  - {t: '$$mdi:cursor-default-click$$', s: 2x, type: sym_sub_text}
-  - {t: '$$mdi:cursor-default-click$$', s: L, type: sym_sub_text}
-  - {t: '$$mdi:cursor-default-click$$', s: M, type: sym_sub_text}
-  - {t: '$$mdi:cursor-default-click$$', s: R, type: sym_sub_text}
-  - {t: '$$mdi:cursor-default-click$$', s: '4', type: sym_sub_text}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  MEDIA:
-  - MEDIA HOME
-  - MEDIA WWW
-  - MEDIA TV
-  - MEDIA COMPUTER
-  - {t: MEDIA PHONE, type: held}
-  - {t: 🔊 Up, type: held alternate}
-  - ⏭️ Next
-  - 💡 Up
-  - ⏩ Fast Forward
-  - 🔘 Power
-  - MEDIA GAMES
-  - MEDIA MESSAGES
-  - CHANNEL INC
-  - CHANNEL DEC
-  - MEDIA GUIDE
-  - 🔉 Down
-  - ⏮️ Prev
-  - 💡 Down
-  - ⏪ Rewind
-  - 💤 Sleep
+  german_layer:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - 🔇 Mute
-  - 🎤 MicMute
-  - ⏯️ PlayPause
-  - ⏏️ Eject
-  - 🔐 Lock
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&de_ue_lower', s: '&de_ue_upper'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '&de_ae_lower', s: '&de_ae_upper'}
+  - {t: ▽, type: trans}
+  - {t: '&de_eszett_lower', s: '&de_eszett_upper'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  WMCFG:
-  - S+F13
-  - S+F14
-  - S+F15
-  - {t: S+F16, type: held}
-  - S+F17
-  - S+F18
-  - {t: S+F19, type: held alternate}
-  - S+F20
-  - S+F21
-  - S+F22
-  - A+F13
-  - A+F14
-  - A+F15
-  - A+F16
-  - A+F17
-  - A+F18
-  - A+F19
-  - A+F20
-  - A+F21
-  - A+F22
-  - C+F13
-  - C+F14
-  - C+F15
-  - C+F16
-  - C+F17
-  - C+F18
-  - C+F19
-  - C+F20
-  - C+F21
-  - C+F22
+  - '&euro_sign_lower'
+  - {t: ▽, type: trans}
+  - {t: '&de_oe_lower', s: '&de_oe_upper'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  MSOUTL:
-  - 👎
-  - 👍
-  - {t: 📩 ENV, type: held}
-  - 📩 Process
-  - 📅 Today
-  - 📅 Cal
-  - 🤔
-  - {t: 📰 Info, type: held alternate}
-  - 😜
-  - 👨‍🏫
-  - 📝 Arch
-  - 📁 Select
-  - ''
-  - 👨‍🔧 Team
-  - 📆 Soon
-  - 😀
-  - 😉
-  - 😟
-  - 👨‍💼 LT
-  - 🤣
-  - 📑👈 List
-  - ''
-  - 💲 Customer
-  - ''
-  - 📆 Later
-  - 📥 Inbox
-  - 🗂️🔼 Prev
-  - 🗂️🔽 Next
-  - ✉️✉️ Copy
-  - 👉🖹 Content
-  - ''
-  - ''
-  - ''
-  - ''
-  MACROS:
-  - GS+F13
-  - {t: GS+F14, type: held}
-  - GS+F15
-  - GS+F16
-  - GS+F17
-  - GS+F18
-  - GS+F19
-  - GS+F20
-  - {t: GS+F21, type: held alternate}
-  - GS+F22
-  - GA+F13
-  - GA+F14
-  - GA+F15
-  - GA+F16
-  - GA+F17
-  - GA+F18
-  - GA+F19
-  - GA+F20
-  - GA+F21
-  - GA+F22
-  - GC+F13
-  - GC+F14
-  - GC+F15
-  - GC+F16
-  - GC+F17
-  - GC+F18
-  - GC+F19
-  - GC+F20
-  - GC+F21
-  - GC+F22
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  BLUETH:
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ⌨️ ZMK Studio
-  - ''
-  - ''
-  - ''
-  - ''
-  - {type: held alternate}
-  - {t: '$$mdi:bluetooth-connect$$', s: '4', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '3', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '2', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '1', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '0', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '0', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '1', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '2', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '3', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-connect$$', s: '4', type: sym_sub_text}
-  - $$mdi:cog-transfer$$
-  - $$mdi:restart$$
-  - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
-  - {t: '$$mdi:keyboard$$', s: '$$mdi:bluetooth$$', type: sym_by_sym}
-  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
-  - {t: '$$mdi:bluetooth-settings$$', s: '$$mdi:close-thick$$', type: sym_sub_text}
-  - {t: '$$mdi:keyboard$$', s: '$$mdi:bluetooth$$', type: sym_by_sym}
-  - {t: '$$mdi:keyboard$$', s: '$$mdi:usb$$', type: sym_by_sym}
-  - $$mdi:restart$$
-  - $$mdi:cog-transfer$$
-  - ''
-  - ModKey Reset
-  - ModKey Reset
-  - ''
-  LOCK: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
-- p: [0, 4, 31]
-  k: $$mdi:lock$$
-  l: [LOCK]
-- p: [5, 9, 32]
-  k: $$mdi:lock$$
-  l: [LOCK]
-- p: [0, 1]
-  k: Esc
-  l: [QWERTY]
-- p: [10, 11]
-  k: $$mdi:keyboard-tab$$
-  l: [QWERTY]
-- p: [5, 6]
-  k: ⮐
-  l: [QWERTY]
-- p: [14, 15]
-  k: $$mdi:alphabetical-variant$$
-  l: [QWERTY]
-- p: [18, 19]
-  k: BSPC
-  l: [QWERTY]
-- p: [16, 17]
-  k: C+BSPC
-  l: [QWERTY]
-- p: [8, 9]
-  k: DEL
-  l: [QWERTY]
-- p: [15, 16]
-  k: $$mdi:repeat$$
-  l: [QWERTY]
-- p: [22, 23]
-  k: ß
-  l: [QWERTY]
-- p: [3, 4]
-  k: PG UP
-  l: [QWERTY]
-- p: [13, 14]
-  k: PG DN
-  l: [QWERTY]
-- p: [20, 21]
-  k: PSCRN
-  l: [QWERTY]
-- p: [11, 12, 13]
-  k: {t: CS+C, s: CS+X}
-  l: [QWERTY]
-  a: top
-  o: 1.3
-- p: [21, 22, 23]
-  k: CS+V
-  l: [QWERTY]
-  a: bottom
-  o: 0.3
-- p: [26, 27]
-  k: C+A
-  l: [QWERTY]
-- p: [27, 28]
-  k: C+Z
-  l: [QWERTY]
+- p: [22, 21]
+  k: '&copy_cut'
+- p: [23, 22]
+  k: S+INS

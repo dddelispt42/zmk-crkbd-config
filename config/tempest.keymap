@@ -637,7 +637,7 @@
  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
  HRML(F11, F12, F13, F14) &kp F15         &kp F16 HRMR(F17, F18, F19, F20)
  LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END, INS)
-                        &trans &trans  &trans &trans
+                       &none &trans &trans  &trans &trans &key_repeat
                         >;
                 };
 
@@ -655,7 +655,7 @@
   &trans &trans &grave_acute  &acute_grave &caret_tilde  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
   &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp PT_UMLAUT  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5
   &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &tilde_caret   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4
-                       &trans  &trans     &trans &trans
+                     &none  &trans  &trans     &trans &trans &key_repeat
                         >;
                 };
 
@@ -670,7 +670,7 @@
  &kp C_MEDIA_HOME &kp C_MEDIA_WWW &kp C_MEDIA_TV &kp C_MEDIA_COMPUTER &kp C_MEDIA_PHONE  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &kp C_FF &kp C_PWR
  &kp C_MEDIA_GAMES &kp C_MEDIA_MESSAGES &kp C_CHANNEL_INC &kp C_CHANNEL_DEC &kp C_MEDIA_GUIDE  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &kp C_RW &kp C_SLEEP
  &trans &trans &trans &trans &trans  &kp C_MUTE &kp LC(LA(M)) &kp C_PP &kp C_EJECT &kp K_LOCK
-                 &trans &trans   &trans &trans
+                &none &trans &trans   &trans &trans &key_repeat
                         >;
                 };
 
@@ -685,7 +685,7 @@
  MU1(F13) MU1(F14) MU1(F15) MU1(F16) MU1(F17) MU1(F18) MU1(F19) MU1(F20) MU1(F21) MU1(F22)
  MH1(F13) MH1(F14) MH1(F15) MH1(F16) MH1(F17) MH1(F18) MH1(F19) MH1(F20) MH1(F21) MH1(F22)
  ML1(F13) ML1(F14) ML1(F15) ML1(F16) ML1(F17) ML1(F18) ML1(F19) ML1(F20) ML1(F21) ML1(F22)
-                       &trans &trans        &trans &trans
+                      &none &trans &trans        &trans &trans &key_repeat
                         >;
                 };
 
@@ -700,7 +700,7 @@
  &m_emoj_td &m_emoj_tu &m_env &m_proc &m_today  &m_calendar &m_emoj_u &m_info &m_emoj_j &m_plm
  &m_arch &m_choose &none &m_teamfwd &m_week  &m_emoj_h &m_emoj_w &m_emoj_s &m_lt &m_emoj_l
  &m_maillist &none &m_cust &none &m_month  &m_inbox &m_dirprev &m_dirnext &m_mailcp &m_mailtext
-                      &none &none  &none &none
+                     &none &none &none  &none &none &key_repeat
                         >;
                 };
 
@@ -715,7 +715,7 @@
  MU2(F13) MU2(F14) MU2(F15) MU2(F16) MU2(F17) MU2(F18) MU2(F19) MU2(F20) MU2(F21) MU2(F22)
  MH2(F13) MH2(F14) MH2(F15) MH2(F16) MH2(F17) MH2(F18) MH2(F19) MH2(F20) MH2(F21) MH2(F22)
  ML2(F13) ML2(F14) ML2(F15) ML2(F16) ML2(F17) ML2(F18) ML2(F19) ML2(F20) ML2(F21) ML2(F22)
-                       &trans &trans        &trans &trans
+                      &none &trans &trans        &trans &trans &key_repeat
                         >;
                 };
 
@@ -730,7 +730,7 @@
  &none  &none  &none  &none  &studio_unlock   &none  &none  &none  &none  &none
  BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4)
  &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader
-                       &none &unstick        &unstick &none
+                      &none &none &unstick        &unstick &none &key_repeat
                         >;
                 };
 
@@ -740,7 +740,7 @@
  &none &none &none &none &none  &none &none &none &none &none
  &none &none &none &none &none  &none &none &none &none &none
  &none &none &none &none &none  &none &none &none &none &none
-                   &none &none  &none &none
+                  &none &none &none  &none &none &key_repeat
                         >;
                 };
                 extra1 {

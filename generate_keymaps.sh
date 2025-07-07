@@ -12,5 +12,7 @@ if command -v keymap >/dev/null; then
 	keymap -c keymap_drawer.config.yaml draw corne_keymap.yaml >~/dl/corne_keymap.svg
 	keymap -c keymap_drawer.config.yaml draw sweep_keymap.yaml >~/dl/sweep_keymap.svg
 	keymap -c keymap_drawer.config.yaml draw -j ./config/tempest.json tempest_keymap.yaml >~/dl/tempest_keymap.svg
-	trash sweep_keymap.yaml corne_keymap.yaml tempest.yeml
+	# keymap -c keymap_drawer.config.yaml draw -l corne_rotated tempest_keymap.yaml >~/dl/tempest_keymap.svg
+	# keymap -c keymap_drawer.config.yaml draw tempest_keymap.yaml >~/dl/tempest_keymap.svg
+	trash sweep_keymap.yaml corne_keymap.yaml tempest_keymap.yaml
 fi
