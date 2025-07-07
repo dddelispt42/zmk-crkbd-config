@@ -592,7 +592,7 @@
  URML(Q, W, E, R, T)        URMR(Y, U, I, O, P)
  HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, PT_C_CEDILLA)
  LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, PT_MINUS)
-  RKLnone &mo NUMNAV  &bspc_del     &skm MOUSE SPACE &mo SYMBOL &key_repeat
+  &none &mo NUMNAV  &bspc_del     &skm MOUSE SPACE &mo SYMBOL &key_repeat
                         >;
                 };
 
@@ -607,7 +607,7 @@
   &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
   &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT)
   &trans &trans &trans &trans &trans      &laquo_raquo &ordm_ordf &trans &trans &trans
-                     RKLnone  &trans  &trans    &trans &mo FUNADJ &key_repeat
+                     &none  &trans  &trans    &trans &mo FUNADJ &key_repeat
                         >;
                 };
 
@@ -622,7 +622,7 @@
  &kp PT_EXCL &kp PT_DQT &kp PT_HASH &kp PT_DLLR &kp PT_PRCNT  &kp PT_AMPS &kp PT_FSLH &kp PT_LPAR &kp PT_RPAR &kp PT_EQUAL
  HRML(PT_LT, PT_LBKT, PT_LBRC, PT_LPAR) &grave_acute  &kp PT_SQT HRMR(PT_BSLH, PT_STAR, PT_AT, PT_UNDER)
  LRML(PT_GT, PT_RBKT, PT_RBRC, PT_RPAR) &tilde_caret  &kp PT_QMARK LRMR(PT_PIPE, PT_PLUS, PT_EURO, PT_SECT)
-                        RKLnone &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
+                        &none &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
                         >;
                 };
 
