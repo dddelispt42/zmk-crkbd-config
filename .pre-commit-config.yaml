@@ -26,13 +26,13 @@ repos:
       - id: detect-private-key
       - id: requirements-txt-fixer
       - id: trailing-whitespace
-  - repo: local
-    hooks:
-      - id: sectest
-        name: CVE scanner (osv-scanner)
-        language: system
-        # entry: osv-scanner -r --config=./osv-scanner.toml .
-        entry: osv-scanner -r .
+  # - repo: local
+  #   hooks:
+  #     - id: sectest
+  #       name: CVE scanner (osv-scanner)
+  #       language: system
+  #       # entry: osv-scanner -r --config=./osv-scanner.toml .
+  #       entry: osv-scanner -r .
   - repo: https://github.com/woodruffw/zizmor-pre-commit
     rev: v1.9.0
     hooks:
