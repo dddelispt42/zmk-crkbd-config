@@ -8,7 +8,7 @@ repos:
   #     - id: poetry-export
   #     - id: poetry-install
   - repo: https://github.com/zricethezav/gitleaks
-    rev: v8.27.2
+    rev: v8.28.0
     hooks:
       - id: gitleaks
   - repo: https://github.com/pre-commit/pre-commit-hooks
