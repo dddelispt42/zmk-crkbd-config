@@ -1,4 +1,10 @@
-# Heiko's - zmk-crkbd-config
+# Heiko's zmk-config for corne/sweep/tempest
+
+<!--toc:start-->
+- [Heiko's zmk-config for corne/sweep/tempest](#heikos-zmk-config-for-cornesweeptempest)
+  - [Overview](#overview)
+  - ["Tempest" split keyboard](#tempest-split-keyboard)
+<!--toc:end-->
 
 ## Overview
 
@@ -16,17 +22,25 @@ While the US or even UK English layout is superior for programming, it does not 
 some Portuguese letters like "ç" (C-Cedilha) nor German Umlauts.
 
 For this reason this ZMK keymap assumes the configuration of a PT (Portugal) keyboard
-layout (MacOS/Linux/Windows).
+layout (macOS/Linux/Windows).
 
 Both German and Portuguese keyboard layouts are terrible for programming,
 but this is taken care of the the layers. There are some layers for specific
 application with bad default support for keyboard centric workflows
 (e.g. MS Outlook).
 
-## Sweep/Cradio styple split keyboard
+## "Tempest" split keyboard
+
+![Sweep/Cradio](./img/tempest.svg)
+
+<details>
+  <summary>Sweep/Cradio style keyboard</summary>
 
 ![Sweep/Cradio](./img/cradio.svg)
+</details>
 
-## Corne styple (CRKBD) split keyboard
+<details>
+  <summary>Corne style (CRKBD) keyboard</summary>
 
 ![Sweep/Cradio](./img/corne.svg)
+</details>
