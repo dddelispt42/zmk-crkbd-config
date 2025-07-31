@@ -10,6 +10,7 @@
 #include "zmk-helpers/unicode-chars/german.dtsi"
 
 #define ___ &trans
+#define XXX &none
 
 #define DEF 0
 #define NAV 1
