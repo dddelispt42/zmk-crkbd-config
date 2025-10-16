@@ -553,7 +553,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "CAPS_WORD";
             #binding-cells = <0>;
-            continue-list = <BACKSPACE DELETE SLASH QMARK>;  // INFO: slash=minus & qmark=underscore
+            continue-list = <BACKSPACE DELETE PT_MINUS PT_UNDER>;
         };
         // TODO(heiko): zmk bug with leader key model (urob also not working)
         /* leader1: leader1 { */
@@ -692,7 +692,7 @@
                 outl_layer {
                         label = "MSOUTL";
 // -------------------------------------------------------------------------------
-// |      |     |     | ENV | PROC|  TD |   | CAL | 👍  | INFO| 😜  | PLM |      |
+// |   👎 |   👍|     | ENV | PROC|  TD |   | CAL | 🤔  | INFO| 😜  | PLM |      |
 // |      | ARCH| SEL |     |S-F24|  W  |   | 😊  | 😉  | 😢  | LT  | 🤣  |      |
 // |      | <-- |     | CUST|     |  M  |   | INB | NXT | PRV | FSEL| --> |      |
 //                    |     |     |     |   |     |     |     |
