@@ -1,8 +1,5 @@
-- name: zmk-keyboard-tempest
-  build:
-    settings:
-      board_root: .
-- name: zmk-keyboard-seppelit
-  build:
-    settings:
-      board_root: .
+name: zmk-keyboard-seppelit
+build:
+  settings:
+    board_root: .
+
