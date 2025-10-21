@@ -9,10 +9,10 @@ if command -v keymap >/dev/null; then
 	keymap -c keymap_drawer.config.yaml parse -c 10 -z ./config/corne.keymap >corne_keymap.yaml
 	keymap -c keymap_drawer.config.yaml parse -c 10 -z ./config/cradio.keymap >sweep_keymap.yaml
 	keymap -c keymap_drawer.config.yaml parse -c 10 -z ./config/tempest.keymap >tempest_keymap.yaml
+	keymap -c keymap_drawer.config.yaml parse -c 10 -z ./config/seppelit.keymap >seppelit_keymap.yaml
 	keymap -c keymap_drawer.config.yaml draw corne_keymap.yaml >~/dl/corne_keymap.svg
 	keymap -c keymap_drawer.config.yaml draw sweep_keymap.yaml >~/dl/sweep_keymap.svg
 	keymap -c keymap_drawer.config.yaml draw -j ./config/tempest.json tempest_keymap.yaml >~/dl/tempest_keymap.svg
-	# keymap -c keymap_drawer.config.yaml draw -l corne_rotated tempest_keymap.yaml >~/dl/tempest_keymap.svg
-	# keymap -c keymap_drawer.config.yaml draw tempest_keymap.yaml >~/dl/tempest_keymap.svg
-	trash sweep_keymap.yaml corne_keymap.yaml tempest_keymap.yaml
+	keymap -c keymap_drawer.config.yaml draw -j ./config/seppelit.json seppelit_keymap.yaml >~/dl/seppelit_keymap.svg
+	trash sweep_keymap.yaml corne_keymap.yaml tempest_keymap.yaml seppelit_keymap.yaml
 fi

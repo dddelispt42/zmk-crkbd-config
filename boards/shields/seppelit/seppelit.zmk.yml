@@ -1,0 +1,14 @@
+file_format: "1"
+id: seppelit
+name: Seppelit
+type: shield
+url: https://github.com/dddelispt42/seppelit
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+
+siblings:
+  - seppelit_left
+  - seppelit_right
