@@ -430,21 +430,18 @@
     behaviors {
         td_ctrl_cx: ctrlc_ctrlx {
             compatible = "zmk,behavior-tap-dance";
-            label = "CTRLC_CTRLX";
             #binding-cells = <0>;
             tapping-term-ms = <350>;
             bindings = <&kp LC(LS(C))>, <&kp LC(LS(X))>;
         };
         spc_ret: space_return {
             compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_RET";
             #binding-cells = <0>;
             bindings = <&kp PT_SPACE>, <&kp RET>;
             mods = <(MOD_LALT)>;
         };
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DELETE";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -452,106 +449,88 @@
         };
         acute_grave: acute_grave {
             compatible = "zmk,behavior-mod-morph";
-            label = "ACUTE_GRAVE";
             #binding-cells = <0>;
             bindings = <&kp PT_ACUTE>, <&kp PT_GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         grave_acute: grave_acute {
             compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ACUTE";
             #binding-cells = <0>;
             bindings = <&kp PT_GRAVE>, <&kp PT_ACUTE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         tilde_caret: tilde_caret {
             compatible = "zmk,behavior-mod-morph";
-            label = "TILDE_CARET";
             #binding-cells = <0>;
             bindings = <&kp PT_TILDE>, <&kp PT_CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         caret_tilde: caret_tilde {
             compatible = "zmk,behavior-mod-morph";
-            label = "CARET_TILDE";
             #binding-cells = <0>;
             bindings = <&kp PT_CARET>, <&kp PT_TILDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         laquo_raquo: laquo_raquo {
             compatible = "zmk,behavior-mod-morph";
-            label = "LAQUO_RAQUO";
             #binding-cells = <0>;
             bindings = <&kp PT_LAQUO>, <&kp PT_RAQUO>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         ordm_ordf: ordm_ordf {
             compatible = "zmk,behavior-mod-morph";
-            label = "ORDM_ORDF";
             #binding-cells = <0>;
             bindings = <&kp PT_ORDM>, <&kp PT_ORDF>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <210>;
-            quick_tap_ms = <210>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
         hms: homerow_mod_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <175>;
             require-prior-idle-ms = <125>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
         urm: upper_row_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "UPPER_ROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            quick_tap_ms = <250>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
         };
         trm: thumb_row_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "THUMB_ROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            quick_tap_ms = <250>;
             require-prior-idle-ms = <50>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
          };
          skm: space_key_mod {  //TODO(heiko): not yet used
             compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_KEY_MOD";
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            quick_tap_ms = <250>;
             require-prior-idle-ms = <150>;
             flavor = "tap-preferred";
             /*bindings = <&mo>, <&spc_ret>;*/
             bindings = <&mo>, <&kp>;
         };
         unstick: unstick {
-            label = "ZM_unstick";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
         capsw: behavior_caps_word {
             compatible = "zmk,behavior-caps-word";
-            label = "CAPS_WORD";
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE PT_MINUS PT_UNDER>;
         };
@@ -582,7 +561,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "QWERTY";
+                        display-name = "QWERTY";
 // -------------------------------------------------------------------------------
 // |      |Q/L9 |W/L8 |E/L7 |R/L6 |T/L5 |   |Y/L5 |U/L6 |I/L7 |O/L8 |P/L9 |      |
 // |      |A/LG |S/LC |D/LA |F/LS |  G  |   |  H  |J/RS |K/LA |L/LC |;/RG |      |
@@ -597,7 +576,7 @@
                 };
 
                 numnav_layer {
-                        label = "NUMNAV";
+                        display-name = "NUMNAV";
 // -------------------------------------------------------------------------------
 // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
 // |      |     |     |     |     |     |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
@@ -612,7 +591,7 @@
                 };
 
                 symbol_layer {
-                        label = "SYMBOL";
+                        display-name = "SYMBOL";
 // -------------------------------------------------------------------------------
 // |      |  !  |  "@ |  #  |  $  |  %  |   |  &^ |  /& |  (* |  )( |  =) |      |
 // |      |  <  |  [  |  {  |  (  |  `  |   |  '- |  \= |  *{ |  `} |  ^| |      |
@@ -627,7 +606,7 @@
                 };
 
                 funadj_layer {
-                        label = "FUNADJ";
+                        display-name = "FUNADJ";
 // -------------------------------------------------------------------------------
 // |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
 // |      | F11 | F12 | F13 | F14 | F15 |   | F16 | F17 | F18 | F19 | F20 |      |
@@ -642,7 +621,7 @@
                 };
 
                 mouse_layer {
-                        label = "MOUSE";
+                        display-name = "MOUSE";
 // -------------------------------------------------------------------------------
 // |      |     |     |  `  |  ´  |  ^  |   |     |     |     |     |     |      |
 // |      | SUP | LC  | LA  | LS  |  ¨  |   | LF  | DN  | UP  | RT  | SUP |      |
@@ -660,7 +639,7 @@
                 };
 
                 config_layer {
-                        label = "MEDIA";
+                        display-name = "MEDIA";
 // -------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   | VUP | NXT | BUP |     |     |      |
 // |      |     |     |     |     |     |   | VDN | PRE | BDN |     |     |      |
@@ -675,7 +654,7 @@
                 };
 
                 wmcfg_layer {
-                        label = "WMCFG";
+                        display-name = "WMCFG";
 // -------------------------------------------------------------------------------
 // |      |S-F13|S-F14|S-F15|S-F16|S-F17|   |S-F18|S-F19|S-F20|S-F21|S-F22|      |
 // |      |A-F13|A-F14|A-F15|A-F16|A-F17|   |A-F18|A-F19|A-F20|A-F21|A-F22|      |
@@ -690,7 +669,7 @@
                 };
 
                 outl_layer {
-                        label = "MSOUTL";
+                        display-name = "MSOUTL";
 // -------------------------------------------------------------------------------
 // |   👎 |   👍|     | ENV | PROC|  TD |   | CAL | 🤔  | INFO| 😜  | PLM |      |
 // |      | ARCH| SEL |     |S-F24|  W  |   | 😊  | 😉  | 😢  | LT  | 🤣  |      |
@@ -705,7 +684,7 @@
                 };
 
                 macros_layer {
-                        label = "MACROS";
+                        display-name = "MACROS";
 // -------------------------------------------------------------------------------
 // |      |S-F13|S-F14|S-F15|S-F16|S-F17|   |S-F18|S-F19|S-F20|S-F21|S-F22|      |
 // |      |A-F13|A-F14|A-F15|A-F16|A-F17|   |A-F18|A-F19|A-F20|A-F21|A-F22|      |
@@ -720,7 +699,7 @@
                 };
 
                 bt_layer {
-                        label = "BLUETH";
+                        display-name = "BLUETH";
 // -------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      | #4  | #3  | #2  | #1  | #0  |   | #0  | #1  | #2  | #3  | #4  |      |
@@ -735,7 +714,7 @@
                 };
 
                 lock_layer {
-                        label = "LOCK";
+                        display-name = "LOCK";
                         bindings = <
  &none &none &none &none &none  &none &none &none &none &none
  &none &none &none &none &none  &none &none &none &none &none
