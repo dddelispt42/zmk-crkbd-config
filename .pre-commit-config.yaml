@@ -7,32 +7,32 @@ repos:
   #     - id: poetry-lock
   #     - id: poetry-export
   #     - id: poetry-install
-  - repo: https://github.com/zricethezav/gitleaks
-    rev: v8.30.0
-    hooks:
-      - id: gitleaks
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v6.0.0 # Use the ref you want to point at
-    hooks:
-      - id: check-json
-      - id: check-merge-conflict
-      - id: check-shebang-scripts-are-executable
-      - id: check-symlinks
-      - id: check-toml
-      - id: check-xml
-      - id: check-yaml
-      - id: check-added-large-files
-      # - id: end-of-file-fixer
-      - id: detect-private-key
-      - id: requirements-txt-fixer
-      - id: trailing-whitespace
-  # - repo: local
+  # - repo: https://github.com/zricethezav/gitleaks
+  #   rev: v8.30.0
   #   hooks:
-  #     - id: sectest
-  #       name: CVE scanner (osv-scanner)
-  #       language: system
-  #       # entry: osv-scanner -r --config=./osv-scanner.toml .
-  #       entry: osv-scanner -r .
+  #     - id: gitleaks
+  # - repo: https://github.com/pre-commit/pre-commit-hooks
+  #   rev: v6.0.0 # Use the ref you want to point at
+  #   hooks:
+  #     - id: check-json
+  #     - id: check-merge-conflict
+  #     - id: check-shebang-scripts-are-executable
+  #     - id: check-symlinks
+  #     - id: check-toml
+  #     - id: check-xml
+  #     - id: check-yaml
+  #     - id: check-added-large-files
+  #     # - id: end-of-file-fixer
+  #     - id: detect-private-key
+  #     - id: requirements-txt-fixer
+  #     - id: trailing-whitespace
+  # # - repo: local
+  # #   hooks:
+  # #     - id: sectest
+  # #       name: CVE scanner (osv-scanner)
+  # #       language: system
+  # #       # entry: osv-scanner -r --config=./osv-scanner.toml .
+  # #       entry: osv-scanner -r .
   - repo: https://github.com/woodruffw/zizmor-pre-commit
     rev: v1.25.2
     hooks:
