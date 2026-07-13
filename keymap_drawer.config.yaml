@@ -535,6 +535,8 @@ parse_config:
     LCTRL: $$mdi:apple-keyboard-control$$
     LEFT_CONTROL: $$mdi:apple-keyboard-control$$
     RA(S): 'ß'
+    # LC(LA(LS(J))): $$mdi:face$$
+    Meh-J: $$mdi:face$$
   zmk_combos:
     combo_toggle_lock_left: { align: mid, layers: [LOCK]}
     combo_toggle_lock_right: { align: mid, layers: [LOCK]}

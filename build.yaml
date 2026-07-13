@@ -15,8 +15,8 @@
 include:
   - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
     shield: tempest_left
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    # snippet: studio-rpc-usb-uart
+    # cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano//zmk # nice_view_adapter nice_view_gem
     shield: tempest_right
   # - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
@@ -27,8 +27,10 @@ include:
   #   shield: seppelit_right
   - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
     shield: corne_left
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # - board: nice_nano_v2 # nice_view_adapter nice_view_gem
+  #   shield: corne_right
+    # snippet: studio-rpc-usb-uart
+    # cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
     shield: corne_right
   # - board: nice_nano_v2
