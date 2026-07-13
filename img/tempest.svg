@@ -148,25 +148,25 @@ text.footer {
 }
 
 /* styling for combo tap, and key non-tap label text */
-text.combo, text.hold, text.shifted, text.left, text.right {
+text.combo, text.hold, text.shifted, text.left, text.right, text.tl, text.tr, text.bl, text.br {
     font-size: 11px;
 }
 
-text.hold {
+text.hold, text.bl, text.br {
     text-anchor: middle;
     dominant-baseline: auto;
 }
 
-text.shifted {
+text.shifted, text.tl, text.tr {
     text-anchor: middle;
     dominant-baseline: hanging;
 }
 
-text.left {
+text.left, text.tl, text.bl {
     text-anchor: start;
 }
 
-text.right {
+text.right, text.tr, text.br {
     text-anchor: end;
 }
 
@@ -1103,7 +1103,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">PAUSE</tspan><tspan x="0" dy="1.2em">BREAK</tspan>
+<tspan x="0" dy="-0.9em">PAUSE</tspan><tspan x="0" dy="1.2em">BREAK</tspan>
 </text>
 <use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-8" y="11" height="15" width="15.0" class="key hold glyph mdi:apple-keyboard-option"/>
 </g>
@@ -1133,7 +1133,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">PG</tspan><tspan x="0" dy="1.2em">UP</tspan>
+<tspan x="0" dy="-0.9em">PG</tspan><tspan x="0" dy="1.2em">UP</tspan>
 </text>
 <use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="-8" y="11" height="15" width="15.0" class="key hold glyph mdi:apple-keyboard-option"/>
 </g>
@@ -1233,10 +1233,10 @@ rect.held, rect.combo.held {
 <use href="#mdi:mouse-scroll-wheel" xlink:href="#mdi:mouse-scroll-wheel" x="-9" y="-13" height="18" width="18.0" class="key sym_by_sym tap glyph mdi:mouse-scroll-wheel"/>
 <use href="#mdi:arrow-right" xlink:href="#mdi:arrow-right" x="-8" y="-26" height="15" width="15.0" class="key sym_by_sym shifted glyph mdi:arrow-right"/>
 </g>
-<g transform="translate(864, 104) rotate(8.0)" class="key trans keypos-9">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans side"/>
-<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key trans"/>
-<text x="0" y="-4" class="key trans tap">▽</text>
+<g transform="translate(864, 104) rotate(8.0)" class="key keypos-9">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
+<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
+<text x="0" y="-4" class="key tap">Meh+J</text>
 </g>
 <g transform="translate(42, 164) rotate(-8.0)" class="key sym_sub_text keypos-10">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key sym_sub_text side"/>

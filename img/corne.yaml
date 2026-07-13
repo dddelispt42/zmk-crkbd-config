@@ -183,7 +183,7 @@ layers:
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-down$$', type: sym_by_sym}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-up$$', type: sym_by_sym}
   - {t: '$$mdi:mouse-scroll-wheel$$', s: '$$mdi:arrow-right$$', type: sym_by_sym}
-  - {t: ▽, type: trans}
+  - Meh+J
   - ''
   - ''
   - {t: '$$mdi:cursor-default-click$$', s: '5', type: sym_sub_text}
