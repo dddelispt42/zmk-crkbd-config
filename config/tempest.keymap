@@ -238,6 +238,16 @@
                   layers = <QWERTY>;
                   bindings = <&kp LC(Z)>;
         };
+        // Leader key 2 via the N+M combo (tempest positions 25/26).
+        // NOTE: this partially overlaps combo_ctrl_a <26 27>. ZMK supports
+        // overlapping combos, but N+M vs M+ may resolve ambiguously.
+        combo_leader2 {
+                  timeout-ms = <COMBO_TIMEOUT>;
+                  key-positions = <25 26>;  // ONLY-FOR-TEMPEST
+                  require-prior-idle-ms = <150>;
+                  layers = <QWERTY>;
+                  bindings = <&leader2>;
+        };
     };
 
     macros {
@@ -437,6 +447,25 @@
                 tap-ms = <MACRO_TAP>;
                 bindings = <&mkp LCLK &mkp LCLK>;
                 )
+        // Umlauts for the leader2 sequences. Tap the PT dead key, then the
+        // vowel; the host OS composes the pair. Emits PT_UMLAUT by keycode
+        // directly rather than via the ACCENT layer, since leader sequences
+        // run on QWERTY where that layer's sticky binding is not active.
+        ZMK_MACRO(m_de_ae,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp PT_UMLAUT &kp A>;
+                )
+        ZMK_MACRO(m_de_oe,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp PT_UMLAUT &kp O>;
+                )
+        ZMK_MACRO(m_de_ue,
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&kp PT_UMLAUT &kp U>;
+                )
     };
 
     behaviors {
@@ -522,27 +551,30 @@
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE PT_MINUS PT_UNDER>;
         };
-        // TODO(heiko): zmk bug with leader key model (urob also not working)
-        /* leader1: leader1 { */
-        /*     compatible = "zmk,behavior-leader-key"; */
-        /*     #binding-cells = <0>; */
-        /*     usb { sequence = <U S B>; bindings = <&out OUT_USB>; }; */
-        /*     ble { sequence = <B L E>; bindings = <&out OUT_BLE>; }; */
-        /*     bt0 { sequence = <B N0>; bindings = <&bt BT_SEL 0>; }; */
-        /*     bt1 { sequence = <B N1>; bindings = <&bt BT_SEL 1>; }; */
-        /*     bt2 { sequence = <B N2>; bindings = <&bt BT_SEL 2>; }; */
-        /*     btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; }; */
-        /*     boot { sequence = <B O O T>; bindings = <&bootloader>; }; */
-        /*     reset { sequence = <R E S E T>; bindings = <&sys_reset>; }; */
-        /* }; */
-        /**/
-        /* leader2: leader2 { */
-        /*     compatible = "zmk,behavior-leader-key"; */
-        /*     #binding-cells = <0>; */
-        /*     de_ae { sequence = <A E>; bindings = <&de_ae>; }; */
-        /*     de_oe { sequence = <O E>; bindings = <&de_oe>; }; */
-        /*     de_ue { sequence = <U E>; bindings = <&de_ue>; }; */
-        /* }; */
+        // Leader key instances. Reach the first instance with the left outer
+        // thumb and the second with the N+M combo. Note: generate_keymaps.sh
+        // rewrites the &leader1 placeholder token to this behavior, so the behavior
+        // must stay defined here in the shared source.
+        leader1: leader1 {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            usb { sequence = <U S B>; bindings = <&out OUT_USB>; };
+            ble { sequence = <B L E>; bindings = <&out OUT_BLE>; };
+            bt0 { sequence = <B N0>; bindings = <&bt BT_SEL 0>; };
+            bt1 { sequence = <B N1>; bindings = <&bt BT_SEL 1>; };
+            bt2 { sequence = <B N2>; bindings = <&bt BT_SEL 2>; };
+            btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
+            boot { sequence = <B O O T>; bindings = <&bootloader>; };
+            reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
+        };
+
+        leader2: leader2 {
+            compatible = "zmk,behavior-leader-key";
+            #binding-cells = <0>;
+            de_ae { sequence = <A E>; bindings = <&m_de_ae>; };
+            de_oe { sequence = <O E>; bindings = <&m_de_oe>; };
+            de_ue { sequence = <U E>; bindings = <&m_de_ue>; };
+        };
     };
 
         keymap {
@@ -559,7 +591,7 @@
  URML(Q, W, E, R, T)        URMR(Y, U, I, O, P)
  HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, PT_C_CEDILLA)
  LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, PT_MINUS)
-  &none &mo NUMNAV  &kp BACKSPACE     &skm MOUSE SPACE &mo SYMBOL &key_repeat
+  &leader1 &mo NUMNAV  &kp BACKSPACE     &skm MOUSE SPACE &mo SYMBOL &key_repeat
                         >;
                 };
 
@@ -574,7 +606,7 @@
   &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
   &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT)
   &trans &trans &trans &trans &trans      &laquo_raquo &ordm_ordf &trans &trans &trans
-                     &none  &trans  &trans    &trans &mo FUNADJ &key_repeat
+                     &leader1  &trans  &trans    &trans &mo FUNADJ &key_repeat
                         >;
                 };
 
@@ -589,7 +621,7 @@
  &kp PT_EXCL &kp PT_DQT &kp PT_HASH &kp PT_DLLR &kp PT_PRCNT  &kp PT_AMPS &kp PT_FSLH &kp PT_LPAR &kp PT_RPAR &kp PT_EQUAL
  HRML(PT_LT, PT_LBKT, PT_LBRC, PT_LPAR) &sl ACCENT  &kp PT_SQT HRMR(PT_BSLH, PT_STAR, PT_AT, PT_UNDER)
  LRML(PT_GT, PT_RBKT, PT_RBRC, PT_RPAR) &kp PT_TILDE  &kp PT_QMARK LRMR(PT_PIPE, PT_PLUS, PT_EURO, PT_SECT)
-                        &none &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
+                        &leader1 &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
                         >;
                 };
 
@@ -604,7 +636,7 @@
  &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
  HRML(F11, F12, F13, F14) &kp F15         &kp F16 HRMR(F17, F18, F19, F20)
  LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END, INS)
-                       &none &trans &trans  &trans &trans &key_repeat
+                       &leader1 &trans &trans  &trans &trans &key_repeat
                         >;
                 };
 
@@ -622,7 +654,7 @@
   &trans &trans &kp PT_GRAVE  &kp PT_ACUTE &kp PT_CARET  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp LC(LA(LS(J)))
   &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp PT_UMLAUT  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5
   &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp PT_TILDE   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4
-                     &none  &trans  &trans     &trans &trans &key_repeat
+                     &leader1  &trans  &trans     &trans &trans &key_repeat
                         >;
                 };
 
@@ -637,7 +669,7 @@
  &kp C_MEDIA_HOME &kp C_MEDIA_WWW &kp C_MEDIA_TV &kp C_MEDIA_COMPUTER &kp C_MEDIA_PHONE  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &kp C_FF &kp C_PWR
  &kp C_MEDIA_GAMES &kp C_MEDIA_MESSAGES &kp C_CHANNEL_INC &kp C_CHANNEL_DEC &kp C_MEDIA_GUIDE  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &kp C_RW &kp C_SLEEP
  &trans &trans &trans &trans &trans  &kp C_MUTE &kp LC(LA(M)) &kp C_PP &kp C_EJECT &kp K_LOCK
-                &none &trans &trans   &trans &trans &key_repeat
+                &leader1 &trans &trans   &trans &trans &key_repeat
                         >;
                 };
 
@@ -652,7 +684,7 @@
  MU1(F13) MU1(F14) MU1(F15) MU1(F16) MU1(F17) MU1(F18) MU1(F19) MU1(F20) MU1(F21) MU1(F22)
  MH1(F13) MH1(F14) MH1(F15) MH1(F16) MH1(F17) MH1(F18) MH1(F19) MH1(F20) MH1(F21) MH1(F22)
  ML1(F13) ML1(F14) ML1(F15) ML1(F16) ML1(F17) ML1(F18) ML1(F19) ML1(F20) ML1(F21) ML1(F22)
-                      &none &trans &trans        &trans &trans &key_repeat
+                      &leader1 &trans &trans        &trans &trans &key_repeat
                         >;
                 };
 
@@ -667,7 +699,7 @@
  &m_emoj_td &m_emoj_tu &m_env &m_proc &m_today  &m_calendar &m_emoj_u &m_info &m_emoj_j &m_plm
  &m_arch &m_choose &none &m_teamfwd &m_week  &m_emoj_h &m_emoj_w &m_emoj_s &m_lt &m_emoj_l
  &m_maillist &none &m_cust &none &m_month  &m_inbox &m_dirprev &m_dirnext &m_mailcp &m_mailtext
-                     &none &none &none  &none &none &key_repeat
+                     &leader1 &none &none  &none &none &key_repeat
                         >;
                 };
 
@@ -682,7 +714,7 @@
  MU2(F13) MU2(F14) MU2(F15) MU2(F16) MU2(F17) MU2(F18) MU2(F19) MU2(F20) MU2(F21) MU2(F22)
  MH2(F13) MH2(F14) MH2(F15) MH2(F16) MH2(F17) MH2(F18) MH2(F19) MH2(F20) MH2(F21) MH2(F22)
  ML2(F13) ML2(F14) ML2(F15) ML2(F16) ML2(F17) ML2(F18) ML2(F19) ML2(F20) ML2(F21) ML2(F22)
-                      &none &trans &trans        &trans &trans &key_repeat
+                      &leader1 &trans &trans        &trans &trans &key_repeat
                         >;
                 };
 
@@ -697,7 +729,7 @@
  &none  &none  &none  &none  &studio_unlock   &none  &none  &none  &none  &none
  BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4)
  &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader
-                      &none &none &unstick        &unstick &none &key_repeat
+                      &leader1 &none &unstick        &unstick &none &key_repeat
                         >;
                 };
 
@@ -707,7 +739,7 @@
  &none &none &none &none &none  &none &none &none &none &none
  &none &none &none &none &none  &none &none &none &none &none
  &none &none &none &none &none  &none &none &none &none &none
-                  &none &none &none  &none &none &key_repeat
+                  &leader1 &none &none  &none &none &key_repeat
                         >;
                 };
                 // One-shot accent layer: dead keys live on the RIGHT hand so the
@@ -724,7 +756,7 @@
   &trans &trans &trans &trans &trans  &kp PT_ACUTE &kp PT_GRAVE &kp PT_TILDE &kp PT_CARET &trans
   &trans &trans &trans &trans &trans  &kp PT_UMLAUT &kp PT_UMLAUT &trans &trans &trans
   &kp PT_C_CEDILLA &trans &trans &trans &trans  &trans &trans &trans &trans &trans
-                     &none &trans &trans  &trans &trans &key_repeat
+                     &leader1 &trans &trans  &trans &trans &key_repeat
                         >;
                 };
                 extra2 {
