@@ -13,7 +13,7 @@
 #undef ZMK_POINTING_DEFAULT_MOVE_VAL
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 #include <dt-bindings/zmk/pointing.h>
 
 #ifndef KEYMAP_DRAWER
@@ -209,13 +209,23 @@
                   layers = <QWERTY>;
                   bindings = <&kp PSCRN>;
         };
-        combo_ctrlshiftcx {
+        combo_ctrlshiftc {
                   timeout-ms = <LONG_COMBO_TIMEOUT>;
                   key-positions = <11 12 13>;  // ONLY-FOR-TEMPEST
                   require-prior-idle-ms = <200>;
                   layers = <QWERTY>;
-                  /*bindings = <&kp LC(LS(C))>;*/
-                  bindings = <&td_ctrl_cx>;
+                  bindings = <&kp LC(LS(C))>;
+        };
+        // Ctrl-Shift-X (cut). W+E+R on tempest. Previously this was a double-tap
+        // of the copy combo via &td_ctrl_cx; tap-dances cannot be driven by
+        // combos (the combo's press/release is not a clean single tap, which
+        // leaked a bare "c" and left Ctrl/Shift latched).
+        combo_ctrlshiftx {
+                  timeout-ms = <LONG_COMBO_TIMEOUT>;
+                  key-positions = <1 2 3>;   // ONLY-FOR-TEMPEST
+                  require-prior-idle-ms = <200>;
+                  layers = <QWERTY>;
+                  bindings = <&kp LC(LS(X))>;
         };
         combo_ctrlshiftv {
                   timeout-ms = <LONG_COMBO_TIMEOUT>;
@@ -469,12 +479,6 @@
     };
 
     behaviors {
-        td_ctrl_cx: ctrlc_ctrlx {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp LC(LS(C))>, <&kp LC(LS(X))>;
-        };
         spc_ret: space_return {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -745,16 +749,18 @@
                 // One-shot accent layer: dead keys live on the RIGHT hand so the
                 // LEFT hand is free to press the vowel being accented.
                 // Reach it with &sl ACCENT (sticky layer) - no hold, no timing.
+                // Home row is ordered by frequency: umlaut (de) first, then the
+                // Portuguese marks acute, tilde, circumflex, grave.
                 accent_layer {
                         display-name = "ACCENT";
 // -------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |  ´  |  `  |  ~  |  ^  |     |      |
-// |      |     |     |     |     |     |   |  ¨  |  ¨  |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |  ¨  |  ´  |  ~  |  ^  |  `  |      |
 // |      |  ç  |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-  &trans &trans &trans &trans &trans  &kp PT_ACUTE &kp PT_GRAVE &kp PT_TILDE &kp PT_CARET &trans
-  &trans &trans &trans &trans &trans  &kp PT_UMLAUT &kp PT_UMLAUT &trans &trans &trans
+  &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+  &trans &trans &trans &trans &trans  &kp PT_UMLAUT &kp PT_ACUTE &kp PT_TILDE &kp PT_CARET &kp PT_GRAVE
   &kp PT_C_CEDILLA &trans &trans &trans &trans  &trans &trans &trans &trans &trans
                      &leader1 &trans &trans  &trans &trans &key_repeat
                         >;
