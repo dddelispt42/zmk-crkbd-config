@@ -36,20 +36,24 @@ generate_leader() {  # $1 = keyboard, $2 = parsed keymap yaml, $3 = out file
 }
 
 if command -v keymap >/dev/null; then
-	mkdir -p ~/dl
+	# Same destination and naming as the CI draw workflow (output_folder: img),
+	# so local runs and GitHub Actions produce identical, README-compatible files.
+	mkdir -p ./img
 	for kb in corne tempest seppelit; do
 		parsed="${kb}_keymap.yaml"
-		keymap -c keymap_drawer.config.yaml parse -c 10 -z "./config/${kb}.keymap" >"$parsed" || {
+		if ! keymap -c keymap_drawer.config.yaml parse -c 10 -z "./config/${kb}.keymap" >"$parsed"; then
 			echo "WARNING: parse failed for $kb, skipping" >&2
+			rm -f "$parsed"
 			continue
-		}
+		fi
 		leader="./config/${kb}-leader.yaml"
 		generate_leader "$kb" "$parsed" "$leader"
+		# keep the parsed YAML alongside the SVG, as the CI workflow does
+		mv "$parsed" "./img/${kb}.yaml"
 		if [ -f "./config/${kb}.json" ]; then
-			keymap -c keymap_drawer.config.yaml draw -j "./config/${kb}.json" "$parsed" "$leader" >"$HOME/dl/${kb}_keymap.svg"
+			keymap -c keymap_drawer.config.yaml draw -j "./config/${kb}.json" "./img/${kb}.yaml" "$leader" >"./img/${kb}.svg"
 		else
-			keymap -c keymap_drawer.config.yaml draw "$parsed" "$leader" >"$HOME/dl/${kb}_keymap.svg"
+			keymap -c keymap_drawer.config.yaml draw "./img/${kb}.yaml" "$leader" >"./img/${kb}.svg"
 		fi
-		rm -f "$parsed"
 	done
 fi

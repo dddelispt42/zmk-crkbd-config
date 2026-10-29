@@ -4,7 +4,7 @@ default:
 config := absolute_path('config')
 build := absolute_path('.build')
 out := absolute_path('firmware')
-draw := absolute_path('draw')
+img := absolute_path('img')
 
 # parse combos.dtsi and adjust settings to not run out of slots
 _parse_combos:
@@ -80,33 +80,33 @@ clean-all: clean
 clean-nix:
     nix-collect-garbage --delete-old
 
-# parse & plot keymap for every config/*.keymap
+# parse & plot keymap into ./img (same naming as the CI draw workflow)
 draw:
     #!/usr/bin/env bash
     set -uo pipefail
     cfg="{{ justfile_directory() }}/keymap_drawer.config.yaml"
-    mkdir -p "{{ draw }}"
+    mkdir -p "{{ img }}"
     for keymap_file in "{{ config }}"/*.keymap; do
         kb=$(basename "$keymap_file" .keymap)
         # cradio is not built by build.yaml and has no leader file
         [[ $kb == cradio ]] && continue
         echo "drawing $kb..."
-        if ! keymap -c "$cfg" parse -c 10 -z "$keymap_file" >"{{ draw }}/$kb.yaml"; then
+        if ! keymap -c "$cfg" parse -c 10 -z "$keymap_file" >"{{ img }}/$kb.yaml"; then
             echo "WARNING: parse failed for $kb, skipping" >&2
             continue
         fi
         leader="{{ config }}/$kb-leader.yaml"
         "{{ justfile_directory() }}/generate_leader_yaml.py" \
             --source "{{ config }}/keymap" \
-            --from-parsed "{{ draw }}/$kb.yaml" \
+            --from-parsed "{{ img }}/$kb.yaml" \
             --out "$leader"
         if [[ -f "{{ config }}/$kb.json" ]]; then
-            keymap -c "$cfg" draw -j "{{ config }}/$kb.json" "{{ draw }}/$kb.yaml" "$leader" >"{{ draw }}/$kb.svg"
+            keymap -c "$cfg" draw -j "{{ config }}/$kb.json" "{{ img }}/$kb.yaml" "$leader" >"{{ img }}/$kb.svg"
         else
-            keymap -c "$cfg" draw "{{ draw }}/$kb.yaml" "$leader" >"{{ draw }}/$kb.svg"
+            keymap -c "$cfg" draw "{{ img }}/$kb.yaml" "$leader" >"{{ img }}/$kb.svg"
         fi
     done
-    echo "wrote SVGs to {{ draw }}/"
+    echo "wrote SVGs to {{ img }}/"
 
 # regenerate the leader-key virtual layers consumed by `draw`
 _leader-yaml:
