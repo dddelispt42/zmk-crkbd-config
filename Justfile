@@ -80,13 +80,30 @@ clean-all: clean
 clean-nix:
     nix-collect-garbage --delete-old
 
-# parse & plot keymap
-draw:
+# parse & plot keymap (all keyboards that have a physical layout .json)
+draw: _leader-yaml
     #!/usr/bin/env bash
     set -euo pipefail
-    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/base.keymap" --virtual-layers Combos >"{{ draw }}/base.yaml"
-    yq -Yi '.combos.[].l = ["Combos"]' "{{ draw }}/base.yaml"
-    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "ferris/sweep" >"{{ draw }}/base.svg"
+    cfg="{{ justfile_directory() }}/keymap_drawer.config.yaml"
+    leader="{{ config / 'leader.yaml' }}"
+    mkdir -p "{{ draw }}"
+    for json in "{{ config }}"/*.json; do
+        kb=$(basename "$json" .json)
+        keymap_file="{{ config }}/$kb.keymap"
+        [[ -f $keymap_file ]] || continue
+        echo "drawing $kb..."
+        keymap -c "$cfg" parse -c 10 -z "$keymap_file" >"{{ draw }}/$kb.yaml"
+        keymap -c "$cfg" draw -j "$json" "{{ draw }}/$kb.yaml" "$leader" >"{{ draw }}/$kb.svg"
+    done
+    echo "wrote SVGs to {{ draw }}/"
+
+# regenerate the leader-key virtual layers consumed by `draw`
+_leader-yaml:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    "{{ justfile_directory() }}/generate_leader_yaml.py" \
+        --source "{{ config }}/keymap" \
+        --out "{{ config }}/leader.yaml"
 
 # initialize west
 init:

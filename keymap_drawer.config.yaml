@@ -132,6 +132,10 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
+    # Leader keys. The sequences themselves are rendered on the generated
+    # LEADER1/LEADER2 virtual layers (see config/leader.yaml + generate_leader_yaml.py).
+    "&leader1": "⟳ LDR1"
+    "&leader2": "⟳ LDR2"
     "&key_repeat": "$$mdi:repeat$$"
     "&sys_reset": "$$mdi:restart$$"
     "&bootloader": "$$mdi:cog-transfer$$"

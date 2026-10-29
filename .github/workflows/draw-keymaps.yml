@@ -9,19 +9,48 @@ on:
       - "config/*.dtsi"
       - "boards/shields/*/*.dtsi"
       - "keymap_drawer.config.yaml"
+      - "generate_leader_yaml.py"
       - "boards/shields/*/*.json"
       - ".github/workflows/draw-keymaps.yml"
       # - "images/keymap-img/keymap_drawer.config.yaml"
       # - 'boards/*/*/*.keymap'
 
 jobs:
+  # The leader-key sequences are behavior properties, so keymap-drawer cannot
+  # discover them. Derive a virtual-layer YAML from config/keymap and commit it,
+  # so the draw job below can merge it in via `extra_keymap_yaml`.
+  leader-yaml:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 2
+      - name: Generate leader virtual layers
+        run: ./generate_leader_yaml.py --source ./config/keymap --out ./config/leader.yaml
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet -- config/leader.yaml; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add config/leader.yaml
+            git commit --amend --no-edit
+            git push --force-with-lease
+          else
+            echo "config/leader.yaml unchanged"
+          fi
+
   draw:
+    needs: leader-yaml
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write  # allow workflow to commit to the repo
     with:
       keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
-      # extra_keymap_yaml: "${keyboard}: 'images/keymap-img/combos.yaml'"
+      # Merge the generated leader layers into every drawing.
+      extra_keymap_yaml: "tempest:'config/leader.yaml' corne:'config/leader.yaml' seppelit:'config/leader.yaml'"
       config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
       json_path: "config"
       output_folder: "img"            # path to save produced SVG and keymap YAML files
@@ -30,4 +59,3 @@ jobs:
       amend_commit: true # amend generated files to commit that produces them
       fail_on_error: true
       debug_mode: false
-
