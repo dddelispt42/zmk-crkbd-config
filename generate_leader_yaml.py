@@ -19,9 +19,14 @@ import re
 import sys
 from pathlib import Path
 
-# Number of key positions per layer row in this keymap (3 rows of 10 + 6 thumbs).
-ROW_SIZES = [10, 10, 10, 6]
-TOTAL_POSITIONS = sum(ROW_SIZES)
+# Row shapes per keyboard, used when --rows is not given explicitly.
+# These must match the physical layout the drawing is rendered against.
+KEYBOARD_ROWS: dict[str, list[int]] = {
+    "tempest": [10, 10, 10, 6],       # 36 keys, 3x5 + 3 thumbs per side
+    "seppelit": [10, 10, 10, 6],      # 36 keys
+    "corne": [10, 10, 10, 10, 2],     # 42 keys, 3x6 + 3 thumbs per side
+}
+DEFAULT_ROWS = [10, 10, 10, 6]
 
 # Human readable descriptions for the macros a leader sequence can bind to.
 # Keys are the macro label as written in the keymap. Keep these SHORT:
@@ -107,21 +112,24 @@ def sequence_legend(sequence: str) -> str:
     return "".join(sequence.split())
 
 
-def build_layer(sequences: list[tuple[str, str, str]]) -> list[list[dict]]:
+def build_layer(
+    sequences: list[tuple[str, str, str]], row_sizes: list[int]
+) -> list[list[dict]]:
     """Lay the sequences out over the key positions, row by row."""
+    total = sum(row_sizes)
     cells: list[dict] = []
     for _name, seq, binding in sequences:
         cells.append({"t": sequence_legend(seq), "h": describe(binding)})
-    if len(cells) > TOTAL_POSITIONS:
+    if len(cells) > total:
         raise SystemExit(
-            f"too many sequences ({len(cells)}) to fit {TOTAL_POSITIONS} positions"
+            f"too many sequences ({len(cells)}) to fit {total} positions"
         )
-    while len(cells) < TOTAL_POSITIONS:
+    while len(cells) < total:
         cells.append({"t": ""})
 
     rows: list[list[dict]] = []
     offset = 0
-    for size in ROW_SIZES:
+    for size in row_sizes:
         rows.append(cells[offset : offset + size])
         offset += size
     return rows
@@ -158,7 +166,53 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--source", default="config/keymap")
     ap.add_argument("--out", default="config/leader.yaml")
+    ap.add_argument(
+        "--keyboard",
+        help="keyboard name; selects the row shape from KEYBOARD_ROWS",
+    )
+    ap.add_argument(
+        "--rows",
+        type=int,
+        nargs="+",
+        help="key positions per row, e.g. --rows 10 10 10 6. Overrides --keyboard.",
+    )
+    ap.add_argument(
+        "--from-parsed",
+        metavar="YAML",
+        help="derive the row shape from a keymap-drawer parsed keymap YAML "
+        "(the first layer's row sizes). Overrides --keyboard.",
+    )
     args = ap.parse_args()
+
+    if args.from_parsed:
+        try:
+            import yaml  # noqa: PLC0415  (optional dependency)
+        except ImportError:
+            print(
+                "error: --from-parsed needs PyYAML (pip install pyyaml)",
+                file=sys.stderr,
+            )
+            return 1
+        try:
+            parsed = yaml.safe_load(Path(args.from_parsed).read_text())
+            first_layer = next(iter(parsed["layers"].values()))
+            row_sizes = [len(r) for r in first_layer]
+        except Exception as exc:  # noqa: BLE001
+            print(f"error: could not read row shape from {args.from_parsed}: {exc}", file=sys.stderr)
+            return 1
+    elif args.rows:
+        row_sizes = args.rows
+    elif args.keyboard:
+        row_sizes = KEYBOARD_ROWS.get(args.keyboard)
+        if row_sizes is None:
+            print(
+                f"error: unknown keyboard '{args.keyboard}'; "
+                f"known: {', '.join(KEYBOARD_ROWS)}. Use --rows to specify directly.",
+                file=sys.stderr,
+            )
+            return 1
+    else:
+        row_sizes = DEFAULT_ROWS
 
     src_path = Path(args.source)
     if not src_path.is_file():
@@ -176,7 +230,7 @@ def main() -> int:
         if not sequences:
             print(f"warning: no sequences in '{instance}', skipping", file=sys.stderr)
             continue
-        layers[title] = build_layer(sequences)
+        layers[title] = build_layer(sequences, row_sizes)
 
     if not layers:
         print("error: no leader sequences found", file=sys.stderr)
@@ -185,7 +239,7 @@ def main() -> int:
     out_path = Path(args.out)
     out_path.write_text(yaml_dump_layers(layers))
     counts = ", ".join(f"{k}: {sum(1 for r in v for c in r if c.get('t'))}" for k, v in layers.items())
-    print(f"wrote {out_path} ({counts})")
+    print(f"wrote {out_path} (rows={row_sizes}, {counts})")
     return 0
 
 

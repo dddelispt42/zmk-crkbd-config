@@ -16,9 +16,13 @@ on:
       # - 'boards/*/*/*.keymap'
 
 jobs:
-  # The leader-key sequences are behavior properties, so keymap-drawer cannot
-  # discover them. Derive a virtual-layer YAML from config/keymap and commit it,
-  # so the draw job below can merge it in via `extra_keymap_yaml`.
+  # Leader-key sequences are behavior properties, so keymap-drawer cannot
+  # discover them. Derive per-keyboard virtual-layer YAMLs from config/keymap
+  # and commit them, so the draw job below can merge them in.
+  #
+  # The row shape differs per keyboard (corne has 5 rows, tempest/seppelit have
+  # 4) and keymap-drawer validates the leader layers against the physical
+  # layout, so each keyboard gets its own file.
   leader-yaml:
     runs-on: ubuntu-latest
     permissions:
@@ -28,18 +32,33 @@ jobs:
         uses: actions/checkout@v6
         with:
           fetch-depth: 2
+          submodules: recursive
       - name: Generate leader virtual layers
-        run: ./generate_leader_yaml.py --source ./config/keymap --out ./config/leader.yaml
+        run: |
+          set -euo pipefail
+          for kb in corne tempest seppelit; do
+            keymap_file="config/${kb}.keymap"
+            [ -f "$keymap_file" ] || continue
+            case "$kb" in
+              corne)    rows="10 10 10 10 2" ;;
+              tempest)  rows="10 10 10 6" ;;
+              seppelit) rows="10 10 10 6" ;;
+              *)        echo "no row shape known for $kb, skipping"; continue ;;
+            esac
+            ./generate_leader_yaml.py --source config/keymap --rows $rows \
+              --out "config/${kb}-leader.yaml"
+          done
       - name: Commit if changed
         run: |
-          if ! git diff --quiet -- config/leader.yaml; then
+          set -euo pipefail
+          if ! git diff --quiet -- 'config/*-leader.yaml'; then
             git config user.name  "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add config/leader.yaml
+            git add config/*-leader.yaml
             git commit --amend --no-edit
             git push --force-with-lease
           else
-            echo "config/leader.yaml unchanged"
+            echo "leader YAMLs unchanged"
           fi
 
   draw:
@@ -49,8 +68,9 @@ jobs:
       contents: write  # allow workflow to commit to the repo
     with:
       keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
-      # Merge the generated leader layers into every drawing.
-      extra_keymap_yaml: "tempest:'config/leader.yaml' corne:'config/leader.yaml' seppelit:'config/leader.yaml'"
+      # Merge the generated leader layers into each drawing. Keyboards without
+      # an entry here simply get no leader layers.
+      extra_keymap_yaml: "corne:'config/corne-leader.yaml' tempest:'config/tempest-leader.yaml' seppelit:'config/seppelit-leader.yaml'"
       config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
       json_path: "config"
       output_folder: "img"            # path to save produced SVG and keymap YAML files

@@ -80,20 +80,31 @@ clean-all: clean
 clean-nix:
     nix-collect-garbage --delete-old
 
-# parse & plot keymap (all keyboards that have a physical layout .json)
-draw: _leader-yaml
+# parse & plot keymap for every config/*.keymap
+draw:
     #!/usr/bin/env bash
-    set -euo pipefail
+    set -uo pipefail
     cfg="{{ justfile_directory() }}/keymap_drawer.config.yaml"
-    leader="{{ config / 'leader.yaml' }}"
     mkdir -p "{{ draw }}"
-    for json in "{{ config }}"/*.json; do
-        kb=$(basename "$json" .json)
-        keymap_file="{{ config }}/$kb.keymap"
-        [[ -f $keymap_file ]] || continue
+    for keymap_file in "{{ config }}"/*.keymap; do
+        kb=$(basename "$keymap_file" .keymap)
+        # cradio is not built by build.yaml and has no leader file
+        [[ $kb == cradio ]] && continue
         echo "drawing $kb..."
-        keymap -c "$cfg" parse -c 10 -z "$keymap_file" >"{{ draw }}/$kb.yaml"
-        keymap -c "$cfg" draw -j "$json" "{{ draw }}/$kb.yaml" "$leader" >"{{ draw }}/$kb.svg"
+        if ! keymap -c "$cfg" parse -c 10 -z "$keymap_file" >"{{ draw }}/$kb.yaml"; then
+            echo "WARNING: parse failed for $kb, skipping" >&2
+            continue
+        fi
+        leader="{{ config }}/$kb-leader.yaml"
+        "{{ justfile_directory() }}/generate_leader_yaml.py" \
+            --source "{{ config }}/keymap" \
+            --from-parsed "{{ draw }}/$kb.yaml" \
+            --out "$leader"
+        if [[ -f "{{ config }}/$kb.json" ]]; then
+            keymap -c "$cfg" draw -j "{{ config }}/$kb.json" "{{ draw }}/$kb.yaml" "$leader" >"{{ draw }}/$kb.svg"
+        else
+            keymap -c "$cfg" draw "{{ draw }}/$kb.yaml" "$leader" >"{{ draw }}/$kb.svg"
+        fi
     done
     echo "wrote SVGs to {{ draw }}/"
 
@@ -101,9 +112,16 @@ draw: _leader-yaml
 _leader-yaml:
     #!/usr/bin/env bash
     set -euo pipefail
-    "{{ justfile_directory() }}/generate_leader_yaml.py" \
-        --source "{{ config }}/keymap" \
-        --out "{{ config }}/leader.yaml"
+    for kb in corne tempest seppelit; do
+        case "$kb" in
+            corne)    rows="10 10 10 10 2" ;;
+            tempest)  rows="10 10 10 6" ;;
+            seppelit) rows="10 10 10 6" ;;
+        esac
+        "{{ justfile_directory() }}/generate_leader_yaml.py" \
+            --source "{{ config }}/keymap" --rows $rows \
+            --out "{{ config }}/$kb-leader.yaml"
+    done
 
 # initialize west
 init:
