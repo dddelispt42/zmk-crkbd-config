@@ -2,12 +2,12 @@
 # Regenerate with ./generate_leader_yaml.py
 layers:
   LEADER1:
-  - [{t: "CU", h: "Cumps"}, {t: "OBR", h: "Obrigado"}, {t: "MO", h: "Muito ob."}, {t: "OC", h: "Obr.+cumps"}, {t: "CO", h: "Cumps+obr"}, {t: "BR", h: "Best reg"}, {t: "TY", h: "Thank you"}, {t: "TB", h: "TY+best"}, {t: "TH", h: "TY Riemer"}, {t: "YW", h: "You're W."}]
-  - [{t: "AG", h: "Agenda:"}, {t: "OBJ", h: "Objective:"}, {t: "AO", h: "Ag.+Obj."}, {t: "AC", h: "Actions:"}, {}, {}, {}, {}, {}, {}]
+  - [{t: "AC", h: "Actions:"}, {t: "AG", h: "Agenda:"}, {t: "AO", h: "Ag.+Obj."}, {t: "BR", h: "Best reg"}, {t: "CO", h: "Cumps+obr"}, {t: "CU", h: "Cumps"}, {t: "MO", h: "Muito ob."}, {t: "OBJ", h: "Objective:"}, {t: "OBR", h: "Obrigado"}, {t: "OC", h: "Obr.+cumps"}]
+  - [{t: "TB", h: "TY+best"}, {t: "TH", h: "TY Riemer"}, {t: "TY", h: "Thank you"}, {t: "YW", h: "You're W."}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}]
   LEADER2:
-  - [{t: "USB", h: "USB"}, {t: "BLE", h: "BLE"}, {t: "BN0", h: "BT 0"}, {t: "BN1", h: "BT 1"}, {t: "BN2", h: "BT 2"}, {t: "CLEAR", h: "BT clear"}, {t: "BOOT", h: "Bootloader"}, {t: "RESET", h: "Reset"}, {}, {}]
+  - [{t: "BLE", h: "BLE"}, {t: "BN0", h: "BT 0"}, {t: "BN1", h: "BT 1"}, {t: "BN2", h: "BT 2"}, {t: "BOOT", h: "Bootloader"}, {t: "CLEAR", h: "BT clear"}, {t: "RESET", h: "Reset"}, {t: "USB", h: "USB"}, {}, {}]
   - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}]

@@ -3073,26 +3073,26 @@ rect.held, rect.combo.held {
 <g transform="translate(30, 52)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">CU</text>
-<text x="0" y="26" class="key hold">Cumps</text>
+<text x="0" y="-4" class="key tap">AC</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 75%">Actions:</tspan></text>
 </g>
 <g transform="translate(90, 52)" class="key keypos-1">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">OBR</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 75%">Obrigado</tspan></text>
+<text x="0" y="-4" class="key tap">AG</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 86%">Agenda:</tspan></text>
 </g>
 <g transform="translate(150, 38)" class="key keypos-2">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">MO</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 67%">Muito ob.</tspan></text>
+<text x="0" y="-4" class="key tap">AO</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 75%">Ag.+Obj.</tspan></text>
 </g>
 <g transform="translate(210, 30)" class="key keypos-3">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">OC</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 60%">Obr.+cumps</tspan></text>
+<text x="0" y="-4" class="key tap">BR</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 75%">Best reg</tspan></text>
 </g>
 <g transform="translate(270, 38)" class="key keypos-4">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
@@ -3103,56 +3103,56 @@ rect.held, rect.combo.held {
 <g transform="translate(330, 45)" class="key keypos-5">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">BR</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 75%">Best reg</tspan></text>
+<text x="0" y="-4" class="key tap">CU</text>
+<text x="0" y="26" class="key hold">Cumps</text>
 </g>
 <g transform="translate(570, 45)" class="key keypos-6">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">TY</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 67%">Thank you</tspan></text>
+<text x="0" y="-4" class="key tap">MO</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 67%">Muito ob.</tspan></text>
 </g>
 <g transform="translate(630, 38)" class="key keypos-7">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
-<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">TB</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 86%">TY+best</tspan></text>
-</g>
-<g transform="translate(690, 30)" class="key keypos-8">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
-<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">TH</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 67%">TY Riemer</tspan></text>
-</g>
-<g transform="translate(750, 38)" class="key keypos-9">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
-<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">YW</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 67%">You&#x27;re W.</tspan></text>
-</g>
-<g transform="translate(810, 52)" class="key keypos-10">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
-<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">AG</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 86%">Agenda:</tspan></text>
-</g>
-<g transform="translate(870, 52)" class="key keypos-11">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">OBJ</text>
 <text x="0" y="26" class="key hold"><tspan style="font-size: 60%">Objective:</tspan></text>
 </g>
+<g transform="translate(690, 30)" class="key keypos-8">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
+<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
+<text x="0" y="-4" class="key tap">OBR</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 75%">Obrigado</tspan></text>
+</g>
+<g transform="translate(750, 38)" class="key keypos-9">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
+<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
+<text x="0" y="-4" class="key tap">OC</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 60%">Obr.+cumps</tspan></text>
+</g>
+<g transform="translate(810, 52)" class="key keypos-10">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
+<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
+<text x="0" y="-4" class="key tap">TB</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 86%">TY+best</tspan></text>
+</g>
+<g transform="translate(870, 52)" class="key keypos-11">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
+<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
+<text x="0" y="-4" class="key tap">TH</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 67%">TY Riemer</tspan></text>
+</g>
 <g transform="translate(30, 112)" class="key keypos-12">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">AO</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 75%">Ag.+Obj.</tspan></text>
+<text x="0" y="-4" class="key tap">TY</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 67%">Thank you</tspan></text>
 </g>
 <g transform="translate(90, 112)" class="key keypos-13">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">AC</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 75%">Actions:</tspan></text>
+<text x="0" y="-4" class="key tap">YW</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 67%">You&#x27;re W.</tspan></text>
 </g>
 <g transform="translate(150, 98)" class="key keypos-14">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
@@ -3274,32 +3274,32 @@ rect.held, rect.combo.held {
 <g transform="translate(30, 52)" class="key keypos-0">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">USB</text>
-<text x="0" y="26" class="key hold">USB</text>
-</g>
-<g transform="translate(90, 52)" class="key keypos-1">
-<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
-<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">BLE</text>
 <text x="0" y="26" class="key hold">BLE</text>
 </g>
-<g transform="translate(150, 38)" class="key keypos-2">
+<g transform="translate(90, 52)" class="key keypos-1">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">BN0</text>
 <text x="0" y="26" class="key hold">BT 0</text>
 </g>
-<g transform="translate(210, 30)" class="key keypos-3">
+<g transform="translate(150, 38)" class="key keypos-2">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">BN1</text>
 <text x="0" y="26" class="key hold">BT 1</text>
 </g>
-<g transform="translate(270, 38)" class="key keypos-4">
+<g transform="translate(210, 30)" class="key keypos-3">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">BN2</text>
 <text x="0" y="26" class="key hold">BT 2</text>
+</g>
+<g transform="translate(270, 38)" class="key keypos-4">
+<rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
+<rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
+<text x="0" y="-4" class="key tap">BOOT</text>
+<text x="0" y="26" class="key hold"><tspan style="font-size: 60%">Bootloader</tspan></text>
 </g>
 <g transform="translate(330, 45)" class="key keypos-5">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
@@ -3310,14 +3310,14 @@ rect.held, rect.combo.held {
 <g transform="translate(570, 45)" class="key keypos-6">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">BOOT</text>
-<text x="0" y="26" class="key hold"><tspan style="font-size: 60%">Bootloader</tspan></text>
+<text x="0" y="-4" class="key tap">RESET</text>
+<text x="0" y="26" class="key hold">Reset</text>
 </g>
 <g transform="translate(630, 38)" class="key keypos-7">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
-<text x="0" y="-4" class="key tap">RESET</text>
-<text x="0" y="26" class="key hold">Reset</text>
+<text x="0" y="-4" class="key tap">USB</text>
+<text x="0" y="26" class="key hold">USB</text>
 </g>
 <g transform="translate(690, 30)" class="key keypos-8">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>

@@ -504,63 +504,63 @@
         ZMK_MACRO(m_sig_cumps,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(C,U,M,P,S,COMMA,RET,H,E,I,K,O)>;
+                bindings = <TEXT(C,U,M,P,S,COMMA,RET,LS(H),E,I,K,O)>;
                 )
 
         // Muito obrigado, / Heiko
         ZMK_MACRO(m_sig_mo,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(M,U,I,T,O,SPACE,O,B,R,I,G,A,D,O,COMMA,RET,H,E,I,K,O)>;
+                bindings = <TEXT(M,U,I,T,O,SPACE,O,B,R,I,G,A,D,O,COMMA,RET,LS(H),E,I,K,O)>;
                 )
 
         // Obrigado, / Heiko
         ZMK_MACRO(m_sig_o,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(O,B,R,I,G,A,D,O,COMMA,RET,H,E,I,K,O)>;
+                bindings = <TEXT(O,B,R,I,G,A,D,O,COMMA,RET,LS(H),E,I,K,O)>;
                 )
 
         // Obrigado e cumps, / Heiko
         ZMK_MACRO(m_sig_oc,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(O,B,R,I,G,A,D,O,SPACE,E,SPACE,C,U,M,P,S,COMMA,RET,H,E,I,K,O)>;
+                bindings = <TEXT(O,B,R,I,G,A,D,O,SPACE,E,SPACE,C,U,M,P,S,COMMA,RET,LS(H),E,I,K,O)>;
                 )
 
         // Cumps e obrigado, / Heiko
         ZMK_MACRO(m_sig_co,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(C,U,M,P,S,SPACE,E,SPACE,O,B,R,I,G,A,D,O,COMMA,RET,H,E,I,K,O)>;
+                bindings = <TEXT(C,U,M,P,S,SPACE,E,SPACE,O,B,R,I,G,A,D,O,COMMA,RET,LS(H),E,I,K,O)>;
                 )
 
         // Best regards, / Heiko
         ZMK_MACRO(m_sig_br,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(B,E,S,T,SPACE,R,E,G,A,R,D,S,COMMA,RET,H,E,I,K,O)>;
+                bindings = <TEXT(B,E,S,T,SPACE,R,E,G,A,R,D,S,COMMA,RET,LS(H),E,I,K,O)>;
                 )
 
         // Thank you, / Heiko
         ZMK_MACRO(m_sig_ty,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,COMMA,RET,H,E,I,K,O)>;
+                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,COMMA,RET,LS(H),E,I,K,O)>;
                 )
 
         // Thank you and best regards, / Heiko
         ZMK_MACRO(m_sig_tb,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,SPACE,A,N,D,SPACE,B,E,S,T,SPACE,R,E,G,A,R,D,S,COMMA,RET,H,E,I,K,O)>;
+                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,SPACE,A,N,D,SPACE,B,E,S,T,SPACE,R,E,G,A,R,D,S,COMMA,RET,LS(H),E,I,K,O)>;
                 )
 
         // Thank you, / Heiko Riemer
         ZMK_MACRO(m_sig_th,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,COMMA,RET,H,E,I,K,O,SPACE,R,I,E,M,E,R)>;
+                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,COMMA,RET,LS(H),E,I,K,O,SPACE,LS(H),I,E,M,E,R)>;
                 )
 
         // You're Welcome
@@ -574,28 +574,28 @@
         ZMK_MACRO(m_ag,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <&kp LC(B) &kp A &kp G &kp E &kp N &kp D &kp A &kp PT_COLON &kp LC(B) &kp RET &kp MINUS &kp SPACE>;
+                bindings = <&kp LC(B) &kp A &kp G &kp E &kp N &kp D &kp A &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L))>;
                 )
 
         // Ctrl-B "Objective:" Ctrl-B, then bullet
         ZMK_MACRO(m_ob,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <&kp LC(B) &kp O &kp B &kp J &kp E &kp C &kp T &kp I &kp V &kp E &kp PT_COLON &kp LC(B) &kp RET &kp MINUS &kp SPACE>;
+                bindings = <&kp LC(B) &kp O &kp B &kp J &kp E &kp C &kp T &kp I &kp V &kp E &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L));
                 )
 
         // Ctrl-B "Actions:" Ctrl-B, then bullet
         ZMK_MACRO(m_ac,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <&kp LC(B) &kp A &kp C &kp T &kp I &kp O &kp N &kp S &kp PT_COLON &kp LC(B) &kp RET &kp MINUS &kp SPACE>;
+                bindings = <&kp LC(B) &kp A &kp C &kp T &kp I &kp O &kp N &kp S &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L));
                 )
 
         // Agenda: block then Objective: block
         ZMK_MACRO(m_ao,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <&kp LC(B) &kp A &kp G &kp E &kp N &kp D &kp A &kp PT_COLON &kp LC(B) &kp RET &kp MINUS &kp SPACE &kp SPACE &kp RET &kp RET &kp LC(B) &kp O &kp B &kp J &kp E &kp C &kp T &kp I &kp V &kp E &kp PT_COLON &kp LC(B) &kp RET &kp MINUS &kp SPACE>;
+                bindings = <&kp LC(B) &kp A &kp G &kp E &kp N &kp D &kp A &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L)) &kp SPACE &kp RET &kp RET &kp RET &kp LC(B) &kp O &kp B &kp J &kp E &kp C &kp T &kp I &kp V &kp E &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L));
                 )
         ZMK_MACRO(m_de_ue,
                 wait-ms = <MACRO_WAIT>;

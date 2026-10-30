@@ -115,10 +115,20 @@ def sequence_legend(sequence: str) -> str:
 def build_layer(
     sequences: list[tuple[str, str, str]], row_sizes: list[int]
 ) -> list[list[dict]]:
-    """Lay the sequences out over the key positions, row by row."""
+    """Lay the sequences out over the key positions, row by row.
+
+    Sequences are sorted alphabetically by their displayed legend, then placed
+    starting at the top row's left-most key and continuing left to right, row by
+    row, down to the bottom row. (Within a row the first half of the cells is
+    the left hand and the second half the right hand, so filling sequentially
+    reads left-to-right across the whole keyboard.)
+    """
     total = sum(row_sizes)
+
+    ordered = sorted(sequences, key=lambda s: sequence_legend(s[1]))
+
     cells: list[dict] = []
-    for _name, seq, binding in sequences:
+    for _name, seq, binding in ordered:
         cells.append({"t": sequence_legend(seq), "h": describe(binding)})
     if len(cells) > total:
         raise SystemExit(
