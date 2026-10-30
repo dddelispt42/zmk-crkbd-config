@@ -2,12 +2,17 @@
 # Regenerate with ./generate_leader_yaml.py
 layers:
   LEADER1:
-  - [{t: "AC", h: "Actions:"}, {t: "AG", h: "Agenda:"}, {t: "AO", h: "Ag.+Obj."}, {t: "BR", h: "Best reg"}, {t: "CO", h: "Cumps+obr"}, {t: "CU", h: "Cumps"}, {t: "MO", h: "Muito ob."}, {t: "OBJ", h: "Objective:"}, {t: "OBR", h: "Obrigado"}, {t: "OC", h: "Obr.+cumps"}]
-  - [{t: "TB", h: "TY+best"}, {t: "TH", h: "TY Riemer"}, {t: "TY", h: "Thank you"}, {t: "YW", h: "You're W."}, {}, {}, {}, {}, {}, {}]
+  - [{t: "AC", h: "Actions:"}, {t: "AG", h: "Agenda:"}, {t: "AO", h: "Ag.+Obj."}, {t: "BR", h: "Best reg"}, {t: "CO", h: "Cumps+obr"}, {t: "CU", h: "Cumps"}, {t: "G5", h: "uc UC_EL_FINAL_SIGMA"}, {t: "GA", h: "uc UC_EL_ALPHA"}, {t: "GB", h: "uc UC_EL_BETA"}, {t: "GC", h: "uc UC_EL_CHI"}]
+  - [{t: "GD", h: "uc UC_EL_DELTA"}, {t: "GE", h: "uc UC_EL_EPSILON"}, {t: "GF", h: "uc UC_EL_PHI"}, {t: "GG", h: "uc UC_EL_GAMMA"}, {t: "GH", h: "uc UC_EL_ETA"}, {t: "GI", h: "uc UC_EL_IOTA"}, {t: "GK", h: "uc UC_EL_KAPPA"}, {t: "GL", h: "uc UC_EL_LAMBDA"}, {t: "GM", h: "uc UC_EL_MU"}, {t: "GN", h: "uc UC_EL_NU"}]
+  - [{t: "GO", h: "uc UC_EL_OMIKRON"}, {t: "GP", h: "uc UC_EL_PI"}, {t: "GR", h: "uc UC_EL_RHO"}, {t: "GS", h: "uc UC_EL_SIGMA"}, {t: "GT", h: "uc UC_EL_TAU"}, {t: "GU", h: "uc UC_EL_UPSILON"}, {t: "GV", h: "uc UC_EL_THETA"}, {t: "GW", h: "uc UC_EL_OMEGA"}, {t: "GX", h: "uc UC_EL_XI"}, {t: "GY", h: "uc UC_EL_PSI"}]
+  - [{t: "GZ", h: "uc UC_EL_ZETA"}, {t: "MO", h: "Muito ob."}, {t: "OBJ", h: "Objective:"}, {t: "OBR", h: "Obrigado"}]
+  LEADER1b:
+  - [{t: "OC", h: "Obr.+cumps"}, {t: "TB", h: "TY+best"}, {t: "TH", h: "TY Riemer"}, {t: "TY", h: "Thank you"}, {t: "YW", h: "You're W."}, {}, {}, {}, {}, {}]
+  - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}]
   LEADER2:
-  - [{t: "BLE", h: "BLE"}, {t: "BN0", h: "BT 0"}, {t: "BN1", h: "BT 1"}, {t: "BN2", h: "BT 2"}, {t: "BOOT", h: "Bootloader"}, {t: "CLEAR", h: "BT clear"}, {t: "RESET", h: "Reset"}, {t: "USB", h: "USB"}, {}, {}]
-  - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+  - [{t: "BLE", h: "BLE"}, {t: "BN0", h: "BT 0"}, {t: "BN1", h: "BT 1"}, {t: "BN2", h: "BT 2"}, {t: "BOOT", h: "Bootloader"}, {t: "CLEAR", h: "BT clear"}, {t: "RESET", h: "Reset"}, {t: "USB", h: "USB"}, {t: "UXL", h: "uc UC_SET_LINUX_ALT"}, {t: "UXM", h: "uc UC_SET_MACOS"}]
+  - [{t: "UXW", h: "uc UC_SET_WIN_COMPOSE"}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}]

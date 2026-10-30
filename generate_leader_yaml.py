@@ -18,6 +18,7 @@ import argparse
 import re
 import sys
 from pathlib import Path
+from string import ascii_lowercase
 
 # Row shapes per keyboard, used when --rows is not given explicitly.
 # These must match the physical layout the drawing is rendered against.
@@ -122,6 +123,9 @@ def build_layer(
     row, down to the bottom row. (Within a row the first half of the cells is
     the left hand and the second half the right hand, so filling sequentially
     reads left-to-right across the whole keyboard.)
+
+    Callers hand in at most `total` sequences; use build_layers() to paginate a
+    longer list across several layers.
     """
     total = sum(row_sizes)
 
@@ -132,7 +136,8 @@ def build_layer(
         cells.append({"t": sequence_legend(seq), "h": describe(binding)})
     if len(cells) > total:
         raise SystemExit(
-            f"too many sequences ({len(cells)}) to fit {total} positions"
+            f"internal error: build_layer got {len(cells)} sequences for "
+            f"{total} positions - use build_layers() to paginate"
         )
     while len(cells) < total:
         cells.append({"t": ""})
@@ -143,6 +148,44 @@ def build_layer(
         rows.append(cells[offset : offset + size])
         offset += size
     return rows
+
+
+def build_layers(
+    sequences: list[tuple[str, str, str]], row_sizes: list[int], title: str
+) -> dict[str, list[list[dict]]]:
+    """Fit `sequences` into one or more layers of `row_sizes` capacity.
+
+    A leader behavior can hold more sequences than the board has keys (leader1
+    is at 39 while a 36-key board has 36 positions). That physical limit is
+    irrelevant to the firmware - these are *virtual* layers rendered purely for
+    the drawing - so rather than fail the build we paginate:
+    LEADER1, LEADER1b, LEADER1c, ...
+
+    Every sequence stays visible, nothing is silently dropped, and the firmware
+    is untouched.
+    """
+    total = sum(row_sizes)
+    if total <= 0:
+        raise SystemExit(f"internal error: row shape {row_sizes} has no positions")
+
+    ordered = sorted(sequences, key=lambda s: sequence_legend(s[1]))
+    chunks = [ordered[i : i + total] for i in range(0, len(ordered), total)]
+    if not chunks:
+        return {}
+
+    out: dict[str, list[list[dict]]] = {}
+    for index, chunk in enumerate(chunks):
+        # the first page keeps the plain name so existing drawings stay stable
+        name = title if index == 0 else f"{title}{ascii_lowercase[index]}"
+        out[name] = build_layer(chunk, row_sizes)
+    if len(chunks) > 1:
+        print(
+            f"note: {title} has {len(ordered)} sequences, more than this "
+            f"board's {total} positions - split across {len(chunks)} layers "
+            f"({', '.join(out)})",
+            file=sys.stderr,
+        )
+    return out
 
 
 def yaml_dump_layers(layers: dict[str, list[list[dict]]]) -> str:
@@ -240,7 +283,7 @@ def main() -> int:
         if not sequences:
             print(f"warning: no sequences in '{instance}', skipping", file=sys.stderr)
             continue
-        layers[title] = build_layer(sequences, row_sizes)
+        layers.update(build_layers(sequences, row_sizes, title))
 
     if not layers:
         print("error: no leader sequences found", file=sys.stderr)
