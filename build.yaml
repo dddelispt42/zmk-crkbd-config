@@ -1,56 +1,43 @@
-# This file generates the GitHub Actions matrix
-# For simple board + shield combinations, add them
-# to the top level board and shield arrays, for more
-# control, add individual board + shield combinations to
-# the `include` property, e.g:
+# GitHub Actions build matrix for the four keyboards sharing this config.
 #
-# board: [ "nice_nano_v2" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano_v2
-#     shield: reviung41
+# Each keyboard has one keymap adapter in config/ that selects its board macro
+# (ZMK_KB_36 for corne/tempest/seppelit, ZMK_KB_34 for sweep) and includes the
+# shared config/include/* files. The shield chosen here decides which .conf and
+# .keymap ZMK picks up:
 #
+#   corne_left/right      -> config/corne.keymap    (36 keys, 5-column CRKBD)
+#   tempest_left/right    -> config/tempest.keymap  (36 keys, local shield)
+#   seppelit_left/right   -> config/seppelit.keymap (36 keys, local shield)
+#   cradio_left/right     -> config/sweep.keymap    (34 keys, upstream shield)
+#
+# Note the asymmetry: the sweep's shield is named `cradio_*` upstream (the
+# hardware is a Sweep, whose ZMK shield is called cradio), but its keymap and
+# conf are named `sweep.*` and its keyboard name is "HeiSweep".
 ---
 include:
-  - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
-    shield: tempest_left
-    # snippet: studio-rpc-usb-uart
-    # cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano//zmk # nice_view_adapter nice_view_gem
-    shield: tempest_right
-  # - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
-  #   shield: seppelit_left
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  # - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
-  #   shield: seppelit_right
-  - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
+  # --- corne (5-column CRKBD, 36 keys) --------------------------------
+  - board: nice_nano@2.0.0//zmk
     shield: corne_left
-  # - board: nice_nano_v2 # nice_view_adapter nice_view_gem
-  #   shield: corne_right
-    # snippet: studio-rpc-usb-uart
-    # cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: nice_nano@2.0.0//zmk # nice_view_adapter nice_view_gem
+  - board: nice_nano@2.0.0//zmk
     shield: corne_right
-  # - board: nice_nano_v2
-  #   shield: cradio_left
-  #   # snippet: studio-rpc-usb-uart
-  #   # cmake-args: -DCONFIG_ZMK_STUDIO=y
-  # - board: nice_nano_v2
-  #   shield: cradio_right
-  # - board: [ "nice_nano_v2" ]
-  #   shield: [ "corne_left", "corne_right" ]
-  # - board: [ "nice_nano_v2" ]
-  #   shield: [ "cradio_left", "cradio_right" ]
-  # - board: seeeduino_xiao_ble
-  #   shield: corne_dongle prospector_adapter
-  # - board: seeeduino_xiao_ble
-  #   shield: cradio_dongle prospector_adapter
-  # - board: seeeduino_xiao_ble
-  #   shield: corne_dongle prospector_adapter
-  # - board: seeeduino_xiao_ble
-  #   shield: cradio_dongle prospector_adapter
+
+  # --- tempest (36 keys) ----------------------------------------------
+  - board: nice_nano@2.0.0//zmk
+    shield: tempest_left
+  - board: nice_nano@2.0.0//zmk
+    shield: tempest_right
+
+  # --- seppelit (36 keys) ---------------------------------------------
+  - board: nice_nano@2.0.0//zmk
+    shield: seppelit_left
+  - board: nice_nano@2.0.0//zmk
+    shield: seppelit_right
+  # --- sweep (34 keys) -------------------------------------------------
+  - board: nice_nano@2.0.0//zmk
+    shield: cradio_left
+  - board: nice_nano@2.0.0//zmk
+    shield: cradio_right
+
+  # --- utility ---------------------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: settings_reset
-

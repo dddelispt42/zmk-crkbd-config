@@ -7,6 +7,7 @@ on:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
+      - "config/include/*"
       - "boards/shields/*/*.dtsi"
       - "keymap_drawer.config.yaml"
       - "generate_leader_yaml.py"
@@ -17,12 +18,13 @@ on:
 
 jobs:
   # Leader-key sequences are behavior properties, so keymap-drawer cannot
-  # discover them. Derive per-keyboard virtual-layer YAMLs from config/keymap
-  # and commit them, so the draw job below can merge them in.
+  # discover them. Derive per-keyboard virtual-layer YAMLs from the shared
+  # behaviours include and commit them, so the draw job below can merge them in.
   #
-  # The row shape differs per keyboard (corne has 5 rows, tempest/seppelit have
-  # 4) and keymap-drawer validates the leader layers against the physical
-  # layout, so each keyboard gets its own file.
+  # The row shape differs per keyboard (corne/tempest/seppelit are 36-key 5-column
+  # boards with 3 thumbs per side; the sweep is 34-key with 2) and keymap-drawer
+  # validates the leader layers against the physical layout, so each keyboard gets
+  # its own file.
   leader-yaml:
     runs-on: ubuntu-latest
     permissions:
@@ -36,16 +38,18 @@ jobs:
       - name: Generate leader virtual layers
         run: |
           set -euo pipefail
-          for kb in corne tempest seppelit; do
+          for kb in corne tempest seppelit sweep; do
             keymap_file="config/${kb}.keymap"
             [ -f "$keymap_file" ] || continue
             case "$kb" in
-              corne)    rows="10 10 10 10 2" ;;
-              tempest)  rows="10 10 10 6" ;;
-              seppelit) rows="10 10 10 6" ;;
+              # 36-key boards: 3 rows of 5 per side + 3 thumbs per side
+              corne|tempest|seppelit) rows="10 10 10 6" ;;
+              # 34-key sweep: 2 thumbs per side
+              sweep)                  rows="10 10 10 4" ;;
               *)        echo "no row shape known for $kb, skipping"; continue ;;
             esac
-            ./generate_leader_yaml.py --source config/keymap --rows $rows \
+            ./generate_leader_yaml.py \
+              --source config/include/behaviors.dtsi --rows $rows \
               --out "config/${kb}-leader.yaml"
           done
       - name: Commit if changed
@@ -55,8 +59,10 @@ jobs:
             git config user.name  "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add config/*-leader.yaml
-            git commit --amend --no-edit
-            git push --force-with-lease
+            # Plain commit, not --amend + force-push: rewriting published
+            # history on every keymap push was destructive.
+            git commit -m "chore: regenerate leader virtual layers"
+            git push
           else
             echo "leader YAMLs unchanged"
           fi
@@ -70,7 +76,7 @@ jobs:
       keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
       # Merge the generated leader layers into each drawing. Keyboards without
       # an entry here simply get no leader layers.
-      extra_keymap_yaml: "corne:'config/corne-leader.yaml' tempest:'config/tempest-leader.yaml' seppelit:'config/seppelit-leader.yaml'"
+      extra_keymap_yaml: "corne:'config/corne-leader.yaml' tempest:'config/tempest-leader.yaml' seppelit:'config/seppelit-leader.yaml' sweep:'config/sweep-leader.yaml'"
       config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
       json_path: "config"
       output_folder: "img"            # path to save produced SVG and keymap YAML files

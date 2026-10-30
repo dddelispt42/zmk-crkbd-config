@@ -4,12 +4,12 @@ Generate a keymap-drawer "virtual layer" YAML describing the leader-key
 sequences, so keymap-drawer can render them (it cannot discover them itself:
 leader sequences are properties of a behavior, not key bindings).
 
-Everything is derived from config/keymap - the single source of truth. Do not
-edit the generated file (config/leader.yaml) by hand; edit config/keymap and
+Everything is derived from config/include/behaviors.dtsi - the single source of truth. Do not
+edit the generated file (config/leader.yaml) by hand; edit config/include/behaviors.dtsi and
 re-run this script (generate_keymaps.sh does that automatically).
 
 Usage:
-    ./generate_leader_yaml.py [--source config/keymap] [--out config/leader.yaml]
+    ./generate_leader_yaml.py [--source config/include/behaviors.dtsi] [--out config/leader.yaml]
 """
 
 from __future__ import annotations
@@ -174,7 +174,7 @@ def yaml_dump_layers(layers: dict[str, list[list[dict]]]) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--source", default="config/keymap")
+    ap.add_argument("--source", default="config/include/behaviors.dtsi")
     ap.add_argument("--out", default="config/leader.yaml")
     ap.add_argument(
         "--keyboard",

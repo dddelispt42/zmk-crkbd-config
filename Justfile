@@ -88,8 +88,6 @@ draw:
     mkdir -p "{{ img }}"
     for keymap_file in "{{ config }}"/*.keymap; do
         kb=$(basename "$keymap_file" .keymap)
-        # cradio is not built by build.yaml and has no leader file
-        [[ $kb == cradio ]] && continue
         echo "drawing $kb..."
         if ! keymap -c "$cfg" parse -c 10 -z "$keymap_file" >"{{ img }}/$kb.yaml"; then
             echo "WARNING: parse failed for $kb, skipping" >&2
@@ -97,7 +95,7 @@ draw:
         fi
         leader="{{ config }}/$kb-leader.yaml"
         "{{ justfile_directory() }}/generate_leader_yaml.py" \
-            --source "{{ config }}/keymap" \
+            --source "{{ config }}/include/behaviors.dtsi" \
             --from-parsed "{{ img }}/$kb.yaml" \
             --out "$leader"
         if [[ -f "{{ config }}/$kb.json" ]]; then
@@ -112,14 +110,15 @@ draw:
 _leader-yaml:
     #!/usr/bin/env bash
     set -euo pipefail
-    for kb in corne tempest seppelit; do
+    for kb in corne tempest seppelit sweep; do
         case "$kb" in
-            corne)    rows="10 10 10 10 2" ;;
+            corne)    rows="10 10 10 6" ;;   # 36 keys, 5-column CRKBD
             tempest)  rows="10 10 10 6" ;;
             seppelit) rows="10 10 10 6" ;;
+            sweep)    rows="10 10 10 4" ;;   # 34 keys, 2 thumbs per side
         esac
         "{{ justfile_directory() }}/generate_leader_yaml.py" \
-            --source "{{ config }}/keymap" --rows $rows \
+            --source "{{ config }}/include/behaviors.dtsi" --rows $rows \
             --out "{{ config }}/$kb-leader.yaml"
     done
 

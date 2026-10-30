@@ -129,6 +129,11 @@ draw_config:
 parse_config:
   zmk_additional_includes: 
     - "zmk-helpers/include"
+    # The refactored keymaps live in config/ and include shared files via
+    # config-relative paths (keys.h, include/*.dtsi), and keys.h in turn pulls
+    # in <zmk-helpers/helper.h> and this board's key-labels header. Both roots
+    # are therefore needed for the preprocessor to resolve everything.
+    - "config"
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
@@ -565,8 +570,12 @@ parse_config:
     combo_ctrla: { align: mid, o: 0.00, arc_scale: 1.00}
     combo_ctrlz: { align: mid, o: 0.00, arc_scale: 1.00}
     # combo_leader: { align: top, o: 3.00, arc_scale: 1.00}
-  zmk_preamble: '#define KEYMAP_DRAWER'
+  # The keymaps are built from zmk-helpers macros (ZMK_LAYER_NAMED / ZMK_COMBO),
+  # so the preprocessor needs helper.h or `keymap parse` fails with
+  # "Could not find any keymap nodes with zmk,keymap compatible property".
+  zmk_preamble: |
+    #define KEYMAP_DRAWER
+    #include <zmk-helpers/helper.h>
   # NOTE: zmk_additional_includes is already set near the top of parse_config.
   # Do not repeat it here - a duplicate YAML key silently overrides the earlier
-  # value, which previously dropped the zmk-helpers include path and broke the
-  # cradio keymap (it relies on ZMK_LAYER from zmk-helpers).
+  # value, which previously dropped the zmk-helpers include path.
