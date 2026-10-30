@@ -273,6 +273,30 @@ parse_config:
       tap: $$mdi:bluetooth-connect$$
       shifted: '4'
       type: sym_sub_text
+    # The bt_* macros select a Bluetooth profile and the matching unicode input
+    # mode together (see macros.dtsi). #0 is Windows, #1-#4 are Linux/fcitx5.
+    # Labelled as the plain profile keys were, since that is what they do from
+    # the user's point of view.
+    '&bt_win':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '0'
+      type: sym_sub_text
+    '&bt_linux1':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '1'
+      type: sym_sub_text
+    '&bt_linux2':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '2'
+      type: sym_sub_text
+    '&bt_linux3':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '3'
+      type: sym_sub_text
+    '&bt_linux4':
+      tap: $$mdi:bluetooth-connect$$
+      shifted: '4'
+      type: sym_sub_text
     '&msc SCRL_LEFT':
       tap: '$$mdi:mouse-scroll-wheel$$'
       shifted: $$mdi:arrow-left$$

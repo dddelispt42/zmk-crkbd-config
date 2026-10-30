@@ -107,6 +107,18 @@
 #define MACRO_WAIT 0
 
 /* Short aliases used throughout the layer/behaviour definitions. */
+
+/*
+ * Bluetooth profiles.
+ *
+ * Profile 0 is the Windows machine; profiles 1-4 are Linux machines running
+ * fcitx5. The BLUETH layer uses the bt_* macros (macros.dtsi) rather than a
+ * bare BTSEL, because each one also switches the unicode input mode to match
+ * the OS it connects to.
+ *
+ * BTSEL is kept for any future plain profile key that does not need a mode
+ * change.
+ */
 #define BTSEL(profile) &bt BT_SEL profile
 #define BTCLR &bt BT_CLR
 #define OUTUSB &out OUT_USB

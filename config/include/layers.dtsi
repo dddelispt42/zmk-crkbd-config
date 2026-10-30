@@ -172,8 +172,12 @@ ZMK_LAYER_NAMED(blueth, "BLUETH",
     // |      | #4  | #3  | #2  | #1  | #0  |   | #0  | #1  | #2  | #3  | #4  |      |
     // |      | BL  | RST | USB | BLE | CLR |   | CLR | BLE | USB | RST | BL  |      |
     //                    |     |     |     |   |     |     |     |
+    //
+    // The #0..#4 keys select a Bluetooth profile AND the matching unicode input
+    // mode in one press: #0 is the Windows machine (WinCompose), #1..#4 are
+    // Linux machines running fcitx5. See the bt_* macros in macros.dtsi.
     &none  &none  &none  &none  &studio_unlock   &none  &none  &none  &none  &none
-    BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4)
+    &bt_linux4 &bt_linux3 &bt_linux2 &bt_linux1 &bt_win   &bt_win &bt_linux1 &bt_linux2 &bt_linux3 &bt_linux4
     &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader
 #ifdef ZMK_KB_34
     &none &unstick &unstick &none

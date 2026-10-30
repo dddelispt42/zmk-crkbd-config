@@ -175,21 +175,24 @@
             // switched here without reflashing. The default is set below the
             // root node; these sequences override it until the next reset.
             //
-            //   UXL = Linux   (also Android via a Linux-style input method)
+            // The BLUETH layer also sets the mode when you pick a Bluetooth
+            // profile, which is the usual way to switch - see macros.dtsi.
+            //
+            //   UXL = Linux / fcitx5
             //   UXW = Windows (needs WinCompose installed)
             //   UXM = macOS
-            uxl { sequence = <U X L>; bindings = <&uc UC_SET_LINUX>; };
+            uxl { sequence = <U X L>; bindings = <&uc UC_SET_LINUX_ALT>; };
             uxw { sequence = <U X W>; bindings = <&uc UC_SET_WIN_COMPOSE>; };
             uxm { sequence = <U X M>; bindings = <&uc UC_SET_MACOS>; };
         };
 
-        /* Unicode input defaults to Linux. Change to UC_MODE_WIN_COMPOSE if you
-         * mostly type Greek on Windows, or use the UXL/UXW/UXM sequences above
-         * to switch without reflashing. */
+        /* Unicode input defaults to Windows (WinCompose). Picking a Bluetooth
+         * profile on the BLUETH layer switches this to match the machine, and
+         * the UXL/UXW/UXM leader sequences override it manually. */
         uc: unicode {
             compatible = "zmk,behavior-unicode";
             #binding-cells = <2>;
-            default-mode = <UC_MODE_LINUX>;
+            default-mode = <UC_MODE_WIN_COMPOSE>;
         };
     };
 };

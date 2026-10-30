@@ -333,3 +333,43 @@
                 tap-ms = <MACRO_TAP>;
                 bindings = <&kp PT_UMLAUT &kp U>;
                 )
+
+        /*
+         * Bluetooth profile keys that also select the unicode input mode.
+         *
+         * ZMK gives no signal for "which profile is active", so the mode has to
+         * be set at the same moment the profile is chosen. A macro can do both,
+         * and neither action needs the host: &bt BT_SEL sets the profile and
+         * &uc UC_SET_* sets an internal property, so there is no dependency on
+         * the reconnect that follows.
+         *
+         * Profile 0 is the Windows machine (WinCompose), profiles 1-4 are Linux
+         * machines running fcitx5, which uses the "alt" input sequence
+         * (Ctrl+Shift held, U, hex, Space) - hence UC_MODE_LINUX_ALT rather
+         * than UC_MODE_LINUX, which is the IBus convention.
+         */
+        ZMK_MACRO(bt_win,           // profile 0 = Windows
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&bt BT_SEL 0> <&uc UC_SET_WIN_COMPOSE>;
+                )
+        ZMK_MACRO(bt_linux1,        // profile 1 = Linux (fcitx5)
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&bt BT_SEL 1> <&uc UC_SET_LINUX_ALT>;
+                )
+        ZMK_MACRO(bt_linux2,        // profile 2 = Linux (fcitx5)
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&bt BT_SEL 2> <&uc UC_SET_LINUX_ALT>;
+                )
+        ZMK_MACRO(bt_linux3,        // profile 3 = Linux (fcitx5)
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&bt BT_SEL 3> <&uc UC_SET_LINUX_ALT>;
+                )
+        ZMK_MACRO(bt_linux4,        // profile 4 = Linux (fcitx5)
+                wait-ms = <MACRO_WAIT>;
+                tap-ms = <MACRO_TAP>;
+                bindings = <&bt BT_SEL 4> <&uc UC_SET_LINUX_ALT>;
+                )
