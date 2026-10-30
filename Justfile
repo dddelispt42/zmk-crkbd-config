@@ -81,30 +81,46 @@ clean-nix:
     nix-collect-garbage --delete-old
 
 # parse & plot keymap into ./img (same naming as the CI draw workflow)
+#
+# Only the .svg files are kept. The intermediate `keymap parse` YAML is written
+# to a temp file and removed afterwards (and on failure), because nothing reads
+# it once `keymap draw` has run - see .gitignore.
+#
+# parse & plot keymap into ./img (only SVGs are kept)
 draw:
     #!/usr/bin/env bash
     set -uo pipefail
     cfg="{{ justfile_directory() }}/keymap_drawer.config.yaml"
     mkdir -p "{{ img }}"
+    tmp_yaml=""
+    cleanup() { [ -n "$tmp_yaml" ] && rm -f "$tmp_yaml"; }
+    trap cleanup EXIT
     for keymap_file in "{{ config }}"/*.keymap; do
         kb=$(basename "$keymap_file" .keymap)
         echo "drawing $kb..."
-        if ! keymap -c "$cfg" parse -c 10 -z "$keymap_file" >"{{ img }}/$kb.yaml"; then
+        tmp_yaml=$(mktemp)
+        if ! keymap -c "$cfg" parse -c 10 -z "$keymap_file" >"$tmp_yaml"; then
             echo "WARNING: parse failed for $kb, skipping" >&2
+            rm -f "$tmp_yaml"; tmp_yaml=""
             continue
         fi
         leader="{{ config }}/$kb-leader.yaml"
         "{{ justfile_directory() }}/generate_leader_yaml.py" \
             --source "{{ config }}/include/behaviors.dtsi" \
-            --from-parsed "{{ img }}/$kb.yaml" \
+            --from-parsed "$tmp_yaml" \
             --out "$leader"
         if [[ -f "{{ config }}/$kb.json" ]]; then
-            keymap -c "$cfg" draw -j "{{ config }}/$kb.json" "{{ img }}/$kb.yaml" "$leader" >"{{ img }}/$kb.svg"
+            keymap -c "$cfg" draw -j "{{ config }}/$kb.json" "$tmp_yaml" "$leader" >"{{ img }}/$kb.svg"
         else
-            keymap -c "$cfg" draw "{{ img }}/$kb.yaml" "$leader" >"{{ img }}/$kb.svg"
+            keymap -c "$cfg" draw "$tmp_yaml" "$leader" >"{{ img }}/$kb.svg"
         fi
+        rm -f "$tmp_yaml"; tmp_yaml=""
     done
     echo "wrote SVGs to {{ img }}/"
+
+# remove intermediate/generated files that are not versioned
+clean-draw:
+    rm -f {{ img }}/*.yaml
 
 # regenerate the leader-key virtual layers consumed by `draw`
 _leader-yaml:

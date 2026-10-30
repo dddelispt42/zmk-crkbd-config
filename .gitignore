@@ -1,2 +1,22 @@
 # migration scratch (research clones, golden references, probe configs)
 .research/
+
+# Generated firmware and build trees.
+.build/
+firmware/
+
+# NOTE on img/*.yaml and config/*-leader.yaml - neither is ignored:
+#
+#   img/*.yaml            intermediate `keymap parse` output. The local `just
+#                         draw` recipe writes it to a temp file and deletes it
+#                         (see Justfile), so it no longer accumulates here. It
+#                         stays tracked because the upstream keymap-drawer
+#                         workflow commits it with an explicit
+#                         file_pattern of "img/*.svg img/*.yaml" and runs
+#                         `git add` under `set -eu` - gitignoring it would make
+#                         that `git add` fail and break the draw workflow.
+#
+#   config/*-leader.yaml  an INPUT to `keymap draw` (passed via
+#                         extra_keymap_yaml), because keymap-drawer cannot
+#                         discover leader sequences by itself. Must be
+#                         committed.
