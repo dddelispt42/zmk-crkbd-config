@@ -594,6 +594,14 @@ rect.held, rect.combo.held {
 <tspan x="540" dy="-0.6em">⟳</tspan><tspan x="540" dy="1.2em">LDR2</tspan>
 </text>
 </g>
+<g class="combo combopos-18">
+<path d="M390,45 l-100,0" class="combo"/>
+<path d="M390,45 l100,0" class="combo"/>
+<rect rx="6" ry="6" x="375" y="31" width="30" height="28" class="combo"/>
+<text x="390" y="45" class="combo tap">
+<tspan x="390" dy="-0.6em">123</tspan><tspan x="390" dy="1.2em">NUM</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 350)" class="layer-NUMNAV">

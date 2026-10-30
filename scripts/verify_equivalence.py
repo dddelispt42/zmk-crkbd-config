@@ -85,6 +85,24 @@ NORMALISATIONS: dict[str, dict[str, list[int]]] = {
     },
 }
 
+# Combos that have been added on purpose since the golden reference was taken.
+# Listed so that a new combo has to be acknowledged here rather than appearing
+# silently; the harness reports additions as informational for these names only.
+#
+# NOTE: combos are keyed by their rendered legend (keymap-drawer emits no name),
+# so if you change a legend in keymap_drawer.config.yaml you must update the
+# entry here too.
+EXPECTED_ADDED_COMBOS: dict[str, tuple[str, ...]] = {
+    # num_word: T+Y starts a number-word that keeps NUMNAV active while digits
+    # and separators are typed (see combos.dtsi).
+    "corne": ("123 NUM@QWERTY",),
+    "tempest": ("123 NUM@QWERTY",),
+    # sweep's extra leader1 chord is already in its golden, so only num_word
+    # is listed here.
+    "sweep": ("123 NUM@QWERTY",),
+    "seppelit": ("123 NUM@QWERTY",),
+}
+
 # Which golden keyboard each keyboard should be compared against.
 #
 # corne and sweep are special:
@@ -109,8 +127,10 @@ REFERENCE: dict[str, str] = {
 # structurally changed (seppelit drifted from the master; sweep is new).
 # Their differences are reported as informational rather than failures.
 STRUCTURAL: dict[str, dict] = {
-    "sweep": {"layers": 12, "thumbs": 4, "combos": 21},
-    "seppelit": {"layers": 12, "thumbs": 6, "combos": 20},
+    # sweep carries one extra combo: the leader1 chord it needs because a
+    # 34-key board has no LH2 to put &leader1 on.
+    "sweep": {"layers": 12, "thumbs": 4, "combos": 22},
+    "seppelit": {"layers": 12, "thumbs": 6, "combos": 21},
 }
 
 
@@ -353,14 +373,26 @@ def check(golden: dict) -> int:
                     f"{kb}: combo {name} metadata {meta_old} -> {meta_new}"
                 )
 
-        # 3. combo count - a combo that vanishes entirely must not pass silently
+        # 3. combo count - a combo that vanishes must not pass silently.
+        #
+        # Added combos are reported but do not fail by default: the harness was
+        # written to prove a refactor preserved behaviour exactly, whereas the
+        # config now keeps growing (num_word, leader1 on sweep, ...). Losing a
+        # combo is always a failure; gaining one is a deliberate change, listed
+        # in EXPECTED_ADDED_COMBOS so it has to be acknowledged.
         if len(gold["combos"]) != len(cur["combos"]):
             missing = set(gold["combos"]) - set(cur["combos"])
             added = set(cur["combos"]) - set(gold["combos"])
             if missing:
                 failures.append(f"{kb}: {len(missing)} combo(s) lost: {sorted(missing)}")
-            if added:
-                failures.append(f"{kb}: {len(added)} unexpected combo(s): {sorted(added)}")
+            for name in sorted(added):
+                if name in EXPECTED_ADDED_COMBOS.get(kb, ()):
+                    print(f"  + {kb}: combo {name} added (expected)")
+                else:
+                    failures.append(
+                        f"{kb}: unexpected combo {name!r} - if this is intended, "
+                        f"add it to EXPECTED_ADDED_COMBOS"
+                    )
 
     # Every declared normalisation must actually have been applied: compare
     # today's positions for those combos against corne's recorded history.

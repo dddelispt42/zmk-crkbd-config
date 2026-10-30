@@ -52,6 +52,19 @@
 #include <behaviors/unicode.dtsi>
 #include <zmk-unicode/keys/greek.h>
 
+/*
+ * zmk-auto-layer: provides &num_word.
+ *
+ * &num_word LAYER activates LAYER and keeps it active for as long as only
+ * digits and the keys in its continue-list are pressed, dropping it on any
+ * other key. The module's num_word instance already has `ignore-numbers` and
+ * a continue-list of BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL, which is
+ * what we want unchanged - so no override is needed here.
+ *
+ * It is bound to a T+Y combo in combos.dtsi.
+ */
+#include <behaviors/num_word.dtsi>
+
 /* Per-board position labels. Exactly one must be selected. */
 #if defined(ZMK_KB_34)
 #include <zmk-helpers/key-labels/34.h>

@@ -141,6 +141,8 @@ parse_config:
     # LEADER1/LEADER2 virtual layers (see config/leader.yaml + generate_leader_yaml.py).
     "&leader1": "⟳ LDR1"
     "&leader2": "⟳ LDR2"
+    # num_word: keeps NUMNAV active while only digits/separators are typed.
+    "&num_word 1": "123 NUM"
     "&key_repeat": "$$mdi:repeat$$"
     "&sys_reset": "$$mdi:restart$$"
     "&bootloader": "$$mdi:cog-transfer$$"

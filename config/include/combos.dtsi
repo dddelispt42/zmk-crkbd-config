@@ -28,6 +28,26 @@ ZMK_COMBO(ctrl_z, &kp LC(Z), RB2 RB3, 0, COMBO_TIMEOUT, 150)
 ZMK_COMBO(leader2, &leader2, RB0 RB1, 0, COMBO_TIMEOUT, 150)
 
 /*
+ * num_word: T+Y starts a "number word".
+ *
+ * &num_word activates NUMNAV (layer index 1) and keeps it active while only
+ * digits and the keys in the behavior's continue-list are pressed, dropping it
+ * on any other key. That makes it a capsword for numbers: chord T+Y, type
+ * 1234.56, and the layer releases itself when you go back to letters - no
+ * separate key needed to leave it.
+ *
+ * The continue-list is the module default (BSPC DEL DOT COMMA PLUS MINUS STAR
+ * FSLH EQUAL) plus all digits via `ignore-numbers`, so digits and the
+ * separators keep it alive and everything else ends it.
+ *
+ * T (LT0) and Y (RT0) are the innermost key of each hand on the top row, so the
+ * chord is comfortable and unlikely to fire while typing. It is free on all
+ * four boards; the neighbouring LT1 LT0 and RT0 RT1 chords belong to pg_dn and
+ * ret.
+ */
+ZMK_COMBO(num_word, &num_word 1, LT0 RT0, 0, SPLIT_COMBO_TIMEOUT, 200)
+
+/*
  * Sweep only: reach &leader1 without a thumb key.
  *
  * The 36-key boards put &leader1 on LH2, the outermost left thumb. Sweep has
