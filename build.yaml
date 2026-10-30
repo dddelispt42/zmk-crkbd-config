@@ -27,34 +27,34 @@ include:
   # --- corne (5-column CRKBD, 36 keys) --------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: corne_left
-    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+    cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: corne_right
-    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+    cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
 
   # --- tempest (36 keys) ----------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: tempest_left
-    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+    cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: tempest_right
-    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+    cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
 
   # --- seppelit (36 keys) ---------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: seppelit_left
-    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+    cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: seppelit_right
-    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+    cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
 
   # --- sweep (34 keys) -------------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: cradio_left
-    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+    cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: cradio_right
-    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+    cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
 
   # --- utility ---------------------------------------------------------
   # No shared config: this build only resets settings on the controller.
