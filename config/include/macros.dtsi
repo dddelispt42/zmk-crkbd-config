@@ -17,8 +17,6 @@
 #define ML2(k) &kp LG(LC(k))
 
 
-/ {
-    macros {
         ZMK_MACRO(m_today,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
@@ -335,5 +333,3 @@
                 tap-ms = <MACRO_TAP>;
                 bindings = <&kp PT_UMLAUT &kp U>;
                 )
-    };
-};
