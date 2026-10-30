@@ -93,10 +93,12 @@
             #binding-cells = <0>;
             continue-list = <BACKSPACE DELETE PT_MINUS PT_UNDER>;
         };
-        // Leader key instances. Reach the first instance with the left outer
-        // thumb and the second with the N+M combo. Note: generate_keymaps.sh
-        // rewrites the RKL placeholder token to this behavior, so the behavior
-        // must stay defined here in the shared source.
+        // Leader key instances.
+        //
+        // leader1 is reached from the outermost left thumb on the 36-key boards
+        // (LH2) and, on the 34-key sweep which has no LH2, from the LM4 LM3 LM2
+        // chord - see combos.dtsi.
+        // leader2 is reached from the N+M combo on every board.
         //
         // leader1 = the AHK replacement sequences (previously typed as "]xx").
         //           The leader key itself replaces the "]" prefix, so "]c"
