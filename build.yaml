@@ -11,33 +11,52 @@
 #   cradio_left/right     -> config/sweep.keymap    (34 keys, upstream shield)
 #
 # Note the asymmetry: the sweep's shield is named `cradio_*` upstream (the
-# hardware is a Sweep, whose ZMK shield is called cradio), but its keymap and
-# conf are named `sweep.*` and its keyboard name is "HeiSweep".
+# hardware is a Sweep, whose ZMK shield is called cradio). Its keymap and layout
+# files are named sweep.*, but its *config* must be config/cradio.conf because
+# ZMK loads config/<shield>.conf.
+#
+# Shared settings live in config/common.conf and are merged via EXTRA_CONF_FILE.
+# EXTRA_CONF_FILE is used rather than CONF_FILE because CONF_FILE would REPLACE
+# ZMK's own config/<shield>.conf discovery, whereas EXTRA_CONF_FILE appends.
+#
+# common.conf deliberately contains only symbols that no board contradicts, and
+# each board states its differing symbols explicitly - so the outcome does not
+# depend on the relative merge position of common.conf and the board conf.
 ---
 include:
   # --- corne (5-column CRKBD, 36 keys) --------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: corne_left
+    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: corne_right
+    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
 
   # --- tempest (36 keys) ----------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: tempest_left
+    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: tempest_right
+    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
 
   # --- seppelit (36 keys) ---------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: seppelit_left
+    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: seppelit_right
+    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
+
   # --- sweep (34 keys) -------------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: cradio_left
+    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: cradio_right
+    cmake-args: -DEXTRA_CONF_FILE=config/common.conf
 
   # --- utility ---------------------------------------------------------
+  # No shared config: this build only resets settings on the controller.
   - board: nice_nano@2.0.0//zmk
     shield: settings_reset
