@@ -6,6 +6,18 @@
 //
 // ORDER MATTERS: this order defines the numeric layer indices used by
 // the `layers` argument of ZMK_COMBO in combos.dtsi.
+//
+// THUMB ROWS
+// ----------
+// Every layer's last line is its six thumb keys:
+//
+//     LH2 LH1 LH0 | RH0 RH1 RH2     (36-key boards)
+//
+// Sweep has only four (LH1 LH0 | RH0 RH1), so the outermost pair is
+// dropped there and the two inner keys of each hand keep their binding.
+// zmk-helpers offers no macro for this - it only provides the per-board
+// THUMBS_L/THUMBS_R label lists, which serve hold-trigger positions, not
+// layer bodies. The divergence is therefore explicit below.
 
 ZMK_LAYER_NAMED(qwerty, "QWERTY",
     // -------------------------------------------------------------------------------
@@ -16,7 +28,11 @@ ZMK_LAYER_NAMED(qwerty, "QWERTY",
     URML(Q, W, E, R, T)        URMR(Y, U, I, O, P)
     HRML(A, S, D, F) &kp G     &kp H HRMR(J, K, L, PT_C_CEDILLA)
     LRML(Z, X, C, V) &kp B     &kp N LRMR(M, COMMA, DOT, PT_MINUS)
-    &leader1 &mo NUMNAV  &kp BACKSPACE     &skm MOUSE SPACE &mo SYMBOL &key_repeat
+#ifdef ZMK_KB_34
+    &mo NUMNAV &kp BACKSPACE &skm MOUSE SPACE &mo SYMBOL
+#else
+    &leader1 &mo NUMNAV &kp BACKSPACE &skm MOUSE SPACE &mo SYMBOL &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(numnav, "NUMNAV",
@@ -28,7 +44,11 @@ ZMK_LAYER_NAMED(numnav, "NUMNAV",
     &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
     &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT)
     &trans &trans &trans &trans &trans      &laquo_raquo &ordm_ordf &trans &trans &trans
-    &leader1  &trans  &trans    &trans &mo FUNADJ &key_repeat
+#ifdef ZMK_KB_34
+    &trans &trans &trans &mo FUNADJ
+#else
+    &leader1 &trans &trans &trans &mo FUNADJ &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(symbol, "SYMBOL",
@@ -40,7 +60,11 @@ ZMK_LAYER_NAMED(symbol, "SYMBOL",
     &kp PT_EXCL &kp PT_DQT &kp PT_HASH &kp PT_DLLR &kp PT_PRCNT  &kp PT_AMPS &kp PT_FSLH &kp PT_LPAR &kp PT_RPAR &kp PT_EQUAL
     HRML(PT_LT, PT_LBKT, PT_LBRC, PT_LPAR) &sl ACCENT  &kp PT_SQT HRMR(PT_BSLH, PT_STAR, PT_AT, PT_UNDER)
     LRML(PT_GT, PT_RBKT, PT_RBRC, PT_RPAR) &kp PT_TILDE  &kp PT_QMARK LRMR(PT_PIPE, PT_PLUS, PT_EURO, PT_SECT)
-    &leader1 &mo FUNADJ &hm RCTRL DEL   &trans  &trans   &key_repeat
+#ifdef ZMK_KB_34
+    &mo FUNADJ &hm RCTRL DEL &trans &trans
+#else
+    &leader1 &mo FUNADJ &hm RCTRL DEL &trans &trans &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(funadj, "FUNADJ",
@@ -52,7 +76,11 @@ ZMK_LAYER_NAMED(funadj, "FUNADJ",
     &kp F1 &kp F2 &kp F3 &kp F4 &kp F5       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
     HRML(F11, F12, F13, F14) &kp F15         &kp F16 HRMR(F17, F18, F19, F20)
     LRML(PSCRN, SLCK, PAUSE_BREAK, CAPS) &trans  &kp HOME LRMR(PG_DN, PG_UP, END, INS)
-    &leader1 &trans &trans  &trans &trans &key_repeat
+#ifdef ZMK_KB_34
+    &trans &trans &trans &trans
+#else
+    &leader1 &trans &trans &trans &trans &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(mouse, "MOUSE",
@@ -67,7 +95,11 @@ ZMK_LAYER_NAMED(mouse, "MOUSE",
     &trans &trans &kp PT_GRAVE  &kp PT_ACUTE &kp PT_CARET  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp LC(LA(LS(J)))
     &mkp MB5 &kp LCTRL &kp LALT &kp LSHIFT &kp PT_UMLAUT  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &mkp MB5
     &mkp MB4 &mkp RCLK &mkp MCLK &mkp LCLK &kp PT_TILDE   &m_dblclk  &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB4
-    &leader1  &trans  &trans     &trans &trans &key_repeat
+#ifdef ZMK_KB_34
+    &trans &trans &trans &trans
+#else
+    &leader1 &trans &trans &trans &trans &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(media, "MEDIA",
@@ -79,7 +111,11 @@ ZMK_LAYER_NAMED(media, "MEDIA",
     &kp C_MEDIA_HOME &kp C_MEDIA_WWW &kp C_MEDIA_TV &kp C_MEDIA_COMPUTER &kp C_MEDIA_PHONE  &kp C_VOL_UP &kp C_NEXT &kp C_BRI_UP &kp C_FF &kp C_PWR
     &kp C_MEDIA_GAMES &kp C_MEDIA_MESSAGES &kp C_CHANNEL_INC &kp C_CHANNEL_DEC &kp C_MEDIA_GUIDE  &kp C_VOL_DN &kp C_PREV &kp C_BRI_DN &kp C_RW &kp C_SLEEP
     &trans &trans &trans &trans &trans  &kp C_MUTE &kp LC(LA(M)) &kp C_PP &kp C_EJECT &kp K_LOCK
-    &leader1 &trans &trans   &trans &trans &key_repeat
+#ifdef ZMK_KB_34
+    &trans &trans &trans &trans
+#else
+    &leader1 &trans &trans &trans &trans &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(wmcfg, "WMCFG",
@@ -91,7 +127,11 @@ ZMK_LAYER_NAMED(wmcfg, "WMCFG",
     MU1(F13) MU1(F14) MU1(F15) MU1(F16) MU1(F17) MU1(F18) MU1(F19) MU1(F20) MU1(F21) MU1(F22)
     MH1(F13) MH1(F14) MH1(F15) MH1(F16) MH1(F17) MH1(F18) MH1(F19) MH1(F20) MH1(F21) MH1(F22)
     ML1(F13) ML1(F14) ML1(F15) ML1(F16) ML1(F17) ML1(F18) ML1(F19) ML1(F20) ML1(F21) ML1(F22)
-    &leader1 &trans &trans        &trans &trans &key_repeat
+#ifdef ZMK_KB_34
+    &trans &trans &trans &trans
+#else
+    &leader1 &trans &trans &trans &trans &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(msoutl, "MSOUTL",
@@ -103,7 +143,11 @@ ZMK_LAYER_NAMED(msoutl, "MSOUTL",
     &m_emoj_td &m_emoj_tu &m_env &m_proc &m_today  &m_calendar &m_emoj_u &m_info &m_emoj_j &m_plm
     &m_arch &m_choose &none &m_teamfwd &m_week  &m_emoj_h &m_emoj_w &m_emoj_s &m_lt &m_emoj_l
     &m_maillist &none &m_cust &none &m_month  &m_inbox &m_dirprev &m_dirnext &m_mailcp &m_mailtext
-    &leader1 &none &none  &none &none &key_repeat
+#ifdef ZMK_KB_34
+    &none &none &none &none
+#else
+    &leader1 &none &none &none &none &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(macros, "MACROS",
@@ -115,7 +159,11 @@ ZMK_LAYER_NAMED(macros, "MACROS",
     MU2(F13) MU2(F14) MU2(F15) MU2(F16) MU2(F17) MU2(F18) MU2(F19) MU2(F20) MU2(F21) MU2(F22)
     MH2(F13) MH2(F14) MH2(F15) MH2(F16) MH2(F17) MH2(F18) MH2(F19) MH2(F20) MH2(F21) MH2(F22)
     ML2(F13) ML2(F14) ML2(F15) ML2(F16) ML2(F17) ML2(F18) ML2(F19) ML2(F20) ML2(F21) ML2(F22)
-    &leader1 &trans &trans        &trans &trans &key_repeat
+#ifdef ZMK_KB_34
+    &trans &trans &trans &trans
+#else
+    &leader1 &trans &trans &trans &trans &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(blueth, "BLUETH",
@@ -127,14 +175,22 @@ ZMK_LAYER_NAMED(blueth, "BLUETH",
     &none  &none  &none  &none  &studio_unlock   &none  &none  &none  &none  &none
     BTSEL(4) BTSEL(3) BTSEL(2) BTSEL(1) BTSEL(0) BTSEL(0) BTSEL(1) BTSEL(2) BTSEL(3) BTSEL(4)
     &bootloader &sys_reset OUTUSB OUTBLE BTCLR    BTCLR  OUTBLE  OUTUSB  &sys_reset  &bootloader
-    &leader1 &none &unstick        &unstick &none &key_repeat
+#ifdef ZMK_KB_34
+    &none &unstick &unstick &none
+#else
+    &leader1 &none &unstick &unstick &none &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(lock, "LOCK",
     &none &none &none &none &none  &none &none &none &none &none
     &none &none &none &none &none  &none &none &none &none &none
     &none &none &none &none &none  &none &none &none &none &none
-    &leader1 &none &none  &none &none &key_repeat
+#ifdef ZMK_KB_34
+    &none &none &none &none
+#else
+    &leader1 &none &none &none &none &key_repeat
+#endif
 )
 
 ZMK_LAYER_NAMED(accent, "ACCENT",
@@ -146,6 +202,10 @@ ZMK_LAYER_NAMED(accent, "ACCENT",
     &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
     &trans &trans &trans &trans &trans  &kp PT_UMLAUT &kp PT_ACUTE &kp PT_TILDE &kp PT_CARET &kp PT_GRAVE
     &kp PT_C_CEDILLA &trans &trans &trans &trans  &trans &trans &trans &trans &trans
-    &leader1 &trans &trans  &trans &trans &key_repeat
+#ifdef ZMK_KB_34
+    &trans &trans &trans &trans
+#else
+    &leader1 &trans &trans &trans &trans &key_repeat
+#endif
 )
 

@@ -26,3 +26,20 @@ ZMK_COMBO(ctrlshiftv, &kp LC(LS(V)), LB3 LB2 LB1, 0, LONG_COMBO_TIMEOUT, 200)
 ZMK_COMBO(ctrl_a, &kp LC(A), RB1 RB2, 0, COMBO_TIMEOUT, 150)
 ZMK_COMBO(ctrl_z, &kp LC(Z), RB2 RB3, 0, COMBO_TIMEOUT, 150)
 ZMK_COMBO(leader2, &leader2, RB0 RB1, 0, COMBO_TIMEOUT, 150)
+
+/*
+ * Sweep only: reach &leader1 without a thumb key.
+ *
+ * The 36-key boards put &leader1 on LH2, the outermost left thumb. Sweep has
+ * only four thumb keys, so that position does not exist and - because every
+ * main key is bound on all twelve layers - there is no spare key to move it to.
+ * A dedicated chord is therefore the only way to keep the leader key (and with
+ * it the 43 signature/Outlook macros) reachable on sweep.
+ *
+ * LM4 LM3 LM2 is the outer three keys of the left home row; it is free on every
+ * board (the neighbouring chords LM3 LM2 LM1 and LM2 LM1 LM0 are used by
+ * ctrlshiftc and pg_dn respectively).
+ */
+#ifdef ZMK_KB_34
+ZMK_COMBO(leader1, &leader1, LM4 LM3 LM2, 0, LONG_COMBO_TIMEOUT, 200)
+#endif

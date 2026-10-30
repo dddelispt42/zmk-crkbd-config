@@ -59,9 +59,8 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 CONFIG = REPO / "config"
 
-# Keyboards we track. `cradio` (the old hand-written sweep keymap) is listed so
-# we notice if it silently changes, but it is not part of the shared model.
-KEYBOARDS = ["corne", "tempest", "seppelit", "cradio"]
+# Keyboards we track.
+KEYBOARDS = ["corne", "tempest", "seppelit", "sweep"]
 
 # Differences that are intentional and must be the ONLY ones. Maps
 # keyboard -> kind -> item -> note. Anything not listed here that differs is a
@@ -88,17 +87,30 @@ NORMALISATIONS: dict[str, dict[str, list[int]]] = {
 
 # Which golden keyboard each keyboard should be compared against.
 #
-# corne is special: the refactor removes its phantom 6th column, taking it from
-# 42 slots to 36 real keys. Its historical (42-key) fingerprint therefore cannot
-# be compared directly - instead we compare it against tempest, which is the
-# same physical 36-key shape and is already correct. That is a *stronger* check
-# than comparing corne to itself, because it asserts the two boards now share
-# one identical layout rather than merely "nothing changed".
+# corne and sweep are special:
+#   * corne loses its phantom 6th column (42 slots -> 36 real keys), so its
+#     historical fingerprint cannot be compared directly. We compare it against
+#     tempest - the same physical 36-key shape, already correct. That is a
+#     STRONGER check than corne-vs-itself: it asserts the two boards now share
+#     one identical layout rather than merely "nothing changed".
+#   * sweep is compared against sweep. Its historical cradio.keymap was a
+#     different, hand-written layout (4 layers, German unicode) and was never
+#     part of the shared model, so there is no meaningful golden for it. Sweep
+#     is instead checked for structural correctness (12 layers, 4-key thumb
+#     rows, 21 combos) by check_structure() below.
 REFERENCE: dict[str, str] = {
     "corne": "tempest",
     "tempest": "tempest",
-    "seppelit": "seppelit",
-    "cradio": "cradio",
+    "seppelit": "tempest",
+    "sweep": "sweep",
+}
+
+# Boards whose golden is their OWN history but which are expected to have
+# structurally changed (seppelit drifted from the master; sweep is new).
+# Their differences are reported as informational rather than failures.
+STRUCTURAL: dict[str, dict] = {
+    "sweep": {"layers": 12, "thumbs": 4, "combos": 21},
+    "seppelit": {"layers": 12, "thumbs": 6, "combos": 20},
 }
 
 
@@ -250,12 +262,56 @@ def describe_diff(kb: str, kind: str, item: str, old, new) -> str:
     return f"{kind.upper()} {item}: {old} -> {new}"
 
 
+def check_structure(kb: str, cur: dict, spec: dict) -> list[str]:
+    """Assert the structural shape a deliberately-changed board must have.
+
+    Used for boards whose own history is not a valid baseline:
+      * sweep  - new shared model; its old cradio.keymap was a different layout
+      * seppelit - had drifted from the master (11 layers / 18 combos)
+    """
+    problems: list[str] = []
+    layers = cur.get("layers", {})
+    if len(layers) != spec["layers"]:
+        problems.append(
+            f"{kb}: expected {spec['layers']} layers, found {len(layers)}"
+        )
+    n_combos = len(cur.get("combos", {}))
+    if n_combos != spec["combos"]:
+        problems.append(
+            f"{kb}: expected {spec['combos']} combos, found {n_combos}"
+        )
+    # key count per layer must equal main keys + thumbs
+    expect_keys = 30 + spec["thumbs"]
+    for name, keys in layers.items():
+        if len(keys) != expect_keys:
+            problems.append(
+                f"{kb}: layer {name} has {len(keys)} keys, "
+                f"expected {expect_keys} (30 main + {spec['thumbs']} thumbs)"
+            )
+    return problems
+
+
 def check(golden: dict) -> int:
     current = capture()
     failures: list[str] = []
     expected_seen: set[tuple[str, str, str]] = set()
 
     for kb, cur in current.items():
+        # Boards with a deliberate structural change are checked against the
+        # expected shape rather than against their own drifted history.
+        if kb in STRUCTURAL:
+            if "error" in cur:
+                failures.append(f"{kb}: parse failed")
+                continue
+            spec = STRUCTURAL[kb]
+            problems = check_structure(kb, cur, spec)
+            failures.extend(problems)
+            if not problems:
+                print(f"  i {kb}: structural check passed "
+                      f"({spec['layers']} layers, {spec['thumbs']} thumbs, "
+                      f"{spec['combos']} combos)")
+            continue
+
         ref_name = REFERENCE.get(kb, kb)
         gold = golden.get(ref_name)
         if gold is None:

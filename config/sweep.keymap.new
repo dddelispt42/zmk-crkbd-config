@@ -1,0 +1,20 @@
+/*
+ * Sweep (cradio), 34 keys (3x5 + 2 thumbs per side).
+ *
+ * Two thumb keys fewer than corne/tempest/seppelit. Because every position in
+ * combos.dtsi and layers.dtsi is written as a key LABEL rather than a number,
+ * including 34.h instead of 36.h is all that is required: LH0/RH0 resolve to
+ * 31/32 here instead of 32/33, and the shared definitions follow automatically.
+ *
+ * The 34.h header renumbers the thumbs relative to 36.h, which is exactly the
+ * silent-misbinding hazard this structure removes - a combo can no longer be
+ * written against one board's numbering and silently land on another's keys.
+ */
+
+#define ZMK_KB_34
+
+#include "include/keys.h"
+#include "include/behaviors.dtsi"
+#include "include/macros.dtsi"
+#include "include/combos.dtsi"
+#include "include/layers.dtsi"

@@ -1,0 +1,16 @@
+/*
+ * Seppelit, 36 keys (3x5 + 3 thumbs per side).
+ *
+ * Same physical shape as tempest, so it shares the identical layout. It
+ * previously carried its own 11-layer/18-combo copy which had drifted from the
+ * master (missing the ACCENT layer and two combos); it now inherits the shared
+ * definitions and is therefore consistent with corne and tempest.
+ */
+
+#define ZMK_KB_36
+
+#include "include/keys.h"
+#include "include/behaviors.dtsi"
+#include "include/macros.dtsi"
+#include "include/combos.dtsi"
+#include "include/layers.dtsi"
