@@ -294,10 +294,15 @@
                 )
 
         // You're Welcome
+        //
+        // PT_SQT, not SQT: on a pt_pt layout the apostrophe is on the key where
+        // US has '-' (HID MINUS_AND_UNDERSCORE), whereas US SQT is the key right
+        // of ';'. Using SQT here produced the wrong character. The SYMBOL layer
+        // already uses PT_SQT; this macro was the only place that did not.
         ZMK_MACRO(m_sig_yw,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-        bindings = <&kp LS(Y) &kp O &kp U &kp SQT &kp R &kp E &kp SPACE &kp LS(W)
+        bindings = <&kp LS(Y) &kp O &kp U &kp PT_SQT &kp R &kp E &kp SPACE &kp LS(W)
                     &kp E &kp L &kp C &kp O &kp M &kp E>;
                 )
 
