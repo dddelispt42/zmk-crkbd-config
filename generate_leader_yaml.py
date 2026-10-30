@@ -175,8 +175,18 @@ def build_layers(
 
     out: dict[str, list[list[dict]]] = {}
     for index, chunk in enumerate(chunks):
-        # the first page keeps the plain name so existing drawings stay stable
-        name = title if index == 0 else f"{title}{ascii_lowercase[index]}"
+        # The first page keeps the plain name so existing drawings stay stable.
+        # Later pages get a letter suffix: b, c, ... then b2, c2, ... once the
+        # alphabet runs out, so an unusually long leader list degrades instead
+        # of raising IndexError.
+        if index == 0:
+            name = title
+        else:
+            # Start at 'b' (not 'a') so the second page keeps the name it had
+            # before pagination grew a wrap-around case.
+            letter = ascii_lowercase[index % 26]
+            cycle = index // 26
+            name = f"{title}{letter}" if cycle == 0 else f"{title}{letter}{cycle + 1}"
         out[name] = build_layer(chunk, row_sizes)
     if len(chunks) > 1:
         print(
