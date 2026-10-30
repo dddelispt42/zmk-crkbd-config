@@ -1,0 +1,33 @@
+/*
+ * Corne (CRKBD), 5-column, 36 keys.
+ *
+ * The board is a stock CRKBD but only 5 columns are populated, giving
+ * 3x5 + 3 thumbs = 36 keys - the same shape as tempest and seppelit. Upstream
+ * ZMK ships a matching physical layout (`foostan_corne_5col_layout`), so no
+ * custom shield is needed; we simply select it.
+ *
+ * Physical layout selection matters for two reasons:
+ *   1. It gives ZMK the 36-key matrix transform (the default CRKBD transform
+ *      is 42 keys / 6 columns and would mismatch our bindings).
+ *   2. ZMK Studio requires a `zmk,physical-layout` with `keys`, and must NOT
+ *      see `chosen zmk,matrix-transform` - if it does, ZMK ignores the
+ *      physical layouts entirely (and a Studio build fails its BUILD_ASSERT).
+ *
+ * Shell: draw with
+ *     keymap -c keymap_drawer.config.yaml parse -c 10 -z config/corne.keymap
+ */
+
+#define ZMK_KB_36
+
+#include "include/keys.h"
+#include "include/behaviors.dtsi"
+#include "include/macros.dtsi"
+#include "include/combos.dtsi"
+#include "include/layers.dtsi"
+
+/* Select the 5-column (36-key) physical layout. */
+/ {
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
+    };
+};

@@ -1,0 +1,28 @@
+// Combos, written in zmk-helpers key labels.
+//
+// Positions are board-independent: LT4/LM0/LH1 resolve to
+// whatever integer each keyboard's key-labels header assigns,
+// so one definition serves corne/tempest/seppelit/sweep.
+// Layer references are bare indices matching the order of the
+// ZMK_LAYER definitions in layers.dtsi.
+
+ZMK_COMBO(toggle_lock_left, &tog LOCK, LT4 LT0 LH0, 0 10, COMBO_TIMEOUT, 150)
+ZMK_COMBO(toggle_lock_right, &tog LOCK, RT0 RT4 RH0, 0 10, COMBO_TIMEOUT, 150)
+ZMK_COMBO(esc, &kp ESC, LT4 LT3, 0, COMBO_TIMEOUT, 120)
+ZMK_COMBO(tab, &kp TAB, LM4 LM3, 0, COMBO_TIMEOUT, 120)
+ZMK_COMBO(ret, &kp RET, RT0 RT1, 0, COMBO_TIMEOUT, 120)
+ZMK_COMBO(capsword, &capsw, LM0 RM0, 0, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(bspc, &kp BSPC, RM3 RM4, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(ctrlbspc, &kp LC(BSPC), RM1 RM2, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(del, &kp DEL, RT3 RT4, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(repeat_right, &key_repeat, RM0 RM1, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(sz, &kp RA(S), LB2 LB1, 0, COMBO_TIMEOUT, 100)
+ZMK_COMBO(pup, &kp PG_UP, LT1 LT0, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(down, &kp PG_DN, LM1 LM0, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(prtwin, &kp PSCRN, LB4 LB3, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(ctrlshiftc, &kp LC(LS(C)), LM3 LM2 LM1, 0, LONG_COMBO_TIMEOUT, 200)
+ZMK_COMBO(ctrlshiftx, &kp LC(LS(X)), LT3 LT2 LT1, 0, LONG_COMBO_TIMEOUT, 200)
+ZMK_COMBO(ctrlshiftv, &kp LC(LS(V)), LB3 LB2 LB1, 0, LONG_COMBO_TIMEOUT, 200)
+ZMK_COMBO(ctrl_a, &kp LC(A), RB1 RB2, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(ctrl_z, &kp LC(Z), RB2 RB3, 0, COMBO_TIMEOUT, 150)
+ZMK_COMBO(leader2, &leader2, RB0 RB1, 0, COMBO_TIMEOUT, 150)
