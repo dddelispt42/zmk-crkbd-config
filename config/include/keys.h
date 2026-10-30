@@ -41,6 +41,17 @@
 /* zmk-helpers: ZMK_LAYER / ZMK_COMBO / ZMK_MACRO / ZMK_HOLD_TAP ... */
 #include <zmk-helpers/helper.h>
 
+/*
+ * zmk-unicode: provides &uc and the UC_* code point aliases.
+ *
+ * Importing this header alone is not enough - the module also needs an input
+ * system selected, because each OS enters a code point differently. That is set
+ * via the `default-mode` property of the &uc behavior (see behaviors.dtsi,
+ * which also defines leader sequences to switch it at runtime).
+ */
+#include <behaviors/unicode.dtsi>
+#include <zmk-unicode/keys/greek.h>
+
 /* Per-board position labels. Exactly one must be selected. */
 #if defined(ZMK_KB_34)
 #include <zmk-helpers/key-labels/34.h>

@@ -122,6 +122,39 @@
             obj { sequence = <O B J>; bindings = <&m_ob>; };
             ao  { sequence = <A O>;   bindings = <&m_ao>; };
             ac  { sequence = <A C>;   bindings = <&m_ac>; };
+
+            // Greek letters, typed via the zmk-unicode module: G then the
+            // letter the name starts with (G A = alpha, G B = beta, ...).
+            // Uppercase variants come from Shift, as with any UC_* alias.
+            //
+            // These are prefixed G rather than urob's E, so they cannot collide
+            // with the two-letter mnemonics above (nothing here starts with G).
+            // Adapted from urob/zmk-config config/leader.dtsi.
+            el_alpha   { sequence = <G A>; bindings = <&uc UC_EL_ALPHA>; };
+            el_beta    { sequence = <G B>; bindings = <&uc UC_EL_BETA>; };
+            el_gamma   { sequence = <G G>; bindings = <&uc UC_EL_GAMMA>; };
+            el_delta   { sequence = <G D>; bindings = <&uc UC_EL_DELTA>; };
+            el_epsilon { sequence = <G E>; bindings = <&uc UC_EL_EPSILON>; };
+            el_zeta    { sequence = <G Z>; bindings = <&uc UC_EL_ZETA>; };
+            el_eta     { sequence = <G H>; bindings = <&uc UC_EL_ETA>; };
+            el_theta   { sequence = <G V>; bindings = <&uc UC_EL_THETA>; };
+            el_iota    { sequence = <G I>; bindings = <&uc UC_EL_IOTA>; };
+            el_kappa   { sequence = <G K>; bindings = <&uc UC_EL_KAPPA>; };
+            el_lambda  { sequence = <G L>; bindings = <&uc UC_EL_LAMBDA>; };
+            el_mu      { sequence = <G M>; bindings = <&uc UC_EL_MU>; };
+            el_nu      { sequence = <G N>; bindings = <&uc UC_EL_NU>; };
+            el_xi      { sequence = <G X>; bindings = <&uc UC_EL_XI>; };
+            el_omikron { sequence = <G O>; bindings = <&uc UC_EL_OMIKRON>; };
+            el_pi      { sequence = <G P>; bindings = <&uc UC_EL_PI>; };
+            el_rho     { sequence = <G R>; bindings = <&uc UC_EL_RHO>; };
+            el_sigma   { sequence = <G S>; bindings = <&uc UC_EL_SIGMA>; };
+            el_fsig    { sequence = <G 5>; bindings = <&uc UC_EL_FINAL_SIGMA>; };  // ς, word-final
+            el_tau     { sequence = <G T>; bindings = <&uc UC_EL_TAU>; };
+            el_upsilon { sequence = <G U>; bindings = <&uc UC_EL_UPSILON>; };
+            el_phi     { sequence = <G F>; bindings = <&uc UC_EL_PHI>; };
+            el_chi     { sequence = <G C>; bindings = <&uc UC_EL_CHI>; };
+            el_psi     { sequence = <G Y>; bindings = <&uc UC_EL_PSI>; };
+            el_omega   { sequence = <G W>; bindings = <&uc UC_EL_OMEGA>; };
         };
 
         // leader2 = system / bluetooth sequences.
@@ -136,6 +169,27 @@
             btc { sequence = <C L E A R>; bindings = <&bt BT_CLR>; };
             boot { sequence = <B O O T>; bindings = <&bootloader>; };
             reset { sequence = <R E S E T>; bindings = <&sys_reset>; };
+
+            // Unicode input mode. Each OS enters code points differently, and
+            // the mode is a runtime property of the &uc behavior, so it can be
+            // switched here without reflashing. The default is set below the
+            // root node; these sequences override it until the next reset.
+            //
+            //   UXL = Linux   (also Android via a Linux-style input method)
+            //   UXW = Windows (needs WinCompose installed)
+            //   UXM = macOS
+            uxl { sequence = <U X L>; bindings = <&uc UC_SET_LINUX>; };
+            uxw { sequence = <U X W>; bindings = <&uc UC_SET_WIN_COMPOSE>; };
+            uxm { sequence = <U X M>; bindings = <&uc UC_SET_MACOS>; };
+        };
+
+        /* Unicode input defaults to Linux. Change to UC_MODE_WIN_COMPOSE if you
+         * mostly type Greek on Windows, or use the UXL/UXW/UXM sequences above
+         * to switch without reflashing. */
+        uc: unicode {
+            compatible = "zmk,behavior-unicode";
+            #binding-cells = <2>;
+            default-mode = <UC_MODE_LINUX>;
         };
     };
 };

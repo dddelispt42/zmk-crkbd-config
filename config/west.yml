@@ -27,6 +27,8 @@ manifest:
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
+    - name: zmk-unicode
+      remote: urob
     - name: zmk-locales
       remote: joelspadin
     - name: zmk-leader-key
