@@ -73,49 +73,6 @@
 // lower row for WMCFG layer (i.e. macro layer #2)
 #define ML2(k) &kp LG(LC(k))
 
-// Expand a plain text run into a list of key presses, so macros stay readable:
-//   TEXT(H,E,L,L,O)  ->  &kp H &kp E &kp L &kp L &kp O
-// Keycodes are written as-is (C, RET, SPACE, COMMA, DOT, SQT, MINUS).
-// Arity is capped at 33; raise NARG/NARG_ and add KP34+ to go higher.
-#define NARG(...) NARG_(__VA_ARGS__,33,32,31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0)
-#define NARG_(_1,_2,_3,_4,_5,_6,_7,_8,_9,_10,_11,_12,_13,_14,_15,_16,_17,_18,_19,_20,_21,_22,_23,_24,_25,_26,_27,_28,_29,_30,_31,_32,_33,N,...) N
-#define CAT(a,b) CAT_(a,b)
-#define CAT_(a,b) a##b
-#define KP_N(...) CAT(KP, NARG(__VA_ARGS__))(__VA_ARGS__)
-#define TEXT(...) KP_N(__VA_ARGS__)
-#define KP1(k1) &kp k1
-#define KP2(k1,k2) &kp k1 &kp k2
-#define KP3(k1,k2,k3) &kp k1 &kp k2 &kp k3
-#define KP4(k1,k2,k3,k4) &kp k1 &kp k2 &kp k3 &kp k4
-#define KP5(k1,k2,k3,k4,k5) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5
-#define KP6(k1,k2,k3,k4,k5,k6) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6
-#define KP7(k1,k2,k3,k4,k5,k6,k7) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7
-#define KP8(k1,k2,k3,k4,k5,k6,k7,k8) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8
-#define KP9(k1,k2,k3,k4,k5,k6,k7,k8,k9) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9
-#define KP10(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10
-#define KP11(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11
-#define KP12(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12
-#define KP13(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13
-#define KP14(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14
-#define KP15(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15
-#define KP16(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16
-#define KP17(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17
-#define KP18(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18
-#define KP19(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19
-#define KP20(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20
-#define KP21(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21
-#define KP22(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22
-#define KP23(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23
-#define KP24(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24
-#define KP25(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25
-#define KP26(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25 &kp k26
-#define KP27(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25 &kp k26 &kp k27
-#define KP28(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27,k28) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25 &kp k26 &kp k27 &kp k28
-#define KP29(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27,k28,k29) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25 &kp k26 &kp k27 &kp k28 &kp k29
-#define KP30(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27,k28,k29,k30) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25 &kp k26 &kp k27 &kp k28 &kp k29 &kp k30
-#define KP31(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27,k28,k29,k30,k31) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25 &kp k26 &kp k27 &kp k28 &kp k29 &kp k30 &kp k31
-#define KP32(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27,k28,k29,k30,k31,k32) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25 &kp k26 &kp k27 &kp k28 &kp k29 &kp k30 &kp k31 &kp k32
-#define KP33(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27,k28,k29,k30,k31,k32,k33) &kp k1 &kp k2 &kp k3 &kp k4 &kp k5 &kp k6 &kp k7 &kp k8 &kp k9 &kp k10 &kp k11 &kp k12 &kp k13 &kp k14 &kp k15 &kp k16 &kp k17 &kp k18 &kp k19 &kp k20 &kp k21 &kp k22 &kp k23 &kp k24 &kp k25 &kp k26 &kp k27 &kp k28 &kp k29 &kp k30 &kp k31 &kp k32 &kp k33
 // more macros to shorten the definitions
 #define BTSEL(profile) &bt BT_SEL profile
 #define BTCLR &bt BT_CLR
@@ -544,70 +501,88 @@
         ZMK_MACRO(m_sig_cumps,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(C,U,M,P,S,COMMA,RET,LS(H),E,I,K,O)>;
+        bindings = <&kp LS(C) &kp U &kp M &kp P &kp S &kp COMMA &kp RET &kp LS(H)
+                    &kp E &kp I &kp K &kp O>;
                 )
 
         // Muito obrigado, / Heiko
         ZMK_MACRO(m_sig_mo,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(M,U,I,T,O,SPACE,O,B,R,I,G,A,D,O,COMMA,RET,LS(H),E,I,K,O)>;
+        bindings = <&kp LS(M) &kp U &kp I &kp T &kp O &kp SPACE &kp O &kp B
+                    &kp R &kp I &kp G &kp A &kp D &kp O &kp COMMA &kp RET
+                    &kp LS(H) &kp E &kp I &kp K &kp O>;
                 )
 
         // Obrigado, / Heiko
         ZMK_MACRO(m_sig_o,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(O,B,R,I,G,A,D,O,COMMA,RET,LS(H),E,I,K,O)>;
+        bindings = <&kp LS(O) &kp B &kp R &kp I &kp G &kp A &kp D &kp O
+                    &kp COMMA &kp RET &kp LS(H) &kp E &kp I &kp K &kp O>;
                 )
 
         // Obrigado e cumps, / Heiko
         ZMK_MACRO(m_sig_oc,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(O,B,R,I,G,A,D,O,SPACE,E,SPACE,C,U,M,P,S,COMMA,RET,LS(H),E,I,K,O)>;
+        bindings = <&kp LS(O) &kp B &kp R &kp I &kp G &kp A &kp D &kp O
+                    &kp SPACE &kp E &kp SPACE &kp C &kp U &kp M &kp P &kp S
+                    &kp COMMA &kp RET &kp LS(H) &kp E &kp I &kp K &kp O>;
                 )
 
         // Cumps e obrigado, / Heiko
         ZMK_MACRO(m_sig_co,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(C,U,M,P,S,SPACE,E,SPACE,O,B,R,I,G,A,D,O,COMMA,RET,LS(H),E,I,K,O)>;
+        bindings = <&kp LS(C) &kp U &kp M &kp P &kp S &kp SPACE &kp E &kp SPACE
+                    &kp O &kp B &kp R &kp I &kp G &kp A &kp D &kp O
+                    &kp COMMA &kp RET &kp LS(H) &kp E &kp I &kp K &kp O>;
                 )
 
         // Best regards, / Heiko
         ZMK_MACRO(m_sig_br,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(B,E,S,T,SPACE,R,E,G,A,R,D,S,COMMA,RET,LS(H),E,I,K,O)>;
+        bindings = <&kp LS(B) &kp E &kp S &kp T &kp SPACE &kp R &kp E &kp G
+                    &kp A &kp R &kp D &kp S &kp COMMA &kp RET &kp LS(H) &kp E
+                    &kp I &kp K &kp O>;
                 )
 
         // Thank you, / Heiko
         ZMK_MACRO(m_sig_ty,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,COMMA,RET,LS(H),E,I,K,O)>;
+        bindings = <&kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O
+                    &kp U &kp COMMA &kp RET &kp LS(H) &kp E &kp I &kp K &kp O>;
                 )
 
         // Thank you and best regards, / Heiko
         ZMK_MACRO(m_sig_tb,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,SPACE,A,N,D,SPACE,B,E,S,T,SPACE,R,E,G,A,R,D,S,COMMA,RET,LS(H),E,I,K,O)>;
+        bindings = <&kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O
+                    &kp U &kp SPACE &kp A &kp N &kp D &kp SPACE &kp B &kp E
+                    &kp S &kp T &kp SPACE &kp R &kp E &kp G &kp A &kp R
+                    &kp D &kp S &kp COMMA &kp RET &kp LS(H) &kp E &kp I &kp K
+                    &kp O>;
                 )
 
         // Thank you, / Heiko Riemer
         ZMK_MACRO(m_sig_th,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(T,H,A,N,K,SPACE,Y,O,U,COMMA,RET,LS(H),E,I,K,O,SPACE,LS(H),I,E,M,E,R)>;
+        bindings = <&kp LS(T) &kp H &kp A &kp N &kp K &kp SPACE &kp Y &kp O
+                    &kp U &kp COMMA &kp RET &kp LS(H) &kp E &kp I &kp K &kp O
+                    &kp SPACE &kp LS(R) &kp I &kp E &kp M &kp E &kp R>;
                 )
 
         // You're Welcome
         ZMK_MACRO(m_sig_yw,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <TEXT(Y,O,U,SQT,R,E,SPACE,W,E,L,C,O,M,E)>;
+        bindings = <&kp LS(Y) &kp O &kp U &kp SQT &kp R &kp E &kp SPACE &kp LS(W)
+                    &kp E &kp L &kp C &kp O &kp M &kp E>;
                 )
 
         // Ctrl-B "Agenda:" Ctrl-B, then bullet
@@ -621,21 +596,21 @@
         ZMK_MACRO(m_ob,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <&kp LC(B) &kp O &kp B &kp J &kp E &kp C &kp T &kp I &kp V &kp E &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L));
+                bindings = <&kp LC(B) &kp O &kp B &kp J &kp E &kp C &kp T &kp I &kp V &kp E &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L))>;
                 )
 
         // Ctrl-B "Actions:" Ctrl-B, then bullet
         ZMK_MACRO(m_ac,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <&kp LC(B) &kp A &kp C &kp T &kp I &kp O &kp N &kp S &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L));
+                bindings = <&kp LC(B) &kp A &kp C &kp T &kp I &kp O &kp N &kp S &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L))>;
                 )
 
         // Agenda: block then Objective: block
         ZMK_MACRO(m_ao,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
-                bindings = <&kp LC(B) &kp A &kp G &kp E &kp N &kp D &kp A &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L)) &kp SPACE &kp RET &kp RET &kp RET &kp LC(B) &kp O &kp B &kp J &kp E &kp C &kp T &kp I &kp V &kp E &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L));
+                bindings = <&kp LC(B) &kp A &kp G &kp E &kp N &kp D &kp A &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L)) &kp SPACE &kp RET &kp RET &kp RET &kp LC(B) &kp O &kp B &kp J &kp E &kp C &kp T &kp I &kp V &kp E &kp PT_COLON &kp LC(B) &kp RET &kp LC(LS(L))>;
                 )
         ZMK_MACRO(m_de_ue,
                 wait-ms = <MACRO_WAIT>;
