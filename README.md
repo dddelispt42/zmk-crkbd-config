@@ -6,7 +6,6 @@
   - [One layout, four keyboards](#one-layout-four-keyboards)
   - [Repository layout](#repository-layout)
   - [Editing the keymap](#editing-the-keymap)
-  - [Verifying a change](#verifying-a-change)
   - [Building and flashing](#building-and-flashing)
   - [Keymaps](#keymaps)
 <!--toc:end-->
@@ -104,27 +103,15 @@ Two rules worth knowing, both learned the hard way:
    `keys.h` provides `ZMK_LAYER_NAMED(node, "Display Name", …)`, which keeps
    the node name lowercase and the display name verbatim.
 
-## Verifying a change
-
-```sh
-./scripts/verify_equivalence.py check --golden .research/golden-pre-refactor.json
-```
-
-This compares *expanded behaviour*, not text: the fully preprocessed binding
-list of every layer, and the resolved numeric `key-positions` of every combo.
-That is the check that catches a combo silently landing on different keys.
-`corne`/`tempest`/`seppelit` are compared against the recorded 36-key
-reference; `sweep` and `seppelit` additionally get a structural check (12
-layers, correct thumb count, expected combo count).
-
-Render the drawings locally with `just draw`. Note `just draw` needs `keymap`
-(keymap-drawer) on `PATH`; it writes `img/*.svg` and `img/*.yaml`.
-
 ## Building and flashing
 
 `build.yaml` lists all four keyboards, built by
 `.github/workflows/build.yml`. Locally, `just build <expr>` filters that file,
 e.g. `just build corne`.
+
+Render the drawings locally with `just draw`; it needs `keymap` (keymap-drawer)
+on `PATH` and writes only `img/*.svg` (the intermediate YAML goes to a temp
+file).
 
 ## Keymaps
 

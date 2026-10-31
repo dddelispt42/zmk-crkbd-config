@@ -1,0 +1,84 @@
+/*
+ * Physical layout for the tempest shield - 36 keys, 5 columns
+ * per half plus a three-key thumb cluster.
+ *
+ * WHY THIS FILE EXISTS
+ *
+ * Both shields previously described the matrix with the legacy
+ * `chosen { zmk,matrix_transform = &default_transform; }`. ZMK treats that
+ * choice as excluding physical layouts entirely:
+ *
+ *     #define USE_PHY_LAYOUTS (DT_HAS_COMPAT_STATUS_OKAY(zmk_physical_layout)
+ *                              && !DT_HAS_CHOSEN(zmk,matrix_transform))
+ *     BUILD_ASSERT(!CONFIG_ZMK_STUDIO || USE_PHY_LAYOUTS, "ISSUE FOUND: ...");
+ *
+ * so CONFIG_ZMK_STUDIO=y could not be enabled. A `zmk,physical-layout` with a
+ * `keys` array is what Studio needs, and per ZMK's documentation it must not
+ * coexist with the `chosen zmk,matrix-transform` property.
+ *
+ * The transform itself is UNCHANGED - same 10 columns, 4 rows and 36 positions
+ * as before, now referenced by the layout instead of by `chosen`. Nothing about
+ * the keymap or the wiring changes.
+ *
+ * WHERE THE GEOMETRY COMES FROM
+ *
+ * The 36 key_physical_attrs rows are the physical positions already recorded in
+ * config/tempest.json (the keymap-drawer layout used for the drawings). Values
+ * are keyunits * 100, i.e. centi-keyunits as ZMK expects, and the order is the
+ * SAME as the matrix transform order so position N in this array is position N
+ * in the keymap. Negative rotations use devicetree parentheses.
+ *
+ * The geometry is config/tempest.json. The tempest and seppelit shields are
+ * byte-identical apart from their names, so this file is too.
+ */
+
+#include <physical_layouts.dtsi>
+
+/ {
+    tempest_layout: tempest_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Tempest 36";
+
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
+
+        keys  //                     w   h      x      y     rot     rx     ry
+            = <&key_physical_attrs 100 100       6     124  (-800)     56    174>
+            , <&key_physical_attrs 100 100     114      48  (-400)    164     98>
+            , <&key_physical_attrs 100 100     226       0       0      0      0>
+            , <&key_physical_attrs 100 100     326      40       0      0      0>
+            , <&key_physical_attrs 100 100     426      55       0      0      0>
+            , <&key_physical_attrs 100 100     970      55       0      0      0>
+            , <&key_physical_attrs 100 100    1070      40       0      0      0>
+            , <&key_physical_attrs 100 100    1170       0       0      0      0>
+            , <&key_physical_attrs 100 100    1283      48     400   1333     98>
+            , <&key_physical_attrs 100 100    1390     124     800   1440    174>
+            , <&key_physical_attrs 100 100      20     223  (-800)     70    273>
+            , <&key_physical_attrs 100 100     120     148  (-400)    170    198>
+            , <&key_physical_attrs 100 100     226     100       0      0      0>
+            , <&key_physical_attrs 100 100     326     140       0      0      0>
+            , <&key_physical_attrs 100 100     426     155       0      0      0>
+            , <&key_physical_attrs 100 100     970     155       0      0      0>
+            , <&key_physical_attrs 100 100    1070     140       0      0      0>
+            , <&key_physical_attrs 100 100    1170     100       0      0      0>
+            , <&key_physical_attrs 100 100    1276     148     400   1326    198>
+            , <&key_physical_attrs 100 100    1377     223     800   1427    273>
+            , <&key_physical_attrs 100 100      33     322  (-800)     83    372>
+            , <&key_physical_attrs 100 100     127     248  (-400)    177    298>
+            , <&key_physical_attrs 100 100     226     200       0      0      0>
+            , <&key_physical_attrs 100 100     326     240       0      0      0>
+            , <&key_physical_attrs 100 100     426     255       0      0      0>
+            , <&key_physical_attrs 100 100     970     255       0      0      0>
+            , <&key_physical_attrs 100 100    1070     240       0      0      0>
+            , <&key_physical_attrs 100 100    1170     200       0      0      0>
+            , <&key_physical_attrs 100 100    1270     248     400   1320    298>
+            , <&key_physical_attrs 100 100    1364     322     800   1414    372>
+            , <&key_physical_attrs 100 100     376     365       0      0      0>
+            , <&key_physical_attrs 100 100     487     380    1500    537    430>
+            , <&key_physical_attrs 100 100     590     426    3000    640    476>
+            , <&key_physical_attrs 100 100     806     426 (-3000)    856    476>
+            , <&key_physical_attrs 100 100     910     380 (-1500)    960    430>
+            , <&key_physical_attrs 100 100    1020     365       0      0      0>
+            ;
+    };
+};

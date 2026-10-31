@@ -5,14 +5,27 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include "tempest-layouts.dtsi"
 
 / {
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        /*
+         * A physical layout, NOT `zmk,matrix_transform`. ZMK treats the two as
+         * mutually exclusive:
+         *
+         *   USE_PHY_LAYOUTS = DT_HAS_COMPAT_STATUS_OKAY(zmk_physical_layout)
+         *                     && !DT_HAS_CHOSEN(zmk,matrix_transform)
+         *
+         * and a ZMK Studio build asserts USE_PHY_LAYOUTS, so selecting the
+         * layout here is what allows CONFIG_ZMK_STUDIO=y. The transform below is
+         * unchanged and is now reached through the layout's `transform` phandle.
+         */
+        zmk,physical-layout = &tempest_layout;
     };
 
+    /* Matrix transform: 10 columns, 4 rows, 36 positions. Unchanged. */
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <10>;

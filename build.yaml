@@ -27,33 +27,41 @@ include:
   # --- corne (5-column CRKBD, 36 keys) --------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: corne_left
+    snippet: studio-rpc-usb-uart
     cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: corne_right
+    snippet: studio-rpc-usb-uart
     cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
 
   # --- tempest (36 keys) ----------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: tempest_left
+    snippet: studio-rpc-usb-uart
     cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: tempest_right
+    snippet: studio-rpc-usb-uart
     cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
 
   # --- seppelit (36 keys) ---------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: seppelit_left
+    snippet: studio-rpc-usb-uart
     cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: seppelit_right
+    snippet: studio-rpc-usb-uart
     cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
 
   # --- sweep (34 keys) -------------------------------------------------
   - board: nice_nano@2.0.0//zmk
     shield: cradio_left
+    snippet: studio-rpc-usb-uart
     cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
   - board: nice_nano@2.0.0//zmk
     shield: cradio_right
+    snippet: studio-rpc-usb-uart
     cmake-args: -DEXTRA_CONF_FILE=\$ENV{ZMK_CONFIG}/common.conf
 
   # --- utility ---------------------------------------------------------
