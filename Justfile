@@ -122,6 +122,21 @@ draw:
 clean-draw:
     rm -f {{ img }}/*.yaml
 
+# check that no self-wrapping macro is nested inside a node body
+#
+# Catches a class of error that `keymap parse` does not report but the firmware
+# build does: ZMK_MOD_MORPH / ZMK_MACRO / ZMK_COMBO / ZMK_LAYER expand to a whole
+# `/ { ... }` root node, so calling one inside another node body is invalid
+# devicetree.
+#
+# check that no self-wrapping macro is nested inside a node body
+verify-nesting:
+    ./scripts/check_macro_nesting.py
+
+# behavioural equivalence against the recorded golden reference
+verify:
+    ./scripts/verify_equivalence.py check --golden .research/golden-pre-refactor.json
+
 # regenerate the leader-key virtual layers consumed by `draw`
 _leader-yaml:
     #!/usr/bin/env bash
