@@ -204,7 +204,113 @@ The README was rewritten during the refactor and has already drifted:
 
 ---
 
-## 8. Smaller items, lower value
+## 8. Add the math symbols and operators — **verified, not started**
+
+NUMNAV now carries the vulgar fractions and the super/subscripts (19 combos and
+20 mod-morphs). The natural next step is the wider math set, which is large:
+the `zmk-unicode` module ships **256 mathematical operators**, **79 letterlike
+symbols**, **128 misc-mathematical-B**, **112 arrows** and **33 currency
+symbols**, all available via `#include <zmk-unicode/keys/blocks/...>`.
+
+Most valuable candidates, with their verified alias names:
+
+**Relations and comparisons** (mostly for code and notes)
+
+| symbol | alias |
+|---|---|
+| ≈ | `UC_ALMOST_EQUAL_TO` |
+| ≠ | `UC_NOT_EQUAL_TO` |
+| ≤ | `UC_LESS_THAN_OR_EQUAL_TO` |
+| ≥ | `UC_GREATER_THAN_OR_EQUAL_TO` |
+| ≡ | `UC_IDENTICAL_TO` |
+| ∝ | `UC_PROPORTIONAL_TO` |
+| − | `UC_MINUS_SIGN` (true minus U+2212, not hyphen) |
+| ± | `UC_PLUS_MINUS_SIGN` — in **latin_1_supplement**, not the operators block |
+
+**Logic and sets** (useful for Python/Rust notes)
+
+| symbol | alias | symbol | alias |
+|---|---|---|---|
+| ∀ | `UC_FOR_ALL` | ∃ | `UC_THERE_EXISTS` |
+| ∈ | `UC_ELEMENT_OF` | ∉ | `UC_NOT_AN_ELEMENT_OF` |
+| ⊂ | `UC_SUBSET_OF` | ⊃ | `UC_SUPERSET_OF` |
+| ∪ | `UC_UNION` | ∩ | `UC_INTERSECTION` |
+| ∅ | `UC_EMPTY_SET` | ∧ | `UC_LOGICAL_AND` |
+| ∨ | `UC_LOGICAL_OR` | ∴ | `UC_THEREFORE` |
+
+**Analysis and geometry**
+
+| symbol | alias | symbol | alias |
+|---|---|---|---|
+| ∞ | `UC_INFINITY` | √ | `UC_SQUARE_ROOT` |
+| ∫ | `UC_INTEGRAL` | ∂ | `UC_PARTIAL_DIFFERENTIAL` |
+| ∇ | `UC_NABLA` | ∑ | `UC_N_ARY_SUMMATION` |
+| ∏ | `UC_N_ARY_PRODUCT` | ∠ | `UC_ANGLE` |
+| ∥ | `UC_PARALLEL_TO` | ⟂ | `UC_PERPENDICULAR` (in misc-mathematical-A, not the operators block) |
+
+**Letterlike** (math notation and units)
+
+| symbol | alias | symbol | alias |
+|---|---|---|---|
+| ℓ | `UC_SCRIPT_SMALL_L` | ℎ | `UC_PLANCK_CONSTANT` |
+| ℏ | `UC_PLANCK_CONSTANT_OVER_TWO_PI` | ™ | `UC_TRADE_MARK_SIGN` |
+| ℃ | `UC_DEGREE_CELSIUS` | ℉ | `UC_DEGREE_FAHRENHEIT` |
+| ℤ | `UC_DOUBLE_STRUCK_CAPITAL_Z` | ℝ | `UC_DOUBLE_STRUCK_CAPITAL_R` |
+| ℕ | `UC_DOUBLE_STRUCK_CAPITAL_N` | ℚ | `UC_DOUBLE_STRUCK_CAPITAL_Q` |
+| ℂ | `UC_DOUBLE_STRUCK_CAPITAL_C` | ℙ | `UC_DOUBLE_STRUCK_CAPITAL_P` |
+
+### Implementation options, in rough order of cost
+
+**a. Extend what already exists (cheapest).** NUMNAV has 16 free cells: 5 on the
+home row, 8 on the bottom row, and 3 on the thumb-row row (which differs by
+board, `#ifdef ZMK_KB_34`). A handful of the most-used symbols could go on some
+of those, or as `Shift`-variants of keys that are currently `&trans` — the same
+mod-morph mechanism already used for the superscripts.
+
+**b. Add the operators to an existing layer.** SYMBOL is the obvious home for
+punctuation-like operators, but it is nearly full — only 4 free cells on a
+36-key board. Counting `&trans` cells per layer (note these counts include both
+`#ifdef ZMK_KB_34` branches, so they slightly overstate the 36-key reality):
+
+| layer | free cells |
+|---|---|
+| ACCENT | 32 |
+| NUMNAV | 19 |
+| MEDIA | 13 |
+| MOUSE | 10 |
+| FUNADJ | 9 |
+| WMCFG / MACROS | 8 each |
+| SYMBOL | 4 |
+| QWERTY, MSOUTL, BLUETH, LOCK | 0 |
+
+So NUMNAV and MEDIA have the most usable room; SYMBOL does not, despite being
+the punctuation layer.
+
+**c. A dedicated MATH layer.** Cleanest for a large set (40+ symbols) and the
+only option if you want all of them, but it needs a layer key, and every layer
+key on these boards is already assigned — so it would mean displacing something
+or adding a combo.
+
+### Considerations before doing it
+
+- **Each include is cheap but the aliases are not free**: an `&uc` binding is a
+  2-cell behavior, so a 40-symbol layer is a substantial devicetree addition.
+  Only include the specific `blocks/*.h` files needed — `keys-extra.h` pulls in
+  all 319 blocks.
+- **OS-side requirement is unchanged**: these are unicode input, so they depend
+  on the mode currently selected (`UC_MODE_WIN_COMPOSE` by default, with the
+  `UXL`/`UXW`/`UXM` leader sequences and the BLUETH profile keys switching it).
+  Typing ∑ on a Linux machine without the mode switched will produce garbage.
+- **Three blocks were needed for the fractions and super/subscripts** because
+  Unicode does not group them; expect the same for math. Concretely, `±` is
+  **not** in `mathematical_operators.h` — it is `UC_PLUS_MINUS_SIGN` (U+00B1) in
+  `latin_1_supplement.h`, the same block that holds ¹²³ and ¼ ½ ¾. Likewise
+  `⟂` is in `miscellaneous_mathematical_symbols_a.h`, not the operators block.
+  Check every name against the header rather than assuming the grouping.
+
+---
+
+## 9. Smaller items, lower value
 
 **a. `corne_left.conf` / `corne_right.conf`** contain only
 `CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y` / `=n`. Corne is built from upstream's CRKBD
@@ -258,8 +364,29 @@ Worth stating explicitly, because they look like problems and are not:
 4. **CI hygiene** (concurrency, `amend_commit`) — removes recurring friction.
 5. **Config inconsistencies.**
 6. **zmk-helpers macro adoption** for hold-taps/mod-morphs/caps-word — mechanical,
-   do it when the config is otherwise quiet.
+   do it when the config is otherwise quiet. (The mod-morphs added for the
+   superscripts already use `ZMK_MOD_MORPH`, so this is partly started.)
 7. **Documentation.**
+8. **Math symbols** (item 8) — optional and additive; pick the mechanism first,
+   since the free-space survey shows NUMNAV/MEDIA have room and SYMBOL does not.
 
-Items 1 and 6 both touch code that is still being stabilised in CI, so they are
+Items 1, 6 and 8 all touch code that is still being stabilised in CI, so they are
 best done once the current branch is green.
+
+---
+
+## Related: what the harness now checks
+
+Since this document was first written, `scripts/verify_equivalence.py` was
+extended while adding the fractions and super/subscripts:
+
+- combos are identified by **(positions, layers)** rather than by rendered
+  legend. Keying on the legend broke twice in one session merely by adding a
+  drawing label; position keys are what ZMK itself matches on.
+- additions must be acknowledged in `EXPECTED_ADDED_COMBOS`, which now accepts
+  globs and a `"*"` entry covering every board. A **removed** combo always fails.
+- the golden reference was migrated to the new keys and its leftover legend-dedup
+  suffixes removed.
+
+This matters for item 6: any change that relabels a combo no longer trips the
+harness, but any change that *moves* one still does.
