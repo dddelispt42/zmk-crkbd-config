@@ -11,7 +11,132 @@ environment this review was done in.
 
 ---
 
-## 1. Make the local shields ZMK Studio compatible — **needs a build**
+## 1. Set up a local firmware build — **not started, needs ~8 GB free**
+
+**This is the highest-value item on the list**, and it is a process fix rather
+than a config fix. Every failure during the refactor was only visible after a CI
+round-trip of several minutes, and several were things a local build would have
+caught in seconds — including a `ZMK_MOD_MORPH` nesting error that
+`keymap parse` cannot see and that cost two CI runs to find. Building locally
+turns that feedback loop into seconds.
+
+### What is already present on this machine
+
+| tool | status |
+|---|---|
+| Arch Linux | ✅ |
+| `python3` | ✅ 3.14.8 — see the caveat below |
+| `just` | ✅ 1.18.4 |
+| `pipx` | ✅ 1.18.4 |
+| `cmake`, `ninja`, `dtc` | ❌ missing |
+| `yq` (go-yq) | ❌ missing — required by `just build` / `just list` |
+| `west` | ❌ missing |
+| ARM toolchain / Zephyr SDK | ❌ missing |
+
+### Step 1 — host packages
+
+```sh
+sudo pacman -S --needed cmake ninja dtc python-pip python-virtualenv go-yq
+```
+
+**`go-yq`, not `yq`.** Arch ships two different packages under that name, and
+the Justfile needs the mikefarah one: `just build`/`just list` run
+`yq -r "<jq expression>" build.yaml`, and the expression uses jq syntax
+(`map`, `combinations`, `.include[]`). The other `yq` in `extra` is a Python jq
+wrapper with different syntax, and it will fail on that expression.
+
+`python-west` also exists in Arch, but installing `west` via pipx keeps it out
+of the system Python.
+
+### Step 2 — west
+
+```sh
+pipx install west
+```
+
+**Caveat — Python 3.14.** `west` 1.5.0 declares `requires_python: >=3.9`, but
+its classifiers stop at **3.13**; 3.14 is untested. If `west` misbehaves, use a
+3.13 environment instead:
+
+```sh
+sudo pacman -S python313
+python3.13 -m venv ~/.venvs/zmk
+~/.venvs/zmk/bin/pip install west
+# then call ~/.venvs/zmk/bin/west explicitly
+```
+
+### Step 3 — Zephyr SDK 0.16.9 (~1 GB download)
+
+CI uses **0.16.9** (it appears in the build log as
+`-- Found toolchain: zephyr 0.16.9 (/opt/zephyr-sdk-0.16.9)`). Matching that
+version is what makes a local build reproduce CI:
+
+```sh
+mkdir -p ~/.local/opt && cd ~/.local/opt
+curl -LO https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.16.9/zephyr-sdk-0.16.9_linux-x86_64.tar.xz
+tar xf zephyr-sdk-0.16.9_linux-x86_64.tar.xz
+cd zephyr-sdk-0.16.9 && ./setup.sh -t arm-zephyr-eabi -c
+```
+
+`./setup.sh` registers the SDK in `~/.cmake/packages/Zephyr`, so `west build`
+finds it without further configuration.
+
+`arm-none-eabi-gcc` from Arch (16.2.0 in `extra`) is *not* a drop-in substitute
+— Zephyr would need `ZEPHYR_TOOLCHAIN_VARIANT=gnuarmemb` and it is not what ZMK
+tests against. Use the SDK.
+
+### Step 4 — fetch the sources
+
+```sh
+just init
+```
+
+That runs `west init -l config`, `west update` and `west zephyr-export`, pulling
+ZMK, Zephyr and all modules: `zmk-helpers`, `zmk-unicode`, `zmk-leader-key`,
+`zmk-auto-layer`, `zmk-locales`, `nice-view-gem`.
+
+### Step 5 — build
+
+```sh
+just list                 # show available targets
+just build tempest        # or corne, seppelit, sweep, or 'all'
+```
+
+Artifacts are copied to `firmware/`. `just clean-all` removes the west tree.
+
+### Disk and a note on the two zmk-helpers sources
+
+Budget roughly **5–8 GB** total (Zephyr plus every module plus the SDK).
+
+There are **two independent sources of `zmk-helpers`**, which is worth knowing:
+
+* `config/zmk-helpers` is a symlink into `config/zmk-helpers-repo`, a git
+  **submodule**.
+* `config/west.yml` also lists `zmk-helpers` as a west **project**, which
+  `west update` fetches to the workspace root.
+
+The two CI workflows differ here, which is easy to trip over:
+
+| workflow | submodules | so `zmk-helpers` comes from |
+|---|---|---|
+| `build.yml` (via ZMK's reusable workflow) | **not** checked out — the job log shows `submodules: false` | the **west project** |
+| `draw-keymaps.yml` | `submodules: recursive` | either; both are present |
+
+So for firmware builds CI relies on the west project, while locally both exist.
+If a local build ever picks up a different version than CI — a header mismatch,
+or a macro that exists locally but not remotely — this duplication is the first
+thing to suspect.
+
+### Why this matters more than the other items
+
+Items 2, 3 and 9 are quality improvements. This one changes how quickly any
+future problem is found: it is the difference between a seconds-long local
+`just build` and a multi-minute CI round-trip that only exercises the matrix
+after a push.
+
+---
+
+## 2. Make the local shields ZMK Studio compatible — **needs a build**
 
 **This is the most consequential item.** You said you use or plan to use ZMK
 Studio, and two of the four boards currently cannot.
@@ -63,7 +188,7 @@ overlays — the same deduplication that was applied to the `.conf` files.
 
 ---
 
-## 2. Restore the four TODOs lost in the refactor — **verified**
+## 3. Restore the four TODOs lost in the refactor — **verified**
 
 The refactor deleted `config/keymap`, and with it four TODOs that recorded
 intended work. They are recoverable from git:
@@ -88,7 +213,7 @@ These are cheap to restore and represent real intent, so they belong in
 
 ---
 
-## 3. Adopt the zmk-helpers macros that are still bypassed — **partly verified**
+## 4. Adopt the zmk-helpers macros that are still bypassed — **partly verified**
 
 The refactor adopted `ZMK_LAYER`, `ZMK_COMBO` and the unicode module, but a lot
 of hand-written devicetree remains. Counts verified in the repo:
@@ -124,7 +249,7 @@ leader module, which is a much larger change than it looks.
 
 ---
 
-## 4. CI: stop rewriting history and stop redundant runs — **verified**
+## 5. CI: stop rewriting history and stop redundant runs — **verified**
 
 Three separate issues in `.github/workflows/`:
 
@@ -160,7 +285,7 @@ path exits 1, which would fail the draw job. Removing them for good means either
 
 ---
 
-## 5. Configuration inconsistencies — **verified**
+## 6. Configuration inconsistencies — **verified**
 
 **a. Duplicate keyboard name.** `tempest.conf` and `seppelit.conf` both set
 `CONFIG_ZMK_KEYBOARD_NAME="HeiKey"`, making the two indistinguishable when
@@ -178,7 +303,7 @@ but it is dead code until something needs a plain profile key.
 
 ---
 
-## 6. The equivalence harness is not wired into anything — **verified**
+## 7. The equivalence harness is not wired into anything — **verified**
 
 `scripts/verify_equivalence.py` is the strongest safety net in the repo: it
 compares *expanded behaviour* (preprocessed bindings per layer, resolved
@@ -191,7 +316,7 @@ this config is long-lived and hand-edited, that seems clearly worth it.
 
 ---
 
-## 7. Documentation drift — **verified**
+## 8. Documentation drift — **verified**
 
 The README was rewritten during the refactor and has already drifted:
 
@@ -204,7 +329,7 @@ The README was rewritten during the refactor and has already drifted:
 
 ---
 
-## 8. Add the math symbols and operators — **verified, not started**
+## 9. Add the math symbols and operators — **verified, not started**
 
 NUMNAV now carries the vulgar fractions and the super/subscripts (19 combos and
 20 mod-morphs). The natural next step is the wider math set, which is large:
@@ -310,7 +435,7 @@ or adding a combo.
 
 ---
 
-## 9. Smaller items, lower value
+## 10. Smaller items, lower value
 
 **a. `corne_left.conf` / `corne_right.conf`** contain only
 `CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y` / `=n`. Corne is built from upstream's CRKBD
@@ -357,21 +482,26 @@ Worth stating explicitly, because they look like problems and are not:
 
 ## Suggested order
 
-1. **Studio support for tempest/seppelit** — you asked for it, it is load-bearing
-   for a feature you use, and it needs a build to confirm.
-2. **Restore the TODOs** — minutes of work, recovers intent.
-3. **Wire the harness into CI** — protects everything else on this list.
-4. **CI hygiene** (concurrency, `amend_commit`) — removes recurring friction.
-5. **Config inconsistencies.**
-6. **zmk-helpers macro adoption** for hold-taps/mod-morphs/caps-word — mechanical,
-   do it when the config is otherwise quiet. (The mod-morphs added for the
-   superscripts already use `ZMK_MOD_MORPH`, so this is partly started.)
-7. **Documentation.**
-8. **Math symbols** (item 8) — optional and additive; pick the mechanism first,
+1. **Local build (item 1)** — you need disk space first, but this is the one that
+   changes how fast every later change is verified. It also unblocks items 2
+   and 9, both of which say "needs a build".
+2. **Studio support for tempest/seppelit (item 2)** — you asked for it, it is
+   load-bearing for a feature you use, and it needs a build to confirm.
+3. **Restore the TODOs (item 3)** — minutes of work, recovers intent.
+4. **Wire the harness into CI (item 7)** — protects everything else on this list.
+5. **CI hygiene (item 5)** — concurrency and `amend_commit`; removes recurring
+   friction.
+6. **Config inconsistencies (item 6).**
+7. **zmk-helpers macro adoption (item 4)** for hold-taps/mod-morphs/caps-word —
+   mechanical, do it when the config is otherwise quiet. (The mod-morphs added
+   for the superscripts already use `ZMK_MOD_MORPH`, so this is partly started.)
+8. **Documentation (item 8).**
+9. **Math symbols (item 9)** — optional and additive; pick the mechanism first,
    since the free-space survey shows NUMNAV/MEDIA have room and SYMBOL does not.
 
-Items 1, 6 and 8 all touch code that is still being stabilised in CI, so they are
-best done once the current branch is green.
+Items 2, 4 and 9 all touch code that is still being stabilised in CI, so they are
+best done once the current branch is green — and, once item 1 is in place, they
+can be verified locally rather than through the matrix.
 
 ---
 
@@ -388,5 +518,11 @@ extended while adding the fractions and super/subscripts:
 - the golden reference was migrated to the new keys and its leftover legend-dedup
   suffixes removed.
 
-This matters for item 6: any change that relabels a combo no longer trips the
+This matters for item 4: any change that relabels a combo no longer trips the
 harness, but any change that *moves* one still does.
+
+Note the harness cannot catch everything. It compares parsed keymaps, so it does
+not see devicetree structural errors — the `ZMK_MOD_MORPH` nesting bug passed
+both `keymap parse` and the harness while failing the firmware build. That is
+what `just verify-nesting` (added alongside it) covers, and it is the strongest
+argument for item 1: a local build subsumes both.
