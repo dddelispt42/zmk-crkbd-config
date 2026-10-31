@@ -63,3 +63,42 @@ ZMK_COMBO(num_word, &num_word 1, LT0 RT0, 0, SPLIT_COMBO_TIMEOUT, 200)
 #ifdef ZMK_KB_34
 ZMK_COMBO(leader1, &leader1, LM4 LM3 LM2, 0, LONG_COMBO_TIMEOUT, 200)
 #endif
+
+/*
+ * Vulgar fractions, on NUMNAV digit pairs.
+ *
+ * The digits on NUMNAV are N1..N0 left to right, i.e. keys LT4 LT3 LT2 LT1 LT0
+ * | RT0 RT1 RT2 RT3 RT4. Chording the two digits that name the fraction gives
+ * the single Unicode character: 1+2 -> ½, 3+4 -> ¾, 1+4 -> ¼, and so on.
+ *
+ * All of these are NUMNAV-only (layer 1). That is what makes them safe despite
+ * sharing keys with layer-0 combos - ½ uses LT4 LT3 like esc, ⅘ uses LT0 LT1
+ * like pup, ⅚ uses LT0 RT0 like num_word. ZMK gates a combo by the active
+ * layer (`layer_mask` in combo.c), so a NUMNAV combo cannot fire on QWERTY.
+ *
+ * These are the 19 vulgar fractions Unicode defines; there is no ½-family
+ * beyond ½ and no fraction for pairs like 2+2, so the set is closed.
+ *
+ * SPLIT_COMBO_TIMEOUT and a high prior-idle guard are used because these are
+ * two-finger chords on adjacent keys, which are easier to hit by accident than
+ * the three-finger chords elsewhere in this file.
+ */
+ZMK_COMBO(frac_1_2, &uc UC_VULGAR_FRACTION_ONE_HALF,     LT4 LT3, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_1_4, &uc UC_VULGAR_FRACTION_ONE_QUARTER,  LT4 LT1, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_3_4, &uc UC_VULGAR_FRACTION_THREE_QUARTERS, LT2 LT1, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_1_3, &uc UC_VULGAR_FRACTION_ONE_THIRD,    LT4 LT2, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_2_3, &uc UC_VULGAR_FRACTION_TWO_THIRDS,   LT3 LT2, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_0_3, &uc UC_VULGAR_FRACTION_ZERO_THIRDS,  RT4 LT2, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_1_5, &uc UC_VULGAR_FRACTION_ONE_FIFTH,    LT4 LT0, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_2_5, &uc UC_VULGAR_FRACTION_TWO_FIFTHS,   LT3 LT0, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_3_5, &uc UC_VULGAR_FRACTION_THREE_FIFTHS, LT2 LT0, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_4_5, &uc UC_VULGAR_FRACTION_FOUR_FIFTHS,  LT1 LT0, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_1_6, &uc UC_VULGAR_FRACTION_ONE_SIXTH,    LT4 RT0, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_5_6, &uc UC_VULGAR_FRACTION_FIVE_SIXTHS,  LT0 RT0, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_1_7, &uc UC_VULGAR_FRACTION_ONE_SEVENTH,  LT4 RT1, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_1_8, &uc UC_VULGAR_FRACTION_ONE_EIGHTH,   LT4 RT2, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_3_8, &uc UC_VULGAR_FRACTION_THREE_EIGHTHS, LT2 RT2, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_5_8, &uc UC_VULGAR_FRACTION_FIVE_EIGHTHS, LT0 RT2, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_7_8, &uc UC_VULGAR_FRACTION_SEVEN_EIGHTHS, RT1 RT2, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_1_9, &uc UC_VULGAR_FRACTION_ONE_NINTH,    LT4 RT3, 1, SPLIT_COMBO_TIMEOUT, 200)
+ZMK_COMBO(frac_1_0, &uc UC_VULGAR_FRACTION_ONE_TENTH,    LT4 RT4, 1, SPLIT_COMBO_TIMEOUT, 200)

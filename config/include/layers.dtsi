@@ -37,11 +37,18 @@ ZMK_LAYER_NAMED(qwerty, "QWERTY",
 
 ZMK_LAYER_NAMED(numnav, "NUMNAV",
     // -------------------------------------------------------------------------------
-    // |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
+    // |      | 1/¹ | 2/² | 3/³ | 4/⁴ | 5/⁵ |   | 6/⁶ | 7/⁷ | 8/⁸ | 9/⁹ | 0/⁰ |      |
     // |      |     |     |     |     |     |   |LF/RS|DN/LA|UP/LC|RT/LG|     |      |
     // |      |     |     |     |     |     |   |  «  |  º  |     |     |     |      |
     //                    |     |     |     |   |     | L3  |     |
-    &kp N1 &kp N2 &kp N3  &kp N4 &kp N5     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+    //
+    // The digit keys are mod-morphs, not plain &kp: Shift gives the superscript
+    // and Ctrl the subscript (num_sup_* / num_sub_* in behaviors.dtsi). Typing
+    // a digit alone is unchanged.
+    //
+    // Chording two digits gives the matching vulgar fraction (frac_* in
+    // combos.dtsi): 1+2 is ½, 3+4 is ¾, 1+4 is ¼, 1+3 is ⅓, and so on.
+    &num_sup_N1 &num_sup_N2 &num_sup_N3  &num_sup_N4 &num_sup_N5     &num_sup_N6  &num_sup_N7  &num_sup_N8  &num_sup_N9  &num_sup_N0
     &trans &trans &trans &trans &trans      &kp LEFT HRMR(DOWN, UP, RIGHT, RIGHT)
     &trans &trans &trans &trans &trans      &laquo_raquo &ordm_ordf &trans &trans &trans
 #ifdef ZMK_KB_34

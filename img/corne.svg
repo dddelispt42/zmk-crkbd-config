@@ -611,51 +611,61 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">1</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(90, 38)" class="key keypos-1">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">2</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(150, 30)" class="key keypos-2">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">3</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(210, 38)" class="key keypos-3">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">4</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(270, 45)" class="key keypos-4">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">5</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(510, 45)" class="key keypos-5">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">6</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(570, 38)" class="key keypos-6">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">7</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(630, 30)" class="key keypos-7">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">8</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(690, 38)" class="key keypos-8">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">9</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(750, 52)" class="key keypos-9">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <text x="0" y="-4" class="key tap">0</text>
+<text x="0" y="-26" class="key shifted"><tspan style="font-size: 60%">&amp;uc UC_SU…</tspan></text>
 </g>
 <g transform="translate(30, 112)" class="key trans keypos-10">
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key trans side"/>
@@ -794,6 +804,110 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-28" y="-28" width="56" height="56" class="key side"/>
 <rect rx="4" ry="4" x="-22" y="-26" width="44" height="44" class="key"/>
 <use href="#mdi:repeat" xlink:href="#mdi:repeat" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:repeat"/>
+</g>
+<g class="combo combopos-0">
+<rect rx="6" ry="6" x="45" y="31" width="30" height="28" class="combo"/>
+<text x="60" y="45" class="combo tap">½</text>
+</g>
+<g class="combo combopos-1">
+<path d="M120,45 l-70,6" class="combo"/>
+<path d="M120,45 l70,-6" class="combo"/>
+<rect rx="6" ry="6" x="105" y="31" width="30" height="28" class="combo"/>
+<text x="120" y="45" class="combo tap">¼</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="165" y="20" width="30" height="28" class="combo"/>
+<text x="180" y="34" class="combo tap">¾</text>
+</g>
+<g class="combo combopos-3">
+<path d="M90,41 l-40,8" class="combo"/>
+<path d="M90,41 l40,-8" class="combo"/>
+<rect rx="6" ry="6" x="75" y="27" width="30" height="28" class="combo"/>
+<text x="90" y="41" class="combo tap">⅓</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="6" ry="6" x="105" y="20" width="30" height="28" class="combo"/>
+<text x="120" y="34" class="combo tap">⅔</text>
+</g>
+<g class="combo combopos-5">
+<path d="M450,41 l280,11" class="combo"/>
+<path d="M450,41 l-280,-11" class="combo"/>
+<rect rx="6" ry="6" x="435" y="27" width="30" height="28" class="combo"/>
+<text x="450" y="41" class="combo tap">↉</text>
+</g>
+<g class="combo combopos-6">
+<path d="M150,49 l-100,3" class="combo"/>
+<path d="M150,49 l100,-3" class="combo"/>
+<rect rx="6" ry="6" x="135" y="35" width="30" height="28" class="combo"/>
+<text x="150" y="49" class="combo tap">⅕</text>
+</g>
+<g class="combo combopos-7">
+<path d="M180,41 l-70,-3" class="combo"/>
+<path d="M180,41 l70,3" class="combo"/>
+<rect rx="6" ry="6" x="165" y="27" width="30" height="28" class="combo"/>
+<text x="180" y="41" class="combo tap">⅖</text>
+</g>
+<g class="combo combopos-8">
+<path d="M210,38 l-40,-5" class="combo"/>
+<path d="M210,38 l40,5" class="combo"/>
+<rect rx="6" ry="6" x="195" y="24" width="30" height="28" class="combo"/>
+<text x="210" y="38" class="combo tap">⅗</text>
+</g>
+<g class="combo combopos-9">
+<rect rx="6" ry="6" x="225" y="27" width="30" height="28" class="combo"/>
+<text x="240" y="41" class="combo tap">⅘</text>
+</g>
+<g class="combo combopos-10">
+<path d="M270,49 l-220,3" class="combo"/>
+<path d="M270,49 l220,-3" class="combo"/>
+<rect rx="6" ry="6" x="255" y="35" width="30" height="28" class="combo"/>
+<text x="270" y="49" class="combo tap">⅙</text>
+</g>
+<g class="combo combopos-11">
+<path d="M390,45 l-100,0" class="combo"/>
+<path d="M390,45 l100,0" class="combo"/>
+<rect rx="6" ry="6" x="375" y="31" width="30" height="28" class="combo"/>
+<text x="390" y="45" class="combo tap">⅚</text>
+</g>
+<g class="combo combopos-12">
+<path d="M300,45 l-250,7" class="combo"/>
+<path d="M300,45 l250,-7" class="combo"/>
+<rect rx="6" ry="6" x="285" y="31" width="30" height="28" class="combo"/>
+<text x="300" y="45" class="combo tap">⅐</text>
+</g>
+<g class="combo combopos-13">
+<path d="M330,41 l-280,11" class="combo"/>
+<path d="M330,41 l280,-11" class="combo"/>
+<rect rx="6" ry="6" x="315" y="27" width="30" height="28" class="combo"/>
+<text x="330" y="41" class="combo tap">⅛</text>
+</g>
+<g class="combo combopos-14">
+<path d="M390,30 l-220,0" class="combo"/>
+<path d="M390,30 l220,0" class="combo"/>
+<rect rx="6" ry="6" x="375" y="16" width="30" height="28" class="combo"/>
+<text x="390" y="30" class="combo tap">⅜</text>
+</g>
+<g class="combo combopos-15">
+<path d="M450,38 l-160,7" class="combo"/>
+<path d="M450,38 l160,-7" class="combo"/>
+<rect rx="6" ry="6" x="435" y="24" width="30" height="28" class="combo"/>
+<text x="450" y="38" class="combo tap">⅝</text>
+</g>
+<g class="combo combopos-16">
+<rect rx="6" ry="6" x="585" y="20" width="30" height="28" class="combo"/>
+<text x="600" y="34" class="combo tap">⅞</text>
+</g>
+<g class="combo combopos-17">
+<path d="M360,45 l-310,7" class="combo"/>
+<path d="M360,45 l310,-7" class="combo"/>
+<rect rx="6" ry="6" x="345" y="31" width="30" height="28" class="combo"/>
+<text x="360" y="45" class="combo tap">⅑</text>
+</g>
+<g class="combo combopos-18">
+<path d="M390,52 l-340,0" class="combo"/>
+<path d="M390,52 l340,0" class="combo"/>
+<rect rx="6" ry="6" x="375" y="38" width="30" height="28" class="combo"/>
+<text x="390" y="52" class="combo tap">⅒</text>
 </g>
 </g>
 </g>

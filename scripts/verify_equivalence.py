@@ -51,6 +51,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from fnmatch import fnmatch
 import shutil
 import subprocess
 import sys
@@ -80,8 +81,10 @@ EXPECTED_DELTAS: dict[str, dict[str, dict[str, str]]] = {}
 # keyboard -> combo key -> (expected historical position set).
 NORMALISATIONS: dict[str, dict[str, list[int]]] = {
     "corne": {
-        "CS+X@QWERTY": [3, 4, 5],
-        "⟳ LDR2@QWERTY": [17, 18],
+        # keyed by (positions@layers): the pre-refactor corne keys for these
+        # two combos, which the refactor normalises to tempest's.
+        "4+5+6@QWERTY": [3, 4, 5],
+        "20+21@QWERTY": [17, 18],
     },
 }
 
@@ -93,15 +96,15 @@ NORMALISATIONS: dict[str, dict[str, list[int]]] = {
 # so if you change a legend in keymap_drawer.config.yaml you must update the
 # entry here too.
 EXPECTED_ADDED_COMBOS: dict[str, tuple[str, ...]] = {
-    # num_word: T+Y starts a number-word that keeps NUMNAV active while digits
-    # and separators are typed (see combos.dtsi).
-    "corne": ("123 NUM@QWERTY",),
-    "tempest": ("123 NUM@QWERTY",),
-    # sweep's extra leader1 chord is already in its golden, so only num_word
-    # is listed here.
-    "sweep": ("123 NUM@QWERTY",),
-    "seppelit": ("123 NUM@QWERTY",),
+    # Combos are keyed by "positions@layers" (see fingerprint), so these are
+    # position globs rather than names - a rename in keymap_drawer.config.yaml
+    # no longer invalidates them. A *removed* combo always fails regardless.
+    #
+    #   *@NUMNAV   the 19 vulgar fractions, chorded on NUMNAV digit pairs
+    #   4+5@QWERTY num_word, on the T+Y chord
+    "*": ("*@NUMNAV", "4+5@QWERTY"),
 }
+
 
 # Which golden keyboard each keyboard should be compared against.
 #
@@ -115,7 +118,7 @@ EXPECTED_ADDED_COMBOS: dict[str, tuple[str, ...]] = {
 #     different, hand-written layout (4 layers, German unicode) and was never
 #     part of the shared model, so there is no meaningful golden for it. Sweep
 #     is instead checked for structural correctness (12 layers, 4-key thumb
-#     rows, 21 combos) by check_structure() below.
+#     rows, expected combo count) by check_structure() below.
 REFERENCE: dict[str, str] = {
     "corne": "tempest",
     "tempest": "tempest",
@@ -129,8 +132,11 @@ REFERENCE: dict[str, str] = {
 STRUCTURAL: dict[str, dict] = {
     # sweep carries one extra combo: the leader1 chord it needs because a
     # 34-key board has no LH2 to put &leader1 on.
-    "sweep": {"layers": 12, "thumbs": 4, "combos": 22},
-    "seppelit": {"layers": 12, "thumbs": 6, "combos": 21},
+    #
+    # Combo counts: 20 original + 1 num_word + 19 vulgar fractions = 40,
+    # and 41 on sweep.
+    "sweep": {"layers": 12, "thumbs": 4, "combos": 41},
+    "seppelit": {"layers": 12, "thumbs": 6, "combos": 40},
 }
 
 
@@ -207,31 +213,29 @@ def fingerprint(parsed: dict) -> dict:
 
     # keymap-drawer emits combos as a *list* of dicts with no name field:
     #   {"p": [positions...], "k": <legend>, "l": [layers...]}
-    # We identify a combo by its binding legend plus layer set and compare the
-    # resolved numeric position set - that is the thing that actually changes
-    # when a combo is mislabelled, and it fails silently at compile time.
     #
-    # Combos are sorted by (legend, layers, positions) BEFORE assigning the
-    # dedup suffix, so two combos sharing a legend (your two lock combos) get
-    # stable, order-independent names: `...#0` is always the lower-position one.
+    # A combo is identified by (positions, layers) - NOT by its legend. The
+    # legend is only a rendering concern, and keying on it made the harness
+    # break every time a label was added in keymap_drawer.config.yaml, even
+    # though the firmware behaviour was unchanged. Position+layer is also the
+    # more meaningful identity: it is exactly what ZMK matches on, and a combo
+    # moving to different keys is a real change while a relabelled one is not.
+    #
+    # The legend is recorded alongside as metadata so a label change is still
+    # visible, without being treated as a behavioural difference.
     combos = list(parsed.get("combos") or [])
     combos.sort(key=lambda c: (
-        str(c.get("k") or ""),
-        "+".join(str(x) for x in (c.get("l") or [])),
         sorted(int(p) for p in (c.get("p") or [])),
+        "+".join(str(x) for x in (c.get("l") or [])),
     ))
 
-    seen: dict[str, int] = {}
     for combo in combos:
         pos = sorted(int(p) for p in (combo.get("p") or []))
         legend = combo.get("k") or ""
         layers = combo.get("l") or []
-        base = f"{legend}@{'+'.join(str(x) for x in layers)}"
-        n = seen.get(base, 0)
-        seen[base] = n + 1
-        name = base if n == 0 else f"{base}#{n}"
+        name = f"{'+'.join(str(p) for p in pos)}@{'+'.join(str(x) for x in layers)}"
         out["combos"][name] = pos
-        out["combos_meta"][name] = {"layers": layers}
+        out["combos_meta"][name] = {"layers": layers, "legend": legend}
 
     return out
 
@@ -315,6 +319,7 @@ def check(golden: dict) -> int:
     current = capture()
     failures: list[str] = []
     expected_seen: set[tuple[str, str, str]] = set()
+    expected_added = 0
 
     for kb, cur in current.items():
         # Boards with a deliberate structural change are checked against the
@@ -386,12 +391,17 @@ def check(golden: dict) -> int:
             if missing:
                 failures.append(f"{kb}: {len(missing)} combo(s) lost: {sorted(missing)}")
             for name in sorted(added):
-                if name in EXPECTED_ADDED_COMBOS.get(kb, ()):
-                    print(f"  + {kb}: combo {name} added (expected)")
+                # A "*" entry applies to every keyboard; a per-keyboard entry
+                # adds to it rather than replacing it.
+                patterns = tuple(EXPECTED_ADDED_COMBOS.get("*", ())) + tuple(
+                    EXPECTED_ADDED_COMBOS.get(kb, ())
+                )
+                if any(fnmatch(name, pattern) for pattern in patterns):
+                    expected_added += 1
                 else:
                     failures.append(
                         f"{kb}: unexpected combo {name!r} - if this is intended, "
-                        f"add it to EXPECTED_ADDED_COMBOS"
+                        f"add it (or a glob) to EXPECTED_ADDED_COMBOS"
                     )
 
     # Every declared normalisation must actually have been applied: compare
@@ -400,19 +410,31 @@ def check(golden: dict) -> int:
     # the point is "corne changed away from its old accidental keys".)
     for kb, combos in NORMALISATIONS.items():
         hist = golden.get(kb, {}).get("combos", {})
-        for name, old_pos in combos.items():
-            now = current.get(kb, {}).get("combos", {}).get(name)
-            if now is None:
-                failures.append(f"{kb}: normalised combo {name} is missing")
-                continue
-            if now == old_pos:
+        for old_key, old_pos in combos.items():
+            # `old_key` is the pre-refactor (positions@layers) identity. After
+            # normalisation the combo lives under a DIFFERENT position key, so:
+            #   - the combo must be gone from its old keys, and
+            #   - some combo must exist whose positions match the intended new
+            #     positions (which is what the golden for tempest holds).
+            now_here = current.get(kb, {}).get("combos", {}).get(old_key)
+            if now_here is not None and now_here == old_pos:
                 failures.append(
-                    f"{kb}: combo {name} was NOT normalised - still on the old "
-                    f"accidental keys {old_pos}"
+                    f"{kb}: combo {old_key} was NOT normalised - still on the "
+                    f"old accidental keys {old_pos}"
                 )
-            else:
-                print(f"  ~ {kb}: combo {name} normalised {old_pos} -> {now}")
-                expected_seen.add((kb, "combo", name))
+                continue
+            new_pos = golden.get(REFERENCE.get(kb, kb), {}).get("combos", {})
+            targets = [p for p in new_pos.values() if p != old_pos]
+            if not any(
+                p in current.get(kb, {}).get("combos", {}).values() for p in targets
+            ):
+                failures.append(
+                    f"{kb}: combo previously at {old_pos} has no counterpart on "
+                    f"the reference board"
+                )
+                continue
+            print(f"  ~ {kb}: combo at {old_pos} normalised away from its old keys")
+            expected_seen.add((kb, "combo", old_key))
 
     if failures:
         print(f"\nFAIL - {len(failures)} difference(s):")

@@ -53,6 +53,23 @@
 #include <zmk-unicode/keys/greek.h>
 
 /*
+ * Math symbol blocks, for the NUMNAV fractions, superscripts and subscripts.
+ *
+ * Three blocks are needed rather than one, because Unicode does not group these
+ * together:
+ *
+ *   latin_1_supplement            ¹ ² ³ (U+00B9/B2/B3) and ¼ ½ ¾
+ *   superscripts_and_subscripts   ⁰ ⁴..⁹ ⁺ ⁻ ⁼ and all subscripts
+ *   number_forms                  the remaining 16 vulgar fractions (⅐ ⅓ ⅔ ...)
+ *
+ * <zmk-unicode/keys-extra.h> would cover all of them, but it pulls in all 319
+ * Unicode blocks, so the specific ones are included instead.
+ */
+#include <zmk-unicode/keys/blocks/latin_1_supplement.h>
+#include <zmk-unicode/keys/blocks/superscripts_and_subscripts.h>
+#include <zmk-unicode/keys/blocks/number_forms.h>
+
+/*
  * zmk-auto-layer: provides &num_word.
  *
  * &num_word LAYER activates LAYER and keeps it active for as long as only
