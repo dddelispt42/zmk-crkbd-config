@@ -442,24 +442,118 @@ or adding a combo.
 shield, which already handles the central/peripheral split, so these may be
 redundant. Worth confirming, not worth guessing.
 
+Verified since: the conf/shield mapping is otherwise consistent. Every shield in
+`build.yaml` has a matching `.conf` except `settings_reset`, which deliberately
+has none (it only resets stored settings).
+
 **b. `pre-commit` has exactly one active hook** (`zizmor`); everything else is
 commented out. A YAML linter would have caught the malformed `build.yaml`
 indentation that slipped in during the refactor, and a shell linter would cover
 the Justfile recipes.
 
-**c. `generate_leader_yaml.py` is bespoke** (~280 lines) purely because
+**c. `generate_leader_yaml.py` is bespoke** (310 lines) purely because
 keymap-drawer cannot discover leader sequences. It is now doing pagination,
 which is more logic than when it was written. Worth re-reading before the next
 change to it — but there is no obvious way to delete it while
 `zmk-leader-key` is in use.
 
-**d. `skm` TODO is stale** (see item 2) — `&skm` is used, so the comment should
-go.
+**d. ~~`skm` TODO is stale~~ — FIXED.** The comment said "not yet used" but
+`&skm` is used on the QWERTY thumb row; it now says so.
 
 **e. `m_ao` uses `&kp LC(LS(L))`** where the other three Outlook macros use the
 same. **This is not a bug** — it was verified as consistent across all four and
 present in the original config, so it appears to be an intentional Word shortcut.
 Recorded here only so it does not get "fixed" by mistake later.
+
+**f. `zmk_macro_gen.py` is a working but undocumented tool** (208 lines). It
+turns typed text into a `ZMK_MACRO` block, which is presumably how the 43
+signature macros were written. It still runs correctly. It is not referenced
+from the README or the Justfile, so it is discoverable only by noticing the file.
+
+---
+
+## 11. Dead and duplicated configuration — **verified**
+
+The result of a systematic sweep for duplication, staleness and inconsistencies
+across every non-vendored file. Each finding was confirmed by reading the source
+of the thing that consumes it, not by inspection alone.
+
+### a. Three dead `zmk_combos` entries, and 14 dead commented ones
+
+`keymap_drawer.config.yaml` has a `zmk_combos` block that overrides combo
+rendering. keymap-drawer matches those keys against the **devicetree node name**
+(`zmk.py` line 269: `self.cfg.zmk_combos.get(node.name, {})`), which for
+`ZMK_COMBO(x, ...)` is `combo_x`.
+
+Three entries reference nodes that no longer exist — so they silently do
+nothing, with no warning, because keymap-drawer never validates unmatched keys:
+
+```yaml
+combo_ctrlshiftcx: { align: top, o: 1.30, arc_scale: 1.00}   # real node: combo_ctrlshiftx
+combo_ctrla:       { align: mid, o: 0.00, arc_scale: 1.00}   # real node: combo_ctrl_a
+combo_ctrlz:       { align: mid, o: 0.00, arc_scale: 1.00}   # real node: combo_ctrl_z
+```
+
+The first is a genuine typo (`ctrlshiftcx` vs `ctrlshiftx`); the other two
+dropped an underscore. Fixing the names is the whole change — the values are
+already sensible.
+
+A further **11 commented-out** entries reference combos that exist and could be
+restored, and **3 commented entries are stale** (`combo_at`, `combo_underscore`,
+`combo_leader` — no such combos). Those 3 should go; the other 11 are a
+legitimate commented-out style choice.
+
+### b. The tempest and seppelit shields are near-duplicates
+
+`tempest.dtsi` and `seppelit.dtsi` are **byte-identical** (1897 bytes each).
+Every surrounding file differs only in names:
+
+| file | difference |
+|---|---|
+| `*.dtsi` | **identical** |
+| `*_left.overlay` | one line: `#include "tempest.dtsi"` vs `"seppelit.dtsi"` |
+| `*_right.overlay` | same single-line difference |
+| `Kconfig.defconfig` | shield symbol name, plus `default "HeiKey"` vs `"Seppelit"` |
+| `Kconfig.shield` | symbol names only |
+| `*.zmk.yml` | name and identifier only |
+
+So roughly **270 lines are duplicated to express one different name**. These are
+genuinely two keyboards with different physical wiring, so a shared shield is
+*not* automatically right — but if the matrices are the same by design rather
+than coincidence, a common `.dtsi` with two thin wrappers would remove the
+duplication. Worth confirming the two boards really do share a matrix before
+doing it.
+
+Note `Kconfig.defconfig` also disagrees with the `.conf` files about the
+keyboard name: it says `default "Seppelit"` while `config/seppelit.conf` sets
+`CONFIG_ZMK_KEYBOARD_NAME="HeiKey"`. The `.conf` wins, so the Kconfig default is
+dead — but the two should not disagree.
+
+### c. `&sl`, `&uc` and `&msc` are property overrides, not missing macro uses
+
+Three `&node { ... }` blocks override ZMK core nodes. These are sometimes
+suggested as `ZMK_STICKY_KEY` / `ZMK_INPUT_TWO_AXIS` candidates, and they are
+**not** — those macros *define a new behavior*, whereas these *change properties
+on an existing one*. Converting would replace ZMK's built-in `sl`/`msc` nodes
+with custom ones carrying the same labels, for no benefit and some risk.
+
+The current form is correct and matches what the modules document.
+
+### d. No other duplication found
+
+Checked and clean:
+
+- **Combos**: 41 defined, no duplicate names, no duplicate key-position sets
+  within a layer.
+- **Layers**: 12, in index order, no duplicate display names.
+- **Macros**: 48, no duplicate names.
+- **`.conf` files**: after the `common.conf` dedup, each board conf holds only
+  what differs.
+- **Scripts**: `check_macro_nesting.py` (119 lines) and `verify_equivalence.py`
+  (483) share no code worth extracting — different parse strategies and
+  different purposes.
+- **Unicode blocks**: three includes, each needed for a distinct code point
+  range (see item 9).
 
 ---
 
@@ -487,17 +581,22 @@ Worth stating explicitly, because they look like problems and are not:
    and 9, both of which say "needs a build".
 2. **Studio support for tempest/seppelit (item 2)** — you asked for it, it is
    load-bearing for a feature you use, and it needs a build to confirm.
-3. **Restore the TODOs (item 3)** — minutes of work, recovers intent.
-4. **Wire the harness into CI (item 7)** — protects everything else on this list.
-5. **CI hygiene (item 5)** — concurrency and `amend_commit`; removes recurring
+3. **Fix the 3 dead `zmk_combos` keys (item 11a)** — three lines, no risk, and
+   they are silently doing nothing today.
+4. **Restore the TODOs (item 3)** — minutes of work, recovers intent.
+5. **Wire the harness and nesting guard into CI (item 7)** — protects everything
+   else on this list.
+6. **CI hygiene (item 5)** — concurrency and `amend_commit`; removes recurring
    friction.
-6. **Config inconsistencies (item 6).**
-7. **zmk-helpers macro adoption (item 4)** for hold-taps/mod-morphs/caps-word —
-   mechanical, do it when the config is otherwise quiet. (The mod-morphs added
-   for the superscripts already use `ZMK_MOD_MORPH`, so this is partly started.)
+7. **Config inconsistencies (item 6).**
 8. **Documentation (item 8).**
-9. **Math symbols (item 9)** — optional and additive; pick the mechanism first,
-   since the free-space survey shows NUMNAV/MEDIA have room and SYMBOL does not.
+9. **zmk-helpers macro adoption (item 4)** — hold-taps, mod-morphs and caps-word
+   are now done; only the two leader behaviours remain, and those are blocked on
+   the driver difference described there.
+10. **Shield duplication (item 11b)** — worth doing only after confirming the two
+    boards genuinely share a matrix.
+11. **Math symbols (item 9)** — optional and additive; pick the mechanism first,
+    since the free-space survey shows NUMNAV/MEDIA have room and SYMBOL does not.
 
 Items 2, 4 and 9 all touch code that is still being stabilised in CI, so they are
 best done once the current branch is green — and, once item 1 is in place, they

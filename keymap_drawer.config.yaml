@@ -610,12 +610,15 @@ parse_config:
     # combo_down: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_prtwin: { align: top, o: 3.00, arc_scale: 1.00}
     # combo_underscore: { align: top, o: 3.00, arc_scale: 1.00}
-    # combo_ctrlshiftx: { align: top, o: 0.00, arc_scale: 1.00}
     # combo_ctrlshiftc: { align: top, o: 1.20, arc_scale: 1.00}
-    combo_ctrlshiftcx: { align: top, o: 1.30, arc_scale: 1.00}
+    # NOTE: the keys in this block are devicetree NODE names, i.e. combo_<name>
+    # as written in ZMK_COMBO(name, ...). keymap-drawer looks them up with
+    # cfg.zmk_combos.get(node.name) and silently ignores any that match nothing,
+    # so a typo here does nothing at all rather than reporting an error.
+    combo_ctrlshiftx: { align: top, o: 1.30, arc_scale: 1.00}
     combo_ctrlshiftv: { align: bottom, o: 0.30, arc_scale: 1.00}
-    combo_ctrla: { align: mid, o: 0.00, arc_scale: 1.00}
-    combo_ctrlz: { align: mid, o: 0.00, arc_scale: 1.00}
+    combo_ctrl_a: { align: mid, o: 0.00, arc_scale: 1.00}
+    combo_ctrl_z: { align: mid, o: 0.00, arc_scale: 1.00}
     # combo_leader: { align: top, o: 3.00, arc_scale: 1.00}
   # The keymaps are built from zmk-helpers macros (ZMK_LAYER_NAMED / ZMK_COMBO),
   # so the preprocessor needs helper.h or `keymap parse` fails with
