@@ -5,9 +5,11 @@ Everything here was checked against the repo rather than recalled, and each item
 says what it costs and what it risks.
 
 Ordering is by my own judgement of value, not by category. Items marked
-**verified** were confirmed by reading the files; items marked **needs a build**
-cannot be settled without compiling, because there is no `west`/`cmake` in the
-environment this review was done in.
+**verified** were confirmed by reading the files; items marked **partly fixed**
+have had some of their findings addressed and say which remain.
+
+Completed items are removed rather than kept as a changelog — git history holds
+that. What is listed here is only what is still outstanding.
 
 ---
 
@@ -136,120 +138,7 @@ after a push.
 
 ---
 
-## 2. Make the local shields ZMK Studio compatible — **needs a build**
-
-**This is the most consequential item.** You said you use or plan to use ZMK
-Studio, and two of the four boards currently cannot.
-
-Both local shields use the legacy matrix transform:
-
-```dts
-/* boards/shields/tempest/tempest.dtsi:13,17 */
-chosen { zmk,matrix_transform = &default_transform; };
-default_transform: keymap_transform_0 { compatible = "zmk,matrix-transform"; ... };
-```
-
-ZMK's `physical_layouts.c` computes:
-
-```c
-USE_PHY_LAYOUTS = DT_HAS_COMPAT_STATUS_OKAY(zmk_physical_layout)
-                  && !DT_HAS_CHOSEN(zmk,matrix_transform)
-```
-
-and then asserts:
-
-```c
-BUILD_ASSERT(!IS_ENABLED(CONFIG_ZMK_STUDIO) || USE_PHY_LAYOUTS,
-    "ISSUE FOUND: Keyboards require additional configuration to allow for "
-    "firmware with ZMK Studio enabled...");
-```
-
-Because `zmk,matrix_transform` is set, `USE_PHY_LAYOUTS` is false, so **enabling
-`CONFIG_ZMK_STUDIO=y` for tempest or seppelit would fail that assert.** ZMK also
-emits `#warning "Ignoring the physical layouts and using the chosen matrix
-transform."` in that state.
-
-Corne is already correct — it selects upstream's `foostan_corne_5col_layout`,
-which is a real `zmk,physical-layout` carrying a `keys` array, and sets no
-`chosen zmk,matrix-transform`.
-
-**Fix:** give each local shield a `zmk,physical-layout` with a `keys` array and a
-`transform` phandle, and drop the `chosen zmk,matrix-transform`. Studio also
-requires `keys`, so the 36 `key_physical_attrs` entries have to be authored — the
-existing `config/*.json` drawing layouts are the natural source for the geometry.
-
-**Note:** `ZMK_KEYMAP_LEN` is the maximum over all layouts, so the existing
-36-entry layers stay valid; no keymap change is needed.
-
-**Extra:** the two shields are **byte-identical** (verified: `diff` of
-`tempest.dtsi` and `seppelit.dtsi` is empty). Since you now ship four keyboards
-from one config, they could share a single common shield `.dtsi` with per-board
-overlays — the same deduplication that was applied to the `.conf` files.
-
----
-
-## 3. Restore the four TODOs lost in the refactor — **verified**
-
-The refactor deleted `config/keymap`, and with it four TODOs that recorded
-intended work. They are recoverable from git:
-
-```sh
-git show main:config/keymap | grep TODO
-```
-
-```
-// TODO: add generic mechanism to lock layers
-// TODO: add 2x rotary encoder - use Fxx or LANG1/LANG2 as free keycodes for AHK
-// TODO: add leader key: move AHK into keyboard to use all all machines - use C_AL_CALC/C_AC_SEARCH/C_AL_CAL
-// TODO: add trackball
-```
-
-Only `//TODO(heiko): not yet used` on `skm` survives today, and it is now
-misleading — `&skm` **is** used on the QWERTY thumb row (verified in
-`layers.dtsi`). The TODO is stale and should be dropped.
-
-These are cheap to restore and represent real intent, so they belong in
-`config/include/keys.h` or `behaviors.dtsi` rather than being lost.
-
----
-
-## 4. Adopt the zmk-helpers macros that are still bypassed — **partly verified**
-
-The refactor adopted `ZMK_LAYER`, `ZMK_COMBO` and the unicode module, but a lot
-of hand-written devicetree remains. Counts verified in the repo:
-
-| construct | hand-written now | zmk-helpers macro available |
-|---|---|---|
-| macros | **48** `ZMK_MACRO(...)` (correct — already the macro) | `ZMK_MACRO` ✅ in use |
-| hold-taps | **5** raw `compatible = "zmk,behavior-hold-tap"` | `ZMK_HOLD_TAP` |
-| mod-morphs | **4** raw `"zmk,behavior-mod-morph"` | `ZMK_MOD_MORPH` |
-| caps-word | **1** raw `"zmk,behavior-caps-word"` | `ZMK_CAPS_WORD` |
-| leader behaviors | **2** raw `"zmk,behavior-leader-key"` | ⚠️ see below |
-| sticky layer | `&sl { release-after-ms = <1500>; };` property override | `ZMK_STICKY_KEY` |
-
-Converting the 5 hold-taps, 4 mod-morphs and 1 caps-word is mechanical and low
-risk: each is a direct substitution with the same property list. It removes the
-`compatible`/`#binding-cells` boilerplate and makes the file consistent with
-`ZMK_MACRO` usage elsewhere in the same directory.
-
-**The leader behaviours are the exception, and `ZMK_LEADER_SEQUENCE` will not
-work for you.** Verified: zmk-helpers' macro expands to
-
-```c
-leader_sequences {
-    compatible = "zmk,leader-sequences";
-    leader_sequence_##name { bindings = <...>; key-positions = <...>; };
-};
-```
-
-but your leaders use urob's **`zmk-leader-key`** module
-(`compatible = "zmk,behavior-leader-key"`, `sequence = <...>`). Different driver,
-different properties. Adopting `ZMK_LEADER_SEQUENCE` would mean migrating the
-leader module, which is a much larger change than it looks.
-
----
-
-## 5. CI: stop rewriting history and stop redundant runs — **verified**
+## 2. CI: stop rewriting history and stop redundant runs — **verified**
 
 Three separate issues in `.github/workflows/`:
 
@@ -285,7 +174,7 @@ path exits 1, which would fail the draw job. Removing them for good means either
 
 ---
 
-## 6. Configuration inconsistencies — **verified**
+## 3. Configuration inconsistencies — **verified**
 
 **a. Duplicate keyboard name.** `tempest.conf` and `seppelit.conf` both set
 `CONFIG_ZMK_KEYBOARD_NAME="HeiKey"`, making the two indistinguishable when
@@ -303,7 +192,7 @@ but it is dead code until something needs a plain profile key.
 
 ---
 
-## 7. The equivalence harness is not wired into anything — **verified**
+## 4. The equivalence harness is not wired into anything — **verified**
 
 `scripts/verify_equivalence.py` is the strongest safety net in the repo: it
 compares *expanded behaviour* (preprocessed bindings per layer, resolved
@@ -316,20 +205,22 @@ this config is long-lived and hand-edited, that seems clearly worth it.
 
 ---
 
-## 8. Documentation drift — **verified**
+## 5. Documentation drift — **partly fixed**
 
-The README was rewritten during the refactor and has already drifted:
+The stale `just draw` claim has been corrected: the README said the recipe
+writes `img/*.yaml`, which stopped being true when it moved to a temp file.
+Two gaps remain:
 
-- **Line 121** still says `just draw` "writes `img/*.svg` and `img/*.yaml`".
-  It no longer writes the YAML; that was changed to a temp file with cleanup.
-- **No mention of Greek letters or the unicode module**, which is now a
-  significant feature with an OS-dependent setup step (WinCompose on Windows).
+- **No mention of the unicode module or the Greek letters**, now a significant
+  feature with OS-dependent setup: WinCompose on Windows, fcitx5's
+  `Ctrl+Shift+U` on Linux. There is also a timing subtlety
+  (`ZMK_UNICODE_TAP_MS`/`WAIT_MS`) that took real debugging to find.
 - **No mention of the `LEADER1b` pagination**, so a reader seeing that layer in
   the drawings has no explanation for it.
 
 ---
 
-## 9. Add the math symbols and operators — **verified, not started**
+## 6. Add the math symbols and operators — **verified, not started**
 
 NUMNAV now carries the vulgar fractions and the super/subscripts (19 combos and
 20 mod-morphs). The natural next step is the wider math set, which is large:
@@ -435,7 +326,7 @@ or adding a combo.
 
 ---
 
-## 10. Smaller items, lower value
+## 7. Smaller items, lower value
 
 **a. `corne_left.conf` / `corne_right.conf`** contain only
 `CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y` / `=n`. Corne is built from upstream's CRKBD
@@ -457,72 +348,56 @@ which is more logic than when it was written. Worth re-reading before the next
 change to it — but there is no obvious way to delete it while
 `zmk-leader-key` is in use.
 
-**d. ~~`skm` TODO is stale~~ — FIXED.** The comment said "not yet used" but
-`&skm` is used on the QWERTY thumb row; it now says so.
-
-**e. `m_ao` uses `&kp LC(LS(L))`** where the other three Outlook macros use the
+**d. `m_ao` uses `&kp LC(LS(L))`** where the other three Outlook macros use the
 same. **This is not a bug** — it was verified as consistent across all four and
 present in the original config, so it appears to be an intentional Word shortcut.
 Recorded here only so it does not get "fixed" by mistake later.
 
-**f. `zmk_macro_gen.py` is a working but undocumented tool** (208 lines). It
+**e. `zmk_macro_gen.py` is a working but undocumented tool** (208 lines). It
 turns typed text into a `ZMK_MACRO` block, which is presumably how the 43
 signature macros were written. It still runs correctly. It is not referenced
 from the README or the Justfile, so it is discoverable only by noticing the file.
 
 ---
 
-## 11. Dead and duplicated configuration — **verified**
+## 8. Dead and duplicated configuration — **partly fixed**
 
-The result of a systematic sweep for duplication, staleness and inconsistencies
-across every non-vendored file. Each finding was confirmed by reading the source
-of the thing that consumes it, not by inspection alone.
+The result of a systematic sweep for duplication, staleness and
+inconsistencies across every non-vendored file. Each finding was confirmed by
+reading the source of the thing that consumes it, not by inspection alone.
 
-### a. Three dead `zmk_combos` entries, and 14 dead commented ones
+### a. ~~Three dead `zmk_combos` entries~~ — FIXED
 
-`keymap_drawer.config.yaml` has a `zmk_combos` block that overrides combo
-rendering. keymap-drawer matches those keys against the **devicetree node name**
-(`zmk.py` line 269: `self.cfg.zmk_combos.get(node.name, {})`), which for
-`ZMK_COMBO(x, ...)` is `combo_x`.
+`keymap_drawer.config.yaml` has a `zmk_combos` block matched against the
+**devicetree node name** (`zmk.py`: `self.cfg.zmk_combos.get(node.name, {})`),
+which for `ZMK_COMBO(x, ...)` is `combo_x`. Three entries named nodes that do
+not exist, so they silently did nothing — keymap-drawer never validates
+unmatched keys. All three names are corrected, and the silent-failure behaviour
+is now noted inline in the config.
 
-Three entries reference nodes that no longer exist — so they silently do
-nothing, with no warning, because keymap-drawer never validates unmatched keys:
-
-```yaml
-combo_ctrlshiftcx: { align: top, o: 1.30, arc_scale: 1.00}   # real node: combo_ctrlshiftx
-combo_ctrla:       { align: mid, o: 0.00, arc_scale: 1.00}   # real node: combo_ctrl_a
-combo_ctrlz:       { align: mid, o: 0.00, arc_scale: 1.00}   # real node: combo_ctrl_z
-```
-
-The first is a genuine typo (`ctrlshiftcx` vs `ctrlshiftx`); the other two
-dropped an underscore. Fixing the names is the whole change — the values are
-already sensible.
-
-A further **11 commented-out** entries reference combos that exist and could be
-restored, and **3 commented entries are stale** (`combo_at`, `combo_underscore`,
-`combo_leader` — no such combos). Those 3 should go; the other 11 are a
-legitimate commented-out style choice.
+Still open: **3 commented-out** entries reference combos that do not exist
+(`combo_at`, `combo_underscore`, `combo_leader`) and could go. The other 11
+commented entries are valid alternatives, kept deliberately.
 
 ### b. The tempest and seppelit shields are near-duplicates
 
-`tempest.dtsi` and `seppelit.dtsi` are **byte-identical** (1897 bytes each).
-Every surrounding file differs only in names:
+The two shields are the same hardware definition twice. After the Studio change
+added the layouts files, the differences are:
 
 | file | difference |
 |---|---|
-| `*.dtsi` | **identical** |
-| `*_left.overlay` | one line: `#include "tempest.dtsi"` vs `"seppelit.dtsi"` |
+| `*.dtsi` | 4 lines: the layout include, the `zmk,physical-layout` label |
+| `*-layouts.dtsi` | 8 lines: comment, node label, `display-name` |
+| `*_left.overlay` | one line: the `#include` filename |
 | `*_right.overlay` | same single-line difference |
 | `Kconfig.defconfig` | shield symbol name, plus `default "HeiKey"` vs `"Seppelit"` |
 | `Kconfig.shield` | symbol names only |
 | `*.zmk.yml` | name and identifier only |
 
-So roughly **270 lines are duplicated to express one different name**. These are
-genuinely two keyboards with different physical wiring, so a shared shield is
-*not* automatically right — but if the matrices are the same by design rather
-than coincidence, a common `.dtsi` with two thin wrappers would remove the
-duplication. Worth confirming the two boards really do share a matrix before
-doing it.
+So roughly **350 lines are duplicated to express one different name**. These
+are genuinely two keyboards, so a shared definition is not automatically right —
+but the matrices are identical, and if that is by design rather than coincidence
+a common `.dtsi` with two thin wrappers would remove the duplication.
 
 Note `Kconfig.defconfig` also disagrees with the `.conf` files about the
 keyboard name: it says `default "Seppelit"` while `config/seppelit.conf` sets
@@ -553,7 +428,7 @@ Checked and clean:
   (483) share no code worth extracting — different parse strategies and
   different purposes.
 - **Unicode blocks**: three includes, each needed for a distinct code point
-  range (see item 9).
+  range (see item 6).
 
 ---
 
@@ -576,31 +451,20 @@ Worth stating explicitly, because they look like problems and are not:
 
 ## Suggested order
 
-1. **Local build (item 1)** — you need disk space first, but this is the one that
-   changes how fast every later change is verified. It also unblocks items 2
-   and 9, both of which say "needs a build".
-2. **Studio support for tempest/seppelit (item 2)** — you asked for it, it is
-   load-bearing for a feature you use, and it needs a build to confirm.
-3. **Fix the 3 dead `zmk_combos` keys (item 11a)** — three lines, no risk, and
-   they are silently doing nothing today.
-4. **Restore the TODOs (item 3)** — minutes of work, recovers intent.
-5. **Wire the harness and nesting guard into CI (item 7)** — protects everything
+1. **Local build (item 1)** — needs disk space first, but this is the one that
+   changes how fast every later change is verified, and it is the only way to
+   test the Studio work that is currently unbuilt.
+2. **Wire the harness and nesting guard into CI (item 4)** — protects everything
    else on this list.
-6. **CI hygiene (item 5)** — concurrency and `amend_commit`; removes recurring
+3. **CI hygiene (item 2)** — concurrency and `amend_commit`; removes recurring
    friction.
-7. **Config inconsistencies (item 6).**
-8. **Documentation (item 8).**
-9. **zmk-helpers macro adoption (item 4)** — hold-taps, mod-morphs and caps-word
-   are now done; only the two leader behaviours remain, and those are blocked on
-   the driver difference described there.
-10. **Shield duplication (item 11b)** — worth doing only after confirming the two
-    boards genuinely share a matrix.
-11. **Math symbols (item 9)** — optional and additive; pick the mechanism first,
-    since the free-space survey shows NUMNAV/MEDIA have room and SYMBOL does not.
-
-Items 2, 4 and 9 all touch code that is still being stabilised in CI, so they are
-best done once the current branch is green — and, once item 1 is in place, they
-can be verified locally rather than through the matrix.
+4. **Config inconsistencies (item 3).**
+5. **Documentation (item 5)** — the unicode/Greek setup notes are the most
+   valuable gap, since that feature has OS-dependent prerequisites.
+6. **Shield duplication (item 8b)** — only after confirming the two boards
+   genuinely share a matrix.
+7. **Math symbols (item 6)** — optional and additive; pick the mechanism first,
+   since the free-space survey shows NUMNAV/MEDIA have room and SYMBOL does not.
 
 ---
 
@@ -617,8 +481,8 @@ extended while adding the fractions and super/subscripts:
 - the golden reference was migrated to the new keys and its leftover legend-dedup
   suffixes removed.
 
-This matters for item 4: any change that relabels a combo no longer trips the
-harness, but any change that *moves* one still does.
+This matters for any combo work: a change that merely relabels a combo no
+longer trips the harness, but one that *moves* a combo still does.
 
 Note the harness cannot catch everything. It compares parsed keymaps, so it does
 not see devicetree structural errors — the `ZMK_MOD_MORPH` nesting bug passed
