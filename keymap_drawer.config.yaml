@@ -143,6 +143,35 @@ parse_config:
     "&leader2": "⟳ LDR2"
     # num_word: keeps NUMNAV active while only digits/separators are typed.
     "&num_word 1": "123 NUM"
+    # Combining marks for math notation (see keys.h). A combining mark has no
+    # glyph of its own, so each legend applies it to U+25CC DOTTED CIRCLE, the
+    # standard convention for showing a lone combining character.
+    "&uc 0x0300 0": "◌̀"
+    "&uc 0x0301 0": "◌́"
+    "&uc 0x0302 0": "◌̂"
+    "&uc 0x0303 0": "◌̃"
+    "&uc 0x0304 0": "◌̄"
+    "&uc 0x0305 0": "◌̅"
+    "&uc 0x0306 0": "◌̆"
+    "&uc 0x0307 0": "◌̇"
+    "&uc 0x0308 0": "◌̈"
+    "&uc 0x030A 0": "◌̊"
+    "&uc 0x030B 0": "◌̋"
+    "&uc 0x030C 0": "◌̌"
+    "&uc 0x030F 0": "◌̏"
+    "&uc 0x0311 0": "◌̑"
+    "&uc 0x0313 0": "◌̓"
+    "&uc 0x20D6 0": "◌⃖"
+    "&uc 0x20D7 0": "◌⃗"
+    "&uc 0x20E1 0": "◌⃡"
+    "&uc 0x20D0 0": "◌⃐"
+    "&uc 0x20D1 0": "◌⃑"
+    "&uc 0x20DD 0": "◌⃝"
+    "&uc 0x0323 0": "◌̣"
+    "&uc 0x0331 0": "◌̱"
+    "&uc 0x0335 0": "◌̵"
+    "&uc 0x0336 0": "◌̶"
+    "&uc 0x0338 0": "◌̸"
     # Vulgar fractions, chorded on NUMNAV digit pairs (see combos.dtsi). Mapped
     # to the glyph itself so the combo diagrams stay readable.
     "&uc UC_VULGAR_FRACTION_ONE_QUARTER": "¼"

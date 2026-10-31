@@ -42,9 +42,10 @@ corne's numbering was accidental and tempest's is correct):
   * combo_leader2     - corne previously sat on the home row (RM1 RM2);
                         now matches tempest's bottom row (RB0 RB1).
 
-These are declared in EXPECTED_DELTAS so that they are *asserted* to be the
-only differences. An unexpected difference fails the check; an expected one
-that fails to appear also fails (so the plan cannot silently drift).
+Those are declared in NORMALISATIONS. Layers that are changed on purpose are
+declared in EXPECTED_LAYER_DELTAS: an unexpected difference fails the check, and
+so does a declared one that fails to appear, so the list cannot drift out of
+date without anyone noticing.
 """
 
 from __future__ import annotations
@@ -74,7 +75,22 @@ KEYBOARDS = ["corne", "tempest", "seppelit", "sweep"]
 # check_normalisations(), which compares today's corne combos against the
 # recorded corne history. Keeping it there avoids the contradiction of both
 # "must differ" and "must match tempest".
-EXPECTED_DELTAS: dict[str, dict[str, dict[str, str]]] = {}
+# Layers that differ from the golden reference on purpose, with a note saying
+# why. Keyed by keyboard -> layer name -> reason.
+#
+# This exists so that a deliberate layer change has to be acknowledged rather
+# than silently passing, while still letting the layer's content be compared in
+# full. Unlike combos, a layer's whole binding list IS the identity, so there is
+# no key to match on - the layer name is the key.
+EXPECTED_LAYER_DELTAS: dict[str, dict[str, str]] = {
+    "*": {
+        # The ACCENT layer gained 26 combining marks for LaTeX/typst math
+        # notation (x-bar, vectors, carons ...). Previously those cells were
+        # &trans. The five pre-existing spacing accents are unchanged, and the
+        # layer still has 2 free cells on both 36-key and 34-key boards.
+        "ACCENT": "26 combining marks added for math notation",
+    },
+}
 
 # Combos that the refactor deliberately normalises from corne's historical
 # (accidental) keys to tempest's (correct) keys. Maps
@@ -353,13 +369,24 @@ def check(golden: dict) -> int:
             print(f"  i {kb}: compared against golden '{ref_name}' "
                   f"(same 36-key shape)")
 
-        # 1. layers
+        # 1. layers. A difference is a failure unless the layer is declared in
+        #    EXPECTED_LAYER_DELTAS, in which case it is reported and counted.
         for layer, old_keys in gold["layers"].items():
             new_keys = cur["layers"].get(layer)
             if new_keys is None:
                 failures.append(f"{kb}: layer {layer} disappeared")
             elif old_keys != new_keys:
-                failures.append(describe_diff(kb, "layers", layer, old_keys, new_keys))
+                reason = (
+                    EXPECTED_LAYER_DELTAS.get("*", {}).get(layer)
+                    or EXPECTED_LAYER_DELTAS.get(kb, {}).get(layer)
+                )
+                if reason:
+                    print(f"  ~ {kb}: layer {layer} changed on purpose ({reason})")
+                    expected_seen.add((kb, "layer", layer))
+                else:
+                    failures.append(
+                        describe_diff(kb, "layers", layer, old_keys, new_keys)
+                    )
 
         # 2. combos. A combo is identified by its binding legend + layer set,
         #    and we compare the resolved numeric position set. This is the

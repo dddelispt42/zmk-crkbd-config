@@ -70,6 +70,83 @@
 #include <zmk-unicode/keys/blocks/number_forms.h>
 
 /*
+ * COMBINING marks, for LaTeX/typst-style math notation: x-bar, vectors, hats,
+ * carons and the like.
+ *
+ * These are NOT from zmk-unicode. That module ships 319 blocks and none of them
+ * is the combining-marks block, so there is no UC_* alias for U+0304 and
+ * friends - it has MACRON only as precomposed letters (a-macron, a-breve). The
+ * aliases are therefore defined here directly.
+ *
+ * WHAT "COMBINING" MEANS, AND WHY IT IS NOT THE SAME AS THE ACCENT LAYER
+ *
+ * A combining mark is typed AFTER its base character and attaches to it:
+ *
+ *     x  then  U+0304  ->  x-bar     (one visual glyph, two code points)
+ *     v  then  U+20D7  ->  v-vector
+ *
+ * The marks already on the ACCENT layer are a different kind of character -
+ * spacing accents (category Sk/Sm) like the standalone diaeresis and acute,
+ * which sit on the baseline and do not attach to anything. Both kinds are
+ * useful and they coexist: the spacing ones for typing, these for math.
+ *
+ * Every code point below was checked against Python's unicodedata, and all but
+ * U+20DD are category Mn (non-spacing mark). U+20DD is Me (enclosing mark): it
+ * wraps the base character rather than sitting above it, e.g. a with a circle
+ * around it. It is typed the same way, base first.
+ *
+ * The &uc behavior takes a raw two-cell code point, which is exactly the form
+ * these defines use, so no wrapper is needed.
+ */
+
+/* Above: the standard accent set */
+#define UC_COMBINING_GRAVE               0x0300  0  /* combining grave */
+#define UC_COMBINING_ACUTE               0x0301  0  /* combining acute */
+#define UC_COMBINING_CIRCUMFLEX          0x0302  0  /* combining circumflex (hat) */
+#define UC_COMBINING_TILDE               0x0303  0  /* combining tilde */
+#define UC_COMBINING_MACRON              0x0304  0  /* combining macron (bar, mean) */
+#define UC_COMBINING_OVERLINE            0x0305  0  /* combining overline */
+#define UC_COMBINING_BREVE               0x0306  0  /* combining breve */
+#define UC_COMBINING_DOT_ABOVE           0x0307  0  /* combining dot above */
+#define UC_COMBINING_DIAERESIS           0x0308  0  /* combining diaeresis */
+#define UC_COMBINING_RING_ABOVE          0x030A  0  /* combining ring above */
+#define UC_COMBINING_DOUBLE_ACUTE        0x030B  0  /* combining double acute */
+#define UC_COMBINING_CARON               0x030C  0  /* combining caron (hacek) */
+#define UC_COMBINING_DOUBLE_GRAVE        0x030F  0  /* combining double grave */
+#define UC_COMBINING_INVERTED_BREVE      0x0311  0  /* combining inverted breve */
+#define UC_COMBINING_COMMA_ABOVE         0x0313  0  /* combining comma above */
+
+/* Above: arrows and harpoons, as used for vectors */
+#define UC_COMBINING_LEFT_ARROW_ABOVE        0x20D6  0  /* combining left arrow */
+#define UC_COMBINING_RIGHT_ARROW_ABOVE       0x20D7  0  /* combining right arrow */
+#define UC_COMBINING_LEFT_RIGHT_ARROW_ABOVE  0x20E1  0  /* combining left-right arrow */
+#define UC_COMBINING_LEFT_HARPOON_ABOVE      0x20D0  0  /* combining left harpoon */
+#define UC_COMBINING_RIGHT_HARPOON_ABOVE     0x20D1  0  /* combining right harpoon */
+
+/* Enclosing: wraps the base character */
+#define UC_COMBINING_ENCLOSING_CIRCLE    0x20DD  0  /* circle around the char */
+
+/* Below: the two with real math use */
+#define UC_COMBINING_DOT_BELOW           0x0323  0  /* combining dot below */
+#define UC_COMBINING_MACRON_BELOW        0x0331  0  /* combining macron below */
+
+/*
+ * Deliberately NOT defined: ring below, cedilla, ogonek and low line as
+ * below-marks, and every enclosing variant other than the circle.
+ *
+ * The ACCENT layer has 28 free cells on both boards (verified by counting the
+ * &trans entries in the parsed keymap: 36 bindings with 8 used on the 36-key
+ * boards, 34 with 6 used on sweep - 28 free either way). The 26 marks above
+ * leave 2 spare. The four omitted ones are the least used in LaTeX/typst math;
+ * add them here if a use appears.
+ */
+
+/* Overlays: strike-through and cancellation marks */
+#define UC_COMBINING_SHORT_STROKE_OVERLAY  0x0335  0  /* short stroke overlay */
+#define UC_COMBINING_LONG_STROKE_OVERLAY   0x0336  0  /* long stroke overlay (cancel) */
+#define UC_COMBINING_LONG_SOLIDUS_OVERLAY  0x0338  0  /* long solidus (not-equal slash) */
+
+/*
  * zmk-auto-layer: provides &num_word.
  *
  * &num_word LAYER activates LAYER and keeps it active for as long as only

@@ -206,17 +206,28 @@ ZMK_LAYER_NAMED(lock, "LOCK",
 
 ZMK_LAYER_NAMED(accent, "ACCENT",
     // -------------------------------------------------------------------------------
-    // |      |     |     |     |     |     |   |     |     |     |     |     |      |
-    // |      |     |     |     |     |     |   |  ¨  |  ´  |  ~  |  ^  |  `  |      |
-    // |      |  ç  |     |     |     |     |   |     |     |     |     |     |      |
-    //                    |     |     |     |   |     |     |     |
-    &trans &trans &trans &trans &trans  &trans &trans &trans &trans &trans
-    &trans &trans &trans &trans &trans  &kp PT_UMLAUT &kp PT_ACUTE &kp PT_TILDE &kp PT_CARET &kp PT_GRAVE
-    &kp PT_C_CEDILLA &trans &trans &trans &trans  &trans &trans &trans &trans &trans
+    // COMBINING marks for math notation, plus the pre-existing spacing accents.
+    //
+    // A combining mark is typed AFTER its base character and attaches to it:
+    // type x then MACRON and you get x-bar. That is what LaTeX/typst math needs.
+    // The five spacing accents on the right home row (¨ ´ ~ ^ `) are a different
+    // kind of character - they do not attach to anything - and are unchanged.
+    //
+    // There is no combining-marks block in zmk-unicode, so the code points are
+    // defined in keys.h. 26 marks fit in the 28 free cells; see the note there
+    // for which four below-marks are deliberately omitted.
+    // -------------------------------------------------------------------------------
+    // |      |  `  |  ´  |  ˆ  |  ˜  |  ¯  |   |  ‾  |  ˘  |  ˙  |  ¨  |  ˚  |      |
+    // |      |  ˝  |  ˇ  |  ̏  |  ̑  |  ̓  |   |  ¨  |  ´  |  ~  |  ^  |  `  |      |
+    // |      |  ç  |  ←  |  →  |  ↔  |  ⃐  |   |  ⃑  |  ⃝  |  ̣  |  ̱  |  ̶  |      |
+    //                    |  ̵  |  ̸  | LDR1|   |     | RPT |     |
+    &uc UC_COMBINING_GRAVE &uc UC_COMBINING_ACUTE &uc UC_COMBINING_CIRCUMFLEX &uc UC_COMBINING_TILDE &uc UC_COMBINING_MACRON  &uc UC_COMBINING_OVERLINE &uc UC_COMBINING_BREVE &uc UC_COMBINING_DOT_ABOVE &uc UC_COMBINING_DIAERESIS &uc UC_COMBINING_RING_ABOVE
+    &uc UC_COMBINING_DOUBLE_ACUTE &uc UC_COMBINING_CARON &uc UC_COMBINING_DOUBLE_GRAVE &uc UC_COMBINING_INVERTED_BREVE &uc UC_COMBINING_COMMA_ABOVE  &kp PT_UMLAUT &kp PT_ACUTE &kp PT_TILDE &kp PT_CARET &kp PT_GRAVE
+    &kp PT_C_CEDILLA &uc UC_COMBINING_LEFT_ARROW_ABOVE &uc UC_COMBINING_RIGHT_ARROW_ABOVE &uc UC_COMBINING_LEFT_RIGHT_ARROW_ABOVE &uc UC_COMBINING_LEFT_HARPOON_ABOVE  &uc UC_COMBINING_RIGHT_HARPOON_ABOVE &uc UC_COMBINING_ENCLOSING_CIRCLE &uc UC_COMBINING_DOT_BELOW &uc UC_COMBINING_MACRON_BELOW &uc UC_COMBINING_LONG_STROKE_OVERLAY
 #ifdef ZMK_KB_34
-    &trans &trans &trans &trans
+    &uc UC_COMBINING_SHORT_STROKE_OVERLAY &uc UC_COMBINING_LONG_SOLIDUS_OVERLAY &trans &trans
 #else
-    &leader1 &trans &trans &trans &trans &key_repeat
+    &leader1 &uc UC_COMBINING_SHORT_STROKE_OVERLAY &uc UC_COMBINING_LONG_SOLIDUS_OVERLAY &trans &trans &key_repeat
 #endif
 )
 
