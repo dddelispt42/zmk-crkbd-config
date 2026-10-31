@@ -236,11 +236,26 @@ ZMK_MOD_MORPH(num_sub_N0, bindings = <&kp N0 &uc UC_SUBSCRIPT_ZERO>; mods = <(MO
 
         /* Unicode input defaults to Windows (WinCompose). Picking a Bluetooth
          * profile on the BLUETH layer switches this to match the machine, and
-         * the UXL/UXW/UXM leader sequences override it manually. */
-        uc: unicode {
-            compatible = "zmk,behavior-unicode";
-            #binding-cells = <2>;
-            default-mode = <UC_MODE_WIN_COMPOSE>;
-        };
+         * the UXL/UXW/UXM leader sequences override it manually.
+         *
+         * Note: the uc node itself is defined by <behaviors/unicode.dtsi> and is
+         * overridden by reference below, outside this behaviors block. Defining
+         * it again here would shadow the module's node and lose its
+         * display-name. */
     };
+};
+
+/*
+ * Override the unicode behavior's boot default.
+ *
+ * By reference rather than redefinition, so the module's node keeps its other
+ * properties. Same pattern as the `&sl { release-after-ms = ...; }` override
+ * near the top of this file.
+ *
+ * UC_MODE_WIN_COMPOSE is the boot default because the Windows machine is
+ * profile 0. The BLUETH profile keys switch this to match whichever machine is
+ * connected, and the UXL/UXW/UXM leader sequences override it manually.
+ */
+&uc {
+    default-mode = <UC_MODE_WIN_COMPOSE>;
 };
