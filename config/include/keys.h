@@ -132,9 +132,25 @@
 #define LOCK   10
 #define ACCENT 11
 
-/* Macro timing. */
-#define MACRO_TAP 10
-#define MACRO_WAIT 0
+/*
+ * Macro timing.
+ *
+ * wait-ms is the delay before triggering the NEXT behavior in the binding list,
+ * tap-ms the delay between press and release of a tapped binding (per ZMK's
+ * macro_base.yaml). Both are used by every ZMK_MACRO in macros.dtsi.
+ *
+ * wait-ms was 0, which queues all bindings back-to-back with no gap. The longer
+ * signature macros (m_sig_mo is 21 keys) then drop or fuse events on some
+ * hosts - observed as a missing RET in one run and an un-released final O in
+ * another, on both Linux and Windows. That points at the burst rather than at
+ * any one host or the leader key itself.
+ *
+ * These are the same defaults zmk-unicode needed for its input sequences, and
+ * the same reasoning applies: give the host time to see each key separately.
+ * The cost is a few tens of ms per macro invocation.
+ */
+#define MACRO_TAP 20
+#define MACRO_WAIT 8
 
 /* Short aliases used throughout the layer/behaviour definitions. */
 

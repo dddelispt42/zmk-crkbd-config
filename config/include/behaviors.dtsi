@@ -14,6 +14,32 @@
     release-after-ms = <1500>;
 };
 
+/*
+ * Mouse scroll speed.
+ *
+ * ZMK defines the msc behavior in app/dts/behaviors/mouse_scroll.dtsi with
+ *
+ *     time-to-max-speed-ms = <300>;
+ *     acceleration-exponent = <0>;      // no acceleration
+ *
+ * An exponent of 0 means the speed never ramps up: holding the key repeats the
+ * same small delta (SCRL_VAL, set to 30 in keys.h) forever, which makes held
+ * scrolling painfully slow. Raising the exponent lets a held key accelerate up
+ * to the max speed over time-to-max-speed-ms, which is what makes holding it
+ * useful; a single tap still moves one step.
+ *
+ * trigger-period-ms is lowered from the 16 ms default so the accelerated
+ * scrolling is delivered more smoothly once it does ramp up.
+ *
+ * Overridden by reference so the module's node keeps its other properties -
+ * the same pattern as the &sl override above.
+ */
+&msc {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <200>;
+    trigger-period-ms = <10>;
+};
+
 
 
 /*
