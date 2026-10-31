@@ -5,7 +5,7 @@
 #define URMR(k1,k2,k3,k4,k5) &urm MEDIA k1  &urm WMCFG  k2  &urm MSOUTL k3  &urm MACROS k4  &urm BLUETH k5
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &hm LGUI   k1  &hm LCTRL k2  &hm LALT  k3  &hms LSHIFT k4
-#define HRMR(k1,k2,k3,k4) &hms RSHIFT k1  &hm LALT  k2  &hm LCTRL k3  &hm RGUI   k4
+#define HRMR(k1,k2,k3,k4) &hms RSHIFT k1  &hm LALT  k2  &hm LCTRL k3  &hm LGUI   k4
 // Lower row mods macro
 #define LRML(k1,k2,k3,k4) &kp k1  &hm RCTRL k2  &hm RALT  k3  &kp k4
 #define LRMR(k1,k2,k3,k4) &kp k1  &hm RALT  k2  &hm RCTRL k3  &hm K_CMENU k4
