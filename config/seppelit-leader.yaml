@@ -12,7 +12,7 @@ layers:
   - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}]
   LEADER2:
-  - [{t: "BLE", h: "BLE"}, {t: "BN0", h: "BT 0"}, {t: "BN1", h: "BT 1"}, {t: "BN2", h: "BT 2"}, {t: "BOOT", h: "Bootloader"}, {t: "CLEAR", h: "BT clear"}, {t: "RESET", h: "Reset"}, {t: "USB", h: "USB"}, {t: "UXL", h: "uc UC_SET_LINUX_ALT"}, {t: "UXM", h: "uc UC_SET_MACOS"}]
+  - [{t: "BLE", h: "BLE"}, {t: "BN0", h: "BT 0"}, {t: "BN1", h: "BT 1"}, {t: "BN2", h: "BT 2"}, {t: "BOOT", h: "Bootloader"}, {t: "CLEAR", h: "BT clear"}, {t: "RESET", h: "Reset"}, {t: "USB", h: "USB"}, {t: "UXL", h: "uc UC_SET_LINUX"}, {t: "UXM", h: "uc UC_SET_MACOS"}]
   - [{t: "UXW", h: "uc UC_SET_WIN_COMPOSE"}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
   - [{}, {}, {}, {}, {}, {}]

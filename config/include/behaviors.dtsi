@@ -227,7 +227,7 @@ ZMK_MOD_MORPH(num_sub_N0, bindings = <&kp N0 &uc UC_SUBSCRIPT_ZERO>; mods = <(MO
             //   UXL = Linux / fcitx5
             //   UXW = Windows (needs WinCompose installed)
             //   UXM = macOS
-            uxl { sequence = <U X L>; bindings = <&uc UC_SET_LINUX_ALT>; };
+            uxl { sequence = <U X L>; bindings = <&uc UC_SET_LINUX>; };
             uxw { sequence = <U X W>; bindings = <&uc UC_SET_WIN_COMPOSE>; };
             uxm { sequence = <U X M>; bindings = <&uc UC_SET_MACOS>; };
         };
