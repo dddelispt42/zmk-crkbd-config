@@ -19,19 +19,19 @@ disabled.
 | `E A N C H O R` | `anchor` | ⚓ | active |
 | `E A N G E R` | `anger` | 💢 | active |
 | `E A N T` | `ant` | 🐜 | active |
-| `E A P P L E DOT R E D` | `apple.red` | 🍎 | active |
-| `E A R M DOT M U S C L E` | `arm.muscle` | 💪 | active |
-| `E A R R O W DOT B DOT F I L L E D` | `arrow.b.filled` | ⬇ | active |
-| `E A R R O W DOT B L` | `arrow.bl` | ↙ | active |
-| `E A R R O W DOT B R` | `arrow.br` | ↘ | active |
-| `E A R R O W DOT L DOT F I L L E D` | `arrow.l.filled` | ⬅ | active |
-| `E A R R O W DOT L DOT R` | `arrow.l.r` | ↔ | active |
-| `E A R R O W DOT R DOT F I L L E D` | `arrow.r.filled` | ➡ | active |
-| `E A R R O W DOT T DOT B` | `arrow.t.b` | ↕ | active |
-| `E A R R O W DOT T DOT F I L L E D` | `arrow.t.filled` | ⬆ | active |
-| `E A R R O W DOT T L` | `arrow.tl` | ↖ | active |
-| `E A R R O W DOT T R` | `arrow.tr` | ↗ | active |
-| `E A R R O W S DOT C Y C L E` | `arrows.cycle` | 🔄 | active |
+| `E A P P L E R E D` | `apple.red` | 🍎 | active |
+| `E A R M M U S C L E` | `arm.muscle` | 💪 | active |
+| `E A R R O W B F I L L E D` | `arrow.b.filled` | ⬇ | active |
+| `E A R R O W B L` | `arrow.bl` | ↙ | active |
+| `E A R R O W B R` | `arrow.br` | ↘ | active |
+| `E A R R O W L F I L L E D` | `arrow.l.filled` | ⬅ | active |
+| `E A R R O W L R` | `arrow.l.r` | ↔ | active |
+| `E A R R O W R F I L L E D` | `arrow.r.filled` | ➡ | active |
+| `E A R R O W T B` | `arrow.t.b` | ↕ | active |
+| `E A R R O W T F I L L E D` | `arrow.t.filled` | ⬆ | active |
+| `E A R R O W T L` | `arrow.tl` | ↖ | active |
+| `E A R R O W T R` | `arrow.tr` | ↗ | active |
+| `E A R R O W S C Y C L E` | `arrows.cycle` | 🔄 | active |
 | `E A S T` | `ast` | * | active |
 | `E A T M` | `atm` | 🏧 | active |
 | `E A T O M` | `atom` | ⚛ | active |
@@ -66,7 +66,7 @@ disabled.
 | `E B L O U S E` | `blouse` | 👚 | active |
 | `E B L U E H E A R T` | `blueHeart` | 💙 | renamed from `heart.blue` |
 | `E B O A R` | `boar` | 🐗 | active |
-| `E B O A T DOT S A I L` | `boat.sail` | ⛵ | active |
+| `E B O A T S A I L` | `boat.sail` | ⛵ | active |
 | `E B O L T` | `bolt` | 🔩 | active |
 | `E B O M B` | `bomb` | 💣 | active |
 | `E B O N E` | `bone` | 🦴 | active |
@@ -82,16 +82,16 @@ disabled.
 | `E B R O K E N H E A R T` | `brokenHeart` | 💔 | renamed from `heart.broken` |
 | `E B R O O M` | `broom` | 🧹 | active |
 | `E B R U S H` | `brush` | 🖌 | active |
-| `E B U B B L E DOT A N G E R DOT R` | `bubble.anger.r` | 🗯 | active |
-| `E B U B B L E DOT S P E E C H DOT R` | `bubble.speech.r` | 💬 | active |
-| `E B U B B L E DOT T H O U G H T` | `bubble.thought` | 💭 | active |
+| `E B U B B L E A N G E R R` | `bubble.anger.r` | 🗯 | active |
+| `E B U B B L E S P E E C H R` | `bubble.speech.r` | 💬 | active |
+| `E B U B B L E T H O U G H T` | `bubble.thought` | 💭 | active |
 | `E B U C K E T` | `bucket` | 🪣 | active |
 | `E B U G` | `bug` | 🐛 | active |
 | `E B U R G E R` | `burger` | 🍔 | active |
 | `E B U S` | `bus` | 🚌 | active |
 | `E B U T T E R` | `butter` | 🧈 | active |
 | `E B U T T O N` | `button` | 🔲 | active |
-| `E C A B I N E T DOT F I L E` | `cabinet.file` | 🗄 | active |
+| `E C A B I N E T F I L E` | `cabinet.file` | 🗄 | active |
 | `E C A C T U S` | `cactus` | 🌵 | active |
 | `E C A K E` | `cake` | 🎂 | active |
 | `E C A L E N D A R` | `calendar` | 📅 | active |
@@ -99,41 +99,41 @@ disabled.
 | `E C A M E R A` | `camera` | 📷 | active |
 | `E C A N` | `can` | 🥫 | active |
 | `E C A R` | `car` | 🚗 | active |
-| `E C A T DOT F A C E` | `cat.face` | 🐱 | active |
+| `E C A T F A C E` | `cat.face` | 🐱 | active |
 | `E C H A I N` | `chain` | 🔗 | active |
 | `E C H A I R` | `chair` | 🪑 | active |
-| `E C H A R T DOT B A R` | `chart.bar` | 📊 | active |
-| `E C H A R T DOT D O W N` | `chart.down` | 📉 | active |
-| `E C H A R T DOT U P` | `chart.up` | 📈 | active |
-| `E C H E C K M A R K DOT B O X` | `checkmark.box` | ✅ | active |
-| `E C H E C K M A R K DOT H E A V Y` | `checkmark.heavy` | ✔ | active |
+| `E C H A R T B A R` | `chart.bar` | 📊 | active |
+| `E C H A R T D O W N` | `chart.down` | 📉 | active |
+| `E C H A R T U P` | `chart.up` | 📈 | active |
+| `E C H E C K M A R K B O X` | `checkmark.box` | ✅ | active |
+| `E C H E C K M A R K H E A V Y` | `checkmark.heavy` | ✔ | active |
 | `E C H E E S E` | `cheese` | 🧀 | active |
 | `E C H E S S` | `chess` | ♟ | active |
 | `E C H I L D` | `child` | 🧒 | active |
 | `E C H O C O L A T E` | `chocolate` | 🍫 | active |
 | `E C H U R C H` | `church` | ⛪ | active |
-| `E C I R C L E DOT B L A C K` | `circle.black` | ⚫ | active |
-| `E C I R C L E DOT B L U E` | `circle.blue` | 🔵 | active |
-| `E C I R C L E DOT G R E E N` | `circle.green` | 🟢 | active |
-| `E C I R C L E DOT O R A N G E` | `circle.orange` | 🟠 | active |
-| `E C I R C L E DOT P U R P L E` | `circle.purple` | 🟣 | active |
-| `E C I R C L E DOT R E D` | `circle.red` | 🔴 | active |
-| `E C I R C L E DOT W H I T E` | `circle.white` | ⚪ | active |
-| `E C I R C L E DOT Y E L L O W` | `circle.yellow` | 🟡 | active |
+| `E C I R C L E B L A C K` | `circle.black` | ⚫ | active |
+| `E C I R C L E B L U E` | `circle.blue` | 🔵 | active |
+| `E C I R C L E G R E E N` | `circle.green` | 🟢 | active |
+| `E C I R C L E O R A N G E` | `circle.orange` | 🟠 | active |
+| `E C I R C L E P U R P L E` | `circle.purple` | 🟣 | active |
+| `E C I R C L E R E D` | `circle.red` | 🔴 | active |
+| `E C I R C L E W H I T E` | `circle.white` | ⚪ | active |
+| `E C I R C L E Y E L L O W` | `circle.yellow` | 🟡 | active |
 | `E C I T Y` | `city` | 🏙 | active |
 | `E C L A M P` | `clamp` | 🗜 | active |
 | `E C L I P` | `clip` | 📎 | active |
-| `E C L O C K DOT A L A R M` | `clock.alarm` | ⏰ | active |
-| `E C L O C K DOT F I V E` | `clock.five` | 🕔 | active |
-| `E C L O C K DOT F O U R` | `clock.four` | 🕓 | active |
-| `E C L O C K DOT O N E` | `clock.one` | 🕐 | active |
-| `E C L O C K DOT S I X` | `clock.six` | 🕕 | active |
-| `E C L O C K DOT T H R E E` | `clock.three` | 🕒 | active |
-| `E C L O C K DOT T I M E R` | `clock.timer` | ⏲ | active |
-| `E C L O C K DOT T W O` | `clock.two` | 🕑 | active |
-| `E C L O U D DOT R A I N` | `cloud.rain` | 🌧 | active |
-| `E C L O U D DOT S T O R M` | `cloud.storm` | ⛈ | active |
-| `E C L O U D DOT S U N` | `cloud.sun` | ⛅ | active |
+| `E C L O C K A L A R M` | `clock.alarm` | ⏰ | active |
+| `E C L O C K F I V E` | `clock.five` | 🕔 | active |
+| `E C L O C K F O U R` | `clock.four` | 🕓 | active |
+| `E C L O C K O N E` | `clock.one` | 🕐 | active |
+| `E C L O C K S I X` | `clock.six` | 🕕 | active |
+| `E C L O C K T H R E E` | `clock.three` | 🕒 | active |
+| `E C L O C K T I M E R` | `clock.timer` | ⏲ | active |
+| `E C L O C K T W O` | `clock.two` | 🕑 | active |
+| `E C L O U D R A I N` | `cloud.rain` | 🌧 | active |
+| `E C L O U D S T O R M` | `cloud.storm` | ⛈ | active |
+| `E C L O U D S U N` | `cloud.sun` | ⛅ | active |
 | `E C O A T` | `coat` | 🧥 | active |
 | `E C O F F E E` | `coffee` | ☕ | active |
 | `E C O I N` | `coin` | 🪙 | active |
@@ -154,7 +154,7 @@ disabled.
 | `E D E E R` | `deer` | 🦌 | active |
 | `E D I E` | `die` | 🎲 | active |
 | `E D O D O` | `dodo` | 🦤 | active |
-| `E D O G DOT F A C E` | `dog.face` | 🐶 | active |
+| `E D O G F A C E` | `dog.face` | 🐶 | active |
 | `E D O N U T` | `donut` | 🍩 | active |
 | `E D O O R` | `door` | 🚪 | active |
 | `E D O U B L E E X C L` | `doubleExcl` | ‼ | renamed from `excl.double` |
@@ -170,48 +170,48 @@ disabled.
 | `E E X C L` | `excl` | ❗ | active |
 | `E E X P L O S I O N` | `explosion` | 💥 | active |
 | `E E Y E` | `eye` | 👁 | active |
-| `E F A C E DOT C O O L` | `face.cool` | 😎 | active |
-| `E F A C E DOT C R Y` | `face.cry` | 😭 | active |
-| `E F A C E DOT E X P L O D E` | `face.explode` | 🤯 | active |
-| `E F A C E DOT G R I N` | `face.grin` | 😀 | active |
-| `E F A C E DOT H A L O` | `face.halo` | 😇 | active |
-| `E F A C E DOT H A P P Y` | `face.happy` | 😊 | active |
-| `E F A C E DOT H E A R T` | `face.heart` | 😍 | active |
-| `E F A C E DOT I N V` | `face.inv` | 🙃 | active |
-| `E F A C E DOT J O Y` | `face.joy` | 😂 | active |
-| `E F A C E DOT N A U S E A` | `face.nausea` | 🤢 | active |
-| `E F A C E DOT N E U T R A L` | `face.neutral` | 😐 | active |
-| `E F A C E DOT P A R T Y` | `face.party` | 🥳 | active |
-| `E F A C E DOT P L E A D` | `face.plead` | 🥺 | active |
-| `E F A C E DOT R O F L` | `face.rofl` | 🤣 | active |
-| `E F A C E DOT S A L U T E` | `face.salute` | 🫡 | active |
-| `E F A C E DOT S H O C K` | `face.shock` | 😱 | active |
-| `E F A C E DOT S L E E P` | `face.sleep` | 😴 | active |
-| `E F A C E DOT S M I L E DOT S W E A T` | `face.smile.sweat` | 😅 | active |
-| `E F A C E DOT S T R A I G H T` | `face.straight` | 😑 | active |
-| `E F A C E DOT T E A R` | `face.tear` | 😢 | active |
-| `E F A C E DOT T H I N K` | `face.think` | 🤔 | active |
-| `E F A C E DOT W I N K` | `face.wink` | 😉 | active |
+| `E F A C E C O O L` | `face.cool` | 😎 | active |
+| `E F A C E C R Y` | `face.cry` | 😭 | active |
+| `E F A C E E X P L O D E` | `face.explode` | 🤯 | active |
+| `E F A C E G R I N` | `face.grin` | 😀 | active |
+| `E F A C E H A L O` | `face.halo` | 😇 | active |
+| `E F A C E H A P P Y` | `face.happy` | 😊 | active |
+| `E F A C E H E A R T` | `face.heart` | 😍 | active |
+| `E F A C E I N V` | `face.inv` | 🙃 | active |
+| `E F A C E J O Y` | `face.joy` | 😂 | active |
+| `E F A C E N A U S E A` | `face.nausea` | 🤢 | active |
+| `E F A C E N E U T R A L` | `face.neutral` | 😐 | active |
+| `E F A C E P A R T Y` | `face.party` | 🥳 | active |
+| `E F A C E P L E A D` | `face.plead` | 🥺 | active |
+| `E F A C E R O F L` | `face.rofl` | 🤣 | active |
+| `E F A C E S A L U T E` | `face.salute` | 🫡 | active |
+| `E F A C E S H O C K` | `face.shock` | 😱 | active |
+| `E F A C E S L E E P` | `face.sleep` | 😴 | active |
+| `E F A C E S M I L E S W E A T` | `face.smile.sweat` | 😅 | active |
+| `E F A C E S T R A I G H T` | `face.straight` | 😑 | active |
+| `E F A C E T E A R` | `face.tear` | 😢 | active |
+| `E F A C E T H I N K` | `face.think` | 🤔 | active |
+| `E F A C E W I N K` | `face.wink` | 😉 | active |
 | `E F A I R Y` | `fairy` | 🧚 | active |
-| `E F A I T H DOT C H R I S T` | `faith.christ` | ✝ | active |
-| `E F A I T H DOT I S L A M` | `faith.islam` | ☪ | active |
-| `E F A I T H DOT O M` | `faith.om` | 🕉 | active |
-| `E F A I T H DOT P E A C E` | `faith.peace` | ☮ | active |
-| `E F A I T H DOT Y I N Y A N G` | `faith.yinyang` | ☯ | active |
+| `E F A I T H C H R I S T` | `faith.christ` | ✝ | active |
+| `E F A I T H I S L A M` | `faith.islam` | ☪ | active |
+| `E F A I T H O M` | `faith.om` | 🕉 | active |
+| `E F A I T H P E A C E` | `faith.peace` | ☮ | active |
+| `E F A I T H Y I N Y A N G` | `faith.yinyang` | ☯ | active |
 | `E F A X` | `fax` | 📠 | active |
 | `E F I L E D I V I D E R S` | `filedividers` | 🗂 | active |
 | `E F I L M` | `film` | 🎞 | active |
-| `E F I N G E R DOT B` | `finger.b` | 👇 | active |
-| `E F I N G E R DOT L` | `finger.l` | 👈 | active |
-| `E F I N G E R DOT R` | `finger.r` | 👉 | active |
+| `E F I N G E R B` | `finger.b` | 👇 | active |
+| `E F I N G E R L` | `finger.l` | 👈 | active |
+| `E F I N G E R R` | `finger.r` | 👉 | active |
 | `E F I N G E R DOT T DOT A L T` | `finger.t.alt` | ☝ | active |
 | `E F I N G E R T` | `fingerT` | 👆 | renamed from `finger.t` |
-| `E F I N G E R S DOT C R O S S` | `fingers.cross` | 🤞 | active |
+| `E F I N G E R S C R O S S` | `fingers.cross` | 🤞 | active |
 | `E F I R E` | `fire` | 🔥 | active |
 | `E F I S H` | `fish` | 🐟 | active |
 | `E F L E U R` | `fleur` | ⚜ | active |
-| `E F L O W E R DOT P I N K` | `flower.pink` | 🌸 | active |
-| `E F L O W E R DOT S U N` | `flower.sun` | 🌻 | active |
+| `E F L O W E R P I N K` | `flower.pink` | 🌸 | active |
+| `E F L O W E R S U N` | `flower.sun` | 🌻 | active |
 | `E F L U T E` | `flute` | 🪈 | active |
 | `E F L Y` | `fly` | 🪰 | active |
 | `E F O G` | `fog` | 🌫 | active |
@@ -225,9 +225,9 @@ disabled.
 | `E G E N I E` | `genie` | 🧞 | active |
 | `E G H O S T` | `ghost` | 👻 | active |
 | `E G I R L` | `girl` | 👧 | active |
-| `E G L O B E DOT A M` | `globe.am` | 🌎 | active |
-| `E G L O B E DOT A S DOT A U` | `globe.as.au` | 🌏 | active |
-| `E G L O B E DOT E U DOT A F` | `globe.eu.af` | 🌍 | active |
+| `E G L O B E A M` | `globe.am` | 🌎 | active |
+| `E G L O B E A S A U` | `globe.as.au` | 🌏 | active |
+| `E G L O B E E U A F` | `globe.eu.af` | 🌍 | active |
 | `E G L O W S T A R` | `glowStar` | 🌟 | renamed from `star.glow` |
 | `E G O A L` | `goal` | 🥅 | active |
 | `E G O A T` | `goat` | 🐐 | active |
@@ -236,16 +236,16 @@ disabled.
 | `E G R E E N H E A R T` | `greenHeart` | 💚 | renamed from `heart.green` |
 | `E H A M M E R` | `hammer` | 🔨 | active |
 | `E H A M S A` | `hamsa` | 🪬 | active |
-| `E H A N D DOT C A L L` | `hand.call` | 🤙 | active |
-| `E H A N D DOT O K` | `hand.ok` | 👌 | active |
-| `E H A N D DOT P E A C E` | `hand.peace` | ✌ | active |
-| `E H A N D DOT R A I S E D` | `hand.raised` | ✋ | active |
-| `E H A N D DOT S P L A Y` | `hand.splay` | 🖐 | active |
-| `E H A N D DOT W A V E` | `hand.wave` | 👋 | active |
-| `E H A N D S DOT C L A P` | `hands.clap` | 👏 | active |
-| `E H A N D S DOT F O L D E D` | `hands.folded` | 🙏 | active |
-| `E H A N D S DOT R A I S E D` | `hands.raised` | 🙌 | active |
-| `E H A N D S DOT S H A K E` | `hands.shake` | 🤝 | active |
+| `E H A N D C A L L` | `hand.call` | 🤙 | active |
+| `E H A N D O K` | `hand.ok` | 👌 | active |
+| `E H A N D P E A C E` | `hand.peace` | ✌ | active |
+| `E H A N D R A I S E D` | `hand.raised` | ✋ | active |
+| `E H A N D S P L A Y` | `hand.splay` | 🖐 | active |
+| `E H A N D W A V E` | `hand.wave` | 👋 | active |
+| `E H A N D S C L A P` | `hands.clap` | 👏 | active |
+| `E H A N D S F O L D E D` | `hands.folded` | 🙏 | active |
+| `E H A N D S R A I S E D` | `hands.raised` | 🙌 | active |
+| `E H A N D S S H A K E` | `hands.shake` | 🤝 | active |
 | `E H A R P` | `harp` | 🪉 | active |
 | `E H A S H` | `hash` | # | active |
 | `E H E A R T` | `heart` | ❤ | active |
@@ -257,7 +257,7 @@ disabled.
 | `E H O R S E` | `horse` | 🐎 | active |
 | `E H O S P I T A L` | `hospital` | 🏥 | active |
 | `E H O T E L` | `hotel` | 🏨 | active |
-| `E H O U R G L A S S DOT F L O W` | `hourglass.flow` | ⏳ | active |
+| `E H O U R G L A S S F L O W` | `hourglass.flow` | ⏳ | active |
 | `E H O U S E` | `house` | 🏠 | active |
 | `E H U T` | `hut` | 🛖 | active |
 | `E I C E` | `ice` | 🧊 | active |
@@ -268,7 +268,7 @@ disabled.
 | `E J U I C E` | `juice` | 🧃 | active |
 | `E K A A B A` | `kaaba` | 🕋 | active |
 | `E K E B A B` | `kebab` | 🥙 | active |
-| `E K E Y DOT O L D` | `key.old` | 🗝 | active |
+| `E K E Y O L D` | `key.old` | 🗝 | active |
 | `E K E Y B O A R D` | `keyboard` | ⌨ | active |
 | `E K I S S` | `kiss` | 💏 | active |
 | `E K I T E` | `kite` | 🪁 | active |
@@ -278,7 +278,7 @@ disabled.
 | `E K O A L A` | `koala` | 🐨 | active |
 | `E L A B E L` | `label` | 🏷 | active |
 | `E L A P T O P` | `laptop` | 💻 | active |
-| `E L E A F DOT C L O V E R DOT F O U R` | `leaf.clover.four` | 🍀 | active |
+| `E L E A F C L O V E R F O U R` | `leaf.clover.four` | 🍀 | active |
 | `E L E G` | `leg` | 🦵 | active |
 | `E L E M O N` | `lemon` | 🍋 | active |
 | `E L I G H T B U L B` | `lightbulb` | 💡 | active |
@@ -288,24 +288,24 @@ disabled.
 | `E L O C K` | `lock` | 🔒 | active |
 | `E L U N G S` | `lungs` | 🫁 | active |
 | `E M A G E` | `mage` | 🧙 | active |
-| `E M A G N I F Y DOT L` | `magnify.l` | 🔍 | active |
-| `E M A G N I F Y DOT R` | `magnify.r` | 🔎 | active |
+| `E M A G N I F Y L` | `magnify.l` | 🔍 | active |
+| `E M A G N I F Y R` | `magnify.r` | 🔎 | active |
 | `E M A I L` | `mail` | ✉ | active |
 | `E M A N` | `man` | 👨 | active |
 | `E M A S K S` | `masks` | 🎭 | active |
 | `E M A T E` | `mate` | 🧉 | active |
 | `E M E A T` | `meat` | 🥩 | active |
-| `E M E D A L DOT F I R S T` | `medal.first` | 🥇 | active |
+| `E M E D A L F I R S T` | `medal.first` | 🥇 | active |
 | `E M E G A P H O N E` | `megaphone` | 📢 | active |
 | `E M E L O N` | `melon` | 🍈 | active |
 | `E M E T R O` | `metro` | Ⓜ | active |
 | `E M I C R O S C O P E` | `microscope` | 🔬 | active |
 | `E M I X E R` | `mixer` | 🎛 | active |
-| `E M O O N DOT C R E S C E N T` | `moon.crescent` | 🌙 | active |
-| `E M O O N DOT F U L L` | `moon.full` | 🌕 | active |
+| `E M O O N C R E S C E N T` | `moon.crescent` | 🌙 | active |
+| `E M O O N F U L L` | `moon.full` | 🌕 | active |
 | `E M O O S E` | `moose` | 🫎 | active |
 | `E M O R T A R B O A R D` | `mortarboard` | 🎓 | active |
-| `E M O U S E DOT F A C E` | `mouse.face` | 🐭 | active |
+| `E M O U S E F A C E` | `mouse.face` | 🐭 | active |
 | `E M O U T H` | `mouth` | 👄 | active |
 | `E M O Y A I` | `moyai` | 🗿 | active |
 | `E N A Z A R` | `nazar` | 🧿 | active |
@@ -324,17 +324,17 @@ disabled.
 | `E O T T E R` | `otter` | 🦦 | active |
 | `E O W L` | `owl` | 🦉 | active |
 | `E O X` | `ox` | 🐂 | active |
-| `E P A G E DOT C U R L` | `page.curl` | 📃 | active |
-| `E P A G E DOT P E N C I L` | `page.pencil` | 📝 | active |
+| `E P A G E C U R L` | `page.curl` | 📃 | active |
+| `E P A G E P E N C I L` | `page.pencil` | 📝 | active |
 | `E P A G E R` | `pager` | 📟 | active |
-| `E P A G E S DOT T A B S` | `pages.tabs` | 📑 | active |
+| `E P A G E S T A B S` | `pages.tabs` | 📑 | active |
 | `E P A N D A` | `panda` | 🐼 | active |
 | `E P A R K` | `park` | 🏞 | active |
 | `E P A R T Y` | `party` | 🎉 | active |
 | `E P E A C H` | `peach` | 🍑 | active |
 | `E P E A R` | `pear` | 🍐 | active |
-| `E P E N DOT B A L L` | `pen.ball` | 🖊 | active |
-| `E P E N DOT F O U N T A I N` | `pen.fountain` | 🖋 | active |
+| `E P E N B A L L` | `pen.ball` | 🖊 | active |
+| `E P E N F O U N T A I N` | `pen.fountain` | 🖋 | active |
 | `E P E N C I L` | `pencil` | ✏ | active |
 | `E P E T R I` | `petri` | 🧫 | active |
 | `E P H O N E` | `phone` | 📱 | active |
@@ -346,13 +346,13 @@ disabled.
 | `E P I N` | `pin` | 📌 | active |
 | `E P I Z Z A` | `pizza` | 🍕 | active |
 | `E P L A N T` | `plant` | 🪴 | active |
-| `E P L A Y B A C K DOT D O W N` | `playback.down` | ⏬ | active |
-| `E P L A Y B A C K DOT F O R W A R D` | `playback.forward` | ⏩ | active |
+| `E P L A Y B A C K D O W N` | `playback.down` | ⏬ | active |
+| `E P L A Y B A C K F O R W A R D` | `playback.forward` | ⏩ | active |
 | `E P L A Y B A C K DOT R E P E A T DOT O N C E` | `playback.repeat.once` | 🔂 | active |
 | `E P L A Y B A C K DOT R E P E A T DOT V` | `playback.repeat.v` | 🔃 | active |
-| `E P L A Y B A C K DOT R E W I N D` | `playback.rewind` | ⏪ | active |
-| `E P L A Y B A C K DOT S H U F F L E` | `playback.shuffle` | 🔀 | active |
-| `E P L A Y B A C K DOT U P` | `playback.up` | ⏫ | active |
+| `E P L A Y B A C K R E W I N D` | `playback.rewind` | ⏪ | active |
+| `E P L A Y B A C K S H U F F L E` | `playback.shuffle` | 🔀 | active |
+| `E P L A Y B A C K U P` | `playback.up` | ⏫ | active |
 | `E P L A Y B A C K R E P E A T` | `playbackRepeat` | 🔁 | renamed from `playback.repeat` |
 | `E P O O` | `poo` | 💩 | active |
 | `E P O P C O R N` | `popcorn` | 🍿 | active |
@@ -360,7 +360,7 @@ disabled.
 | `E P O W E R P L U G` | `powerplug` | 🔌 | active |
 | `E P R E S E N T` | `present` | 🎁 | active |
 | `E P R O H I B I T E D` | `prohibited` | 🚫 | active |
-| `E P U M P K I N DOT L A N T E R N` | `pumpkin.lantern` | 🎃 | active |
+| `E P U M P K I N L A N T E R N` | `pumpkin.lantern` | 🎃 | active |
 | `E P U R P L E H E A R T` | `purpleHeart` | 💜 | renamed from `heart.purple` |
 | `E P U R S E` | `purse` | 👛 | active |
 | `E Q U E S T` | `quest` | ❓ | active |
@@ -422,18 +422,18 @@ disabled.
 | `E T E L E S C O P E` | `telescope` | 🔭 | active |
 | `E T E N` | `ten` | 🔟 | active |
 | `E T E S T T U B E` | `testtube` | 🧪 | active |
-| `E T H U M B DOT D O W N` | `thumb.down` | 👎 | active |
-| `E T H U M B DOT U P` | `thumb.up` | 👍 | active |
+| `E T H U M B D O W N` | `thumb.down` | 👎 | active |
+| `E T H U M B U P` | `thumb.up` | 👍 | active |
 | `E T I G E R` | `tiger` | 🐅 | active |
 | `E T M` | `tm` | ™ | active |
 | `E T O O L B O X` | `toolbox` | 🧰 | active |
 | `E T O O T H` | `tooth` | 🦷 | active |
-| `E T R A I N DOT S T E A M` | `train.steam` | 🚂 | active |
-| `E T R E E DOT E V E R G R E E N` | `tree.evergreen` | 🌲 | active |
-| `E T R I A N G L E DOT B DOT R E D` | `triangle.b.red` | 🔻 | active |
-| `E T R I A N G L E DOT L` | `triangle.l` | ◀ | active |
+| `E T R A I N S T E A M` | `train.steam` | 🚂 | active |
+| `E T R E E E V E R G R E E N` | `tree.evergreen` | 🌲 | active |
+| `E T R I A N G L E B R E D` | `triangle.b.red` | 🔻 | active |
+| `E T R I A N G L E L` | `triangle.l` | ◀ | active |
 | `E T R I A N G L E DOT R` | `triangle.r` | ▶ | active |
-| `E T R I A N G L E DOT T DOT R E D` | `triangle.t.red` | 🔺 | active |
+| `E T R I A N G L E T R E D` | `triangle.t.red` | 🔺 | active |
 | `E T R I A N G L E R U L E R` | `triangleRuler` | 📐 | renamed from `ruler.triangle` |
 | `E T R O L L` | `troll` | 🧌 | active |
 | `E T R O P H Y` | `trophy` | 🏆 | active |
@@ -443,7 +443,7 @@ disabled.
 | `E U R N` | `urn` | ⚱ | active |
 | `E W A N D` | `wand` | 🪄 | active |
 | `E W A R N I N G` | `warning` | ⚠ | active |
-| `E W A T C H DOT S T O P` | `watch.stop` | ⏱ | active |
+| `E W A T C H S T O P` | `watch.stop` | ⏱ | active |
 | `E W A V E` | `wave` | 🌊 | active |
 | `E W C` | `wc` | 🚾 | active |
 | `E W H A L E` | `whale` | 🐋 | active |

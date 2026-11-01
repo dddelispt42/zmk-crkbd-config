@@ -545,6 +545,86 @@ def name_to_keys(name: str) -> tuple[str, ...]:
     return tuple("DOT" if ch == "." else ch.upper() for ch in name)
 
 
+def glued_keys(name: str, prefix: str) -> tuple[str, ...]:
+    """The sequence for a name with the dots REMOVED: `arrow.cm` -> ARROWCM.
+
+    Typing DOT mid-sequence turned out to be hard to predict, so the default is
+    now to glue the parts together.
+    """
+    return (prefix,) + tuple(ch.upper() for ch in name.replace(".", ""))
+
+
+def dotted_keys(name: str, prefix: str) -> tuple[str, ...]:
+    """The sequence for a name with '.' typed as the DOT key."""
+    return (prefix,) + name_to_keys(name)
+
+
+def finalise_forms(active, prefix: str) -> list:
+    """Re-derive glued vs dotted for the ACTIVE set, and rebuild the keys.
+
+    choose_forms() must only see names that are actually enabled. Running it over
+    every candidate makes inactive names force DOTs onto active ones - the first
+    attempt did exactly that and left 223 of 500 math sequences dotted when the
+    real minimum is far lower.
+
+    Selection itself runs on the DOT spelling, which is prefix-safe, so this is
+    a pure simplification pass: nothing can become unreachable here, names can
+    only lose their DOTs.
+    """
+    # The clash analysis must run on the spellings that will actually be EMITTED,
+    # i.e. `used`, not `typst`. For a renamed entry the two differ (`in` is
+    # emitted as `inset`), and analysing the wrong string both missed real
+    # clashes and invented false ones - which is why short names like `eq.o`
+    # kept a DOT they did not need.
+    forms = choose_forms([used for _typst, used, _cps, _keys in active], prefix)
+    out = []
+    for typst, used, cps, _keys in active:
+        keys = (
+            glued_keys(used, prefix)
+            if forms.get(used) == "glued"
+            else dotted_keys(used, prefix)
+        )
+        out.append((typst, used, cps, keys))
+    return out
+
+
+def choose_forms(names, prefix: str) -> dict:
+    """Decide, for each name, whether to glue it or keep its DOTs.
+
+    Gluing is the default. A name keeps its DOTs only when gluing it would make
+    it a PREFIX of another name, or another name a prefix of it.
+
+    Why that matters: a leader sequence completes the moment its length is
+    reached, so if `arrowb` and `arrowbbar` both exist, typing M A R R O W B
+    fires `arrowb` and `arrowbbar` can never be reached. DOT separates them.
+
+    The decision is iterated to a fixed point. A single pass cannot work: making
+    one name safe to glue changes what its neighbours may safely do, so the set
+    is re-checked after each change until nothing more can be glued.
+
+    Returns name -> form, where form is "glued" or "dotted".
+    """
+    dotted = set()
+    changed = True
+    while changed:
+        changed = False
+        forms = {
+            n: (dotted_keys(n, prefix) if n in dotted else glued_keys(n, prefix))
+            for n in names
+        }
+        for n in names:
+            if n in dotted:
+                continue
+            mine = forms[n]
+            if any(
+                m != n and (is_prefix(mine, forms[m]) or is_prefix(forms[m], mine))
+                for m in names
+            ):
+                dotted.add(n)
+                changed = True
+    return {n: ("dotted" if n in dotted else "glued") for n in names}
+
+
 def split_name(name: str) -> tuple[str, str]:
     """Split 'arrow.r' into ('arrow', 'r'); plain 'sum' -> ('sum', '')."""
     if "." in name:
@@ -718,6 +798,12 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
             for other in taken_keys
         )
 
+    # Selection uses the DOT spelling throughout, which is prefix-safe by
+    # construction. Once the active set is known, finalise_forms() re-derives
+    # which of those names can drop their DOTs.
+    def keys_for(cand):
+        return dotted_keys(cand, prefix)
+
     ordered = sorted(entries, key=lambda e: usefulness(e[0], sections.get(e[0], "")))
     for name, spec in ordered:
         cps = spec_to_codepoints(spec)
@@ -750,13 +836,13 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
 
         chosen = None
         for cand in cands:
-            keys = to_keys(cand)
+            keys = keys_for(cand)
             if not clashes(keys):
                 chosen = (cand, keys)
                 break
 
         if chosen is None:
-            commented.append((name, cps, to_keys(name), "every spelling clashes"))
+            commented.append((name, cps, keys_for(name), "every spelling clashes"))
             continue
 
         cand, keys = chosen
@@ -765,7 +851,7 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
         if cand != name:
             renamed.append((name, cand))
 
-    return active, renamed, commented
+    return finalise_forms(active, prefix), renamed, commented
 
 
 def select_emoji_by_usefulness(entries, limit, prefix="E"):
@@ -814,6 +900,9 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
         _, pos, dots, ln, nm = emoji_rank(entry)
         return (skip, pos, dots, ln, nm)
 
+    def keys_for(cand):
+        return dotted_keys(cand, prefix)
+
     for name, spec in sorted(entries, key=order):
         cps = spec_to_codepoints(spec)
         if not cps:
@@ -822,7 +911,7 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
             commented.append((name, cps, to_keys(name), "labelled button glyph"))
             continue
         if len(active) >= limit:
-            commented.append((name, cps, to_keys(name), "beyond the active limit"))
+            commented.append((name, cps, keys_for(name), "beyond the active limit"))
             continue
 
         cands = [name]
@@ -835,13 +924,13 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
 
         chosen = None
         for cand in cands:
-            keys = to_keys(cand)
+            keys = keys_for(cand)
             if not clashes(keys):
                 chosen = (cand, keys)
                 break
 
         if chosen is None:
-            commented.append((name, cps, to_keys(name), "every spelling clashes"))
+            commented.append((name, cps, keys_for(name), "every spelling clashes"))
             continue
 
         cand, keys = chosen
@@ -850,7 +939,7 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
         if cand != name:
             renamed.append((name, cand))
 
-    return active, renamed, commented
+    return finalise_forms(active, prefix), renamed, commented
 
 
 def cp_literal(cps: list[int]) -> str:
@@ -1145,7 +1234,21 @@ Do not edit by hand.
 ## How to type them
 
 Press the leader key, then the category letter, then the name one letter at a
-time. A `.` in a name is the `DOT` key.
+time.
+
+**Dots are usually dropped.** `arrow.cm` is typed `M A R R O W C M`, not
+`... DOT C M`; the parts are glued together because a DOT mid-sequence was hard
+to predict.
+
+**A few names keep their DOTs.** Gluing is skipped where it would make one
+sequence a prefix of another, because a leader sequence fires the moment its
+length is reached - the shorter would win and the longer would be unreachable.
+
+That affects 70 of the 500 math names and 4 emoji. Nearly all are arrows: glued,
+`arrow.bl` becomes `ARROWBL`, which is a prefix of `arrowBlBar` (the renamed
+`arrow.bl.bar`), so the DOT has to stay to keep them apart. The rule of thumb is
+that **arrows keep DOT and everything else does not**; the tables below give the
+exact sequence for every entry, so nothing has to be guessed.
 
 | what | type | example |
 |---|---|---|

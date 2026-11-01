@@ -69,7 +69,11 @@ Press it, then a short sequence:
 | **unicode mode** | leader, `U X L/W/M` | switch the input method to Linux/Windows/macOS |
 
 Names follow **typst/LaTeX**, so they are the ones you already type: `sum`,
-`approx`, `arrow.r`, `integral`. A `.` in a name is the `DOT` key.
+`approx`, `arrow.r`, `integral`. Dots in a name are **dropped**: `arrow.cm` is
+typed `M A R R O W C M`. A few arrows keep their DOTs to stay distinct from
+their own variants, and the tables in
+[docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md) give the exact sequence for
+every entry.
 
 **500 math symbols and 451 emoji are active.** The cap is a RAM budget, not a
 limit on what is reachable: the leader sequences live in RAM (the module declares

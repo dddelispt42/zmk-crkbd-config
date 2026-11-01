@@ -12,7 +12,21 @@ Do not edit by hand.
 ## How to type them
 
 Press the leader key, then the category letter, then the name one letter at a
-time. A `.` in a name is the `DOT` key.
+time.
+
+**Dots are usually dropped.** `arrow.cm` is typed `M A R R O W C M`, not
+`... DOT C M`; the parts are glued together because a DOT mid-sequence was hard
+to predict.
+
+**A few names keep their DOTs.** Gluing is skipped where it would make one
+sequence a prefix of another, because a leader sequence fires the moment its
+length is reached - the shorter would win and the longer would be unreachable.
+
+That affects 70 of the 500 math names and 4 emoji. Nearly all are arrows: glued,
+`arrow.bl` becomes `ARROWBL`, which is a prefix of `arrowBlBar` (the renamed
+`arrow.bl.bar`), so the DOT has to stay to keep them apart. The rule of thumb is
+that **arrows keep DOT and everything else does not**; the tables below give the
+exact sequence for every entry, so nothing has to be guessed.
 
 | what | type | example |
 |---|---|---|
