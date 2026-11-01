@@ -82,6 +82,7 @@
     seq_m_arrowLTurn { sequence = <M A R R O W L T U R N>; bindings = <&uc 0x2B8C 0>; };  // arrowLTurn = ⮌
     seq_m_arrowLTwohead { sequence = <M A R R O W L T W O H E A D>; bindings = <&uc 0x219E 0>; };  // arrowLTwohead = ↞
     seq_m_arrowLWave { sequence = <M A R R O W L W A V E>; bindings = <&uc 0x219C 0>; };  // arrowLWave = ↜
+    seq_m_arrowRBar { sequence = <M A R R O W R B A R>; bindings = <&uc 0x21A6 0>; };  // arrowRBar = ↦
     seq_m_arrowRCurve { sequence = <M A R R O W R C U R V E>; bindings = <&uc 0x2937 0>; };  // arrowRCurve = ⤷
     seq_m_arrowRDashed { sequence = <M A R R O W R D A S H E D>; bindings = <&uc 0x21E2 0>; };  // arrowRDashed = ⇢
     seq_m_arrowRDotted { sequence = <M A R R O W R D O T T E D>; bindings = <&uc 0x2911 0>; };  // arrowRDotted = ⤑
@@ -353,7 +354,6 @@
     seq_m_lt { sequence = <M L T>; bindings = <&uc 0x3C 0>; };  // lt = <
     seq_m_male { sequence = <M M A L E>; bindings = <&uc 0x2642 0 &uc 0xFE0E 0>; };  // male = ♂
     seq_m_mapsfrom { sequence = <M M A P S F R O M>; bindings = <&uc 0x21A4 0>; };  // mapsfrom = ↤
-    seq_m_mapsto { sequence = <M M A P S T O>; bindings = <&uc 0x21A6 0>; };  // mapsto = ↦
     seq_m_mapsto { sequence = <M M A P S T O>; bindings = <&uc 0x21A6 0>; };  // mapsto = ↦
     seq_m_measuredangle { sequence = <M M E A S U R E D A N G L E>; bindings = <&uc 0x221F 0>; };  // measuredangle = ∟
     seq_m_minus { sequence = <M M I N U S>; bindings = <&uc 0x2212 0>; };  // minus = −

@@ -552,6 +552,11 @@ def mark_prefix_conflicts(resolved, active_names):
     return resolved
 
 
+# Set by main() to the names that actually exist in typst's tables, so a rename
+# can be checked against them.
+SOURCE_NAMES: set = set()
+
+
 def select_math_by_usefulness(entries, sections, limit, prefix="M"):
     """Pick the most useful `limit` math symbols, resolving every conflict.
 
@@ -595,8 +600,13 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
             continue
 
         # candidate spellings, in order of preference
+        # Candidate spellings, in order of preference. A rename may NOT target a
+        # name that is itself a symbol: typst has both `mapsto` and
+        # `arrow.r.bar`, they are the same glyph, and renaming the second to the
+        # first produced two nodes with the same name - a devicetree
+        # "duplicate node name" error at build time.
         cands = []
-        if name in RENAMES:
+        if name in RENAMES and RENAMES[name] not in SOURCE_NAMES:
             cands.append(RENAMES[name])
         cands.append(name)
         comp = compact(name)
@@ -853,6 +863,8 @@ def main() -> int:
     print(f"  emoji.txt {len(emoji)}")
 
     sections = build_sections(sym_path)
+    SOURCE_NAMES.clear()
+    SOURCE_NAMES.update(n for n, _ in sym)
 
     # Math: exclude the sections that are covered elsewhere or are not maths -
     # Greek has its own leader prefix, accents are dead keys on the ACCENT

@@ -95,7 +95,7 @@ These symbols use a different name from their typst one.
 * `arrow.l.turn` -> `arrowLTurn`
 * `arrow.l.twohead` -> `arrowLTwohead`
 * `arrow.l.wave` -> `arrowLWave`
-* `arrow.r.bar` -> `mapsto`
+* `arrow.r.bar` -> `arrowRBar`
 * `arrow.r.curve` -> `arrowRCurve`
 * `arrow.r.dashed` -> `arrowRDashed`
 * `arrow.r.dotted` -> `arrowRDotted`
@@ -355,6 +355,7 @@ These symbols use a different name from their typst one.
 | `M A R R O W L T U R N` | `arrowLTurn` | ⮌ | active (renamed from `arrow.l.turn`) |
 | `M A R R O W L T W O H E A D` | `arrowLTwohead` | ↞ | active (renamed from `arrow.l.twohead`) |
 | `M A R R O W L W A V E` | `arrowLWave` | ↜ | active (renamed from `arrow.l.wave`) |
+| `M A R R O W R B A R` | `arrowRBar` | ↦ | active (renamed from `arrow.r.bar`) |
 | `M A R R O W R C U R V E` | `arrowRCurve` | ⤷ | active (renamed from `arrow.r.curve`) |
 | `M A R R O W R D A S H E D` | `arrowRDashed` | ⇢ | active (renamed from `arrow.r.dashed`) |
 | `M A R R O W R D O T T E D` | `arrowRDotted` | ⤑ | active (renamed from `arrow.r.dotted`) |
@@ -627,7 +628,6 @@ These symbols use a different name from their typst one.
 | `M M A L E` | `male` | ♂ | active |
 | `M M A P S F R O M` | `mapsfrom` | ↤ | active |
 | `M M A P S T O` | `mapsto` | ↦ | active |
-| `M M A P S T O` | `mapsto` | ↦ | active (renamed from `arrow.r.bar`) |
 | `M M E A S U R E D A N G L E` | `measuredangle` | ∟ | active (renamed from `angle.right`) |
 | `M M I N U S` | `minus` | − | active |
 | `M M O D E L S` | `models` | ⊧ | active |
