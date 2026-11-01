@@ -187,6 +187,99 @@ ACTIVE_EMOJI = [
     "fleur", "flute", "forex", "fries", "genie",
 ]
 
+# ---------------------------------------------------------------------------
+# Usefulness ranking and automatic conflict resolution
+# ---------------------------------------------------------------------------
+
+# How often each section of typst's sym.txt contributes symbols to ordinary
+# maths writing. Lower is more useful. The letter sets rank last because they
+# are alphabets, not operation symbols.
+SECTION_WEIGHT = {
+    "Arithmetic.": 0, "Relations.": 0, "Set theory.": 0, "Calculus.": 0,
+    "Logic.": 0, "Geometry.": 1, "Arrows, harpoons, and tacks.": 1,
+    "Function and category theory.": 1, "Delimiters.": 2, "Punctuation.": 2,
+    "Number theory.": 2, "Algebra.": 2, "Shapes.": 3,
+    "Miscellaneous Technical.": 3, "Miscellany.": 5, "Miscellaneous.": 6,
+    "Double-struck.": 8, "Miscellaneous letter-likes.": 8,
+}
+
+# Sections that are NOT offered: Greek has its own leader prefix, accents are
+# dead keys covered by the ACCENT layer, and the rest are not maths.
+EXCLUDED_SECTIONS = (
+    "Lowercase Greek.", "Uppercase Greek.", "Lowercase Cyrillic.",
+    "Uppercase Cyrillic.", "Hebrew.", "Accents, quotes, and primes.",
+    "Spaces.", "Control.", "Currency.", "Music.", "Astronomical.",
+    "Game theory.", "Printable characters", "keyboards labels",
+)
+
+
+# Emoji that are actually used when writing. Name length is a poor proxy for
+# popularity (`ox` and `tm` are short but rare; `thumbsup`, `warning` and
+# `rocket` are the ones that get typed), so the common ones are listed by their
+# GLYPH and ranked first. Everything else follows in name-simplicity order.
+COMMON_EMOJI_GLYPHS = (
+    # status and feedback
+    "✅❌⚠❗❓⛔🚫✔✖🔴🟢🔵🟡🟠🟣⚫⚪🔺🔻‼⁉"
+    # gestures
+    "👍👎👌👋🙏🤝💪👏🙌✋☝👆👇👈👉✌🤞🤙🫡🖐"
+    # faces
+    "😀😂🤣😊😍🤔😅😉😎🙃😢😭😱🤯🥳😴🤢😇🥺😐😑"
+    # things and signals
+    "💡🔥⭐🌟✨⚡💥🚀🐛🔧🔨⚙🧰🖥💻⌨🖱📱🔋🔌"
+    # hearts, symbols
+    "❤🧡💙💚💜🖤🤍💔♻⚕☮☯✝☪🕉⚛☢☣"
+    # office and writing
+    "📅📆📌📍📎🖇✂📏📐🖊🖋✏🖌🖍📝📄📃📑🗂📁🗄"
+    # arrows and media
+    "➡⬅⬆⬇↗↘↙↖↔↕🔄🔃⏩⏪⏫⏬🔀🔁🔂▶◀"
+    # time and charts
+    "⏰⏱⏲🕐🕑🕒🕓🕔🕕📊📈📉🗓⏳⌛"
+    # locks, search, celebration
+    "🔒🔓🔑🗝🔔🔕🔍🔎💬💭🗯📢📣🎉🎊🏆🥇🎯🧩🔗"
+    # nature and weather
+    "🌍🌎🌏🌕🌙☀⛅☁🌧⛈❄🌊🌲🌱🍀🌸🌻🐶🐱🐭"
+    # food
+    "🍕🍔🍺☕🍎🍌🍇🎂🍫🍿"
+    # travel and places
+    "✈🚗🚲🚂⛵🏠🏢🏥🏫"
+    # tech and science
+    "🤖👻💀👽🎃🎁🎈🎓📚🔬🔭🧪🧬💊"
+)
+
+
+def emoji_rank(entry, _sections=None) -> tuple:
+    """Sort key: lower is more useful."""
+    name, spec = entry
+    cps = spec_to_codepoints(spec)
+    visible = [c for c in cps if c not in (VS15, VS16)]
+    first_char = chr(visible[0]) if visible else ""
+    try:
+        position = COMMON_EMOJI_GLYPHS.index(first_char)
+    except ValueError:
+        position = 10_000
+    return (0 if position < 10_000 else 1, position, name.count("."), len(name), name)
+
+
+def usefulness(name: str, section: str) -> tuple:
+    """Sort key: lower is more useful. Deterministic and documented."""
+    weight = next(
+        (w for prefix, w in SECTION_WEIGHT.items() if section.startswith(prefix.rstrip("."))),
+        5,
+    )
+    return (weight, name.count("."), len(name), name)
+
+
+def compact(name: str) -> str:
+    """A distinct spelling for a blocked name: join the dotted parts.
+
+    `arrow.r.bar` becomes `arrowRBar`. This keeps the name readable and, being
+    a single token, it does not share a prefix with `arrow` - so the sequence
+    becomes reachable. Used only when LaTeX has no command for the symbol.
+    """
+    parts = name.split(".")
+    return parts[0] + "".join(p.capitalize() for p in parts[1:])
+
+
 # Names that need a marker because lowercasing/uppercasing collides, or because
 # the existing `mo` sequence shadows them. Filled in by resolve().
 SUFFIX_FOR_CASE = "U"   # uppercase Greek etc: alpha -> ALPHA, Alpha -> ALPHAU
@@ -459,6 +552,151 @@ def mark_prefix_conflicts(resolved, active_names):
     return resolved
 
 
+def select_math_by_usefulness(entries, sections, limit, prefix="M"):
+    """Pick the most useful `limit` math symbols, resolving every conflict.
+
+    The algorithm, which follows the stated intent - rank by usefulness first,
+    THEN resolve conflicts:
+
+      1. Order every candidate by how useful it is (section weight, then
+         simplicity). Usefulness decides priority; conflict-freedom does not.
+      2. Walk that order. The first name for a given key-space wins.
+      3. If a name is blocked by one already taken, do NOT drop it. Rename it:
+         first to its LaTeX command if the symbol has one, otherwise to the
+         compact spelling (`arrow.r.bar` -> `arrowRBar`). Renaming is what makes
+         500 reachable at all, since bare `arrow.r` would otherwise shadow its
+         whole family.
+      4. Only if both renames are themselves taken does the symbol get left
+         commented out, and the reason is recorded.
+
+    Returns (active, renamed, commented) where renamed is [(typst, used)].
+    """
+    taken_keys: set = set()
+    active: list = []
+    renamed: list = []
+    commented: list = []
+
+    def to_keys(name):
+        return (prefix,) + name_to_keys(name)
+
+    def clashes(keys):
+        return any(
+            is_prefix(other, keys) or is_prefix(keys, other) for other in taken_keys
+        )
+
+    ordered = sorted(entries, key=lambda e: usefulness(e[0], sections.get(e[0], "")))
+    for name, spec in ordered:
+        cps = spec_to_codepoints(spec)
+        if not cps:
+            continue
+        if len(active) >= limit and name not in RENAMES:
+            # still record it so nothing is lost from the files
+            commented.append((name, cps, to_keys(name), "beyond the active limit"))
+            continue
+
+        # candidate spellings, in order of preference
+        cands = []
+        if name in RENAMES:
+            cands.append(RENAMES[name])
+        cands.append(name)
+        comp = compact(name)
+        if comp != name:
+            cands.append(comp)
+
+        chosen = None
+        for cand in cands:
+            keys = to_keys(cand)
+            if not clashes(keys):
+                chosen = (cand, keys)
+                break
+
+        if chosen is None:
+            commented.append((name, cps, to_keys(name), "every spelling clashes"))
+            continue
+
+        cand, keys = chosen
+        taken_keys.add(keys)
+        active.append((name, cand, cps, keys))
+        if cand != name:
+            renamed.append((name, cand))
+
+    return active, renamed, commented
+
+
+def select_emoji_by_usefulness(entries, limit, prefix="E"):
+    """Pick the most useful `limit` emoji, resolving conflicts by rename.
+
+    Same algorithm as the math selector, but emoji have no LaTeX names and no
+    subject sections, so usefulness is approximated by name simplicity: shorter,
+    plainer names are more likely to be the common ones (`heart`, `fire`,
+    `rocket`) than deeply dotted ones (`hand.finger.index.raised`).
+
+    Names that are CJK or Japanese button glyphs are skipped: they are labelled
+    buttons rather than pictographs and are useless when writing.
+    """
+    taken_keys: set = set()
+    active: list = []
+    renamed: list = []
+    commented: list = []
+
+    def to_keys(name):
+        return (prefix,) + name_to_keys(name)
+
+    def clashes(keys):
+        return any(
+            is_prefix(other, keys) or is_prefix(keys, other) for other in taken_keys
+        )
+
+    def order(entry):
+        name, spec = entry
+        cps = spec_to_codepoints(spec)
+        visible = [c for c in cps if c not in (VS15, VS16)]
+        first = visible[0] if visible else 0
+        # Rank the common ones first (by glyph), then everything else by name
+        # simplicity. CJK and enclosed button glyphs sort last: they are
+        # labelled buttons rather than pictographs and are useless in prose.
+        skip = 2 if (
+            0x1F100 <= first <= 0x1F1FF
+            or 0x3200 <= first <= 0x32FF
+            or 0x1F200 <= first <= 0x1F2FF
+            or 0x1F000 <= first <= 0x1F02F
+        ) else 0
+        _, pos, dots, ln, nm = emoji_rank(entry)
+        return (skip, pos, dots, ln, nm)
+
+    for name, spec in sorted(entries, key=order):
+        cps = spec_to_codepoints(spec)
+        if not cps:
+            continue
+        if len(active) >= limit:
+            commented.append((name, cps, to_keys(name), "beyond the active limit"))
+            continue
+
+        cands = [name]
+        comp = compact(name)
+        if comp != name:
+            cands.append(comp)
+
+        chosen = None
+        for cand in cands:
+            keys = to_keys(cand)
+            if not clashes(keys):
+                chosen = (cand, keys)
+                break
+
+        if chosen is None:
+            commented.append((name, cps, to_keys(name), "every spelling clashes"))
+            continue
+
+        cand, keys = chosen
+        taken_keys.add(keys)
+        active.append((name, cand, cps, keys))
+        if cand != name:
+            renamed.append((name, cand))
+
+    return active, renamed, commented
+
+
 def cp_literal(cps: list[int]) -> str:
     """The &uc argument list for a code point sequence."""
     return " ".join(f"&uc 0x{c:X} 0" for c in cps)
@@ -533,90 +771,177 @@ def emit_sequences(resolved, active_names, leader_name, header_comment):
 # Main
 # ---------------------------------------------------------------------------
 
+def emit_selected(active, commented, leader_name, cat, header):
+    """Write the .dtsi fragment for one category.
+
+    Active sequences are plain lines; the rest are commented so that they can be
+    enabled by deleting `//`. Every line carries the glyph it produces.
+    """
+    out = ["/*", " * " + header, " */", "", f"&{leader_name} {{"]
+    out.append(f"    /* --- active ({len(active)}) --- */")
+    for typst, used, cps, keys in sorted(active, key=lambda r: r[1]):
+        node = f"seq_{cat}_" + re.sub(r"[^A-Za-z0-9_]", "_", used)
+        out.append(
+            f"    {node} {{ sequence = <{' '.join(keys)}>; "
+            f"bindings = <{cp_literal(cps)}>; }};  {glyph_comment(cps, used)}"
+        )
+    out.append("")
+    out.append(f"    /* --- available but disabled ({len(commented)}) ---")
+    out.append("     * Uncomment a line to enable it. Each is disabled because either")
+    out.append("     * every spelling of its name was already taken, or it is beyond the")
+    out.append("     * active limit. See docs/LEADER-SYMBOLS.md.")
+    out.append("     */")
+    for typst, cps, keys, why in sorted(commented, key=lambda r: r[0]):
+        node = f"seq_{cat}_" + re.sub(r"[^A-Za-z0-9_]", "_", typst)
+        out.append(
+            f"    // {node} {{ sequence = <{' '.join(keys)}>; "
+            f"bindings = <{cp_literal(cps)}>; }};  {glyph_comment(cps, typst)}"
+        )
+    out.append("};")
+    out.append("")
+    return "\n".join(out)
+
+
+def build_sections(path: pathlib.Path) -> dict:
+    """Map each symbol name to the section header it appears under in sym.txt.
+
+    The header is what the usefulness ranking is based on, so it has to be
+    recovered from the file rather than from the parsed entries.
+    """
+    out: dict = {}
+    section = None
+    stack: list = []
+    for line in path.read_text(encoding="utf-8").split("\n"):
+        if line.startswith("// "):
+            section = line[3:].strip()
+            continue
+        if not line.strip() or line.lstrip().startswith("//"):
+            continue
+        m = re.match(r"^(\s*)([A-Za-z0-9._-]+)(?:\s+(.+?))?\s*$", line)
+        if not m:
+            continue
+        indent, name, spec = len(m.group(1)), m.group(2), m.group(3)
+        if indent == 0:
+            stack = [(0, name)]
+            full = name
+        elif name.startswith("."):
+            while stack and stack[-1][0] >= indent:
+                stack.pop()
+            full = (stack[-1][1] if stack else "") + name
+            stack.append((indent, full))
+        else:
+            stack = [(indent, name)]
+            full = name
+        if spec:
+            out[full] = section or ""
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true")
+    ap.add_argument("--math", type=int, default=500, help="number of math symbols")
+    ap.add_argument("--emoji", type=int, default=500, help="number of emoji")
     args = ap.parse_args()
 
     print("parsing codex data")
-    sym = parse_codex(fetch("sym.txt", args.offline))
-    emoji = parse_codex(fetch("emoji.txt", args.offline))
+    sym_path = fetch("sym.txt", args.offline)
+    emoji_path = fetch("emoji.txt", args.offline)
+    sym = parse_codex(sym_path)
+    emoji = parse_codex(emoji_path)
     print(f"  sym.txt   {len(sym)}")
     print(f"  emoji.txt {len(emoji)}")
 
-    math, math_notes = resolve(sym, "M", EXISTING_M_E_PREFIXES, SUFFIX_FOR_CASE, SUFFIX_FOR_MO)
-    emo, emo_notes = resolve(emoji, "E", EXISTING_M_E_PREFIXES, SUFFIX_FOR_CASE, SUFFIX_FOR_MO)
-    math = mark_prefix_conflicts(math, set(ACTIVE_MATH))
-    emo = mark_prefix_conflicts(emo, set(ACTIVE_EMOJI))
-    print(f"  math sequences   {len(math)}  ({sum(1 for r in math if r['prefix_shadowed'])} prefix-shadowed)")
-    print(f"  emoji sequences  {len(emo)}  ({sum(1 for r in emo if r['prefix_shadowed'])} prefix-shadowed)")
+    sections = build_sections(sym_path)
 
-    print(f"  exceptions: math {len(math_notes)}, emoji {len(emo_notes)}")
+    # Math: exclude the sections that are covered elsewhere or are not maths -
+    # Greek has its own leader prefix, accents are dead keys on the ACCENT
+    # layer, and the rest (control pictures, currency, music) are not symbols
+    # anyone types in a formula.
+    math_entries = [
+        (n, sp) for n, sp in sym
+        if not any(k in sections.get(n, "") for k in EXCLUDED_SECTIONS)
+    ]
+    print(f"  math candidates: {len(math_entries)} "
+          f"(of {len(sym)}; Greek, accents and non-maths sections excluded)")
+
+    # Rank by usefulness first, then resolve conflicts. Renaming is what makes
+    # a large set possible: without it, bare `arrow.r` shadows its whole family.
+    m_active, m_renamed, m_comment = select_math_by_usefulness(
+        math_entries, sections, args.math
+    )
+    e_active, e_renamed, e_comment = select_emoji_by_usefulness(emoji, args.emoji)
+
+    print(f"  math : {len(m_active)} active, {len(m_renamed)} renamed, "
+          f"{len(m_comment)} commented")
+    print(f"  emoji: {len(e_active)} active, {len(e_renamed)} renamed, "
+          f"{len(e_comment)} commented")
 
     # ---- emit the two devicetree fragments -------------------------------
     inc = REPO / "config" / "include"
-    math_dtsi = emit_sequences(
-        math, set(ACTIVE_MATH), "leader1",
-        "/*\n"
-        " * Math symbol leader sequences: leader1 then M then the typst name.\n"
-        " *\n"
-        " *   leader1 + M + S U M    -> U+2211   (sym.sum)\n"
-        " *   leader1 + M + A R R O W DOT R -> U+2192  (sym.arrow.r)\n"
-        " *\n"
-        " * GENERATED by scripts/gen_leader_symbols.py from typst/codex sym.txt.\n"
-        " * Do not edit by hand; re-run the script instead.\n"
-        " *\n"
-        " * Each line ends with a comment showing the symbol it produces, so the\n"
-        " * file can be read without decoding hex. Symbols that are invisible on\n"
-        " * their own (word joiners, the width spaces) are named with their code\n"
-        " * point instead of being printed blank.\n"
-        " *\n"
-        " * Sequences must be prefix-free: a short name that is a prefix of a\n"
-        " * longer one would fire first and make the longer unreachable, so those\n"
-        " * are emitted commented out. See docs/LEADER-SYMBOLS.md.\n"
-        " */",
+    (inc / "leader-math.dtsi").write_text(
+        emit_selected(m_active, m_comment, "leader1", "m",
+                      "Math symbol leader sequences: leader1 then M then the typst name.\n"
+                      " *\n"
+                      " *   leader1 + M + S U M            -> U+2211   (sym.sum)\n"
+                      " *   leader1 + M + A R R O W DOT R  -> U+2192   (sym.arrow.r)\n"
+                      " *\n"
+                      " * GENERATED by scripts/gen_leader_symbols.py from typst/codex sym.txt.\n"
+                      " * Do not edit by hand; re-run the script instead.\n"
+                      " *\n"
+                      " * Chosen by usefulness, NOT by whether they conflict: every symbol is\n"
+                      " * ranked by how often its section appears in ordinary maths, and a name\n"
+                      " * that clashes with one already taken is RENAMED rather than dropped\n"
+                      " * (arrow.r.bar -> arrowRBar, or the LaTeX command where one exists).\n"
+                      " * Only a symbol whose every spelling is taken is commented out.\n"
+                      " *\n"
+                      " * Greek is absent on purpose: leader1 + G covers all 25 letters, and\n"
+                      " * the same sequence with Shift gives the capitals.")
     )
-    emoji_dtsi = emit_sequences(
-        emo, set(ACTIVE_EMOJI), "leader1",
-        "/*\n"
-        " * Emoji leader sequences: leader1 then E then the typst name.\n"
-        " *\n"
-        " *   leader1 + E + A X E    -> U+1FA93   (emoji.axe)\n"
-        " *\n"
-        " * GENERATED by scripts/gen_leader_symbols.py from typst/codex emoji.txt.\n"
-        " * Do not edit by hand; re-run the script instead.\n"
-        " *\n"
-        " * Each line ends with a comment showing the emoji it produces, so the\n"
-        " * file can be read without decoding hex.\n"
-        " */",
+    (inc / "leader-emoji.dtsi").write_text(
+        emit_selected(e_active, e_comment, "leader1", "e",
+                      "Emoji leader sequences: leader1 then E then the typst name.\n"
+                      " *\n"
+                      " *   leader1 + E + A X E    -> U+1FA93   (emoji.axe)\n"
+                      " *\n"
+                      " * GENERATED by scripts/gen_leader_symbols.py from typst/codex\n"
+                      " * emoji.txt. Do not edit by hand; re-run the script instead.")
     )
-    (inc / "leader-math.dtsi").write_text(math_dtsi)
-    (inc / "leader-emoji.dtsi").write_text(emoji_dtsi)
-    print(f"  wrote config/include/leader-math.dtsi   ({math_dtsi.count(chr(10))} lines)")
-    print(f"  wrote config/include/leader-emoji.dtsi  ({emoji_dtsi.count(chr(10))} lines)")
+    print("  wrote config/include/leader-math.dtsi")
+    print("  wrote config/include/leader-emoji.dtsi")
 
-    # ---- emit the documentation ------------------------------------------
     docs = REPO / "docs"
     docs.mkdir(exist_ok=True)
-    write_docs(docs / "LEADER-SYMBOLS.md", math, emo, math_notes, emo_notes)
+    write_docs(docs / "LEADER-SYMBOLS.md", m_active, m_comment, m_renamed,
+               e_active, e_comment, e_renamed)
     print("  wrote docs/LEADER-SYMBOLS.md")
+
+    # completeness: nothing may be silently dropped
+    for label, active, comment, total in (
+        ("math ", m_active, m_comment, len(math_entries)),
+        ("emoji", e_active, e_comment, len(emoji)),
+    ):
+        ok = len(active) + len(comment) == total
+        print(f"  {label}: {len(active)} + {len(comment)} = {total}  "
+              f"{'complete' if ok else 'INCOMPLETE'}")
     return 0
 
 
-def write_docs(path, math, emo, math_notes, emo_notes) -> None:
+def write_docs(path, m_active, m_comment, m_renamed, e_active, e_comment, e_renamed) -> None:
     """Write the human-readable reference page."""
-    def table(entries, active_names):
-        rows = ["| sequence | name | chars | status |", "|---|---|---|---|"]
-        for r in sorted(entries, key=lambda r: r["name"]):
-            seq = " ".join(r["keys"])
-            glyph = "".join(chr(c) for c in r["cps"] if c not in (VS16, VS15))
-            if r["name"] in active_names and not r["prefix_shadowed"]:
-                status = "active"
-            elif r["prefix_shadowed"]:
-                status = "disabled - prefix of another name"
-            else:
-                status = "available (commented out)"
-            rows.append(f"| `{seq}` | `{r['name']}` | {glyph} | {status} |")
+    rename_map = dict(m_renamed)
+    e_rename_map = dict(e_renamed)
+
+    def table(active, commented, rename_map):
+        rows = ["| type | name | char | status |", "|---|---|---|---|"]
+        for typst, used, cps, keys in sorted(active, key=lambda r: r[1]):
+            glyph = "".join(chr(c) for c in cps if c not in (VS16, VS15))
+            seq = " ".join(keys)
+            note = "active" if used == typst else f"active (renamed from `{typst}`)"
+            rows.append(f"| `{seq}` | `{used}` | {glyph} | {note} |")
+        for typst, cps, keys, why in sorted(commented, key=lambda r: r[0]):
+            glyph = "".join(chr(c) for c in cps if c not in (VS16, VS15))
+            rows.append(f"| `{' '.join(keys)}` | `{typst}` | {glyph} | disabled: {why} |")
         return "\n".join(rows)
 
     parts = [
@@ -628,56 +953,53 @@ def write_docs(path, math, emo, math_notes, emo_notes) -> None:
         "",
         "## How to type them",
         "",
-        "Press the leader key, then the category letter, then the symbol's typst",
-        "name one letter at a time. A `.` in a name is the `DOT` key.",
+        "Press the leader key, then the category letter, then the symbol's name one",
+        "letter at a time. A `.` in a name is the `DOT` key.",
         "",
         "| what | type | example |",
         "|---|---|---|",
         "| math symbol | leader, `M`, name | `M S U M` gives ∑ |",
-        "| emoji | leader, `E`, name | `E A X E` gives 🪓 |",
+        "| emoji | leader, `E`, name | `E H E A R T` gives ❤ |",
+        "| Greek | leader, `G`, one letter | `G G` gives γ, `G G`+Shift gives Γ |",
         "",
-        "The category letters are fixed: **M** for math, **E** for emoji. Neither",
-        "collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).",
+        "## How the set is chosen",
         "",
-        "## Constraints that shape this list",
+        "Symbols are ranked by **usefulness first**, then conflicts are resolved -",
+        "not the other way round. A name that clashes with one already taken is",
+        "*renamed* rather than dropped:",
         "",
-        "* **Sequences must be prefix-free.** The leader module fires the moment a",
-        "  sequence completes, so when one ACTIVE name is a prefix of another only",
-        "  one of them can be reached. Only names in the active set compete: an",
-        "  obscure entry that happens to share a letter prefix does not block a",
-        "  symbol you actually use. `eq` blocks `eq.not`, but `em` (U+2419 End of",
-        "  Medium) does not block `emptyset`.",
-        "* **Greek has its own prefix and is not repeated here.** `leader1 + G +",
-        "  <letter>` gives the lowercase letter, and the SAME sequence with Shift",
-        "  gives the capital: the module's Greek aliases carry both cases as a pair",
-        "  (`UC_EL_GAMMA` is `0x3b3 0x393`) and the unicode behavior picks the",
-        "  second code point when shift is held. So `G G` is gamma and `G G`+Shift",
-        "  is Gamma - there is nothing to add under the M prefix.",
-        "* **`.` is the DOT key.** So `arrow.r` is `M A R R O W DOT R`.",
-        "* **Conflicts use LaTeX spellings.** Where a typst name collides with",
-        "  another, the LaTeX command is used instead because that is what a maths",
-        "  user already types: `leq`, `geq`, `pm`, `bigcup`, `mapsto`,",
-        "  `Rightarrow`, `subseteq` (as `subeq`).",
+        "* to its **LaTeX command** where one exists - `arrow.r.double` becomes",
+        "  `Rightarrow`, `lt.eq` becomes `leq`, `union.big` becomes `bigcup`",
+        "* otherwise to a **compact spelling** that joins the dotted parts -",
+        "  `arrow.r.bar` becomes `arrowRBar`",
         "",
-        f"## Math symbols ({len(math)})",
+        "A symbol is only disabled if every spelling of it is already taken, or it",
+        "falls beyond the active limit. Nothing is removed: the disabled ones are",
+        "emitted commented out, ready to enable.",
         "",
-        table(math, set(ACTIVE_MATH)),
+        "Greek is absent from the math set on purpose. `leader1 + G` already covers",
+        "all 25 letters and, because the module's Greek aliases carry both cases as",
+        "a pair (`UC_EL_GAMMA` is `0x3b3 0x393`), holding Shift gives the capital.",
         "",
-        f"## Emoji ({len(emo)})",
+        "## Renames",
         "",
-        table(emo, set(ACTIVE_EMOJI)),
+        "These symbols use a different name from their typst one.",
         "",
-        "## Exceptions applied",
+        f"### Math ({len(m_renamed)})",
         "",
-        "These names do not use their plain typst spelling, for the reasons above.",
+        "\n".join(f"* `{a}` -> `{b}`" for a, b in sorted(m_renamed)) or "* none",
         "",
-        "### Math",
+        f"### Emoji ({len(e_renamed)})",
         "",
-        "\n".join(f"* {n}" for n in math_notes) or "* none",
+        "\n".join(f"* `{a}` -> `{b}`" for a, b in sorted(e_renamed)) or "* none",
         "",
-        "### Emoji",
+        f"## Math symbols ({len(m_active)} active, {len(m_comment)} disabled)",
         "",
-        "\n".join(f"* {n}" for n in emo_notes) or "* none",
+        table(m_active, m_comment, rename_map),
+        "",
+        f"## Emoji ({len(e_active)} active, {len(e_comment)} disabled)",
+        "",
+        table(e_active, e_comment, e_rename_map),
         "",
     ]
     path.write_text("\n".join(parts))
