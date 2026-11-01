@@ -75,7 +75,8 @@ Names follow **typst/LaTeX**, so they are the ones you already type: `sum`,
 given that two sequences cannot both exist when one is a prefix of the other.
 The remainder are emitted commented out in the generated files. The full list,
 with each symbol's glyph and status, is in
-[docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md).
+[docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md), which links the
+[math](docs/LEADER-MATH.md) and [emoji](docs/LEADER-EMOJI.md) tables.
 
 Where a typst name collides with another, the **LaTeX command** is used instead
 — `lt.eq` is `LEQ`, `union.big` is `BIGCUP`, `arrow.r.double` is `RIGHTARROW` —
@@ -120,7 +121,9 @@ scripts/verify_equivalence.py   behaviour regression check
 scripts/check_macro_nesting.py  devicetree nesting guard
 scripts/gen_leader_symbols.py   regenerates the two leader-*.dtsi files
 zmk_macro_gen.py                turns typed text into a ZMK_MACRO block
-docs/LEADER-SYMBOLS.md          the leader symbol reference (generated)
+docs/LEADER-SYMBOLS.md          the leader symbol reference index (generated)
+docs/LEADER-MATH.md             math symbol table (generated)
+docs/LEADER-EMOJI.md            emoji table (generated)
 ```
 
 `config/zmk-helpers` is a symlink into the `zmk-helpers` submodule, pinned to
