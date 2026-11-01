@@ -723,8 +723,11 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
         cps = spec_to_codepoints(spec)
         if not cps:
             continue
-        if len(active) >= limit and name not in RENAMES:
-            # still record it so nothing is lost from the files
+        if len(active) >= limit:
+            # The limit is a RAM budget, not a nicety: the sequences live in
+            # .data, so every active one costs bytes that ZMK's own stack and
+            # buffers also need. Renamed symbols count like any other; they were
+            # previously exempt, which quietly overshot the requested count.
             commented.append((name, cps, to_keys(name), "beyond the active limit"))
             continue
 
@@ -993,8 +996,14 @@ def build_sections(path: pathlib.Path) -> dict:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true")
-    ap.add_argument("--math", type=int, default=100000, help="cap on math symbols")
-    ap.add_argument("--emoji", type=int, default=100000, help="cap on emoji")
+    ap.add_argument(
+        "--math", type=int, default=500,
+        help="cap on math symbols (default 500; see RTF docstring for the RAM budget)",
+    )
+    ap.add_argument(
+        "--emoji", type=int, default=451,
+        help="cap on emoji (default 451, so math+emoji stays at ~1000 sequences)",
+    )
     args = ap.parse_args()
 
     print("parsing codex data")

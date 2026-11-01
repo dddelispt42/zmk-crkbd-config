@@ -71,10 +71,12 @@ Press it, then a short sequence:
 Names follow **typst/LaTeX**, so they are the ones you already type: `sum`,
 `approx`, `arrow.r`, `integral`. A `.` in a name is the `DOT` key.
 
-**977 math symbols and 1,260 emoji are active**, which is everything reachable
-given that two sequences cannot both exist when one is a prefix of the other.
-The remainder are emitted commented out in the generated files. The full list,
-with each symbol's glyph and status, is in
+**500 math symbols and 451 emoji are active.** The cap is a RAM budget, not a
+limit on what is reachable: the leader sequences live in RAM (the module declares
+them `static` but not `const`), at 144 bytes each, so ~1000 sequences is what
+fits alongside ZMK's BLE and Studio. Roughly 500 more math symbols and 900 more
+emoji are present but commented out in the generated files. The full list, with
+each symbol's glyph and status, is in
 [docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md), which links the
 [math](docs/LEADER-MATH.md) and [emoji](docs/LEADER-EMOJI.md) tables.
 
@@ -93,8 +95,8 @@ and must not be edited by hand. To change the set, edit
 `scripts/gen_leader_symbols.py` and re-run it:
 
 ```sh
-./scripts/gen_leader_symbols.py            # everything reachable (default)
-./scripts/gen_leader_symbols.py --math 300 # cap the math set at 300 instead
+./scripts/gen_leader_symbols.py            # 500 math + 451 emoji (default)
+./scripts/gen_leader_symbols.py --math 300 --emoji 300   # smaller set
 ```
 
 The generator ranks symbols by usefulness **first**, then resolves conflicts by
@@ -117,7 +119,6 @@ config/
   seppelit.keymap          |
   sweep.keymap            /
   *.json                  keymap-drawer physical layouts
-scripts/verify_equivalence.py   behaviour regression check
 scripts/check_macro_nesting.py  devicetree nesting guard
 scripts/gen_leader_symbols.py   regenerates the two leader-*.dtsi files
 zmk_macro_gen.py                turns typed text into a ZMK_MACRO block

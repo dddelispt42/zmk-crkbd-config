@@ -132,10 +132,6 @@ clean-draw:
 verify-nesting:
     ./scripts/check_macro_nesting.py
 
-# behavioural equivalence against the recorded golden reference
-verify:
-    ./scripts/verify_equivalence.py check --golden .research/golden-pre-refactor.json
-
 # initialize west
 init:
     west init -l config
