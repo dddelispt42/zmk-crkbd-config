@@ -73,6 +73,7 @@ config/
 scripts/verify_equivalence.py   behaviour regression check
 scripts/check_macro_nesting.py  devicetree nesting guard
 scripts/gen_leader_symbols.py   regenerates the two leader-*.dtsi files
+zmk_macro_gen.py                turns typed text into a ZMK_MACRO block
 docs/LEADER-SYMBOLS.md          the leader symbol reference (generated)
 ```
 

@@ -320,6 +320,11 @@
                 )
 
         // Agenda: block then Objective: block
+        //
+        // The trailing LC(LS(L)) is the Word "toggle bullet" shortcut and it is
+        // the same in all four Outlook macros (m_ag, m_ob, m_ac, m_ao). Next to
+        // LC(B) it looks like a copy-paste slip, but it was checked against the
+        // original pre-refactor config and is intentional. Do not "fix" it.
         ZMK_MACRO(m_ao,
                 wait-ms = <MACRO_WAIT>;
                 tap-ms = <MACRO_TAP>;
