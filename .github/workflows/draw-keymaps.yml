@@ -10,73 +10,22 @@ on:
       - "config/include/*"
       - "boards/shields/*/*.dtsi"
       - "keymap_drawer.config.yaml"
-      - "generate_leader_yaml.py"
       - "boards/shields/*/*.json"
       - ".github/workflows/draw-keymaps.yml"
       # - "images/keymap-img/keymap_drawer.config.yaml"
       # - 'boards/*/*/*.keymap'
 
 jobs:
-  # Leader-key sequences are behavior properties, so keymap-drawer cannot
-  # discover them. Derive per-keyboard virtual-layer YAMLs from the shared
-  # behaviours include and commit them, so the draw job below can merge them in.
-  #
-  # The row shape differs per keyboard (corne/tempest/seppelit are 36-key 5-column
-  # boards with 3 thumbs per side; the sweep is 34-key with 2) and keymap-drawer
-  # validates the leader layers against the physical layout, so each keyboard gets
-  # its own file.
-  leader-yaml:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-        with:
-          fetch-depth: 2
-          submodules: recursive
-      - name: Generate leader virtual layers
-        run: |
-          set -euo pipefail
-          for kb in corne tempest seppelit sweep; do
-            keymap_file="config/${kb}.keymap"
-            [ -f "$keymap_file" ] || continue
-            case "$kb" in
-              # 36-key boards: 3 rows of 5 per side + 3 thumbs per side
-              corne|tempest|seppelit) rows="10 10 10 6" ;;
-              # 34-key sweep: 2 thumbs per side
-              sweep)                  rows="10 10 10 4" ;;
-              *)        echo "no row shape known for $kb, skipping"; continue ;;
-            esac
-            ./generate_leader_yaml.py \
-              --source config/include/behaviors.dtsi --rows $rows \
-              --out "config/${kb}-leader.yaml"
-          done
-      - name: Commit if changed
-        run: |
-          set -euo pipefail
-          if ! git diff --quiet -- 'config/*-leader.yaml'; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add config/*-leader.yaml
-            # Plain commit, not --amend + force-push: rewriting published
-            # history on every keymap push was destructive.
-            git commit -m "chore: regenerate leader virtual layers"
-            git push
-          else
-            echo "leader YAMLs unchanged"
-          fi
-
   draw:
-    needs: leader-yaml
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write  # allow workflow to commit to the repo
     with:
       keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
-      # Merge the generated leader layers into each drawing. Keyboards without
-      # an entry here simply get no leader layers.
-      extra_keymap_yaml: "corne:'config/corne-leader.yaml' tempest:'config/tempest-leader.yaml' seppelit:'config/seppelit-leader.yaml' sweep:'config/sweep-leader.yaml'"
+      # No extra_keymap_yaml: the leader sequences are deliberately not drawn.
+      # There are thousands of them now (math symbols and emoji generated from
+      # typst's tables), so they would paginate into hundreds of virtual layers.
+      # docs/LEADER-SYMBOLS.md documents them instead.
       config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
       json_path: "config"
       output_folder: "img"            # path to save produced SVG and keymap YAML files

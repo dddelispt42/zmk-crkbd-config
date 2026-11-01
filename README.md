@@ -63,14 +63,17 @@ config/
   include/macros.dtsi     the ZMK_MACRO definitions
   include/combos.dtsi     all combos, in key labels
   include/layers.dtsi     all 12 layers, via ZMK_LAYER_NAMED
+  include/leader-math.dtsi   GENERATED: math symbol leader sequences
+  include/leader-emoji.dtsi  GENERATED: emoji leader sequences
   corne.keymap            \
   tempest.keymap           |  thin adapters: board macro + includes
   seppelit.keymap          |
   sweep.keymap            /
   *.json                  keymap-drawer physical layouts
-  *-leader.yaml           generated: leader sequences, for the drawings only
 scripts/verify_equivalence.py   behaviour regression check
-generate_leader_yaml.py         renders leader sequences into virtual layers
+scripts/check_macro_nesting.py  devicetree nesting guard
+scripts/gen_leader_symbols.py   regenerates the two leader-*.dtsi files
+docs/LEADER-SYMBOLS.md          the leader symbol reference (generated)
 ```
 
 `config/zmk-helpers` is a symlink into the `zmk-helpers` submodule, pinned to

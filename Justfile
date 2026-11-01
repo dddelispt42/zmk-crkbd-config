@@ -104,15 +104,14 @@ draw:
             rm -f "$tmp_yaml"; tmp_yaml=""
             continue
         fi
-        leader="{{ config }}/$kb-leader.yaml"
-        "{{ justfile_directory() }}/generate_leader_yaml.py" \
-            --source "{{ config }}/include/behaviors.dtsi" \
-            --from-parsed "$tmp_yaml" \
-            --out "$leader"
+        # The leader sequences are deliberately NOT drawn. There are thousands
+        # of them now (math symbols and emoji generated from typst's tables), so
+        # they would paginate into hundreds of virtual layers. They are
+        # documented in docs/LEADER-SYMBOLS.md instead.
         if [[ -f "{{ config }}/$kb.json" ]]; then
-            keymap -c "$cfg" draw -j "{{ config }}/$kb.json" "$tmp_yaml" "$leader" >"{{ img }}/$kb.svg"
+            keymap -c "$cfg" draw -j "{{ config }}/$kb.json" "$tmp_yaml" >"{{ img }}/$kb.svg"
         else
-            keymap -c "$cfg" draw "$tmp_yaml" "$leader" >"{{ img }}/$kb.svg"
+            keymap -c "$cfg" draw "$tmp_yaml" >"{{ img }}/$kb.svg"
         fi
         rm -f "$tmp_yaml"; tmp_yaml=""
     done
@@ -136,22 +135,6 @@ verify-nesting:
 # behavioural equivalence against the recorded golden reference
 verify:
     ./scripts/verify_equivalence.py check --golden .research/golden-pre-refactor.json
-
-# regenerate the leader-key virtual layers consumed by `draw`
-_leader-yaml:
-    #!/usr/bin/env bash
-    set -euo pipefail
-    for kb in corne tempest seppelit sweep; do
-        case "$kb" in
-            corne)    rows="10 10 10 6" ;;   # 36 keys, 5-column CRKBD
-            tempest)  rows="10 10 10 6" ;;
-            seppelit) rows="10 10 10 6" ;;
-            sweep)    rows="10 10 10 4" ;;   # 34 keys, 2 thumbs per side
-        esac
-        "{{ justfile_directory() }}/generate_leader_yaml.py" \
-            --source "{{ config }}/include/behaviors.dtsi" --rows $rows \
-            --out "{{ config }}/$kb-leader.yaml"
-    done
 
 # initialize west
 init:

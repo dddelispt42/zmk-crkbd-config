@@ -292,3 +292,22 @@ ZMK_CAPS_WORD(capsw,
     continue-list = <BACKSPACE DELETE PT_MINUS PT_UNDER>;
 )
 
+/*
+ * Math-symbol and emoji leader sequences.
+ *
+ * These are GENERATED files - see docs/LEADER-SYMBOLS.md and
+ * scripts/gen_leader_symbols.py. They add sequences to the existing &leader1
+ * instance rather than defining a new leader key, so no new key binding is
+ * needed: the categories are separated by their first key.
+ *
+ *   leader1 + M + <typst name>   math    e.g. M S U M      -> U+2211
+ *   leader1 + E + <typst name>   emoji   e.g. E A X E      -> U+1FA93
+ *
+ * The M and E prefixes were chosen because no existing leader1 sequence begins
+ * with them except `mo`, and that is handled at generation time.
+ *
+ * Do not edit these files by hand - re-run the generator, which reads typst's
+ * own symbol tables.
+ */
+#include "leader-math.dtsi"
+#include "leader-emoji.dtsi"
