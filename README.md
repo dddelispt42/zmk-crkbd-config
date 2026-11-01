@@ -4,6 +4,7 @@
 - [Heiko's zmk-config for corne / tempest / seppelit / sweep](#heikos-zmk-config-for-corne--tempest--seppelit--sweep)
   - [Overview](#overview)
   - [One layout, four keyboards](#one-layout-four-keyboards)
+  - [Leader key: symbols, emoji and text snippets](#leader-key-symbols-emoji-and-text-snippets)
   - [Repository layout](#repository-layout)
   - [Editing the keymap](#editing-the-keymap)
   - [Building and flashing](#building-and-flashing)
@@ -53,6 +54,49 @@ automatically correct on every board. This is what replaces the old
 `generate_keymaps.sh`, which replicated the keymap three times and patched
 `key-positions` with `grep`/`sed` — a process that failed *silently* whenever a
 position was mistyped, because a combo on the wrong keys still compiles.
+
+## Leader key: symbols, emoji and text snippets
+
+The leader key carries far more than the sign-off snippets it started with.
+Press it, then a short sequence:
+
+| what | how | example |
+|---|---|---|
+| **math symbols** | leader, `M`, then the symbol's name | `M S U M` → ∑, `M L E Q` → ≤ |
+| **emoji** | leader, `E`, then the name | `E H E A R T` → ❤, `E T H U M B DOT U P` → 👍 |
+| **Greek** | leader, `G`, then one letter | `G G` → γ, `G G`+Shift → Γ |
+| **sign-offs** | leader, two or three letters | `O B R` → "Obrigado,\nHeiko" |
+| **unicode mode** | leader, `U X L/W/M` | switch the input method to Linux/Windows/macOS |
+
+Names follow **typst/LaTeX**, so they are the ones you already type: `sum`,
+`approx`, `arrow.r`, `integral`. A `.` in a name is the `DOT` key.
+
+**500 math symbols and 500 emoji are active**; roughly 1,000 more are present
+but commented out in the generated files, ready to enable. The full list, with
+each symbol's glyph and status, is in [docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md).
+
+Where a typst name collides with another, the **LaTeX command** is used instead
+— `lt.eq` is `LEQ`, `union.big` is `BIGCUP`, `arrow.r.double` is `RIGHTARROW` —
+because that is what a maths user already types.
+
+Note the leader sequences are **not drawn** in the keymap SVGs: at this size
+they would paginate into hundreds of virtual layers. The markdown reference
+above is the documentation.
+
+### Adding or changing symbols
+
+The two `leader-*.dtsi` files are **generated** from typst's own symbol tables
+and must not be edited by hand. To change the set, edit
+`scripts/gen_leader_symbols.py` and re-run it:
+
+```sh
+./scripts/gen_leader_symbols.py            # 500 math + 500 emoji (default)
+./scripts/gen_leader_symbols.py --math 300 # smaller set
+```
+
+The generator ranks symbols by usefulness **first**, then resolves conflicts by
+renaming rather than dropping (`arrow.r.bar` → `arrowRBar`), and asserts that
+nothing is silently lost.
 
 ## Repository layout
 

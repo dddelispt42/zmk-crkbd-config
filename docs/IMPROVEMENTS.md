@@ -138,272 +138,46 @@ after a push.
 
 ---
 
-## 2. CI: stop rewriting history and stop redundant runs — **verified**
+## 2. Extending the symbol sets beyond the current 500/500 — **optional**
 
-Three separate issues in `.github/workflows/`:
+The original plan for this chapter was to add math symbols to NUMNAV. That is
+no longer how it works: symbols are reached through **leader1**, using
+typst/LaTeX names, which scales far better than a dozen spare keys ever could.
 
-**a. `amend_commit: true`** (`draw-keymaps.yml:85`) — the upstream draw workflow
-amends the commit that produced the files, rewriting published history on every
-keymap push.
+What exists now:
 
-**b. ~~`leader-yaml` pushes a commit back to the repo~~ — FIXED.** The job is
-gone: the leader sequences are no longer drawn, so nothing regenerates or
-commits `config/*-leader.yaml` any more. That also removed the last CI step
-that wrote to the branch.
+| set | active | present but commented |
+|---|---|---|
+| math symbols | 500 | 508 |
+| emoji | 500 | 886 |
 
-**c. No `concurrency` block and no branch filter on `build.yml`.** Since
-`build.yml` is `on: [push, pull_request, workflow_dispatch]`, pushing to a branch
-with an open PR runs the full 9-target matrix **twice**. Verified: neither
-workflow declares `concurrency`, so nothing cancels the superseded run.
+plus 19 vulgar fractions and the super/subscripts on NUMNAV, 26 combining marks
+on the ACCENT layer, and Greek via `leader1 + G` (Shift for capitals).
 
-A `concurrency` group keyed on the branch would fix (c) at no cost:
+### Extending it
 
-```yaml
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+Change the counts and re-run the generator; no hand editing:
+
+```sh
+./scripts/gen_leader_symbols.py --math 700 --emoji 800
 ```
 
-**d. `img/*.yaml` is still committed by CI.** These are intermediate
-`keymap parse` output — `just draw` no longer produces them locally (it uses
-`mktemp` and cleans up), but the upstream workflow commits both `.svg` and
-`.yaml` via an explicit `file_pattern`. Gitignoring them is **not** an option:
-the action runs `git add` under `set -eu`, and a plain `git add` on an ignored
-path exits 1, which would fail the draw job. Removing them for good means either
-`destination: artifact` or replacing the reusable workflow with an inline job.
+Constraints to keep in mind:
 
----
+* **`CONFIG_ZMK_LEADER_MAX_SEQUENCES`** is per leader instance and currently
+  1536 against 1049 in use. A larger set needs this raised, and the build
+  asserts it — which is how the last two jumps were caught.
+* **Flash**: each active sequence costs `16 + 4 * MAX_KEYS_PER_SEQUENCE` bytes,
+  so the current 1000 are roughly 148 KB of the 1 MB available.
+* **Prefix-freeness**: the generator resolves conflicts by renaming, but the
+  name space is a tree, so every rename consumes a name.
 
-## 3. Configuration inconsistencies — **verified**
+### What is NOT done
 
-**a. Duplicate keyboard name.** `tempest.conf` and `seppelit.conf` both set
-`CONFIG_ZMK_KEYBOARD_NAME="HeiKey"`, making the two indistinguishable when
-pairing over Bluetooth.
-
-**b. Dead setting on three boards.** `common.conf` sets
-`CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1200000`, but corne, tempest and seppelit all set
-`CONFIG_ZMK_SLEEP=n`, so the timeout has no effect there. ZMK prints a Kconfig
-warning about it. Harmless but confusing; either give those boards `SLEEP=y` or
-move the timeout into `cradio.conf`, which is the only board that sleeps.
-
-**c. `BTSEL` is now unused.** The BLUETH layer uses the `bt_*` macros, which also
-set the unicode mode. The define is kept deliberately (with a comment saying so),
-but it is dead code until something needs a plain profile key.
-
----
-
-## 4. The equivalence harness is not wired into anything — **verified**
-
-`scripts/verify_equivalence.py` is the strongest safety net in the repo: it
-compares *expanded behaviour* (preprocessed bindings per layer, resolved
-`key-positions` per combo) and would have caught several of the regressions from
-the refactor. But nothing runs it — not the Justfile, not CI.
-
-Adding a `just verify` recipe, or a CI step on `config/**` changes, would turn it
-from a tool that existed during the refactor into a permanent guard. Given that
-this config is long-lived and hand-edited, that seems clearly worth it.
-
----
-
-## 5. Documentation drift — **partly fixed**
-
-The stale `just draw` claim has been corrected: the README said the recipe
-writes `img/*.yaml`, which stopped being true when it moved to a temp file.
-Two gaps remain:
-
-- **No mention of the unicode module or the Greek letters**, now a significant
-  feature with OS-dependent setup: WinCompose on Windows, fcitx5's
-  `Ctrl+Shift+U` on Linux. There is also a timing subtlety
-  (`ZMK_UNICODE_TAP_MS`/`WAIT_MS`) that took real debugging to find.
-- **No mention of the `LEADER1b` pagination**, so a reader seeing that layer in
-  the drawings has no explanation for it.
-
----
-
-## 6. Add the math symbols and operators — **verified, not started**
-
-NUMNAV now carries the vulgar fractions and the super/subscripts (19 combos and
-20 mod-morphs). The natural next step is the wider math set, which is large:
-the `zmk-unicode` module ships **256 mathematical operators**, **79 letterlike
-symbols**, **128 misc-mathematical-B**, **112 arrows** and **33 currency
-symbols**, all available via `#include <zmk-unicode/keys/blocks/...>`.
-
-Most valuable candidates, with their verified alias names:
-
-**Relations and comparisons** (mostly for code and notes)
-
-| symbol | alias |
-|---|---|
-| ≈ | `UC_ALMOST_EQUAL_TO` |
-| ≠ | `UC_NOT_EQUAL_TO` |
-| ≤ | `UC_LESS_THAN_OR_EQUAL_TO` |
-| ≥ | `UC_GREATER_THAN_OR_EQUAL_TO` |
-| ≡ | `UC_IDENTICAL_TO` |
-| ∝ | `UC_PROPORTIONAL_TO` |
-| − | `UC_MINUS_SIGN` (true minus U+2212, not hyphen) |
-| ± | `UC_PLUS_MINUS_SIGN` — in **latin_1_supplement**, not the operators block |
-
-**Logic and sets** (useful for Python/Rust notes)
-
-| symbol | alias | symbol | alias |
-|---|---|---|---|
-| ∀ | `UC_FOR_ALL` | ∃ | `UC_THERE_EXISTS` |
-| ∈ | `UC_ELEMENT_OF` | ∉ | `UC_NOT_AN_ELEMENT_OF` |
-| ⊂ | `UC_SUBSET_OF` | ⊃ | `UC_SUPERSET_OF` |
-| ∪ | `UC_UNION` | ∩ | `UC_INTERSECTION` |
-| ∅ | `UC_EMPTY_SET` | ∧ | `UC_LOGICAL_AND` |
-| ∨ | `UC_LOGICAL_OR` | ∴ | `UC_THEREFORE` |
-
-**Analysis and geometry**
-
-| symbol | alias | symbol | alias |
-|---|---|---|---|
-| ∞ | `UC_INFINITY` | √ | `UC_SQUARE_ROOT` |
-| ∫ | `UC_INTEGRAL` | ∂ | `UC_PARTIAL_DIFFERENTIAL` |
-| ∇ | `UC_NABLA` | ∑ | `UC_N_ARY_SUMMATION` |
-| ∏ | `UC_N_ARY_PRODUCT` | ∠ | `UC_ANGLE` |
-| ∥ | `UC_PARALLEL_TO` | ⟂ | `UC_PERPENDICULAR` (in misc-mathematical-A, not the operators block) |
-
-**Letterlike** (math notation and units)
-
-| symbol | alias | symbol | alias |
-|---|---|---|---|
-| ℓ | `UC_SCRIPT_SMALL_L` | ℎ | `UC_PLANCK_CONSTANT` |
-| ℏ | `UC_PLANCK_CONSTANT_OVER_TWO_PI` | ™ | `UC_TRADE_MARK_SIGN` |
-| ℃ | `UC_DEGREE_CELSIUS` | ℉ | `UC_DEGREE_FAHRENHEIT` |
-| ℤ | `UC_DOUBLE_STRUCK_CAPITAL_Z` | ℝ | `UC_DOUBLE_STRUCK_CAPITAL_R` |
-| ℕ | `UC_DOUBLE_STRUCK_CAPITAL_N` | ℚ | `UC_DOUBLE_STRUCK_CAPITAL_Q` |
-| ℂ | `UC_DOUBLE_STRUCK_CAPITAL_C` | ℙ | `UC_DOUBLE_STRUCK_CAPITAL_P` |
-
-### Implementation options, in rough order of cost
-
-**a. Extend what already exists (cheapest).** NUMNAV has 16 free cells: 5 on the
-home row, 8 on the bottom row, and 3 on the thumb-row row (which differs by
-board, `#ifdef ZMK_KB_34`). A handful of the most-used symbols could go on some
-of those, or as `Shift`-variants of keys that are currently `&trans` — the same
-mod-morph mechanism already used for the superscripts.
-
-**b. Add the operators to an existing layer.** SYMBOL is the obvious home for
-punctuation-like operators, but it is nearly full — only 4 free cells on a
-36-key board. Counting `&trans` cells per layer (note these counts include both
-`#ifdef ZMK_KB_34` branches, so they slightly overstate the 36-key reality):
-
-| layer | free cells |
-|---|---|
-| ACCENT | 32 |
-| NUMNAV | 19 |
-| MEDIA | 13 |
-| MOUSE | 10 |
-| FUNADJ | 9 |
-| WMCFG / MACROS | 8 each |
-| SYMBOL | 4 |
-| QWERTY, MSOUTL, BLUETH, LOCK | 0 |
-
-So NUMNAV and MEDIA have the most usable room; SYMBOL does not, despite being
-the punctuation layer.
-
-**c. A dedicated MATH layer.** Cleanest for a large set (40+ symbols) and the
-only option if you want all of them, but it needs a layer key, and every layer
-key on these boards is already assigned — so it would mean displacing something
-or adding a combo.
-
-### Considerations before doing it
-
-- **Each include is cheap but the aliases are not free**: an `&uc` binding is a
-  2-cell behavior, so a 40-symbol layer is a substantial devicetree addition.
-  Only include the specific `blocks/*.h` files needed — `keys-extra.h` pulls in
-  all 319 blocks.
-- **OS-side requirement is unchanged**: these are unicode input, so they depend
-  on the mode currently selected (`UC_MODE_WIN_COMPOSE` by default, with the
-  `UXL`/`UXW`/`UXM` leader sequences and the BLUETH profile keys switching it).
-  Typing ∑ on a Linux machine without the mode switched will produce garbage.
-- **Three blocks were needed for the fractions and super/subscripts** because
-  Unicode does not group them; expect the same for math. Concretely, `±` is
-  **not** in `mathematical_operators.h` — it is `UC_PLUS_MINUS_SIGN` (U+00B1) in
-  `latin_1_supplement.h`, the same block that holds ¹²³ and ¼ ½ ¾. Likewise
-  `⟂` is in `miscellaneous_mathematical_symbols_a.h`, not the operators block.
-  Check every name against the header rather than assuming the grouping.
-
----
-
-## 7. Smaller items — **a and c resolved, b open**
-
-**a. ~~`corne_left.conf` / `corne_right.conf` may be redundant~~ — RESOLVED: they
-are REQUIRED.** The earlier note guessed upstream's CRKBD shield handles the
-split. It does not: `ZMK_SPLIT_ROLE_CENTRAL` is declared as a bare `bool` with
-no default (`app/src/split/Kconfig`), so it must be set explicitly, and upstream
-ships no `.conf` files for corne at all. Without these two files neither half
-would know its role. Do not delete them.
-
-Verified at the same time: every shield in `build.yaml` has a matching `.conf`
-except `settings_reset`, which deliberately has none (it only resets stored
-settings).
-
-**b. `pre-commit` has exactly one active hook** (`zizmor`); everything else is
-commented out. A YAML linter would have caught the malformed `build.yaml`
-indentation that slipped in during the refactor, and a shell linter would cover
-the Justfile recipes.
-
-Its repository has also MOVED: the config points at
-`github.com/woodruffw/zizmor-pre-commit`, which now redirects to
-`zizmorcore/zizmor-pre-commit`. The pinned version (`v1.31.1`) is current and
-the old URL still resolves, so nothing is broken today — but it is worth
-repointing before the redirect is ever dropped, since this is the only active
-hook.
-
-**c. ~~`zmk_macro_gen.py` is undocumented~~ — DOCUMENTED.** It turns typed text
-into a `ZMK_MACRO` block and is how the signature macros were written. It now
-appears in the README file listing, so it can be found without noticing the
-file by accident.
-
----
-
-## 8. Dead and duplicated configuration — **partly fixed**
-
-The result of a systematic sweep for duplication, staleness and
-inconsistencies across every non-vendored file. Each finding was confirmed by
-reading the source of the thing that consumes it, not by inspection alone.
-
-### a. ~~Three dead `zmk_combos` entries~~ — FIXED
-
-`keymap_drawer.config.yaml` has a `zmk_combos` block matched against the
-**devicetree node name** (`zmk.py`: `self.cfg.zmk_combos.get(node.name, {})`),
-which for `ZMK_COMBO(x, ...)` is `combo_x`. Three entries named nodes that do
-not exist, so they silently did nothing — keymap-drawer never validates
-unmatched keys. All three names are corrected, and the silent-failure behaviour
-is now noted inline in the config.
-
-Still open: **3 commented-out** entries reference combos that do not exist
-(`combo_at`, `combo_underscore`, `combo_leader`) and could go. The other 11
-commented entries are valid alternatives, kept deliberately.
-
-### b. `&sl`, `&uc` and `&msc` are property overrides, not missing macro uses
-
-Three `&node { ... }` blocks override ZMK core nodes. These are sometimes
-suggested as `ZMK_STICKY_KEY` / `ZMK_INPUT_TWO_AXIS` candidates, and they are
-**not** — those macros *define a new behavior*, whereas these *change properties
-on an existing one*. Converting would replace ZMK's built-in `sl`/`msc` nodes
-with custom ones carrying the same labels, for no benefit and some risk.
-
-The current form is correct and matches what the modules document.
-
-### c. No other duplication found
-
-Checked and clean:
-
-- **Combos**: 41 defined, no duplicate names, no duplicate key-position sets
-  within a layer.
-- **Layers**: 12, in index order, no duplicate display names.
-- **Macros**: 48, no duplicate names.
-- **`.conf` files**: after the `common.conf` dedup, each board conf holds only
-  what differs.
-- **Scripts**: `check_macro_nesting.py` (119 lines) and `verify_equivalence.py`
-  (483) share no code worth extracting — different parse strategies and
-  different purposes.
-- **Unicode blocks**: three includes, each needed for a distinct code point
-  range (see item 6).
-
----
+* The 508 disabled math symbols and 886 disabled emoji stay commented until
+  asked for. Enabling individual ones by hand is possible but the generator is
+  the intended route.
+* No `just` recipe wraps the generator yet — it is invoked directly.
 
 ## Things that are fine as they are
 
@@ -416,50 +190,42 @@ Worth stating explicitly, because they look like problems and are not:
 - **`.conf` files cannot `#include` each other.** Kconfig fragments are merged,
   not textually included. The `common.conf` + `EXTRA_CONF_FILE` arrangement is
   the supported mechanism.
+- **`config/corne_left.conf` / `corne_right.conf` are gone, deliberately.**
+  They only set `CONFIG_ZMK_SPLIT_ROLE_CENTRAL`, and upstream's corne shield
+  already defaults it: `Kconfig.defconfig` has `if SHIELD_CORNE_LEFT` →
+  `ZMK_SPLIT_ROLE_CENTRAL default y`, with right taking the implicit `n`. The
+  local tempest and seppelit shields set it in their own `Kconfig.defconfig`
+  for the same reason. Do not re-add the files.
 - **`&leader1` is on a combo for sweep.** A 34-key board has no `LH2`, and no
   main key is free on any of the 12 layers, so a dedicated chord is the only way
   to keep the leader reachable there.
 
 ---
 
-## Suggested order
+## Also worth doing, but small
 
-1. **Local build (item 1)** — needs disk space first, but this is the one that
-   changes how fast every later change is verified, and it is the only way to
-   test the leader-symbol work that is currently unbuilt.
-2. **Wire the harness and nesting guard into CI (item 4)** — protects everything
-   else on this list.
-3. **CI hygiene (item 2)** — concurrency and `amend_commit`; removes recurring
-   friction.
-4. **Config inconsistencies (item 3).**
-5. **Documentation (item 5)** — the unicode/Greek setup notes are the most
-   valuable gap, since that feature has OS-dependent prerequisites.
-6. **Repoint the zizmor pre-commit hook (item 7b)** — one line, and it is the
-   only active hook.
-7. **The remaining dead `zmk_combos` comments (item 8a)** — three stale entries.
-8. **Math symbols beyond the current set (item 6)** — the generated files now
-   carry 500 active and 508 disabled; enabling more is a generator flag away.
+Two loose ends that do not warrant a chapter of their own:
+
+* **Three stale commented entries in `keymap_drawer.config.yaml`.** The
+  `zmk_combos` block is matched against the devicetree node name, so
+  `combo_at`, `combo_underscore` and `combo_leader` refer to combos that do not
+  exist. The other 11 commented entries are valid alternatives. Note that
+  keymap-drawer never warns about an unmatched key, which is how the three dead
+  *active* entries hid for so long before they were fixed.
+* **The zizmor pre-commit hook points at a moved repository.**
+  `woodruffw/zizmor-pre-commit` now redirects to `zizmorcore/zizmor-pre-commit`.
+  The pinned version is current and the redirect works, so nothing is broken,
+  but it is worth repointing.
 
 ---
 
-## Related: what the harness now checks
+## Suggested order
 
-Since this document was first written, `scripts/verify_equivalence.py` was
-extended while adding the fractions and super/subscripts:
-
-- combos are identified by **(positions, layers)** rather than by rendered
-  legend. Keying on the legend broke twice in one session merely by adding a
-  drawing label; position keys are what ZMK itself matches on.
-- additions must be acknowledged in `EXPECTED_ADDED_COMBOS`, which now accepts
-  globs and a `"*"` entry covering every board. A **removed** combo always fails.
-- the golden reference was migrated to the new keys and its leftover legend-dedup
-  suffixes removed.
-
-This matters for any combo work: a change that merely relabels a combo no
-longer trips the harness, but one that *moves* a combo still does.
-
-Note the harness cannot catch everything. It compares parsed keymaps, so it does
-not see devicetree structural errors — the `ZMK_MOD_MORPH` nesting bug passed
-both `keymap parse` and the harness while failing the firmware build. That is
-what `just verify-nesting` (added alongside it) covers, and it is the strongest
-argument for item 1: a local build subsumes both.
+1. **Local build (chapter 1)** — needs disk space first, but it is the only way
+   to verify the leader-symbol work without a CI round trip.
+2. **Wire `just verify` and `just verify-nesting` into CI** — they exist and pass
+   locally, but nothing runs them on a push, so a regression reaches the branch
+   before it is noticed.
+3. **The small items above** — minutes of work each.
+4. **Extend the symbol sets (chapter 2)** — only if 500/500 turns out not to be
+   enough in practice.
