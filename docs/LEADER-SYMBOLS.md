@@ -38,119 +38,114 @@ a pair (`UC_EL_GAMMA` is `0x3b3 0x393`), holding Shift gives the capital.
 
 These symbols use a different name from their typst one.
 
-### Math (242)
+### Math (440)
 
-* `angle.right` -> `measuredangle`
-* `approx.eq` -> `simeq`
-* `approx.not` -> `nsimeq`
-* `arrow.b.bar` -> `arrowBBar`
-* `arrow.b.curve` -> `arrowBCurve`
-* `arrow.b.dashed` -> `arrowBDashed`
-* `arrow.b.double` -> `arrowBDouble`
-* `arrow.b.dstruck` -> `arrowBDstruck`
-* `arrow.b.filled` -> `arrowBFilled`
-* `arrow.b.quad` -> `arrowBQuad`
-* `arrow.b.stop` -> `arrowBStop`
-* `arrow.b.stroked` -> `arrowBStroked`
-* `arrow.b.struck` -> `arrowBStruck`
-* `arrow.b.triple` -> `arrowBTriple`
-* `arrow.b.turn` -> `arrowBTurn`
-* `arrow.b.twohead` -> `arrowBTwohead`
-* `arrow.bl` -> `arrowBl`
-* `arrow.br` -> `arrowBr`
+* `Re` -> `realpart`
+* `aleph` -> `aleph2`
+* `amp.inv` -> `invAmp`
+* `and` -> `wedge`
+* `angle` -> `ang`
+* `angle.acute` -> `acuteAngle`
+* `angle.arc` -> `arcAngle`
+* `angle.azimuth` -> `azimuthAngle`
+* `angle.obtuse` -> `obtuseAngle`
+* `angle.rev` -> `revAngle`
+* `angle.right` -> `rightangle`
+* `angle.right.dot` -> `dotAngleRight`
+* `angle.right.square` -> `squareAngleRight`
+* `angle.s` -> `sAngle`
+* `angle.spatial` -> `spatialAngle`
+* `angle.spheric` -> `sphericAngle`
+* `angle.spheric.t` -> `tAngleSpheric`
+* `approx.eq` -> `eqApprox`
+* `approx.hat` -> `hatApprox`
+* `approx.not` -> `notApprox`
+* `arrow.b` -> `downarrow`
+* `arrow.bl.bar` -> `arrowBlBar`
+* `arrow.bl.double` -> `arrowBlDouble`
+* `arrow.bl.filled` -> `arrowBlFilled`
+* `arrow.bl.hook` -> `arrowBlHook`
+* `arrow.bl.stroked` -> `arrowBlStroked`
+* `arrow.br.bar` -> `arrowBrBar`
+* `arrow.br.double` -> `arrowBrDouble`
+* `arrow.br.filled` -> `arrowBrFilled`
+* `arrow.br.hook` -> `arrowBrHook`
+* `arrow.br.stroked` -> `arrowBrStroked`
 * `arrow.ccw.half` -> `arrowCcwHalf`
 * `arrow.cw.half` -> `arrowCwHalf`
-* `arrow.l.bar` -> `arrowLBar`
-* `arrow.l.curve` -> `arrowLCurve`
-* `arrow.l.dashed` -> `arrowLDashed`
-* `arrow.l.dotted` -> `arrowLDotted`
-* `arrow.l.double` -> `arrowLDouble`
-* `arrow.l.dstruck` -> `arrowLDstruck`
-* `arrow.l.filled` -> `arrowLFilled`
+* `arrow.l` -> `leftarrow`
+* `arrow.l.double.bar` -> `arrowLDoubleBar`
+* `arrow.l.double.long` -> `arrowLDoubleLong`
+* `arrow.l.double.long.bar` -> `barArrowLDoubleLong`
+* `arrow.l.double.not` -> `arrowLDoubleNot`
+* `arrow.l.double.struck` -> `arrowLDoubleStruck`
 * `arrow.l.hook` -> `hookleftarrow`
 * `arrow.l.long` -> `longleftarrow`
-* `arrow.l.long.bar` -> `arrowLLongBar`
-* `arrow.l.long.squiggly` -> `arrowLLongSquiggly`
-* `arrow.l.loop` -> `arrowLLoop`
-* `arrow.l.not` -> `arrowLNot`
-* `arrow.l.open` -> `arrowLOpen`
-* `arrow.l.quad` -> `arrowLQuad`
 * `arrow.l.r` -> `leftrightarrow`
-* `arrow.l.r.double` -> `arrowLRDouble`
-* `arrow.l.r.dstruck` -> `arrowLRDstruck`
-* `arrow.l.r.filled` -> `arrowLRFilled`
-* `arrow.l.r.long` -> `arrowLRLong`
-* `arrow.l.r.not` -> `arrowLRNot`
-* `arrow.l.r.open` -> `arrowLROpen`
-* `arrow.l.r.stroked` -> `arrowLRStroked`
-* `arrow.l.r.struck` -> `arrowLRStruck`
-* `arrow.l.r.wave` -> `arrowLRWave`
-* `arrow.l.squiggly` -> `arrowLSquiggly`
-* `arrow.l.stop` -> `arrowLStop`
-* `arrow.l.stroked` -> `arrowLStroked`
-* `arrow.l.struck` -> `arrowLStruck`
-* `arrow.l.tail` -> `arrowLTail`
-* `arrow.l.tilde` -> `arrowLTilde`
-* `arrow.l.triple` -> `arrowLTriple`
-* `arrow.l.turn` -> `arrowLTurn`
-* `arrow.l.twohead` -> `arrowLTwohead`
-* `arrow.l.wave` -> `arrowLWave`
-* `arrow.r.bar` -> `arrowRBar`
-* `arrow.r.curve` -> `arrowRCurve`
-* `arrow.r.dashed` -> `arrowRDashed`
-* `arrow.r.dotted` -> `arrowRDotted`
-* `arrow.r.double` -> `Rightarrow`
-* `arrow.r.double.bar` -> `arrowRDoubleBar`
-* `arrow.r.double.long` -> `arrowRDoubleLong`
-* `arrow.r.double.not` -> `arrowRDoubleNot`
-* `arrow.r.double.struck` -> `arrowRDoubleStruck`
-* `arrow.r.dstruck` -> `arrowRDstruck`
-* `arrow.r.filled` -> `arrowRFilled`
+* `arrow.l.r.double.long` -> `arrowLRDoubleLong`
+* `arrow.l.r.double.not` -> `arrowLRDoubleNot`
+* `arrow.l.r.double.struck` -> `arrowLRDoubleStruck`
+* `arrow.l.tail.dstruck` -> `arrowLTailDstruck`
+* `arrow.l.tail.struck` -> `arrowLTailStruck`
+* `arrow.l.twohead.bar` -> `arrowLTwoheadBar`
+* `arrow.l.twohead.dstruck` -> `arrowLTwoheadDstruck`
+* `arrow.l.twohead.struck` -> `arrowLTwoheadStruck`
+* `arrow.l.twohead.tail` -> `arrowLTwoheadTail`
+* `arrow.l.twohead.tail.dstruck` -> `dstruckArrowLTwoheadTail`
+* `arrow.l.twohead.tail.struck` -> `struckArrowLTwoheadTail`
+* `arrow.r` -> `rightarrow`
+* `arrow.r.bar` -> `barrightarrow`
+* `arrow.r.double` -> `doublerightarrow`
+* `arrow.r.double.long.bar` -> `arrowRDoubleLongBar`
 * `arrow.r.hook` -> `hookrightarrow`
 * `arrow.r.long` -> `longrightarrow`
-* `arrow.r.long.bar` -> `arrowRLongBar`
-* `arrow.r.long.squiggly` -> `arrowRLongSquiggly`
-* `arrow.r.loop` -> `arrowRLoop`
-* `arrow.r.not` -> `arrowRNot`
-* `arrow.r.open` -> `arrowROpen`
-* `arrow.r.quad` -> `arrowRQuad`
-* `arrow.r.squiggly` -> `arrowRSquiggly`
-* `arrow.r.stop` -> `arrowRStop`
-* `arrow.r.stroked` -> `arrowRStroked`
-* `arrow.r.struck` -> `arrowRStruck`
-* `arrow.r.tail` -> `arrowRTail`
-* `arrow.r.tilde` -> `arrowRTilde`
-* `arrow.r.triple` -> `arrowRTriple`
-* `arrow.r.turn` -> `arrowRTurn`
-* `arrow.r.twohead` -> `arrowRTwohead`
-* `arrow.r.wave` -> `arrowRWave`
-* `arrow.t.b` -> `arrowTB`
-* `arrow.t.curve` -> `arrowTCurve`
-* `arrow.t.dashed` -> `arrowTDashed`
-* `arrow.t.double` -> `arrowTDouble`
-* `arrow.t.dstruck` -> `arrowTDstruck`
-* `arrow.t.filled` -> `arrowTFilled`
-* `arrow.t.quad` -> `arrowTQuad`
-* `arrow.t.stop` -> `arrowTStop`
-* `arrow.t.stroked` -> `arrowTStroked`
-* `arrow.t.struck` -> `arrowTStruck`
-* `arrow.t.triple` -> `arrowTTriple`
-* `arrow.t.turn` -> `arrowTTurn`
-* `arrow.t.twohead` -> `arrowTTwohead`
-* `arrow.tl` -> `arrowTl`
-* `arrow.tr` -> `arrowTr`
+* `arrow.r.tail.dstruck` -> `arrowRTailDstruck`
+* `arrow.r.tail.struck` -> `arrowRTailStruck`
+* `arrow.r.twohead.bar` -> `arrowRTwoheadBar`
+* `arrow.r.twohead.dstruck` -> `arrowRTwoheadDstruck`
+* `arrow.r.twohead.struck` -> `arrowRTwoheadStruck`
+* `arrow.r.twohead.tail` -> `arrowRTwoheadTail`
+* `arrow.r.twohead.tail.dstruck` -> `dstruckArrowRTwoheadTail`
+* `arrow.r.twohead.tail.struck` -> `struckArrowRTwoheadTail`
+* `arrow.t` -> `uparrow`
+* `arrow.t.b.double` -> `arrowTBDouble`
+* `arrow.t.b.filled` -> `arrowTBFilled`
+* `arrow.t.b.stroked` -> `arrowTBStroked`
+* `arrow.t.bar` -> `arrowTBar`
+* `arrow.tl.bar` -> `arrowTlBar`
+* `arrow.tl.br` -> `arrowTlBr`
+* `arrow.tl.double` -> `arrowTlDouble`
+* `arrow.tl.filled` -> `arrowTlFilled`
+* `arrow.tl.hook` -> `arrowTlHook`
+* `arrow.tl.stroked` -> `arrowTlStroked`
+* `arrow.tr.bar` -> `arrowTrBar`
+* `arrow.tr.bl` -> `arrowTrBl`
+* `arrow.tr.double` -> `arrowTrDouble`
+* `arrow.tr.filled` -> `arrowTrFilled`
+* `arrow.tr.hook` -> `arrowTrHook`
+* `arrow.tr.stroked` -> `arrowTrStroked`
 * `arrows.lll` -> `arrowsLll`
 * `arrows.lr.stop` -> `arrowsLrStop`
 * `arrows.rl.long` -> `arrowsRlLong`
 * `arrows.rrr` -> `arrowsRrr`
 * `ast.op.o` -> `astOpO`
+* `asymp.not` -> `notAsymp`
+* `backslash.not` -> `notBackslash`
+* `backslash.o` -> `oBackslash`
+* `ballot.check` -> `checkBallot`
+* `ballot.check.heavy` -> `heavyBallotCheck`
+* `ballot.cross` -> `crossBallot`
 * `bar.v.broken` -> `barVBroken`
 * `bar.v.double` -> `barVDouble`
 * `bar.v.o` -> `barVO`
 * `bar.v.triple` -> `barVTriple`
+* `because` -> `because2`
+* `bot` -> `bot2`
 * `bowtie.filled.l` -> `bowtieFilledL`
 * `bowtie.filled.r` -> `bowtieFilledR`
 * `bowtie.stroked.big` -> `bowtieStrokedBig`
+* `bowtie.stroked.big.l` -> `lBowtieStrokedBig`
+* `bowtie.stroked.big.r` -> `rBowtieStrokedBig`
 * `brace.l.stroked` -> `braceLStroked`
 * `brace.r.stroked` -> `braceRStroked`
 * `bracket.l.stroked` -> `bracketLStroked`
@@ -159,6 +154,16 @@ These symbols use a different name from their typst one.
 * `bracket.r.stroked` -> `bracketRStroked`
 * `bracket.r.tick.b` -> `bracketRTickB`
 * `bracket.r.tick.t` -> `bracketRTickT`
+* `bullet` -> `bull`
+* `bullet.hole` -> `holeBullet`
+* `bullet.l` -> `lBullet`
+* `bullet.o` -> `oBullet`
+* `bullet.op` -> `opBullet`
+* `bullet.r` -> `rBullet`
+* `bullet.stroked` -> `strokedBullet`
+* `bullet.tri` -> `triBullet`
+* `checkmark.heavy` -> `heavyCheckmark`
+* `checkmark.light` -> `lightCheckmark`
 * `chevron.l.closed` -> `chevronLClosed`
 * `chevron.l.curly` -> `chevronLCurly`
 * `chevron.l.dot` -> `chevronLDot`
@@ -173,21 +178,83 @@ These symbols use a different name from their typst one.
 * `circle.stroked.big` -> `circleStrokedBig`
 * `circle.stroked.small` -> `circleStrokedSmall`
 * `circle.stroked.tiny` -> `circleStrokedTiny`
+* `co` -> `company`
+* `colon` -> `colon2`
+* `colon.double.eq` -> `colonDoubleEq`
+* `colon.tri.op` -> `colonTriOp`
+* `comma.inv` -> `invComma`
+* `comma.rev` -> `revComma`
+* `compose.o` -> `oCompose`
+* `convolve.o` -> `oConvolve`
+* `copyright.sound` -> `soundCopyright`
+* `crossmark.heavy` -> `heavyCrossmark`
+* `dagger.double` -> `doubleDagger`
+* `dagger.inv` -> `invDagger`
+* `dagger.l` -> `lDagger`
+* `dagger.r` -> `rDagger`
+* `dagger.triple` -> `tripleDagger`
 * `dash.em.three` -> `dashEmThree`
 * `dash.em.two` -> `dashEmTwo`
 * `dash.wave.double` -> `dashWaveDouble`
+* `degree` -> `degree2`
 * `diamond.filled.medium` -> `diamondFilledMedium`
 * `diamond.filled.small` -> `diamondFilledSmall`
 * `diamond.stroked.dot` -> `diamondStrokedDot`
 * `diamond.stroked.medium` -> `diamondStrokedMedium`
 * `diamond.stroked.small` -> `diamondStrokedSmall`
+* `div` -> `div2`
+* `divides.not` -> `notDivides`
+* `divides.not.rev` -> `revDividesNot`
+* `divides.struck` -> `struckDivides`
 * `dot.o.big` -> `dotOBig`
-* `dot.op` -> `dotOp`
+* `dot.op` -> `cdot`
 * `dots.h.c` -> `dotsHC`
-* `equiv.not` -> `nequiv`
+* `ell` -> `ell2`
+* `emptyset` -> `empty`
+* `emptyset.arrow.l` -> `lEmptysetArrow`
+* `emptyset.arrow.r` -> `rEmptysetArrow`
+* `emptyset.bar` -> `barEmptyset`
+* `emptyset.circle` -> `circleEmptyset`
+* `emptyset.rev` -> `revEmptyset`
+* `emptyset.zero` -> `zeroEmptyset`
+* `eq` -> `equal`
+* `eq.dots` -> `eqDots`
+* `eq.dots.down` -> `downEqDots`
+* `eq.dots.up` -> `upEqDots`
+* `eq.gt.slant` -> `eqGtSlant`
+* `eq.lt.slant` -> `eqLtSlant`
+* `eq.triple.not` -> `eqTripleNot`
+* `equiv.gt` -> `gtEquiv`
+* `equiv.gt.slant` -> `slantEquivGt`
+* `equiv.lt` -> `ltEquiv`
+* `equiv.lt.slant` -> `slantEquivLt`
+* `equiv.not` -> `notEquiv`
+* `excl.double` -> `doubleExcl`
+* `excl.inv` -> `invExcl`
+* `exists` -> `exists2`
+* `female.double` -> `doubleFemale`
 * `fence.l.double` -> `fenceLDouble`
 * `fence.r.double` -> `fenceRDouble`
-* `gt.eq` -> `geq`
+* `floral.l` -> `lFloral`
+* `floral.r` -> `rFloral`
+* `forall` -> `forall2`
+* `forces.not` -> `notForces`
+* `gt` -> `greater`
+* `gt.arc.eq` -> `gtArcEq`
+* `gt.closed.eq` -> `gtClosedEq`
+* `gt.closed.eq.not` -> `notGtClosedEq`
+* `gt.closed.not` -> `gtClosedNot`
+* `gt.double.nested` -> `gtDoubleNested`
+* `gt.eq.lt` -> `gtEqLt`
+* `gt.eq.lt.slant` -> `slantGtEqLt`
+* `gt.eq.not` -> `gtEqNot`
+* `gt.eq.slant` -> `gtEqSlant`
+* `gt.equiv.slant` -> `slantGtEquiv`
+* `gt.lt.not` -> `gtLtNot`
+* `gt.nequiv` -> `gtNequiv`
+* `gt.tilde.not` -> `gtTildeNot`
+* `gt.tilde.slant` -> `gtTildeSlant`
+* `gt.triple.nested` -> `gtTripleNested`
 * `harpoon.bl.bar` -> `harpoonBlBar`
 * `harpoon.bl.stop` -> `harpoonBlStop`
 * `harpoon.br.bar` -> `harpoonBrBar`
@@ -212,29 +279,122 @@ These symbols use a different name from their typst one.
 * `harpoon.tr.bl` -> `harpoonTrBl`
 * `harpoon.tr.br` -> `harpoonTrBr`
 * `harpoon.tr.stop` -> `harpoonTrStop`
+* `hyph.minus` -> `minusHyph`
+* `hyph.nobreak` -> `nobreakHyph`
+* `hyph.point` -> `pointHyph`
+* `hyph.soft` -> `softHyph`
 * `in` -> `inset`
 * `in.rev.not` -> `inRevNot`
 * `in.rev.small` -> `inRevSmall`
-* `integral.cont` -> `oint`
+* `infinity` -> `inf`
+* `infinity.bar` -> `barInfinity`
+* `infinity.incomplete` -> `incompleteInfinity`
+* `infinity.tie` -> `tieInfinity`
+* `integral.arrow.hook` -> `hookIntegralArrow`
+* `integral.ccw` -> `ccwIntegral`
+* `integral.cont` -> `contintegral`
+* `integral.cw` -> `cwIntegral`
+* `integral.dash` -> `dashIntegral`
+* `integral.double` -> `doubleIntegral`
+* `integral.inter` -> `interIntegral`
+* `integral.quad` -> `quadIntegral`
+* `integral.slash` -> `slashIntegral`
+* `integral.square` -> `squareIntegral`
+* `integral.surf` -> `surfIntegral`
+* `integral.times` -> `timesIntegral`
+* `integral.triple` -> `tripleIntegral`
+* `integral.union` -> `unionIntegral`
+* `integral.vol` -> `volIntegral`
+* `inter` -> `intersec`
 * `inter.big` -> `bigcap`
+* `inter.sq.big` -> `interSqBig`
+* `inter.sq.double` -> `interSqDouble`
+* `inter.sq.serif` -> `interSqSerif`
+* `interleave.big` -> `bigInterleave`
+* `interleave.struck` -> `struckInterleave`
+* `interrobang.inv` -> `invInterrobang`
+* `lat.eq` -> `eqLat`
+* `lat.eq.slant` -> `slantLatEq`
 * `lozenge.filled.medium` -> `lozengeFilledMedium`
 * `lozenge.filled.small` -> `lozengeFilledSmall`
 * `lozenge.stroked.medium` -> `lozengeStrokedMedium`
 * `lozenge.stroked.small` -> `lozengeStrokedSmall`
-* `lt.eq` -> `leq`
-* `minus.plus` -> `mp`
+* `lt` -> `less`
+* `lt.arc.eq` -> `ltArcEq`
+* `lt.closed.eq` -> `ltClosedEq`
+* `lt.closed.eq.not` -> `notLtClosedEq`
+* `lt.closed.not` -> `ltClosedNot`
+* `lt.double.nested` -> `ltDoubleNested`
+* `lt.eq.gt` -> `ltEqGt`
+* `lt.eq.gt.slant` -> `slantLtEqGt`
+* `lt.eq.not` -> `ltEqNot`
+* `lt.eq.slant` -> `ltEqSlant`
+* `lt.equiv.slant` -> `slantLtEquiv`
+* `lt.gt.not` -> `ltGtNot`
+* `lt.nequiv` -> `ltNequiv`
+* `lt.tilde.not` -> `ltTildeNot`
+* `lt.tilde.slant` -> `ltTildeSlant`
+* `lt.triple.nested` -> `ltTripleNested`
+* `male.double` -> `doubleMale`
+* `male.stroke` -> `strokeMale`
+* `male.stroke.r` -> `rMaleStroke`
+* `male.stroke.t` -> `tMaleStroke`
+* `mapsfrom.long` -> `longMapsfrom`
+* `mapsto.long` -> `longMapsto`
+* `minus` -> `minus2`
+* `minus.plus` -> `minusplus`
+* `multimap.double` -> `doubleMultimap`
+* `nabla` -> `nabla2`
+* `not` -> `neg`
+* `nothing.arrow.l` -> `lNothingArrow`
+* `nothing.arrow.r` -> `rNothingArrow`
+* `nothing.bar` -> `barNothing`
+* `nothing.circle` -> `circleNothing`
+* `nothing.rev` -> `revNothing`
+* `nothing.zero` -> `zeroNothing`
+* `or` -> `vee`
+* `parallel` -> `para`
+* `parallel.eq` -> `eqParallel`
+* `parallel.not` -> `notParallel`
+* `parallel.o` -> `oParallel`
+* `parallel.struck` -> `struckParallel`
+* `parallel.tilde` -> `tildeParallel`
+* `parallelogram.filled` -> `filledParallelogram`
+* `parallelogram.stroked` -> `strokedParallelogram`
 * `paren.l.closed` -> `parenLClosed`
 * `paren.l.flat` -> `parenLFlat`
 * `paren.l.stroked` -> `parenLStroked`
 * `paren.r.closed` -> `parenRClosed`
 * `paren.r.flat` -> `parenRFlat`
 * `paren.r.stroked` -> `parenRStroked`
-* `plus.minus` -> `pm`
+* `partial` -> `partial2`
+* `perp` -> `perpendicular`
+* `pilcrow.rev` -> `revPilcrow`
+* `plus` -> `plus2`
+* `plus.minus` -> `plusminus`
+* `plus.o.arrow` -> `plusOArrow`
+* `plus.o.big` -> `plusOBig`
+* `plus.o.l` -> `plusOL`
+* `plus.o.r` -> `plusOR`
 * `power.on.off` -> `powerOnOff`
+* `prec` -> `precedes`
+* `prec.curly.eq.not` -> `precCurlyEqNot`
+* `prec.eq.slant` -> `precEqSlant`
+* `prec.eq.slant.not` -> `notPrecEqSlant`
+* `prec.equiv` -> `precEquiv`
+* `prec.nequiv` -> `precNequiv`
+* `product.co` -> `coProduct`
+* `prop` -> `propto`
+* `quest.double` -> `doubleQuest`
+* `quest.inv` -> `invQuest`
+* `semi.inv` -> `invSemi`
+* `semi.rev` -> `revSemi`
 * `shell.l.filled` -> `shellLFilled`
 * `shell.l.stroked` -> `shellLStroked`
 * `shell.r.filled` -> `shellRFilled`
 * `shell.r.stroked` -> `shellRStroked`
+* `smt.eq` -> `eqSmt`
+* `smt.eq.slant` -> `slantSmtEq`
 * `square.filled.big` -> `squareFilledBig`
 * `square.filled.medium` -> `squareFilledMedium`
 * `square.filled.small` -> `squareFilledSmall`
@@ -245,33 +405,64 @@ These symbols use a different name from their typst one.
 * `square.stroked.rounded` -> `squareStrokedRounded`
 * `square.stroked.small` -> `squareStrokedSmall`
 * `square.stroked.tiny` -> `squareStrokedTiny`
-* `subset.eq` -> `subeq`
-* `subset.not` -> `nsubset`
-* `supset.eq` -> `supeq`
-* `supset.not` -> `nsupset`
+* `star.op` -> `starop`
+* `subset` -> `subsetof`
+* `subset.closed.eq` -> `subsetClosedEq`
+* `subset.eq` -> `subseteq`
+* `subset.nequiv` -> `subsetNequiv`
+* `subset.not` -> `notsubset`
+* `subset.sq.neq` -> `subsetSqNeq`
+* `succ` -> `succeeds`
+* `succ.curly.eq.not` -> `succCurlyEqNot`
+* `succ.eq.slant` -> `succEqSlant`
+* `succ.eq.slant.not` -> `notSuccEqSlant`
+* `succ.equiv` -> `succEquiv`
+* `succ.nequiv` -> `succNequiv`
+* `supset` -> `supsetof`
+* `supset.closed.eq` -> `supsetClosedEq`
+* `supset.eq` -> `supseteq`
+* `supset.nequiv` -> `supsetNequiv`
+* `supset.not` -> `notsupset`
+* `supset.sq.neq` -> `supsetSqNeq`
+* `tack.b.big` -> `bigTackB`
 * `tack.b.double.short` -> `tackBDoubleShort`
 * `tack.b.short` -> `tackBShort`
 * `tack.bb` -> `tackBb`
 * `tack.l.double` -> `tackLDouble`
+* `tack.l.long` -> `longTackL`
 * `tack.l.r` -> `tackLR`
 * `tack.l.short` -> `tackLShort`
 * `tack.ll` -> `tackLl`
-* `tack.r.double` -> `tackRDouble`
-* `tack.r.long` -> `tackRLong`
-* `tack.r.not` -> `tackRNot`
-* `tack.r.short` -> `tackRShort`
-* `tack.r.triple` -> `tackRTriple`
-* `tack.rr` -> `tackRr`
+* `tack.ll.double` -> `doubleTackLl`
+* `tack.r` -> `tackright`
+* `tack.r.double.not` -> `tackRDoubleNot`
+* `tack.rr.double` -> `tackRrDouble`
+* `tack.rr.double.not` -> `notTackRrDouble`
+* `tack.rr.not` -> `tackRrNot`
+* `tack.rr.short` -> `tackRrShort`
+* `tack.rrr` -> `tackRrr`
 * `tack.t.big` -> `tackTBig`
 * `tack.t.double.short` -> `tackTDoubleShort`
 * `tack.t.short` -> `tackTShort`
 * `tack.tt` -> `tackTt`
+* `therefore` -> `therefore2`
 * `tilde.eq.not` -> `tildeEqNot`
 * `tilde.eq.rev` -> `tildeEqRev`
 * `tilde.equiv` -> `tildeEquiv`
+* `tilde.equiv.not` -> `notTildeEquiv`
 * `tilde.gt.slant` -> `tildeGtSlant`
 * `tilde.lt.slant` -> `tildeLtSlant`
 * `tilde.rev.equiv` -> `tildeRevEquiv`
+* `times` -> `times2`
+* `times.o.big` -> `timesOBig`
+* `times.o.hat` -> `timesOHat`
+* `times.o.l` -> `timesOL`
+* `times.o.r` -> `timesOR`
+* `top` -> `top2`
+* `trademark.mc` -> `mcTrademark`
+* `trademark.md` -> `mdTrademark`
+* `trademark.registered` -> `registeredTrademark`
+* `trademark.service` -> `serviceTrademark`
 * `triangle.filled.bl` -> `triangleFilledBl`
 * `triangle.filled.br` -> `triangleFilledBr`
 * `triangle.filled.tl` -> `triangleFilledTl`
@@ -281,121 +472,440 @@ These symbols use a different name from their typst one.
 * `triangle.stroked.rounded` -> `triangleStrokedRounded`
 * `triangle.stroked.tl` -> `triangleStrokedTl`
 * `triangle.stroked.tr` -> `triangleStrokedTr`
+* `union` -> `cup`
 * `union.big` -> `bigcup`
+* `union.dot.big` -> `unionDotBig`
+* `union.plus.big` -> `unionPlusBig`
+* `union.sq.big` -> `unionSqBig`
+* `union.sq.double` -> `unionSqDouble`
+* `union.sq.serif` -> `unionSqSerif`
+* `xor.big` -> `bigXor`
 
-### Emoji (2)
+### Emoji (246)
 
+* `airplane.landing` -> `landingAirplane`
+* `airplane.small` -> `smallAirplane`
+* `airplane.takeoff` -> `takeoffAirplane`
+* `alien.monster` -> `monsterAlien`
+* `arrow.l.r.on` -> `arrowLROn`
+* `ast.box` -> `boxAst`
+* `baby.angel` -> `angelBaby`
+* `baby.box` -> `boxBaby`
+* `basketball.ball` -> `ballBasketball`
+* `bathtub.foam` -> `foamBathtub`
+* `battery.low` -> `lowBattery`
+* `beer.clink` -> `clinkBeer`
+* `beetle.lady` -> `ladyBeetle`
+* `bell.ding` -> `dingBell`
+* `bell.not` -> `notBell`
+* `bike.not` -> `notBike`
+* `bowl.steam` -> `steamBowl`
+* `bus.front` -> `frontBus`
+* `bus.small` -> `smallBus`
+* `bus.stop` -> `stopBus`
+* `button.alt` -> `altButton`
+* `button.radio` -> `radioButton`
+* `cablecar.small` -> `smallCablecar`
+* `cake.moon` -> `moonCake`
+* `cake.slice` -> `sliceCake`
+* `calendar.spiral` -> `spiralCalendar`
+* `calendar.tearoff` -> `tearoffCalendar`
+* `camel.dromedar` -> `dromedarCamel`
+* `camera.flash` -> `flashCamera`
+* `camera.movie` -> `movieCamera`
+* `camera.movie.box` -> `boxCameraMovie`
+* `camera.video` -> `videoCamera`
+* `car.front` -> `frontCar`
+* `car.police` -> `policeCar`
+* `car.racing` -> `racingCar`
+* `car.rickshaw` -> `rickshawCar`
+* `car.suv` -> `suvCar`
+* `card.credit` -> `creditCard`
+* `card.id` -> `idCard`
+* `cat.face.angry` -> `catFaceAngry`
+* `cat.face.cry` -> `catFaceCry`
+* `cat.face.heart` -> `catFaceHeart`
+* `cat.face.joy` -> `catFaceJoy`
+* `cat.face.kiss` -> `catFaceKiss`
+* `cat.face.laugh` -> `catFaceLaugh`
+* `cat.face.shock` -> `catFaceShock`
+* `cat.face.smile` -> `catFaceSmile`
+* `cat.face.smirk` -> `catFaceSmirk`
+* `chicken.baby.head` -> `headChickenBaby`
+* `chicken.male` -> `maleChicken`
+* `church.love` -> `loveChurch`
+* `cigarette.not` -> `notCigarette`
+* `city.dusk` -> `duskCity`
+* `city.night` -> `nightCity`
+* `clock.eight.thirty` -> `clockEightThirty`
+* `clock.eleven.thirty` -> `clockElevenThirty`
+* `clock.five.thirty` -> `clockFiveThirty`
+* `clock.four.thirty` -> `clockFourThirty`
+* `clock.nine.thirty` -> `clockNineThirty`
+* `clock.one.thirty` -> `clockOneThirty`
+* `clock.seven.thirty` -> `clockSevenThirty`
+* `clock.six.thirty` -> `clockSixThirty`
+* `clock.ten.thirty` -> `clockTenThirty`
+* `clock.three.thirty` -> `clockThreeThirty`
+* `clock.twelve.thirty` -> `clockTwelveThirty`
+* `clock.two.thirty` -> `clockTwoThirty`
+* `cloud.sun.hidden` -> `hiddenCloudSun`
+* `cloud.sun.rain` -> `rainCloudSun`
+* `coat.lab` -> `labCoat`
+* `cookie.fortune` -> `fortuneCookie`
+* `cow.face` -> `faceCow`
+* `crossmark.box` -> `boxCrossmark`
+* `dancing.bunny.men` -> `dancingBunnyMen`
+* `dancing.bunny.women` -> `dancingBunnyWomen`
+* `diamond.blue.small` -> `diamondBlueSmall`
+* `diamond.orange.small` -> `diamondOrangeSmall`
+* `dragon.face` -> `faceDragon`
+* `dress.kimono` -> `kimonoDress`
+* `dress.sari` -> `sariDress`
+* `drum.big` -> `bigDrum`
+* `ear.aid` -> `aidEar`
+* `excl.double` -> `doubleExcl`
+* `excl.white` -> `whiteExcl`
+* `face.angry.red` -> `faceAngryRed`
+* `face.down.sweat` -> `faceDownSweat`
+* `face.fear.sweat` -> `faceFearSweat`
+* `face.frown.slight` -> `faceFrownSlight`
+* `face.hearts` -> `faceHearts`
+* `face.kiss.blush` -> `faceKissBlush`
+* `face.kiss.heart` -> `faceKissHeart`
+* `face.kiss.smile` -> `faceKissSmile`
+* `face.sleepy` -> `faceSleepy`
+* `face.smile` -> `faceSmile`
+* `face.tear.relief` -> `faceTearRelief`
+* `face.tear.withheld` -> `faceTearWithheld`
+* `face.tongue.squint` -> `faceTongueSquint`
+* `face.tongue.wink` -> `faceTongueWink`
 * `finger.t` -> `fingerT`
+* `fish.tropical` -> `tropicalFish`
+* `fist.raised` -> `fistRaised`
+* `folder.open` -> `openFolder`
+* `football.am` -> `amFootball`
+* `hand.love` -> `handLove`
+* `hand.r` -> `handR`
+* `hand.raised.alt` -> `altHandRaised`
+* `heart.arrow` -> `arrowHeart`
+* `heart.beat` -> `beatHeart`
+* `heart.black` -> `blackHeart`
+* `heart.blue` -> `blueHeart`
+* `heart.box` -> `boxHeart`
+* `heart.broken` -> `brokenHeart`
+* `heart.brown` -> `brownHeart`
+* `heart.double` -> `doubleHeart`
+* `heart.gray` -> `grayHeart`
+* `heart.green` -> `greenHeart`
+* `heart.grow` -> `growHeart`
+* `heart.lightblue` -> `lightblueHeart`
+* `heart.orange` -> `orangeHeart`
+* `heart.purple` -> `purpleHeart`
+* `heart.real` -> `realHeart`
+* `heart.revolve` -> `revolveHeart`
+* `heart.spark` -> `sparkHeart`
+* `heart.white` -> `whiteHeart`
+* `heart.yellow` -> `yellowHeart`
+* `horse.face` -> `faceHorse`
+* `horse.race` -> `raceHorse`
+* `hotel.love` -> `loveHotel`
+* `house.derelict` -> `derelictHouse`
+* `house.garden` -> `gardenHouse`
+* `house.multiple` -> `multipleHouse`
+* `icecream.shaved` -> `shavedIcecream`
+* `icecream.soft` -> `softIcecream`
+* `knife.dagger` -> `daggerKnife`
+* `leg.mech` -> `mechLeg`
+* `litter.not` -> `notLitter`
+* `lock.key` -> `keyLock`
+* `lock.open` -> `openLock`
+* `lock.pen` -> `penLock`
+* `mail.arrow` -> `arrowMail`
+* `mailbox.closed.empty` -> `emptyMailboxClosed`
+* `mailbox.closed.full` -> `fullMailboxClosed`
+* `mailbox.open.empty` -> `emptyMailboxOpen`
+* `mailbox.open.full` -> `fullMailboxOpen`
+* `man.box` -> `boxMan`
+* `man.guapimao` -> `guapimaoMan`
+* `man.levitate` -> `levitateMan`
+* `man.old` -> `oldMan`
+* `man.pregnant` -> `pregnantMan`
+* `man.turban` -> `turbanMan`
+* `man.tuxedo` -> `tuxedoMan`
+* `megaphone.simple` -> `simpleMegaphone`
+* `microphone.studio` -> `studioMicrophone`
+* `monkey.face` -> `faceMonkey`
+* `monkey.hear.not` -> `notMonkeyHear`
+* `monkey.see.not` -> `notMonkeySee`
+* `monkey.speak.not` -> `notMonkeySpeak`
+* `moon.full.face` -> `moonFullFace`
+* `moon.new.face` -> `moonNewFace`
+* `moon.wane.three.face` -> `moonWaneThreeFace`
+* `moon.wax.two.face` -> `moonWaxTwoFace`
+* `mountain.fuji` -> `fujiMountain`
+* `mountain.snow` -> `snowMountain`
+* `mouth.bite` -> `biteMouth`
+* `newspaper.rolled` -> `rolledNewspaper`
+* `notebook.deco` -> `decoNotebook`
+* `notes.triple` -> `tripleNotes`
+* `pedestrian.not` -> `notPedestrian`
+* `pepper.hot` -> `hotPepper`
+* `person.angry` -> `angryPerson`
+* `person.blonde` -> `blondePerson`
+* `person.deaf` -> `deafPerson`
+* `person.facepalm` -> `facepalmPerson`
+* `person.frown` -> `frownPerson`
+* `person.hijab` -> `hijabPerson`
+* `person.kneel` -> `kneelPerson`
+* `person.lotus` -> `lotusPerson`
+* `person.massage` -> `massagePerson`
+* `person.no` -> `noPerson`
+* `person.ok` -> `okPerson`
+* `person.old` -> `oldPerson`
+* `person.pregnant` -> `pregnantPerson`
+* `person.raise` -> `raisePerson`
+* `person.sassy` -> `sassyPerson`
+* `person.shrug` -> `shrugPerson`
+* `person.stand` -> `standPerson`
+* `person.steam` -> `steamPerson`
+* `phone.arrow` -> `arrowPhone`
+* `phone.classic` -> `classicPhone`
+* `phone.not` -> `notPhone`
+* `phone.off` -> `offPhone`
+* `phone.receiver` -> `receiverPhone`
+* `phone.signal` -> `signalPhone`
+* `phone.vibrate` -> `vibratePhone`
+* `pig.face` -> `facePig`
+* `pin.round` -> `roundPin`
 * `playback.repeat` -> `playbackRepeat`
+* `potato.sweet` -> `sweetPotato`
+* `quest.white` -> `whiteQuest`
+* `rabbit.face` -> `faceRabbit`
+* `ribbon.remind` -> `remindRibbon`
+* `rice.cracker` -> `crackerRice`
+* `ruler.triangle` -> `triangleRuler`
+* `scooter.motor` -> `motorScooter`
+* `ship.cruise` -> `cruiseShip`
+* `ship.ferry` -> `ferryShip`
+* `shoe.ballet` -> `balletShoe`
+* `shoe.flat` -> `flatShoe`
+* `shoe.heel` -> `heelShoe`
+* `shoe.hike` -> `hikeShoe`
+* `shoe.roller` -> `rollerShoe`
+* `shoe.ski` -> `skiShoe`
+* `shoe.sneaker` -> `sneakerShoe`
+* `shoe.tall` -> `tallShoe`
+* `shoe.thong` -> `thongShoe`
+* `shrimp.fried` -> `friedShrimp`
+* `silhouette.double` -> `doubleSilhouette`
+* `silhouette.hug` -> `hugSilhouette`
+* `silhouette.speak` -> `speakSilhouette`
+* `snowman.snow` -> `snowSnowman`
+* `speaker.not` -> `notSpeaker`
+* `square.black.medium` -> `squareBlackMedium`
+* `square.black.small` -> `squareBlackSmall`
+* `square.black.tiny` -> `squareBlackTiny`
+* `square.white.medium` -> `squareWhiteMedium`
+* `square.white.small` -> `squareWhiteSmall`
+* `square.white.tiny` -> `squareWhiteTiny`
+* `star.arc` -> `arcStar`
+* `star.box` -> `boxStar`
+* `star.glow` -> `glowStar`
+* `star.shoot` -> `shootStar`
+* `sun.cloud` -> `cloudSun`
+* `sun.face` -> `faceSun`
+* `tap.not` -> `notTap`
+* `taxi.front` -> `frontTaxi`
+* `tiger.face` -> `faceTiger`
+* `train.speed.bullet` -> `trainSpeedBullet`
+* `train.tram.car` -> `trainTramCar`
+* `triangle.b` -> `triangleB`
+* `triangle.t` -> `triangleT`
+* `truck.trailer` -> `trailerTruck`
+* `whale.spout` -> `spoutWhale`
+* `wheelchair.box` -> `boxWheelchair`
+* `wheelchair.motor` -> `motorWheelchair`
+* `woman.box` -> `boxWoman`
+* `woman.old` -> `oldWoman`
+* `woman.pregnant` -> `pregnantWoman`
 
-## Math symbols (500 active, 508 disabled)
+## Math symbols (977 active, 31 disabled)
 
 | type | name | char | status |
 |---|---|---|---|
-| `M R I G H T A R R O W` | `Rightarrow` | ⇒ | active (renamed from `arrow.r.double`) |
-| `M A L E P H` | `aleph` | א | active |
+| `M A A` | `AA` | 𝔸 | active |
+| `M B B` | `BB` | 𝔹 | active |
+| `M D D` | `DD` | 𝔻 | active |
+| `M E E` | `EE` | 𝔼 | active |
+| `M F F` | `FF` | 𝔽 | active |
+| `M G G` | `GG` | 𝔾 | active |
+| `M H H` | `HH` | ℍ | active |
+| `M I I` | `II` | 𝕀 | active |
+| `M J J` | `JJ` | 𝕁 | active |
+| `M K K` | `KK` | 𝕂 | active |
+| `M L L` | `LL` | 𝕃 | active |
+| `M M M` | `MM` | 𝕄 | active |
+| `M N N` | `NN` | ℕ | active |
+| `M P P` | `PP` | ℙ | active |
+| `M Q Q` | `QQ` | ℚ | active |
+| `M R R` | `RR` | ℝ | active |
+| `M S S` | `SS` | 𝕊 | active |
+| `M T T` | `TT` | 𝕋 | active |
+| `M U U` | `UU` | 𝕌 | active |
+| `M V V` | `VV` | 𝕍 | active |
+| `M W W` | `WW` | 𝕎 | active |
+| `M X X` | `XX` | 𝕏 | active |
+| `M Y Y` | `YY` | 𝕐 | active |
+| `M Z Z` | `ZZ` | ℤ | active |
+| `M A C U T E A N G L E` | `acuteAngle` | ⦟ | active (renamed from `angle.acute`) |
+| `M A L E P H 2` | `aleph2` | א | active (renamed from `aleph`) |
 | `M A M P` | `amp` | & | active |
-| `M A N D` | `and` | ∧ | active |
-| `M A N G L E` | `angle` | ∠ | active |
-| `M A N G Z A R R` | `angzarr` | ⍼ | active |
+| `M A N D DOT B I G` | `and.big` | ⋀ | active |
+| `M A N D DOT C U R L Y` | `and.curly` | ⋏ | active |
+| `M A N D DOT D O T` | `and.dot` | ⟑ | active |
+| `M A N D DOT D O U B L E` | `and.double` | ⩓ | active |
+| `M A N G` | `ang` | ∠ | active (renamed from `angle`) |
 | `M A P P R O X` | `approx` | ≈ | active |
-| `M A R R O W DOT B` | `arrow.b` | ↓ | active |
+| `M A R C A N G L E` | `arcAngle` | ∡ | active (renamed from `angle.arc`) |
+| `M A R R O W DOT B DOT B A R` | `arrow.b.bar` | ↧ | active |
+| `M A R R O W DOT B DOT C U R V E` | `arrow.b.curve` | ⤵ | active |
+| `M A R R O W DOT B DOT D A S H E D` | `arrow.b.dashed` | ⇣ | active |
+| `M A R R O W DOT B DOT D O U B L E` | `arrow.b.double` | ⇓ | active |
+| `M A R R O W DOT B DOT D S T R U C K` | `arrow.b.dstruck` | ⇟ | active |
+| `M A R R O W DOT B DOT F I L L E D` | `arrow.b.filled` | ⬇ | active |
+| `M A R R O W DOT B DOT Q U A D` | `arrow.b.quad` | ⟱ | active |
+| `M A R R O W DOT B DOT S T O P` | `arrow.b.stop` | ⤓ | active |
+| `M A R R O W DOT B DOT S T R O K E D` | `arrow.b.stroked` | ⇩ | active |
+| `M A R R O W DOT B DOT S T R U C K` | `arrow.b.struck` | ⤈ | active |
+| `M A R R O W DOT B DOT T R I P L E` | `arrow.b.triple` | ⤋ | active |
+| `M A R R O W DOT B DOT T U R N` | `arrow.b.turn` | ⮏ | active |
+| `M A R R O W DOT B DOT T W O H E A D` | `arrow.b.twohead` | ↡ | active |
+| `M A R R O W DOT B L` | `arrow.bl` | ↙ | active |
+| `M A R R O W DOT B R` | `arrow.br` | ↘ | active |
 | `M A R R O W DOT C C W` | `arrow.ccw` | ↺ | active |
 | `M A R R O W DOT C W` | `arrow.cw` | ↻ | active |
-| `M A R R O W DOT L` | `arrow.l` | ← | active |
-| `M A R R O W DOT R` | `arrow.r` | → | active |
-| `M A R R O W DOT T` | `arrow.t` | ↑ | active |
+| `M A R R O W DOT L DOT B A R` | `arrow.l.bar` | ↤ | active |
+| `M A R R O W DOT L DOT C U R V E` | `arrow.l.curve` | ⤶ | active |
+| `M A R R O W DOT L DOT D A S H E D` | `arrow.l.dashed` | ⇠ | active |
+| `M A R R O W DOT L DOT D O T T E D` | `arrow.l.dotted` | ⬸ | active |
+| `M A R R O W DOT L DOT D O U B L E` | `arrow.l.double` | ⇐ | active |
+| `M A R R O W DOT L DOT D S T R U C K` | `arrow.l.dstruck` | ⇺ | active |
+| `M A R R O W DOT L DOT F I L L E D` | `arrow.l.filled` | ⬅ | active |
+| `M A R R O W DOT L DOT L O N G DOT B A R` | `arrow.l.long.bar` | ⟻ | active |
+| `M A R R O W DOT L DOT L O N G DOT S Q U I G G L Y` | `arrow.l.long.squiggly` | ⬳ | active |
+| `M A R R O W DOT L DOT L O O P` | `arrow.l.loop` | ↫ | active |
+| `M A R R O W DOT L DOT N O T` | `arrow.l.not` | ↚ | active |
+| `M A R R O W DOT L DOT O P E N` | `arrow.l.open` | ⇽ | active |
+| `M A R R O W DOT L DOT Q U A D` | `arrow.l.quad` | ⭅ | active |
+| `M A R R O W DOT L DOT R DOT D O U B L E` | `arrow.l.r.double` | ⇔ | active |
+| `M A R R O W DOT L DOT R DOT D S T R U C K` | `arrow.l.r.dstruck` | ⇼ | active |
+| `M A R R O W DOT L DOT R DOT F I L L E D` | `arrow.l.r.filled` | ⬌ | active |
+| `M A R R O W DOT L DOT R DOT L O N G` | `arrow.l.r.long` | ⟷ | active |
+| `M A R R O W DOT L DOT R DOT N O T` | `arrow.l.r.not` | ↮ | active |
+| `M A R R O W DOT L DOT R DOT O P E N` | `arrow.l.r.open` | ⇿ | active |
+| `M A R R O W DOT L DOT R DOT S T R O K E D` | `arrow.l.r.stroked` | ⬄ | active |
+| `M A R R O W DOT L DOT R DOT S T R U C K` | `arrow.l.r.struck` | ⇹ | active |
+| `M A R R O W DOT L DOT R DOT W A V E` | `arrow.l.r.wave` | ↭ | active |
+| `M A R R O W DOT L DOT S Q U I G G L Y` | `arrow.l.squiggly` | ⇜ | active |
+| `M A R R O W DOT L DOT S T O P` | `arrow.l.stop` | ⇤ | active |
+| `M A R R O W DOT L DOT S T R O K E D` | `arrow.l.stroked` | ⇦ | active |
+| `M A R R O W DOT L DOT S T R U C K` | `arrow.l.struck` | ⇷ | active |
+| `M A R R O W DOT L DOT T A I L` | `arrow.l.tail` | ↢ | active |
+| `M A R R O W DOT L DOT T I L D E` | `arrow.l.tilde` | ⭉ | active |
+| `M A R R O W DOT L DOT T R I P L E` | `arrow.l.triple` | ⇚ | active |
+| `M A R R O W DOT L DOT T U R N` | `arrow.l.turn` | ⮌ | active |
+| `M A R R O W DOT L DOT T W O H E A D` | `arrow.l.twohead` | ↞ | active |
+| `M A R R O W DOT L DOT W A V E` | `arrow.l.wave` | ↜ | active |
+| `M A R R O W DOT R DOT C U R V E` | `arrow.r.curve` | ⤷ | active |
+| `M A R R O W DOT R DOT D A S H E D` | `arrow.r.dashed` | ⇢ | active |
+| `M A R R O W DOT R DOT D O T T E D` | `arrow.r.dotted` | ⤑ | active |
+| `M A R R O W DOT R DOT D O U B L E DOT B A R` | `arrow.r.double.bar` | ⤇ | active |
+| `M A R R O W DOT R DOT D O U B L E DOT L O N G` | `arrow.r.double.long` | ⟹ | active |
+| `M A R R O W DOT R DOT D O U B L E DOT N O T` | `arrow.r.double.not` | ⇏ | active |
+| `M A R R O W DOT R DOT D O U B L E DOT S T R U C K` | `arrow.r.double.struck` | ⤃ | active |
+| `M A R R O W DOT R DOT D S T R U C K` | `arrow.r.dstruck` | ⇻ | active |
+| `M A R R O W DOT R DOT F I L L E D` | `arrow.r.filled` | ➡ | active |
+| `M A R R O W DOT R DOT L O N G DOT B A R` | `arrow.r.long.bar` | ⟼ | active |
+| `M A R R O W DOT R DOT L O N G DOT S Q U I G G L Y` | `arrow.r.long.squiggly` | ⟿ | active |
+| `M A R R O W DOT R DOT L O O P` | `arrow.r.loop` | ↬ | active |
+| `M A R R O W DOT R DOT N O T` | `arrow.r.not` | ↛ | active |
+| `M A R R O W DOT R DOT O P E N` | `arrow.r.open` | ⇾ | active |
+| `M A R R O W DOT R DOT Q U A D` | `arrow.r.quad` | ⭆ | active |
+| `M A R R O W DOT R DOT S Q U I G G L Y` | `arrow.r.squiggly` | ⇝ | active |
+| `M A R R O W DOT R DOT S T O P` | `arrow.r.stop` | ⇥ | active |
+| `M A R R O W DOT R DOT S T R O K E D` | `arrow.r.stroked` | ⇨ | active |
+| `M A R R O W DOT R DOT S T R U C K` | `arrow.r.struck` | ⇸ | active |
+| `M A R R O W DOT R DOT T A I L` | `arrow.r.tail` | ↣ | active |
+| `M A R R O W DOT R DOT T I L D E` | `arrow.r.tilde` | ⥲ | active |
+| `M A R R O W DOT R DOT T R I P L E` | `arrow.r.triple` | ⇛ | active |
+| `M A R R O W DOT R DOT T U R N` | `arrow.r.turn` | ⮎ | active |
+| `M A R R O W DOT R DOT T W O H E A D` | `arrow.r.twohead` | ↠ | active |
+| `M A R R O W DOT R DOT W A V E` | `arrow.r.wave` | ↝ | active |
+| `M A R R O W DOT T DOT B` | `arrow.t.b` | ↕ | active |
+| `M A R R O W DOT T DOT C U R V E` | `arrow.t.curve` | ⤴ | active |
+| `M A R R O W DOT T DOT D A S H E D` | `arrow.t.dashed` | ⇡ | active |
+| `M A R R O W DOT T DOT D O U B L E` | `arrow.t.double` | ⇑ | active |
+| `M A R R O W DOT T DOT D S T R U C K` | `arrow.t.dstruck` | ⇞ | active |
+| `M A R R O W DOT T DOT F I L L E D` | `arrow.t.filled` | ⬆ | active |
+| `M A R R O W DOT T DOT Q U A D` | `arrow.t.quad` | ⟰ | active |
+| `M A R R O W DOT T DOT S T O P` | `arrow.t.stop` | ⤒ | active |
+| `M A R R O W DOT T DOT S T R O K E D` | `arrow.t.stroked` | ⇧ | active |
+| `M A R R O W DOT T DOT S T R U C K` | `arrow.t.struck` | ⤉ | active |
+| `M A R R O W DOT T DOT T R I P L E` | `arrow.t.triple` | ⤊ | active |
+| `M A R R O W DOT T DOT T U R N` | `arrow.t.turn` | ⮍ | active |
+| `M A R R O W DOT T DOT T W O H E A D` | `arrow.t.twohead` | ↟ | active |
+| `M A R R O W DOT T L` | `arrow.tl` | ↖ | active |
+| `M A R R O W DOT T R` | `arrow.tr` | ↗ | active |
 | `M A R R O W DOT Z I G Z A G` | `arrow.zigzag` | ↯ | active |
-| `M A R R O W B B A R` | `arrowBBar` | ↧ | active (renamed from `arrow.b.bar`) |
-| `M A R R O W B C U R V E` | `arrowBCurve` | ⤵ | active (renamed from `arrow.b.curve`) |
-| `M A R R O W B D A S H E D` | `arrowBDashed` | ⇣ | active (renamed from `arrow.b.dashed`) |
-| `M A R R O W B D O U B L E` | `arrowBDouble` | ⇓ | active (renamed from `arrow.b.double`) |
-| `M A R R O W B D S T R U C K` | `arrowBDstruck` | ⇟ | active (renamed from `arrow.b.dstruck`) |
-| `M A R R O W B F I L L E D` | `arrowBFilled` | ⬇ | active (renamed from `arrow.b.filled`) |
-| `M A R R O W B Q U A D` | `arrowBQuad` | ⟱ | active (renamed from `arrow.b.quad`) |
-| `M A R R O W B S T O P` | `arrowBStop` | ⤓ | active (renamed from `arrow.b.stop`) |
-| `M A R R O W B S T R O K E D` | `arrowBStroked` | ⇩ | active (renamed from `arrow.b.stroked`) |
-| `M A R R O W B S T R U C K` | `arrowBStruck` | ⤈ | active (renamed from `arrow.b.struck`) |
-| `M A R R O W B T R I P L E` | `arrowBTriple` | ⤋ | active (renamed from `arrow.b.triple`) |
-| `M A R R O W B T U R N` | `arrowBTurn` | ⮏ | active (renamed from `arrow.b.turn`) |
-| `M A R R O W B T W O H E A D` | `arrowBTwohead` | ↡ | active (renamed from `arrow.b.twohead`) |
-| `M A R R O W B L` | `arrowBl` | ↙ | active (renamed from `arrow.bl`) |
-| `M A R R O W B R` | `arrowBr` | ↘ | active (renamed from `arrow.br`) |
+| `M A R R O W B L B A R` | `arrowBlBar` | 🢻 | active (renamed from `arrow.bl.bar`) |
+| `M A R R O W B L D O U B L E` | `arrowBlDouble` | ⇙ | active (renamed from `arrow.bl.double`) |
+| `M A R R O W B L F I L L E D` | `arrowBlFilled` | ⬋ | active (renamed from `arrow.bl.filled`) |
+| `M A R R O W B L H O O K` | `arrowBlHook` | ⤦ | active (renamed from `arrow.bl.hook`) |
+| `M A R R O W B L S T R O K E D` | `arrowBlStroked` | ⬃ | active (renamed from `arrow.bl.stroked`) |
+| `M A R R O W B R B A R` | `arrowBrBar` | 🢺 | active (renamed from `arrow.br.bar`) |
+| `M A R R O W B R D O U B L E` | `arrowBrDouble` | ⇘ | active (renamed from `arrow.br.double`) |
+| `M A R R O W B R F I L L E D` | `arrowBrFilled` | ⬊ | active (renamed from `arrow.br.filled`) |
+| `M A R R O W B R H O O K` | `arrowBrHook` | ⤥ | active (renamed from `arrow.br.hook`) |
+| `M A R R O W B R S T R O K E D` | `arrowBrStroked` | ⬂ | active (renamed from `arrow.br.stroked`) |
 | `M A R R O W C C W H A L F` | `arrowCcwHalf` | ↶ | active (renamed from `arrow.ccw.half`) |
 | `M A R R O W C W H A L F` | `arrowCwHalf` | ↷ | active (renamed from `arrow.cw.half`) |
-| `M A R R O W L B A R` | `arrowLBar` | ↤ | active (renamed from `arrow.l.bar`) |
-| `M A R R O W L C U R V E` | `arrowLCurve` | ⤶ | active (renamed from `arrow.l.curve`) |
-| `M A R R O W L D A S H E D` | `arrowLDashed` | ⇠ | active (renamed from `arrow.l.dashed`) |
-| `M A R R O W L D O T T E D` | `arrowLDotted` | ⬸ | active (renamed from `arrow.l.dotted`) |
-| `M A R R O W L D O U B L E` | `arrowLDouble` | ⇐ | active (renamed from `arrow.l.double`) |
-| `M A R R O W L D S T R U C K` | `arrowLDstruck` | ⇺ | active (renamed from `arrow.l.dstruck`) |
-| `M A R R O W L F I L L E D` | `arrowLFilled` | ⬅ | active (renamed from `arrow.l.filled`) |
-| `M A R R O W L L O N G B A R` | `arrowLLongBar` | ⟻ | active (renamed from `arrow.l.long.bar`) |
-| `M A R R O W L L O N G S Q U I G G L Y` | `arrowLLongSquiggly` | ⬳ | active (renamed from `arrow.l.long.squiggly`) |
-| `M A R R O W L L O O P` | `arrowLLoop` | ↫ | active (renamed from `arrow.l.loop`) |
-| `M A R R O W L N O T` | `arrowLNot` | ↚ | active (renamed from `arrow.l.not`) |
-| `M A R R O W L O P E N` | `arrowLOpen` | ⇽ | active (renamed from `arrow.l.open`) |
-| `M A R R O W L Q U A D` | `arrowLQuad` | ⭅ | active (renamed from `arrow.l.quad`) |
-| `M A R R O W L R D O U B L E` | `arrowLRDouble` | ⇔ | active (renamed from `arrow.l.r.double`) |
-| `M A R R O W L R D S T R U C K` | `arrowLRDstruck` | ⇼ | active (renamed from `arrow.l.r.dstruck`) |
-| `M A R R O W L R F I L L E D` | `arrowLRFilled` | ⬌ | active (renamed from `arrow.l.r.filled`) |
-| `M A R R O W L R L O N G` | `arrowLRLong` | ⟷ | active (renamed from `arrow.l.r.long`) |
-| `M A R R O W L R N O T` | `arrowLRNot` | ↮ | active (renamed from `arrow.l.r.not`) |
-| `M A R R O W L R O P E N` | `arrowLROpen` | ⇿ | active (renamed from `arrow.l.r.open`) |
-| `M A R R O W L R S T R O K E D` | `arrowLRStroked` | ⬄ | active (renamed from `arrow.l.r.stroked`) |
-| `M A R R O W L R S T R U C K` | `arrowLRStruck` | ⇹ | active (renamed from `arrow.l.r.struck`) |
-| `M A R R O W L R W A V E` | `arrowLRWave` | ↭ | active (renamed from `arrow.l.r.wave`) |
-| `M A R R O W L S Q U I G G L Y` | `arrowLSquiggly` | ⇜ | active (renamed from `arrow.l.squiggly`) |
-| `M A R R O W L S T O P` | `arrowLStop` | ⇤ | active (renamed from `arrow.l.stop`) |
-| `M A R R O W L S T R O K E D` | `arrowLStroked` | ⇦ | active (renamed from `arrow.l.stroked`) |
-| `M A R R O W L S T R U C K` | `arrowLStruck` | ⇷ | active (renamed from `arrow.l.struck`) |
-| `M A R R O W L T A I L` | `arrowLTail` | ↢ | active (renamed from `arrow.l.tail`) |
-| `M A R R O W L T I L D E` | `arrowLTilde` | ⭉ | active (renamed from `arrow.l.tilde`) |
-| `M A R R O W L T R I P L E` | `arrowLTriple` | ⇚ | active (renamed from `arrow.l.triple`) |
-| `M A R R O W L T U R N` | `arrowLTurn` | ⮌ | active (renamed from `arrow.l.turn`) |
-| `M A R R O W L T W O H E A D` | `arrowLTwohead` | ↞ | active (renamed from `arrow.l.twohead`) |
-| `M A R R O W L W A V E` | `arrowLWave` | ↜ | active (renamed from `arrow.l.wave`) |
-| `M A R R O W R B A R` | `arrowRBar` | ↦ | active (renamed from `arrow.r.bar`) |
-| `M A R R O W R C U R V E` | `arrowRCurve` | ⤷ | active (renamed from `arrow.r.curve`) |
-| `M A R R O W R D A S H E D` | `arrowRDashed` | ⇢ | active (renamed from `arrow.r.dashed`) |
-| `M A R R O W R D O T T E D` | `arrowRDotted` | ⤑ | active (renamed from `arrow.r.dotted`) |
-| `M A R R O W R D O U B L E B A R` | `arrowRDoubleBar` | ⤇ | active (renamed from `arrow.r.double.bar`) |
-| `M A R R O W R D O U B L E L O N G` | `arrowRDoubleLong` | ⟹ | active (renamed from `arrow.r.double.long`) |
-| `M A R R O W R D O U B L E N O T` | `arrowRDoubleNot` | ⇏ | active (renamed from `arrow.r.double.not`) |
-| `M A R R O W R D O U B L E S T R U C K` | `arrowRDoubleStruck` | ⤃ | active (renamed from `arrow.r.double.struck`) |
-| `M A R R O W R D S T R U C K` | `arrowRDstruck` | ⇻ | active (renamed from `arrow.r.dstruck`) |
-| `M A R R O W R F I L L E D` | `arrowRFilled` | ➡ | active (renamed from `arrow.r.filled`) |
-| `M A R R O W R L O N G B A R` | `arrowRLongBar` | ⟼ | active (renamed from `arrow.r.long.bar`) |
-| `M A R R O W R L O N G S Q U I G G L Y` | `arrowRLongSquiggly` | ⟿ | active (renamed from `arrow.r.long.squiggly`) |
-| `M A R R O W R L O O P` | `arrowRLoop` | ↬ | active (renamed from `arrow.r.loop`) |
-| `M A R R O W R N O T` | `arrowRNot` | ↛ | active (renamed from `arrow.r.not`) |
-| `M A R R O W R O P E N` | `arrowROpen` | ⇾ | active (renamed from `arrow.r.open`) |
-| `M A R R O W R Q U A D` | `arrowRQuad` | ⭆ | active (renamed from `arrow.r.quad`) |
-| `M A R R O W R S Q U I G G L Y` | `arrowRSquiggly` | ⇝ | active (renamed from `arrow.r.squiggly`) |
-| `M A R R O W R S T O P` | `arrowRStop` | ⇥ | active (renamed from `arrow.r.stop`) |
-| `M A R R O W R S T R O K E D` | `arrowRStroked` | ⇨ | active (renamed from `arrow.r.stroked`) |
-| `M A R R O W R S T R U C K` | `arrowRStruck` | ⇸ | active (renamed from `arrow.r.struck`) |
-| `M A R R O W R T A I L` | `arrowRTail` | ↣ | active (renamed from `arrow.r.tail`) |
-| `M A R R O W R T I L D E` | `arrowRTilde` | ⥲ | active (renamed from `arrow.r.tilde`) |
-| `M A R R O W R T R I P L E` | `arrowRTriple` | ⇛ | active (renamed from `arrow.r.triple`) |
-| `M A R R O W R T U R N` | `arrowRTurn` | ⮎ | active (renamed from `arrow.r.turn`) |
-| `M A R R O W R T W O H E A D` | `arrowRTwohead` | ↠ | active (renamed from `arrow.r.twohead`) |
-| `M A R R O W R W A V E` | `arrowRWave` | ↝ | active (renamed from `arrow.r.wave`) |
-| `M A R R O W T B` | `arrowTB` | ↕ | active (renamed from `arrow.t.b`) |
-| `M A R R O W T C U R V E` | `arrowTCurve` | ⤴ | active (renamed from `arrow.t.curve`) |
-| `M A R R O W T D A S H E D` | `arrowTDashed` | ⇡ | active (renamed from `arrow.t.dashed`) |
-| `M A R R O W T D O U B L E` | `arrowTDouble` | ⇑ | active (renamed from `arrow.t.double`) |
-| `M A R R O W T D S T R U C K` | `arrowTDstruck` | ⇞ | active (renamed from `arrow.t.dstruck`) |
-| `M A R R O W T F I L L E D` | `arrowTFilled` | ⬆ | active (renamed from `arrow.t.filled`) |
-| `M A R R O W T Q U A D` | `arrowTQuad` | ⟰ | active (renamed from `arrow.t.quad`) |
-| `M A R R O W T S T O P` | `arrowTStop` | ⤒ | active (renamed from `arrow.t.stop`) |
-| `M A R R O W T S T R O K E D` | `arrowTStroked` | ⇧ | active (renamed from `arrow.t.stroked`) |
-| `M A R R O W T S T R U C K` | `arrowTStruck` | ⤉ | active (renamed from `arrow.t.struck`) |
-| `M A R R O W T T R I P L E` | `arrowTTriple` | ⤊ | active (renamed from `arrow.t.triple`) |
-| `M A R R O W T T U R N` | `arrowTTurn` | ⮍ | active (renamed from `arrow.t.turn`) |
-| `M A R R O W T T W O H E A D` | `arrowTTwohead` | ↟ | active (renamed from `arrow.t.twohead`) |
-| `M A R R O W T L` | `arrowTl` | ↖ | active (renamed from `arrow.tl`) |
-| `M A R R O W T R` | `arrowTr` | ↗ | active (renamed from `arrow.tr`) |
+| `M A R R O W L D O U B L E B A R` | `arrowLDoubleBar` | ⤆ | active (renamed from `arrow.l.double.bar`) |
+| `M A R R O W L D O U B L E L O N G` | `arrowLDoubleLong` | ⟸ | active (renamed from `arrow.l.double.long`) |
+| `M A R R O W L D O U B L E N O T` | `arrowLDoubleNot` | ⇍ | active (renamed from `arrow.l.double.not`) |
+| `M A R R O W L D O U B L E S T R U C K` | `arrowLDoubleStruck` | ⤂ | active (renamed from `arrow.l.double.struck`) |
+| `M A R R O W L R D O U B L E L O N G` | `arrowLRDoubleLong` | ⟺ | active (renamed from `arrow.l.r.double.long`) |
+| `M A R R O W L R D O U B L E N O T` | `arrowLRDoubleNot` | ⇎ | active (renamed from `arrow.l.r.double.not`) |
+| `M A R R O W L R D O U B L E S T R U C K` | `arrowLRDoubleStruck` | ⤄ | active (renamed from `arrow.l.r.double.struck`) |
+| `M A R R O W L T A I L D S T R U C K` | `arrowLTailDstruck` | ⬺ | active (renamed from `arrow.l.tail.dstruck`) |
+| `M A R R O W L T A I L S T R U C K` | `arrowLTailStruck` | ⬹ | active (renamed from `arrow.l.tail.struck`) |
+| `M A R R O W L T W O H E A D B A R` | `arrowLTwoheadBar` | ⬶ | active (renamed from `arrow.l.twohead.bar`) |
+| `M A R R O W L T W O H E A D D S T R U C K` | `arrowLTwoheadDstruck` | ⬵ | active (renamed from `arrow.l.twohead.dstruck`) |
+| `M A R R O W L T W O H E A D S T R U C K` | `arrowLTwoheadStruck` | ⬴ | active (renamed from `arrow.l.twohead.struck`) |
+| `M A R R O W L T W O H E A D T A I L` | `arrowLTwoheadTail` | ⬻ | active (renamed from `arrow.l.twohead.tail`) |
+| `M A R R O W R D O U B L E L O N G B A R` | `arrowRDoubleLongBar` | ⟾ | active (renamed from `arrow.r.double.long.bar`) |
+| `M A R R O W R T A I L D S T R U C K` | `arrowRTailDstruck` | ⤕ | active (renamed from `arrow.r.tail.dstruck`) |
+| `M A R R O W R T A I L S T R U C K` | `arrowRTailStruck` | ⤔ | active (renamed from `arrow.r.tail.struck`) |
+| `M A R R O W R T W O H E A D B A R` | `arrowRTwoheadBar` | ⤅ | active (renamed from `arrow.r.twohead.bar`) |
+| `M A R R O W R T W O H E A D D S T R U C K` | `arrowRTwoheadDstruck` | ⤁ | active (renamed from `arrow.r.twohead.dstruck`) |
+| `M A R R O W R T W O H E A D S T R U C K` | `arrowRTwoheadStruck` | ⤀ | active (renamed from `arrow.r.twohead.struck`) |
+| `M A R R O W R T W O H E A D T A I L` | `arrowRTwoheadTail` | ⤖ | active (renamed from `arrow.r.twohead.tail`) |
+| `M A R R O W T B D O U B L E` | `arrowTBDouble` | ⇕ | active (renamed from `arrow.t.b.double`) |
+| `M A R R O W T B F I L L E D` | `arrowTBFilled` | ⬍ | active (renamed from `arrow.t.b.filled`) |
+| `M A R R O W T B S T R O K E D` | `arrowTBStroked` | ⇳ | active (renamed from `arrow.t.b.stroked`) |
+| `M A R R O W T B A R` | `arrowTBar` | ↥ | active (renamed from `arrow.t.bar`) |
+| `M A R R O W T L B A R` | `arrowTlBar` | 🢸 | active (renamed from `arrow.tl.bar`) |
+| `M A R R O W T L B R` | `arrowTlBr` | ⤡ | active (renamed from `arrow.tl.br`) |
+| `M A R R O W T L D O U B L E` | `arrowTlDouble` | ⇖ | active (renamed from `arrow.tl.double`) |
+| `M A R R O W T L F I L L E D` | `arrowTlFilled` | ⬉ | active (renamed from `arrow.tl.filled`) |
+| `M A R R O W T L H O O K` | `arrowTlHook` | ⤣ | active (renamed from `arrow.tl.hook`) |
+| `M A R R O W T L S T R O K E D` | `arrowTlStroked` | ⬁ | active (renamed from `arrow.tl.stroked`) |
+| `M A R R O W T R B A R` | `arrowTrBar` | 🢹 | active (renamed from `arrow.tr.bar`) |
+| `M A R R O W T R B L` | `arrowTrBl` | ⤢ | active (renamed from `arrow.tr.bl`) |
+| `M A R R O W T R D O U B L E` | `arrowTrDouble` | ⇗ | active (renamed from `arrow.tr.double`) |
+| `M A R R O W T R F I L L E D` | `arrowTrFilled` | ⬈ | active (renamed from `arrow.tr.filled`) |
+| `M A R R O W T R H O O K` | `arrowTrHook` | ⤤ | active (renamed from `arrow.tr.hook`) |
+| `M A R R O W T R S T R O K E D` | `arrowTrStroked` | ⬀ | active (renamed from `arrow.tr.stroked`) |
 | `M A R R O W H E A D DOT B` | `arrowhead.b` | ⌄ | active |
 | `M A R R O W H E A D DOT T` | `arrowhead.t` | ⌃ | active |
 | `M A R R O W S DOT B B` | `arrows.bb` | ⇊ | active |
@@ -419,20 +929,32 @@ These symbols use a different name from their typst one.
 | `M A S T O P O` | `astOpO` | ⊛ | active (renamed from `ast.op.o`) |
 | `M A S Y M P` | `asymp` | ≍ | active |
 | `M A T` | `at` | @ | active |
+| `M A Z I M U T H A N G L E` | `azimuthAngle` | ⍼ | active (renamed from `angle.azimuth`) |
 | `M B A C K S L A S H` | `backslash` | \ | active |
 | `M B A G DOT L` | `bag.l` | ⟅ | active |
 | `M B A G DOT R` | `bag.r` | ⟆ | active |
+| `M B A L L O T` | `ballot` | ☐ | active |
 | `M B A R DOT H` | `bar.h` | ― | active |
 | `M B A R DOT V` | `bar.v` | | | active |
+| `M B A R A R R O W L D O U B L E L O N G` | `barArrowLDoubleLong` | ⟽ | active (renamed from `arrow.l.double.long.bar`) |
+| `M B A R E M P T Y S E T` | `barEmptyset` | ⦱ | active (renamed from `emptyset.bar`) |
+| `M B A R I N F I N I T Y` | `barInfinity` | ⧞ | active (renamed from `infinity.bar`) |
+| `M B A R N O T H I N G` | `barNothing` | ⦱ | active (renamed from `nothing.bar`) |
 | `M B A R V B R O K E N` | `barVBroken` | ¦ | active (renamed from `bar.v.broken`) |
 | `M B A R V D O U B L E` | `barVDouble` | ‖ | active (renamed from `bar.v.double`) |
 | `M B A R V O` | `barVO` | ⦶ | active (renamed from `bar.v.o`) |
 | `M B A R V T R I P L E` | `barVTriple` | ⦀ | active (renamed from `bar.v.triple`) |
-| `M B E C A U S E` | `because` | ∵ | active |
+| `M B A R R I G H T A R R O W` | `barrightarrow` | ↦ | active (renamed from `arrow.r.bar`) |
+| `M B E C A U S E 2` | `because2` | ∵ | active (renamed from `because`) |
 | `M B E T H` | `beth` | ב | active |
+| `M B I G I N T E R L E A V E` | `bigInterleave` | ⫼ | active (renamed from `interleave.big`) |
+| `M B I G T A C K B` | `bigTackB` | ⟙ | active (renamed from `tack.b.big`) |
+| `M B I G X O R` | `bigXor` | ⨁ | active (renamed from `xor.big`) |
 | `M B I G C A P` | `bigcap` | ⋂ | active (renamed from `inter.big`) |
 | `M B I G C U P` | `bigcup` | ⋃ | active (renamed from `union.big`) |
-| `M B O T` | `bot` | ⊥ | active |
+| `M B I S H O P DOT B L A C K` | `bishop.black` | ♝ | active |
+| `M B I S H O P DOT W H I T E` | `bishop.white` | ♗ | active |
+| `M B O T 2` | `bot2` | ⊥ | active (renamed from `bot`) |
 | `M B O W T I E DOT F I L L E D` | `bowtie.filled` | ⧓ | active |
 | `M B O W T I E DOT S T R O K E D` | `bowtie.stroked` | ⋈ | active |
 | `M B O W T I E F I L L E D L` | `bowtieFilledL` | ⧑ | active (renamed from `bowtie.filled.l`) |
@@ -454,9 +976,20 @@ These symbols use a different name from their typst one.
 | `M B R A C K E T R S T R O K E D` | `bracketRStroked` | ⟧ | active (renamed from `bracket.r.stroked`) |
 | `M B R A C K E T R T I C K B` | `bracketRTickB` | ⦎ | active (renamed from `bracket.r.tick.b`) |
 | `M B R A C K E T R T I C K T` | `bracketRTickT` | ⦐ | active (renamed from `bracket.r.tick.t`) |
-| `M B U L L E T` | `bullet` | • | active |
+| `M B U L L` | `bull` | • | active (renamed from `bullet`) |
+| `M C C DOT B Y` | `cc.by` | 🅯 | active |
+| `M C C DOT N C` | `cc.nc` | 🄏 | active |
+| `M C C DOT N D` | `cc.nd` | ⊜ | active |
+| `M C C DOT P U B L I C` | `cc.public` | 🅮 | active |
+| `M C C DOT S A` | `cc.sa` | 🄎 | active |
+| `M C C DOT Z E R O` | `cc.zero` | 🄍 | active |
+| `M C C W I N T E G R A L` | `ccwIntegral` | ⨑ | active (renamed from `integral.ccw`) |
+| `M C D O T` | `cdot` | ⋅ | active (renamed from `dot.op`) |
 | `M C E I L DOT L` | `ceil.l` | ⌈ | active |
 | `M C E I L DOT R` | `ceil.r` | ⌉ | active |
+| `M C H E C K B A L L O T` | `checkBallot` | ☑ | active (renamed from `ballot.check`) |
+| `M C H E C K M A R K` | `checkmark` | ✓ | active |
+| `M C H E S S` | `chess` | { | active |
 | `M C H E V R O N DOT L` | `chevron.l` | ⟨ | active |
 | `M C H E V R O N DOT R` | `chevron.r` | ⟩ | active |
 | `M C H E V R O N L C L O S E D` | `chevronLClosed` | ⦉ | active (renamed from `chevron.l.closed`) |
@@ -470,21 +1003,38 @@ These symbols use a different name from their typst one.
 | `M C I R C L E DOT D O T T E D` | `circle.dotted` | ◌ | active |
 | `M C I R C L E DOT F I L L E D` | `circle.filled` | ● | active |
 | `M C I R C L E DOT S T R O K E D` | `circle.stroked` | ○ | active |
+| `M C I R C L E E M P T Y S E T` | `circleEmptyset` | ⦲ | active (renamed from `emptyset.circle`) |
 | `M C I R C L E F I L L E D B I G` | `circleFilledBig` | ⬤ | active (renamed from `circle.filled.big`) |
 | `M C I R C L E F I L L E D S M A L L` | `circleFilledSmall` | ∙ | active (renamed from `circle.filled.small`) |
 | `M C I R C L E F I L L E D T I N Y` | `circleFilledTiny` | ⦁ | active (renamed from `circle.filled.tiny`) |
+| `M C I R C L E N O T H I N G` | `circleNothing` | ⦲ | active (renamed from `nothing.circle`) |
 | `M C I R C L E S T R O K E D B I G` | `circleStrokedBig` | ◯ | active (renamed from `circle.stroked.big`) |
 | `M C I R C L E S T R O K E D S M A L L` | `circleStrokedSmall` | ⚬ | active (renamed from `circle.stroked.small`) |
 | `M C I R C L E S T R O K E D T I N Y` | `circleStrokedTiny` | ∘ | active (renamed from `circle.stroked.tiny`) |
-| `M C O L O N` | `colon` | : | active |
+| `M C O P R O D U C T` | `coProduct` | ∐ | active (renamed from `product.co`) |
+| `M C O L O N DOT C U R R E N C Y` | `colon.currency` | ₡ | active |
+| `M C O L O N DOT D O U B L E` | `colon.double` | ∷ | active |
+| `M C O L O N DOT E Q` | `colon.eq` | ≔ | active |
+| `M C O L O N DOT T R I` | `colon.tri` | ⁝ | active |
+| `M C O L O N 2` | `colon2` | : | active (renamed from `colon`) |
+| `M C O L O N D O U B L E E Q` | `colonDoubleEq` | ⩴ | active (renamed from `colon.double.eq`) |
+| `M C O L O N T R I O P` | `colonTriOp` | ⫶ | active (renamed from `colon.tri.op`) |
 | `M C O M M A` | `comma` | , | active |
+| `M C O M P A N Y` | `company` | ℅ | active (renamed from `co`) |
 | `M C O M P L E M E N T` | `complement` | ∁ | active |
 | `M C O M P O S E` | `compose` | ∘ | active |
+| `M C O N T I N T E G R A L` | `contintegral` | ∮ | active (renamed from `integral.cont`) |
 | `M C O N V O L V E` | `convolve` | ∗ | active |
+| `M C O P Y L E F T` | `copyleft` | 🄯 | active |
+| `M C O P Y R I G H T` | `copyright` | © | active |
 | `M C O R N E R DOT L DOT B` | `corner.l.b` | ⌞ | active |
 | `M C O R N E R DOT L DOT T` | `corner.l.t` | ⌜ | active |
 | `M C O R N E R DOT R DOT B` | `corner.r.b` | ⌟ | active |
 | `M C O R N E R DOT R DOT T` | `corner.r.t` | ⌝ | active |
+| `M C R O S S B A L L O T` | `crossBallot` | ☒ | active (renamed from `ballot.cross`) |
+| `M C R O S S M A R K` | `crossmark` | ✗ | active |
+| `M C U P` | `cup` | ∪ | active (renamed from `union`) |
+| `M C W I N T E G R A L` | `cwIntegral` | ∱ | active (renamed from `integral.cw`) |
 | `M D A G G E R` | `dagger` | † | active |
 | `M D A L E T H` | `daleth` | ד | active |
 | `M D A S H DOT C O L O N` | `dash.colon` | ∹ | active |
@@ -495,8 +1045,9 @@ These symbols use a different name from their typst one.
 | `M D A S H DOT W A V E` | `dash.wave` | 〜 | active |
 | `M D A S H E M T H R E E` | `dashEmThree` | ⸻ | active (renamed from `dash.em.three`) |
 | `M D A S H E M T W O` | `dashEmTwo` | ⸺ | active (renamed from `dash.em.two`) |
+| `M D A S H I N T E G R A L` | `dashIntegral` | ⨍ | active (renamed from `integral.dash`) |
 | `M D A S H W A V E D O U B L E` | `dashWaveDouble` | 〰 | active (renamed from `dash.wave.double`) |
-| `M D E G R E E` | `degree` | ° | active |
+| `M D E G R E E 2` | `degree2` | ° | active (renamed from `degree`) |
 | `M D I A M E T E R` | `diameter` | ⌀ | active |
 | `M D I A M O N D DOT F I L L E D` | `diamond.filled` | ◆ | active |
 | `M D I A M O N D DOT S T R O K E D` | `diamond.stroked` | ◇ | active |
@@ -511,7 +1062,10 @@ These symbols use a different name from their typst one.
 | `M D I E DOT S I X` | `die.six` | ⚅ | active |
 | `M D I E DOT T H R E E` | `die.three` | ⚂ | active |
 | `M D I E DOT T W O` | `die.two` | ⚁ | active |
-| `M D I V` | `div` | ÷ | active |
+| `M D I V DOT O` | `div.o` | ⨸ | active |
+| `M D I V DOT S L A N T E D DOT O` | `div.slanted.o` | ⦼ | active |
+| `M D I V 2` | `div2` | ÷ | active (renamed from `div`) |
+| `M D I V I D E S` | `divides` | ∣ | active |
 | `M D O T DOT B A S I C` | `dot.basic` | . | active |
 | `M D O T DOT C` | `dot.c` | · | active |
 | `M D O T DOT D O U B L E` | `dot.double` | ¨ | active |
@@ -519,37 +1073,117 @@ These symbols use a different name from their typst one.
 | `M D O T DOT Q U A D` | `dot.quad` | ⃜ | active |
 | `M D O T DOT S Q U A R E` | `dot.square` | ⊡ | active |
 | `M D O T DOT T R I P L E` | `dot.triple` | ⃛ | active |
+| `M D O T A N G L E R I G H T` | `dotAngleRight` | ⦝ | active (renamed from `angle.right.dot`) |
 | `M D O T O B I G` | `dotOBig` | ⨀ | active (renamed from `dot.o.big`) |
-| `M D O T O P` | `dotOp` | ⋅ | active (renamed from `dot.op`) |
+| `M D O T L E S S DOT I` | `dotless.i` | ı | active |
+| `M D O T L E S S DOT J` | `dotless.j` | ȷ | active |
 | `M D O T S DOT D O W N` | `dots.down` | ⋱ | active |
 | `M D O T S DOT H` | `dots.h` | … | active |
 | `M D O T S DOT U P` | `dots.up` | ⋰ | active |
 | `M D O T S DOT V` | `dots.v` | ⋮ | active |
 | `M D O T S H C` | `dotsHC` | ⋯ | active (renamed from `dots.h.c`) |
+| `M D O U B L E D A G G E R` | `doubleDagger` | ‡ | active (renamed from `dagger.double`) |
+| `M D O U B L E E X C L` | `doubleExcl` | ‼ | active (renamed from `excl.double`) |
+| `M D O U B L E F E M A L E` | `doubleFemale` | ⚢ | active (renamed from `female.double`) |
+| `M D O U B L E I N T E G R A L` | `doubleIntegral` | ∬ | active (renamed from `integral.double`) |
+| `M D O U B L E M A L E` | `doubleMale` | ⚣ | active (renamed from `male.double`) |
+| `M D O U B L E M U L T I M A P` | `doubleMultimap` | ⧟ | active (renamed from `multimap.double`) |
+| `M D O U B L E Q U E S T` | `doubleQuest` | ⁇ | active (renamed from `quest.double`) |
+| `M D O U B L E T A C K L L` | `doubleTackLl` | ⫥ | active (renamed from `tack.ll.double`) |
+| `M D O U B L E R I G H T A R R O W` | `doublerightarrow` | ⇒ | active (renamed from `arrow.r.double`) |
+| `M D O W N E Q D O T S` | `downEqDots` | ≒ | active (renamed from `eq.dots.down`) |
+| `M D O W N A R R O W` | `downarrow` | ↓ | active (renamed from `arrow.b`) |
+| `M D S T R U C K A R R O W L T W O H E A D T A I L` | `dstruckArrowLTwoheadTail` | ⬽ | active (renamed from `arrow.l.twohead.tail.dstruck`) |
+| `M D S T R U C K A R R O W R T W O H E A D T A I L` | `dstruckArrowRTwoheadTail` | ⤘ | active (renamed from `arrow.r.twohead.tail.dstruck`) |
+| `M E L L 2` | `ell2` | ℓ | active (renamed from `ell`) |
 | `M E L L I P S E DOT F I L L E D DOT H` | `ellipse.filled.h` | ⬬ | active |
 | `M E L L I P S E DOT F I L L E D DOT V` | `ellipse.filled.v` | ⬮ | active |
 | `M E L L I P S E DOT S T R O K E D DOT H` | `ellipse.stroked.h` | ⬭ | active |
 | `M E L L I P S E DOT S T R O K E D DOT V` | `ellipse.stroked.v` | ⬯ | active |
-| `M E M P T Y S E T` | `emptyset` | ∅ | active |
-| `M E Q` | `eq` | = | active |
+| `M E M P T Y` | `empty` | ∅ | active (renamed from `emptyset`) |
+| `M E Q DOT A S T` | `eq.ast` | ⩮ | active |
+| `M E Q DOT C O L O N` | `eq.colon` | ≕ | active |
+| `M E Q DOT D E F` | `eq.def` | ≝ | active |
+| `M E Q DOT D E L T A` | `eq.delta` | ≜ | active |
+| `M E Q DOT D O T` | `eq.dot` | ≐ | active |
+| `M E Q DOT E Q U I` | `eq.equi` | ≚ | active |
+| `M E Q DOT E S T` | `eq.est` | ≙ | active |
+| `M E Q DOT G T` | `eq.gt` | ⋝ | active |
+| `M E Q DOT L T` | `eq.lt` | ⋜ | active |
+| `M E Q DOT M` | `eq.m` | ≞ | active |
+| `M E Q DOT N O T` | `eq.not` | ≠ | active |
+| `M E Q DOT O` | `eq.o` | ⊜ | active |
+| `M E Q DOT P R E C` | `eq.prec` | ⋞ | active |
+| `M E Q DOT Q U A D` | `eq.quad` | ≣ | active |
+| `M E Q DOT Q U E S T` | `eq.quest` | ≟ | active |
+| `M E Q DOT S T A R` | `eq.star` | ≛ | active |
+| `M E Q DOT S U C C` | `eq.succ` | ⋟ | active |
+| `M E Q DOT T R I P L E` | `eq.triple` | ≡ | active |
+| `M E Q A P P R O X` | `eqApprox` | ≊ | active (renamed from `approx.eq`) |
+| `M E Q D O T S` | `eqDots` | ≑ | active (renamed from `eq.dots`) |
+| `M E Q G T S L A N T` | `eqGtSlant` | ⪖ | active (renamed from `eq.gt.slant`) |
+| `M E Q L A T` | `eqLat` | ⪭ | active (renamed from `lat.eq`) |
+| `M E Q L T S L A N T` | `eqLtSlant` | ⪕ | active (renamed from `eq.lt.slant`) |
+| `M E Q P A R A L L E L` | `eqParallel` | ⋕ | active (renamed from `parallel.eq`) |
+| `M E Q S M T` | `eqSmt` | ⪬ | active (renamed from `smt.eq`) |
+| `M E Q T R I P L E N O T` | `eqTripleNot` | ≢ | active (renamed from `eq.triple.not`) |
+| `M E Q U A L` | `equal` | = | active (renamed from `eq`) |
+| `M E Q U I V` | `equiv` | ≡ | active |
+| `M E R R O R B A R DOT C I R C L E DOT F I L L E D` | `errorbar.circle.filled` | ⧳ | active |
+| `M E R R O R B A R DOT C I R C L E DOT S T R O K E D` | `errorbar.circle.stroked` | ⧲ | active |
+| `M E R R O R B A R DOT D I A M O N D DOT F I L L E D` | `errorbar.diamond.filled` | ⧱ | active |
+| `M E R R O R B A R DOT D I A M O N D DOT S T R O K E D` | `errorbar.diamond.stroked` | ⧰ | active |
+| `M E R R O R B A R DOT S Q U A R E DOT F I L L E D` | `errorbar.square.filled` | ⧯ | active |
+| `M E R R O R B A R DOT S Q U A R E DOT S T R O K E D` | `errorbar.square.stroked` | ⧮ | active |
 | `M E X C L` | `excl` | ! | active |
-| `M E X I S T S` | `exists` | ∃ | active |
+| `M E X I S T S DOT N O T` | `exists.not` | ∄ | active |
+| `M E X I S T S 2` | `exists2` | ∃ | active (renamed from `exists`) |
 | `M F E M A L E` | `female` | ♀ | active |
+| `M F E M I N I N E` | `feminine` | ª | active |
 | `M F E N C E DOT D O T T E D` | `fence.dotted` | ⦙ | active |
 | `M F E N C E DOT L` | `fence.l` | ⧘ | active |
 | `M F E N C E DOT R` | `fence.r` | ⧙ | active |
 | `M F E N C E L D O U B L E` | `fenceLDouble` | ⧚ | active (renamed from `fence.l.double`) |
 | `M F E N C E R D O U B L E` | `fenceRDouble` | ⧛ | active (renamed from `fence.r.double`) |
+| `M F I L L E D P A R A L L E L O G R A M` | `filledParallelogram` | ▰ | active (renamed from `parallelogram.filled`) |
 | `M F L O O R DOT L` | `floor.l` | ⌊ | active |
 | `M F L O O R DOT R` | `floor.r` | ⌋ | active |
-| `M F O R A L L` | `forall` | ∀ | active |
+| `M F L O R A L` | `floral` | ❦ | active |
+| `M F O R A L L 2` | `forall2` | ∀ | active (renamed from `forall`) |
 | `M F O R C E S` | `forces` | ⊩ | active |
 | `M F R O W N` | `frown` | ⌢ | active |
 | `M G E N D E R` | `gender` | { | active |
-| `M G E Q` | `geq` | ≥ | active (renamed from `gt.eq`) |
 | `M G I M E L` | `gimel` | ג | active |
 | `M G R A D I E N T` | `gradient` | ∇ | active |
-| `M G T` | `gt` | > | active |
+| `M G R E A T E R` | `greater` | > | active (renamed from `gt`) |
+| `M G T DOT A P P R O X` | `gt.approx` | ⪆ | active |
+| `M G T DOT A R C` | `gt.arc` | ⪧ | active |
+| `M G T DOT C L O S E D` | `gt.closed` | ⊳ | active |
+| `M G T DOT D O T` | `gt.dot` | ⋗ | active |
+| `M G T DOT D O U B L E` | `gt.double` | ≫ | active |
+| `M G T DOT E Q` | `gt.eq` | ≥ | active |
+| `M G T DOT L T` | `gt.lt` | ≷ | active |
+| `M G T DOT N A P P R O X` | `gt.napprox` | ⪊ | active |
+| `M G T DOT N E Q` | `gt.neq` | ⪈ | active |
+| `M G T DOT N O T` | `gt.not` | ≯ | active |
+| `M G T DOT N T I L D E` | `gt.ntilde` | ⋧ | active |
+| `M G T DOT O` | `gt.o` | ⧁ | active |
+| `M G T DOT Q U E S T` | `gt.quest` | ⩼ | active |
+| `M G T DOT T I L D E` | `gt.tilde` | ≳ | active |
+| `M G T DOT T R I P L E` | `gt.triple` | ⋙ | active |
+| `M G T A R C E Q` | `gtArcEq` | ⪩ | active (renamed from `gt.arc.eq`) |
+| `M G T C L O S E D E Q` | `gtClosedEq` | ⊵ | active (renamed from `gt.closed.eq`) |
+| `M G T C L O S E D N O T` | `gtClosedNot` | ⋫ | active (renamed from `gt.closed.not`) |
+| `M G T D O U B L E N E S T E D` | `gtDoubleNested` | ⪢ | active (renamed from `gt.double.nested`) |
+| `M G T E Q L T` | `gtEqLt` | ⋛ | active (renamed from `gt.eq.lt`) |
+| `M G T E Q N O T` | `gtEqNot` | ≱ | active (renamed from `gt.eq.not`) |
+| `M G T E Q S L A N T` | `gtEqSlant` | ⩾ | active (renamed from `gt.eq.slant`) |
+| `M G T E Q U I V` | `gtEquiv` | ⪚ | active (renamed from `equiv.gt`) |
+| `M G T L T N O T` | `gtLtNot` | ≹ | active (renamed from `gt.lt.not`) |
+| `M G T N E Q U I V` | `gtNequiv` | ≩ | active (renamed from `gt.nequiv`) |
+| `M G T T I L D E N O T` | `gtTildeNot` | ≵ | active (renamed from `gt.tilde.not`) |
+| `M G T T I L D E S L A N T` | `gtTildeSlant` | ≳\vs{1} | active (renamed from `gt.tilde.slant`) |
+| `M G T T R I P L E N E S T E D` | `gtTripleNested` | ⫸ | active (renamed from `gt.triple.nested`) |
 | `M H A R P O O N DOT B L` | `harpoon.bl` | ⇃ | active |
 | `M H A R P O O N DOT B R` | `harpoon.br` | ⇂ | active |
 | `M H A R P O O N DOT L B` | `harpoon.lb` | ↽ | active |
@@ -595,8 +1229,14 @@ These symbols use a different name from their typst one.
 | `M H A R P O O N S DOT T L B R` | `harpoons.tlbr` | ⥮ | active |
 | `M H A R P O O N S DOT T L T R` | `harpoons.tltr` | ⥣ | active |
 | `M H A S H` | `hash` | # | active |
+| `M H A T A P P R O X` | `hatApprox` | ⩯ | active (renamed from `approx.hat`) |
+| `M H E A V Y B A L L O T C H E C K` | `heavyBallotCheck` | 🗹 | active (renamed from `ballot.check.heavy`) |
+| `M H E A V Y C H E C K M A R K` | `heavyCheckmark` | ✔ | active (renamed from `checkmark.heavy`) |
+| `M H E A V Y C R O S S M A R K` | `heavyCrossmark` | ✘ | active (renamed from `crossmark.heavy`) |
 | `M H E X A DOT F I L L E D` | `hexa.filled` | ⬢ | active |
 | `M H E X A DOT S T R O K E D` | `hexa.stroked` | ⬡ | active |
+| `M H O L E B U L L E T` | `holeBullet` | ◘ | active (renamed from `bullet.hole`) |
+| `M H O O K I N T E G R A L A R R O W` | `hookIntegralArrow` | ⨗ | active (renamed from `integral.arrow.hook`) |
 | `M H O O K L E F T A R R O W` | `hookleftarrow` | ↩ | active (renamed from `arrow.l.hook`) |
 | `M H O O K R I G H T A R R O W` | `hookrightarrow` | ↪ | active (renamed from `arrow.r.hook`) |
 | `M H O U R G L A S S DOT F I L L E D` | `hourglass.filled` | ⧗ | active |
@@ -608,14 +1248,49 @@ These symbols use a different name from their typst one.
 | `M I N DOT S M A L L` | `in.small` | ∊ | active |
 | `M I N R E V N O T` | `inRevNot` | ∌ | active (renamed from `in.rev.not`) |
 | `M I N R E V S M A L L` | `inRevSmall` | ∍ | active (renamed from `in.rev.small`) |
-| `M I N F I N I T Y` | `infinity` | ∞ | active |
+| `M I N C O M P L E T E I N F I N I T Y` | `incompleteInfinity` | ⧜ | active (renamed from `infinity.incomplete`) |
+| `M I N F` | `inf` | ∞ | active (renamed from `infinity`) |
 | `M I N S E T` | `inset` | ∈ | active (renamed from `in`) |
 | `M I N T E G R A L` | `integral` | ∫ | active |
-| `M I N T E R` | `inter` | ∩ | active |
+| `M I N T E R DOT A N D` | `inter.and` | ⩄ | active |
+| `M I N T E R DOT D O T` | `inter.dot` | ⩀ | active |
+| `M I N T E R DOT D O U B L E` | `inter.double` | ⋒ | active |
+| `M I N T E R DOT S E R I F` | `inter.serif` | ∩\vs{1} | active |
+| `M I N T E R DOT S Q` | `inter.sq` | ⊓ | active |
+| `M I N T E R I N T E G R A L` | `interIntegral` | ⨙ | active (renamed from `integral.inter`) |
+| `M I N T E R S Q B I G` | `interSqBig` | ⨅ | active (renamed from `inter.sq.big`) |
+| `M I N T E R S Q D O U B L E` | `interSqDouble` | ⩎ | active (renamed from `inter.sq.double`) |
+| `M I N T E R S Q S E R I F` | `interSqSerif` | ⊓\vs{1} | active (renamed from `inter.sq.serif`) |
+| `M I N T E R L E A V E` | `interleave` | ⫴ | active |
+| `M I N T E R R O B A N G` | `interrobang` | ‽ | active |
+| `M I N T E R S E C` | `intersec` | ∩ | active (renamed from `inter`) |
+| `M I N T E R S E X` | `intersex` | ⚥ | active |
+| `M I N V A M P` | `invAmp` | ⅋ | active (renamed from `amp.inv`) |
+| `M I N V C O M M A` | `invComma` | ⸲ | active (renamed from `comma.inv`) |
+| `M I N V D A G G E R` | `invDagger` | ⸸ | active (renamed from `dagger.inv`) |
+| `M I N V E X C L` | `invExcl` | ¡ | active (renamed from `excl.inv`) |
+| `M I N V I N T E R R O B A N G` | `invInterrobang` | ⸘ | active (renamed from `interrobang.inv`) |
+| `M I N V Q U E S T` | `invQuest` | ¿ | active (renamed from `quest.inv`) |
+| `M I N V S E M I` | `invSemi` | ⸵ | active (renamed from `semi.inv`) |
+| `M K I N G DOT B L A C K` | `king.black` | ♚ | active |
+| `M K I N G DOT W H I T E` | `king.white` | ♔ | active |
+| `M K N I G H T DOT B L A C K` | `knight.black` | ♞ | active |
+| `M K N I G H T DOT W H I T E` | `knight.white` | ♘ | active |
+| `M L B O W T I E S T R O K E D B I G` | `lBowtieStrokedBig` | ⟕ | active (renamed from `bowtie.stroked.big.l`) |
+| `M L B U L L E T` | `lBullet` | ⁌ | active (renamed from `bullet.l`) |
+| `M L D A G G E R` | `lDagger` | ⸶ | active (renamed from `dagger.l`) |
+| `M L E M P T Y S E T A R R O W` | `lEmptysetArrow` | ⦴ | active (renamed from `emptyset.arrow.l`) |
+| `M L F L O R A L` | `lFloral` | ☙ | active (renamed from `floral.l`) |
+| `M L N O T H I N G A R R O W` | `lNothingArrow` | ⦴ | active (renamed from `nothing.arrow.l`) |
 | `M L A P L A C E` | `laplace` | ∆ | active |
 | `M L A T` | `lat` | ⪫ | active |
+| `M L E F T A R R O W` | `leftarrow` | ← | active (renamed from `arrow.l`) |
 | `M L E F T R I G H T A R R O W` | `leftrightarrow` | ↔ | active (renamed from `arrow.l.r`) |
-| `M L E Q` | `leq` | ≤ | active (renamed from `lt.eq`) |
+| `M L E S S` | `less` | < | active (renamed from `lt`) |
+| `M L I G H T C H E C K M A R K` | `lightCheckmark` | 🗸 | active (renamed from `checkmark.light`) |
+| `M L O N G M A P S F R O M` | `longMapsfrom` | ⟻ | active (renamed from `mapsfrom.long`) |
+| `M L O N G M A P S T O` | `longMapsto` | ⟼ | active (renamed from `mapsto.long`) |
+| `M L O N G T A C K L` | `longTackL` | ⟞ | active (renamed from `tack.l.long`) |
 | `M L O N G L E F T A R R O W` | `longleftarrow` | ⟵ | active (renamed from `arrow.l.long`) |
 | `M L O N G R I G H T A R R O W` | `longrightarrow` | ⟶ | active (renamed from `arrow.r.long`) |
 | `M L O Z E N G E DOT F I L L E D` | `lozenge.filled` | ⧫ | active |
@@ -624,29 +1299,91 @@ These symbols use a different name from their typst one.
 | `M L O Z E N G E F I L L E D S M A L L` | `lozengeFilledSmall` | ⬪ | active (renamed from `lozenge.filled.small`) |
 | `M L O Z E N G E S T R O K E D M E D I U M` | `lozengeStrokedMedium` | ⬨ | active (renamed from `lozenge.stroked.medium`) |
 | `M L O Z E N G E S T R O K E D S M A L L` | `lozengeStrokedSmall` | ⬫ | active (renamed from `lozenge.stroked.small`) |
-| `M L T` | `lt` | < | active |
+| `M L T DOT A P P R O X` | `lt.approx` | ⪅ | active |
+| `M L T DOT A R C` | `lt.arc` | ⪦ | active |
+| `M L T DOT C L O S E D` | `lt.closed` | ⊲ | active |
+| `M L T DOT D O T` | `lt.dot` | ⋖ | active |
+| `M L T DOT D O U B L E` | `lt.double` | ≪ | active |
+| `M L T DOT E Q` | `lt.eq` | ≤ | active |
+| `M L T DOT G T` | `lt.gt` | ≶ | active |
+| `M L T DOT N A P P R O X` | `lt.napprox` | ⪉ | active |
+| `M L T DOT N E Q` | `lt.neq` | ⪇ | active |
+| `M L T DOT N O T` | `lt.not` | ≮ | active |
+| `M L T DOT N T I L D E` | `lt.ntilde` | ⋦ | active |
+| `M L T DOT O` | `lt.o` | ⧀ | active |
+| `M L T DOT Q U E S T` | `lt.quest` | ⩻ | active |
+| `M L T DOT T I L D E` | `lt.tilde` | ≲ | active |
+| `M L T DOT T R I P L E` | `lt.triple` | ⋘ | active |
+| `M L T A R C E Q` | `ltArcEq` | ⪨ | active (renamed from `lt.arc.eq`) |
+| `M L T C L O S E D E Q` | `ltClosedEq` | ⊴ | active (renamed from `lt.closed.eq`) |
+| `M L T C L O S E D N O T` | `ltClosedNot` | ⋪ | active (renamed from `lt.closed.not`) |
+| `M L T D O U B L E N E S T E D` | `ltDoubleNested` | ⪡ | active (renamed from `lt.double.nested`) |
+| `M L T E Q G T` | `ltEqGt` | ⋚ | active (renamed from `lt.eq.gt`) |
+| `M L T E Q N O T` | `ltEqNot` | ≰ | active (renamed from `lt.eq.not`) |
+| `M L T E Q S L A N T` | `ltEqSlant` | ⩽ | active (renamed from `lt.eq.slant`) |
+| `M L T E Q U I V` | `ltEquiv` | ⪙ | active (renamed from `equiv.lt`) |
+| `M L T G T N O T` | `ltGtNot` | ≸ | active (renamed from `lt.gt.not`) |
+| `M L T N E Q U I V` | `ltNequiv` | ≨ | active (renamed from `lt.nequiv`) |
+| `M L T T I L D E N O T` | `ltTildeNot` | ≴ | active (renamed from `lt.tilde.not`) |
+| `M L T T I L D E S L A N T` | `ltTildeSlant` | ≲\vs{1} | active (renamed from `lt.tilde.slant`) |
+| `M L T T R I P L E N E S T E D` | `ltTripleNested` | ⫷ | active (renamed from `lt.triple.nested`) |
 | `M M A L E` | `male` | ♂ | active |
+| `M M A L T E S E` | `maltese` | ✠ | active |
 | `M M A P S F R O M` | `mapsfrom` | ↤ | active |
 | `M M A P S T O` | `mapsto` | ↦ | active |
-| `M M E A S U R E D A N G L E` | `measuredangle` | ∟ | active (renamed from `angle.right`) |
-| `M M I N U S` | `minus` | − | active |
+| `M M A S C U L I N E` | `masculine` | º | active |
+| `M M C T R A D E M A R K` | `mcTrademark` | 🅪 | active (renamed from `trademark.mc`) |
+| `M M D T R A D E M A R K` | `mdTrademark` | 🅫 | active (renamed from `trademark.md`) |
+| `M M I N U S DOT D O T` | `minus.dot` | ∸ | active |
+| `M M I N U S DOT O` | `minus.o` | ⊖ | active |
+| `M M I N U S DOT S Q U A R E` | `minus.square` | ⊟ | active |
+| `M M I N U S DOT T I L D E` | `minus.tilde` | ≂ | active |
+| `M M I N U S DOT T R I A N G L E` | `minus.triangle` | ⨺ | active |
+| `M M I N U S 2` | `minus2` | − | active (renamed from `minus`) |
+| `M M I N U S H Y P H` | `minusHyph` | - | active (renamed from `hyph.minus`) |
+| `M M I N U S P L U S` | `minusplus` | ∓ | active (renamed from `minus.plus`) |
 | `M M O D E L S` | `models` | ⊧ | active |
-| `M M P` | `mp` | ∓ | active (renamed from `minus.plus`) |
 | `M M U L T I M A P` | `multimap` | ⊸ | active |
 | `M M U S T A C H E DOT L` | `mustache.l` | ⎰ | active |
 | `M M U S T A C H E DOT R` | `mustache.r` | ⎱ | active |
-| `M N A B L A` | `nabla` | ∇ | active |
-| `M N E Q U I V` | `nequiv` | ≢ | active (renamed from `equiv.not`) |
+| `M N A B L A 2` | `nabla2` | ∇ | active (renamed from `nabla`) |
+| `M N E G` | `neg` | ¬ | active (renamed from `not`) |
 | `M N E U T E R` | `neuter` | ⚲ | active |
-| `M N O T` | `not` | ¬ | active |
-| `M N S I M E Q` | `nsimeq` | ≉ | active (renamed from `approx.not`) |
-| `M N S U B S E T` | `nsubset` | ⊄ | active (renamed from `subset.not`) |
-| `M N S U P S E T` | `nsupset` | ⊅ | active (renamed from `supset.not`) |
+| `M N O B R E A K H Y P H` | `nobreakHyph` | ‑ | active (renamed from `hyph.nobreak`) |
+| `M N O T DOT I N V` | `not.inv` | ⌙ | active |
+| `M N O T DOT R E V` | `not.rev` | ⌐ | active |
+| `M N O T A P P R O X` | `notApprox` | ≉ | active (renamed from `approx.not`) |
+| `M N O T A S Y M P` | `notAsymp` | ≭ | active (renamed from `asymp.not`) |
+| `M N O T B A C K S L A S H` | `notBackslash` | ⧷ | active (renamed from `backslash.not`) |
+| `M N O T D I V I D E S` | `notDivides` | ∤ | active (renamed from `divides.not`) |
+| `M N O T E Q U I V` | `notEquiv` | ≢ | active (renamed from `equiv.not`) |
+| `M N O T F O R C E S` | `notForces` | ⊮ | active (renamed from `forces.not`) |
+| `M N O T G T C L O S E D E Q` | `notGtClosedEq` | ⋭ | active (renamed from `gt.closed.eq.not`) |
+| `M N O T L T C L O S E D E Q` | `notLtClosedEq` | ⋬ | active (renamed from `lt.closed.eq.not`) |
+| `M N O T P A R A L L E L` | `notParallel` | ∦ | active (renamed from `parallel.not`) |
+| `M N O T P R E C E Q S L A N T` | `notPrecEqSlant` | ⋠ | active (renamed from `prec.eq.slant.not`) |
+| `M N O T S U C C E Q S L A N T` | `notSuccEqSlant` | ⋡ | active (renamed from `succ.eq.slant.not`) |
+| `M N O T T A C K R R D O U B L E` | `notTackRrDouble` | ⊯ | active (renamed from `tack.rr.double.not`) |
+| `M N O T T I L D E E Q U I V` | `notTildeEquiv` | ≇ | active (renamed from `tilde.equiv.not`) |
+| `M N O T H I N G` | `nothing` | ∅ | active |
+| `M N O T S U B S E T` | `notsubset` | ⊄ | active (renamed from `subset.not`) |
+| `M N O T S U P S E T` | `notsupset` | ⊅ | active (renamed from `supset.not`) |
 | `M N U M E R O` | `numero` | № | active |
-| `M O I N T` | `oint` | ∮ | active (renamed from `integral.cont`) |
+| `M O B A C K S L A S H` | `oBackslash` | ⦸ | active (renamed from `backslash.o`) |
+| `M O B U L L E T` | `oBullet` | ⦿ | active (renamed from `bullet.o`) |
+| `M O C O M P O S E` | `oCompose` | ⊚ | active (renamed from `compose.o`) |
+| `M O C O N V O L V E` | `oConvolve` | ⊛ | active (renamed from `convolve.o`) |
+| `M O P A R A L L E L` | `oParallel` | ⦷ | active (renamed from `parallel.o`) |
+| `M O B T U S E A N G L E` | `obtuseAngle` | ⦦ | active (renamed from `angle.obtuse`) |
 | `M O O` | `oo` | ∞ | active |
-| `M O R` | `or` | ∨ | active |
-| `M P A R A L L E L` | `parallel` | ∥ | active |
+| `M O P B U L L E T` | `opBullet` | ∙ | active (renamed from `bullet.op`) |
+| `M O R DOT B I G` | `or.big` | ⋁ | active |
+| `M O R DOT C U R L Y` | `or.curly` | ⋎ | active |
+| `M O R DOT D O T` | `or.dot` | ⟇ | active |
+| `M O R DOT D O U B L E` | `or.double` | ⩔ | active |
+| `M O R D I N A L` | `ordinal` | { | active |
+| `M O R I G I N A L` | `original` | ⊶ | active |
+| `M P A R A` | `para` | ∥ | active (renamed from `parallel`) |
 | `M P A R E N DOT B` | `paren.b` | ⏝ | active |
 | `M P A R E N DOT L` | `paren.l` | ( | active |
 | `M P A R E N DOT R` | `paren.r` | ) | active |
@@ -657,33 +1394,89 @@ These symbols use a different name from their typst one.
 | `M P A R E N R C L O S E D` | `parenRClosed` | ⦈ | active (renamed from `paren.r.closed`) |
 | `M P A R E N R F L A T` | `parenRFlat` | ⟯ | active (renamed from `paren.r.flat`) |
 | `M P A R E N R S T R O K E D` | `parenRStroked` | ⦆ | active (renamed from `paren.r.stroked`) |
-| `M P A R T I A L` | `partial` | ∂ | active |
+| `M P A R T I A L 2` | `partial2` | ∂ | active (renamed from `partial`) |
+| `M P A W N DOT B L A C K` | `pawn.black` | ♟ | active |
+| `M P A W N DOT W H I T E` | `pawn.white` | ♙ | active |
+| `M P E E` | `pee` | ℘ | active |
 | `M P E N T A DOT F I L L E D` | `penta.filled` | ⬟ | active |
 | `M P E N T A DOT S T R O K E D` | `penta.stroked` | ⬠ | active |
 | `M P E R C E N T` | `percent` | % | active |
 | `M P E R M I L L E` | `permille` | ‰ | active |
 | `M P E R M Y R I A D` | `permyriad` | ‱ | active |
-| `M P E R P` | `perp` | ⟂ | active |
+| `M P E R P DOT O` | `perp.o` | ⦹ | active |
+| `M P E R P E N D I C U L A R` | `perpendicular` | ⟂ | active (renamed from `perp`) |
 | `M P I L C R O W` | `pilcrow` | ¶ | active |
-| `M P L U S` | `plus` | + | active |
-| `M P M` | `pm` | ± | active (renamed from `plus.minus`) |
+| `M P L A N C K` | `planck` | ħ | active |
+| `M P L U S DOT D O T` | `plus.dot` | ∔ | active |
+| `M P L U S DOT D O U B L E` | `plus.double` | ⧺ | active |
+| `M P L U S DOT H A T` | `plus.hat` | ⨣ | active |
+| `M P L U S DOT O` | `plus.o` | ⊕ | active |
+| `M P L U S DOT S Q U A R E` | `plus.square` | ⊞ | active |
+| `M P L U S DOT T R I A N G L E` | `plus.triangle` | ⨹ | active |
+| `M P L U S DOT T R I P L E` | `plus.triple` | ⧻ | active |
+| `M P L U S 2` | `plus2` | + | active (renamed from `plus`) |
+| `M P L U S O A R R O W` | `plusOArrow` | ⟴ | active (renamed from `plus.o.arrow`) |
+| `M P L U S O B I G` | `plusOBig` | ⨁ | active (renamed from `plus.o.big`) |
+| `M P L U S O L` | `plusOL` | ⨭ | active (renamed from `plus.o.l`) |
+| `M P L U S O R` | `plusOR` | ⨮ | active (renamed from `plus.o.r`) |
+| `M P L U S M I N U S` | `plusminus` | ± | active (renamed from `plus.minus`) |
+| `M P O I N T H Y P H` | `pointHyph` | ‧ | active (renamed from `hyph.point`) |
 | `M P O W E R DOT O F F` | `power.off` | ⭘ | active |
 | `M P O W E R DOT O N` | `power.on` | ⏽ | active |
 | `M P O W E R DOT S L E E P` | `power.sleep` | ⏾ | active |
 | `M P O W E R DOT S T A N D B Y` | `power.standby` | ⏻ | active |
 | `M P O W E R O N O F F` | `powerOnOff` | ⏼ | active (renamed from `power.on.off`) |
-| `M P R E C` | `prec` | ≺ | active |
+| `M P R E C DOT A P P R O X` | `prec.approx` | ⪷ | active |
+| `M P R E C DOT C U R L Y DOT E Q` | `prec.curly.eq` | ≼ | active |
+| `M P R E C DOT D O U B L E` | `prec.double` | ⪻ | active |
+| `M P R E C DOT E Q` | `prec.eq` | ⪯ | active |
+| `M P R E C DOT N A P P R O X` | `prec.napprox` | ⪹ | active |
+| `M P R E C DOT N E Q` | `prec.neq` | ⪱ | active |
+| `M P R E C DOT N O T` | `prec.not` | ⊀ | active |
+| `M P R E C DOT N T I L D E` | `prec.ntilde` | ⋨ | active |
+| `M P R E C DOT T I L D E` | `prec.tilde` | ≾ | active |
+| `M P R E C C U R L Y E Q N O T` | `precCurlyEqNot` | ⋠ | active (renamed from `prec.curly.eq.not`) |
+| `M P R E C E Q S L A N T` | `precEqSlant` | ≼ | active (renamed from `prec.eq.slant`) |
+| `M P R E C E Q U I V` | `precEquiv` | ⪳ | active (renamed from `prec.equiv`) |
+| `M P R E C N E Q U I V` | `precNequiv` | ⪵ | active (renamed from `prec.nequiv`) |
+| `M P R E C E D E S` | `precedes` | ≺ | active (renamed from `prec`) |
 | `M P R O D U C T` | `product` | ∏ | active |
-| `M P R O P` | `prop` | ∝ | active |
+| `M P R O P T O` | `propto` | ∝ | active (renamed from `prop`) |
 | `M Q E D` | `qed` | ∎ | active |
+| `M Q U A D I N T E G R A L` | `quadIntegral` | ⨌ | active (renamed from `integral.quad`) |
+| `M Q U E E N DOT B L A C K` | `queen.black` | ♛ | active |
+| `M Q U E E N DOT W H I T E` | `queen.white` | ♕ | active |
 | `M Q U E S T` | `quest` | ? | active |
+| `M R B O W T I E S T R O K E D B I G` | `rBowtieStrokedBig` | ⟖ | active (renamed from `bowtie.stroked.big.r`) |
+| `M R B U L L E T` | `rBullet` | ⁍ | active (renamed from `bullet.r`) |
+| `M R D A G G E R` | `rDagger` | ⸷ | active (renamed from `dagger.r`) |
+| `M R E M P T Y S E T A R R O W` | `rEmptysetArrow` | ⦳ | active (renamed from `emptyset.arrow.r`) |
+| `M R F L O R A L` | `rFloral` | ❧ | active (renamed from `floral.r`) |
+| `M R M A L E S T R O K E` | `rMaleStroke` | ⚩ | active (renamed from `male.stroke.r`) |
+| `M R N O T H I N G A R R O W` | `rNothingArrow` | ⦳ | active (renamed from `nothing.arrow.r`) |
 | `M R A T I O` | `ratio` | ∶ | active |
+| `M R E A L P A R T` | `realpart` | ℜ | active (renamed from `Re`) |
 | `M R E C T DOT F I L L E D DOT H` | `rect.filled.h` | ▬ | active |
 | `M R E C T DOT F I L L E D DOT V` | `rect.filled.v` | ▮ | active |
 | `M R E C T DOT S T R O K E D DOT H` | `rect.stroked.h` | ▭ | active |
 | `M R E C T DOT S T R O K E D DOT V` | `rect.stroked.v` | ▯ | active |
+| `M R E F M A R K` | `refmark` | ※ | active |
+| `M R E G I S T E R E D T R A D E M A R K` | `registeredTrademark` | ® | active (renamed from `trademark.registered`) |
+| `M R E V A N G L E` | `revAngle` | ⦣ | active (renamed from `angle.rev`) |
+| `M R E V C O M M A` | `revComma` | ⹁ | active (renamed from `comma.rev`) |
+| `M R E V D I V I D E S N O T` | `revDividesNot` | ⫮ | active (renamed from `divides.not.rev`) |
+| `M R E V E M P T Y S E T` | `revEmptyset` | ⦰ | active (renamed from `emptyset.rev`) |
+| `M R E V N O T H I N G` | `revNothing` | ⦰ | active (renamed from `nothing.rev`) |
+| `M R E V P I L C R O W` | `revPilcrow` | ⁋ | active (renamed from `pilcrow.rev`) |
+| `M R E V S E M I` | `revSemi` | ⁏ | active (renamed from `semi.rev`) |
+| `M R I G H T A N G L E` | `rightangle` | ∟ | active (renamed from `angle.right`) |
+| `M R I G H T A R R O W` | `rightarrow` | → | active (renamed from `arrow.r`) |
+| `M R O O K DOT B L A C K` | `rook.black` | ♜ | active |
+| `M R O O K DOT W H I T E` | `rook.white` | ♖ | active |
+| `M S A N G L E` | `sAngle` | ⦞ | active (renamed from `angle.s`) |
 | `M S E C T I O N` | `section` | § | active |
 | `M S E M I` | `semi` | ; | active |
+| `M S E R V I C E T R A D E M A R K` | `serviceTrademark` | ℠ | active (renamed from `trademark.service`) |
 | `M S H E L L DOT B` | `shell.b` | ⏡ | active |
 | `M S H E L L DOT L` | `shell.l` | ❲ | active |
 | `M S H E L L DOT R` | `shell.r` | ❳ | active |
@@ -692,17 +1485,34 @@ These symbols use a different name from their typst one.
 | `M S H E L L L S T R O K E D` | `shellLStroked` | ⟬ | active (renamed from `shell.l.stroked`) |
 | `M S H E L L R F I L L E D` | `shellRFilled` | ⦘ | active (renamed from `shell.r.filled`) |
 | `M S H E L L R S T R O K E D` | `shellRStroked` | ⟭ | active (renamed from `shell.r.stroked`) |
-| `M S I M E Q` | `simeq` | ≊ | active (renamed from `approx.eq`) |
-| `M S L A S H` | `slash` | / | active |
+| `M S L A N T E Q U I V G T` | `slantEquivGt` | ⪜ | active (renamed from `equiv.gt.slant`) |
+| `M S L A N T E Q U I V L T` | `slantEquivLt` | ⪛ | active (renamed from `equiv.lt.slant`) |
+| `M S L A N T G T E Q L T` | `slantGtEqLt` | ⋛\vs{1} | active (renamed from `gt.eq.lt.slant`) |
+| `M S L A N T G T E Q U I V` | `slantGtEquiv` | ⫺ | active (renamed from `gt.equiv.slant`) |
+| `M S L A N T L A T E Q` | `slantLatEq` | ⪭\vs{1} | active (renamed from `lat.eq.slant`) |
+| `M S L A N T L T E Q G T` | `slantLtEqGt` | ⋚\vs{1} | active (renamed from `lt.eq.gt.slant`) |
+| `M S L A N T L T E Q U I V` | `slantLtEquiv` | ⫹ | active (renamed from `lt.equiv.slant`) |
+| `M S L A N T S M T E Q` | `slantSmtEq` | ⪬\vs{1} | active (renamed from `smt.eq.slant`) |
+| `M S L A S H DOT B I G` | `slash.big` | ⧸ | active |
+| `M S L A S H DOT D O U B L E` | `slash.double` | ⫽ | active |
+| `M S L A S H DOT O` | `slash.o` | ⊘ | active |
+| `M S L A S H DOT T R I P L E` | `slash.triple` | ⫻ | active |
+| `M S L A S H I N T E G R A L` | `slashIntegral` | ⨏ | active (renamed from `integral.slash`) |
 | `M S M A S H` | `smash` | ⨳ | active |
 | `M S M I L E` | `smile` | ⌣ | active |
 | `M S M T` | `smt` | ⪪ | active |
+| `M S O F T H Y P H` | `softHyph` | ­ | active (renamed from `hyph.soft`) |
+| `M S O U N D C O P Y R I G H T` | `soundCopyright` | ℗ | active (renamed from `copyright.sound`) |
+| `M S P A T I A L A N G L E` | `spatialAngle` | ⟀ | active (renamed from `angle.spatial`) |
+| `M S P H E R I C A N G L E` | `sphericAngle` | ∢ | active (renamed from `angle.spheric`) |
 | `M S Q U A R E DOT F I L L E D` | `square.filled` | ■ | active |
 | `M S Q U A R E DOT S T R O K E D` | `square.stroked` | □ | active |
+| `M S Q U A R E A N G L E R I G H T` | `squareAngleRight` | ⦜ | active (renamed from `angle.right.square`) |
 | `M S Q U A R E F I L L E D B I G` | `squareFilledBig` | ⬛ | active (renamed from `square.filled.big`) |
 | `M S Q U A R E F I L L E D M E D I U M` | `squareFilledMedium` | ◼ | active (renamed from `square.filled.medium`) |
 | `M S Q U A R E F I L L E D S M A L L` | `squareFilledSmall` | ◾ | active (renamed from `square.filled.small`) |
 | `M S Q U A R E F I L L E D T I N Y` | `squareFilledTiny` | ▪ | active (renamed from `square.filled.tiny`) |
+| `M S Q U A R E I N T E G R A L` | `squareIntegral` | ⨖ | active (renamed from `integral.square`) |
 | `M S Q U A R E S T R O K E D B I G` | `squareStrokedBig` | ⬜ | active (renamed from `square.stroked.big`) |
 | `M S Q U A R E S T R O K E D D O T T E D` | `squareStrokedDotted` | ⬚ | active (renamed from `square.stroked.dotted`) |
 | `M S Q U A R E S T R O K E D M E D I U M` | `squareStrokedMedium` | ◻ | active (renamed from `square.stroked.medium`) |
@@ -710,17 +1520,86 @@ These symbols use a different name from their typst one.
 | `M S Q U A R E S T R O K E D S M A L L` | `squareStrokedSmall` | ◽ | active (renamed from `square.stroked.small`) |
 | `M S Q U A R E S T R O K E D T I N Y` | `squareStrokedTiny` | ▫ | active (renamed from `square.stroked.tiny`) |
 | `M S T A R DOT F I L L E D` | `star.filled` | ★ | active |
-| `M S T A R DOT O P` | `star.op` | ⋆ | active |
 | `M S T A R DOT S T R O K E D` | `star.stroked` | ☆ | active |
-| `M S U B E Q` | `subeq` | ⊆ | active (renamed from `subset.eq`) |
-| `M S U B S E T` | `subset` | ⊂ | active |
-| `M S U C C` | `succ` | ≻ | active |
+| `M S T A R O P` | `starop` | ⋆ | active (renamed from `star.op`) |
+| `M S T R O K E M A L E` | `strokeMale` | ⚦ | active (renamed from `male.stroke`) |
+| `M S T R O K E D B U L L E T` | `strokedBullet` | ◦ | active (renamed from `bullet.stroked`) |
+| `M S T R O K E D P A R A L L E L O G R A M` | `strokedParallelogram` | ▱ | active (renamed from `parallelogram.stroked`) |
+| `M S T R U C K A R R O W L T W O H E A D T A I L` | `struckArrowLTwoheadTail` | ⬼ | active (renamed from `arrow.l.twohead.tail.struck`) |
+| `M S T R U C K A R R O W R T W O H E A D T A I L` | `struckArrowRTwoheadTail` | ⤗ | active (renamed from `arrow.r.twohead.tail.struck`) |
+| `M S T R U C K D I V I D E S` | `struckDivides` | ⟊ | active (renamed from `divides.struck`) |
+| `M S T R U C K I N T E R L E A V E` | `struckInterleave` | ⫵ | active (renamed from `interleave.struck`) |
+| `M S T R U C K P A R A L L E L` | `struckParallel` | ⫲ | active (renamed from `parallel.struck`) |
+| `M S U B S E T DOT A P P R O X` | `subset.approx` | ⫉ | active |
+| `M S U B S E T DOT C L O S E D` | `subset.closed` | ⫏ | active |
+| `M S U B S E T DOT D O T` | `subset.dot` | ⪽ | active |
+| `M S U B S E T DOT D O U B L E` | `subset.double` | ⋐ | active |
+| `M S U B S E T DOT E Q DOT D O T` | `subset.eq.dot` | ⫃ | active |
+| `M S U B S E T DOT E Q DOT N O T` | `subset.eq.not` | ⊈ | active |
+| `M S U B S E T DOT E Q DOT S Q` | `subset.eq.sq` | ⊑ | active |
+| `M S U B S E T DOT E Q U I V` | `subset.equiv` | ⫅ | active |
+| `M S U B S E T DOT N E Q` | `subset.neq` | ⊊ | active |
+| `M S U B S E T DOT P L U S` | `subset.plus` | ⪿ | active |
+| `M S U B S E T DOT S Q` | `subset.sq` | ⊏ | active |
+| `M S U B S E T DOT T I L D E` | `subset.tilde` | ⫇ | active |
+| `M S U B S E T DOT T I M E S` | `subset.times` | ⫁ | active |
+| `M S U B S E T C L O S E D E Q` | `subsetClosedEq` | ⫑ | active (renamed from `subset.closed.eq`) |
+| `M S U B S E T N E Q U I V` | `subsetNequiv` | ⫋ | active (renamed from `subset.nequiv`) |
+| `M S U B S E T S Q N E Q` | `subsetSqNeq` | ⋤ | active (renamed from `subset.sq.neq`) |
+| `M S U B S E T E Q` | `subseteq` | ⊆ | active (renamed from `subset.eq`) |
+| `M S U B S E T O F` | `subsetof` | ⊂ | active (renamed from `subset`) |
+| `M S U C C DOT A P P R O X` | `succ.approx` | ⪸ | active |
+| `M S U C C DOT C U R L Y DOT E Q` | `succ.curly.eq` | ≽ | active |
+| `M S U C C DOT D O U B L E` | `succ.double` | ⪼ | active |
+| `M S U C C DOT E Q` | `succ.eq` | ⪰ | active |
+| `M S U C C DOT N A P P R O X` | `succ.napprox` | ⪺ | active |
+| `M S U C C DOT N E Q` | `succ.neq` | ⪲ | active |
+| `M S U C C DOT N O T` | `succ.not` | ⊁ | active |
+| `M S U C C DOT N T I L D E` | `succ.ntilde` | ⋩ | active |
+| `M S U C C DOT T I L D E` | `succ.tilde` | ≿ | active |
+| `M S U C C C U R L Y E Q N O T` | `succCurlyEqNot` | ⋡ | active (renamed from `succ.curly.eq.not`) |
+| `M S U C C E Q S L A N T` | `succEqSlant` | ≽ | active (renamed from `succ.eq.slant`) |
+| `M S U C C E Q U I V` | `succEquiv` | ⪴ | active (renamed from `succ.equiv`) |
+| `M S U C C N E Q U I V` | `succNequiv` | ⪶ | active (renamed from `succ.nequiv`) |
+| `M S U C C E E D S` | `succeeds` | ≻ | active (renamed from `succ`) |
+| `M S U I T DOT C L U B DOT F I L L E D` | `suit.club.filled` | ♣ | active |
+| `M S U I T DOT C L U B DOT S T R O K E D` | `suit.club.stroked` | ♧ | active |
+| `M S U I T DOT D I A M O N D DOT F I L L E D` | `suit.diamond.filled` | ♦ | active |
+| `M S U I T DOT D I A M O N D DOT S T R O K E D` | `suit.diamond.stroked` | ♢ | active |
+| `M S U I T DOT H E A R T DOT F I L L E D` | `suit.heart.filled` | ♥ | active |
+| `M S U I T DOT H E A R T DOT S T R O K E D` | `suit.heart.stroked` | ♡ | active |
+| `M S U I T DOT S P A D E DOT F I L L E D` | `suit.spade.filled` | ♠ | active |
+| `M S U I T DOT S P A D E DOT S T R O K E D` | `suit.spade.stroked` | ♤ | active |
 | `M S U M` | `sum` | ∑ | active |
-| `M S U P E Q` | `supeq` | ⊇ | active (renamed from `supset.eq`) |
-| `M S U P S E T` | `supset` | ⊃ | active |
+| `M S U P S E T DOT A P P R O X` | `supset.approx` | ⫊ | active |
+| `M S U P S E T DOT C L O S E D` | `supset.closed` | ⫐ | active |
+| `M S U P S E T DOT D O T` | `supset.dot` | ⪾ | active |
+| `M S U P S E T DOT D O U B L E` | `supset.double` | ⋑ | active |
+| `M S U P S E T DOT E Q DOT D O T` | `supset.eq.dot` | ⫄ | active |
+| `M S U P S E T DOT E Q DOT N O T` | `supset.eq.not` | ⊉ | active |
+| `M S U P S E T DOT E Q DOT S Q` | `supset.eq.sq` | ⊒ | active |
+| `M S U P S E T DOT E Q U I V` | `supset.equiv` | ⫆ | active |
+| `M S U P S E T DOT N E Q` | `supset.neq` | ⊋ | active |
+| `M S U P S E T DOT P L U S` | `supset.plus` | ⫀ | active |
+| `M S U P S E T DOT S Q` | `supset.sq` | ⊐ | active |
+| `M S U P S E T DOT T I L D E` | `supset.tilde` | ⫈ | active |
+| `M S U P S E T DOT T I M E S` | `supset.times` | ⫂ | active |
+| `M S U P S E T C L O S E D E Q` | `supsetClosedEq` | ⫒ | active (renamed from `supset.closed.eq`) |
+| `M S U P S E T N E Q U I V` | `supsetNequiv` | ⫌ | active (renamed from `supset.nequiv`) |
+| `M S U P S E T S Q N E Q` | `supsetSqNeq` | ⋥ | active (renamed from `supset.sq.neq`) |
+| `M S U P S E T E Q` | `supseteq` | ⊇ | active (renamed from `supset.eq`) |
+| `M S U P S E T O F` | `supsetof` | ⊃ | active (renamed from `supset`) |
+| `M S U R F I N T E G R A L` | `surfIntegral` | ∯ | active (renamed from `integral.surf`) |
+| `M T A N G L E S P H E R I C` | `tAngleSpheric` | ⦡ | active (renamed from `angle.spheric.t`) |
+| `M T M A L E S T R O K E` | `tMaleStroke` | ⚨ | active (renamed from `male.stroke.t`) |
 | `M T A C K DOT B` | `tack.b` | ⊤ | active |
 | `M T A C K DOT L` | `tack.l` | ⊣ | active |
-| `M T A C K DOT R` | `tack.r` | ⊢ | active |
+| `M T A C K DOT R DOT D O U B L E` | `tack.r.double` | ⊩ | active |
+| `M T A C K DOT R DOT L O N G` | `tack.r.long` | ⟝ | active |
+| `M T A C K DOT R DOT N O T` | `tack.r.not` | ⊬ | active |
+| `M T A C K DOT R DOT S H O R T` | `tack.r.short` | ⊦ | active |
+| `M T A C K DOT R DOT T R I P L E` | `tack.r.triple` | ⊪ | active |
+| `M T A C K DOT R R` | `tack.rr` | ⊨ | active |
 | `M T A C K DOT T` | `tack.t` | ⊥ | active |
 | `M T A C K B D O U B L E S H O R T` | `tackBDoubleShort` | ⫧ | active (renamed from `tack.b.double.short`) |
 | `M T A C K B S H O R T` | `tackBShort` | ⫟ | active (renamed from `tack.b.short`) |
@@ -729,17 +1608,18 @@ These symbols use a different name from their typst one.
 | `M T A C K L R` | `tackLR` | ⟛ | active (renamed from `tack.l.r`) |
 | `M T A C K L S H O R T` | `tackLShort` | ⫞ | active (renamed from `tack.l.short`) |
 | `M T A C K L L` | `tackLl` | ⫤ | active (renamed from `tack.ll`) |
-| `M T A C K R D O U B L E` | `tackRDouble` | ⊩ | active (renamed from `tack.r.double`) |
-| `M T A C K R L O N G` | `tackRLong` | ⟝ | active (renamed from `tack.r.long`) |
-| `M T A C K R N O T` | `tackRNot` | ⊬ | active (renamed from `tack.r.not`) |
-| `M T A C K R S H O R T` | `tackRShort` | ⊦ | active (renamed from `tack.r.short`) |
-| `M T A C K R T R I P L E` | `tackRTriple` | ⊪ | active (renamed from `tack.r.triple`) |
-| `M T A C K R R` | `tackRr` | ⊨ | active (renamed from `tack.rr`) |
+| `M T A C K R D O U B L E N O T` | `tackRDoubleNot` | ⊮ | active (renamed from `tack.r.double.not`) |
+| `M T A C K R R D O U B L E` | `tackRrDouble` | ⊫ | active (renamed from `tack.rr.double`) |
+| `M T A C K R R N O T` | `tackRrNot` | ⊭ | active (renamed from `tack.rr.not`) |
+| `M T A C K R R S H O R T` | `tackRrShort` | ⊧ | active (renamed from `tack.rr.short`) |
+| `M T A C K R R R` | `tackRrr` | ⫢ | active (renamed from `tack.rrr`) |
 | `M T A C K T B I G` | `tackTBig` | ⟘ | active (renamed from `tack.t.big`) |
 | `M T A C K T D O U B L E S H O R T` | `tackTDoubleShort` | ⫨ | active (renamed from `tack.t.double.short`) |
 | `M T A C K T S H O R T` | `tackTShort` | ⫠ | active (renamed from `tack.t.short`) |
 | `M T A C K T T` | `tackTt` | ⫫ | active (renamed from `tack.tt`) |
-| `M T H E R E F O R E` | `therefore` | ∴ | active |
+| `M T A C K R I G H T` | `tackright` | ⊢ | active (renamed from `tack.r`) |
+| `M T H E R E F O R E 2` | `therefore2` | ∴ | active (renamed from `therefore`) |
+| `M T I E I N F I N I T Y` | `tieInfinity` | ⧝ | active (renamed from `infinity.tie`) |
 | `M T I L D E DOT B A S I C` | `tilde.basic` | ~ | active |
 | `M T I L D E DOT D O T` | `tilde.dot` | ⩪ | active |
 | `M T I L D E DOT E Q` | `tilde.eq` | ≃ | active |
@@ -755,10 +1635,27 @@ These symbols use a different name from their typst one.
 | `M T I L D E E Q U I V` | `tildeEquiv` | ≅ | active (renamed from `tilde.equiv`) |
 | `M T I L D E G T S L A N T` | `tildeGtSlant` | ⪞\vs{1} | active (renamed from `tilde.gt.slant`) |
 | `M T I L D E L T S L A N T` | `tildeLtSlant` | ⪝\vs{1} | active (renamed from `tilde.lt.slant`) |
+| `M T I L D E P A R A L L E L` | `tildeParallel` | ⫳ | active (renamed from `parallel.tilde`) |
 | `M T I L D E R E V E Q U I V` | `tildeRevEquiv` | ≌ | active (renamed from `tilde.rev.equiv`) |
-| `M T I M E S` | `times` | × | active |
-| `M T O P` | `top` | ⊤ | active |
+| `M T I M E S DOT B I G` | `times.big` | ⨉ | active |
+| `M T I M E S DOT D I V` | `times.div` | ⋇ | active |
+| `M T I M E S DOT L` | `times.l` | ⋉ | active |
+| `M T I M E S DOT O` | `times.o` | ⊗ | active |
+| `M T I M E S DOT R` | `times.r` | ⋊ | active |
+| `M T I M E S DOT S Q U A R E` | `times.square` | ⊠ | active |
+| `M T I M E S DOT T H R E E DOT L` | `times.three.l` | ⋋ | active |
+| `M T I M E S DOT T H R E E DOT R` | `times.three.r` | ⋌ | active |
+| `M T I M E S DOT T R I A N G L E` | `times.triangle` | ⨻ | active |
+| `M T I M E S 2` | `times2` | × | active (renamed from `times`) |
+| `M T I M E S I N T E G R A L` | `timesIntegral` | ⨘ | active (renamed from `integral.times`) |
+| `M T I M E S O B I G` | `timesOBig` | ⨂ | active (renamed from `times.o.big`) |
+| `M T I M E S O H A T` | `timesOHat` | ⨶ | active (renamed from `times.o.hat`) |
+| `M T I M E S O L` | `timesOL` | ⨴ | active (renamed from `times.o.l`) |
+| `M T I M E S O R` | `timesOR` | ⨵ | active (renamed from `times.o.r`) |
+| `M T O P 2` | `top2` | ⊤ | active (renamed from `top`) |
+| `M T R A D E M A R K` | `trademark` | ™ | active |
 | `M T R A N S` | `trans` | ⚧ | active |
+| `M T R I B U L L E T` | `triBullet` | ‣ | active (renamed from `bullet.tri`) |
 | `M T R I A N G L E DOT F I L L E D DOT B` | `triangle.filled.b` | ▼ | active |
 | `M T R I A N G L E DOT F I L L E D DOT L` | `triangle.filled.l` | ◀ | active |
 | `M T R I A N G L E DOT F I L L E D DOT R` | `triangle.filled.r` | ▶ | active |
@@ -786,875 +1683,959 @@ These symbols use a different name from their typst one.
 | `M T R I A N G L E S T R O K E D R O U N D E D` | `triangleStrokedRounded` | 🛆 | active (renamed from `triangle.stroked.rounded`) |
 | `M T R I A N G L E S T R O K E D T L` | `triangleStrokedTl` | ◸ | active (renamed from `triangle.stroked.tl`) |
 | `M T R I A N G L E S T R O K E D T R` | `triangleStrokedTr` | ◹ | active (renamed from `triangle.stroked.tr`) |
+| `M T R I P L E D A G G E R` | `tripleDagger` | ⹋ | active (renamed from `dagger.triple`) |
+| `M T R I P L E I N T E G R A L` | `tripleIntegral` | ∭ | active (renamed from `integral.triple`) |
 | `M U N D E R S C O R E` | `underscore` | _ | active |
-| `M U N I O N` | `union` | ∪ | active |
+| `M U N I O N DOT A R R O W` | `union.arrow` | ⊌ | active |
+| `M U N I O N DOT D O T` | `union.dot` | ⊍ | active |
+| `M U N I O N DOT D O U B L E` | `union.double` | ⋓ | active |
+| `M U N I O N DOT M I N U S` | `union.minus` | ⩁ | active |
+| `M U N I O N DOT O R` | `union.or` | ⩅ | active |
+| `M U N I O N DOT P L U S` | `union.plus` | ⊎ | active |
+| `M U N I O N DOT S E R I F` | `union.serif` | ∪\vs{1} | active |
+| `M U N I O N DOT S Q` | `union.sq` | ⊔ | active |
+| `M U N I O N D O T B I G` | `unionDotBig` | ⨃ | active (renamed from `union.dot.big`) |
+| `M U N I O N I N T E G R A L` | `unionIntegral` | ⨚ | active (renamed from `integral.union`) |
+| `M U N I O N P L U S B I G` | `unionPlusBig` | ⨄ | active (renamed from `union.plus.big`) |
+| `M U N I O N S Q B I G` | `unionSqBig` | ⨆ | active (renamed from `union.sq.big`) |
+| `M U N I O N S Q D O U B L E` | `unionSqDouble` | ⩏ | active (renamed from `union.sq.double`) |
+| `M U N I O N S Q S E R I F` | `unionSqSerif` | ⊔\vs{1} | active (renamed from `union.sq.serif`) |
+| `M U P E Q D O T S` | `upEqDots` | ≓ | active (renamed from `eq.dots.up`) |
+| `M U P A R R O W` | `uparrow` | ↑ | active (renamed from `arrow.t`) |
+| `M V E E` | `vee` | ∨ | active (renamed from `or`) |
+| `M V O L I N T E G R A L` | `volIntegral` | ∰ | active (renamed from `integral.vol`) |
+| `M W E D G E` | `wedge` | ∧ | active (renamed from `and`) |
 | `M W I T H O U T` | `without` | ∖ | active |
 | `M W R E A T H` | `wreath` | ≀ | active |
 | `M X O R` | `xor` | ⊕ | active |
-| `M Z E R O` | `zero` | 0 | active |
-| `M A A` | `AA` | 𝔸 | disabled: beyond the active limit |
-| `M B B` | `BB` | 𝔹 | disabled: beyond the active limit |
-| `M C C` | `CC` | ℂ | disabled: beyond the active limit |
-| `M D D` | `DD` | 𝔻 | disabled: beyond the active limit |
-| `M E E` | `EE` | 𝔼 | disabled: beyond the active limit |
-| `M F F` | `FF` | 𝔽 | disabled: beyond the active limit |
-| `M G G` | `GG` | 𝔾 | disabled: beyond the active limit |
-| `M H H` | `HH` | ℍ | disabled: beyond the active limit |
-| `M I I` | `II` | 𝕀 | disabled: beyond the active limit |
-| `M I M` | `Im` | ℑ | disabled: beyond the active limit |
-| `M J J` | `JJ` | 𝕁 | disabled: beyond the active limit |
-| `M K K` | `KK` | 𝕂 | disabled: beyond the active limit |
-| `M L L` | `LL` | 𝕃 | disabled: beyond the active limit |
-| `M M M` | `MM` | 𝕄 | disabled: beyond the active limit |
-| `M N N` | `NN` | ℕ | disabled: beyond the active limit |
-| `M O O` | `OO` | 𝕆 | disabled: beyond the active limit |
-| `M P P` | `PP` | ℙ | disabled: beyond the active limit |
-| `M Q Q` | `QQ` | ℚ | disabled: beyond the active limit |
-| `M R R` | `RR` | ℝ | disabled: beyond the active limit |
-| `M R E` | `Re` | ℜ | disabled: beyond the active limit |
-| `M S S` | `SS` | 𝕊 | disabled: beyond the active limit |
-| `M T T` | `TT` | 𝕋 | disabled: beyond the active limit |
-| `M U U` | `UU` | 𝕌 | disabled: beyond the active limit |
-| `M V V` | `VV` | 𝕍 | disabled: beyond the active limit |
-| `M W W` | `WW` | 𝕎 | disabled: beyond the active limit |
-| `M X X` | `XX` | 𝕏 | disabled: beyond the active limit |
-| `M Y Y` | `YY` | 𝕐 | disabled: beyond the active limit |
-| `M Z Z` | `ZZ` | ℤ | disabled: beyond the active limit |
-| `M A M P DOT I N V` | `amp.inv` | ⅋ | disabled: every spelling clashes |
-| `M A N D DOT B I G` | `and.big` | ⋀ | disabled: every spelling clashes |
-| `M A N D DOT C U R L Y` | `and.curly` | ⋏ | disabled: every spelling clashes |
-| `M A N D DOT D O T` | `and.dot` | ⟑ | disabled: every spelling clashes |
-| `M A N D DOT D O U B L E` | `and.double` | ⩓ | disabled: every spelling clashes |
-| `M A N G L E DOT A C U T E` | `angle.acute` | ⦟ | disabled: every spelling clashes |
-| `M A N G L E DOT A R C` | `angle.arc` | ∡ | disabled: every spelling clashes |
+| `M Z E R O DOT S L A S H E D` | `zero.slashed` | 0\vs{1} | active |
+| `M Z E R O E M P T Y S E T` | `zeroEmptyset` | ∅\vs{1} | active (renamed from `emptyset.zero`) |
+| `M Z E R O N O T H I N G` | `zeroNothing` | ∅\vs{1} | active (renamed from `nothing.zero`) |
+| `M C C` | `CC` | ℂ | disabled: every spelling clashes |
+| `M I M` | `Im` | ℑ | disabled: every spelling clashes |
+| `M O O` | `OO` | 𝕆 | disabled: every spelling clashes |
 | `M A N G L E DOT A R C DOT R E V` | `angle.arc.rev` | ⦛ | disabled: every spelling clashes |
-| `M A N G L E DOT A Z I M U T H` | `angle.azimuth` | ⍼ | disabled: every spelling clashes |
-| `M A N G L E DOT O B T U S E` | `angle.obtuse` | ⦦ | disabled: every spelling clashes |
-| `M A N G L E DOT R E V` | `angle.rev` | ⦣ | disabled: every spelling clashes |
 | `M A N G L E DOT R I G H T DOT A R C` | `angle.right.arc` | ⊾ | disabled: every spelling clashes |
-| `M A N G L E DOT R I G H T DOT D O T` | `angle.right.dot` | ⦝ | disabled: every spelling clashes |
 | `M A N G L E DOT R I G H T DOT R E V` | `angle.right.rev` | ⯾ | disabled: every spelling clashes |
-| `M A N G L E DOT R I G H T DOT S Q U A R E` | `angle.right.square` | ⦜ | disabled: every spelling clashes |
-| `M A N G L E DOT S` | `angle.s` | ⦞ | disabled: every spelling clashes |
-| `M A N G L E DOT S P A T I A L` | `angle.spatial` | ⟀ | disabled: every spelling clashes |
-| `M A N G L E DOT S P H E R I C` | `angle.spheric` | ∢ | disabled: every spelling clashes |
 | `M A N G L E DOT S P H E R I C DOT R E V` | `angle.spheric.rev` | ⦠ | disabled: every spelling clashes |
-| `M A N G L E DOT S P H E R I C DOT T` | `angle.spheric.t` | ⦡ | disabled: every spelling clashes |
-| `M A N G S T R O M` | `angstrom` | Å | disabled: beyond the active limit |
-| `M A P P R O X DOT H A T` | `approx.hat` | ⩯ | disabled: every spelling clashes |
-| `M A R R O W DOT B L DOT B A R` | `arrow.bl.bar` | 🢻 | disabled: every spelling clashes |
-| `M A R R O W DOT B L DOT D O U B L E` | `arrow.bl.double` | ⇙ | disabled: every spelling clashes |
-| `M A R R O W DOT B L DOT F I L L E D` | `arrow.bl.filled` | ⬋ | disabled: every spelling clashes |
-| `M A R R O W DOT B L DOT H O O K` | `arrow.bl.hook` | ⤦ | disabled: every spelling clashes |
-| `M A R R O W DOT B L DOT S T R O K E D` | `arrow.bl.stroked` | ⬃ | disabled: every spelling clashes |
-| `M A R R O W DOT B R DOT B A R` | `arrow.br.bar` | 🢺 | disabled: every spelling clashes |
-| `M A R R O W DOT B R DOT D O U B L E` | `arrow.br.double` | ⇘ | disabled: every spelling clashes |
-| `M A R R O W DOT B R DOT F I L L E D` | `arrow.br.filled` | ⬊ | disabled: every spelling clashes |
-| `M A R R O W DOT B R DOT H O O K` | `arrow.br.hook` | ⤥ | disabled: every spelling clashes |
-| `M A R R O W DOT B R DOT S T R O K E D` | `arrow.br.stroked` | ⬂ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT D O U B L E DOT B A R` | `arrow.l.double.bar` | ⤆ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT D O U B L E DOT L O N G` | `arrow.l.double.long` | ⟸ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT D O U B L E DOT L O N G DOT B A R` | `arrow.l.double.long.bar` | ⟽ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT D O U B L E DOT N O T` | `arrow.l.double.not` | ⇍ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT D O U B L E DOT S T R U C K` | `arrow.l.double.struck` | ⤂ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT R DOT D O U B L E DOT L O N G` | `arrow.l.r.double.long` | ⟺ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT R DOT D O U B L E DOT N O T` | `arrow.l.r.double.not` | ⇎ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT R DOT D O U B L E DOT S T R U C K` | `arrow.l.r.double.struck` | ⤄ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT T A I L DOT D S T R U C K` | `arrow.l.tail.dstruck` | ⬺ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT T A I L DOT S T R U C K` | `arrow.l.tail.struck` | ⬹ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT T W O H E A D DOT B A R` | `arrow.l.twohead.bar` | ⬶ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT T W O H E A D DOT D S T R U C K` | `arrow.l.twohead.dstruck` | ⬵ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT T W O H E A D DOT S T R U C K` | `arrow.l.twohead.struck` | ⬴ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT T W O H E A D DOT T A I L` | `arrow.l.twohead.tail` | ⬻ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT T W O H E A D DOT T A I L DOT D S T R U C K` | `arrow.l.twohead.tail.dstruck` | ⬽ | disabled: every spelling clashes |
-| `M A R R O W DOT L DOT T W O H E A D DOT T A I L DOT S T R U C K` | `arrow.l.twohead.tail.struck` | ⬼ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT D O U B L E DOT L O N G DOT B A R` | `arrow.r.double.long.bar` | ⟾ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT T A I L DOT D S T R U C K` | `arrow.r.tail.dstruck` | ⤕ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT T A I L DOT S T R U C K` | `arrow.r.tail.struck` | ⤔ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT T W O H E A D DOT B A R` | `arrow.r.twohead.bar` | ⤅ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT T W O H E A D DOT D S T R U C K` | `arrow.r.twohead.dstruck` | ⤁ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT T W O H E A D DOT S T R U C K` | `arrow.r.twohead.struck` | ⤀ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT T W O H E A D DOT T A I L` | `arrow.r.twohead.tail` | ⤖ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT T W O H E A D DOT T A I L DOT D S T R U C K` | `arrow.r.twohead.tail.dstruck` | ⤘ | disabled: every spelling clashes |
-| `M A R R O W DOT R DOT T W O H E A D DOT T A I L DOT S T R U C K` | `arrow.r.twohead.tail.struck` | ⤗ | disabled: every spelling clashes |
-| `M A R R O W DOT T DOT B DOT D O U B L E` | `arrow.t.b.double` | ⇕ | disabled: every spelling clashes |
-| `M A R R O W DOT T DOT B DOT F I L L E D` | `arrow.t.b.filled` | ⬍ | disabled: every spelling clashes |
-| `M A R R O W DOT T DOT B DOT S T R O K E D` | `arrow.t.b.stroked` | ⇳ | disabled: every spelling clashes |
-| `M A R R O W DOT T DOT B A R` | `arrow.t.bar` | ↥ | disabled: every spelling clashes |
-| `M A R R O W DOT T L DOT B A R` | `arrow.tl.bar` | 🢸 | disabled: every spelling clashes |
-| `M A R R O W DOT T L DOT B R` | `arrow.tl.br` | ⤡ | disabled: every spelling clashes |
-| `M A R R O W DOT T L DOT D O U B L E` | `arrow.tl.double` | ⇖ | disabled: every spelling clashes |
-| `M A R R O W DOT T L DOT F I L L E D` | `arrow.tl.filled` | ⬉ | disabled: every spelling clashes |
-| `M A R R O W DOT T L DOT H O O K` | `arrow.tl.hook` | ⤣ | disabled: every spelling clashes |
-| `M A R R O W DOT T L DOT S T R O K E D` | `arrow.tl.stroked` | ⬁ | disabled: every spelling clashes |
-| `M A R R O W DOT T R DOT B A R` | `arrow.tr.bar` | 🢹 | disabled: every spelling clashes |
-| `M A R R O W DOT T R DOT B L` | `arrow.tr.bl` | ⤢ | disabled: every spelling clashes |
-| `M A R R O W DOT T R DOT D O U B L E` | `arrow.tr.double` | ⇗ | disabled: every spelling clashes |
-| `M A R R O W DOT T R DOT F I L L E D` | `arrow.tr.filled` | ⬈ | disabled: every spelling clashes |
-| `M A R R O W DOT T R DOT H O O K` | `arrow.tr.hook` | ⤤ | disabled: every spelling clashes |
-| `M A R R O W DOT T R DOT S T R O K E D` | `arrow.tr.stroked` | ⬀ | disabled: every spelling clashes |
-| `M A S Y M P DOT N O T` | `asymp.not` | ≭ | disabled: every spelling clashes |
-| `M B A C K S L A S H DOT N O T` | `backslash.not` | ⧷ | disabled: every spelling clashes |
-| `M B A C K S L A S H DOT O` | `backslash.o` | ⦸ | disabled: every spelling clashes |
-| `M B A L L O T` | `ballot` | ☐ | disabled: beyond the active limit |
-| `M B A L L O T DOT C H E C K` | `ballot.check` | ☑ | disabled: beyond the active limit |
-| `M B A L L O T DOT C H E C K DOT H E A V Y` | `ballot.check.heavy` | 🗹 | disabled: beyond the active limit |
-| `M B A L L O T DOT C R O S S` | `ballot.cross` | ☒ | disabled: beyond the active limit |
-| `M B I S H O P DOT B L A C K` | `bishop.black` | ♝ | disabled: beyond the active limit |
-| `M B I S H O P DOT W H I T E` | `bishop.white` | ♗ | disabled: beyond the active limit |
-| `M B O W T I E DOT S T R O K E D DOT B I G DOT L` | `bowtie.stroked.big.l` | ⟕ | disabled: every spelling clashes |
+| `M A N G S T R O M` | `angstrom` | Å | disabled: every spelling clashes |
+| `M A N G Z A R R` | `angzarr` | ⍼ | disabled: every spelling clashes |
 | `M B O W T I E DOT S T R O K E D DOT B I G DOT L DOT R` | `bowtie.stroked.big.l.r` | ⟗ | disabled: every spelling clashes |
-| `M B O W T I E DOT S T R O K E D DOT B I G DOT R` | `bowtie.stroked.big.r` | ⟖ | disabled: every spelling clashes |
-| `M B U L L E T DOT H O L E` | `bullet.hole` | ◘ | disabled: every spelling clashes |
 | `M B U L L E T DOT H Y P H` | `bullet.hyph` | ⁃ | disabled: every spelling clashes |
-| `M B U L L E T DOT L` | `bullet.l` | ⁌ | disabled: every spelling clashes |
-| `M B U L L E T DOT O` | `bullet.o` | ⦿ | disabled: every spelling clashes |
-| `M B U L L E T DOT O P` | `bullet.op` | ∙ | disabled: every spelling clashes |
-| `M B U L L E T DOT R` | `bullet.r` | ⁍ | disabled: every spelling clashes |
-| `M B U L L E T DOT S T R O K E D` | `bullet.stroked` | ◦ | disabled: every spelling clashes |
 | `M B U L L E T DOT S T R O K E D DOT O` | `bullet.stroked.o` | ⦾ | disabled: every spelling clashes |
-| `M B U L L E T DOT T R I` | `bullet.tri` | ‣ | disabled: every spelling clashes |
-| `M C C` | `cc` | 🅭 | disabled: beyond the active limit |
-| `M C C DOT B Y` | `cc.by` | 🅯 | disabled: beyond the active limit |
-| `M C C DOT N C` | `cc.nc` | 🄏 | disabled: beyond the active limit |
-| `M C C DOT N D` | `cc.nd` | ⊜ | disabled: beyond the active limit |
-| `M C C DOT P U B L I C` | `cc.public` | 🅮 | disabled: beyond the active limit |
-| `M C C DOT S A` | `cc.sa` | 🄎 | disabled: beyond the active limit |
-| `M C C DOT Z E R O` | `cc.zero` | 🄍 | disabled: beyond the active limit |
-| `M C H E C K M A R K` | `checkmark` | ✓ | disabled: beyond the active limit |
-| `M C H E C K M A R K DOT H E A V Y` | `checkmark.heavy` | ✔ | disabled: beyond the active limit |
-| `M C H E C K M A R K DOT L I G H T` | `checkmark.light` | 🗸 | disabled: beyond the active limit |
-| `M C H E S S` | `chess` | { | disabled: beyond the active limit |
-| `M C O` | `co` | ℅ | disabled: every spelling clashes |
-| `M C O L O N DOT C U R R E N C Y` | `colon.currency` | ₡ | disabled: every spelling clashes |
-| `M C O L O N DOT D O U B L E` | `colon.double` | ∷ | disabled: every spelling clashes |
-| `M C O L O N DOT D O U B L E DOT E Q` | `colon.double.eq` | ⩴ | disabled: every spelling clashes |
-| `M C O L O N DOT E Q` | `colon.eq` | ≔ | disabled: every spelling clashes |
-| `M C O L O N DOT T R I` | `colon.tri` | ⁝ | disabled: every spelling clashes |
-| `M C O L O N DOT T R I DOT O P` | `colon.tri.op` | ⫶ | disabled: every spelling clashes |
-| `M C O M M A DOT I N V` | `comma.inv` | ⸲ | disabled: every spelling clashes |
-| `M C O M M A DOT R E V` | `comma.rev` | ⹁ | disabled: every spelling clashes |
-| `M C O M P O S E DOT O` | `compose.o` | ⊚ | disabled: every spelling clashes |
-| `M C O N V O L V E DOT O` | `convolve.o` | ⊛ | disabled: every spelling clashes |
-| `M C O P Y L E F T` | `copyleft` | 🄯 | disabled: beyond the active limit |
-| `M C O P Y R I G H T` | `copyright` | © | disabled: beyond the active limit |
-| `M C O P Y R I G H T DOT S O U N D` | `copyright.sound` | ℗ | disabled: beyond the active limit |
-| `M C R O S S M A R K` | `crossmark` | ✗ | disabled: beyond the active limit |
-| `M C R O S S M A R K DOT H E A V Y` | `crossmark.heavy` | ✘ | disabled: beyond the active limit |
-| `M D A G G E R DOT D O U B L E` | `dagger.double` | ‡ | disabled: every spelling clashes |
-| `M D A G G E R DOT I N V` | `dagger.inv` | ⸸ | disabled: every spelling clashes |
-| `M D A G G E R DOT L` | `dagger.l` | ⸶ | disabled: every spelling clashes |
-| `M D A G G E R DOT R` | `dagger.r` | ⸷ | disabled: every spelling clashes |
-| `M D A G G E R DOT T R I P L E` | `dagger.triple` | ⹋ | disabled: every spelling clashes |
-| `M D I V DOT O` | `div.o` | ⨸ | disabled: every spelling clashes |
-| `M D I V DOT S L A N T E D DOT O` | `div.slanted.o` | ⦼ | disabled: every spelling clashes |
-| `M D I V I D E S` | `divides` | ∣ | disabled: every spelling clashes |
-| `M D I V I D E S DOT N O T` | `divides.not` | ∤ | disabled: every spelling clashes |
-| `M D I V I D E S DOT N O T DOT R E V` | `divides.not.rev` | ⫮ | disabled: every spelling clashes |
-| `M D I V I D E S DOT S T R U C K` | `divides.struck` | ⟊ | disabled: every spelling clashes |
-| `M D O T L E S S DOT I` | `dotless.i` | ı | disabled: beyond the active limit |
-| `M D O T L E S S DOT J` | `dotless.j` | ȷ | disabled: beyond the active limit |
-| `M E L L` | `ell` | ℓ | disabled: beyond the active limit |
-| `M E M P T Y S E T DOT A R R O W DOT L` | `emptyset.arrow.l` | ⦴ | disabled: every spelling clashes |
-| `M E M P T Y S E T DOT A R R O W DOT R` | `emptyset.arrow.r` | ⦳ | disabled: every spelling clashes |
-| `M E M P T Y S E T DOT B A R` | `emptyset.bar` | ⦱ | disabled: every spelling clashes |
-| `M E M P T Y S E T DOT C I R C L E` | `emptyset.circle` | ⦲ | disabled: every spelling clashes |
-| `M E M P T Y S E T DOT R E V` | `emptyset.rev` | ⦰ | disabled: every spelling clashes |
-| `M E M P T Y S E T DOT Z E R O` | `emptyset.zero` | ∅\vs{1} | disabled: every spelling clashes |
-| `M E Q DOT A S T` | `eq.ast` | ⩮ | disabled: every spelling clashes |
-| `M E Q DOT C O L O N` | `eq.colon` | ≕ | disabled: every spelling clashes |
-| `M E Q DOT D E F` | `eq.def` | ≝ | disabled: every spelling clashes |
-| `M E Q DOT D E L T A` | `eq.delta` | ≜ | disabled: every spelling clashes |
-| `M E Q DOT D O T` | `eq.dot` | ≐ | disabled: every spelling clashes |
-| `M E Q DOT D O T S` | `eq.dots` | ≑ | disabled: every spelling clashes |
-| `M E Q DOT D O T S DOT D O W N` | `eq.dots.down` | ≒ | disabled: every spelling clashes |
-| `M E Q DOT D O T S DOT U P` | `eq.dots.up` | ≓ | disabled: every spelling clashes |
-| `M E Q DOT E Q U I` | `eq.equi` | ≚ | disabled: every spelling clashes |
-| `M E Q DOT E S T` | `eq.est` | ≙ | disabled: every spelling clashes |
-| `M E Q DOT G T` | `eq.gt` | ⋝ | disabled: every spelling clashes |
-| `M E Q DOT G T DOT S L A N T` | `eq.gt.slant` | ⪖ | disabled: every spelling clashes |
-| `M E Q DOT L T` | `eq.lt` | ⋜ | disabled: every spelling clashes |
-| `M E Q DOT L T DOT S L A N T` | `eq.lt.slant` | ⪕ | disabled: every spelling clashes |
-| `M E Q DOT M` | `eq.m` | ≞ | disabled: every spelling clashes |
-| `M E Q DOT N O T` | `eq.not` | ≠ | disabled: every spelling clashes |
-| `M E Q DOT O` | `eq.o` | ⊜ | disabled: every spelling clashes |
-| `M E Q DOT P R E C` | `eq.prec` | ⋞ | disabled: every spelling clashes |
-| `M E Q DOT Q U A D` | `eq.quad` | ≣ | disabled: every spelling clashes |
-| `M E Q DOT Q U E S T` | `eq.quest` | ≟ | disabled: every spelling clashes |
-| `M E Q DOT S T A R` | `eq.star` | ≛ | disabled: every spelling clashes |
-| `M E Q DOT S U C C` | `eq.succ` | ⋟ | disabled: every spelling clashes |
-| `M E Q DOT T R I P L E` | `eq.triple` | ≡ | disabled: every spelling clashes |
-| `M E Q DOT T R I P L E DOT N O T` | `eq.triple.not` | ≢ | disabled: every spelling clashes |
-| `M E Q U I V` | `equiv` | ≡ | disabled: every spelling clashes |
-| `M E Q U I V DOT G T` | `equiv.gt` | ⪚ | disabled: every spelling clashes |
-| `M E Q U I V DOT G T DOT S L A N T` | `equiv.gt.slant` | ⪜ | disabled: every spelling clashes |
-| `M E Q U I V DOT L T` | `equiv.lt` | ⪙ | disabled: every spelling clashes |
-| `M E Q U I V DOT L T DOT S L A N T` | `equiv.lt.slant` | ⪛ | disabled: every spelling clashes |
-| `M E R R O R B A R DOT C I R C L E DOT F I L L E D` | `errorbar.circle.filled` | ⧳ | disabled: beyond the active limit |
-| `M E R R O R B A R DOT C I R C L E DOT S T R O K E D` | `errorbar.circle.stroked` | ⧲ | disabled: beyond the active limit |
-| `M E R R O R B A R DOT D I A M O N D DOT F I L L E D` | `errorbar.diamond.filled` | ⧱ | disabled: beyond the active limit |
-| `M E R R O R B A R DOT D I A M O N D DOT S T R O K E D` | `errorbar.diamond.stroked` | ⧰ | disabled: beyond the active limit |
-| `M E R R O R B A R DOT S Q U A R E DOT F I L L E D` | `errorbar.square.filled` | ⧯ | disabled: beyond the active limit |
-| `M E R R O R B A R DOT S Q U A R E DOT S T R O K E D` | `errorbar.square.stroked` | ⧮ | disabled: beyond the active limit |
-| `M E X C L DOT D O U B L E` | `excl.double` | ‼ | disabled: every spelling clashes |
-| `M E X C L DOT I N V` | `excl.inv` | ¡ | disabled: every spelling clashes |
+| `M C C` | `cc` | 🅭 | disabled: every spelling clashes |
 | `M E X C L DOT Q U E S T` | `excl.quest` | ⁉ | disabled: every spelling clashes |
-| `M E X I S T S DOT N O T` | `exists.not` | ∄ | disabled: every spelling clashes |
-| `M F E M A L E DOT D O U B L E` | `female.double` | ⚢ | disabled: beyond the active limit |
-| `M F E M A L E DOT M A L E` | `female.male` | ⚤ | disabled: beyond the active limit |
-| `M F E M I N I N E` | `feminine` | ª | disabled: beyond the active limit |
-| `M F L O R A L` | `floral` | ❦ | disabled: beyond the active limit |
-| `M F L O R A L DOT L` | `floral.l` | ☙ | disabled: beyond the active limit |
-| `M F L O R A L DOT R` | `floral.r` | ❧ | disabled: beyond the active limit |
-| `M F O R C E S DOT N O T` | `forces.not` | ⊮ | disabled: every spelling clashes |
-| `M G T DOT A P P R O X` | `gt.approx` | ⪆ | disabled: every spelling clashes |
-| `M G T DOT A R C` | `gt.arc` | ⪧ | disabled: every spelling clashes |
-| `M G T DOT A R C DOT E Q` | `gt.arc.eq` | ⪩ | disabled: every spelling clashes |
-| `M G T DOT C L O S E D` | `gt.closed` | ⊳ | disabled: every spelling clashes |
-| `M G T DOT C L O S E D DOT E Q` | `gt.closed.eq` | ⊵ | disabled: every spelling clashes |
-| `M G T DOT C L O S E D DOT E Q DOT N O T` | `gt.closed.eq.not` | ⋭ | disabled: every spelling clashes |
-| `M G T DOT C L O S E D DOT N O T` | `gt.closed.not` | ⋫ | disabled: every spelling clashes |
-| `M G T DOT D O T` | `gt.dot` | ⋗ | disabled: every spelling clashes |
-| `M G T DOT D O U B L E` | `gt.double` | ≫ | disabled: every spelling clashes |
-| `M G T DOT D O U B L E DOT N E S T E D` | `gt.double.nested` | ⪢ | disabled: every spelling clashes |
-| `M G T DOT E Q DOT L T` | `gt.eq.lt` | ⋛ | disabled: every spelling clashes |
-| `M G T DOT E Q DOT L T DOT S L A N T` | `gt.eq.lt.slant` | ⋛\vs{1} | disabled: every spelling clashes |
-| `M G T DOT E Q DOT N O T` | `gt.eq.not` | ≱ | disabled: every spelling clashes |
-| `M G T DOT E Q DOT S L A N T` | `gt.eq.slant` | ⩾ | disabled: every spelling clashes |
+| `M F E M A L E DOT M A L E` | `female.male` | ⚤ | disabled: every spelling clashes |
 | `M G T DOT E Q U I V` | `gt.equiv` | ≧ | disabled: every spelling clashes |
-| `M G T DOT E Q U I V DOT S L A N T` | `gt.equiv.slant` | ⫺ | disabled: every spelling clashes |
-| `M G T DOT L T` | `gt.lt` | ≷ | disabled: every spelling clashes |
-| `M G T DOT L T DOT N O T` | `gt.lt.not` | ≹ | disabled: every spelling clashes |
-| `M G T DOT N A P P R O X` | `gt.napprox` | ⪊ | disabled: every spelling clashes |
-| `M G T DOT N E Q` | `gt.neq` | ⪈ | disabled: every spelling clashes |
-| `M G T DOT N E Q U I V` | `gt.nequiv` | ≩ | disabled: every spelling clashes |
-| `M G T DOT N O T` | `gt.not` | ≯ | disabled: every spelling clashes |
-| `M G T DOT N T I L D E` | `gt.ntilde` | ⋧ | disabled: every spelling clashes |
-| `M G T DOT O` | `gt.o` | ⧁ | disabled: every spelling clashes |
-| `M G T DOT Q U E S T` | `gt.quest` | ⩼ | disabled: every spelling clashes |
-| `M G T DOT T I L D E` | `gt.tilde` | ≳ | disabled: every spelling clashes |
-| `M G T DOT T I L D E DOT N O T` | `gt.tilde.not` | ≵ | disabled: every spelling clashes |
-| `M G T DOT T I L D E DOT S L A N T` | `gt.tilde.slant` | ≳\vs{1} | disabled: every spelling clashes |
-| `M G T DOT T R I P L E` | `gt.triple` | ⋙ | disabled: every spelling clashes |
-| `M G T DOT T R I P L E DOT N E S T E D` | `gt.triple.nested` | ⫸ | disabled: every spelling clashes |
-| `M H Y P H DOT M I N U S` | `hyph.minus` | - | disabled: every spelling clashes |
-| `M H Y P H DOT N O B R E A K` | `hyph.nobreak` | ‑ | disabled: every spelling clashes |
-| `M H Y P H DOT P O I N T` | `hyph.point` | ‧ | disabled: every spelling clashes |
-| `M H Y P H DOT S O F T` | `hyph.soft` | ­ | disabled: every spelling clashes |
-| `M I N F I N I T Y DOT B A R` | `infinity.bar` | ⧞ | disabled: every spelling clashes |
-| `M I N F I N I T Y DOT I N C O M P L E T E` | `infinity.incomplete` | ⧜ | disabled: every spelling clashes |
-| `M I N F I N I T Y DOT T I E` | `infinity.tie` | ⧝ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT A R R O W DOT H O O K` | `integral.arrow.hook` | ⨗ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT C C W` | `integral.ccw` | ⨑ | disabled: every spelling clashes |
 | `M I N T E G R A L DOT C O N T DOT C C W` | `integral.cont.ccw` | ∳ | disabled: every spelling clashes |
 | `M I N T E G R A L DOT C O N T DOT C W` | `integral.cont.cw` | ∲ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT C W` | `integral.cw` | ∱ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT D A S H` | `integral.dash` | ⨍ | disabled: every spelling clashes |
 | `M I N T E G R A L DOT D A S H DOT D O U B L E` | `integral.dash.double` | ⨎ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT D O U B L E` | `integral.double` | ∬ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT I N T E R` | `integral.inter` | ⨙ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT Q U A D` | `integral.quad` | ⨌ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT S L A S H` | `integral.slash` | ⨏ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT S Q U A R E` | `integral.square` | ⨖ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT S U R F` | `integral.surf` | ∯ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT T I M E S` | `integral.times` | ⨘ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT T R I P L E` | `integral.triple` | ∭ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT U N I O N` | `integral.union` | ⨚ | disabled: every spelling clashes |
-| `M I N T E G R A L DOT V O L` | `integral.vol` | ∰ | disabled: every spelling clashes |
-| `M I N T E R DOT A N D` | `inter.and` | ⩄ | disabled: every spelling clashes |
-| `M I N T E R DOT D O T` | `inter.dot` | ⩀ | disabled: every spelling clashes |
-| `M I N T E R DOT D O U B L E` | `inter.double` | ⋒ | disabled: every spelling clashes |
-| `M I N T E R DOT S E R I F` | `inter.serif` | ∩\vs{1} | disabled: every spelling clashes |
-| `M I N T E R DOT S Q` | `inter.sq` | ⊓ | disabled: every spelling clashes |
-| `M I N T E R DOT S Q DOT B I G` | `inter.sq.big` | ⨅ | disabled: every spelling clashes |
-| `M I N T E R DOT S Q DOT D O U B L E` | `inter.sq.double` | ⩎ | disabled: every spelling clashes |
-| `M I N T E R DOT S Q DOT S E R I F` | `inter.sq.serif` | ⊓\vs{1} | disabled: every spelling clashes |
-| `M I N T E R L E A V E` | `interleave` | ⫴ | disabled: every spelling clashes |
-| `M I N T E R L E A V E DOT B I G` | `interleave.big` | ⫼ | disabled: every spelling clashes |
-| `M I N T E R L E A V E DOT S T R U C K` | `interleave.struck` | ⫵ | disabled: every spelling clashes |
-| `M I N T E R R O B A N G` | `interrobang` | ‽ | disabled: every spelling clashes |
-| `M I N T E R R O B A N G DOT I N V` | `interrobang.inv` | ⸘ | disabled: every spelling clashes |
-| `M I N T E R S E X` | `intersex` | ⚥ | disabled: every spelling clashes |
-| `M K I N G DOT B L A C K` | `king.black` | ♚ | disabled: beyond the active limit |
-| `M K I N G DOT W H I T E` | `king.white` | ♔ | disabled: beyond the active limit |
-| `M K N I G H T DOT B L A C K` | `knight.black` | ♞ | disabled: beyond the active limit |
-| `M K N I G H T DOT W H I T E` | `knight.white` | ♘ | disabled: beyond the active limit |
-| `M L A T DOT E Q` | `lat.eq` | ⪭ | disabled: every spelling clashes |
-| `M L A T DOT E Q DOT S L A N T` | `lat.eq.slant` | ⪭\vs{1} | disabled: every spelling clashes |
-| `M L T DOT A P P R O X` | `lt.approx` | ⪅ | disabled: every spelling clashes |
-| `M L T DOT A R C` | `lt.arc` | ⪦ | disabled: every spelling clashes |
-| `M L T DOT A R C DOT E Q` | `lt.arc.eq` | ⪨ | disabled: every spelling clashes |
-| `M L T DOT C L O S E D` | `lt.closed` | ⊲ | disabled: every spelling clashes |
-| `M L T DOT C L O S E D DOT E Q` | `lt.closed.eq` | ⊴ | disabled: every spelling clashes |
-| `M L T DOT C L O S E D DOT E Q DOT N O T` | `lt.closed.eq.not` | ⋬ | disabled: every spelling clashes |
-| `M L T DOT C L O S E D DOT N O T` | `lt.closed.not` | ⋪ | disabled: every spelling clashes |
-| `M L T DOT D O T` | `lt.dot` | ⋖ | disabled: every spelling clashes |
-| `M L T DOT D O U B L E` | `lt.double` | ≪ | disabled: every spelling clashes |
-| `M L T DOT D O U B L E DOT N E S T E D` | `lt.double.nested` | ⪡ | disabled: every spelling clashes |
-| `M L T DOT E Q DOT G T` | `lt.eq.gt` | ⋚ | disabled: every spelling clashes |
-| `M L T DOT E Q DOT G T DOT S L A N T` | `lt.eq.gt.slant` | ⋚\vs{1} | disabled: every spelling clashes |
-| `M L T DOT E Q DOT N O T` | `lt.eq.not` | ≰ | disabled: every spelling clashes |
-| `M L T DOT E Q DOT S L A N T` | `lt.eq.slant` | ⩽ | disabled: every spelling clashes |
 | `M L T DOT E Q U I V` | `lt.equiv` | ≦ | disabled: every spelling clashes |
-| `M L T DOT E Q U I V DOT S L A N T` | `lt.equiv.slant` | ⫹ | disabled: every spelling clashes |
-| `M L T DOT G T` | `lt.gt` | ≶ | disabled: every spelling clashes |
-| `M L T DOT G T DOT N O T` | `lt.gt.not` | ≸ | disabled: every spelling clashes |
-| `M L T DOT N A P P R O X` | `lt.napprox` | ⪉ | disabled: every spelling clashes |
-| `M L T DOT N E Q` | `lt.neq` | ⪇ | disabled: every spelling clashes |
-| `M L T DOT N E Q U I V` | `lt.nequiv` | ≨ | disabled: every spelling clashes |
-| `M L T DOT N O T` | `lt.not` | ≮ | disabled: every spelling clashes |
-| `M L T DOT N T I L D E` | `lt.ntilde` | ⋦ | disabled: every spelling clashes |
-| `M L T DOT O` | `lt.o` | ⧀ | disabled: every spelling clashes |
-| `M L T DOT Q U E S T` | `lt.quest` | ⩻ | disabled: every spelling clashes |
-| `M L T DOT T I L D E` | `lt.tilde` | ≲ | disabled: every spelling clashes |
-| `M L T DOT T I L D E DOT N O T` | `lt.tilde.not` | ≴ | disabled: every spelling clashes |
-| `M L T DOT T I L D E DOT S L A N T` | `lt.tilde.slant` | ≲\vs{1} | disabled: every spelling clashes |
-| `M L T DOT T R I P L E` | `lt.triple` | ⋘ | disabled: every spelling clashes |
-| `M L T DOT T R I P L E DOT N E S T E D` | `lt.triple.nested` | ⫷ | disabled: every spelling clashes |
-| `M M A L E DOT D O U B L E` | `male.double` | ⚣ | disabled: beyond the active limit |
-| `M M A L E DOT F E M A L E` | `male.female` | ⚤ | disabled: beyond the active limit |
-| `M M A L E DOT S T R O K E` | `male.stroke` | ⚦ | disabled: beyond the active limit |
-| `M M A L E DOT S T R O K E DOT R` | `male.stroke.r` | ⚩ | disabled: beyond the active limit |
-| `M M A L E DOT S T R O K E DOT T` | `male.stroke.t` | ⚨ | disabled: beyond the active limit |
-| `M M A L T E S E` | `maltese` | ✠ | disabled: beyond the active limit |
-| `M M A P S F R O M DOT L O N G` | `mapsfrom.long` | ⟻ | disabled: every spelling clashes |
-| `M M A P S T O DOT L O N G` | `mapsto.long` | ⟼ | disabled: every spelling clashes |
-| `M M A S C U L I N E` | `masculine` | º | disabled: beyond the active limit |
-| `M M I N U S DOT D O T` | `minus.dot` | ∸ | disabled: every spelling clashes |
-| `M M I N U S DOT O` | `minus.o` | ⊖ | disabled: every spelling clashes |
-| `M M I N U S DOT S Q U A R E` | `minus.square` | ⊟ | disabled: every spelling clashes |
-| `M M I N U S DOT T I L D E` | `minus.tilde` | ≂ | disabled: every spelling clashes |
-| `M M I N U S DOT T R I A N G L E` | `minus.triangle` | ⨺ | disabled: every spelling clashes |
-| `M M U L T I M A P DOT D O U B L E` | `multimap.double` | ⧟ | disabled: every spelling clashes |
-| `M N O T DOT I N V` | `not.inv` | ⌙ | disabled: every spelling clashes |
-| `M N O T DOT R E V` | `not.rev` | ⌐ | disabled: every spelling clashes |
-| `M N O T H I N G` | `nothing` | ∅ | disabled: every spelling clashes |
-| `M N O T H I N G DOT A R R O W DOT L` | `nothing.arrow.l` | ⦴ | disabled: every spelling clashes |
-| `M N O T H I N G DOT A R R O W DOT R` | `nothing.arrow.r` | ⦳ | disabled: every spelling clashes |
-| `M N O T H I N G DOT B A R` | `nothing.bar` | ⦱ | disabled: every spelling clashes |
-| `M N O T H I N G DOT C I R C L E` | `nothing.circle` | ⦲ | disabled: every spelling clashes |
-| `M N O T H I N G DOT R E V` | `nothing.rev` | ⦰ | disabled: every spelling clashes |
-| `M N O T H I N G DOT Z E R O` | `nothing.zero` | ∅\vs{1} | disabled: every spelling clashes |
-| `M O R DOT B I G` | `or.big` | ⋁ | disabled: every spelling clashes |
-| `M O R DOT C U R L Y` | `or.curly` | ⋎ | disabled: every spelling clashes |
-| `M O R DOT D O T` | `or.dot` | ⟇ | disabled: every spelling clashes |
-| `M O R DOT D O U B L E` | `or.double` | ⩔ | disabled: every spelling clashes |
-| `M O R D I N A L` | `ordinal` | { | disabled: beyond the active limit |
-| `M O R I G I N A L` | `original` | ⊶ | disabled: every spelling clashes |
-| `M P A R A L L E L DOT E Q` | `parallel.eq` | ⋕ | disabled: every spelling clashes |
+| `M M A L E DOT F E M A L E` | `male.female` | ⚤ | disabled: every spelling clashes |
 | `M P A R A L L E L DOT E Q U I V` | `parallel.equiv` | ⩨ | disabled: every spelling clashes |
-| `M P A R A L L E L DOT N O T` | `parallel.not` | ∦ | disabled: every spelling clashes |
-| `M P A R A L L E L DOT O` | `parallel.o` | ⦷ | disabled: every spelling clashes |
 | `M P A R A L L E L DOT S L A N T E D DOT E Q` | `parallel.slanted.eq` | ⧣ | disabled: every spelling clashes |
 | `M P A R A L L E L DOT S L A N T E D DOT E Q DOT T I L D E` | `parallel.slanted.eq.tilde` | ⧤ | disabled: every spelling clashes |
 | `M P A R A L L E L DOT S L A N T E D DOT E Q U I V` | `parallel.slanted.equiv` | ⧥ | disabled: every spelling clashes |
-| `M P A R A L L E L DOT S T R U C K` | `parallel.struck` | ⫲ | disabled: every spelling clashes |
-| `M P A R A L L E L DOT T I L D E` | `parallel.tilde` | ⫳ | disabled: every spelling clashes |
-| `M P A R A L L E L O G R A M DOT F I L L E D` | `parallelogram.filled` | ▰ | disabled: every spelling clashes |
-| `M P A R A L L E L O G R A M DOT S T R O K E D` | `parallelogram.stroked` | ▱ | disabled: every spelling clashes |
-| `M P A W N DOT B L A C K` | `pawn.black` | ♟ | disabled: beyond the active limit |
-| `M P A W N DOT W H I T E` | `pawn.white` | ♙ | disabled: beyond the active limit |
-| `M P E E` | `pee` | ℘ | disabled: beyond the active limit |
-| `M P E R P DOT O` | `perp.o` | ⦹ | disabled: every spelling clashes |
-| `M P I L C R O W DOT R E V` | `pilcrow.rev` | ⁋ | disabled: every spelling clashes |
-| `M P L A N C K` | `planck` | ħ | disabled: beyond the active limit |
-| `M P L U S DOT D O T` | `plus.dot` | ∔ | disabled: every spelling clashes |
-| `M P L U S DOT D O U B L E` | `plus.double` | ⧺ | disabled: every spelling clashes |
-| `M P L U S DOT H A T` | `plus.hat` | ⨣ | disabled: every spelling clashes |
-| `M P L U S DOT O` | `plus.o` | ⊕ | disabled: every spelling clashes |
-| `M P L U S DOT O DOT A R R O W` | `plus.o.arrow` | ⟴ | disabled: every spelling clashes |
-| `M P L U S DOT O DOT B I G` | `plus.o.big` | ⨁ | disabled: every spelling clashes |
-| `M P L U S DOT O DOT L` | `plus.o.l` | ⨭ | disabled: every spelling clashes |
-| `M P L U S DOT O DOT R` | `plus.o.r` | ⨮ | disabled: every spelling clashes |
-| `M P L U S DOT S Q U A R E` | `plus.square` | ⊞ | disabled: every spelling clashes |
-| `M P L U S DOT T R I A N G L E` | `plus.triangle` | ⨹ | disabled: every spelling clashes |
-| `M P L U S DOT T R I P L E` | `plus.triple` | ⧻ | disabled: every spelling clashes |
-| `M P R E C DOT A P P R O X` | `prec.approx` | ⪷ | disabled: every spelling clashes |
-| `M P R E C DOT C U R L Y DOT E Q` | `prec.curly.eq` | ≼ | disabled: every spelling clashes |
-| `M P R E C DOT C U R L Y DOT E Q DOT N O T` | `prec.curly.eq.not` | ⋠ | disabled: every spelling clashes |
-| `M P R E C DOT D O U B L E` | `prec.double` | ⪻ | disabled: every spelling clashes |
-| `M P R E C DOT E Q` | `prec.eq` | ⪯ | disabled: every spelling clashes |
-| `M P R E C DOT E Q DOT S L A N T` | `prec.eq.slant` | ≼ | disabled: every spelling clashes |
-| `M P R E C DOT E Q DOT S L A N T DOT N O T` | `prec.eq.slant.not` | ⋠ | disabled: every spelling clashes |
-| `M P R E C DOT E Q U I V` | `prec.equiv` | ⪳ | disabled: every spelling clashes |
-| `M P R E C DOT N A P P R O X` | `prec.napprox` | ⪹ | disabled: every spelling clashes |
-| `M P R E C DOT N E Q` | `prec.neq` | ⪱ | disabled: every spelling clashes |
-| `M P R E C DOT N E Q U I V` | `prec.nequiv` | ⪵ | disabled: every spelling clashes |
-| `M P R E C DOT N O T` | `prec.not` | ⊀ | disabled: every spelling clashes |
-| `M P R E C DOT N T I L D E` | `prec.ntilde` | ⋨ | disabled: every spelling clashes |
-| `M P R E C DOT T I L D E` | `prec.tilde` | ≾ | disabled: every spelling clashes |
-| `M P R O D U C T DOT C O` | `product.co` | ∐ | disabled: every spelling clashes |
-| `M Q U E E N DOT B L A C K` | `queen.black` | ♛ | disabled: beyond the active limit |
-| `M Q U E E N DOT W H I T E` | `queen.white` | ♕ | disabled: beyond the active limit |
-| `M Q U E S T DOT D O U B L E` | `quest.double` | ⁇ | disabled: every spelling clashes |
 | `M Q U E S T DOT E X C L` | `quest.excl` | ⁈ | disabled: every spelling clashes |
-| `M Q U E S T DOT I N V` | `quest.inv` | ¿ | disabled: every spelling clashes |
-| `M R E F M A R K` | `refmark` | ※ | disabled: beyond the active limit |
-| `M R O O K DOT B L A C K` | `rook.black` | ♜ | disabled: beyond the active limit |
-| `M R O O K DOT W H I T E` | `rook.white` | ♖ | disabled: beyond the active limit |
-| `M S E M I DOT I N V` | `semi.inv` | ⸵ | disabled: every spelling clashes |
-| `M S E M I DOT R E V` | `semi.rev` | ⁏ | disabled: every spelling clashes |
-| `M S L A S H DOT B I G` | `slash.big` | ⧸ | disabled: every spelling clashes |
-| `M S L A S H DOT D O U B L E` | `slash.double` | ⫽ | disabled: every spelling clashes |
-| `M S L A S H DOT O` | `slash.o` | ⊘ | disabled: every spelling clashes |
-| `M S L A S H DOT T R I P L E` | `slash.triple` | ⫻ | disabled: every spelling clashes |
-| `M S M T DOT E Q` | `smt.eq` | ⪬ | disabled: every spelling clashes |
-| `M S M T DOT E Q DOT S L A N T` | `smt.eq.slant` | ⪬\vs{1} | disabled: every spelling clashes |
-| `M S U B S E T DOT A P P R O X` | `subset.approx` | ⫉ | disabled: every spelling clashes |
-| `M S U B S E T DOT C L O S E D` | `subset.closed` | ⫏ | disabled: every spelling clashes |
-| `M S U B S E T DOT C L O S E D DOT E Q` | `subset.closed.eq` | ⫑ | disabled: every spelling clashes |
-| `M S U B S E T DOT D O T` | `subset.dot` | ⪽ | disabled: every spelling clashes |
-| `M S U B S E T DOT D O U B L E` | `subset.double` | ⋐ | disabled: every spelling clashes |
-| `M S U B S E T DOT E Q DOT D O T` | `subset.eq.dot` | ⫃ | disabled: every spelling clashes |
-| `M S U B S E T DOT E Q DOT N O T` | `subset.eq.not` | ⊈ | disabled: every spelling clashes |
-| `M S U B S E T DOT E Q DOT S Q` | `subset.eq.sq` | ⊑ | disabled: every spelling clashes |
+| `M S L A S H` | `slash` | / | disabled: every spelling clashes |
 | `M S U B S E T DOT E Q DOT S Q DOT N O T` | `subset.eq.sq.not` | ⋢ | disabled: every spelling clashes |
-| `M S U B S E T DOT E Q U I V` | `subset.equiv` | ⫅ | disabled: every spelling clashes |
-| `M S U B S E T DOT N E Q` | `subset.neq` | ⊊ | disabled: every spelling clashes |
-| `M S U B S E T DOT N E Q U I V` | `subset.nequiv` | ⫋ | disabled: every spelling clashes |
-| `M S U B S E T DOT P L U S` | `subset.plus` | ⪿ | disabled: every spelling clashes |
-| `M S U B S E T DOT S Q` | `subset.sq` | ⊏ | disabled: every spelling clashes |
-| `M S U B S E T DOT S Q DOT N E Q` | `subset.sq.neq` | ⋤ | disabled: every spelling clashes |
-| `M S U B S E T DOT T I L D E` | `subset.tilde` | ⫇ | disabled: every spelling clashes |
-| `M S U B S E T DOT T I M E S` | `subset.times` | ⫁ | disabled: every spelling clashes |
-| `M S U C C DOT A P P R O X` | `succ.approx` | ⪸ | disabled: every spelling clashes |
-| `M S U C C DOT C U R L Y DOT E Q` | `succ.curly.eq` | ≽ | disabled: every spelling clashes |
-| `M S U C C DOT C U R L Y DOT E Q DOT N O T` | `succ.curly.eq.not` | ⋡ | disabled: every spelling clashes |
-| `M S U C C DOT D O U B L E` | `succ.double` | ⪼ | disabled: every spelling clashes |
-| `M S U C C DOT E Q` | `succ.eq` | ⪰ | disabled: every spelling clashes |
-| `M S U C C DOT E Q DOT S L A N T` | `succ.eq.slant` | ≽ | disabled: every spelling clashes |
-| `M S U C C DOT E Q DOT S L A N T DOT N O T` | `succ.eq.slant.not` | ⋡ | disabled: every spelling clashes |
-| `M S U C C DOT E Q U I V` | `succ.equiv` | ⪴ | disabled: every spelling clashes |
-| `M S U C C DOT N A P P R O X` | `succ.napprox` | ⪺ | disabled: every spelling clashes |
-| `M S U C C DOT N E Q` | `succ.neq` | ⪲ | disabled: every spelling clashes |
-| `M S U C C DOT N E Q U I V` | `succ.nequiv` | ⪶ | disabled: every spelling clashes |
-| `M S U C C DOT N O T` | `succ.not` | ⊁ | disabled: every spelling clashes |
-| `M S U C C DOT N T I L D E` | `succ.ntilde` | ⋩ | disabled: every spelling clashes |
-| `M S U C C DOT T I L D E` | `succ.tilde` | ≿ | disabled: every spelling clashes |
-| `M S U I T DOT C L U B DOT F I L L E D` | `suit.club.filled` | ♣ | disabled: beyond the active limit |
-| `M S U I T DOT C L U B DOT S T R O K E D` | `suit.club.stroked` | ♧ | disabled: beyond the active limit |
-| `M S U I T DOT D I A M O N D DOT F I L L E D` | `suit.diamond.filled` | ♦ | disabled: beyond the active limit |
-| `M S U I T DOT D I A M O N D DOT S T R O K E D` | `suit.diamond.stroked` | ♢ | disabled: beyond the active limit |
-| `M S U I T DOT H E A R T DOT F I L L E D` | `suit.heart.filled` | ♥ | disabled: beyond the active limit |
-| `M S U I T DOT H E A R T DOT S T R O K E D` | `suit.heart.stroked` | ♡ | disabled: beyond the active limit |
-| `M S U I T DOT S P A D E DOT F I L L E D` | `suit.spade.filled` | ♠ | disabled: beyond the active limit |
-| `M S U I T DOT S P A D E DOT S T R O K E D` | `suit.spade.stroked` | ♤ | disabled: beyond the active limit |
 | `M S U M DOT I N T E G R A L` | `sum.integral` | ⨋ | disabled: every spelling clashes |
-| `M S U P S E T DOT A P P R O X` | `supset.approx` | ⫊ | disabled: every spelling clashes |
-| `M S U P S E T DOT C L O S E D` | `supset.closed` | ⫐ | disabled: every spelling clashes |
-| `M S U P S E T DOT C L O S E D DOT E Q` | `supset.closed.eq` | ⫒ | disabled: every spelling clashes |
-| `M S U P S E T DOT D O T` | `supset.dot` | ⪾ | disabled: every spelling clashes |
-| `M S U P S E T DOT D O U B L E` | `supset.double` | ⋑ | disabled: every spelling clashes |
-| `M S U P S E T DOT E Q DOT D O T` | `supset.eq.dot` | ⫄ | disabled: every spelling clashes |
-| `M S U P S E T DOT E Q DOT N O T` | `supset.eq.not` | ⊉ | disabled: every spelling clashes |
-| `M S U P S E T DOT E Q DOT S Q` | `supset.eq.sq` | ⊒ | disabled: every spelling clashes |
 | `M S U P S E T DOT E Q DOT S Q DOT N O T` | `supset.eq.sq.not` | ⋣ | disabled: every spelling clashes |
-| `M S U P S E T DOT E Q U I V` | `supset.equiv` | ⫆ | disabled: every spelling clashes |
-| `M S U P S E T DOT N E Q` | `supset.neq` | ⊋ | disabled: every spelling clashes |
-| `M S U P S E T DOT N E Q U I V` | `supset.nequiv` | ⫌ | disabled: every spelling clashes |
-| `M S U P S E T DOT P L U S` | `supset.plus` | ⫀ | disabled: every spelling clashes |
-| `M S U P S E T DOT S Q` | `supset.sq` | ⊐ | disabled: every spelling clashes |
-| `M S U P S E T DOT S Q DOT N E Q` | `supset.sq.neq` | ⋥ | disabled: every spelling clashes |
-| `M S U P S E T DOT T I L D E` | `supset.tilde` | ⫈ | disabled: every spelling clashes |
-| `M S U P S E T DOT T I M E S` | `supset.times` | ⫂ | disabled: every spelling clashes |
-| `M T A C K DOT B DOT B I G` | `tack.b.big` | ⟙ | disabled: every spelling clashes |
-| `M T A C K DOT L DOT L O N G` | `tack.l.long` | ⟞ | disabled: every spelling clashes |
-| `M T A C K DOT L L DOT D O U B L E` | `tack.ll.double` | ⫥ | disabled: every spelling clashes |
-| `M T A C K DOT R DOT D O U B L E DOT N O T` | `tack.r.double.not` | ⊮ | disabled: every spelling clashes |
-| `M T A C K DOT R R DOT D O U B L E` | `tack.rr.double` | ⊫ | disabled: every spelling clashes |
-| `M T A C K DOT R R DOT D O U B L E DOT N O T` | `tack.rr.double.not` | ⊯ | disabled: every spelling clashes |
-| `M T A C K DOT R R DOT N O T` | `tack.rr.not` | ⊭ | disabled: every spelling clashes |
-| `M T A C K DOT R R DOT S H O R T` | `tack.rr.short` | ⊧ | disabled: every spelling clashes |
-| `M T A C K DOT R R R` | `tack.rrr` | ⫢ | disabled: every spelling clashes |
-| `M T I L D E DOT E Q U I V DOT N O T` | `tilde.equiv.not` | ≇ | disabled: every spelling clashes |
-| `M T I M E S DOT B I G` | `times.big` | ⨉ | disabled: every spelling clashes |
-| `M T I M E S DOT D I V` | `times.div` | ⋇ | disabled: every spelling clashes |
-| `M T I M E S DOT L` | `times.l` | ⋉ | disabled: every spelling clashes |
-| `M T I M E S DOT O` | `times.o` | ⊗ | disabled: every spelling clashes |
-| `M T I M E S DOT O DOT B I G` | `times.o.big` | ⨂ | disabled: every spelling clashes |
-| `M T I M E S DOT O DOT H A T` | `times.o.hat` | ⨶ | disabled: every spelling clashes |
-| `M T I M E S DOT O DOT L` | `times.o.l` | ⨴ | disabled: every spelling clashes |
-| `M T I M E S DOT O DOT R` | `times.o.r` | ⨵ | disabled: every spelling clashes |
-| `M T I M E S DOT R` | `times.r` | ⋊ | disabled: every spelling clashes |
-| `M T I M E S DOT S Q U A R E` | `times.square` | ⊠ | disabled: every spelling clashes |
-| `M T I M E S DOT T H R E E DOT L` | `times.three.l` | ⋋ | disabled: every spelling clashes |
-| `M T I M E S DOT T H R E E DOT R` | `times.three.r` | ⋌ | disabled: every spelling clashes |
-| `M T I M E S DOT T R I A N G L E` | `times.triangle` | ⨻ | disabled: every spelling clashes |
-| `M T R A D E M A R K` | `trademark` | ™ | disabled: beyond the active limit |
-| `M T R A D E M A R K DOT M C` | `trademark.mc` | 🅪 | disabled: beyond the active limit |
-| `M T R A D E M A R K DOT M D` | `trademark.md` | 🅫 | disabled: beyond the active limit |
-| `M T R A D E M A R K DOT R E G I S T E R E D` | `trademark.registered` | ® | disabled: beyond the active limit |
-| `M T R A D E M A R K DOT S E R V I C E` | `trademark.service` | ℠ | disabled: beyond the active limit |
-| `M U N I O N DOT A R R O W` | `union.arrow` | ⊌ | disabled: every spelling clashes |
-| `M U N I O N DOT D O T` | `union.dot` | ⊍ | disabled: every spelling clashes |
-| `M U N I O N DOT D O T DOT B I G` | `union.dot.big` | ⨃ | disabled: every spelling clashes |
-| `M U N I O N DOT D O U B L E` | `union.double` | ⋓ | disabled: every spelling clashes |
-| `M U N I O N DOT M I N U S` | `union.minus` | ⩁ | disabled: every spelling clashes |
-| `M U N I O N DOT O R` | `union.or` | ⩅ | disabled: every spelling clashes |
-| `M U N I O N DOT P L U S` | `union.plus` | ⊎ | disabled: every spelling clashes |
-| `M U N I O N DOT P L U S DOT B I G` | `union.plus.big` | ⨄ | disabled: every spelling clashes |
-| `M U N I O N DOT S E R I F` | `union.serif` | ∪\vs{1} | disabled: every spelling clashes |
-| `M U N I O N DOT S Q` | `union.sq` | ⊔ | disabled: every spelling clashes |
-| `M U N I O N DOT S Q DOT B I G` | `union.sq.big` | ⨆ | disabled: every spelling clashes |
-| `M U N I O N DOT S Q DOT D O U B L E` | `union.sq.double` | ⩏ | disabled: every spelling clashes |
-| `M U N I O N DOT S Q DOT S E R I F` | `union.sq.serif` | ⊔\vs{1} | disabled: every spelling clashes |
-| `M X O R DOT B I G` | `xor.big` | ⨁ | disabled: every spelling clashes |
-| `M Z E R O DOT S L A S H E D` | `zero.slashed` | 0\vs{1} | disabled: every spelling clashes |
+| `M Z E R O` | `zero` | 0 | disabled: every spelling clashes |
 
-## Emoji (500 active, 886 disabled)
+## Emoji (1260 active, 126 disabled)
 
 | type | name | char | status |
 |---|---|---|---|
 | `E A B A C U S` | `abacus` | 🧮 | active |
 | `E A B C` | `abc` | 🔤 | active |
+| `E A C C O R D I O N` | `accordion` | 🪗 | active |
 | `E A E S C U L A P I U S` | `aesculapius` | ⚕ | active |
+| `E A I D E A R` | `aidEar` | 🦻 | active (renamed from `ear.aid`) |
 | `E A I R P L A N E` | `airplane` | ✈ | active |
+| `E A L E M B I C` | `alembic` | ⚗ | active |
 | `E A L I E N` | `alien` | 👽 | active |
+| `E A L T B U T T O N` | `altButton` | 🔳 | active (renamed from `button.alt`) |
+| `E A L T H A N D R A I S E D` | `altHandRaised` | 🤚 | active (renamed from `hand.raised.alt`) |
+| `E A M F O O T B A L L` | `amFootball` | 🏈 | active (renamed from `football.am`) |
+| `E A M B U L A N C E` | `ambulance` | 🚑 | active |
+| `E A M P H O R A` | `amphora` | 🏺 | active |
 | `E A N C H O R` | `anchor` | ⚓ | active |
+| `E A N G E L B A B Y` | `angelBaby` | 👼 | active (renamed from `baby.angel`) |
 | `E A N G E R` | `anger` | 💢 | active |
+| `E A N G R Y P E R S O N` | `angryPerson` | 🙎 | active (renamed from `person.angry`) |
 | `E A N T` | `ant` | 🐜 | active |
+| `E A P P L E DOT G R E E N` | `apple.green` | 🍏 | active |
 | `E A P P L E DOT R E D` | `apple.red` | 🍎 | active |
+| `E A R C S T A R` | `arcStar` | 💫 | active (renamed from `star.arc`) |
+| `E A R M DOT M E C H` | `arm.mech` | 🦾 | active |
 | `E A R M DOT M U S C L E` | `arm.muscle` | 💪 | active |
+| `E A R M DOT S E L F I E` | `arm.selfie` | 🤳 | active |
+| `E A R R O W DOT B DOT C U R V E` | `arrow.b.curve` | ⤵ | active |
 | `E A R R O W DOT B DOT F I L L E D` | `arrow.b.filled` | ⬇ | active |
 | `E A R R O W DOT B L` | `arrow.bl` | ↙ | active |
 | `E A R R O W DOT B R` | `arrow.br` | ↘ | active |
+| `E A R R O W DOT L DOT B A C K` | `arrow.l.back` | 🔙 | active |
+| `E A R R O W DOT L DOT E N D` | `arrow.l.end` | 🔚 | active |
 | `E A R R O W DOT L DOT F I L L E D` | `arrow.l.filled` | ⬅ | active |
+| `E A R R O W DOT L DOT H O O K` | `arrow.l.hook` | ↩ | active |
 | `E A R R O W DOT L DOT R` | `arrow.l.r` | ↔ | active |
 | `E A R R O W DOT R DOT F I L L E D` | `arrow.r.filled` | ➡ | active |
+| `E A R R O W DOT R DOT H O O K` | `arrow.r.hook` | ↪ | active |
+| `E A R R O W DOT R DOT S O O N` | `arrow.r.soon` | 🔜 | active |
 | `E A R R O W DOT T DOT B` | `arrow.t.b` | ↕ | active |
+| `E A R R O W DOT T DOT C U R V E` | `arrow.t.curve` | ⤴ | active |
 | `E A R R O W DOT T DOT F I L L E D` | `arrow.t.filled` | ⬆ | active |
+| `E A R R O W DOT T DOT T O P` | `arrow.t.top` | 🔝 | active |
 | `E A R R O W DOT T L` | `arrow.tl` | ↖ | active |
 | `E A R R O W DOT T R` | `arrow.tr` | ↗ | active |
+| `E A R R O W H E A R T` | `arrowHeart` | 💘 | active (renamed from `heart.arrow`) |
+| `E A R R O W L R O N` | `arrowLROn` | 🔛 | active (renamed from `arrow.l.r.on`) |
+| `E A R R O W M A I L` | `arrowMail` | 📩 | active (renamed from `mail.arrow`) |
+| `E A R R O W P H O N E` | `arrowPhone` | 📲 | active (renamed from `phone.arrow`) |
 | `E A R R O W S DOT C Y C L E` | `arrows.cycle` | 🔄 | active |
 | `E A S T` | `ast` | * | active |
 | `E A T M` | `atm` | 🏧 | active |
 | `E A T O M` | `atom` | ⚛ | active |
+| `E A U B E R G I N E` | `aubergine` | 🍆 | active |
+| `E A V O C A D O` | `avocado` | 🥑 | active |
 | `E A X E` | `axe` | 🪓 | active |
 | `E B A B Y` | `baby` | 👶 | active |
+| `E B A C K P A C K` | `backpack` | 🎒 | active |
 | `E B A C O N` | `bacon` | 🥓 | active |
 | `E B A D G E R` | `badger` | 🦡 | active |
+| `E B A D M I N T O N` | `badminton` | 🏸 | active |
 | `E B A G E L` | `bagel` | 🥯 | active |
+| `E B A G G A G E C L A I M` | `baggageclaim` | 🛄 | active |
+| `E B A G U E T T E` | `baguette` | 🥖 | active |
+| `E B A L L B A S K E T B A L L` | `ballBasketball` | 🏀 | active (renamed from `basketball.ball`) |
+| `E B A L L E T S H O E` | `balletShoe` | 🩰 | active (renamed from `shoe.ballet`) |
 | `E B A L L O O N` | `balloon` | 🎈 | active |
+| `E B A L L O T DOT C H E C K` | `ballot.check` | ☑ | active |
+| `E B A L L O T B O X` | `ballotbox` | 🗳 | active |
 | `E B A N A N A` | `banana` | 🍌 | active |
 | `E B A N J O` | `banjo` | 🪕 | active |
 | `E B A N K` | `bank` | 🏦 | active |
+| `E B A R B E R P O L E` | `barberpole` | 💈 | active |
+| `E B A S E B A L L` | `baseball` | ⚾ | active |
+| `E B A S E C A P` | `basecap` | 🧢 | active |
 | `E B A S K E T` | `basket` | 🧺 | active |
+| `E B A T H T U B` | `bathtub` | 🛀 | active |
 | `E B A T T E R Y` | `battery` | 🔋 | active |
+| `E B E A C H DOT P A L M` | `beach.palm` | 🏝 | active |
+| `E B E A C H DOT U M B R E L L A` | `beach.umbrella` | 🏖 | active |
 | `E B E A D S` | `beads` | 📿 | active |
 | `E B E A N S` | `beans` | 🫘 | active |
 | `E B E A R` | `bear` | 🐻 | active |
+| `E B E A T H E A R T` | `beatHeart` | 💓 | active (renamed from `heart.beat`) |
 | `E B E A V E R` | `beaver` | 🦫 | active |
 | `E B E D` | `bed` | 🛏 | active |
 | `E B E E R` | `beer` | 🍺 | active |
 | `E B E E T` | `beet` | 🫜 | active |
 | `E B E L L` | `bell` | 🔔 | active |
 | `E B E N T O` | `bento` | 🍱 | active |
+| `E B I C Y C L I S T` | `bicyclist` | 🚴 | active |
+| `E B I G D R U M` | `bigDrum` | 🪘 | active (renamed from `drum.big`) |
+| `E B I G F O O T` | `bigfoot` | 🫈 | active |
 | `E B I K E` | `bike` | 🚲 | active |
 | `E B I K I N I` | `bikini` | 👙 | active |
+| `E B I L L I A R D S` | `billiards` | 🎱 | active |
 | `E B I N` | `bin` | 🗑 | active |
 | `E B I O H A Z A R D` | `biohazard` | ☣ | active |
 | `E B I R D` | `bird` | 🐦 | active |
 | `E B I S O N` | `bison` | 🦬 | active |
+| `E B I T E M O U T H` | `biteMouth` | 🫦 | active (renamed from `mouth.bite`) |
+| `E B L A C K H E A R T` | `blackHeart` | 🖤 | active (renamed from `heart.black`) |
+| `E B L O N D E P E R S O N` | `blondePerson` | 👱 | active (renamed from `person.blonde`) |
 | `E B L O O D` | `blood` | 🩸 | active |
 | `E B L O U S E` | `blouse` | 👚 | active |
+| `E B L O W F I S H` | `blowfish` | 🐡 | active |
+| `E B L U E H E A R T` | `blueHeart` | 💙 | active (renamed from `heart.blue`) |
+| `E B L U E B E R R I E S` | `blueberries` | 🫐 | active |
 | `E B O A R` | `boar` | 🐗 | active |
+| `E B O A T DOT C A N O E` | `boat.canoe` | 🛶 | active |
+| `E B O A T DOT M O T O R` | `boat.motor` | 🛥 | active |
+| `E B O A T DOT R O W` | `boat.row` | 🚣 | active |
 | `E B O A T DOT S A I L` | `boat.sail` | ⛵ | active |
+| `E B O A T DOT S P E E D` | `boat.speed` | 🚤 | active |
 | `E B O L T` | `bolt` | 🔩 | active |
 | `E B O M B` | `bomb` | 💣 | active |
 | `E B O N E` | `bone` | 🦴 | active |
+| `E B O O K DOT B L U E` | `book.blue` | 📘 | active |
+| `E B O O K DOT G R E E N` | `book.green` | 📗 | active |
+| `E B O O K DOT O P E N` | `book.open` | 📖 | active |
+| `E B O O K DOT O R A N G E` | `book.orange` | 📙 | active |
+| `E B O O K DOT R E D` | `book.red` | 📕 | active |
+| `E B O O K DOT S P I R A L` | `book.spiral` | 📒 | active |
+| `E B O O K M A R K` | `bookmark` | 🔖 | active |
 | `E B O O K S` | `books` | 📚 | active |
+| `E B O O M E R A N G` | `boomerang` | 🪃 | active |
+| `E B O R D E R C O N T R O L` | `bordercontrol` | 🛂 | active |
+| `E B O U Q U E T` | `bouquet` | 💐 | active |
 | `E B O W` | `bow` | 🏹 | active |
+| `E B O X A S T` | `boxAst` | ✳ | active (renamed from `ast.box`) |
+| `E B O X B A B Y` | `boxBaby` | 🚼 | active (renamed from `baby.box`) |
+| `E B O X C A M E R A M O V I E` | `boxCameraMovie` | 🎦 | active (renamed from `camera.movie.box`) |
+| `E B O X C R O S S M A R K` | `boxCrossmark` | ❎ | active (renamed from `crossmark.box`) |
+| `E B O X H E A R T` | `boxHeart` | 💟 | active (renamed from `heart.box`) |
+| `E B O X M A N` | `boxMan` | 🚹 | active (renamed from `man.box`) |
+| `E B O X S T A R` | `boxStar` | ✴ | active (renamed from `star.box`) |
+| `E B O X W H E E L C H A I R` | `boxWheelchair` | ♿ | active (renamed from `wheelchair.box`) |
+| `E B O X W O M A N` | `boxWoman` | 🚺 | active (renamed from `woman.box`) |
 | `E B O X I N G` | `boxing` | 🥊 | active |
 | `E B O Y` | `boy` | 👦 | active |
 | `E B R A I N` | `brain` | 🧠 | active |
 | `E B R E A D` | `bread` | 🍞 | active |
 | `E B R I C K` | `brick` | 🧱 | active |
 | `E B R I D E` | `bride` | 👰 | active |
+| `E B R I D G E DOT F O G` | `bridge.fog` | 🌁 | active |
+| `E B R I D G E DOT N I G H T` | `bridge.night` | 🌉 | active |
+| `E B R I E F C A S E` | `briefcase` | 💼 | active |
 | `E B R I E F S` | `briefs` | 🩲 | active |
+| `E B R I G H T N E S S DOT H I G H` | `brightness.high` | 🔆 | active |
+| `E B R I G H T N E S S DOT L O W` | `brightness.low` | 🔅 | active |
+| `E B R O C C O L I` | `broccoli` | 🥦 | active |
+| `E B R O K E N H E A R T` | `brokenHeart` | 💔 | active (renamed from `heart.broken`) |
 | `E B R O O M` | `broom` | 🧹 | active |
+| `E B R O W N H E A R T` | `brownHeart` | 🤎 | active (renamed from `heart.brown`) |
 | `E B R U S H` | `brush` | 🖌 | active |
 | `E B U B B L E DOT A N G E R DOT R` | `bubble.anger.r` | 🗯 | active |
+| `E B U B B L E DOT S P E E C H DOT L` | `bubble.speech.l` | 🗨 | active |
 | `E B U B B L E DOT S P E E C H DOT R` | `bubble.speech.r` | 💬 | active |
 | `E B U B B L E DOT T H O U G H T` | `bubble.thought` | 💭 | active |
+| `E B U B B L E S` | `bubbles` | 🫧 | active |
+| `E B U B B L E T E A` | `bubbletea` | 🧋 | active |
 | `E B U C K E T` | `bucket` | 🪣 | active |
+| `E B U F F A L O DOT W A T E R` | `buffalo.water` | 🐃 | active |
 | `E B U G` | `bug` | 🐛 | active |
+| `E B U I L D E R` | `builder` | 👷 | active |
 | `E B U R G E R` | `burger` | 🍔 | active |
+| `E B U R R I T O` | `burrito` | 🌯 | active |
 | `E B U S` | `bus` | 🚌 | active |
 | `E B U T T E R` | `butter` | 🧈 | active |
 | `E B U T T O N` | `button` | 🔲 | active |
 | `E C A B I N E T DOT F I L E` | `cabinet.file` | 🗄 | active |
+| `E C A B L E C A R` | `cablecar` | 🚠 | active |
 | `E C A C T U S` | `cactus` | 🌵 | active |
 | `E C A K E` | `cake` | 🎂 | active |
 | `E C A L E N D A R` | `calendar` | 📅 | active |
 | `E C A M E L` | `camel` | 🐫 | active |
 | `E C A M E R A` | `camera` | 📷 | active |
+| `E C A M P I N G` | `camping` | 🏕 | active |
 | `E C A N` | `can` | 🥫 | active |
 | `E C A R` | `car` | 🚗 | active |
+| `E C A S S E T T E` | `cassette` | 📼 | active |
+| `E C A S T L E DOT E U` | `castle.eu` | 🏰 | active |
+| `E C A S T L E DOT J P` | `castle.jp` | 🏯 | active |
 | `E C A T DOT F A C E` | `cat.face` | 🐱 | active |
+| `E C A T F A C E A N G R Y` | `catFaceAngry` | 😾 | active (renamed from `cat.face.angry`) |
+| `E C A T F A C E C R Y` | `catFaceCry` | 😿 | active (renamed from `cat.face.cry`) |
+| `E C A T F A C E H E A R T` | `catFaceHeart` | 😻 | active (renamed from `cat.face.heart`) |
+| `E C A T F A C E J O Y` | `catFaceJoy` | 😹 | active (renamed from `cat.face.joy`) |
+| `E C A T F A C E K I S S` | `catFaceKiss` | 😽 | active (renamed from `cat.face.kiss`) |
+| `E C A T F A C E L A U G H` | `catFaceLaugh` | 😸 | active (renamed from `cat.face.laugh`) |
+| `E C A T F A C E S H O C K` | `catFaceShock` | 🙀 | active (renamed from `cat.face.shock`) |
+| `E C A T F A C E S M I L E` | `catFaceSmile` | 😺 | active (renamed from `cat.face.smile`) |
+| `E C A T F A C E S M I R K` | `catFaceSmirk` | 😼 | active (renamed from `cat.face.smirk`) |
 | `E C H A I N` | `chain` | 🔗 | active |
 | `E C H A I R` | `chair` | 🪑 | active |
+| `E C H A M P A G N E` | `champagne` | 🍾 | active |
 | `E C H A R T DOT B A R` | `chart.bar` | 📊 | active |
 | `E C H A R T DOT D O W N` | `chart.down` | 📉 | active |
 | `E C H A R T DOT U P` | `chart.up` | 📈 | active |
+| `E C H A R T DOT Y E N DOT U P` | `chart.yen.up` | 💹 | active |
 | `E C H E C K M A R K DOT B O X` | `checkmark.box` | ✅ | active |
 | `E C H E C K M A R K DOT H E A V Y` | `checkmark.heavy` | ✔ | active |
 | `E C H E E S E` | `cheese` | 🧀 | active |
+| `E C H E R R I E S` | `cherries` | 🍒 | active |
 | `E C H E S S` | `chess` | ♟ | active |
+| `E C H E S T N U T` | `chestnut` | 🌰 | active |
+| `E C H I C K E N` | `chicken` | 🐔 | active |
 | `E C H I L D` | `child` | 🧒 | active |
+| `E C H I P M U N K` | `chipmunk` | 🐿 | active |
 | `E C H O C O L A T E` | `chocolate` | 🍫 | active |
+| `E C H O P S T I C K S` | `chopsticks` | 🥢 | active |
 | `E C H U R C H` | `church` | ⛪ | active |
+| `E C I G A R E T T E` | `cigarette` | 🚬 | active |
 | `E C I R C L E DOT B L A C K` | `circle.black` | ⚫ | active |
 | `E C I R C L E DOT B L U E` | `circle.blue` | 🔵 | active |
+| `E C I R C L E DOT B R O W N` | `circle.brown` | 🟤 | active |
 | `E C I R C L E DOT G R E E N` | `circle.green` | 🟢 | active |
 | `E C I R C L E DOT O R A N G E` | `circle.orange` | 🟠 | active |
 | `E C I R C L E DOT P U R P L E` | `circle.purple` | 🟣 | active |
 | `E C I R C L E DOT R E D` | `circle.red` | 🔴 | active |
+| `E C I R C L E DOT S T R O K E D` | `circle.stroked` | ⭕ | active |
 | `E C I R C L E DOT W H I T E` | `circle.white` | ⚪ | active |
 | `E C I R C L E DOT Y E L L O W` | `circle.yellow` | 🟡 | active |
 | `E C I R C U S` | `circus` | 🎪 | active |
 | `E C I T Y` | `city` | 🏙 | active |
 | `E C L A M P` | `clamp` | 🗜 | active |
+| `E C L A P P E R B O A R D` | `clapperboard` | 🎬 | active |
+| `E C L A S S I C P H O N E` | `classicPhone` | ☎ | active (renamed from `phone.classic`) |
+| `E C L I M B I N G` | `climbing` | 🧗 | active |
+| `E C L I N K B E E R` | `clinkBeer` | 🍻 | active (renamed from `beer.clink`) |
 | `E C L I P` | `clip` | 📎 | active |
 | `E C L O C K DOT A L A R M` | `clock.alarm` | ⏰ | active |
+| `E C L O C K DOT E I G H T` | `clock.eight` | 🕗 | active |
+| `E C L O C K DOT E L E V E N` | `clock.eleven` | 🕚 | active |
 | `E C L O C K DOT F I V E` | `clock.five` | 🕔 | active |
 | `E C L O C K DOT F O U R` | `clock.four` | 🕓 | active |
+| `E C L O C K DOT N I N E` | `clock.nine` | 🕘 | active |
+| `E C L O C K DOT O L D` | `clock.old` | 🕰 | active |
 | `E C L O C K DOT O N E` | `clock.one` | 🕐 | active |
+| `E C L O C K DOT S E V E N` | `clock.seven` | 🕖 | active |
 | `E C L O C K DOT S I X` | `clock.six` | 🕕 | active |
+| `E C L O C K DOT T E N` | `clock.ten` | 🕙 | active |
 | `E C L O C K DOT T H R E E` | `clock.three` | 🕒 | active |
 | `E C L O C K DOT T I M E R` | `clock.timer` | ⏲ | active |
+| `E C L O C K DOT T W E L V E` | `clock.twelve` | 🕛 | active |
 | `E C L O C K DOT T W O` | `clock.two` | 🕑 | active |
+| `E C L O C K E I G H T T H I R T Y` | `clockEightThirty` | 🕣 | active (renamed from `clock.eight.thirty`) |
+| `E C L O C K E L E V E N T H I R T Y` | `clockElevenThirty` | 🕦 | active (renamed from `clock.eleven.thirty`) |
+| `E C L O C K F I V E T H I R T Y` | `clockFiveThirty` | 🕠 | active (renamed from `clock.five.thirty`) |
+| `E C L O C K F O U R T H I R T Y` | `clockFourThirty` | 🕟 | active (renamed from `clock.four.thirty`) |
+| `E C L O C K N I N E T H I R T Y` | `clockNineThirty` | 🕤 | active (renamed from `clock.nine.thirty`) |
+| `E C L O C K O N E T H I R T Y` | `clockOneThirty` | 🕜 | active (renamed from `clock.one.thirty`) |
+| `E C L O C K S E V E N T H I R T Y` | `clockSevenThirty` | 🕢 | active (renamed from `clock.seven.thirty`) |
+| `E C L O C K S I X T H I R T Y` | `clockSixThirty` | 🕡 | active (renamed from `clock.six.thirty`) |
+| `E C L O C K T E N T H I R T Y` | `clockTenThirty` | 🕥 | active (renamed from `clock.ten.thirty`) |
+| `E C L O C K T H R E E T H I R T Y` | `clockThreeThirty` | 🕞 | active (renamed from `clock.three.thirty`) |
+| `E C L O C K T W E L V E T H I R T Y` | `clockTwelveThirty` | 🕧 | active (renamed from `clock.twelve.thirty`) |
+| `E C L O C K T W O T H I R T Y` | `clockTwoThirty` | 🕝 | active (renamed from `clock.two.thirty`) |
+| `E C L O U D DOT D U S T` | `cloud.dust` | 💨 | active |
 | `E C L O U D DOT R A I N` | `cloud.rain` | 🌧 | active |
+| `E C L O U D DOT S N O W` | `cloud.snow` | 🌨 | active |
 | `E C L O U D DOT S T O R M` | `cloud.storm` | ⛈ | active |
 | `E C L O U D DOT S U N` | `cloud.sun` | ⛅ | active |
+| `E C L O U D DOT T H U N D E R` | `cloud.thunder` | 🌩 | active |
+| `E C L O U D S U N` | `cloudSun` | 🌤 | active (renamed from `sun.cloud`) |
 | `E C O A T` | `coat` | 🧥 | active |
+| `E C O C K R O A C H` | `cockroach` | 🪳 | active |
+| `E C O C K T A I L DOT M A R T I N I` | `cocktail.martini` | 🍸 | active |
+| `E C O C K T A I L DOT T R O P I C A L` | `cocktail.tropical` | 🍹 | active |
+| `E C O C O N U T` | `coconut` | 🥥 | active |
 | `E C O F F E E` | `coffee` | ☕ | active |
 | `E C O F F I N` | `coffin` | ⚰ | active |
 | `E C O I N` | `coin` | 🪙 | active |
 | `E C O M E T` | `comet` | ☄ | active |
+| `E C O M P A S S` | `compass` | 🧭 | active |
 | `E C O M P U T E R` | `computer` | 🖥 | active |
 | `E C O N F E T T I` | `confetti` | 🎊 | active |
+| `E C O N S T R U C T I O N` | `construction` | 🚧 | active |
+| `E C O N T R O L L E R` | `controller` | 🎮 | active |
 | `E C O O K I E` | `cookie` | 🍪 | active |
+| `E C O O K I N G` | `cooking` | 🍳 | active |
+| `E C O P Y R I G H T` | `copyright` | © | active |
 | `E C O R A L` | `coral` | 🪸 | active |
 | `E C O R N` | `corn` | 🌽 | active |
 | `E C O U C H` | `couch` | 🛋 | active |
 | `E C O U P L E` | `couple` | 💑 | active |
 | `E C O W` | `cow` | 🐄 | active |
 | `E C R A B` | `crab` | 🦀 | active |
+| `E C R A C K E R R I C E` | `crackerRice` | 🍘 | active (renamed from `rice.cracker`) |
 | `E C R A N E` | `crane` | 🏗 | active |
 | `E C R A Y O N` | `crayon` | 🖍 | active |
+| `E C R E D I T C A R D` | `creditCard` | 💳 | active (renamed from `card.credit`) |
+| `E C R I C K E T` | `cricket` | 🦗 | active |
+| `E C R O C O D I L E` | `crocodile` | 🐊 | active |
+| `E C R O I S S A N T` | `croissant` | 🥐 | active |
 | `E C R O S S M A R K` | `crossmark` | ❌ | active |
 | `E C R O W N` | `crown` | 👑 | active |
+| `E C R U I S E S H I P` | `cruiseShip` | 🛳 | active (renamed from `ship.cruise`) |
 | `E C R U T C H` | `crutch` | 🩼 | active |
+| `E C R Y S T A L` | `crystal` | 🔮 | active |
+| `E C U C U M B E R` | `cucumber` | 🥒 | active |
+| `E C U P DOT S T R A W` | `cup.straw` | 🥤 | active |
+| `E C U P C A K E` | `cupcake` | 🧁 | active |
+| `E C U R L I N G` | `curling` | 🥌 | active |
 | `E C U R R Y` | `curry` | 🍛 | active |
+| `E C U S T A R D` | `custard` | 🍮 | active |
+| `E C U S T O M S` | `customs` | 🛃 | active |
+| `E C U T L E R Y` | `cutlery` | 🍴 | active |
+| `E C Y C L O N E` | `cyclone` | 🌀 | active |
+| `E D A G G E R K N I F E` | `daggerKnife` | 🗡 | active (renamed from `knife.dagger`) |
+| `E D A N C I N G DOT B A L L E T` | `dancing.ballet` | 🧑‍🩰 | active |
+| `E D A N C I N G DOT B U N N Y` | `dancing.bunny` | 👯 | active |
+| `E D A N C I N G DOT M A N` | `dancing.man` | 🕺 | active |
+| `E D A N C I N G DOT W O M A N` | `dancing.woman` | 💃 | active |
+| `E D A N C I N G B U N N Y M E N` | `dancingBunnyMen` | 👯‍♂ | active (renamed from `dancing.bunny.men`) |
+| `E D A N C I N G B U N N Y W O M E N` | `dancingBunnyWomen` | 👯‍♀ | active (renamed from `dancing.bunny.women`) |
 | `E D A R T S` | `darts` | 🎯 | active |
+| `E D A S H DOT W A V E DOT D O U B L E` | `dash.wave.double` | 〰 | active |
+| `E D E A F P E R S O N` | `deafPerson` | 🧏 | active (renamed from `person.deaf`) |
+| `E D E C O N O T E B O O K` | `decoNotebook` | 📔 | active (renamed from `notebook.deco`) |
 | `E D E E R` | `deer` | 🦌 | active |
+| `E D E R E L I C T H O U S E` | `derelictHouse` | 🏚 | active (renamed from `house.derelict`) |
 | `E D E S E R T` | `desert` | 🏜 | active |
+| `E D E T E C T I V E` | `detective` | 🕵 | active |
+| `E D I A M O N D DOT B L U E` | `diamond.blue` | 🔷 | active |
+| `E D I A M O N D DOT D O T` | `diamond.dot` | 💠 | active |
+| `E D I A M O N D DOT O R A N G E` | `diamond.orange` | 🔶 | active |
+| `E D I A M O N D B L U E S M A L L` | `diamondBlueSmall` | 🔹 | active (renamed from `diamond.blue.small`) |
+| `E D I A M O N D O R A N G E S M A L L` | `diamondOrangeSmall` | 🔸 | active (renamed from `diamond.orange.small`) |
 | `E D I E` | `die` | 🎲 | active |
+| `E D I N G B E L L` | `dingBell` | 🛎 | active (renamed from `bell.ding`) |
+| `E D I N O DOT P O D` | `dino.pod` | 🦕 | active |
+| `E D I N O DOT R E X` | `dino.rex` | 🦖 | active |
+| `E D I S C DOT C D` | `disc.cd` | 💿 | active |
+| `E D I S C DOT D V D` | `disc.dvd` | 📀 | active |
+| `E D I S C DOT M I N I` | `disc.mini` | 💽 | active |
+| `E D I S C O B A L L` | `discoball` | 🪩 | active |
 | `E D I V I N G` | `diving` | 🤿 | active |
 | `E D O D O` | `dodo` | 🦤 | active |
 | `E D O G DOT F A C E` | `dog.face` | 🐶 | active |
+| `E D O G DOT G U I D E` | `dog.guide` | 🦮 | active |
+| `E D O G DOT P O O D L E` | `dog.poodle` | 🐩 | active |
 | `E D O L L A R` | `dollar` | 💲 | active |
+| `E D O L P H I N` | `dolphin` | 🐬 | active |
 | `E D O N K E Y` | `donkey` | 🫏 | active |
 | `E D O N U T` | `donut` | 🍩 | active |
 | `E D O O R` | `door` | 🚪 | active |
+| `E D O U B L E E X C L` | `doubleExcl` | ‼ | active (renamed from `excl.double`) |
+| `E D O U B L E H E A R T` | `doubleHeart` | 💕 | active (renamed from `heart.double`) |
+| `E D O U B L E S I L H O U E T T E` | `doubleSilhouette` | 👥 | active (renamed from `silhouette.double`) |
+| `E D O V E DOT P E A C E` | `dove.peace` | 🕊 | active |
 | `E D R A G O N` | `dragon` | 🐉 | active |
 | `E D R E S S` | `dress` | 👗 | active |
+| `E D R O M E D A R C A M E L` | `dromedarCamel` | 🐪 | active (renamed from `camel.dromedar`) |
 | `E D R O P` | `drop` | 💧 | active |
 | `E D R U M` | `drum` | 🥁 | active |
 | `E D U C K` | `duck` | 🦆 | active |
+| `E D U M P L I N G` | `dumpling` | 🥟 | active |
+| `E D U S K C I T Y` | `duskCity` | 🌆 | active (renamed from `city.dusk`) |
 | `E E A G L E` | `eagle` | 🦅 | active |
 | `E E A R` | `ear` | 👂 | active |
 | `E E G G` | `egg` | 🥚 | active |
+| `E E I G H T E E N DOT N O T` | `eighteen.not` | 🔞 | active |
+| `E E L E P H A N T` | `elephant` | 🐘 | active |
+| `E E L E V A T O R` | `elevator` | 🛗 | active |
 | `E E L F` | `elf` | 🧝 | active |
 | `E E M A I L` | `email` | 📧 | active |
+| `E E M P T Y M A I L B O X C L O S E D` | `emptyMailboxClosed` | 📪 | active (renamed from `mailbox.closed.empty`) |
+| `E E M P T Y M A I L B O X O P E N` | `emptyMailboxOpen` | 📭 | active (renamed from `mailbox.open.empty`) |
 | `E E X C L` | `excl` | ❗ | active |
 | `E E X P L O S I O N` | `explosion` | 💥 | active |
+| `E E X T I N G U I S H E R` | `extinguisher` | 🧯 | active |
 | `E E Y E` | `eye` | 👁 | active |
+| `E F A C E DOT A N G R Y` | `face.angry` | 😠 | active |
+| `E F A C E DOT A N G U I S H` | `face.anguish` | 😧 | active |
+| `E F A C E DOT A S T O N I S H` | `face.astonish` | 😲 | active |
+| `E F A C E DOT B A N D A G E` | `face.bandage` | 🤕 | active |
+| `E F A C E DOT B E A M` | `face.beam` | 😁 | active |
+| `E F A C E DOT B L A N K` | `face.blank` | 😶 | active |
+| `E F A C E DOT C L O W N` | `face.clown` | 🤡 | active |
+| `E F A C E DOT C O L D` | `face.cold` | 🥶 | active |
+| `E F A C E DOT C O N C E R N` | `face.concern` | 😦 | active |
 | `E F A C E DOT C O O L` | `face.cool` | 😎 | active |
+| `E F A C E DOT C O V E R` | `face.cover` | 🤭 | active |
+| `E F A C E DOT C O W B O Y` | `face.cowboy` | 🤠 | active |
 | `E F A C E DOT C R Y` | `face.cry` | 😭 | active |
+| `E F A C E DOT D E V I L DOT F R O W N` | `face.devil.frown` | 👿 | active |
+| `E F A C E DOT D E V I L DOT S M I L E` | `face.devil.smile` | 😈 | active |
+| `E F A C E DOT D I A G O N A L` | `face.diagonal` | 🫤 | active |
+| `E F A C E DOT D I S G U I S E` | `face.disguise` | 🥸 | active |
+| `E F A C E DOT D I S T O R T E D` | `face.distorted` | 🫪 | active |
+| `E F A C E DOT D I S T R E S S` | `face.distress` | 😫 | active |
+| `E F A C E DOT D I Z Z Y` | `face.dizzy` | 😵 | active |
+| `E F A C E DOT D O T T E D` | `face.dotted` | 🫥 | active |
+| `E F A C E DOT D O W N` | `face.down` | 😞 | active |
+| `E F A C E DOT D R O O L` | `face.drool` | 🤤 | active |
 | `E F A C E DOT E X P L O D E` | `face.explode` | 🤯 | active |
+| `E F A C E DOT E Y E R O L L` | `face.eyeroll` | 🙄 | active |
+| `E F A C E DOT F E A R` | `face.fear` | 😨 | active |
+| `E F A C E DOT F E V E R` | `face.fever` | 🤒 | active |
+| `E F A C E DOT F L U S H` | `face.flush` | 😳 | active |
+| `E F A C E DOT F R I E N D L Y` | `face.friendly` | ☺ | active |
+| `E F A C E DOT F R O W N` | `face.frown` | ☹ | active |
+| `E F A C E DOT F R U S T` | `face.frust` | 😣 | active |
+| `E F A C E DOT G O O F Y` | `face.goofy` | 🤪 | active |
 | `E F A C E DOT G R I N` | `face.grin` | 😀 | active |
 | `E F A C E DOT H A L O` | `face.halo` | 😇 | active |
 | `E F A C E DOT H A P P Y` | `face.happy` | 😊 | active |
 | `E F A C E DOT H E A R T` | `face.heart` | 😍 | active |
+| `E F A C E DOT H E A T` | `face.heat` | 🥵 | active |
+| `E F A C E DOT H U G` | `face.hug` | 🤗 | active |
 | `E F A C E DOT I N V` | `face.inv` | 🙃 | active |
 | `E F A C E DOT J O Y` | `face.joy` | 😂 | active |
+| `E F A C E DOT K I S S` | `face.kiss` | 😗 | active |
+| `E F A C E DOT L I C K` | `face.lick` | 😋 | active |
+| `E F A C E DOT L I E` | `face.lie` | 🤥 | active |
+| `E F A C E DOT M A S K` | `face.mask` | 😷 | active |
+| `E F A C E DOT M E H` | `face.meh` | 😒 | active |
+| `E F A C E DOT M E L T` | `face.melt` | 🫠 | active |
+| `E F A C E DOT M O N E Y` | `face.money` | 🤑 | active |
+| `E F A C E DOT M O N O C L E` | `face.monocle` | 🧐 | active |
 | `E F A C E DOT N A U S E A` | `face.nausea` | 🤢 | active |
+| `E F A C E DOT N E R D` | `face.nerd` | 🤓 | active |
 | `E F A C E DOT N E U T R A L` | `face.neutral` | 😐 | active |
+| `E F A C E DOT O P E N` | `face.open` | 😃 | active |
 | `E F A C E DOT P A R T Y` | `face.party` | 🥳 | active |
+| `E F A C E DOT P E E K` | `face.peek` | 🫣 | active |
 | `E F A C E DOT P L E A D` | `face.plead` | 🥺 | active |
+| `E F A C E DOT R E L I E F` | `face.relief` | 😌 | active |
 | `E F A C E DOT R O F L` | `face.rofl` | 🤣 | active |
+| `E F A C E DOT S A D` | `face.sad` | 😔 | active |
 | `E F A C E DOT S A L U T E` | `face.salute` | 🫡 | active |
+| `E F A C E DOT S H A K I N G` | `face.shaking` | 🫨 | active |
 | `E F A C E DOT S H O C K` | `face.shock` | 😱 | active |
+| `E F A C E DOT S H U S H` | `face.shush` | 🤫 | active |
+| `E F A C E DOT S K E P T I C` | `face.skeptic` | 🤨 | active |
 | `E F A C E DOT S L E E P` | `face.sleep` | 😴 | active |
+| `E F A C E DOT S M I L E DOT S L I G H T` | `face.smile.slight` | 🙂 | active |
 | `E F A C E DOT S M I L E DOT S W E A T` | `face.smile.sweat` | 😅 | active |
+| `E F A C E DOT S M I L E DOT T E A R` | `face.smile.tear` | 🥲 | active |
+| `E F A C E DOT S M I R K` | `face.smirk` | 😏 | active |
+| `E F A C E DOT S N E E Z E` | `face.sneeze` | 🤧 | active |
+| `E F A C E DOT S P E A K DOT N O T` | `face.speak.not` | 🫢 | active |
+| `E F A C E DOT S Q U I N T` | `face.squint` | 😆 | active |
+| `E F A C E DOT S T A R S` | `face.stars` | 🤩 | active |
 | `E F A C E DOT S T R A I G H T` | `face.straight` | 😑 | active |
+| `E F A C E DOT S U F F E R` | `face.suffer` | 😖 | active |
+| `E F A C E DOT S U R P R I S E` | `face.surprise` | 😯 | active |
+| `E F A C E DOT S Y M B O L S` | `face.symbols` | 🤬 | active |
 | `E F A C E DOT T E A R` | `face.tear` | 😢 | active |
+| `E F A C E DOT T E E T H` | `face.teeth` | 😬 | active |
 | `E F A C E DOT T H I N K` | `face.think` | 🤔 | active |
+| `E F A C E DOT T I R E D` | `face.tired` | 🫩 | active |
+| `E F A C E DOT T O N G U E` | `face.tongue` | 😛 | active |
+| `E F A C E DOT T R I U M P H` | `face.triumph` | 😤 | active |
+| `E F A C E DOT U N H A P P Y` | `face.unhappy` | 😕 | active |
+| `E F A C E DOT V O M I T` | `face.vomit` | 🤮 | active |
+| `E F A C E DOT W E A R Y` | `face.weary` | 😩 | active |
 | `E F A C E DOT W I N K` | `face.wink` | 😉 | active |
+| `E F A C E DOT W O O Z Y` | `face.woozy` | 🥴 | active |
+| `E F A C E DOT W O R R Y` | `face.worry` | 😟 | active |
+| `E F A C E DOT W O W` | `face.wow` | 😮 | active |
+| `E F A C E DOT Y A W N` | `face.yawn` | 🥱 | active |
+| `E F A C E DOT Z I P` | `face.zip` | 🤐 | active |
+| `E F A C E A N G R Y R E D` | `faceAngryRed` | 😡 | active (renamed from `face.angry.red`) |
+| `E F A C E C O W` | `faceCow` | 🐮 | active (renamed from `cow.face`) |
+| `E F A C E D O W N S W E A T` | `faceDownSweat` | 😓 | active (renamed from `face.down.sweat`) |
+| `E F A C E D R A G O N` | `faceDragon` | 🐲 | active (renamed from `dragon.face`) |
+| `E F A C E F E A R S W E A T` | `faceFearSweat` | 😰 | active (renamed from `face.fear.sweat`) |
+| `E F A C E F R O W N S L I G H T` | `faceFrownSlight` | 🙁 | active (renamed from `face.frown.slight`) |
+| `E F A C E H E A R T S` | `faceHearts` | 🥰 | active (renamed from `face.hearts`) |
+| `E F A C E H O R S E` | `faceHorse` | 🐴 | active (renamed from `horse.face`) |
+| `E F A C E K I S S B L U S H` | `faceKissBlush` | 😚 | active (renamed from `face.kiss.blush`) |
+| `E F A C E K I S S H E A R T` | `faceKissHeart` | 😘 | active (renamed from `face.kiss.heart`) |
+| `E F A C E K I S S S M I L E` | `faceKissSmile` | 😙 | active (renamed from `face.kiss.smile`) |
+| `E F A C E M O N K E Y` | `faceMonkey` | 🐵 | active (renamed from `monkey.face`) |
+| `E F A C E P I G` | `facePig` | 🐷 | active (renamed from `pig.face`) |
+| `E F A C E R A B B I T` | `faceRabbit` | 🐰 | active (renamed from `rabbit.face`) |
+| `E F A C E S L E E P Y` | `faceSleepy` | 😪 | active (renamed from `face.sleepy`) |
+| `E F A C E S M I L E` | `faceSmile` | 😄 | active (renamed from `face.smile`) |
+| `E F A C E S U N` | `faceSun` | 🌞 | active (renamed from `sun.face`) |
+| `E F A C E T E A R R E L I E F` | `faceTearRelief` | 😥 | active (renamed from `face.tear.relief`) |
+| `E F A C E T E A R W I T H H E L D` | `faceTearWithheld` | 🥹 | active (renamed from `face.tear.withheld`) |
+| `E F A C E T I G E R` | `faceTiger` | 🐯 | active (renamed from `tiger.face`) |
+| `E F A C E T O N G U E S Q U I N T` | `faceTongueSquint` | 😝 | active (renamed from `face.tongue.squint`) |
+| `E F A C E T O N G U E W I N K` | `faceTongueWink` | 😜 | active (renamed from `face.tongue.wink`) |
+| `E F A C E P A L M P E R S O N` | `facepalmPerson` | 🤦 | active (renamed from `person.facepalm`) |
+| `E F A C T O R Y` | `factory` | 🏭 | active |
 | `E F A I R Y` | `fairy` | 🧚 | active |
 | `E F A I T H DOT C H R I S T` | `faith.christ` | ✝ | active |
+| `E F A I T H DOT D H A R M A` | `faith.dharma` | ☸ | active |
 | `E F A I T H DOT I S L A M` | `faith.islam` | ☪ | active |
+| `E F A I T H DOT J U D A I S M` | `faith.judaism` | ✡ | active |
+| `E F A I T H DOT K H A N D A` | `faith.khanda` | 🪯 | active |
+| `E F A I T H DOT M E N O R A H` | `faith.menorah` | 🕎 | active |
 | `E F A I T H DOT O M` | `faith.om` | 🕉 | active |
+| `E F A I T H DOT O R T H O D O X` | `faith.orthodox` | ☦ | active |
 | `E F A I T H DOT P E A C E` | `faith.peace` | ☮ | active |
+| `E F A I T H DOT S T A R DOT D O T` | `faith.star.dot` | 🔯 | active |
+| `E F A I T H DOT W O R S H I P` | `faith.worship` | 🛐 | active |
 | `E F A I T H DOT Y I N Y A N G` | `faith.yinyang` | ☯ | active |
+| `E F A L A F E L` | `falafel` | 🧆 | active |
 | `E F A M I L Y` | `family` | 👪 | active |
 | `E F A X` | `fax` | 📠 | active |
+| `E F E A T H E R` | `feather` | 🪶 | active |
+| `E F E E D I N G DOT B R E A S T` | `feeding.breast` | 🤱 | active |
+| `E F E N C I N G` | `fencing` | 🤺 | active |
+| `E F E R R I S W H E E L` | `ferriswheel` | 🎡 | active |
+| `E F E R R Y S H I P` | `ferryShip` | ⛴ | active (renamed from `ship.ferry`) |
+| `E F I G H T C L O U D` | `fightcloud` | 🫯 | active |
+| `E F I L E B O X` | `filebox` | 🗃 | active |
 | `E F I L E D I V I D E R S` | `filedividers` | 🗂 | active |
 | `E F I L M` | `film` | 🎞 | active |
 | `E F I N G E R DOT B` | `finger.b` | 👇 | active |
+| `E F I N G E R DOT F R O N T` | `finger.front` | 🫵 | active |
 | `E F I N G E R DOT L` | `finger.l` | 👈 | active |
+| `E F I N G E R DOT M` | `finger.m` | 🖕 | active |
 | `E F I N G E R DOT R` | `finger.r` | 👉 | active |
 | `E F I N G E R DOT T DOT A L T` | `finger.t.alt` | ☝ | active |
 | `E F I N G E R T` | `fingerT` | 👆 | active (renamed from `finger.t`) |
+| `E F I N G E R P R I N T` | `fingerprint` | 🫆 | active |
 | `E F I N G E R S DOT C R O S S` | `fingers.cross` | 🤞 | active |
+| `E F I N G E R S DOT P I N C H` | `fingers.pinch` | 🤌 | active |
+| `E F I N G E R S DOT S N A P` | `fingers.snap` | 🫰 | active |
 | `E F I R E` | `fire` | 🔥 | active |
 | `E F I S H` | `fish` | 🐟 | active |
+| `E F I S T DOT F R O N T` | `fist.front` | 👊 | active |
+| `E F I S T DOT L` | `fist.l` | 🤛 | active |
+| `E F I S T DOT R` | `fist.r` | 🤜 | active |
+| `E F I S T R A I S E D` | `fistRaised` | ✊ | active (renamed from `fist.raised`) |
+| `E F L A G DOT B L A C K` | `flag.black` | 🏴 | active |
+| `E F L A G DOT G O A L` | `flag.goal` | 🏁 | active |
+| `E F L A G DOT G O L F` | `flag.golf` | ⛳ | active |
+| `E F L A G DOT R E D` | `flag.red` | 🚩 | active |
+| `E F L A G DOT W H I T E` | `flag.white` | 🏳 | active |
+| `E F L A G S DOT J P DOT C R O S S E D` | `flags.jp.crossed` | 🎌 | active |
+| `E F L A M I N G O` | `flamingo` | 🦩 | active |
+| `E F L A S H C A M E R A` | `flashCamera` | 📸 | active (renamed from `camera.flash`) |
+| `E F L A S H L I G H T` | `flashlight` | 🔦 | active |
+| `E F L A T S H O E` | `flatShoe` | 🥿 | active (renamed from `shoe.flat`) |
+| `E F L A T B R E A D` | `flatbread` | 🫓 | active |
 | `E F L E U R` | `fleur` | ⚜ | active |
 | `E F L O P P Y` | `floppy` | 💾 | active |
+| `E F L O W E R DOT H I B I S C U S` | `flower.hibiscus` | 🌺 | active |
+| `E F L O W E R DOT H Y A C I N T H` | `flower.hyacinth` | 🪻 | active |
+| `E F L O W E R DOT L O T U S` | `flower.lotus` | 🪷 | active |
 | `E F L O W E R DOT P I N K` | `flower.pink` | 🌸 | active |
+| `E F L O W E R DOT R O S E` | `flower.rose` | 🌹 | active |
 | `E F L O W E R DOT S U N` | `flower.sun` | 🌻 | active |
+| `E F L O W E R DOT T U L I P` | `flower.tulip` | 🌷 | active |
+| `E F L O W E R DOT W H I T E` | `flower.white` | 💮 | active |
+| `E F L O W E R DOT W I L T E D` | `flower.wilted` | 🥀 | active |
+| `E F L O W E R DOT Y E L L O W` | `flower.yellow` | 🌼 | active |
 | `E F L U T E` | `flute` | 🪈 | active |
 | `E F L Y` | `fly` | 🪰 | active |
+| `E F O A M B A T H T U B` | `foamBathtub` | 🛁 | active (renamed from `bathtub.foam`) |
 | `E F O G` | `fog` | 🌫 | active |
 | `E F O L D E R` | `folder` | 📁 | active |
 | `E F O N D U E` | `fondue` | 🫕 | active |
 | `E F O O T` | `foot` | 🦶 | active |
 | `E F O R E X` | `forex` | 💱 | active |
+| `E F O R T U N E C O O K I E` | `fortuneCookie` | 🥠 | active (renamed from `cookie.fortune`) |
+| `E F O U N T A I N` | `fountain` | ⛲ | active |
 | `E F O X` | `fox` | 🦊 | active |
+| `E F R I E D S H R I M P` | `friedShrimp` | 🍤 | active (renamed from `shrimp.fried`) |
 | `E F R I E S` | `fries` | 🍟 | active |
+| `E F R I S B E E` | `frisbee` | 🥏 | active |
+| `E F R O G DOT F A C E` | `frog.face` | 🐸 | active |
+| `E F R O N T B U S` | `frontBus` | 🚍 | active (renamed from `bus.front`) |
+| `E F R O N T C A R` | `frontCar` | 🚘 | active (renamed from `car.front`) |
+| `E F R O N T T A X I` | `frontTaxi` | 🚖 | active (renamed from `taxi.front`) |
+| `E F R O W N P E R S O N` | `frownPerson` | 🙍 | active (renamed from `person.frown`) |
+| `E F U E L P U M P` | `fuelpump` | ⛽ | active |
+| `E F U J I M O U N T A I N` | `fujiMountain` | 🗻 | active (renamed from `mountain.fuji`) |
+| `E F U L L M A I L B O X C L O S E D` | `fullMailboxClosed` | 📫 | active (renamed from `mailbox.closed.full`) |
+| `E F U L L M A I L B O X O P E N` | `fullMailboxOpen` | 📬 | active (renamed from `mailbox.open.full`) |
+| `E G A R D E N H O U S E` | `gardenHouse` | 🏡 | active (renamed from `house.garden`) |
 | `E G A R L I C` | `garlic` | 🧄 | active |
 | `E G E A R` | `gear` | ⚙ | active |
 | `E G E M` | `gem` | 💎 | active |
 | `E G E N I E` | `genie` | 🧞 | active |
 | `E G H O S T` | `ghost` | 👻 | active |
 | `E G I N G E R` | `ginger` | 🫚 | active |
+| `E G I R A F F E` | `giraffe` | 🦒 | active |
 | `E G I R L` | `girl` | 👧 | active |
+| `E G L A S S DOT C L I N K` | `glass.clink` | 🥂 | active |
+| `E G L A S S DOT M I L K` | `glass.milk` | 🥛 | active |
+| `E G L A S S DOT P O U R` | `glass.pour` | 🫗 | active |
+| `E G L A S S DOT T U M B L E R` | `glass.tumbler` | 🥃 | active |
+| `E G L A S S E S` | `glasses` | 👓 | active |
 | `E G L O B E DOT A M` | `globe.am` | 🌎 | active |
 | `E G L O B E DOT A S DOT A U` | `globe.as.au` | 🌏 | active |
 | `E G L O B E DOT E U DOT A F` | `globe.eu.af` | 🌍 | active |
+| `E G L O B E DOT M E R I D I A N` | `globe.meridian` | 🌐 | active |
 | `E G L O V E S` | `gloves` | 🧤 | active |
+| `E G L O W S T A R` | `glowStar` | 🌟 | active (renamed from `star.glow`) |
 | `E G O A L` | `goal` | 🥅 | active |
 | `E G O A T` | `goat` | 🐐 | active |
+| `E G O G G L E S` | `goggles` | 🥽 | active |
+| `E G O L F I N G` | `golfing` | 🏌 | active |
 | `E G O O S E` | `goose` | 🪿 | active |
+| `E G O R I L L A` | `gorilla` | 🦍 | active |
 | `E G R A P E S` | `grapes` | 🍇 | active |
+| `E G R A Y H E A R T` | `grayHeart` | 🩶 | active (renamed from `heart.gray`) |
+| `E G R E E N H E A R T` | `greenHeart` | 💚 | active (renamed from `heart.green`) |
+| `E G R O W H E A R T` | `growHeart` | 💗 | active (renamed from `heart.grow`) |
+| `E G U A P I M A O M A N` | `guapimaoMan` | 👲 | active (renamed from `man.guapimao`) |
+| `E G U A R D DOT M A N` | `guard.man` | 💂 | active |
 | `E G U I T A R` | `guitar` | 🎸 | active |
+| `E G Y M N A S T I C S` | `gymnastics` | 🤸 | active |
+| `E H A I R C U T` | `haircut` | 💇 | active |
+| `E H A I R P I C K` | `hairpick` | 🪮 | active |
 | `E H A M M E R` | `hammer` | 🔨 | active |
 | `E H A M S A` | `hamsa` | 🪬 | active |
+| `E H A M S T E R DOT F A C E` | `hamster.face` | 🐹 | active |
+| `E H A N D DOT B` | `hand.b` | 🫳 | active |
 | `E H A N D DOT C A L L` | `hand.call` | 🤙 | active |
+| `E H A N D DOT L` | `hand.l` | 🫲 | active |
 | `E H A N D DOT O K` | `hand.ok` | 👌 | active |
+| `E H A N D DOT P A R T` | `hand.part` | 🖖 | active |
 | `E H A N D DOT P E A C E` | `hand.peace` | ✌ | active |
+| `E H A N D DOT P I N C H` | `hand.pinch` | 🤏 | active |
+| `E H A N D DOT P U S H I N G DOT L` | `hand.pushing.l` | 🫷 | active |
+| `E H A N D DOT P U S H I N G DOT R` | `hand.pushing.r` | 🫸 | active |
 | `E H A N D DOT R A I S E D` | `hand.raised` | ✋ | active |
+| `E H A N D DOT R O C K` | `hand.rock` | 🤘 | active |
 | `E H A N D DOT S P L A Y` | `hand.splay` | 🖐 | active |
+| `E H A N D DOT T` | `hand.t` | 🫴 | active |
 | `E H A N D DOT W A V E` | `hand.wave` | 👋 | active |
+| `E H A N D DOT W R I T E` | `hand.write` | ✍ | active |
+| `E H A N D L O V E` | `handLove` | 🤟 | active (renamed from `hand.love`) |
+| `E H A N D R` | `handR` | 🫱 | active (renamed from `hand.r`) |
+| `E H A N D B A G` | `handbag` | 👜 | active |
+| `E H A N D B A L L` | `handball` | 🤾 | active |
+| `E H A N D F A N` | `handfan` | 🪭 | active |
+| `E H A N D H O L D I N G` | `handholding` | 🧑‍🤝‍🧑 | active |
 | `E H A N D S DOT C L A P` | `hands.clap` | 👏 | active |
 | `E H A N D S DOT F O L D E D` | `hands.folded` | 🙏 | active |
+| `E H A N D S DOT H E A R T` | `hands.heart` | 🫶 | active |
+| `E H A N D S DOT O P E N` | `hands.open` | 👐 | active |
+| `E H A N D S DOT P A L M S` | `hands.palms` | 🤲 | active |
 | `E H A N D S DOT R A I S E D` | `hands.raised` | 🙌 | active |
 | `E H A N D S DOT S H A K E` | `hands.shake` | 🤝 | active |
 | `E H A R P` | `harp` | 🪉 | active |
 | `E H A S H` | `hash` | # | active |
+| `E H A T DOT R I B B O N` | `hat.ribbon` | 👒 | active |
+| `E H A T DOT T O P` | `hat.top` | 🎩 | active |
+| `E H E A D C H I C K E N B A B Y` | `headChickenBaby` | 🐤 | active (renamed from `chicken.baby.head`) |
+| `E H E A D P H O N E` | `headphone` | 🎧 | active |
 | `E H E A R T` | `heart` | ❤ | active |
+| `E H E D G E H O G` | `hedgehog` | 🦔 | active |
+| `E H E E L S H O E` | `heelShoe` | 👠 | active (renamed from `shoe.heel`) |
+| `E H E L I C O P T E R` | `helicopter` | 🚁 | active |
 | `E H E L I X` | `helix` | 🧬 | active |
+| `E H E L M E T DOT C R O S S` | `helmet.cross` | ⛑ | active |
+| `E H E L M E T DOT M I L I T A R Y` | `helmet.military` | 🪖 | active |
+| `E H I D D E N C L O U D S U N` | `hiddenCloudSun` | 🌥 | active (renamed from `cloud.sun.hidden`) |
+| `E H I J A B P E R S O N` | `hijabPerson` | 🧕 | active (renamed from `person.hijab`) |
+| `E H I K E S H O E` | `hikeShoe` | 🥾 | active (renamed from `shoe.hike`) |
 | `E H I P P O` | `hippo` | 🦛 | active |
 | `E H O C K E Y` | `hockey` | 🏑 | active |
 | `E H O L E` | `hole` | 🕳 | active |
 | `E H O N E Y` | `honey` | 🍯 | active |
+| `E H O N G B A O` | `hongbao` | 🧧 | active |
 | `E H O O K` | `hook` | 🪝 | active |
+| `E H O R N DOT P O S T A L` | `horn.postal` | 📯 | active |
 | `E H O R S E` | `horse` | 🐎 | active |
 | `E H O S P I T A L` | `hospital` | 🏥 | active |
+| `E H O T P E P P E R` | `hotPepper` | 🌶 | active (renamed from `pepper.hot`) |
 | `E H O T D O G` | `hotdog` | 🌭 | active |
 | `E H O T E L` | `hotel` | 🏨 | active |
+| `E H O T S P R I N G` | `hotspring` | ♨ | active |
 | `E H O U R G L A S S DOT F L O W` | `hourglass.flow` | ⏳ | active |
 | `E H O U S E` | `house` | 🏠 | active |
+| `E H U G S I L H O U E T T E` | `hugSilhouette` | 🫂 | active (renamed from `silhouette.hug`) |
+| `E H U N D R E D` | `hundred` | 💯 | active |
 | `E H U T` | `hut` | 🛖 | active |
 | `E I C E` | `ice` | 🧊 | active |
+| `E I D C A R D` | `idCard` | 🪪 | active (renamed from `card.id`) |
 | `E I N F O` | `info` | ℹ | active |
+| `E I Z A K A Y A` | `izakaya` | 🏮 | active |
 | `E J A R` | `jar` | 🫙 | active |
 | `E J E A N S` | `jeans` | 👖 | active |
+| `E J E L L Y F I S H` | `jellyfish` | 🪼 | active |
 | `E J I G S A W` | `jigsaw` | 🧩 | active |
+| `E J O Y S T I C K` | `joystick` | 🕹 | active |
+| `E J U G G L I N G` | `juggling` | 🤹 | active |
 | `E J U I C E` | `juice` | 🧃 | active |
 | `E K A A B A` | `kaaba` | 🕋 | active |
+| `E K A D O M A T S U` | `kadomatsu` | 🎍 | active |
+| `E K A N G A R O O` | `kangaroo` | 🦘 | active |
 | `E K E B A B` | `kebab` | 🥙 | active |
 | `E K E Y DOT O L D` | `key.old` | 🗝 | active |
+| `E K E Y L O C K` | `keyLock` | 🔐 | active (renamed from `lock.key`) |
 | `E K E Y B O A R D` | `keyboard` | ⌨ | active |
+| `E K I M O N O D R E S S` | `kimonoDress` | 👘 | active (renamed from `dress.kimono`) |
 | `E K I S S` | `kiss` | 💏 | active |
 | `E K I T E` | `kite` | 🪁 | active |
 | `E K I W I` | `kiwi` | 🥝 | active |
+| `E K N E E L P E R S O N` | `kneelPerson` | 🧎 | active (renamed from `person.kneel`) |
 | `E K N I F E` | `knife` | 🔪 | active |
 | `E K N O T` | `knot` | 🪢 | active |
 | `E K O A L A` | `koala` | 🐨 | active |
+| `E K O I N O B O R I` | `koinobori` | 🎏 | active |
+| `E L A B C O A T` | `labCoat` | 🥼 | active (renamed from `coat.lab`) |
 | `E L A B E L` | `label` | 🏷 | active |
+| `E L A C R O S S E` | `lacrosse` | 🥍 | active |
 | `E L A D D E R` | `ladder` | 🪜 | active |
+| `E L A D Y B E E T L E` | `ladyBeetle` | 🐞 | active (renamed from `beetle.lady`) |
+| `E L A M P DOT D I Y A` | `lamp.diya` | 🪔 | active |
+| `E L A N D I N G A I R P L A N E` | `landingAirplane` | 🛬 | active (renamed from `airplane.landing`) |
+| `E L A N D S L I D E` | `landslide` | 🛘 | active |
 | `E L A P T O P` | `laptop` | 💻 | active |
 | `E L E A F DOT C L O V E R DOT F O U R` | `leaf.clover.four` | 🍀 | active |
+| `E L E A F DOT C L O V E R DOT T H R E E` | `leaf.clover.three` | ☘ | active |
+| `E L E A F DOT F A L L` | `leaf.fall` | 🍂 | active |
+| `E L E A F DOT H E R B` | `leaf.herb` | 🌿 | active |
+| `E L E A F DOT M A P L E` | `leaf.maple` | 🍁 | active |
+| `E L E A F DOT W I N D` | `leaf.wind` | 🍃 | active |
+| `E L E F T L U G G A G E` | `leftluggage` | 🛅 | active |
 | `E L E G` | `leg` | 🦵 | active |
 | `E L E M O N` | `lemon` | 🍋 | active |
+| `E L E O P A R D` | `leopard` | 🐆 | active |
+| `E L E T T E R DOT L O V E` | `letter.love` | 💌 | active |
+| `E L E V I T A T E M A N` | `levitateMan` | 🕴 | active (renamed from `man.levitate`) |
+| `E L I B E R T Y` | `liberty` | 🗽 | active |
+| `E L I G H T B L U E H E A R T` | `lightblueHeart` | 🩵 | active (renamed from `heart.lightblue`) |
 | `E L I G H T B U L B` | `lightbulb` | 💡 | active |
 | `E L I G H T N I N G` | `lightning` | ⚡ | active |
 | `E L I O N` | `lion` | 🦁 | active |
+| `E L I P S T I C K` | `lipstick` | 💄 | active |
 | `E L I T T E R` | `litter` | 🚮 | active |
 | `E L I Z A R D` | `lizard` | 🦎 | active |
 | `E L L A M A` | `llama` | 🦙 | active |
+| `E L O B S T E R` | `lobster` | 🦞 | active |
 | `E L O C K` | `lock` | 🔒 | active |
+| `E L O L L I P O P` | `lollipop` | 🍭 | active |
 | `E L O T I O N` | `lotion` | 🧴 | active |
+| `E L O T U S P E R S O N` | `lotusPerson` | 🧘 | active (renamed from `person.lotus`) |
+| `E L O V E C H U R C H` | `loveChurch` | 💒 | active (renamed from `church.love`) |
+| `E L O V E H O T E L` | `loveHotel` | 🏩 | active (renamed from `hotel.love`) |
+| `E L O W B A T T E R Y` | `lowBattery` | 🪫 | active (renamed from `battery.low`) |
+| `E L U G G A G E` | `luggage` | 🧳 | active |
 | `E L U N G S` | `lungs` | 🫁 | active |
 | `E M A G E` | `mage` | 🧙 | active |
 | `E M A G N E T` | `magnet` | 🧲 | active |
 | `E M A G N I F Y DOT L` | `magnify.l` | 🔍 | active |
 | `E M A G N I F Y DOT R` | `magnify.r` | 🔎 | active |
+| `E M A H J O N G DOT D R A G O N DOT R E D` | `mahjong.dragon.red` | 🀄 | active |
 | `E M A I L` | `mail` | ✉ | active |
+| `E M A L E C H I C K E N` | `maleChicken` | 🐓 | active (renamed from `chicken.male`) |
+| `E M A M M O T H` | `mammoth` | 🦣 | active |
 | `E M A N` | `man` | 👨 | active |
+| `E M A P DOT J P` | `map.jp` | 🗾 | active |
+| `E M A P DOT W O R L D` | `map.world` | 🗺 | active |
+| `E M A R A C A S` | `maracas` | 🪇 | active |
+| `E M A R T I A L A R T S` | `martialarts` | 🥋 | active |
 | `E M A S K S` | `masks` | 🎭 | active |
+| `E M A S S A G E P E R S O N` | `massagePerson` | 💆 | active (renamed from `person.massage`) |
 | `E M A T E` | `mate` | 🧉 | active |
+| `E M A T R Y O S H K A` | `matryoshka` | 🪆 | active |
 | `E M E A T` | `meat` | 🥩 | active |
+| `E M E C H L E G` | `mechLeg` | 🦿 | active (renamed from `leg.mech`) |
 | `E M E D A L DOT F I R S T` | `medal.first` | 🥇 | active |
+| `E M E D A L DOT M I L I T A R Y` | `medal.military` | 🎖 | active |
+| `E M E D A L DOT S E C O N D` | `medal.second` | 🥈 | active |
+| `E M E D A L DOT S P O R T S` | `medal.sports` | 🏅 | active |
+| `E M E D A L DOT T H I R D` | `medal.third` | 🥉 | active |
 | `E M E G A P H O N E` | `megaphone` | 📢 | active |
 | `E M E L O N` | `melon` | 🍈 | active |
+| `E M E R P E R S O N` | `merperson` | 🧜 | active |
 | `E M E T R O` | `metro` | Ⓜ | active |
+| `E M I C R O B E` | `microbe` | 🦠 | active |
+| `E M I C R O P H O N E` | `microphone` | 🎤 | active |
 | `E M I C R O S C O P E` | `microscope` | 🔬 | active |
+| `E M I L K Y W A Y` | `milkyway` | 🌌 | active |
 | `E M I R R O R` | `mirror` | 🪞 | active |
 | `E M I X E R` | `mixer` | 🎛 | active |
+| `E M O N E Y DOT B A G` | `money.bag` | 💰 | active |
+| `E M O N E Y DOT D O L L A R` | `money.dollar` | 💵 | active |
+| `E M O N E Y DOT E U R O` | `money.euro` | 💶 | active |
+| `E M O N E Y DOT P O U N D` | `money.pound` | 💷 | active |
+| `E M O N E Y DOT W I N G S` | `money.wings` | 💸 | active |
+| `E M O N E Y DOT Y E N` | `money.yen` | 💴 | active |
 | `E M O N K E Y` | `monkey` | 🐒 | active |
+| `E M O N S T E R A L I E N` | `monsterAlien` | 👾 | active (renamed from `alien.monster`) |
 | `E M O O N DOT C R E S C E N T` | `moon.crescent` | 🌙 | active |
 | `E M O O N DOT F U L L` | `moon.full` | 🌕 | active |
+| `E M O O N DOT N E W` | `moon.new` | 🌑 | active |
+| `E M O O N DOT W A N E DOT O N E` | `moon.wane.one` | 🌖 | active |
+| `E M O O N DOT W A N E DOT T H R E E` | `moon.wane.three` | 🌘 | active |
+| `E M O O N DOT W A N E DOT T W O` | `moon.wane.two` | 🌗 | active |
+| `E M O O N DOT W A X DOT O N E` | `moon.wax.one` | 🌒 | active |
+| `E M O O N DOT W A X DOT T H R E E` | `moon.wax.three` | 🌔 | active |
+| `E M O O N DOT W A X DOT T W O` | `moon.wax.two` | 🌓 | active |
+| `E M O O N C A K E` | `moonCake` | 🥮 | active (renamed from `cake.moon`) |
+| `E M O O N F U L L F A C E` | `moonFullFace` | 🌝 | active (renamed from `moon.full.face`) |
+| `E M O O N N E W F A C E` | `moonNewFace` | 🌚 | active (renamed from `moon.new.face`) |
+| `E M O O N W A N E T H R E E F A C E` | `moonWaneThreeFace` | 🌜 | active (renamed from `moon.wane.three.face`) |
+| `E M O O N W A X T W O F A C E` | `moonWaxTwoFace` | 🌛 | active (renamed from `moon.wax.two.face`) |
 | `E M O O S E` | `moose` | 🫎 | active |
 | `E M O R T A R B O A R D` | `mortarboard` | 🎓 | active |
 | `E M O S Q U E` | `mosque` | 🕌 | active |
+| `E M O S Q U I T O` | `mosquito` | 🦟 | active |
+| `E M O T O R S C O O T E R` | `motorScooter` | 🛵 | active (renamed from `scooter.motor`) |
+| `E M O T O R W H E E L C H A I R` | `motorWheelchair` | 🦼 | active (renamed from `wheelchair.motor`) |
+| `E M O T O R C Y C L E` | `motorcycle` | 🏍 | active |
+| `E M O T O R W A Y` | `motorway` | 🛣 | active |
+| `E M O U N T A I N` | `mountain` | ⛰ | active |
 | `E M O U S E DOT F A C E` | `mouse.face` | 🐭 | active |
+| `E M O U S E T R A P` | `mousetrap` | 🪤 | active |
 | `E M O U T H` | `mouth` | 👄 | active |
+| `E M O V I E C A M E R A` | `movieCamera` | 🎥 | active (renamed from `camera.movie`) |
 | `E M O Y A I` | `moyai` | 🗿 | active |
+| `E M U L T I P L E H O U S E` | `multipleHouse` | 🏘 | active (renamed from `house.multiple`) |
 | `E M U S E U M` | `museum` | 🏛 | active |
+| `E M U S H R O O M` | `mushroom` | 🍄 | active |
+| `E M U S I C A L S C O R E` | `musicalscore` | 🎼 | active |
+| `E N A I L S DOT P O L I S H` | `nails.polish` | 💅 | active |
+| `E N A M E B A D G E` | `namebadge` | 📛 | active |
 | `E N A Z A R` | `nazar` | 🧿 | active |
+| `E N E C K T I E` | `necktie` | 👔 | active |
 | `E N E E D L E` | `needle` | 🪡 | active |
+| `E N E S T DOT E G G S` | `nest.eggs` | 🪺 | active |
+| `E N E S T DOT E M P T Y` | `nest.empty` | 🪹 | active |
+| `E N E W S P A P E R` | `newspaper` | 📰 | active |
+| `E N I G H T C I T Y` | `nightCity` | 🌃 | active (renamed from `city.night`) |
 | `E N I N G Y O` | `ningyo` | 🎎 | active |
 | `E N I N J A` | `ninja` | 🥷 | active |
+| `E N O P E R S O N` | `noPerson` | 🙅 | active (renamed from `person.no`) |
 | `E N O E N T R Y` | `noentry` | ⛔ | active |
 | `E N O S E` | `nose` | 👃 | active |
+| `E N O T B E L L` | `notBell` | 🔕 | active (renamed from `bell.not`) |
+| `E N O T B I K E` | `notBike` | 🚳 | active (renamed from `bike.not`) |
+| `E N O T C I G A R E T T E` | `notCigarette` | 🚭 | active (renamed from `cigarette.not`) |
+| `E N O T L I T T E R` | `notLitter` | 🚯 | active (renamed from `litter.not`) |
+| `E N O T M O N K E Y H E A R` | `notMonkeyHear` | 🙉 | active (renamed from `monkey.hear.not`) |
+| `E N O T M O N K E Y S E E` | `notMonkeySee` | 🙈 | active (renamed from `monkey.see.not`) |
+| `E N O T M O N K E Y S P E A K` | `notMonkeySpeak` | 🙊 | active (renamed from `monkey.speak.not`) |
+| `E N O T P E D E S T R I A N` | `notPedestrian` | 🚷 | active (renamed from `pedestrian.not`) |
+| `E N O T P H O N E` | `notPhone` | 📵 | active (renamed from `phone.not`) |
+| `E N O T S P E A K E R` | `notSpeaker` | 🔇 | active (renamed from `speaker.not`) |
+| `E N O T T A P` | `notTap` | 🚱 | active (renamed from `tap.not`) |
+| `E N O T E B O O K` | `notebook` | 📓 | active |
+| `E N O T E P A D` | `notepad` | 🗒 | active |
 | `E N O T E S` | `notes` | 🎵 | active |
+| `E N U M B E R S` | `numbers` | 🔢 | active |
+| `E O C T O P U S` | `octopus` | 🐙 | active |
+| `E O F F P H O N E` | `offPhone` | 📴 | active (renamed from `phone.off`) |
 | `E O F F I C E` | `office` | 🏢 | active |
 | `E O I L` | `oil` | 🛢 | active |
+| `E O K P E R S O N` | `okPerson` | 🙆 | active (renamed from `person.ok`) |
+| `E O L D M A N` | `oldMan` | 👴 | active (renamed from `man.old`) |
+| `E O L D P E R S O N` | `oldPerson` | 🧓 | active (renamed from `person.old`) |
+| `E O L D W O M A N` | `oldWoman` | 👵 | active (renamed from `woman.old`) |
 | `E O L I V E` | `olive` | 🫒 | active |
 | `E O N I` | `oni` | 👹 | active |
+| `E O P E N F O L D E R` | `openFolder` | 📂 | active (renamed from `folder.open`) |
+| `E O P E N L O C K` | `openLock` | 🔓 | active (renamed from `lock.open`) |
+| `E O R A N G E H E A R T` | `orangeHeart` | 🧡 | active (renamed from `heart.orange`) |
+| `E O R A N G U T A N` | `orangutan` | 🦧 | active |
 | `E O R C A` | `orca` | 🫍 | active |
 | `E O T T E R` | `otter` | 🦦 | active |
 | `E O W L` | `owl` | 🦉 | active |
 | `E O X` | `ox` | 🐂 | active |
 | `E O Y S T E R` | `oyster` | 🦪 | active |
+| `E P A C K A G E` | `package` | 📦 | active |
 | `E P A E L L A` | `paella` | 🥘 | active |
 | `E P A G E DOT C U R L` | `page.curl` | 📃 | active |
 | `E P A G E DOT P E N C I L` | `page.pencil` | 📝 | active |
 | `E P A G E R` | `pager` | 📟 | active |
 | `E P A G E S DOT T A B S` | `pages.tabs` | 📑 | active |
+| `E P A I N T I N G` | `painting` | 🖼 | active |
+| `E P A L E T T E` | `palette` | 🎨 | active |
+| `E P A N C A K E S` | `pancakes` | 🥞 | active |
 | `E P A N D A` | `panda` | 🐼 | active |
+| `E P A R A C H U T E` | `parachute` | 🪂 | active |
 | `E P A R K` | `park` | 🏞 | active |
 | `E P A R R O T` | `parrot` | 🦜 | active |
+| `E P A R T A L T E R A T I O N` | `partalteration` | 〽 | active |
 | `E P A R T Y` | `party` | 🎉 | active |
 | `E P E A C H` | `peach` | 🍑 | active |
+| `E P E A C O C K` | `peacock` | 🦚 | active |
+| `E P E A N U T S` | `peanuts` | 🥜 | active |
 | `E P E A P O D` | `peapod` | 🫛 | active |
 | `E P E A R` | `pear` | 🍐 | active |
+| `E P E D E S T R I A N` | `pedestrian` | 🚶 | active |
 | `E P E N DOT B A L L` | `pen.ball` | 🖊 | active |
 | `E P E N DOT F O U N T A I N` | `pen.fountain` | 🖋 | active |
+| `E P E N L O C K` | `penLock` | 🔏 | active (renamed from `lock.pen`) |
 | `E P E N C I L` | `pencil` | ✏ | active |
+| `E P E N G U I N` | `penguin` | 🐧 | active |
 | `E P E P P E R` | `pepper` | 🫑 | active |
 | `E P E R S O N` | `person` | 🧑 | active |
 | `E P E T R I` | `petri` | 🧫 | active |
@@ -1667,1027 +2648,488 @@ These symbols use a different name from their typst one.
 | `E P I N` | `pin` | 📌 | active |
 | `E P I S T O L` | `pistol` | 🔫 | active |
 | `E P I Z Z A` | `pizza` | 🍕 | active |
+| `E P L A C A R D` | `placard` | 🪧 | active |
 | `E P L A N E T` | `planet` | 🪐 | active |
 | `E P L A N T` | `plant` | 🪴 | active |
+| `E P L A S T E R` | `plaster` | 🩹 | active |
+| `E P L A T E DOT C U T L E R Y` | `plate.cutlery` | 🍽 | active |
 | `E P L A Y B A C K DOT D O W N` | `playback.down` | ⏬ | active |
+| `E P L A Y B A C K DOT E J E C T` | `playback.eject` | ⏏ | active |
 | `E P L A Y B A C K DOT F O R W A R D` | `playback.forward` | ⏩ | active |
+| `E P L A Y B A C K DOT P A U S E` | `playback.pause` | ⏸ | active |
+| `E P L A Y B A C K DOT R E C O R D` | `playback.record` | ⏺ | active |
 | `E P L A Y B A C K DOT R E P E A T DOT O N C E` | `playback.repeat.once` | 🔂 | active |
 | `E P L A Y B A C K DOT R E P E A T DOT V` | `playback.repeat.v` | 🔃 | active |
+| `E P L A Y B A C K DOT R E S T A R T` | `playback.restart` | ⏮ | active |
 | `E P L A Y B A C K DOT R E W I N D` | `playback.rewind` | ⏪ | active |
 | `E P L A Y B A C K DOT S H U F F L E` | `playback.shuffle` | 🔀 | active |
+| `E P L A Y B A C K DOT S K I P` | `playback.skip` | ⏭ | active |
+| `E P L A Y B A C K DOT S T O P` | `playback.stop` | ⏹ | active |
+| `E P L A Y B A C K DOT T O G G L E` | `playback.toggle` | ⏯ | active |
 | `E P L A Y B A C K DOT U P` | `playback.up` | ⏫ | active |
 | `E P L A Y B A C K R E P E A T` | `playbackRepeat` | 🔁 | active (renamed from `playback.repeat`) |
+| `E P L A Y I N G C A R D DOT F L O W E R` | `playingcard.flower` | 🎴 | active |
+| `E P L A Y I N G C A R D DOT J O K E R` | `playingcard.joker` | 🃏 | active |
+| `E P L U N G E R` | `plunger` | 🪠 | active |
+| `E P O L I C E C A R` | `policeCar` | 🚓 | active (renamed from `car.police`) |
+| `E P O L I C E O F F I C E R` | `policeofficer` | 👮 | active |
 | `E P O O` | `poo` | 💩 | active |
 | `E P O P C O R N` | `popcorn` | 🍿 | active |
+| `E P O S T DOT E U` | `post.eu` | 🏤 | active |
+| `E P O S T DOT J P` | `post.jp` | 🏣 | active |
+| `E P O S T B O X` | `postbox` | 📮 | active |
 | `E P O T A T O` | `potato` | 🥔 | active |
 | `E P O U C H` | `pouch` | 👝 | active |
 | `E P O W E R P L U G` | `powerplug` | 🔌 | active |
+| `E P R E G N A N T M A N` | `pregnantMan` | 🫃 | active (renamed from `man.pregnant`) |
+| `E P R E G N A N T P E R S O N` | `pregnantPerson` | 🫄 | active (renamed from `person.pregnant`) |
+| `E P R E G N A N T W O M A N` | `pregnantWoman` | 🤰 | active (renamed from `woman.pregnant`) |
 | `E P R E S E N T` | `present` | 🎁 | active |
+| `E P R E T Z E L` | `pretzel` | 🥨 | active |
+| `E P R I N T E R` | `printer` | 🖨 | active |
+| `E P R I N T S DOT F O O T` | `prints.foot` | 👣 | active |
+| `E P R I N T S DOT P A W` | `prints.paw` | 🐾 | active |
 | `E P R O H I B I T E D` | `prohibited` | 🚫 | active |
+| `E P R O J E C T O R` | `projector` | 📽 | active |
 | `E P U M P K I N DOT L A N T E R N` | `pumpkin.lantern` | 🎃 | active |
+| `E P U R P L E H E A R T` | `purpleHeart` | 💜 | active (renamed from `heart.purple`) |
 | `E P U R S E` | `purse` | 👛 | active |
 | `E Q U E S T` | `quest` | ❓ | active |
 | `E R A B B I T` | `rabbit` | 🐇 | active |
+| `E R A C C O O N` | `raccoon` | 🦝 | active |
+| `E R A C E H O R S E` | `raceHorse` | 🏇 | active (renamed from `horse.race`) |
+| `E R A C I N G C A R` | `racingCar` | 🏎 | active (renamed from `car.racing`) |
+| `E R A D I O B U T T O N` | `radioButton` | 🔘 | active (renamed from `button.radio`) |
 | `E R A D I O A C T I V E` | `radioactive` | ☢ | active |
+| `E R A I L W A Y` | `railway` | 🛤 | active |
+| `E R A I N C L O U D S U N` | `rainCloudSun` | 🌦 | active (renamed from `cloud.sun.rain`) |
+| `E R A I N B O W` | `rainbow` | 🌈 | active |
+| `E R A I S E P E R S O N` | `raisePerson` | 🙋 | active (renamed from `person.raise`) |
 | `E R A M` | `ram` | 🐏 | active |
 | `E R A T` | `rat` | 🐀 | active |
 | `E R A Z O R` | `razor` | 🪒 | active |
+| `E R E A L H E A R T` | `realHeart` | 🫀 | active (renamed from `heart.real`) |
+| `E R E C E I P T` | `receipt` | 🧾 | active |
+| `E R E C E I V E R P H O N E` | `receiverPhone` | 📞 | active (renamed from `phone.receiver`) |
 | `E R E C Y C L I N G` | `recycling` | ♻ | active |
 | `E R E G` | `reg` | ® | active |
+| `E R E M I N D R I B B O N` | `remindRibbon` | 🎗 | active (renamed from `ribbon.remind`) |
+| `E R E S T R O O M` | `restroom` | 🚻 | active |
+| `E R E V O L V E H E A R T` | `revolveHeart` | 💞 | active (renamed from `heart.revolve`) |
 | `E R H I N O` | `rhino` | 🦏 | active |
 | `E R I B B O N` | `ribbon` | 🎀 | active |
 | `E R I C E` | `rice` | 🍚 | active |
+| `E R I C K S H A W C A R` | `rickshawCar` | 🛺 | active (renamed from `car.rickshaw`) |
 | `E R I N G` | `ring` | 💍 | active |
 | `E R O B O T` | `robot` | 🤖 | active |
 | `E R O C K E T` | `rocket` | 🚀 | active |
+| `E R O L L E D N E W S P A P E R` | `rolledNewspaper` | 🗞 | active (renamed from `newspaper.rolled`) |
+| `E R O L L E R S H O E` | `rollerShoe` | 🛼 | active (renamed from `shoe.roller`) |
+| `E R O L L E R C O A S T E R` | `rollercoaster` | 🎢 | active |
+| `E R O S E T T E` | `rosette` | 🏵 | active |
+| `E R O U N D P I N` | `roundPin` | 📍 | active (renamed from `pin.round`) |
 | `E R U G B Y` | `rugby` | 🏉 | active |
 | `E R U L E R` | `ruler` | 📏 | active |
+| `E R U N N I N G` | `running` | 🏃 | active |
+| `E S A F E T Y P I N` | `safetypin` | 🧷 | active |
+| `E S A F E T Y V E S T` | `safetyvest` | 🦺 | active |
 | `E S A K E` | `sake` | 🍶 | active |
 | `E S A L A D` | `salad` | 🥗 | active |
 | `E S A L T` | `salt` | 🧂 | active |
+| `E S A N D W I C H` | `sandwich` | 🥪 | active |
+| `E S A N T A DOT M A N` | `santa.man` | 🎅 | active |
+| `E S A N T A DOT W O M A N` | `santa.woman` | 🤶 | active |
+| `E S A R I D R E S S` | `sariDress` | 🥻 | active (renamed from `dress.sari`) |
+| `E S A S S Y P E R S O N` | `sassyPerson` | 💁 | active (renamed from `person.sassy`) |
+| `E S A T D I S H` | `satdish` | 📡 | active |
+| `E S A T E L L I T E` | `satellite` | 🛰 | active |
 | `E S A W` | `saw` | 🪚 | active |
+| `E S A X O P H O N E` | `saxophone` | 🎷 | active |
 | `E S C A L E S` | `scales` | ⚖ | active |
 | `E S C A R F` | `scarf` | 🧣 | active |
 | `E S C H O O L` | `school` | 🏫 | active |
 | `E S C I S S O R S` | `scissors` | ✂ | active |
+| `E S C O O T E R` | `scooter` | 🛴 | active |
+| `E S C O R P I O N` | `scorpion` | 🦂 | active |
+| `E S C R E W D R I V E R` | `screwdriver` | 🪛 | active |
 | `E S C R O L L` | `scroll` | 📜 | active |
 | `E S E A L` | `seal` | 🦭 | active |
 | `E S E A T` | `seat` | 💺 | active |
 | `E S E E D L I N G` | `seedling` | 🌱 | active |
 | `E S H A R K` | `shark` | 🦈 | active |
+| `E S H A V E D I C E C R E A M` | `shavedIcecream` | 🍧 | active (renamed from `icecream.shaved`) |
 | `E S H E E P` | `sheep` | 🐑 | active |
+| `E S H E L L DOT S P I R A L` | `shell.spiral` | 🐚 | active |
 | `E S H I E L D` | `shield` | 🛡 | active |
 | `E S H I P` | `ship` | 🚢 | active |
+| `E S H I R T DOT S P O R T S` | `shirt.sports` | 🎽 | active |
+| `E S H I R T DOT T` | `shirt.t` | 👕 | active |
 | `E S H O E` | `shoe` | 👞 | active |
+| `E S H O O T S T A R` | `shootStar` | 🌠 | active (renamed from `star.shoot`) |
+| `E S H O P P I N G` | `shopping` | 🛍 | active |
 | `E S H O R T S` | `shorts` | 🩳 | active |
+| `E S H O S H I N S H A` | `shoshinsha` | 🔰 | active |
 | `E S H O V E L` | `shovel` | 🪏 | active |
 | `E S H O W E R` | `shower` | 🚿 | active |
 | `E S H R I M P` | `shrimp` | 🦐 | active |
 | `E S H R I N E` | `shrine` | ⛩ | active |
+| `E S H R U G P E R S O N` | `shrugPerson` | 🤷 | active (renamed from `person.shrug`) |
+| `E S I G N DOT C R O S S I N G` | `sign.crossing` | 🚸 | active |
+| `E S I G N DOT S T O P` | `sign.stop` | 🛑 | active |
+| `E S I G N A L P H O N E` | `signalPhone` | 📶 | active (renamed from `phone.signal`) |
+| `E S I L H O U E T T E` | `silhouette` | 👤 | active |
+| `E S I M P L E M E G A P H O N E` | `simpleMegaphone` | 📣 | active (renamed from `megaphone.simple`) |
 | `E S I R E N` | `siren` | 🚨 | active |
+| `E S K A T E B O A R D` | `skateboard` | 🛹 | active |
+| `E S K E W E R DOT D A N G O` | `skewer.dango` | 🍡 | active |
+| `E S K E W E R DOT O D E N` | `skewer.oden` | 🍢 | active |
+| `E S K I S H O E` | `skiShoe` | 🎿 | active (renamed from `shoe.ski`) |
 | `E S K I I N G` | `skiing` | ⛷ | active |
 | `E S K U L L` | `skull` | 💀 | active |
 | `E S K U N K` | `skunk` | 🦨 | active |
 | `E S L E D` | `sled` | 🛷 | active |
+| `E S L I C E C A K E` | `sliceCake` | 🍰 | active (renamed from `cake.slice`) |
 | `E S L I D E` | `slide` | 🛝 | active |
 | `E S L O T H` | `sloth` | 🦥 | active |
 | `E S L O T S` | `slots` | 🎰 | active |
+| `E S M A L L A I R P L A N E` | `smallAirplane` | 🛩 | active (renamed from `airplane.small`) |
+| `E S M A L L B U S` | `smallBus` | 🚐 | active (renamed from `bus.small`) |
+| `E S M A L L C A B L E C A R` | `smallCablecar` | 🚡 | active (renamed from `cablecar.small`) |
 | `E S N A I L` | `snail` | 🐌 | active |
 | `E S N A K E` | `snake` | 🐍 | active |
+| `E S N E A K E R S H O E` | `sneakerShoe` | 👟 | active (renamed from `shoe.sneaker`) |
+| `E S N O W M O U N T A I N` | `snowMountain` | 🏔 | active (renamed from `mountain.snow`) |
+| `E S N O W S N O W M A N` | `snowSnowman` | ☃ | active (renamed from `snowman.snow`) |
+| `E S N O W B O A R D I N G` | `snowboarding` | 🏂 | active |
 | `E S N O W F L A K E` | `snowflake` | ❄ | active |
+| `E S N O W M A N` | `snowman` | ⛄ | active |
 | `E S O A P` | `soap` | 🧼 | active |
 | `E S O C K S` | `socks` | 🧦 | active |
+| `E S O F T I C E C R E A M` | `softIcecream` | 🍦 | active (renamed from `icecream.soft`) |
+| `E S O F T B A L L` | `softball` | 🥎 | active |
 | `E S O U P` | `soup` | 🍲 | active |
+| `E S P A G H E T T I` | `spaghetti` | 🍝 | active |
+| `E S P A R K H E A R T` | `sparkHeart` | 💖 | active (renamed from `heart.spark`) |
+| `E S P A R K L E DOT B O X` | `sparkle.box` | ❇ | active |
+| `E S P A R K L E R` | `sparkler` | 🎇 | active |
 | `E S P A R K L E S` | `sparkles` | ✨ | active |
+| `E S P E A K S I L H O U E T T E` | `speakSilhouette` | 🗣 | active (renamed from `silhouette.speak`) |
+| `E S P E A K E R` | `speaker` | 🔈 | active |
 | `E S P I D E R` | `spider` | 🕷 | active |
+| `E S P I N A C H` | `spinach` | 🥬 | active |
+| `E S P I R A L C A L E N D A R` | `spiralCalendar` | 🗓 | active (renamed from `calendar.spiral`) |
+| `E S P L A T T E R` | `splatter` | 🫟 | active |
 | `E S P O N G E` | `sponge` | 🧽 | active |
 | `E S P O O N` | `spoon` | 🥄 | active |
+| `E S P O U T W H A L E` | `spoutWhale` | 🐳 | active (renamed from `whale.spout`) |
+| `E S Q U A R E DOT B L A C K` | `square.black` | ⬛ | active |
+| `E S Q U A R E DOT B L U E` | `square.blue` | 🟦 | active |
+| `E S Q U A R E DOT B R O W N` | `square.brown` | 🟫 | active |
+| `E S Q U A R E DOT G R E E N` | `square.green` | 🟩 | active |
+| `E S Q U A R E DOT O R A N G E` | `square.orange` | 🟧 | active |
+| `E S Q U A R E DOT P U R P L E` | `square.purple` | 🟪 | active |
+| `E S Q U A R E DOT R E D` | `square.red` | 🟥 | active |
+| `E S Q U A R E DOT W H I T E` | `square.white` | ⬜ | active |
+| `E S Q U A R E DOT Y E L L O W` | `square.yellow` | 🟨 | active |
+| `E S Q U A R E B L A C K M E D I U M` | `squareBlackMedium` | ◼ | active (renamed from `square.black.medium`) |
+| `E S Q U A R E B L A C K S M A L L` | `squareBlackSmall` | ◾ | active (renamed from `square.black.small`) |
+| `E S Q U A R E B L A C K T I N Y` | `squareBlackTiny` | ▪ | active (renamed from `square.black.tiny`) |
+| `E S Q U A R E W H I T E M E D I U M` | `squareWhiteMedium` | ◻ | active (renamed from `square.white.medium`) |
+| `E S Q U A R E W H I T E S M A L L` | `squareWhiteSmall` | ◽ | active (renamed from `square.white.small`) |
+| `E S Q U A R E W H I T E T I N Y` | `squareWhiteTiny` | ▫ | active (renamed from `square.white.tiny`) |
 | `E S Q U I D` | `squid` | 🦑 | active |
+| `E S T A D I U M` | `stadium` | 🏟 | active |
+| `E S T A N D P E R S O N` | `standPerson` | 🧍 | active (renamed from `person.stand`) |
 | `E S T A R` | `star` | ⭐ | active |
+| `E S T E A M B O W L` | `steamBowl` | 🍜 | active (renamed from `bowl.steam`) |
+| `E S T E A M P E R S O N` | `steamPerson` | 🧖 | active (renamed from `person.steam`) |
+| `E S T E T H O S C O P E` | `stethoscope` | 🩺 | active |
+| `E S T O P B U S` | `stopBus` | 🚏 | active (renamed from `bus.stop`) |
+| `E S T O R E DOT B I G` | `store.big` | 🏬 | active |
+| `E S T O R E DOT S M A L L` | `store.small` | 🏪 | active |
+| `E S T R A W B E R R Y` | `strawberry` | 🍓 | active |
+| `E S T U D I O M I C R O P H O N E` | `studioMicrophone` | 🎙 | active (renamed from `microphone.studio`) |
+| `E S U I T DOT C L U B` | `suit.club` | ♣ | active |
+| `E S U I T DOT D I A M O N D` | `suit.diamond` | ♦ | active |
+| `E S U I T DOT H E A R T` | `suit.heart` | ♥ | active |
+| `E S U I T DOT S P A D E` | `suit.spade` | ♠ | active |
 | `E S U N` | `sun` | ☀ | active |
+| `E S U P E R H E R O` | `superhero` | 🦸 | active |
+| `E S U P E R V I L L A I N` | `supervillain` | 🦹 | active |
+| `E S U R F I N G` | `surfing` | 🏄 | active |
 | `E S U S H I` | `sushi` | 🍣 | active |
+| `E S U V C A R` | `suvCar` | 🚙 | active (renamed from `car.suv`) |
 | `E S W A N` | `swan` | 🦢 | active |
+| `E S W E E T P O T A T O` | `sweetPotato` | 🍠 | active (renamed from `potato.sweet`) |
+| `E S W I M M I N G` | `swimming` | 🏊 | active |
+| `E S W I M S U I T` | `swimsuit` | 🩱 | active |
 | `E S W O R D S` | `swords` | ⚔ | active |
+| `E S Y M B O L S` | `symbols` | 🔣 | active |
+| `E S Y N A G O G U E` | `synagogue` | 🕍 | active |
+| `E S Y R I N G E` | `syringe` | 💉 | active |
 | `E T A C O` | `taco` | 🌮 | active |
+| `E T A K E O F F A I R P L A N E` | `takeoffAirplane` | 🛫 | active (renamed from `airplane.takeoff`) |
+| `E T A K E O U T` | `takeout` | 🥡 | active |
+| `E T A L L S H O E` | `tallShoe` | 👢 | active (renamed from `shoe.tall`) |
 | `E T A M A L E` | `tamale` | 🫔 | active |
+| `E T A N A B A T A` | `tanabata` | 🎋 | active |
+| `E T A N G E R I N E` | `tangerine` | 🍊 | active |
 | `E T A P` | `tap` | 🚰 | active |
 | `E T A X I` | `taxi` | 🚕 | active |
 | `E T E A C U P` | `teacup` | 🍵 | active |
 | `E T E A P O T` | `teapot` | 🫖 | active |
+| `E T E A R O F F C A L E N D A R` | `tearoffCalendar` | 📆 | active (renamed from `calendar.tearoff`) |
 | `E T E D D Y` | `teddy` | 🧸 | active |
 | `E T E L E S C O P E` | `telescope` | 🔭 | active |
 | `E T E M P L E` | `temple` | 🛕 | active |
 | `E T E N` | `ten` | 🔟 | active |
 | `E T E S T T U B E` | `testtube` | 🧪 | active |
+| `E T H E R M O M E T E R` | `thermometer` | 🌡 | active |
+| `E T H O N G S H O E` | `thongShoe` | 🩴 | active (renamed from `shoe.thong`) |
 | `E T H R E A D` | `thread` | 🧵 | active |
 | `E T H U M B DOT D O W N` | `thumb.down` | 👎 | active |
 | `E T H U M B DOT U P` | `thumb.up` | 👍 | active |
+| `E T I C K E T DOT E V E N T` | `ticket.event` | 🎟 | active |
+| `E T I C K E T DOT T R A V E L` | `ticket.travel` | 🎫 | active |
 | `E T I G E R` | `tiger` | 🐅 | active |
 | `E T M` | `tm` | ™ | active |
 | `E T O I L E T` | `toilet` | 🚽 | active |
 | `E T O M A T O` | `tomato` | 🍅 | active |
+| `E T O M B S T O N E` | `tombstone` | 🪦 | active |
 | `E T O N G U E` | `tongue` | 👅 | active |
 | `E T O O L B O X` | `toolbox` | 🧰 | active |
 | `E T O O T H` | `tooth` | 🦷 | active |
+| `E T O R N A D O` | `tornado` | 🌪 | active |
+| `E T O W E R DOT T O K Y O` | `tower.tokyo` | 🗼 | active |
+| `E T R A C K B A L L` | `trackball` | 🖲 | active |
+| `E T R A C T O R` | `tractor` | 🚜 | active |
+| `E T R A F F I C L I G H T DOT H` | `trafficlight.h` | 🚥 | active |
+| `E T R A F F I C L I G H T DOT V` | `trafficlight.v` | 🚦 | active |
+| `E T R A I L E R T R U C K` | `trailerTruck` | 🚛 | active (renamed from `truck.trailer`) |
+| `E T R A I N DOT C A R` | `train.car` | 🚃 | active |
+| `E T R A I N DOT L I G H T` | `train.light` | 🚈 | active |
+| `E T R A I N DOT M E T R O` | `train.metro` | 🚇 | active |
+| `E T R A I N DOT M O N O` | `train.mono` | 🚝 | active |
+| `E T R A I N DOT M O U N T A I N` | `train.mountain` | 🚞 | active |
+| `E T R A I N DOT S P E E D` | `train.speed` | 🚄 | active |
 | `E T R A I N DOT S T E A M` | `train.steam` | 🚂 | active |
+| `E T R A I N DOT S T O P` | `train.stop` | 🚉 | active |
+| `E T R A I N DOT S U S P E N D` | `train.suspend` | 🚟 | active |
+| `E T R A I N DOT T R A M` | `train.tram` | 🚊 | active |
+| `E T R A I N S P E E D B U L L E T` | `trainSpeedBullet` | 🚅 | active (renamed from `train.speed.bullet`) |
+| `E T R A I N T R A M C A R` | `trainTramCar` | 🚋 | active (renamed from `train.tram.car`) |
+| `E T R A N S G E N D E R` | `transgender` | ⚧ | active |
+| `E T R A Y DOT I N B O X` | `tray.inbox` | 📥 | active |
+| `E T R A Y DOT M A I L` | `tray.mail` | 📨 | active |
+| `E T R A Y DOT O U T B O X` | `tray.outbox` | 📤 | active |
+| `E T R E A S U R E` | `treasure` | 🪎 | active |
+| `E T R E E DOT D E C I D U O U S` | `tree.deciduous` | 🌳 | active |
 | `E T R E E DOT E V E R G R E E N` | `tree.evergreen` | 🌲 | active |
+| `E T R E E DOT L E A F L E S S` | `tree.leafless` | 🪾 | active |
+| `E T R E E DOT P A L M` | `tree.palm` | 🌴 | active |
+| `E T R E E DOT X M A S` | `tree.xmas` | 🎄 | active |
 | `E T R I A N G L E DOT B DOT R E D` | `triangle.b.red` | 🔻 | active |
 | `E T R I A N G L E DOT L` | `triangle.l` | ◀ | active |
 | `E T R I A N G L E DOT R` | `triangle.r` | ▶ | active |
 | `E T R I A N G L E DOT T DOT R E D` | `triangle.t.red` | 🔺 | active |
+| `E T R I A N G L E B` | `triangleB` | 🔽 | active (renamed from `triangle.b`) |
+| `E T R I A N G L E R U L E R` | `triangleRuler` | 📐 | active (renamed from `ruler.triangle`) |
+| `E T R I A N G L E T` | `triangleT` | 🔼 | active (renamed from `triangle.t`) |
+| `E T R I D E N T` | `trident` | 🔱 | active |
+| `E T R I P L E N O T E S` | `tripleNotes` | 🎶 | active (renamed from `notes.triple`) |
 | `E T R O L L` | `troll` | 🧌 | active |
+| `E T R O M B O N E` | `trombone` | 🪊 | active |
 | `E T R O P H Y` | `trophy` | 🏆 | active |
+| `E T R O P I C A L F I S H` | `tropicalFish` | 🐠 | active (renamed from `fish.tropical`) |
 | `E T R U C K` | `truck` | 🚚 | active |
+| `E T R U M P E T` | `trumpet` | 🎺 | active |
+| `E T S U K I M I` | `tsukimi` | 🎑 | active |
+| `E T U R B A N M A N` | `turbanMan` | 👳 | active (renamed from `man.turban`) |
 | `E T U R K E Y` | `turkey` | 🦃 | active |
 | `E T U R T L E` | `turtle` | 🐢 | active |
+| `E T U X E D O M A N` | `tuxedoMan` | 🤵 | active (renamed from `man.tuxedo`) |
 | `E T V` | `tv` | 📺 | active |
 | `E U F O` | `ufo` | 🛸 | active |
+| `E U M B R E L L A DOT C L O S E D` | `umbrella.closed` | 🌂 | active |
+| `E U M B R E L L A DOT O P E N` | `umbrella.open` | ☂ | active |
+| `E U M B R E L L A DOT R A I N` | `umbrella.rain` | ☔ | active |
+| `E U M B R E L L A DOT S U N` | `umbrella.sun` | ⛱ | active |
+| `E U N I C O R N` | `unicorn` | 🦄 | active |
+| `E U N K N O W N` | `unknown` | 🦳 | active |
 | `E U R N` | `urn` | ⚱ | active |
+| `E V A M P I R E` | `vampire` | 🧛 | active |
+| `E V I B R A T E P H O N E` | `vibratePhone` | 📳 | active (renamed from `phone.vibrate`) |
+| `E V I D E O C A M E R A` | `videoCamera` | 📹 | active (renamed from `camera.video`) |
 | `E V I O L I N` | `violin` | 🎻 | active |
+| `E V O L C A N O` | `volcano` | 🌋 | active |
+| `E V O L L E Y B A L L` | `volleyball` | 🏐 | active |
 | `E W A F F L E` | `waffle` | 🧇 | active |
 | `E W A N D` | `wand` | 🪄 | active |
 | `E W A R N I N G` | `warning` | ⚠ | active |
 | `E W A T C H DOT S T O P` | `watch.stop` | ⏱ | active |
+| `E W A T E R M E L O N` | `watermelon` | 🍉 | active |
+| `E W A T E R P O L O` | `waterpolo` | 🤽 | active |
 | `E W A V E` | `wave` | 🌊 | active |
 | `E W C` | `wc` | 🚾 | active |
+| `E W E I G H T L I F T I N G` | `weightlifting` | 🏋 | active |
 | `E W H A L E` | `whale` | 🐋 | active |
 | `E W H E E L` | `wheel` | 🛞 | active |
+| `E W H I T E E X C L` | `whiteExcl` | ❕ | active (renamed from `excl.white`) |
+| `E W H I T E H E A R T` | `whiteHeart` | 🤍 | active (renamed from `heart.white`) |
+| `E W H I T E Q U E S T` | `whiteQuest` | ❔ | active (renamed from `quest.white`) |
 | `E W I N D` | `wind` | 🌬 | active |
 | `E W I N E` | `wine` | 🍷 | active |
 | `E W I N G` | `wing` | 🪽 | active |
+| `E W I R E L E S S` | `wireless` | 🛜 | active |
 | `E W O L F` | `wolf` | 🐺 | active |
 | `E W O M A N` | `woman` | 👩 | active |
 | `E W O O D` | `wood` | 🪵 | active |
 | `E W O R M` | `worm` | 🪱 | active |
 | `E W R E N C H` | `wrench` | 🔧 | active |
+| `E W R E S T L I N G` | `wrestling` | 🤼 | active |
 | `E X R A Y` | `xray` | 🩻 | active |
 | `E Y A R N` | `yarn` | 🧶 | active |
+| `E Y E L L O W H E A R T` | `yellowHeart` | 💛 | active (renamed from `heart.yellow`) |
 | `E Y O Y O` | `yoyo` | 🪀 | active |
 | `E Z E B R A` | `zebra` | 🦓 | active |
+| `E Z O D I A C DOT A Q U A R I U S` | `zodiac.aquarius` | ♒ | active |
+| `E Z O D I A C DOT A R I E S` | `zodiac.aries` | ♈ | active |
+| `E Z O D I A C DOT C A N C E R` | `zodiac.cancer` | ♋ | active |
+| `E Z O D I A C DOT C A P R I` | `zodiac.capri` | ♑ | active |
+| `E Z O D I A C DOT G E M I N I` | `zodiac.gemini` | ♊ | active |
+| `E Z O D I A C DOT L E O` | `zodiac.leo` | ♌ | active |
+| `E Z O D I A C DOT L I B R A` | `zodiac.libra` | ♎ | active |
+| `E Z O D I A C DOT O P H I` | `zodiac.ophi` | ⛎ | active |
+| `E Z O D I A C DOT P I S C E S` | `zodiac.pisces` | ♓ | active |
+| `E Z O D I A C DOT S A G I T` | `zodiac.sagit` | ♐ | active |
+| `E Z O D I A C DOT S C O R P I O` | `zodiac.scorpio` | ♏ | active |
+| `E Z O D I A C DOT T A U R U S` | `zodiac.taurus` | ♉ | active |
+| `E Z O D I A C DOT V I R G O` | `zodiac.virgo` | ♍ | active |
+| `E Z O M B I E` | `zombie` | 🧟 | active |
 | `E Z Z Z` | `zzz` | 💤 | active |
 | `E A B C D` | `ABCD` | 🔠 | disabled: every spelling clashes |
-| `E A` | `a` | 🅰 | disabled: beyond the active limit |
-| `E A B` | `ab` | 🆎 | disabled: beyond the active limit |
+| `E A` | `a` | 🅰 | disabled: labelled button glyph |
+| `E A B` | `ab` | 🆎 | disabled: labelled button glyph |
 | `E A B C D` | `abcd` | 🔡 | disabled: every spelling clashes |
-| `E A C C O R D I O N` | `accordion` | 🪗 | disabled: beyond the active limit |
-| `E A I R P L A N E DOT L A N D I N G` | `airplane.landing` | 🛬 | disabled: beyond the active limit |
-| `E A I R P L A N E DOT S M A L L` | `airplane.small` | 🛩 | disabled: beyond the active limit |
-| `E A I R P L A N E DOT T A K E O F F` | `airplane.takeoff` | 🛫 | disabled: beyond the active limit |
-| `E A L E M B I C` | `alembic` | ⚗ | disabled: beyond the active limit |
-| `E A L I E N DOT M O N S T E R` | `alien.monster` | 👾 | disabled: beyond the active limit |
-| `E A M B U L A N C E` | `ambulance` | 🚑 | disabled: beyond the active limit |
-| `E A M P H O R A` | `amphora` | 🏺 | disabled: beyond the active limit |
-| `E A P P L E DOT G R E E N` | `apple.green` | 🍏 | disabled: beyond the active limit |
-| `E A R M DOT M E C H` | `arm.mech` | 🦾 | disabled: beyond the active limit |
-| `E A R M DOT S E L F I E` | `arm.selfie` | 🤳 | disabled: beyond the active limit |
-| `E A R R O W DOT B DOT C U R V E` | `arrow.b.curve` | ⤵ | disabled: beyond the active limit |
-| `E A R R O W DOT L DOT B A C K` | `arrow.l.back` | 🔙 | disabled: beyond the active limit |
-| `E A R R O W DOT L DOT E N D` | `arrow.l.end` | 🔚 | disabled: beyond the active limit |
-| `E A R R O W DOT L DOT H O O K` | `arrow.l.hook` | ↩ | disabled: beyond the active limit |
-| `E A R R O W DOT L DOT R DOT O N` | `arrow.l.r.on` | 🔛 | disabled: beyond the active limit |
-| `E A R R O W DOT R DOT H O O K` | `arrow.r.hook` | ↪ | disabled: beyond the active limit |
-| `E A R R O W DOT R DOT S O O N` | `arrow.r.soon` | 🔜 | disabled: beyond the active limit |
-| `E A R R O W DOT T DOT C U R V E` | `arrow.t.curve` | ⤴ | disabled: beyond the active limit |
-| `E A R R O W DOT T DOT T O P` | `arrow.t.top` | 🔝 | disabled: beyond the active limit |
-| `E A S T DOT B O X` | `ast.box` | ✳ | disabled: beyond the active limit |
-| `E A U B E R G I N E` | `aubergine` | 🍆 | disabled: beyond the active limit |
-| `E A V O C A D O` | `avocado` | 🥑 | disabled: beyond the active limit |
-| `E B` | `b` | 🅱 | disabled: beyond the active limit |
-| `E B A B Y DOT A N G E L` | `baby.angel` | 👼 | disabled: beyond the active limit |
-| `E B A B Y DOT B O X` | `baby.box` | 🚼 | disabled: beyond the active limit |
-| `E B A B Y B O T T L E` | `babybottle` | 🍼 | disabled: beyond the active limit |
-| `E B A C K P A C K` | `backpack` | 🎒 | disabled: beyond the active limit |
-| `E B A D M I N T O N` | `badminton` | 🏸 | disabled: beyond the active limit |
-| `E B A G G A G E C L A I M` | `baggageclaim` | 🛄 | disabled: beyond the active limit |
-| `E B A G U E T T E` | `baguette` | 🥖 | disabled: beyond the active limit |
-| `E B A L L O T DOT C H E C K` | `ballot.check` | ☑ | disabled: beyond the active limit |
-| `E B A L L O T B O X` | `ballotbox` | 🗳 | disabled: beyond the active limit |
-| `E B A R B E R P O L E` | `barberpole` | 💈 | disabled: beyond the active limit |
-| `E B A S E B A L L` | `baseball` | ⚾ | disabled: beyond the active limit |
-| `E B A S E C A P` | `basecap` | 🧢 | disabled: beyond the active limit |
-| `E B A S K E T B A L L` | `basketball` | ⛹ | disabled: beyond the active limit |
-| `E B A S K E T B A L L DOT B A L L` | `basketball.ball` | 🏀 | disabled: beyond the active limit |
+| `E B` | `b` | 🅱 | disabled: labelled button glyph |
+| `E B A B Y B O T T L E` | `babybottle` | 🍼 | disabled: every spelling clashes |
+| `E B A S K E T B A L L` | `basketball` | ⛹ | disabled: every spelling clashes |
 | `E B A T` | `bat` | 🦇 | disabled: every spelling clashes |
-| `E B A T H T U B` | `bathtub` | 🛀 | disabled: beyond the active limit |
-| `E B A T H T U B DOT F O A M` | `bathtub.foam` | 🛁 | disabled: beyond the active limit |
-| `E B A T T E R Y DOT L O W` | `battery.low` | 🪫 | disabled: beyond the active limit |
-| `E B E A C H DOT P A L M` | `beach.palm` | 🏝 | disabled: beyond the active limit |
-| `E B E A C H DOT U M B R E L L A` | `beach.umbrella` | 🏖 | disabled: beyond the active limit |
-| `E B E D DOT P E R S O N` | `bed.person` | 🛌 | disabled: beyond the active limit |
+| `E B E D DOT P E R S O N` | `bed.person` | 🛌 | disabled: every spelling clashes |
 | `E B E E` | `bee` | 🐝 | disabled: every spelling clashes |
-| `E B E E R DOT C L I N K` | `beer.clink` | 🍻 | disabled: beyond the active limit |
 | `E B E E T L E` | `beetle` | 🪲 | disabled: every spelling clashes |
-| `E B E E T L E DOT L A D Y` | `beetle.lady` | 🐞 | disabled: beyond the active limit |
-| `E B E L L DOT D I N G` | `bell.ding` | 🛎 | disabled: beyond the active limit |
-| `E B E L L DOT N O T` | `bell.not` | 🔕 | disabled: every spelling clashes |
-| `E B I C Y C L I S T` | `bicyclist` | 🚴 | disabled: beyond the active limit |
-| `E B I C Y C L I S T DOT M O U N T A I N` | `bicyclist.mountain` | 🚵 | disabled: beyond the active limit |
-| `E B I G F O O T` | `bigfoot` | 🫈 | disabled: beyond the active limit |
-| `E B I K E DOT N O T` | `bike.not` | 🚳 | disabled: beyond the active limit |
-| `E B I L L I A R D S` | `billiards` | 🎱 | disabled: beyond the active limit |
-| `E B L O W F I S H` | `blowfish` | 🐡 | disabled: beyond the active limit |
-| `E B L U E B E R R I E S` | `blueberries` | 🫐 | disabled: beyond the active limit |
-| `E B O A T DOT C A N O E` | `boat.canoe` | 🛶 | disabled: beyond the active limit |
-| `E B O A T DOT M O T O R` | `boat.motor` | 🛥 | disabled: beyond the active limit |
-| `E B O A T DOT R O W` | `boat.row` | 🚣 | disabled: beyond the active limit |
-| `E B O A T DOT S P E E D` | `boat.speed` | 🚤 | disabled: beyond the active limit |
-| `E B O O K DOT B L U E` | `book.blue` | 📘 | disabled: beyond the active limit |
-| `E B O O K DOT G R E E N` | `book.green` | 📗 | disabled: beyond the active limit |
-| `E B O O K DOT O P E N` | `book.open` | 📖 | disabled: beyond the active limit |
-| `E B O O K DOT O R A N G E` | `book.orange` | 📙 | disabled: beyond the active limit |
-| `E B O O K DOT R E D` | `book.red` | 📕 | disabled: beyond the active limit |
-| `E B O O K DOT S P I R A L` | `book.spiral` | 📒 | disabled: beyond the active limit |
-| `E B O O K M A R K` | `bookmark` | 🔖 | disabled: beyond the active limit |
-| `E B O O M E R A N G` | `boomerang` | 🪃 | disabled: beyond the active limit |
-| `E B O R D E R C O N T R O L` | `bordercontrol` | 🛂 | disabled: beyond the active limit |
-| `E B O U Q U E T` | `bouquet` | 💐 | disabled: beyond the active limit |
-| `E B O W L DOT S P O O N` | `bowl.spoon` | 🥣 | disabled: beyond the active limit |
-| `E B O W L DOT S T E A M` | `bowl.steam` | 🍜 | disabled: beyond the active limit |
-| `E B O W L I N G` | `bowling` | 🎳 | disabled: beyond the active limit |
-| `E B R I D G E DOT F O G` | `bridge.fog` | 🌁 | disabled: beyond the active limit |
-| `E B R I D G E DOT N I G H T` | `bridge.night` | 🌉 | disabled: beyond the active limit |
-| `E B R I E F C A S E` | `briefcase` | 💼 | disabled: beyond the active limit |
-| `E B R I G H T N E S S DOT H I G H` | `brightness.high` | 🔆 | disabled: beyond the active limit |
-| `E B R I G H T N E S S DOT L O W` | `brightness.low` | 🔅 | disabled: beyond the active limit |
-| `E B R O C C O L I` | `broccoli` | 🥦 | disabled: beyond the active limit |
-| `E B U B B L E DOT S P E E C H DOT L` | `bubble.speech.l` | 🗨 | disabled: beyond the active limit |
-| `E B U B B L E S` | `bubbles` | 🫧 | disabled: beyond the active limit |
-| `E B U B B L E T E A` | `bubbletea` | 🧋 | disabled: beyond the active limit |
-| `E B U F F A L O DOT W A T E R` | `buffalo.water` | 🐃 | disabled: beyond the active limit |
-| `E B U I L D E R` | `builder` | 👷 | disabled: beyond the active limit |
-| `E B U R R I T O` | `burrito` | 🌯 | disabled: beyond the active limit |
-| `E B U S DOT F R O N T` | `bus.front` | 🚍 | disabled: beyond the active limit |
-| `E B U S DOT S M A L L` | `bus.small` | 🚐 | disabled: beyond the active limit |
-| `E B U S DOT S T O P` | `bus.stop` | 🚏 | disabled: beyond the active limit |
-| `E B U S DOT T R O L L E Y` | `bus.trolley` | 🚎 | disabled: beyond the active limit |
-| `E B U T T E R F L Y` | `butterfly` | 🦋 | disabled: beyond the active limit |
-| `E B U T T O N DOT A L T` | `button.alt` | 🔳 | disabled: beyond the active limit |
-| `E B U T T O N DOT R A D I O` | `button.radio` | 🔘 | disabled: beyond the active limit |
-| `E C A B L E C A R` | `cablecar` | 🚠 | disabled: beyond the active limit |
-| `E C A B L E C A R DOT S M A L L` | `cablecar.small` | 🚡 | disabled: beyond the active limit |
-| `E C A K E DOT F I S H` | `cake.fish` | 🍥 | disabled: beyond the active limit |
-| `E C A K E DOT M O O N` | `cake.moon` | 🥮 | disabled: beyond the active limit |
-| `E C A K E DOT S L I C E` | `cake.slice` | 🍰 | disabled: beyond the active limit |
-| `E C A L E N D A R DOT S P I R A L` | `calendar.spiral` | 🗓 | disabled: every spelling clashes |
-| `E C A L E N D A R DOT T E A R O F F` | `calendar.tearoff` | 📆 | disabled: every spelling clashes |
-| `E C A M E L DOT D R O M E D A R` | `camel.dromedar` | 🐪 | disabled: beyond the active limit |
-| `E C A M E R A DOT F L A S H` | `camera.flash` | 📸 | disabled: beyond the active limit |
-| `E C A M E R A DOT M O V I E` | `camera.movie` | 🎥 | disabled: beyond the active limit |
-| `E C A M E R A DOT M O V I E DOT B O X` | `camera.movie.box` | 🎦 | disabled: beyond the active limit |
-| `E C A M E R A DOT V I D E O` | `camera.video` | 📹 | disabled: beyond the active limit |
-| `E C A M P I N G` | `camping` | 🏕 | disabled: beyond the active limit |
+| `E B I C Y C L I S T DOT M O U N T A I N` | `bicyclist.mountain` | 🚵 | disabled: every spelling clashes |
+| `E B O W L DOT S P O O N` | `bowl.spoon` | 🥣 | disabled: every spelling clashes |
+| `E B O W L I N G` | `bowling` | 🎳 | disabled: every spelling clashes |
+| `E B U S DOT T R O L L E Y` | `bus.trolley` | 🚎 | disabled: every spelling clashes |
+| `E B U T T E R F L Y` | `butterfly` | 🦋 | disabled: every spelling clashes |
+| `E C A K E DOT F I S H` | `cake.fish` | 🍥 | disabled: every spelling clashes |
 | `E C A N D L E` | `candle` | 🕯 | disabled: every spelling clashes |
 | `E C A N D Y` | `candy` | 🍬 | disabled: every spelling clashes |
 | `E C A N E` | `cane` | 🦯 | disabled: every spelling clashes |
-| `E C A R DOT F R O N T` | `car.front` | 🚘 | disabled: beyond the active limit |
-| `E C A R DOT P I C K U P` | `car.pickup` | 🛻 | disabled: beyond the active limit |
-| `E C A R DOT P O L I C E` | `car.police` | 🚓 | disabled: beyond the active limit |
-| `E C A R DOT P O L I C E DOT F R O N T` | `car.police.front` | 🚔 | disabled: beyond the active limit |
-| `E C A R DOT R A C I N G` | `car.racing` | 🏎 | disabled: beyond the active limit |
-| `E C A R DOT R I C K S H A W` | `car.rickshaw` | 🛺 | disabled: beyond the active limit |
-| `E C A R DOT S U V` | `car.suv` | 🚙 | disabled: beyond the active limit |
-| `E C A R D DOT C R E D I T` | `card.credit` | 💳 | disabled: beyond the active limit |
-| `E C A R D DOT I D` | `card.id` | 🪪 | disabled: beyond the active limit |
-| `E C A R D I N D E X` | `cardindex` | 📇 | disabled: beyond the active limit |
+| `E C A R DOT P I C K U P` | `car.pickup` | 🛻 | disabled: every spelling clashes |
+| `E C A R DOT P O L I C E DOT F R O N T` | `car.police.front` | 🚔 | disabled: every spelling clashes |
+| `E C A R D I N D E X` | `cardindex` | 📇 | disabled: every spelling clashes |
 | `E C A R R O T` | `carrot` | 🥕 | disabled: every spelling clashes |
 | `E C A R T` | `cart` | 🛒 | disabled: every spelling clashes |
-| `E C A S S E T T E` | `cassette` | 📼 | disabled: beyond the active limit |
-| `E C A S T L E DOT E U` | `castle.eu` | 🏰 | disabled: beyond the active limit |
-| `E C A S T L E DOT J P` | `castle.jp` | 🏯 | disabled: beyond the active limit |
 | `E C A T` | `cat` | 🐈 | disabled: every spelling clashes |
-| `E C A T DOT F A C E DOT A N G R Y` | `cat.face.angry` | 😾 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT C R Y` | `cat.face.cry` | 😿 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT H E A R T` | `cat.face.heart` | 😻 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT J O Y` | `cat.face.joy` | 😹 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT K I S S` | `cat.face.kiss` | 😽 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT L A U G H` | `cat.face.laugh` | 😸 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT S H O C K` | `cat.face.shock` | 🙀 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT S M I L E` | `cat.face.smile` | 😺 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT S M I R K` | `cat.face.smirk` | 😼 | disabled: beyond the active limit |
 | `E C H A I N S` | `chains` | ⛓ | disabled: every spelling clashes |
-| `E C H A M P A G N E` | `champagne` | 🍾 | disabled: beyond the active limit |
-| `E C H A R T DOT Y E N DOT U P` | `chart.yen.up` | 💹 | disabled: beyond the active limit |
-| `E C H E R R I E S` | `cherries` | 🍒 | disabled: beyond the active limit |
-| `E C H E S T N U T` | `chestnut` | 🌰 | disabled: beyond the active limit |
-| `E C H I C K E N` | `chicken` | 🐔 | disabled: beyond the active limit |
-| `E C H I C K E N DOT B A B Y` | `chicken.baby` | 🐥 | disabled: beyond the active limit |
-| `E C H I C K E N DOT B A B Y DOT E G G` | `chicken.baby.egg` | 🐣 | disabled: beyond the active limit |
-| `E C H I C K E N DOT B A B Y DOT H E A D` | `chicken.baby.head` | 🐤 | disabled: beyond the active limit |
-| `E C H I C K E N DOT L E G` | `chicken.leg` | 🍗 | disabled: beyond the active limit |
-| `E C H I C K E N DOT M A L E` | `chicken.male` | 🐓 | disabled: beyond the active limit |
-| `E C H I P M U N K` | `chipmunk` | 🐿 | disabled: beyond the active limit |
-| `E C H O P S T I C K S` | `chopsticks` | 🥢 | disabled: beyond the active limit |
-| `E C H U R C H DOT L O V E` | `church.love` | 💒 | disabled: beyond the active limit |
-| `E C I G A R E T T E` | `cigarette` | 🚬 | disabled: beyond the active limit |
-| `E C I G A R E T T E DOT N O T` | `cigarette.not` | 🚭 | disabled: beyond the active limit |
-| `E C I R C L E DOT B R O W N` | `circle.brown` | 🟤 | disabled: beyond the active limit |
-| `E C I R C L E DOT S T R O K E D` | `circle.stroked` | ⭕ | disabled: beyond the active limit |
-| `E C I T Y DOT D U S K` | `city.dusk` | 🌆 | disabled: beyond the active limit |
-| `E C I T Y DOT N I G H T` | `city.night` | 🌃 | disabled: beyond the active limit |
-| `E C I T Y DOT S U N S E T` | `city.sunset` | 🌇 | disabled: beyond the active limit |
-| `E C L` | `cl` | 🆑 | disabled: beyond the active limit |
-| `E C L A P P E R B O A R D` | `clapperboard` | 🎬 | disabled: beyond the active limit |
-| `E C L I M B I N G` | `climbing` | 🧗 | disabled: beyond the active limit |
-| `E C L I P B O A R D` | `clipboard` | 📋 | disabled: beyond the active limit |
+| `E C H I C K E N DOT B A B Y` | `chicken.baby` | 🐥 | disabled: every spelling clashes |
+| `E C H I C K E N DOT B A B Y DOT E G G` | `chicken.baby.egg` | 🐣 | disabled: every spelling clashes |
+| `E C H I C K E N DOT L E G` | `chicken.leg` | 🍗 | disabled: every spelling clashes |
+| `E C I T Y DOT S U N S E T` | `city.sunset` | 🌇 | disabled: every spelling clashes |
+| `E C L` | `cl` | 🆑 | disabled: labelled button glyph |
+| `E C L I P B O A R D` | `clipboard` | 📋 | disabled: every spelling clashes |
 | `E C L I P S` | `clips` | 🖇 | disabled: every spelling clashes |
-| `E C L O C K DOT E I G H T` | `clock.eight` | 🕗 | disabled: beyond the active limit |
-| `E C L O C K DOT E I G H T DOT T H I R T Y` | `clock.eight.thirty` | 🕣 | disabled: beyond the active limit |
-| `E C L O C K DOT E L E V E N` | `clock.eleven` | 🕚 | disabled: beyond the active limit |
-| `E C L O C K DOT E L E V E N DOT T H I R T Y` | `clock.eleven.thirty` | 🕦 | disabled: beyond the active limit |
-| `E C L O C K DOT F I V E DOT T H I R T Y` | `clock.five.thirty` | 🕠 | disabled: beyond the active limit |
-| `E C L O C K DOT F O U R DOT T H I R T Y` | `clock.four.thirty` | 🕟 | disabled: beyond the active limit |
-| `E C L O C K DOT N I N E` | `clock.nine` | 🕘 | disabled: beyond the active limit |
-| `E C L O C K DOT N I N E DOT T H I R T Y` | `clock.nine.thirty` | 🕤 | disabled: beyond the active limit |
-| `E C L O C K DOT O L D` | `clock.old` | 🕰 | disabled: beyond the active limit |
-| `E C L O C K DOT O N E DOT T H I R T Y` | `clock.one.thirty` | 🕜 | disabled: beyond the active limit |
-| `E C L O C K DOT S E V E N` | `clock.seven` | 🕖 | disabled: beyond the active limit |
-| `E C L O C K DOT S E V E N DOT T H I R T Y` | `clock.seven.thirty` | 🕢 | disabled: beyond the active limit |
-| `E C L O C K DOT S I X DOT T H I R T Y` | `clock.six.thirty` | 🕡 | disabled: beyond the active limit |
-| `E C L O C K DOT T E N` | `clock.ten` | 🕙 | disabled: beyond the active limit |
-| `E C L O C K DOT T E N DOT T H I R T Y` | `clock.ten.thirty` | 🕥 | disabled: beyond the active limit |
-| `E C L O C K DOT T H R E E DOT T H I R T Y` | `clock.three.thirty` | 🕞 | disabled: beyond the active limit |
-| `E C L O C K DOT T W E L V E` | `clock.twelve` | 🕛 | disabled: beyond the active limit |
-| `E C L O C K DOT T W E L V E DOT T H I R T Y` | `clock.twelve.thirty` | 🕧 | disabled: beyond the active limit |
-| `E C L O C K DOT T W O DOT T H I R T Y` | `clock.two.thirty` | 🕝 | disabled: beyond the active limit |
 | `E C L O U D` | `cloud` | ☁ | disabled: every spelling clashes |
-| `E C L O U D DOT D U S T` | `cloud.dust` | 💨 | disabled: beyond the active limit |
-| `E C L O U D DOT S N O W` | `cloud.snow` | 🌨 | disabled: beyond the active limit |
-| `E C L O U D DOT S U N DOT H I D D E N` | `cloud.sun.hidden` | 🌥 | disabled: beyond the active limit |
-| `E C L O U D DOT S U N DOT R A I N` | `cloud.sun.rain` | 🌦 | disabled: beyond the active limit |
-| `E C L O U D DOT T H U N D E R` | `cloud.thunder` | 🌩 | disabled: beyond the active limit |
-| `E C O A T DOT L A B` | `coat.lab` | 🥼 | disabled: beyond the active limit |
-| `E C O C K R O A C H` | `cockroach` | 🪳 | disabled: beyond the active limit |
-| `E C O C K T A I L DOT M A R T I N I` | `cocktail.martini` | 🍸 | disabled: beyond the active limit |
-| `E C O C K T A I L DOT T R O P I C A L` | `cocktail.tropical` | 🍹 | disabled: beyond the active limit |
-| `E C O C O N U T` | `coconut` | 🥥 | disabled: beyond the active limit |
-| `E C O M P A S S` | `compass` | 🧭 | disabled: beyond the active limit |
 | `E C O M P U T E R M O U S E` | `computermouse` | 🖱 | disabled: every spelling clashes |
-| `E C O N S T R U C T I O N` | `construction` | 🚧 | disabled: beyond the active limit |
-| `E C O N T R O L L E R` | `controller` | 🎮 | disabled: beyond the active limit |
-| `E C O O K I E DOT F O R T U N E` | `cookie.fortune` | 🥠 | disabled: beyond the active limit |
-| `E C O O K I N G` | `cooking` | 🍳 | disabled: beyond the active limit |
-| `E C O O L` | `cool` | 🆒 | disabled: beyond the active limit |
-| `E C O P Y R I G H T` | `copyright` | © | disabled: beyond the active limit |
-| `E C O W DOT F A C E` | `cow.face` | 🐮 | disabled: beyond the active limit |
-| `E C R I C K E T` | `cricket` | 🦗 | disabled: beyond the active limit |
-| `E C R I C K E T B A T` | `cricketbat` | 🏏 | disabled: beyond the active limit |
-| `E C R O C O D I L E` | `crocodile` | 🐊 | disabled: beyond the active limit |
-| `E C R O I S S A N T` | `croissant` | 🥐 | disabled: beyond the active limit |
-| `E C R O S S M A R K DOT B O X` | `crossmark.box` | ❎ | disabled: beyond the active limit |
-| `E C R Y S T A L` | `crystal` | 🔮 | disabled: beyond the active limit |
-| `E C U C U M B E R` | `cucumber` | 🥒 | disabled: beyond the active limit |
-| `E C U P DOT S T R A W` | `cup.straw` | 🥤 | disabled: beyond the active limit |
-| `E C U P C A K E` | `cupcake` | 🧁 | disabled: beyond the active limit |
-| `E C U R L I N G` | `curling` | 🥌 | disabled: beyond the active limit |
-| `E C U S T A R D` | `custard` | 🍮 | disabled: beyond the active limit |
-| `E C U S T O M S` | `customs` | 🛃 | disabled: beyond the active limit |
-| `E C U T L E R Y` | `cutlery` | 🍴 | disabled: beyond the active limit |
-| `E C Y C L O N E` | `cyclone` | 🌀 | disabled: beyond the active limit |
-| `E D A N C I N G DOT B A L L E T` | `dancing.ballet` | 🧑‍🩰 | disabled: beyond the active limit |
-| `E D A N C I N G DOT B U N N Y` | `dancing.bunny` | 👯 | disabled: beyond the active limit |
-| `E D A N C I N G DOT B U N N Y DOT M E N` | `dancing.bunny.men` | 👯‍♂ | disabled: beyond the active limit |
-| `E D A N C I N G DOT B U N N Y DOT W O M E N` | `dancing.bunny.women` | 👯‍♀ | disabled: beyond the active limit |
-| `E D A N C I N G DOT M A N` | `dancing.man` | 🕺 | disabled: beyond the active limit |
-| `E D A N C I N G DOT W O M A N` | `dancing.woman` | 💃 | disabled: beyond the active limit |
-| `E D A S H DOT W A V E DOT D O U B L E` | `dash.wave.double` | 〰 | disabled: beyond the active limit |
-| `E D E T E C T I V E` | `detective` | 🕵 | disabled: beyond the active limit |
-| `E D I A M O N D DOT B L U E` | `diamond.blue` | 🔷 | disabled: beyond the active limit |
-| `E D I A M O N D DOT B L U E DOT S M A L L` | `diamond.blue.small` | 🔹 | disabled: beyond the active limit |
-| `E D I A M O N D DOT D O T` | `diamond.dot` | 💠 | disabled: beyond the active limit |
-| `E D I A M O N D DOT O R A N G E` | `diamond.orange` | 🔶 | disabled: beyond the active limit |
-| `E D I A M O N D DOT O R A N G E DOT S M A L L` | `diamond.orange.small` | 🔸 | disabled: beyond the active limit |
-| `E D I N O DOT P O D` | `dino.pod` | 🦕 | disabled: beyond the active limit |
-| `E D I N O DOT R E X` | `dino.rex` | 🦖 | disabled: beyond the active limit |
-| `E D I S C DOT C D` | `disc.cd` | 💿 | disabled: beyond the active limit |
-| `E D I S C DOT D V D` | `disc.dvd` | 📀 | disabled: beyond the active limit |
-| `E D I S C DOT M I N I` | `disc.mini` | 💽 | disabled: beyond the active limit |
-| `E D I S C O B A L L` | `discoball` | 🪩 | disabled: beyond the active limit |
+| `E C O O L` | `cool` | 🆒 | disabled: labelled button glyph |
+| `E C R I C K E T B A T` | `cricketbat` | 🏏 | disabled: every spelling clashes |
 | `E D O G` | `dog` | 🐕 | disabled: every spelling clashes |
-| `E D O G DOT G U I D E` | `dog.guide` | 🦮 | disabled: beyond the active limit |
-| `E D O G DOT P O O D L E` | `dog.poodle` | 🐩 | disabled: beyond the active limit |
-| `E D O L P H I N` | `dolphin` | 🐬 | disabled: beyond the active limit |
-| `E D O V E DOT P E A C E` | `dove.peace` | 🕊 | disabled: beyond the active limit |
-| `E D R A G O N DOT F A C E` | `dragon.face` | 🐲 | disabled: beyond the active limit |
-| `E D R E S S DOT K I M O N O` | `dress.kimono` | 👘 | disabled: beyond the active limit |
-| `E D R E S S DOT S A R I` | `dress.sari` | 🥻 | disabled: beyond the active limit |
 | `E D R O P S` | `drops` | 💦 | disabled: every spelling clashes |
-| `E D R U M DOT B I G` | `drum.big` | 🪘 | disabled: beyond the active limit |
-| `E D U M P L I N G` | `dumpling` | 🥟 | disabled: beyond the active limit |
-| `E E A R DOT A I D` | `ear.aid` | 🦻 | disabled: beyond the active limit |
-| `E E I G H T E E N DOT N O T` | `eighteen.not` | 🔞 | disabled: beyond the active limit |
-| `E E L E P H A N T` | `elephant` | 🐘 | disabled: beyond the active limit |
-| `E E L E V A T O R` | `elevator` | 🛗 | disabled: beyond the active limit |
-| `E E X C L DOT D O U B L E` | `excl.double` | ‼ | disabled: every spelling clashes |
 | `E E X C L DOT Q U E S T` | `excl.quest` | ⁉ | disabled: every spelling clashes |
-| `E E X C L DOT W H I T E` | `excl.white` | ❕ | disabled: beyond the active limit |
-| `E E X T I N G U I S H E R` | `extinguisher` | 🧯 | disabled: beyond the active limit |
 | `E E Y E S` | `eyes` | 👀 | disabled: every spelling clashes |
-| `E F A C E DOT A N G R Y` | `face.angry` | 😠 | disabled: beyond the active limit |
-| `E F A C E DOT A N G R Y DOT R E D` | `face.angry.red` | 😡 | disabled: beyond the active limit |
-| `E F A C E DOT A N G U I S H` | `face.anguish` | 😧 | disabled: beyond the active limit |
-| `E F A C E DOT A S T O N I S H` | `face.astonish` | 😲 | disabled: beyond the active limit |
-| `E F A C E DOT B A N D A G E` | `face.bandage` | 🤕 | disabled: beyond the active limit |
-| `E F A C E DOT B E A M` | `face.beam` | 😁 | disabled: beyond the active limit |
-| `E F A C E DOT B L A N K` | `face.blank` | 😶 | disabled: beyond the active limit |
-| `E F A C E DOT C L O W N` | `face.clown` | 🤡 | disabled: beyond the active limit |
-| `E F A C E DOT C O L D` | `face.cold` | 🥶 | disabled: beyond the active limit |
-| `E F A C E DOT C O N C E R N` | `face.concern` | 😦 | disabled: beyond the active limit |
-| `E F A C E DOT C O V E R` | `face.cover` | 🤭 | disabled: beyond the active limit |
-| `E F A C E DOT C O W B O Y` | `face.cowboy` | 🤠 | disabled: beyond the active limit |
-| `E F A C E DOT D E V I L DOT F R O W N` | `face.devil.frown` | 👿 | disabled: beyond the active limit |
-| `E F A C E DOT D E V I L DOT S M I L E` | `face.devil.smile` | 😈 | disabled: beyond the active limit |
-| `E F A C E DOT D I A G O N A L` | `face.diagonal` | 🫤 | disabled: beyond the active limit |
-| `E F A C E DOT D I S G U I S E` | `face.disguise` | 🥸 | disabled: beyond the active limit |
-| `E F A C E DOT D I S T O R T E D` | `face.distorted` | 🫪 | disabled: beyond the active limit |
-| `E F A C E DOT D I S T R E S S` | `face.distress` | 😫 | disabled: beyond the active limit |
-| `E F A C E DOT D I Z Z Y` | `face.dizzy` | 😵 | disabled: beyond the active limit |
-| `E F A C E DOT D O T T E D` | `face.dotted` | 🫥 | disabled: beyond the active limit |
-| `E F A C E DOT D O W N` | `face.down` | 😞 | disabled: beyond the active limit |
-| `E F A C E DOT D O W N DOT S W E A T` | `face.down.sweat` | 😓 | disabled: beyond the active limit |
-| `E F A C E DOT D R O O L` | `face.drool` | 🤤 | disabled: beyond the active limit |
-| `E F A C E DOT E Y E R O L L` | `face.eyeroll` | 🙄 | disabled: beyond the active limit |
-| `E F A C E DOT F E A R` | `face.fear` | 😨 | disabled: beyond the active limit |
-| `E F A C E DOT F E A R DOT S W E A T` | `face.fear.sweat` | 😰 | disabled: beyond the active limit |
-| `E F A C E DOT F E V E R` | `face.fever` | 🤒 | disabled: beyond the active limit |
-| `E F A C E DOT F L U S H` | `face.flush` | 😳 | disabled: beyond the active limit |
-| `E F A C E DOT F R I E N D L Y` | `face.friendly` | ☺ | disabled: beyond the active limit |
-| `E F A C E DOT F R O W N` | `face.frown` | ☹ | disabled: beyond the active limit |
-| `E F A C E DOT F R O W N DOT S L I G H T` | `face.frown.slight` | 🙁 | disabled: beyond the active limit |
-| `E F A C E DOT F R U S T` | `face.frust` | 😣 | disabled: beyond the active limit |
-| `E F A C E DOT G O O F Y` | `face.goofy` | 🤪 | disabled: beyond the active limit |
-| `E F A C E DOT H E A R T S` | `face.hearts` | 🥰 | disabled: beyond the active limit |
-| `E F A C E DOT H E A T` | `face.heat` | 🥵 | disabled: beyond the active limit |
-| `E F A C E DOT H U G` | `face.hug` | 🤗 | disabled: beyond the active limit |
-| `E F A C E DOT K I S S` | `face.kiss` | 😗 | disabled: beyond the active limit |
-| `E F A C E DOT K I S S DOT B L U S H` | `face.kiss.blush` | 😚 | disabled: beyond the active limit |
-| `E F A C E DOT K I S S DOT H E A R T` | `face.kiss.heart` | 😘 | disabled: beyond the active limit |
-| `E F A C E DOT K I S S DOT S M I L E` | `face.kiss.smile` | 😙 | disabled: beyond the active limit |
-| `E F A C E DOT L I C K` | `face.lick` | 😋 | disabled: beyond the active limit |
-| `E F A C E DOT L I E` | `face.lie` | 🤥 | disabled: beyond the active limit |
-| `E F A C E DOT M A S K` | `face.mask` | 😷 | disabled: beyond the active limit |
-| `E F A C E DOT M E H` | `face.meh` | 😒 | disabled: beyond the active limit |
-| `E F A C E DOT M E L T` | `face.melt` | 🫠 | disabled: beyond the active limit |
-| `E F A C E DOT M O N E Y` | `face.money` | 🤑 | disabled: beyond the active limit |
-| `E F A C E DOT M O N O C L E` | `face.monocle` | 🧐 | disabled: beyond the active limit |
-| `E F A C E DOT N E R D` | `face.nerd` | 🤓 | disabled: beyond the active limit |
-| `E F A C E DOT O P E N` | `face.open` | 😃 | disabled: beyond the active limit |
-| `E F A C E DOT P E E K` | `face.peek` | 🫣 | disabled: beyond the active limit |
-| `E F A C E DOT R E L I E F` | `face.relief` | 😌 | disabled: beyond the active limit |
-| `E F A C E DOT S A D` | `face.sad` | 😔 | disabled: beyond the active limit |
-| `E F A C E DOT S H A K I N G` | `face.shaking` | 🫨 | disabled: beyond the active limit |
-| `E F A C E DOT S H U S H` | `face.shush` | 🤫 | disabled: beyond the active limit |
-| `E F A C E DOT S K E P T I C` | `face.skeptic` | 🤨 | disabled: beyond the active limit |
-| `E F A C E DOT S L E E P Y` | `face.sleepy` | 😪 | disabled: beyond the active limit |
-| `E F A C E DOT S M I L E` | `face.smile` | 😄 | disabled: beyond the active limit |
-| `E F A C E DOT S M I L E DOT S L I G H T` | `face.smile.slight` | 🙂 | disabled: beyond the active limit |
-| `E F A C E DOT S M I L E DOT T E A R` | `face.smile.tear` | 🥲 | disabled: beyond the active limit |
-| `E F A C E DOT S M I R K` | `face.smirk` | 😏 | disabled: beyond the active limit |
-| `E F A C E DOT S N E E Z E` | `face.sneeze` | 🤧 | disabled: beyond the active limit |
-| `E F A C E DOT S P E A K DOT N O T` | `face.speak.not` | 🫢 | disabled: beyond the active limit |
-| `E F A C E DOT S Q U I N T` | `face.squint` | 😆 | disabled: beyond the active limit |
-| `E F A C E DOT S T A R S` | `face.stars` | 🤩 | disabled: beyond the active limit |
-| `E F A C E DOT S U F F E R` | `face.suffer` | 😖 | disabled: beyond the active limit |
-| `E F A C E DOT S U R P R I S E` | `face.surprise` | 😯 | disabled: beyond the active limit |
-| `E F A C E DOT S Y M B O L S` | `face.symbols` | 🤬 | disabled: beyond the active limit |
-| `E F A C E DOT T E A R DOT R E L I E F` | `face.tear.relief` | 😥 | disabled: beyond the active limit |
-| `E F A C E DOT T E A R DOT W I T H H E L D` | `face.tear.withheld` | 🥹 | disabled: beyond the active limit |
-| `E F A C E DOT T E E T H` | `face.teeth` | 😬 | disabled: beyond the active limit |
-| `E F A C E DOT T I R E D` | `face.tired` | 🫩 | disabled: beyond the active limit |
-| `E F A C E DOT T O N G U E` | `face.tongue` | 😛 | disabled: beyond the active limit |
-| `E F A C E DOT T O N G U E DOT S Q U I N T` | `face.tongue.squint` | 😝 | disabled: beyond the active limit |
-| `E F A C E DOT T O N G U E DOT W I N K` | `face.tongue.wink` | 😜 | disabled: beyond the active limit |
-| `E F A C E DOT T R I U M P H` | `face.triumph` | 😤 | disabled: beyond the active limit |
-| `E F A C E DOT U N H A P P Y` | `face.unhappy` | 😕 | disabled: beyond the active limit |
-| `E F A C E DOT V O M I T` | `face.vomit` | 🤮 | disabled: beyond the active limit |
-| `E F A C E DOT W E A R Y` | `face.weary` | 😩 | disabled: beyond the active limit |
-| `E F A C E DOT W O O Z Y` | `face.woozy` | 🥴 | disabled: beyond the active limit |
-| `E F A C E DOT W O R R Y` | `face.worry` | 😟 | disabled: beyond the active limit |
-| `E F A C E DOT W O W` | `face.wow` | 😮 | disabled: beyond the active limit |
-| `E F A C E DOT Y A W N` | `face.yawn` | 🥱 | disabled: beyond the active limit |
-| `E F A C E DOT Z I P` | `face.zip` | 🤐 | disabled: beyond the active limit |
-| `E F A C T O R Y` | `factory` | 🏭 | disabled: beyond the active limit |
-| `E F A I T H DOT D H A R M A` | `faith.dharma` | ☸ | disabled: beyond the active limit |
-| `E F A I T H DOT J U D A I S M` | `faith.judaism` | ✡ | disabled: beyond the active limit |
-| `E F A I T H DOT K H A N D A` | `faith.khanda` | 🪯 | disabled: beyond the active limit |
-| `E F A I T H DOT M E N O R A H` | `faith.menorah` | 🕎 | disabled: beyond the active limit |
-| `E F A I T H DOT O R T H O D O X` | `faith.orthodox` | ☦ | disabled: beyond the active limit |
-| `E F A I T H DOT S T A R DOT D O T` | `faith.star.dot` | 🔯 | disabled: beyond the active limit |
-| `E F A I T H DOT W O R S H I P` | `faith.worship` | 🛐 | disabled: beyond the active limit |
-| `E F A L A F E L` | `falafel` | 🧆 | disabled: beyond the active limit |
-| `E F E A T H E R` | `feather` | 🪶 | disabled: beyond the active limit |
-| `E F E E D I N G DOT B R E A S T` | `feeding.breast` | 🤱 | disabled: beyond the active limit |
-| `E F E N C I N G` | `fencing` | 🤺 | disabled: beyond the active limit |
-| `E F E R R I S W H E E L` | `ferriswheel` | 🎡 | disabled: beyond the active limit |
-| `E F I G H T C L O U D` | `fightcloud` | 🫯 | disabled: beyond the active limit |
-| `E F I L E B O X` | `filebox` | 🗃 | disabled: beyond the active limit |
-| `E F I N G E R DOT F R O N T` | `finger.front` | 🫵 | disabled: beyond the active limit |
-| `E F I N G E R DOT M` | `finger.m` | 🖕 | disabled: beyond the active limit |
-| `E F I N G E R P R I N T` | `fingerprint` | 🫆 | disabled: beyond the active limit |
-| `E F I N G E R S DOT P I N C H` | `fingers.pinch` | 🤌 | disabled: beyond the active limit |
-| `E F I N G E R S DOT S N A P` | `fingers.snap` | 🫰 | disabled: beyond the active limit |
-| `E F I R E C R A C K E R` | `firecracker` | 🧨 | disabled: beyond the active limit |
-| `E F I R E E N G I N E` | `fireengine` | 🚒 | disabled: beyond the active limit |
-| `E F I R E W O R K S` | `fireworks` | 🎆 | disabled: beyond the active limit |
-| `E F I S H DOT T R O P I C A L` | `fish.tropical` | 🐠 | disabled: beyond the active limit |
-| `E F I S H I N G` | `fishing` | 🎣 | disabled: beyond the active limit |
-| `E F I S T DOT F R O N T` | `fist.front` | 👊 | disabled: beyond the active limit |
-| `E F I S T DOT L` | `fist.l` | 🤛 | disabled: beyond the active limit |
-| `E F I S T DOT R` | `fist.r` | 🤜 | disabled: beyond the active limit |
-| `E F I S T DOT R A I S E D` | `fist.raised` | ✊ | disabled: beyond the active limit |
-| `E F L A G DOT B L A C K` | `flag.black` | 🏴 | disabled: beyond the active limit |
-| `E F L A G DOT G O A L` | `flag.goal` | 🏁 | disabled: beyond the active limit |
-| `E F L A G DOT G O L F` | `flag.golf` | ⛳ | disabled: beyond the active limit |
-| `E F L A G DOT R E D` | `flag.red` | 🚩 | disabled: beyond the active limit |
-| `E F L A G DOT W H I T E` | `flag.white` | 🏳 | disabled: beyond the active limit |
-| `E F L A G S DOT J P DOT C R O S S E D` | `flags.jp.crossed` | 🎌 | disabled: beyond the active limit |
-| `E F L A M I N G O` | `flamingo` | 🦩 | disabled: beyond the active limit |
-| `E F L A S H L I G H T` | `flashlight` | 🔦 | disabled: beyond the active limit |
-| `E F L A T B R E A D` | `flatbread` | 🫓 | disabled: beyond the active limit |
-| `E F L O W E R DOT H I B I S C U S` | `flower.hibiscus` | 🌺 | disabled: beyond the active limit |
-| `E F L O W E R DOT H Y A C I N T H` | `flower.hyacinth` | 🪻 | disabled: beyond the active limit |
-| `E F L O W E R DOT L O T U S` | `flower.lotus` | 🪷 | disabled: beyond the active limit |
-| `E F L O W E R DOT R O S E` | `flower.rose` | 🌹 | disabled: beyond the active limit |
-| `E F L O W E R DOT T U L I P` | `flower.tulip` | 🌷 | disabled: beyond the active limit |
-| `E F L O W E R DOT W H I T E` | `flower.white` | 💮 | disabled: beyond the active limit |
-| `E F L O W E R DOT W I L T E D` | `flower.wilted` | 🥀 | disabled: beyond the active limit |
-| `E F L O W E R DOT Y E L L O W` | `flower.yellow` | 🌼 | disabled: beyond the active limit |
-| `E F O L D E R DOT O P E N` | `folder.open` | 📂 | disabled: beyond the active limit |
-| `E F O O T B A L L` | `football` | ⚽ | disabled: beyond the active limit |
-| `E F O O T B A L L DOT A M` | `football.am` | 🏈 | disabled: beyond the active limit |
-| `E F O U N T A I N` | `fountain` | ⛲ | disabled: beyond the active limit |
-| `E F R E E` | `free` | 🆓 | disabled: beyond the active limit |
-| `E F R I S B E E` | `frisbee` | 🥏 | disabled: beyond the active limit |
-| `E F R O G DOT F A C E` | `frog.face` | 🐸 | disabled: beyond the active limit |
-| `E F U E L P U M P` | `fuelpump` | ⛽ | disabled: beyond the active limit |
-| `E G A C H I` | `gachi` | 🈷 | disabled: beyond the active limit |
-| `E G I R A F F E` | `giraffe` | 🦒 | disabled: beyond the active limit |
-| `E G L A S S DOT C L I N K` | `glass.clink` | 🥂 | disabled: beyond the active limit |
-| `E G L A S S DOT M I L K` | `glass.milk` | 🥛 | disabled: beyond the active limit |
-| `E G L A S S DOT P O U R` | `glass.pour` | 🫗 | disabled: beyond the active limit |
-| `E G L A S S DOT T U M B L E R` | `glass.tumbler` | 🥃 | disabled: beyond the active limit |
-| `E G L A S S E S` | `glasses` | 👓 | disabled: beyond the active limit |
-| `E G L A S S E S DOT S U N` | `glasses.sun` | 🕶 | disabled: beyond the active limit |
-| `E G L O B E DOT M E R I D I A N` | `globe.meridian` | 🌐 | disabled: beyond the active limit |
-| `E G O` | `go` | 🈴 | disabled: beyond the active limit |
-| `E G O G G L E S` | `goggles` | 🥽 | disabled: beyond the active limit |
-| `E G O L F I N G` | `golfing` | 🏌 | disabled: beyond the active limit |
-| `E G O R I L L A` | `gorilla` | 🦍 | disabled: beyond the active limit |
-| `E G U A R D DOT M A N` | `guard.man` | 💂 | disabled: beyond the active limit |
-| `E G Y M N A S T I C S` | `gymnastics` | 🤸 | disabled: beyond the active limit |
-| `E H A I R C U T` | `haircut` | 💇 | disabled: beyond the active limit |
-| `E H A I R P I C K` | `hairpick` | 🪮 | disabled: beyond the active limit |
-| `E H A M M E R DOT P I C K` | `hammer.pick` | ⚒ | disabled: beyond the active limit |
-| `E H A M M E R DOT W R E N C H` | `hammer.wrench` | 🛠 | disabled: beyond the active limit |
-| `E H A M S T E R DOT F A C E` | `hamster.face` | 🐹 | disabled: beyond the active limit |
-| `E H A N D DOT B` | `hand.b` | 🫳 | disabled: beyond the active limit |
-| `E H A N D DOT L` | `hand.l` | 🫲 | disabled: beyond the active limit |
-| `E H A N D DOT L O V E` | `hand.love` | 🤟 | disabled: beyond the active limit |
-| `E H A N D DOT P A R T` | `hand.part` | 🖖 | disabled: beyond the active limit |
-| `E H A N D DOT P I N C H` | `hand.pinch` | 🤏 | disabled: beyond the active limit |
-| `E H A N D DOT P U S H I N G DOT L` | `hand.pushing.l` | 🫷 | disabled: beyond the active limit |
-| `E H A N D DOT P U S H I N G DOT R` | `hand.pushing.r` | 🫸 | disabled: beyond the active limit |
-| `E H A N D DOT R` | `hand.r` | 🫱 | disabled: beyond the active limit |
-| `E H A N D DOT R A I S E D DOT A L T` | `hand.raised.alt` | 🤚 | disabled: beyond the active limit |
-| `E H A N D DOT R O C K` | `hand.rock` | 🤘 | disabled: beyond the active limit |
-| `E H A N D DOT T` | `hand.t` | 🫴 | disabled: beyond the active limit |
-| `E H A N D DOT W R I T E` | `hand.write` | ✍ | disabled: beyond the active limit |
-| `E H A N D B A G` | `handbag` | 👜 | disabled: beyond the active limit |
-| `E H A N D B A L L` | `handball` | 🤾 | disabled: beyond the active limit |
-| `E H A N D F A N` | `handfan` | 🪭 | disabled: beyond the active limit |
-| `E H A N D H O L D I N G` | `handholding` | 🧑‍🤝‍🧑 | disabled: beyond the active limit |
-| `E H A N D H O L D I N G DOT M A N DOT M A N` | `handholding.man.man` | 👬 | disabled: beyond the active limit |
-| `E H A N D H O L D I N G DOT W O M A N DOT M A N` | `handholding.woman.man` | 👫 | disabled: beyond the active limit |
-| `E H A N D H O L D I N G DOT W O M A N DOT W O M A N` | `handholding.woman.woman` | 👭 | disabled: beyond the active limit |
-| `E H A N D S DOT H E A R T` | `hands.heart` | 🫶 | disabled: beyond the active limit |
-| `E H A N D S DOT O P E N` | `hands.open` | 👐 | disabled: beyond the active limit |
-| `E H A N D S DOT P A L M S` | `hands.palms` | 🤲 | disabled: beyond the active limit |
-| `E H A T DOT R I B B O N` | `hat.ribbon` | 👒 | disabled: beyond the active limit |
-| `E H A T DOT T O P` | `hat.top` | 🎩 | disabled: beyond the active limit |
-| `E H E A D P H O N E` | `headphone` | 🎧 | disabled: beyond the active limit |
-| `E H E A R T DOT A R R O W` | `heart.arrow` | 💘 | disabled: beyond the active limit |
-| `E H E A R T DOT B E A T` | `heart.beat` | 💓 | disabled: beyond the active limit |
-| `E H E A R T DOT B L A C K` | `heart.black` | 🖤 | disabled: every spelling clashes |
-| `E H E A R T DOT B L U E` | `heart.blue` | 💙 | disabled: every spelling clashes |
-| `E H E A R T DOT B O X` | `heart.box` | 💟 | disabled: beyond the active limit |
-| `E H E A R T DOT B R O K E N` | `heart.broken` | 💔 | disabled: every spelling clashes |
-| `E H E A R T DOT B R O W N` | `heart.brown` | 🤎 | disabled: beyond the active limit |
-| `E H E A R T DOT D O U B L E` | `heart.double` | 💕 | disabled: beyond the active limit |
-| `E H E A R T DOT E X C L` | `heart.excl` | ❣ | disabled: beyond the active limit |
-| `E H E A R T DOT G R A Y` | `heart.gray` | 🩶 | disabled: beyond the active limit |
-| `E H E A R T DOT G R E E N` | `heart.green` | 💚 | disabled: every spelling clashes |
-| `E H E A R T DOT G R O W` | `heart.grow` | 💗 | disabled: beyond the active limit |
-| `E H E A R T DOT L I G H T B L U E` | `heart.lightblue` | 🩵 | disabled: beyond the active limit |
-| `E H E A R T DOT O R A N G E` | `heart.orange` | 🧡 | disabled: every spelling clashes |
-| `E H E A R T DOT P I N K` | `heart.pink` | 🩷 | disabled: beyond the active limit |
-| `E H E A R T DOT P U R P L E` | `heart.purple` | 💜 | disabled: every spelling clashes |
-| `E H E A R T DOT R E A L` | `heart.real` | 🫀 | disabled: beyond the active limit |
-| `E H E A R T DOT R E V O L V E` | `heart.revolve` | 💞 | disabled: beyond the active limit |
-| `E H E A R T DOT R I B B O N` | `heart.ribbon` | 💝 | disabled: beyond the active limit |
-| `E H E A R T DOT S P A R K` | `heart.spark` | 💖 | disabled: beyond the active limit |
-| `E H E A R T DOT W H I T E` | `heart.white` | 🤍 | disabled: every spelling clashes |
-| `E H E A R T DOT Y E L L O W` | `heart.yellow` | 💛 | disabled: beyond the active limit |
-| `E H E D G E H O G` | `hedgehog` | 🦔 | disabled: beyond the active limit |
-| `E H E L I C O P T E R` | `helicopter` | 🚁 | disabled: beyond the active limit |
-| `E H E L M E T DOT C R O S S` | `helmet.cross` | ⛑ | disabled: beyond the active limit |
-| `E H E L M E T DOT M I L I T A R Y` | `helmet.military` | 🪖 | disabled: beyond the active limit |
-| `E H I` | `hi` | ㊙ | disabled: beyond the active limit |
-| `E H O N G B A O` | `hongbao` | 🧧 | disabled: beyond the active limit |
-| `E H O R N DOT P O S T A L` | `horn.postal` | 📯 | disabled: beyond the active limit |
-| `E H O R S E DOT C A R O U S E L` | `horse.carousel` | 🎠 | disabled: beyond the active limit |
-| `E H O R S E DOT F A C E` | `horse.face` | 🐴 | disabled: beyond the active limit |
-| `E H O R S E DOT R A C E` | `horse.race` | 🏇 | disabled: beyond the active limit |
-| `E H O T E L DOT L O V E` | `hotel.love` | 🏩 | disabled: beyond the active limit |
-| `E H O T S P R I N G` | `hotspring` | ♨ | disabled: beyond the active limit |
+| `E F I R E C R A C K E R` | `firecracker` | 🧨 | disabled: every spelling clashes |
+| `E F I R E E N G I N E` | `fireengine` | 🚒 | disabled: every spelling clashes |
+| `E F I R E W O R K S` | `fireworks` | 🎆 | disabled: every spelling clashes |
+| `E F I S H I N G` | `fishing` | 🎣 | disabled: every spelling clashes |
+| `E F O O T B A L L` | `football` | ⚽ | disabled: every spelling clashes |
+| `E F R E E` | `free` | 🆓 | disabled: labelled button glyph |
+| `E G A C H I` | `gachi` | 🈷 | disabled: labelled button glyph |
+| `E G L A S S E S DOT S U N` | `glasses.sun` | 🕶 | disabled: every spelling clashes |
+| `E G O` | `go` | 🈴 | disabled: labelled button glyph |
+| `E H A M M E R DOT P I C K` | `hammer.pick` | ⚒ | disabled: every spelling clashes |
+| `E H A M M E R DOT W R E N C H` | `hammer.wrench` | 🛠 | disabled: every spelling clashes |
+| `E H A N D H O L D I N G DOT M A N DOT M A N` | `handholding.man.man` | 👬 | disabled: every spelling clashes |
+| `E H A N D H O L D I N G DOT W O M A N DOT M A N` | `handholding.woman.man` | 👫 | disabled: every spelling clashes |
+| `E H A N D H O L D I N G DOT W O M A N DOT W O M A N` | `handholding.woman.woman` | 👭 | disabled: every spelling clashes |
+| `E H E A R T DOT E X C L` | `heart.excl` | ❣ | disabled: every spelling clashes |
+| `E H E A R T DOT P I N K` | `heart.pink` | 🩷 | disabled: every spelling clashes |
+| `E H E A R T DOT R I B B O N` | `heart.ribbon` | 💝 | disabled: every spelling clashes |
+| `E H I` | `hi` | ㊙ | disabled: labelled button glyph |
+| `E H O R S E DOT C A R O U S E L` | `horse.carousel` | 🎠 | disabled: every spelling clashes |
 | `E H O U R G L A S S` | `hourglass` | ⌛ | disabled: every spelling clashes |
-| `E H O U S E DOT D E R E L I C T` | `house.derelict` | 🏚 | disabled: beyond the active limit |
-| `E H O U S E DOT G A R D E N` | `house.garden` | 🏡 | disabled: beyond the active limit |
-| `E H O U S E DOT M U L T I P L E` | `house.multiple` | 🏘 | disabled: beyond the active limit |
-| `E H U N D R E D` | `hundred` | 💯 | disabled: beyond the active limit |
-| `E I C E C R E A M` | `icecream` | 🍨 | disabled: beyond the active limit |
-| `E I C E C R E A M DOT S H A V E D` | `icecream.shaved` | 🍧 | disabled: beyond the active limit |
-| `E I C E C R E A M DOT S O F T` | `icecream.soft` | 🍦 | disabled: beyond the active limit |
-| `E I C E H O C K E Y` | `icehockey` | 🏒 | disabled: beyond the active limit |
-| `E I D` | `id` | 🆔 | disabled: beyond the active limit |
-| `E I Z A K A Y A` | `izakaya` | 🏮 | disabled: beyond the active limit |
-| `E J E L L Y F I S H` | `jellyfish` | 🪼 | disabled: beyond the active limit |
-| `E J O Y S T I C K` | `joystick` | 🕹 | disabled: beyond the active limit |
-| `E J U G G L I N G` | `juggling` | 🤹 | disabled: beyond the active limit |
-| `E K A` | `ka` | 🉑 | disabled: beyond the active limit |
-| `E K A C H I` | `kachi` | 🈹 | disabled: beyond the active limit |
-| `E K A D O M A T S U` | `kadomatsu` | 🎍 | disabled: beyond the active limit |
-| `E K A N G A R O O` | `kangaroo` | 🦘 | disabled: beyond the active limit |
-| `E K A R A` | `kara` | 🈳 | disabled: beyond the active limit |
+| `E I C E C R E A M` | `icecream` | 🍨 | disabled: every spelling clashes |
+| `E I C E H O C K E Y` | `icehockey` | 🏒 | disabled: every spelling clashes |
+| `E I D` | `id` | 🆔 | disabled: labelled button glyph |
+| `E K A` | `ka` | 🉑 | disabled: labelled button glyph |
+| `E K A C H I` | `kachi` | 🈹 | disabled: labelled button glyph |
+| `E K A R A` | `kara` | 🈳 | disabled: labelled button glyph |
 | `E K E Y` | `key` | 🔑 | disabled: every spelling clashes |
-| `E K I S S M A R K` | `kissmark` | 💋 | disabled: beyond the active limit |
-| `E K N I F E DOT D A G G E R` | `knife.dagger` | 🗡 | disabled: beyond the active limit |
-| `E K O I N O B O R I` | `koinobori` | 🎏 | disabled: beyond the active limit |
-| `E K O K O` | `koko` | 🈁 | disabled: beyond the active limit |
-| `E K O N` | `kon` | 🈲 | disabled: beyond the active limit |
-| `E L A C R O S S E` | `lacrosse` | 🥍 | disabled: beyond the active limit |
-| `E L A M P DOT D I Y A` | `lamp.diya` | 🪔 | disabled: beyond the active limit |
-| `E L A N D S L I D E` | `landslide` | 🛘 | disabled: beyond the active limit |
-| `E L E A F DOT C L O V E R DOT T H R E E` | `leaf.clover.three` | ☘ | disabled: beyond the active limit |
-| `E L E A F DOT F A L L` | `leaf.fall` | 🍂 | disabled: beyond the active limit |
-| `E L E A F DOT H E R B` | `leaf.herb` | 🌿 | disabled: beyond the active limit |
-| `E L E A F DOT M A P L E` | `leaf.maple` | 🍁 | disabled: beyond the active limit |
-| `E L E A F DOT W I N D` | `leaf.wind` | 🍃 | disabled: beyond the active limit |
-| `E L E F T L U G G A G E` | `leftluggage` | 🛅 | disabled: beyond the active limit |
-| `E L E G DOT M E C H` | `leg.mech` | 🦿 | disabled: beyond the active limit |
-| `E L E O P A R D` | `leopard` | 🐆 | disabled: beyond the active limit |
-| `E L E T T E R DOT L O V E` | `letter.love` | 💌 | disabled: beyond the active limit |
-| `E L I B E R T Y` | `liberty` | 🗽 | disabled: beyond the active limit |
-| `E L I P S T I C K` | `lipstick` | 💄 | disabled: beyond the active limit |
-| `E L I T T E R DOT N O T` | `litter.not` | 🚯 | disabled: beyond the active limit |
-| `E L O B S T E R` | `lobster` | 🦞 | disabled: beyond the active limit |
-| `E L O C K DOT K E Y` | `lock.key` | 🔐 | disabled: beyond the active limit |
-| `E L O C K DOT O P E N` | `lock.open` | 🔓 | disabled: every spelling clashes |
-| `E L O C K DOT P E N` | `lock.pen` | 🔏 | disabled: beyond the active limit |
-| `E L O L L I P O P` | `lollipop` | 🍭 | disabled: beyond the active limit |
-| `E L U G G A G E` | `luggage` | 🧳 | disabled: beyond the active limit |
-| `E M A H J O N G DOT D R A G O N DOT R E D` | `mahjong.dragon.red` | 🀄 | disabled: beyond the active limit |
-| `E M A I L DOT A R R O W` | `mail.arrow` | 📩 | disabled: beyond the active limit |
-| `E M A I L B O X DOT C L O S E D DOT E M P T Y` | `mailbox.closed.empty` | 📪 | disabled: beyond the active limit |
-| `E M A I L B O X DOT C L O S E D DOT F U L L` | `mailbox.closed.full` | 📫 | disabled: beyond the active limit |
-| `E M A I L B O X DOT O P E N DOT E M P T Y` | `mailbox.open.empty` | 📭 | disabled: beyond the active limit |
-| `E M A I L B O X DOT O P E N DOT F U L L` | `mailbox.open.full` | 📬 | disabled: beyond the active limit |
-| `E M A M M O T H` | `mammoth` | 🦣 | disabled: beyond the active limit |
-| `E M A N DOT B O X` | `man.box` | 🚹 | disabled: beyond the active limit |
-| `E M A N DOT C R O W N` | `man.crown` | 🤴 | disabled: beyond the active limit |
-| `E M A N DOT G U A P I M A O` | `man.guapimao` | 👲 | disabled: beyond the active limit |
-| `E M A N DOT L E V I T A T E` | `man.levitate` | 🕴 | disabled: beyond the active limit |
-| `E M A N DOT O L D` | `man.old` | 👴 | disabled: beyond the active limit |
-| `E M A N DOT P R E G N A N T` | `man.pregnant` | 🫃 | disabled: beyond the active limit |
-| `E M A N DOT T U R B A N` | `man.turban` | 👳 | disabled: beyond the active limit |
-| `E M A N DOT T U X E D O` | `man.tuxedo` | 🤵 | disabled: beyond the active limit |
+| `E K I S S M A R K` | `kissmark` | 💋 | disabled: every spelling clashes |
+| `E K O K O` | `koko` | 🈁 | disabled: labelled button glyph |
+| `E K O N` | `kon` | 🈲 | disabled: labelled button glyph |
+| `E M A N DOT C R O W N` | `man.crown` | 🤴 | disabled: every spelling clashes |
 | `E M A N G O` | `mango` | 🥭 | disabled: every spelling clashes |
-| `E M A P DOT J P` | `map.jp` | 🗾 | disabled: beyond the active limit |
-| `E M A P DOT W O R L D` | `map.world` | 🗺 | disabled: beyond the active limit |
-| `E M A R A C A S` | `maracas` | 🪇 | disabled: beyond the active limit |
-| `E M A R T I A L A R T S` | `martialarts` | 🥋 | disabled: beyond the active limit |
-| `E M A T R Y O S H K A` | `matryoshka` | 🪆 | disabled: beyond the active limit |
-| `E M E A T DOT B O N E` | `meat.bone` | 🍖 | disabled: beyond the active limit |
-| `E M E D A L DOT M I L I T A R Y` | `medal.military` | 🎖 | disabled: beyond the active limit |
-| `E M E D A L DOT S E C O N D` | `medal.second` | 🥈 | disabled: beyond the active limit |
-| `E M E D A L DOT S P O R T S` | `medal.sports` | 🏅 | disabled: beyond the active limit |
-| `E M E D A L DOT T H I R D` | `medal.third` | 🥉 | disabled: beyond the active limit |
-| `E M E G A P H O N E DOT S I M P L E` | `megaphone.simple` | 📣 | disabled: every spelling clashes |
-| `E M E R P E R S O N` | `merperson` | 🧜 | disabled: beyond the active limit |
-| `E M I C R O B E` | `microbe` | 🦠 | disabled: beyond the active limit |
-| `E M I C R O P H O N E` | `microphone` | 🎤 | disabled: beyond the active limit |
-| `E M I C R O P H O N E DOT S T U D I O` | `microphone.studio` | 🎙 | disabled: beyond the active limit |
-| `E M I L K Y W A Y` | `milkyway` | 🌌 | disabled: beyond the active limit |
-| `E M O N E Y DOT B A G` | `money.bag` | 💰 | disabled: beyond the active limit |
-| `E M O N E Y DOT D O L L A R` | `money.dollar` | 💵 | disabled: beyond the active limit |
-| `E M O N E Y DOT E U R O` | `money.euro` | 💶 | disabled: beyond the active limit |
-| `E M O N E Y DOT P O U N D` | `money.pound` | 💷 | disabled: beyond the active limit |
-| `E M O N E Y DOT W I N G S` | `money.wings` | 💸 | disabled: beyond the active limit |
-| `E M O N E Y DOT Y E N` | `money.yen` | 💴 | disabled: beyond the active limit |
-| `E M O N K E Y DOT F A C E` | `monkey.face` | 🐵 | disabled: beyond the active limit |
-| `E M O N K E Y DOT H E A R DOT N O T` | `monkey.hear.not` | 🙉 | disabled: beyond the active limit |
-| `E M O N K E Y DOT S E E DOT N O T` | `monkey.see.not` | 🙈 | disabled: beyond the active limit |
-| `E M O N K E Y DOT S P E A K DOT N O T` | `monkey.speak.not` | 🙊 | disabled: beyond the active limit |
-| `E M O O N DOT F U L L DOT F A C E` | `moon.full.face` | 🌝 | disabled: beyond the active limit |
-| `E M O O N DOT N E W` | `moon.new` | 🌑 | disabled: beyond the active limit |
-| `E M O O N DOT N E W DOT F A C E` | `moon.new.face` | 🌚 | disabled: beyond the active limit |
-| `E M O O N DOT W A N E DOT O N E` | `moon.wane.one` | 🌖 | disabled: beyond the active limit |
-| `E M O O N DOT W A N E DOT T H R E E` | `moon.wane.three` | 🌘 | disabled: beyond the active limit |
-| `E M O O N DOT W A N E DOT T H R E E DOT F A C E` | `moon.wane.three.face` | 🌜 | disabled: beyond the active limit |
-| `E M O O N DOT W A N E DOT T W O` | `moon.wane.two` | 🌗 | disabled: beyond the active limit |
-| `E M O O N DOT W A X DOT O N E` | `moon.wax.one` | 🌒 | disabled: beyond the active limit |
-| `E M O O N DOT W A X DOT T H R E E` | `moon.wax.three` | 🌔 | disabled: beyond the active limit |
-| `E M O O N DOT W A X DOT T W O` | `moon.wax.two` | 🌓 | disabled: beyond the active limit |
-| `E M O O N DOT W A X DOT T W O DOT F A C E` | `moon.wax.two.face` | 🌛 | disabled: beyond the active limit |
-| `E M O S Q U I T O` | `mosquito` | 🦟 | disabled: beyond the active limit |
-| `E M O T O R C Y C L E` | `motorcycle` | 🏍 | disabled: beyond the active limit |
-| `E M O T O R W A Y` | `motorway` | 🛣 | disabled: beyond the active limit |
-| `E M O U N T A I N` | `mountain` | ⛰ | disabled: beyond the active limit |
-| `E M O U N T A I N DOT F U J I` | `mountain.fuji` | 🗻 | disabled: beyond the active limit |
-| `E M O U N T A I N DOT S N O W` | `mountain.snow` | 🏔 | disabled: beyond the active limit |
-| `E M O U N T A I N DOT S U N R I S E` | `mountain.sunrise` | 🌄 | disabled: beyond the active limit |
+| `E M E A T DOT B O N E` | `meat.bone` | 🍖 | disabled: every spelling clashes |
+| `E M O U N T A I N DOT S U N R I S E` | `mountain.sunrise` | 🌄 | disabled: every spelling clashes |
 | `E M O U S E` | `mouse` | 🐁 | disabled: every spelling clashes |
-| `E M O U S E T R A P` | `mousetrap` | 🪤 | disabled: beyond the active limit |
-| `E M O U T H DOT B I T E` | `mouth.bite` | 🫦 | disabled: beyond the active limit |
-| `E M U R Y O` | `muryo` | 🈚 | disabled: beyond the active limit |
-| `E M U S H R O O M` | `mushroom` | 🍄 | disabled: beyond the active limit |
-| `E M U S I C A L S C O R E` | `musicalscore` | 🎼 | disabled: beyond the active limit |
-| `E N A I L S DOT P O L I S H` | `nails.polish` | 💅 | disabled: beyond the active limit |
-| `E N A M E B A D G E` | `namebadge` | 📛 | disabled: beyond the active limit |
-| `E N E C K T I E` | `necktie` | 👔 | disabled: beyond the active limit |
-| `E N E S T DOT E G G S` | `nest.eggs` | 🪺 | disabled: beyond the active limit |
-| `E N E S T DOT E M P T Y` | `nest.empty` | 🪹 | disabled: beyond the active limit |
-| `E N E W` | `new` | 🆕 | disabled: beyond the active limit |
-| `E N E W S P A P E R` | `newspaper` | 📰 | disabled: beyond the active limit |
-| `E N E W S P A P E R DOT R O L L E D` | `newspaper.rolled` | 🗞 | disabled: beyond the active limit |
-| `E N G` | `ng` | 🆖 | disabled: beyond the active limit |
-| `E N O T E B O O K` | `notebook` | 📓 | disabled: beyond the active limit |
-| `E N O T E B O O K DOT D E C O` | `notebook.deco` | 📔 | disabled: beyond the active limit |
-| `E N O T E P A D` | `notepad` | 🗒 | disabled: beyond the active limit |
-| `E N O T E S DOT T R I P L E` | `notes.triple` | 🎶 | disabled: beyond the active limit |
-| `E N U M B E R S` | `numbers` | 🔢 | disabled: beyond the active limit |
-| `E O` | `o` | 🅾 | disabled: beyond the active limit |
-| `E O C T O P U S` | `octopus` | 🐙 | disabled: beyond the active limit |
-| `E O K` | `ok` | 🆗 | disabled: beyond the active limit |
+| `E M U R Y O` | `muryo` | 🈚 | disabled: labelled button glyph |
+| `E N E W` | `new` | 🆕 | disabled: labelled button glyph |
+| `E N G` | `ng` | 🆖 | disabled: labelled button glyph |
+| `E O` | `o` | 🅾 | disabled: labelled button glyph |
+| `E O K` | `ok` | 🆗 | disabled: labelled button glyph |
 | `E O N I O N` | `onion` | 🧅 | disabled: every spelling clashes |
-| `E O R A N G U T A N` | `orangutan` | 🦧 | disabled: beyond the active limit |
-| `E P A C K A G E` | `package` | 📦 | disabled: beyond the active limit |
 | `E P A G E` | `page` | 📄 | disabled: every spelling clashes |
-| `E P A I N T I N G` | `painting` | 🖼 | disabled: beyond the active limit |
-| `E P A L E T T E` | `palette` | 🎨 | disabled: beyond the active limit |
-| `E P A N C A K E S` | `pancakes` | 🥞 | disabled: beyond the active limit |
-| `E P A R A C H U T E` | `parachute` | 🪂 | disabled: beyond the active limit |
-| `E P A R K I N G` | `parking` | 🅿 | disabled: beyond the active limit |
-| `E P A R T A L T E R A T I O N` | `partalteration` | 〽 | disabled: beyond the active limit |
-| `E P E A C O C K` | `peacock` | 🦚 | disabled: beyond the active limit |
-| `E P E A N U T S` | `peanuts` | 🥜 | disabled: beyond the active limit |
-| `E P E D E S T R I A N` | `pedestrian` | 🚶 | disabled: beyond the active limit |
-| `E P E D E S T R I A N DOT N O T` | `pedestrian.not` | 🚷 | disabled: beyond the active limit |
-| `E P E N G U I N` | `penguin` | 🐧 | disabled: beyond the active limit |
-| `E P E P P E R DOT H O T` | `pepper.hot` | 🌶 | disabled: beyond the active limit |
-| `E P E R S O N DOT A N G R Y` | `person.angry` | 🙎 | disabled: beyond the active limit |
-| `E P E R S O N DOT B E A R D` | `person.beard` | 🧔 | disabled: beyond the active limit |
-| `E P E R S O N DOT B L O N D E` | `person.blonde` | 👱 | disabled: beyond the active limit |
-| `E P E R S O N DOT B O W` | `person.bow` | 🙇 | disabled: beyond the active limit |
-| `E P E R S O N DOT C R O W N` | `person.crown` | 🫅 | disabled: beyond the active limit |
-| `E P E R S O N DOT D E A F` | `person.deaf` | 🧏 | disabled: beyond the active limit |
-| `E P E R S O N DOT F A C E P A L M` | `person.facepalm` | 🤦 | disabled: beyond the active limit |
-| `E P E R S O N DOT F R O W N` | `person.frown` | 🙍 | disabled: beyond the active limit |
-| `E P E R S O N DOT H I J A B` | `person.hijab` | 🧕 | disabled: beyond the active limit |
-| `E P E R S O N DOT K N E E L` | `person.kneel` | 🧎 | disabled: beyond the active limit |
-| `E P E R S O N DOT L O T U S` | `person.lotus` | 🧘 | disabled: beyond the active limit |
-| `E P E R S O N DOT M A S S A G E` | `person.massage` | 💆 | disabled: beyond the active limit |
-| `E P E R S O N DOT N O` | `person.no` | 🙅 | disabled: beyond the active limit |
-| `E P E R S O N DOT O K` | `person.ok` | 🙆 | disabled: beyond the active limit |
-| `E P E R S O N DOT O L D` | `person.old` | 🧓 | disabled: beyond the active limit |
-| `E P E R S O N DOT P R E G N A N T` | `person.pregnant` | 🫄 | disabled: beyond the active limit |
-| `E P E R S O N DOT R A I S E` | `person.raise` | 🙋 | disabled: beyond the active limit |
-| `E P E R S O N DOT S A S S Y` | `person.sassy` | 💁 | disabled: beyond the active limit |
-| `E P E R S O N DOT S H R U G` | `person.shrug` | 🤷 | disabled: beyond the active limit |
-| `E P E R S O N DOT S T A N D` | `person.stand` | 🧍 | disabled: beyond the active limit |
-| `E P E R S O N DOT S T E A M` | `person.steam` | 🧖 | disabled: beyond the active limit |
-| `E P H O N E DOT A R R O W` | `phone.arrow` | 📲 | disabled: beyond the active limit |
-| `E P H O N E DOT C L A S S I C` | `phone.classic` | ☎ | disabled: beyond the active limit |
-| `E P H O N E DOT N O T` | `phone.not` | 📵 | disabled: beyond the active limit |
-| `E P H O N E DOT O F F` | `phone.off` | 📴 | disabled: beyond the active limit |
-| `E P H O N E DOT R E C E I V E R` | `phone.receiver` | 📞 | disabled: beyond the active limit |
-| `E P H O N E DOT S I G N A L` | `phone.signal` | 📶 | disabled: beyond the active limit |
-| `E P H O N E DOT V I B R A T E` | `phone.vibrate` | 📳 | disabled: beyond the active limit |
-| `E P I G DOT F A C E` | `pig.face` | 🐷 | disabled: beyond the active limit |
-| `E P I G DOT N O S E` | `pig.nose` | 🐽 | disabled: beyond the active limit |
-| `E P I N DOT R O U N D` | `pin.round` | 📍 | disabled: every spelling clashes |
+| `E P A R K I N G` | `parking` | 🅿 | disabled: labelled button glyph |
+| `E P E R S O N DOT B E A R D` | `person.beard` | 🧔 | disabled: every spelling clashes |
+| `E P E R S O N DOT B O W` | `person.bow` | 🙇 | disabled: every spelling clashes |
+| `E P E R S O N DOT C R O W N` | `person.crown` | 🫅 | disabled: every spelling clashes |
+| `E P I G DOT N O S E` | `pig.nose` | 🐽 | disabled: every spelling clashes |
 | `E P I N A T A` | `pinata` | 🪅 | disabled: every spelling clashes |
-| `E P I N E A P P L E` | `pineapple` | 🍍 | disabled: beyond the active limit |
-| `E P I N G P O N G` | `pingpong` | 🏓 | disabled: beyond the active limit |
-| `E P L A C A R D` | `placard` | 🪧 | disabled: beyond the active limit |
-| `E P L A S T E R` | `plaster` | 🩹 | disabled: beyond the active limit |
-| `E P L A T E DOT C U T L E R Y` | `plate.cutlery` | 🍽 | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT E J E C T` | `playback.eject` | ⏏ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT P A U S E` | `playback.pause` | ⏸ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT R E C O R D` | `playback.record` | ⏺ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT R E S T A R T` | `playback.restart` | ⏮ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT S K I P` | `playback.skip` | ⏭ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT S T O P` | `playback.stop` | ⏹ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT T O G G L E` | `playback.toggle` | ⏯ | disabled: beyond the active limit |
-| `E P L A Y I N G C A R D DOT F L O W E R` | `playingcard.flower` | 🎴 | disabled: beyond the active limit |
-| `E P L A Y I N G C A R D DOT J O K E R` | `playingcard.joker` | 🃏 | disabled: beyond the active limit |
-| `E P L U N G E R` | `plunger` | 🪠 | disabled: beyond the active limit |
-| `E P O L I C E O F F I C E R` | `policeofficer` | 👮 | disabled: beyond the active limit |
-| `E P O S T DOT E U` | `post.eu` | 🏤 | disabled: beyond the active limit |
-| `E P O S T DOT J P` | `post.jp` | 🏣 | disabled: beyond the active limit |
-| `E P O S T B O X` | `postbox` | 📮 | disabled: beyond the active limit |
-| `E P O T A T O DOT S W E E T` | `potato.sweet` | 🍠 | disabled: beyond the active limit |
-| `E P R E T Z E L` | `pretzel` | 🥨 | disabled: beyond the active limit |
-| `E P R I N T E R` | `printer` | 🖨 | disabled: beyond the active limit |
-| `E P R I N T S DOT F O O T` | `prints.foot` | 👣 | disabled: beyond the active limit |
-| `E P R I N T S DOT P A W` | `prints.paw` | 🐾 | disabled: beyond the active limit |
-| `E P R O J E C T O R` | `projector` | 📽 | disabled: beyond the active limit |
-| `E Q U E S T DOT W H I T E` | `quest.white` | ❔ | disabled: beyond the active limit |
-| `E R A B B I T DOT F A C E` | `rabbit.face` | 🐰 | disabled: beyond the active limit |
-| `E R A C C O O N` | `raccoon` | 🦝 | disabled: beyond the active limit |
+| `E P I N E A P P L E` | `pineapple` | 🍍 | disabled: every spelling clashes |
+| `E P I N G P O N G` | `pingpong` | 🏓 | disabled: every spelling clashes |
 | `E R A D I O` | `radio` | 📻 | disabled: every spelling clashes |
-| `E R A I L W A Y` | `railway` | 🛤 | disabled: beyond the active limit |
-| `E R A I N B O W` | `rainbow` | 🌈 | disabled: beyond the active limit |
-| `E R E C E I P T` | `receipt` | 🧾 | disabled: beyond the active limit |
-| `E R E S T R O O M` | `restroom` | 🚻 | disabled: beyond the active limit |
-| `E R I B B O N DOT R E M I N D` | `ribbon.remind` | 🎗 | disabled: beyond the active limit |
-| `E R I C E DOT C R A C K E R` | `rice.cracker` | 🍘 | disabled: beyond the active limit |
-| `E R I C E DOT E A R` | `rice.ear` | 🌾 | disabled: beyond the active limit |
-| `E R I C E DOT O N I G I R I` | `rice.onigiri` | 🍙 | disabled: beyond the active limit |
-| `E R I N G B U O Y` | `ringbuoy` | 🛟 | disabled: beyond the active limit |
+| `E R I C E DOT E A R` | `rice.ear` | 🌾 | disabled: every spelling clashes |
+| `E R I C E DOT O N I G I R I` | `rice.onigiri` | 🍙 | disabled: every spelling clashes |
+| `E R I N G B U O Y` | `ringbuoy` | 🛟 | disabled: every spelling clashes |
 | `E R O C K` | `rock` | 🪨 | disabled: every spelling clashes |
-| `E R O L L E R C O A S T E R` | `rollercoaster` | 🎢 | disabled: beyond the active limit |
-| `E R O S E T T E` | `rosette` | 🏵 | disabled: beyond the active limit |
-| `E R U L E R DOT T R I A N G L E` | `ruler.triangle` | 📐 | disabled: every spelling clashes |
-| `E R U N N I N G` | `running` | 🏃 | disabled: beyond the active limit |
-| `E S A` | `sa` | 🈂 | disabled: beyond the active limit |
-| `E S A F E T Y P I N` | `safetypin` | 🧷 | disabled: beyond the active limit |
-| `E S A F E T Y V E S T` | `safetyvest` | 🦺 | disabled: beyond the active limit |
-| `E S A N D W I C H` | `sandwich` | 🥪 | disabled: beyond the active limit |
-| `E S A N T A DOT M A N` | `santa.man` | 🎅 | disabled: beyond the active limit |
-| `E S A N T A DOT W O M A N` | `santa.woman` | 🤶 | disabled: beyond the active limit |
-| `E S A T D I S H` | `satdish` | 📡 | disabled: beyond the active limit |
-| `E S A T E L L I T E` | `satellite` | 🛰 | disabled: beyond the active limit |
-| `E S A X O P H O N E` | `saxophone` | 🎷 | disabled: beyond the active limit |
-| `E S C O O T E R` | `scooter` | 🛴 | disabled: beyond the active limit |
-| `E S C O O T E R DOT M O T O R` | `scooter.motor` | 🛵 | disabled: beyond the active limit |
-| `E S C O R P I O N` | `scorpion` | 🦂 | disabled: beyond the active limit |
-| `E S C R E W D R I V E R` | `screwdriver` | 🪛 | disabled: beyond the active limit |
-| `E S H E L L DOT S P I R A L` | `shell.spiral` | 🐚 | disabled: beyond the active limit |
-| `E S H I N` | `shin` | 🈸 | disabled: beyond the active limit |
-| `E S H I P DOT C R U I S E` | `ship.cruise` | 🛳 | disabled: beyond the active limit |
-| `E S H I P DOT F E R R Y` | `ship.ferry` | ⛴ | disabled: beyond the active limit |
-| `E S H I R T DOT S P O R T S` | `shirt.sports` | 🎽 | disabled: beyond the active limit |
-| `E S H I R T DOT T` | `shirt.t` | 👕 | disabled: beyond the active limit |
-| `E S H O E DOT B A L L E T` | `shoe.ballet` | 🩰 | disabled: beyond the active limit |
-| `E S H O E DOT F L A T` | `shoe.flat` | 🥿 | disabled: beyond the active limit |
-| `E S H O E DOT H E E L` | `shoe.heel` | 👠 | disabled: beyond the active limit |
-| `E S H O E DOT H I K E` | `shoe.hike` | 🥾 | disabled: beyond the active limit |
-| `E S H O E DOT I C E` | `shoe.ice` | ⛸ | disabled: beyond the active limit |
-| `E S H O E DOT R O L L E R` | `shoe.roller` | 🛼 | disabled: beyond the active limit |
-| `E S H O E DOT S A N D A L DOT H E E L` | `shoe.sandal.heel` | 👡 | disabled: beyond the active limit |
-| `E S H O E DOT S K I` | `shoe.ski` | 🎿 | disabled: beyond the active limit |
-| `E S H O E DOT S N E A K E R` | `shoe.sneaker` | 👟 | disabled: beyond the active limit |
-| `E S H O E DOT T A L L` | `shoe.tall` | 👢 | disabled: beyond the active limit |
-| `E S H O E DOT T H O N G` | `shoe.thong` | 🩴 | disabled: beyond the active limit |
-| `E S H O P P I N G` | `shopping` | 🛍 | disabled: beyond the active limit |
-| `E S H O S H I N S H A` | `shoshinsha` | 🔰 | disabled: beyond the active limit |
-| `E S H R I M P DOT F R I E D` | `shrimp.fried` | 🍤 | disabled: beyond the active limit |
-| `E S H U K U` | `shuku` | ㊗ | disabled: beyond the active limit |
-| `E S I G N DOT C R O S S I N G` | `sign.crossing` | 🚸 | disabled: beyond the active limit |
-| `E S I G N DOT S T O P` | `sign.stop` | 🛑 | disabled: beyond the active limit |
-| `E S I L H O U E T T E` | `silhouette` | 👤 | disabled: beyond the active limit |
-| `E S I L H O U E T T E DOT D O U B L E` | `silhouette.double` | 👥 | disabled: beyond the active limit |
-| `E S I L H O U E T T E DOT H U G` | `silhouette.hug` | 🫂 | disabled: beyond the active limit |
-| `E S I L H O U E T T E DOT S P E A K` | `silhouette.speak` | 🗣 | disabled: beyond the active limit |
-| `E S K A T E B O A R D` | `skateboard` | 🛹 | disabled: beyond the active limit |
-| `E S K E W E R DOT D A N G O` | `skewer.dango` | 🍡 | disabled: beyond the active limit |
-| `E S K E W E R DOT O D E N` | `skewer.oden` | 🍢 | disabled: beyond the active limit |
-| `E S K U L L DOT B O N E S` | `skull.bones` | ☠ | disabled: beyond the active limit |
+| `E S A` | `sa` | 🈂 | disabled: labelled button glyph |
+| `E S H I N` | `shin` | 🈸 | disabled: labelled button glyph |
+| `E S H O E DOT I C E` | `shoe.ice` | ⛸ | disabled: every spelling clashes |
+| `E S H O E DOT S A N D A L DOT H E E L` | `shoe.sandal.heel` | 👡 | disabled: every spelling clashes |
+| `E S H U K U` | `shuku` | ㊗ | disabled: labelled button glyph |
+| `E S K U L L DOT B O N E S` | `skull.bones` | ☠ | disabled: every spelling clashes |
 | `E S L I D E R` | `slider` | 🎚 | disabled: every spelling clashes |
-| `E S N O W B O A R D I N G` | `snowboarding` | 🏂 | disabled: beyond the active limit |
-| `E S N O W M A N` | `snowman` | ⛄ | disabled: beyond the active limit |
-| `E S N O W M A N DOT S N O W` | `snowman.snow` | ☃ | disabled: beyond the active limit |
-| `E S O F T B A L L` | `softball` | 🥎 | disabled: beyond the active limit |
-| `E S O S` | `sos` | 🆘 | disabled: beyond the active limit |
-| `E S P A G H E T T I` | `spaghetti` | 🍝 | disabled: beyond the active limit |
-| `E S P A R K L E DOT B O X` | `sparkle.box` | ❇ | disabled: beyond the active limit |
-| `E S P A R K L E R` | `sparkler` | 🎇 | disabled: beyond the active limit |
-| `E S P E A K E R` | `speaker` | 🔈 | disabled: beyond the active limit |
-| `E S P E A K E R DOT N O T` | `speaker.not` | 🔇 | disabled: beyond the active limit |
-| `E S P E A K E R DOT W A V E` | `speaker.wave` | 🔉 | disabled: beyond the active limit |
-| `E S P E A K E R DOT W A V E S` | `speaker.waves` | 🔊 | disabled: beyond the active limit |
-| `E S P I D E R W E B` | `spiderweb` | 🕸 | disabled: beyond the active limit |
-| `E S P I N A C H` | `spinach` | 🥬 | disabled: beyond the active limit |
-| `E S P L A T T E R` | `splatter` | 🫟 | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L A C K` | `square.black` | ⬛ | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L A C K DOT M E D I U M` | `square.black.medium` | ◼ | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L A C K DOT S M A L L` | `square.black.small` | ◾ | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L A C K DOT T I N Y` | `square.black.tiny` | ▪ | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L U E` | `square.blue` | 🟦 | disabled: beyond the active limit |
-| `E S Q U A R E DOT B R O W N` | `square.brown` | 🟫 | disabled: beyond the active limit |
-| `E S Q U A R E DOT G R E E N` | `square.green` | 🟩 | disabled: beyond the active limit |
-| `E S Q U A R E DOT O R A N G E` | `square.orange` | 🟧 | disabled: beyond the active limit |
-| `E S Q U A R E DOT P U R P L E` | `square.purple` | 🟪 | disabled: beyond the active limit |
-| `E S Q U A R E DOT R E D` | `square.red` | 🟥 | disabled: beyond the active limit |
-| `E S Q U A R E DOT W H I T E` | `square.white` | ⬜ | disabled: beyond the active limit |
-| `E S Q U A R E DOT W H I T E DOT M E D I U M` | `square.white.medium` | ◻ | disabled: beyond the active limit |
-| `E S Q U A R E DOT W H I T E DOT S M A L L` | `square.white.small` | ◽ | disabled: beyond the active limit |
-| `E S Q U A R E DOT W H I T E DOT T I N Y` | `square.white.tiny` | ▫ | disabled: beyond the active limit |
-| `E S Q U A R E DOT Y E L L O W` | `square.yellow` | 🟨 | disabled: beyond the active limit |
-| `E S T A D I U M` | `stadium` | 🏟 | disabled: beyond the active limit |
-| `E S T A R DOT A R C` | `star.arc` | 💫 | disabled: beyond the active limit |
-| `E S T A R DOT B O X` | `star.box` | ✴ | disabled: beyond the active limit |
-| `E S T A R DOT G L O W` | `star.glow` | 🌟 | disabled: every spelling clashes |
-| `E S T A R DOT S H O O T` | `star.shoot` | 🌠 | disabled: beyond the active limit |
-| `E S T E T H O S C O P E` | `stethoscope` | 🩺 | disabled: beyond the active limit |
-| `E S T O R E DOT B I G` | `store.big` | 🏬 | disabled: beyond the active limit |
-| `E S T O R E DOT S M A L L` | `store.small` | 🏪 | disabled: beyond the active limit |
-| `E S T R A W B E R R Y` | `strawberry` | 🍓 | disabled: beyond the active limit |
-| `E S U I T DOT C L U B` | `suit.club` | ♣ | disabled: beyond the active limit |
-| `E S U I T DOT D I A M O N D` | `suit.diamond` | ♦ | disabled: beyond the active limit |
-| `E S U I T DOT H E A R T` | `suit.heart` | ♥ | disabled: beyond the active limit |
-| `E S U I T DOT S P A D E` | `suit.spade` | ♠ | disabled: beyond the active limit |
-| `E S U N DOT C L O U D` | `sun.cloud` | 🌤 | disabled: beyond the active limit |
-| `E S U N DOT F A C E` | `sun.face` | 🌞 | disabled: beyond the active limit |
-| `E S U N R I S E` | `sunrise` | 🌅 | disabled: beyond the active limit |
-| `E S U P E R H E R O` | `superhero` | 🦸 | disabled: beyond the active limit |
-| `E S U P E R V I L L A I N` | `supervillain` | 🦹 | disabled: beyond the active limit |
-| `E S U R F I N G` | `surfing` | 🏄 | disabled: beyond the active limit |
-| `E S W I M M I N G` | `swimming` | 🏊 | disabled: beyond the active limit |
-| `E S W I M S U I T` | `swimsuit` | 🩱 | disabled: beyond the active limit |
-| `E S Y M B O L S` | `symbols` | 🔣 | disabled: beyond the active limit |
-| `E S Y N A G O G U E` | `synagogue` | 🕍 | disabled: beyond the active limit |
-| `E S Y R I N G E` | `syringe` | 💉 | disabled: beyond the active limit |
-| `E T A K E O U T` | `takeout` | 🥡 | disabled: beyond the active limit |
-| `E T A N A B A T A` | `tanabata` | 🎋 | disabled: beyond the active limit |
-| `E T A N G E R I N E` | `tangerine` | 🍊 | disabled: beyond the active limit |
-| `E T A P DOT N O T` | `tap.not` | 🚱 | disabled: beyond the active limit |
-| `E T A X I DOT F R O N T` | `taxi.front` | 🚖 | disabled: beyond the active limit |
+| `E S O S` | `sos` | 🆘 | disabled: labelled button glyph |
+| `E S P E A K E R DOT W A V E` | `speaker.wave` | 🔉 | disabled: every spelling clashes |
+| `E S P E A K E R DOT W A V E S` | `speaker.waves` | 🔊 | disabled: every spelling clashes |
+| `E S P I D E R W E B` | `spiderweb` | 🕸 | disabled: every spelling clashes |
+| `E S U N R I S E` | `sunrise` | 🌅 | disabled: every spelling clashes |
 | `E T E N G U` | `tengu` | 👺 | disabled: every spelling clashes |
 | `E T E N N I S` | `tennis` | 🎾 | disabled: every spelling clashes |
 | `E T E N T` | `tent` | ⛺ | disabled: every spelling clashes |
-| `E T H E R M O M E T E R` | `thermometer` | 🌡 | disabled: beyond the active limit |
-| `E T I C K E T DOT E V E N T` | `ticket.event` | 🎟 | disabled: beyond the active limit |
-| `E T I C K E T DOT T R A V E L` | `ticket.travel` | 🎫 | disabled: beyond the active limit |
-| `E T I G E R DOT F A C E` | `tiger.face` | 🐯 | disabled: beyond the active limit |
-| `E T O I L E T P A P E R` | `toiletpaper` | 🧻 | disabled: beyond the active limit |
-| `E T O K U` | `toku` | 🉐 | disabled: beyond the active limit |
-| `E T O M B S T O N E` | `tombstone` | 🪦 | disabled: beyond the active limit |
-| `E T O O T H B R U S H` | `toothbrush` | 🪥 | disabled: beyond the active limit |
-| `E T O R N A D O` | `tornado` | 🌪 | disabled: beyond the active limit |
-| `E T O W E R DOT T O K Y O` | `tower.tokyo` | 🗼 | disabled: beyond the active limit |
-| `E T R A C K B A L L` | `trackball` | 🖲 | disabled: beyond the active limit |
-| `E T R A C T O R` | `tractor` | 🚜 | disabled: beyond the active limit |
-| `E T R A F F I C L I G H T DOT H` | `trafficlight.h` | 🚥 | disabled: beyond the active limit |
-| `E T R A F F I C L I G H T DOT V` | `trafficlight.v` | 🚦 | disabled: beyond the active limit |
+| `E T O I L E T P A P E R` | `toiletpaper` | 🧻 | disabled: every spelling clashes |
+| `E T O K U` | `toku` | 🉐 | disabled: labelled button glyph |
+| `E T O O T H B R U S H` | `toothbrush` | 🪥 | disabled: every spelling clashes |
 | `E T R A I N` | `train` | 🚆 | disabled: every spelling clashes |
-| `E T R A I N DOT C A R` | `train.car` | 🚃 | disabled: beyond the active limit |
-| `E T R A I N DOT L I G H T` | `train.light` | 🚈 | disabled: beyond the active limit |
-| `E T R A I N DOT M E T R O` | `train.metro` | 🚇 | disabled: beyond the active limit |
-| `E T R A I N DOT M O N O` | `train.mono` | 🚝 | disabled: beyond the active limit |
-| `E T R A I N DOT M O U N T A I N` | `train.mountain` | 🚞 | disabled: beyond the active limit |
-| `E T R A I N DOT S P E E D` | `train.speed` | 🚄 | disabled: beyond the active limit |
-| `E T R A I N DOT S P E E D DOT B U L L E T` | `train.speed.bullet` | 🚅 | disabled: beyond the active limit |
-| `E T R A I N DOT S T O P` | `train.stop` | 🚉 | disabled: beyond the active limit |
-| `E T R A I N DOT S U S P E N D` | `train.suspend` | 🚟 | disabled: beyond the active limit |
-| `E T R A I N DOT T R A M` | `train.tram` | 🚊 | disabled: beyond the active limit |
-| `E T R A I N DOT T R A M DOT C A R` | `train.tram.car` | 🚋 | disabled: beyond the active limit |
-| `E T R A N S G E N D E R` | `transgender` | ⚧ | disabled: beyond the active limit |
-| `E T R A Y DOT I N B O X` | `tray.inbox` | 📥 | disabled: beyond the active limit |
-| `E T R A Y DOT M A I L` | `tray.mail` | 📨 | disabled: beyond the active limit |
-| `E T R A Y DOT O U T B O X` | `tray.outbox` | 📤 | disabled: beyond the active limit |
-| `E T R E A S U R E` | `treasure` | 🪎 | disabled: beyond the active limit |
-| `E T R E E DOT D E C I D U O U S` | `tree.deciduous` | 🌳 | disabled: beyond the active limit |
-| `E T R E E DOT L E A F L E S S` | `tree.leafless` | 🪾 | disabled: beyond the active limit |
-| `E T R E E DOT P A L M` | `tree.palm` | 🌴 | disabled: beyond the active limit |
-| `E T R E E DOT X M A S` | `tree.xmas` | 🎄 | disabled: beyond the active limit |
-| `E T R I A N G L E DOT B` | `triangle.b` | 🔽 | disabled: beyond the active limit |
-| `E T R I A N G L E DOT T` | `triangle.t` | 🔼 | disabled: beyond the active limit |
-| `E T R I D E N T` | `trident` | 🔱 | disabled: beyond the active limit |
-| `E T R O M B O N E` | `trombone` | 🪊 | disabled: beyond the active limit |
-| `E T R U C K DOT T R A I L E R` | `truck.trailer` | 🚛 | disabled: beyond the active limit |
-| `E T R U M P E T` | `trumpet` | 🎺 | disabled: beyond the active limit |
-| `E T S U K I M I` | `tsukimi` | 🎑 | disabled: beyond the active limit |
-| `E U M B R E L L A DOT C L O S E D` | `umbrella.closed` | 🌂 | disabled: beyond the active limit |
-| `E U M B R E L L A DOT O P E N` | `umbrella.open` | ☂ | disabled: beyond the active limit |
-| `E U M B R E L L A DOT R A I N` | `umbrella.rain` | ☔ | disabled: beyond the active limit |
-| `E U M B R E L L A DOT S U N` | `umbrella.sun` | ⛱ | disabled: beyond the active limit |
-| `E U N I C O R N` | `unicorn` | 🦄 | disabled: beyond the active limit |
-| `E U N K N O W N` | `unknown` | 🦳 | disabled: beyond the active limit |
-| `E U P` | `up` | 🆙 | disabled: beyond the active limit |
-| `E V A M P I R E` | `vampire` | 🧛 | disabled: beyond the active limit |
-| `E V O L C A N O` | `volcano` | 🌋 | disabled: beyond the active limit |
-| `E V O L L E Y B A L L` | `volleyball` | 🏐 | disabled: beyond the active limit |
-| `E V S` | `vs` | 🆚 | disabled: beyond the active limit |
+| `E U P` | `up` | 🆙 | disabled: labelled button glyph |
+| `E V S` | `vs` | 🆚 | disabled: labelled button glyph |
 | `E W A T C H` | `watch` | ⌚ | disabled: every spelling clashes |
-| `E W A T E R M E L O N` | `watermelon` | 🍉 | disabled: beyond the active limit |
-| `E W A T E R P O L O` | `waterpolo` | 🤽 | disabled: beyond the active limit |
-| `E W E I G H T L I F T I N G` | `weightlifting` | 🏋 | disabled: beyond the active limit |
-| `E W H A L E DOT S P O U T` | `whale.spout` | 🐳 | disabled: beyond the active limit |
-| `E W H E E L C H A I R` | `wheelchair` | 🦽 | disabled: beyond the active limit |
-| `E W H E E L C H A I R DOT B O X` | `wheelchair.box` | ♿ | disabled: beyond the active limit |
-| `E W H E E L C H A I R DOT M O T O R` | `wheelchair.motor` | 🦼 | disabled: beyond the active limit |
-| `E W I N D C H I M E` | `windchime` | 🎐 | disabled: beyond the active limit |
-| `E W I N D O W` | `window` | 🪟 | disabled: beyond the active limit |
-| `E W I R E L E S S` | `wireless` | 🛜 | disabled: beyond the active limit |
-| `E W O M A N DOT B O X` | `woman.box` | 🚺 | disabled: beyond the active limit |
-| `E W O M A N DOT C R O W N` | `woman.crown` | 👸 | disabled: beyond the active limit |
-| `E W O M A N DOT O L D` | `woman.old` | 👵 | disabled: beyond the active limit |
-| `E W O M A N DOT P R E G N A N T` | `woman.pregnant` | 🤰 | disabled: beyond the active limit |
-| `E W R E S T L I N G` | `wrestling` | 🤼 | disabled: beyond the active limit |
-| `E Y O` | `yo` | 🈺 | disabled: beyond the active limit |
-| `E Y U B I` | `yubi` | 🈯 | disabled: beyond the active limit |
-| `E Y U R Y O` | `yuryo` | 🈶 | disabled: beyond the active limit |
-| `E Z O D I A C DOT A Q U A R I U S` | `zodiac.aquarius` | ♒ | disabled: beyond the active limit |
-| `E Z O D I A C DOT A R I E S` | `zodiac.aries` | ♈ | disabled: beyond the active limit |
-| `E Z O D I A C DOT C A N C E R` | `zodiac.cancer` | ♋ | disabled: beyond the active limit |
-| `E Z O D I A C DOT C A P R I` | `zodiac.capri` | ♑ | disabled: beyond the active limit |
-| `E Z O D I A C DOT G E M I N I` | `zodiac.gemini` | ♊ | disabled: beyond the active limit |
-| `E Z O D I A C DOT L E O` | `zodiac.leo` | ♌ | disabled: beyond the active limit |
-| `E Z O D I A C DOT L I B R A` | `zodiac.libra` | ♎ | disabled: beyond the active limit |
-| `E Z O D I A C DOT O P H I` | `zodiac.ophi` | ⛎ | disabled: beyond the active limit |
-| `E Z O D I A C DOT P I S C E S` | `zodiac.pisces` | ♓ | disabled: beyond the active limit |
-| `E Z O D I A C DOT S A G I T` | `zodiac.sagit` | ♐ | disabled: beyond the active limit |
-| `E Z O D I A C DOT S C O R P I O` | `zodiac.scorpio` | ♏ | disabled: beyond the active limit |
-| `E Z O D I A C DOT T A U R U S` | `zodiac.taurus` | ♉ | disabled: beyond the active limit |
-| `E Z O D I A C DOT V I R G O` | `zodiac.virgo` | ♍ | disabled: beyond the active limit |
-| `E Z O M B I E` | `zombie` | 🧟 | disabled: beyond the active limit |
+| `E W H E E L C H A I R` | `wheelchair` | 🦽 | disabled: every spelling clashes |
+| `E W I N D C H I M E` | `windchime` | 🎐 | disabled: every spelling clashes |
+| `E W I N D O W` | `window` | 🪟 | disabled: every spelling clashes |
+| `E W O M A N DOT C R O W N` | `woman.crown` | 👸 | disabled: every spelling clashes |
+| `E Y O` | `yo` | 🈺 | disabled: labelled button glyph |
+| `E Y U B I` | `yubi` | 🈯 | disabled: labelled button glyph |
+| `E Y U R Y O` | `yuryo` | 🈶 | disabled: labelled button glyph |

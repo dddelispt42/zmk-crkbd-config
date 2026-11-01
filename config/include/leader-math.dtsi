@@ -18,111 +18,179 @@
  */
 
 &leader1 {
-    /* --- active (500) --- */
-    seq_m_Rightarrow { sequence = <M R I G H T A R R O W>; bindings = <&uc 0x21D2 0>; };  // Rightarrow = ⇒
-    seq_m_aleph { sequence = <M A L E P H>; bindings = <&uc 0x5D0 0>; };  // aleph = א
+    /* --- active (977) --- */
+    seq_m_AA { sequence = <M A A>; bindings = <&uc 0x1D538 0>; };  // AA = 𝔸
+    seq_m_BB { sequence = <M B B>; bindings = <&uc 0x1D539 0>; };  // BB = 𝔹
+    seq_m_DD { sequence = <M D D>; bindings = <&uc 0x1D53B 0>; };  // DD = 𝔻
+    seq_m_EE { sequence = <M E E>; bindings = <&uc 0x1D53C 0>; };  // EE = 𝔼
+    seq_m_FF { sequence = <M F F>; bindings = <&uc 0x1D53D 0>; };  // FF = 𝔽
+    seq_m_GG { sequence = <M G G>; bindings = <&uc 0x1D53E 0>; };  // GG = 𝔾
+    seq_m_HH { sequence = <M H H>; bindings = <&uc 0x210D 0>; };  // HH = ℍ
+    seq_m_II { sequence = <M I I>; bindings = <&uc 0x1D540 0>; };  // II = 𝕀
+    seq_m_JJ { sequence = <M J J>; bindings = <&uc 0x1D541 0>; };  // JJ = 𝕁
+    seq_m_KK { sequence = <M K K>; bindings = <&uc 0x1D542 0>; };  // KK = 𝕂
+    seq_m_LL { sequence = <M L L>; bindings = <&uc 0x1D543 0>; };  // LL = 𝕃
+    seq_m_MM { sequence = <M M M>; bindings = <&uc 0x1D544 0>; };  // MM = 𝕄
+    seq_m_NN { sequence = <M N N>; bindings = <&uc 0x2115 0>; };  // NN = ℕ
+    seq_m_PP { sequence = <M P P>; bindings = <&uc 0x2119 0>; };  // PP = ℙ
+    seq_m_QQ { sequence = <M Q Q>; bindings = <&uc 0x211A 0>; };  // QQ = ℚ
+    seq_m_RR { sequence = <M R R>; bindings = <&uc 0x211D 0>; };  // RR = ℝ
+    seq_m_SS { sequence = <M S S>; bindings = <&uc 0x1D54A 0>; };  // SS = 𝕊
+    seq_m_TT { sequence = <M T T>; bindings = <&uc 0x1D54B 0>; };  // TT = 𝕋
+    seq_m_UU { sequence = <M U U>; bindings = <&uc 0x1D54C 0>; };  // UU = 𝕌
+    seq_m_VV { sequence = <M V V>; bindings = <&uc 0x1D54D 0>; };  // VV = 𝕍
+    seq_m_WW { sequence = <M W W>; bindings = <&uc 0x1D54E 0>; };  // WW = 𝕎
+    seq_m_XX { sequence = <M X X>; bindings = <&uc 0x1D54F 0>; };  // XX = 𝕏
+    seq_m_YY { sequence = <M Y Y>; bindings = <&uc 0x1D550 0>; };  // YY = 𝕐
+    seq_m_ZZ { sequence = <M Z Z>; bindings = <&uc 0x2124 0>; };  // ZZ = ℤ
+    seq_m_acuteAngle { sequence = <M A C U T E A N G L E>; bindings = <&uc 0x299F 0>; };  // acuteAngle = ⦟
+    seq_m_aleph2 { sequence = <M A L E P H 2>; bindings = <&uc 0x5D0 0>; };  // aleph2 = א
     seq_m_amp { sequence = <M A M P>; bindings = <&uc 0x26 0>; };  // amp = &
-    seq_m_and { sequence = <M A N D>; bindings = <&uc 0x2227 0>; };  // and = ∧
-    seq_m_angle { sequence = <M A N G L E>; bindings = <&uc 0x2220 0>; };  // angle = ∠
-    seq_m_angzarr { sequence = <M A N G Z A R R>; bindings = <&uc 0x237C 0>; };  // angzarr = ⍼
+    seq_m_and_big { sequence = <M A N D DOT B I G>; bindings = <&uc 0x22C0 0>; };  // and.big = ⋀
+    seq_m_and_curly { sequence = <M A N D DOT C U R L Y>; bindings = <&uc 0x22CF 0>; };  // and.curly = ⋏
+    seq_m_and_dot { sequence = <M A N D DOT D O T>; bindings = <&uc 0x27D1 0>; };  // and.dot = ⟑
+    seq_m_and_double { sequence = <M A N D DOT D O U B L E>; bindings = <&uc 0x2A53 0>; };  // and.double = ⩓
+    seq_m_ang { sequence = <M A N G>; bindings = <&uc 0x2220 0>; };  // ang = ∠
     seq_m_approx { sequence = <M A P P R O X>; bindings = <&uc 0x2248 0>; };  // approx = ≈
-    seq_m_arrow_b { sequence = <M A R R O W DOT B>; bindings = <&uc 0x2193 0>; };  // arrow.b = ↓
+    seq_m_arcAngle { sequence = <M A R C A N G L E>; bindings = <&uc 0x2221 0>; };  // arcAngle = ∡
+    seq_m_arrow_b_bar { sequence = <M A R R O W DOT B DOT B A R>; bindings = <&uc 0x21A7 0>; };  // arrow.b.bar = ↧
+    seq_m_arrow_b_curve { sequence = <M A R R O W DOT B DOT C U R V E>; bindings = <&uc 0x2935 0 &uc 0xFE0E 0>; };  // arrow.b.curve = ⤵
+    seq_m_arrow_b_dashed { sequence = <M A R R O W DOT B DOT D A S H E D>; bindings = <&uc 0x21E3 0>; };  // arrow.b.dashed = ⇣
+    seq_m_arrow_b_double { sequence = <M A R R O W DOT B DOT D O U B L E>; bindings = <&uc 0x21D3 0>; };  // arrow.b.double = ⇓
+    seq_m_arrow_b_dstruck { sequence = <M A R R O W DOT B DOT D S T R U C K>; bindings = <&uc 0x21DF 0>; };  // arrow.b.dstruck = ⇟
+    seq_m_arrow_b_filled { sequence = <M A R R O W DOT B DOT F I L L E D>; bindings = <&uc 0x2B07 0 &uc 0xFE0E 0>; };  // arrow.b.filled = ⬇
+    seq_m_arrow_b_quad { sequence = <M A R R O W DOT B DOT Q U A D>; bindings = <&uc 0x27F1 0>; };  // arrow.b.quad = ⟱
+    seq_m_arrow_b_stop { sequence = <M A R R O W DOT B DOT S T O P>; bindings = <&uc 0x2913 0>; };  // arrow.b.stop = ⤓
+    seq_m_arrow_b_stroked { sequence = <M A R R O W DOT B DOT S T R O K E D>; bindings = <&uc 0x21E9 0>; };  // arrow.b.stroked = ⇩
+    seq_m_arrow_b_struck { sequence = <M A R R O W DOT B DOT S T R U C K>; bindings = <&uc 0x2908 0>; };  // arrow.b.struck = ⤈
+    seq_m_arrow_b_triple { sequence = <M A R R O W DOT B DOT T R I P L E>; bindings = <&uc 0x290B 0>; };  // arrow.b.triple = ⤋
+    seq_m_arrow_b_turn { sequence = <M A R R O W DOT B DOT T U R N>; bindings = <&uc 0x2B8F 0>; };  // arrow.b.turn = ⮏
+    seq_m_arrow_b_twohead { sequence = <M A R R O W DOT B DOT T W O H E A D>; bindings = <&uc 0x21A1 0>; };  // arrow.b.twohead = ↡
+    seq_m_arrow_bl { sequence = <M A R R O W DOT B L>; bindings = <&uc 0x2199 0 &uc 0xFE0E 0>; };  // arrow.bl = ↙
+    seq_m_arrow_br { sequence = <M A R R O W DOT B R>; bindings = <&uc 0x2198 0 &uc 0xFE0E 0>; };  // arrow.br = ↘
     seq_m_arrow_ccw { sequence = <M A R R O W DOT C C W>; bindings = <&uc 0x21BA 0>; };  // arrow.ccw = ↺
     seq_m_arrow_cw { sequence = <M A R R O W DOT C W>; bindings = <&uc 0x21BB 0>; };  // arrow.cw = ↻
-    seq_m_arrow_l { sequence = <M A R R O W DOT L>; bindings = <&uc 0x2190 0>; };  // arrow.l = ←
-    seq_m_arrow_r { sequence = <M A R R O W DOT R>; bindings = <&uc 0x2192 0>; };  // arrow.r = →
-    seq_m_arrow_t { sequence = <M A R R O W DOT T>; bindings = <&uc 0x2191 0>; };  // arrow.t = ↑
+    seq_m_arrow_l_bar { sequence = <M A R R O W DOT L DOT B A R>; bindings = <&uc 0x21A4 0>; };  // arrow.l.bar = ↤
+    seq_m_arrow_l_curve { sequence = <M A R R O W DOT L DOT C U R V E>; bindings = <&uc 0x2936 0>; };  // arrow.l.curve = ⤶
+    seq_m_arrow_l_dashed { sequence = <M A R R O W DOT L DOT D A S H E D>; bindings = <&uc 0x21E0 0>; };  // arrow.l.dashed = ⇠
+    seq_m_arrow_l_dotted { sequence = <M A R R O W DOT L DOT D O T T E D>; bindings = <&uc 0x2B38 0>; };  // arrow.l.dotted = ⬸
+    seq_m_arrow_l_double { sequence = <M A R R O W DOT L DOT D O U B L E>; bindings = <&uc 0x21D0 0>; };  // arrow.l.double = ⇐
+    seq_m_arrow_l_dstruck { sequence = <M A R R O W DOT L DOT D S T R U C K>; bindings = <&uc 0x21FA 0>; };  // arrow.l.dstruck = ⇺
+    seq_m_arrow_l_filled { sequence = <M A R R O W DOT L DOT F I L L E D>; bindings = <&uc 0x2B05 0 &uc 0xFE0E 0>; };  // arrow.l.filled = ⬅
+    seq_m_arrow_l_long_bar { sequence = <M A R R O W DOT L DOT L O N G DOT B A R>; bindings = <&uc 0x27FB 0>; };  // arrow.l.long.bar = ⟻
+    seq_m_arrow_l_long_squiggly { sequence = <M A R R O W DOT L DOT L O N G DOT S Q U I G G L Y>; bindings = <&uc 0x2B33 0>; };  // arrow.l.long.squiggly = ⬳
+    seq_m_arrow_l_loop { sequence = <M A R R O W DOT L DOT L O O P>; bindings = <&uc 0x21AB 0>; };  // arrow.l.loop = ↫
+    seq_m_arrow_l_not { sequence = <M A R R O W DOT L DOT N O T>; bindings = <&uc 0x219A 0>; };  // arrow.l.not = ↚
+    seq_m_arrow_l_open { sequence = <M A R R O W DOT L DOT O P E N>; bindings = <&uc 0x21FD 0>; };  // arrow.l.open = ⇽
+    seq_m_arrow_l_quad { sequence = <M A R R O W DOT L DOT Q U A D>; bindings = <&uc 0x2B45 0>; };  // arrow.l.quad = ⭅
+    seq_m_arrow_l_r_double { sequence = <M A R R O W DOT L DOT R DOT D O U B L E>; bindings = <&uc 0x21D4 0>; };  // arrow.l.r.double = ⇔
+    seq_m_arrow_l_r_dstruck { sequence = <M A R R O W DOT L DOT R DOT D S T R U C K>; bindings = <&uc 0x21FC 0>; };  // arrow.l.r.dstruck = ⇼
+    seq_m_arrow_l_r_filled { sequence = <M A R R O W DOT L DOT R DOT F I L L E D>; bindings = <&uc 0x2B0C 0>; };  // arrow.l.r.filled = ⬌
+    seq_m_arrow_l_r_long { sequence = <M A R R O W DOT L DOT R DOT L O N G>; bindings = <&uc 0x27F7 0>; };  // arrow.l.r.long = ⟷
+    seq_m_arrow_l_r_not { sequence = <M A R R O W DOT L DOT R DOT N O T>; bindings = <&uc 0x21AE 0>; };  // arrow.l.r.not = ↮
+    seq_m_arrow_l_r_open { sequence = <M A R R O W DOT L DOT R DOT O P E N>; bindings = <&uc 0x21FF 0>; };  // arrow.l.r.open = ⇿
+    seq_m_arrow_l_r_stroked { sequence = <M A R R O W DOT L DOT R DOT S T R O K E D>; bindings = <&uc 0x2B04 0>; };  // arrow.l.r.stroked = ⬄
+    seq_m_arrow_l_r_struck { sequence = <M A R R O W DOT L DOT R DOT S T R U C K>; bindings = <&uc 0x21F9 0>; };  // arrow.l.r.struck = ⇹
+    seq_m_arrow_l_r_wave { sequence = <M A R R O W DOT L DOT R DOT W A V E>; bindings = <&uc 0x21AD 0>; };  // arrow.l.r.wave = ↭
+    seq_m_arrow_l_squiggly { sequence = <M A R R O W DOT L DOT S Q U I G G L Y>; bindings = <&uc 0x21DC 0>; };  // arrow.l.squiggly = ⇜
+    seq_m_arrow_l_stop { sequence = <M A R R O W DOT L DOT S T O P>; bindings = <&uc 0x21E4 0>; };  // arrow.l.stop = ⇤
+    seq_m_arrow_l_stroked { sequence = <M A R R O W DOT L DOT S T R O K E D>; bindings = <&uc 0x21E6 0>; };  // arrow.l.stroked = ⇦
+    seq_m_arrow_l_struck { sequence = <M A R R O W DOT L DOT S T R U C K>; bindings = <&uc 0x21F7 0>; };  // arrow.l.struck = ⇷
+    seq_m_arrow_l_tail { sequence = <M A R R O W DOT L DOT T A I L>; bindings = <&uc 0x21A2 0>; };  // arrow.l.tail = ↢
+    seq_m_arrow_l_tilde { sequence = <M A R R O W DOT L DOT T I L D E>; bindings = <&uc 0x2B49 0>; };  // arrow.l.tilde = ⭉
+    seq_m_arrow_l_triple { sequence = <M A R R O W DOT L DOT T R I P L E>; bindings = <&uc 0x21DA 0>; };  // arrow.l.triple = ⇚
+    seq_m_arrow_l_turn { sequence = <M A R R O W DOT L DOT T U R N>; bindings = <&uc 0x2B8C 0>; };  // arrow.l.turn = ⮌
+    seq_m_arrow_l_twohead { sequence = <M A R R O W DOT L DOT T W O H E A D>; bindings = <&uc 0x219E 0>; };  // arrow.l.twohead = ↞
+    seq_m_arrow_l_wave { sequence = <M A R R O W DOT L DOT W A V E>; bindings = <&uc 0x219C 0>; };  // arrow.l.wave = ↜
+    seq_m_arrow_r_curve { sequence = <M A R R O W DOT R DOT C U R V E>; bindings = <&uc 0x2937 0>; };  // arrow.r.curve = ⤷
+    seq_m_arrow_r_dashed { sequence = <M A R R O W DOT R DOT D A S H E D>; bindings = <&uc 0x21E2 0>; };  // arrow.r.dashed = ⇢
+    seq_m_arrow_r_dotted { sequence = <M A R R O W DOT R DOT D O T T E D>; bindings = <&uc 0x2911 0>; };  // arrow.r.dotted = ⤑
+    seq_m_arrow_r_double_bar { sequence = <M A R R O W DOT R DOT D O U B L E DOT B A R>; bindings = <&uc 0x2907 0>; };  // arrow.r.double.bar = ⤇
+    seq_m_arrow_r_double_long { sequence = <M A R R O W DOT R DOT D O U B L E DOT L O N G>; bindings = <&uc 0x27F9 0>; };  // arrow.r.double.long = ⟹
+    seq_m_arrow_r_double_not { sequence = <M A R R O W DOT R DOT D O U B L E DOT N O T>; bindings = <&uc 0x21CF 0>; };  // arrow.r.double.not = ⇏
+    seq_m_arrow_r_double_struck { sequence = <M A R R O W DOT R DOT D O U B L E DOT S T R U C K>; bindings = <&uc 0x2903 0>; };  // arrow.r.double.struck = ⤃
+    seq_m_arrow_r_dstruck { sequence = <M A R R O W DOT R DOT D S T R U C K>; bindings = <&uc 0x21FB 0>; };  // arrow.r.dstruck = ⇻
+    seq_m_arrow_r_filled { sequence = <M A R R O W DOT R DOT F I L L E D>; bindings = <&uc 0x27A1 0 &uc 0xFE0E 0>; };  // arrow.r.filled = ➡
+    seq_m_arrow_r_long_bar { sequence = <M A R R O W DOT R DOT L O N G DOT B A R>; bindings = <&uc 0x27FC 0>; };  // arrow.r.long.bar = ⟼
+    seq_m_arrow_r_long_squiggly { sequence = <M A R R O W DOT R DOT L O N G DOT S Q U I G G L Y>; bindings = <&uc 0x27FF 0>; };  // arrow.r.long.squiggly = ⟿
+    seq_m_arrow_r_loop { sequence = <M A R R O W DOT R DOT L O O P>; bindings = <&uc 0x21AC 0>; };  // arrow.r.loop = ↬
+    seq_m_arrow_r_not { sequence = <M A R R O W DOT R DOT N O T>; bindings = <&uc 0x219B 0>; };  // arrow.r.not = ↛
+    seq_m_arrow_r_open { sequence = <M A R R O W DOT R DOT O P E N>; bindings = <&uc 0x21FE 0>; };  // arrow.r.open = ⇾
+    seq_m_arrow_r_quad { sequence = <M A R R O W DOT R DOT Q U A D>; bindings = <&uc 0x2B46 0>; };  // arrow.r.quad = ⭆
+    seq_m_arrow_r_squiggly { sequence = <M A R R O W DOT R DOT S Q U I G G L Y>; bindings = <&uc 0x21DD 0>; };  // arrow.r.squiggly = ⇝
+    seq_m_arrow_r_stop { sequence = <M A R R O W DOT R DOT S T O P>; bindings = <&uc 0x21E5 0>; };  // arrow.r.stop = ⇥
+    seq_m_arrow_r_stroked { sequence = <M A R R O W DOT R DOT S T R O K E D>; bindings = <&uc 0x21E8 0>; };  // arrow.r.stroked = ⇨
+    seq_m_arrow_r_struck { sequence = <M A R R O W DOT R DOT S T R U C K>; bindings = <&uc 0x21F8 0>; };  // arrow.r.struck = ⇸
+    seq_m_arrow_r_tail { sequence = <M A R R O W DOT R DOT T A I L>; bindings = <&uc 0x21A3 0>; };  // arrow.r.tail = ↣
+    seq_m_arrow_r_tilde { sequence = <M A R R O W DOT R DOT T I L D E>; bindings = <&uc 0x2972 0>; };  // arrow.r.tilde = ⥲
+    seq_m_arrow_r_triple { sequence = <M A R R O W DOT R DOT T R I P L E>; bindings = <&uc 0x21DB 0>; };  // arrow.r.triple = ⇛
+    seq_m_arrow_r_turn { sequence = <M A R R O W DOT R DOT T U R N>; bindings = <&uc 0x2B8E 0>; };  // arrow.r.turn = ⮎
+    seq_m_arrow_r_twohead { sequence = <M A R R O W DOT R DOT T W O H E A D>; bindings = <&uc 0x21A0 0>; };  // arrow.r.twohead = ↠
+    seq_m_arrow_r_wave { sequence = <M A R R O W DOT R DOT W A V E>; bindings = <&uc 0x219D 0>; };  // arrow.r.wave = ↝
+    seq_m_arrow_t_b { sequence = <M A R R O W DOT T DOT B>; bindings = <&uc 0x2195 0 &uc 0xFE0E 0>; };  // arrow.t.b = ↕
+    seq_m_arrow_t_curve { sequence = <M A R R O W DOT T DOT C U R V E>; bindings = <&uc 0x2934 0 &uc 0xFE0E 0>; };  // arrow.t.curve = ⤴
+    seq_m_arrow_t_dashed { sequence = <M A R R O W DOT T DOT D A S H E D>; bindings = <&uc 0x21E1 0>; };  // arrow.t.dashed = ⇡
+    seq_m_arrow_t_double { sequence = <M A R R O W DOT T DOT D O U B L E>; bindings = <&uc 0x21D1 0>; };  // arrow.t.double = ⇑
+    seq_m_arrow_t_dstruck { sequence = <M A R R O W DOT T DOT D S T R U C K>; bindings = <&uc 0x21DE 0>; };  // arrow.t.dstruck = ⇞
+    seq_m_arrow_t_filled { sequence = <M A R R O W DOT T DOT F I L L E D>; bindings = <&uc 0x2B06 0 &uc 0xFE0E 0>; };  // arrow.t.filled = ⬆
+    seq_m_arrow_t_quad { sequence = <M A R R O W DOT T DOT Q U A D>; bindings = <&uc 0x27F0 0>; };  // arrow.t.quad = ⟰
+    seq_m_arrow_t_stop { sequence = <M A R R O W DOT T DOT S T O P>; bindings = <&uc 0x2912 0>; };  // arrow.t.stop = ⤒
+    seq_m_arrow_t_stroked { sequence = <M A R R O W DOT T DOT S T R O K E D>; bindings = <&uc 0x21E7 0>; };  // arrow.t.stroked = ⇧
+    seq_m_arrow_t_struck { sequence = <M A R R O W DOT T DOT S T R U C K>; bindings = <&uc 0x2909 0>; };  // arrow.t.struck = ⤉
+    seq_m_arrow_t_triple { sequence = <M A R R O W DOT T DOT T R I P L E>; bindings = <&uc 0x290A 0>; };  // arrow.t.triple = ⤊
+    seq_m_arrow_t_turn { sequence = <M A R R O W DOT T DOT T U R N>; bindings = <&uc 0x2B8D 0>; };  // arrow.t.turn = ⮍
+    seq_m_arrow_t_twohead { sequence = <M A R R O W DOT T DOT T W O H E A D>; bindings = <&uc 0x219F 0>; };  // arrow.t.twohead = ↟
+    seq_m_arrow_tl { sequence = <M A R R O W DOT T L>; bindings = <&uc 0x2196 0 &uc 0xFE0E 0>; };  // arrow.tl = ↖
+    seq_m_arrow_tr { sequence = <M A R R O W DOT T R>; bindings = <&uc 0x2197 0 &uc 0xFE0E 0>; };  // arrow.tr = ↗
     seq_m_arrow_zigzag { sequence = <M A R R O W DOT Z I G Z A G>; bindings = <&uc 0x21AF 0>; };  // arrow.zigzag = ↯
-    seq_m_arrowBBar { sequence = <M A R R O W B B A R>; bindings = <&uc 0x21A7 0>; };  // arrowBBar = ↧
-    seq_m_arrowBCurve { sequence = <M A R R O W B C U R V E>; bindings = <&uc 0x2935 0 &uc 0xFE0E 0>; };  // arrowBCurve = ⤵
-    seq_m_arrowBDashed { sequence = <M A R R O W B D A S H E D>; bindings = <&uc 0x21E3 0>; };  // arrowBDashed = ⇣
-    seq_m_arrowBDouble { sequence = <M A R R O W B D O U B L E>; bindings = <&uc 0x21D3 0>; };  // arrowBDouble = ⇓
-    seq_m_arrowBDstruck { sequence = <M A R R O W B D S T R U C K>; bindings = <&uc 0x21DF 0>; };  // arrowBDstruck = ⇟
-    seq_m_arrowBFilled { sequence = <M A R R O W B F I L L E D>; bindings = <&uc 0x2B07 0 &uc 0xFE0E 0>; };  // arrowBFilled = ⬇
-    seq_m_arrowBQuad { sequence = <M A R R O W B Q U A D>; bindings = <&uc 0x27F1 0>; };  // arrowBQuad = ⟱
-    seq_m_arrowBStop { sequence = <M A R R O W B S T O P>; bindings = <&uc 0x2913 0>; };  // arrowBStop = ⤓
-    seq_m_arrowBStroked { sequence = <M A R R O W B S T R O K E D>; bindings = <&uc 0x21E9 0>; };  // arrowBStroked = ⇩
-    seq_m_arrowBStruck { sequence = <M A R R O W B S T R U C K>; bindings = <&uc 0x2908 0>; };  // arrowBStruck = ⤈
-    seq_m_arrowBTriple { sequence = <M A R R O W B T R I P L E>; bindings = <&uc 0x290B 0>; };  // arrowBTriple = ⤋
-    seq_m_arrowBTurn { sequence = <M A R R O W B T U R N>; bindings = <&uc 0x2B8F 0>; };  // arrowBTurn = ⮏
-    seq_m_arrowBTwohead { sequence = <M A R R O W B T W O H E A D>; bindings = <&uc 0x21A1 0>; };  // arrowBTwohead = ↡
-    seq_m_arrowBl { sequence = <M A R R O W B L>; bindings = <&uc 0x2199 0 &uc 0xFE0E 0>; };  // arrowBl = ↙
-    seq_m_arrowBr { sequence = <M A R R O W B R>; bindings = <&uc 0x2198 0 &uc 0xFE0E 0>; };  // arrowBr = ↘
+    seq_m_arrowBlBar { sequence = <M A R R O W B L B A R>; bindings = <&uc 0x1F8BB 0>; };  // arrowBlBar = 🢻
+    seq_m_arrowBlDouble { sequence = <M A R R O W B L D O U B L E>; bindings = <&uc 0x21D9 0>; };  // arrowBlDouble = ⇙
+    seq_m_arrowBlFilled { sequence = <M A R R O W B L F I L L E D>; bindings = <&uc 0x2B0B 0>; };  // arrowBlFilled = ⬋
+    seq_m_arrowBlHook { sequence = <M A R R O W B L H O O K>; bindings = <&uc 0x2926 0>; };  // arrowBlHook = ⤦
+    seq_m_arrowBlStroked { sequence = <M A R R O W B L S T R O K E D>; bindings = <&uc 0x2B03 0>; };  // arrowBlStroked = ⬃
+    seq_m_arrowBrBar { sequence = <M A R R O W B R B A R>; bindings = <&uc 0x1F8BA 0>; };  // arrowBrBar = 🢺
+    seq_m_arrowBrDouble { sequence = <M A R R O W B R D O U B L E>; bindings = <&uc 0x21D8 0>; };  // arrowBrDouble = ⇘
+    seq_m_arrowBrFilled { sequence = <M A R R O W B R F I L L E D>; bindings = <&uc 0x2B0A 0>; };  // arrowBrFilled = ⬊
+    seq_m_arrowBrHook { sequence = <M A R R O W B R H O O K>; bindings = <&uc 0x2925 0>; };  // arrowBrHook = ⤥
+    seq_m_arrowBrStroked { sequence = <M A R R O W B R S T R O K E D>; bindings = <&uc 0x2B02 0>; };  // arrowBrStroked = ⬂
     seq_m_arrowCcwHalf { sequence = <M A R R O W C C W H A L F>; bindings = <&uc 0x21B6 0>; };  // arrowCcwHalf = ↶
     seq_m_arrowCwHalf { sequence = <M A R R O W C W H A L F>; bindings = <&uc 0x21B7 0>; };  // arrowCwHalf = ↷
-    seq_m_arrowLBar { sequence = <M A R R O W L B A R>; bindings = <&uc 0x21A4 0>; };  // arrowLBar = ↤
-    seq_m_arrowLCurve { sequence = <M A R R O W L C U R V E>; bindings = <&uc 0x2936 0>; };  // arrowLCurve = ⤶
-    seq_m_arrowLDashed { sequence = <M A R R O W L D A S H E D>; bindings = <&uc 0x21E0 0>; };  // arrowLDashed = ⇠
-    seq_m_arrowLDotted { sequence = <M A R R O W L D O T T E D>; bindings = <&uc 0x2B38 0>; };  // arrowLDotted = ⬸
-    seq_m_arrowLDouble { sequence = <M A R R O W L D O U B L E>; bindings = <&uc 0x21D0 0>; };  // arrowLDouble = ⇐
-    seq_m_arrowLDstruck { sequence = <M A R R O W L D S T R U C K>; bindings = <&uc 0x21FA 0>; };  // arrowLDstruck = ⇺
-    seq_m_arrowLFilled { sequence = <M A R R O W L F I L L E D>; bindings = <&uc 0x2B05 0 &uc 0xFE0E 0>; };  // arrowLFilled = ⬅
-    seq_m_arrowLLongBar { sequence = <M A R R O W L L O N G B A R>; bindings = <&uc 0x27FB 0>; };  // arrowLLongBar = ⟻
-    seq_m_arrowLLongSquiggly { sequence = <M A R R O W L L O N G S Q U I G G L Y>; bindings = <&uc 0x2B33 0>; };  // arrowLLongSquiggly = ⬳
-    seq_m_arrowLLoop { sequence = <M A R R O W L L O O P>; bindings = <&uc 0x21AB 0>; };  // arrowLLoop = ↫
-    seq_m_arrowLNot { sequence = <M A R R O W L N O T>; bindings = <&uc 0x219A 0>; };  // arrowLNot = ↚
-    seq_m_arrowLOpen { sequence = <M A R R O W L O P E N>; bindings = <&uc 0x21FD 0>; };  // arrowLOpen = ⇽
-    seq_m_arrowLQuad { sequence = <M A R R O W L Q U A D>; bindings = <&uc 0x2B45 0>; };  // arrowLQuad = ⭅
-    seq_m_arrowLRDouble { sequence = <M A R R O W L R D O U B L E>; bindings = <&uc 0x21D4 0>; };  // arrowLRDouble = ⇔
-    seq_m_arrowLRDstruck { sequence = <M A R R O W L R D S T R U C K>; bindings = <&uc 0x21FC 0>; };  // arrowLRDstruck = ⇼
-    seq_m_arrowLRFilled { sequence = <M A R R O W L R F I L L E D>; bindings = <&uc 0x2B0C 0>; };  // arrowLRFilled = ⬌
-    seq_m_arrowLRLong { sequence = <M A R R O W L R L O N G>; bindings = <&uc 0x27F7 0>; };  // arrowLRLong = ⟷
-    seq_m_arrowLRNot { sequence = <M A R R O W L R N O T>; bindings = <&uc 0x21AE 0>; };  // arrowLRNot = ↮
-    seq_m_arrowLROpen { sequence = <M A R R O W L R O P E N>; bindings = <&uc 0x21FF 0>; };  // arrowLROpen = ⇿
-    seq_m_arrowLRStroked { sequence = <M A R R O W L R S T R O K E D>; bindings = <&uc 0x2B04 0>; };  // arrowLRStroked = ⬄
-    seq_m_arrowLRStruck { sequence = <M A R R O W L R S T R U C K>; bindings = <&uc 0x21F9 0>; };  // arrowLRStruck = ⇹
-    seq_m_arrowLRWave { sequence = <M A R R O W L R W A V E>; bindings = <&uc 0x21AD 0>; };  // arrowLRWave = ↭
-    seq_m_arrowLSquiggly { sequence = <M A R R O W L S Q U I G G L Y>; bindings = <&uc 0x21DC 0>; };  // arrowLSquiggly = ⇜
-    seq_m_arrowLStop { sequence = <M A R R O W L S T O P>; bindings = <&uc 0x21E4 0>; };  // arrowLStop = ⇤
-    seq_m_arrowLStroked { sequence = <M A R R O W L S T R O K E D>; bindings = <&uc 0x21E6 0>; };  // arrowLStroked = ⇦
-    seq_m_arrowLStruck { sequence = <M A R R O W L S T R U C K>; bindings = <&uc 0x21F7 0>; };  // arrowLStruck = ⇷
-    seq_m_arrowLTail { sequence = <M A R R O W L T A I L>; bindings = <&uc 0x21A2 0>; };  // arrowLTail = ↢
-    seq_m_arrowLTilde { sequence = <M A R R O W L T I L D E>; bindings = <&uc 0x2B49 0>; };  // arrowLTilde = ⭉
-    seq_m_arrowLTriple { sequence = <M A R R O W L T R I P L E>; bindings = <&uc 0x21DA 0>; };  // arrowLTriple = ⇚
-    seq_m_arrowLTurn { sequence = <M A R R O W L T U R N>; bindings = <&uc 0x2B8C 0>; };  // arrowLTurn = ⮌
-    seq_m_arrowLTwohead { sequence = <M A R R O W L T W O H E A D>; bindings = <&uc 0x219E 0>; };  // arrowLTwohead = ↞
-    seq_m_arrowLWave { sequence = <M A R R O W L W A V E>; bindings = <&uc 0x219C 0>; };  // arrowLWave = ↜
-    seq_m_arrowRBar { sequence = <M A R R O W R B A R>; bindings = <&uc 0x21A6 0>; };  // arrowRBar = ↦
-    seq_m_arrowRCurve { sequence = <M A R R O W R C U R V E>; bindings = <&uc 0x2937 0>; };  // arrowRCurve = ⤷
-    seq_m_arrowRDashed { sequence = <M A R R O W R D A S H E D>; bindings = <&uc 0x21E2 0>; };  // arrowRDashed = ⇢
-    seq_m_arrowRDotted { sequence = <M A R R O W R D O T T E D>; bindings = <&uc 0x2911 0>; };  // arrowRDotted = ⤑
-    seq_m_arrowRDoubleBar { sequence = <M A R R O W R D O U B L E B A R>; bindings = <&uc 0x2907 0>; };  // arrowRDoubleBar = ⤇
-    seq_m_arrowRDoubleLong { sequence = <M A R R O W R D O U B L E L O N G>; bindings = <&uc 0x27F9 0>; };  // arrowRDoubleLong = ⟹
-    seq_m_arrowRDoubleNot { sequence = <M A R R O W R D O U B L E N O T>; bindings = <&uc 0x21CF 0>; };  // arrowRDoubleNot = ⇏
-    seq_m_arrowRDoubleStruck { sequence = <M A R R O W R D O U B L E S T R U C K>; bindings = <&uc 0x2903 0>; };  // arrowRDoubleStruck = ⤃
-    seq_m_arrowRDstruck { sequence = <M A R R O W R D S T R U C K>; bindings = <&uc 0x21FB 0>; };  // arrowRDstruck = ⇻
-    seq_m_arrowRFilled { sequence = <M A R R O W R F I L L E D>; bindings = <&uc 0x27A1 0 &uc 0xFE0E 0>; };  // arrowRFilled = ➡
-    seq_m_arrowRLongBar { sequence = <M A R R O W R L O N G B A R>; bindings = <&uc 0x27FC 0>; };  // arrowRLongBar = ⟼
-    seq_m_arrowRLongSquiggly { sequence = <M A R R O W R L O N G S Q U I G G L Y>; bindings = <&uc 0x27FF 0>; };  // arrowRLongSquiggly = ⟿
-    seq_m_arrowRLoop { sequence = <M A R R O W R L O O P>; bindings = <&uc 0x21AC 0>; };  // arrowRLoop = ↬
-    seq_m_arrowRNot { sequence = <M A R R O W R N O T>; bindings = <&uc 0x219B 0>; };  // arrowRNot = ↛
-    seq_m_arrowROpen { sequence = <M A R R O W R O P E N>; bindings = <&uc 0x21FE 0>; };  // arrowROpen = ⇾
-    seq_m_arrowRQuad { sequence = <M A R R O W R Q U A D>; bindings = <&uc 0x2B46 0>; };  // arrowRQuad = ⭆
-    seq_m_arrowRSquiggly { sequence = <M A R R O W R S Q U I G G L Y>; bindings = <&uc 0x21DD 0>; };  // arrowRSquiggly = ⇝
-    seq_m_arrowRStop { sequence = <M A R R O W R S T O P>; bindings = <&uc 0x21E5 0>; };  // arrowRStop = ⇥
-    seq_m_arrowRStroked { sequence = <M A R R O W R S T R O K E D>; bindings = <&uc 0x21E8 0>; };  // arrowRStroked = ⇨
-    seq_m_arrowRStruck { sequence = <M A R R O W R S T R U C K>; bindings = <&uc 0x21F8 0>; };  // arrowRStruck = ⇸
-    seq_m_arrowRTail { sequence = <M A R R O W R T A I L>; bindings = <&uc 0x21A3 0>; };  // arrowRTail = ↣
-    seq_m_arrowRTilde { sequence = <M A R R O W R T I L D E>; bindings = <&uc 0x2972 0>; };  // arrowRTilde = ⥲
-    seq_m_arrowRTriple { sequence = <M A R R O W R T R I P L E>; bindings = <&uc 0x21DB 0>; };  // arrowRTriple = ⇛
-    seq_m_arrowRTurn { sequence = <M A R R O W R T U R N>; bindings = <&uc 0x2B8E 0>; };  // arrowRTurn = ⮎
-    seq_m_arrowRTwohead { sequence = <M A R R O W R T W O H E A D>; bindings = <&uc 0x21A0 0>; };  // arrowRTwohead = ↠
-    seq_m_arrowRWave { sequence = <M A R R O W R W A V E>; bindings = <&uc 0x219D 0>; };  // arrowRWave = ↝
-    seq_m_arrowTB { sequence = <M A R R O W T B>; bindings = <&uc 0x2195 0 &uc 0xFE0E 0>; };  // arrowTB = ↕
-    seq_m_arrowTCurve { sequence = <M A R R O W T C U R V E>; bindings = <&uc 0x2934 0 &uc 0xFE0E 0>; };  // arrowTCurve = ⤴
-    seq_m_arrowTDashed { sequence = <M A R R O W T D A S H E D>; bindings = <&uc 0x21E1 0>; };  // arrowTDashed = ⇡
-    seq_m_arrowTDouble { sequence = <M A R R O W T D O U B L E>; bindings = <&uc 0x21D1 0>; };  // arrowTDouble = ⇑
-    seq_m_arrowTDstruck { sequence = <M A R R O W T D S T R U C K>; bindings = <&uc 0x21DE 0>; };  // arrowTDstruck = ⇞
-    seq_m_arrowTFilled { sequence = <M A R R O W T F I L L E D>; bindings = <&uc 0x2B06 0 &uc 0xFE0E 0>; };  // arrowTFilled = ⬆
-    seq_m_arrowTQuad { sequence = <M A R R O W T Q U A D>; bindings = <&uc 0x27F0 0>; };  // arrowTQuad = ⟰
-    seq_m_arrowTStop { sequence = <M A R R O W T S T O P>; bindings = <&uc 0x2912 0>; };  // arrowTStop = ⤒
-    seq_m_arrowTStroked { sequence = <M A R R O W T S T R O K E D>; bindings = <&uc 0x21E7 0>; };  // arrowTStroked = ⇧
-    seq_m_arrowTStruck { sequence = <M A R R O W T S T R U C K>; bindings = <&uc 0x2909 0>; };  // arrowTStruck = ⤉
-    seq_m_arrowTTriple { sequence = <M A R R O W T T R I P L E>; bindings = <&uc 0x290A 0>; };  // arrowTTriple = ⤊
-    seq_m_arrowTTurn { sequence = <M A R R O W T T U R N>; bindings = <&uc 0x2B8D 0>; };  // arrowTTurn = ⮍
-    seq_m_arrowTTwohead { sequence = <M A R R O W T T W O H E A D>; bindings = <&uc 0x219F 0>; };  // arrowTTwohead = ↟
-    seq_m_arrowTl { sequence = <M A R R O W T L>; bindings = <&uc 0x2196 0 &uc 0xFE0E 0>; };  // arrowTl = ↖
-    seq_m_arrowTr { sequence = <M A R R O W T R>; bindings = <&uc 0x2197 0 &uc 0xFE0E 0>; };  // arrowTr = ↗
+    seq_m_arrowLDoubleBar { sequence = <M A R R O W L D O U B L E B A R>; bindings = <&uc 0x2906 0>; };  // arrowLDoubleBar = ⤆
+    seq_m_arrowLDoubleLong { sequence = <M A R R O W L D O U B L E L O N G>; bindings = <&uc 0x27F8 0>; };  // arrowLDoubleLong = ⟸
+    seq_m_arrowLDoubleNot { sequence = <M A R R O W L D O U B L E N O T>; bindings = <&uc 0x21CD 0>; };  // arrowLDoubleNot = ⇍
+    seq_m_arrowLDoubleStruck { sequence = <M A R R O W L D O U B L E S T R U C K>; bindings = <&uc 0x2902 0>; };  // arrowLDoubleStruck = ⤂
+    seq_m_arrowLRDoubleLong { sequence = <M A R R O W L R D O U B L E L O N G>; bindings = <&uc 0x27FA 0>; };  // arrowLRDoubleLong = ⟺
+    seq_m_arrowLRDoubleNot { sequence = <M A R R O W L R D O U B L E N O T>; bindings = <&uc 0x21CE 0>; };  // arrowLRDoubleNot = ⇎
+    seq_m_arrowLRDoubleStruck { sequence = <M A R R O W L R D O U B L E S T R U C K>; bindings = <&uc 0x2904 0>; };  // arrowLRDoubleStruck = ⤄
+    seq_m_arrowLTailDstruck { sequence = <M A R R O W L T A I L D S T R U C K>; bindings = <&uc 0x2B3A 0>; };  // arrowLTailDstruck = ⬺
+    seq_m_arrowLTailStruck { sequence = <M A R R O W L T A I L S T R U C K>; bindings = <&uc 0x2B39 0>; };  // arrowLTailStruck = ⬹
+    seq_m_arrowLTwoheadBar { sequence = <M A R R O W L T W O H E A D B A R>; bindings = <&uc 0x2B36 0>; };  // arrowLTwoheadBar = ⬶
+    seq_m_arrowLTwoheadDstruck { sequence = <M A R R O W L T W O H E A D D S T R U C K>; bindings = <&uc 0x2B35 0>; };  // arrowLTwoheadDstruck = ⬵
+    seq_m_arrowLTwoheadStruck { sequence = <M A R R O W L T W O H E A D S T R U C K>; bindings = <&uc 0x2B34 0>; };  // arrowLTwoheadStruck = ⬴
+    seq_m_arrowLTwoheadTail { sequence = <M A R R O W L T W O H E A D T A I L>; bindings = <&uc 0x2B3B 0>; };  // arrowLTwoheadTail = ⬻
+    seq_m_arrowRDoubleLongBar { sequence = <M A R R O W R D O U B L E L O N G B A R>; bindings = <&uc 0x27FE 0>; };  // arrowRDoubleLongBar = ⟾
+    seq_m_arrowRTailDstruck { sequence = <M A R R O W R T A I L D S T R U C K>; bindings = <&uc 0x2915 0>; };  // arrowRTailDstruck = ⤕
+    seq_m_arrowRTailStruck { sequence = <M A R R O W R T A I L S T R U C K>; bindings = <&uc 0x2914 0>; };  // arrowRTailStruck = ⤔
+    seq_m_arrowRTwoheadBar { sequence = <M A R R O W R T W O H E A D B A R>; bindings = <&uc 0x2905 0>; };  // arrowRTwoheadBar = ⤅
+    seq_m_arrowRTwoheadDstruck { sequence = <M A R R O W R T W O H E A D D S T R U C K>; bindings = <&uc 0x2901 0>; };  // arrowRTwoheadDstruck = ⤁
+    seq_m_arrowRTwoheadStruck { sequence = <M A R R O W R T W O H E A D S T R U C K>; bindings = <&uc 0x2900 0>; };  // arrowRTwoheadStruck = ⤀
+    seq_m_arrowRTwoheadTail { sequence = <M A R R O W R T W O H E A D T A I L>; bindings = <&uc 0x2916 0>; };  // arrowRTwoheadTail = ⤖
+    seq_m_arrowTBDouble { sequence = <M A R R O W T B D O U B L E>; bindings = <&uc 0x21D5 0>; };  // arrowTBDouble = ⇕
+    seq_m_arrowTBFilled { sequence = <M A R R O W T B F I L L E D>; bindings = <&uc 0x2B0D 0>; };  // arrowTBFilled = ⬍
+    seq_m_arrowTBStroked { sequence = <M A R R O W T B S T R O K E D>; bindings = <&uc 0x21F3 0>; };  // arrowTBStroked = ⇳
+    seq_m_arrowTBar { sequence = <M A R R O W T B A R>; bindings = <&uc 0x21A5 0>; };  // arrowTBar = ↥
+    seq_m_arrowTlBar { sequence = <M A R R O W T L B A R>; bindings = <&uc 0x1F8B8 0>; };  // arrowTlBar = 🢸
+    seq_m_arrowTlBr { sequence = <M A R R O W T L B R>; bindings = <&uc 0x2921 0>; };  // arrowTlBr = ⤡
+    seq_m_arrowTlDouble { sequence = <M A R R O W T L D O U B L E>; bindings = <&uc 0x21D6 0>; };  // arrowTlDouble = ⇖
+    seq_m_arrowTlFilled { sequence = <M A R R O W T L F I L L E D>; bindings = <&uc 0x2B09 0>; };  // arrowTlFilled = ⬉
+    seq_m_arrowTlHook { sequence = <M A R R O W T L H O O K>; bindings = <&uc 0x2923 0>; };  // arrowTlHook = ⤣
+    seq_m_arrowTlStroked { sequence = <M A R R O W T L S T R O K E D>; bindings = <&uc 0x2B01 0>; };  // arrowTlStroked = ⬁
+    seq_m_arrowTrBar { sequence = <M A R R O W T R B A R>; bindings = <&uc 0x1F8B9 0>; };  // arrowTrBar = 🢹
+    seq_m_arrowTrBl { sequence = <M A R R O W T R B L>; bindings = <&uc 0x2922 0>; };  // arrowTrBl = ⤢
+    seq_m_arrowTrDouble { sequence = <M A R R O W T R D O U B L E>; bindings = <&uc 0x21D7 0>; };  // arrowTrDouble = ⇗
+    seq_m_arrowTrFilled { sequence = <M A R R O W T R F I L L E D>; bindings = <&uc 0x2B08 0>; };  // arrowTrFilled = ⬈
+    seq_m_arrowTrHook { sequence = <M A R R O W T R H O O K>; bindings = <&uc 0x2924 0>; };  // arrowTrHook = ⤤
+    seq_m_arrowTrStroked { sequence = <M A R R O W T R S T R O K E D>; bindings = <&uc 0x2B00 0>; };  // arrowTrStroked = ⬀
     seq_m_arrowhead_b { sequence = <M A R R O W H E A D DOT B>; bindings = <&uc 0x2304 0>; };  // arrowhead.b = ⌄
     seq_m_arrowhead_t { sequence = <M A R R O W H E A D DOT T>; bindings = <&uc 0x2303 0>; };  // arrowhead.t = ⌃
     seq_m_arrows_bb { sequence = <M A R R O W S DOT B B>; bindings = <&uc 0x21CA 0>; };  // arrows.bb = ⇊
@@ -146,20 +214,32 @@
     seq_m_astOpO { sequence = <M A S T O P O>; bindings = <&uc 0x229B 0>; };  // astOpO = ⊛
     seq_m_asymp { sequence = <M A S Y M P>; bindings = <&uc 0x224D 0>; };  // asymp = ≍
     seq_m_at { sequence = <M A T>; bindings = <&uc 0x40 0>; };  // at = @
+    seq_m_azimuthAngle { sequence = <M A Z I M U T H A N G L E>; bindings = <&uc 0x237C 0>; };  // azimuthAngle = ⍼
     seq_m_backslash { sequence = <M B A C K S L A S H>; bindings = <&uc 0x5C 0>; };  // backslash = \
     seq_m_bag_l { sequence = <M B A G DOT L>; bindings = <&uc 0x27C5 0>; };  // bag.l = ⟅
     seq_m_bag_r { sequence = <M B A G DOT R>; bindings = <&uc 0x27C6 0>; };  // bag.r = ⟆
+    seq_m_ballot { sequence = <M B A L L O T>; bindings = <&uc 0x2610 0>; };  // ballot = ☐
     seq_m_bar_h { sequence = <M B A R DOT H>; bindings = <&uc 0x2015 0>; };  // bar.h = ―
     seq_m_bar_v { sequence = <M B A R DOT V>; bindings = <&uc 0x7C 0>; };  // bar.v = |
+    seq_m_barArrowLDoubleLong { sequence = <M B A R A R R O W L D O U B L E L O N G>; bindings = <&uc 0x27FD 0>; };  // barArrowLDoubleLong = ⟽
+    seq_m_barEmptyset { sequence = <M B A R E M P T Y S E T>; bindings = <&uc 0x29B1 0>; };  // barEmptyset = ⦱
+    seq_m_barInfinity { sequence = <M B A R I N F I N I T Y>; bindings = <&uc 0x29DE 0>; };  // barInfinity = ⧞
+    seq_m_barNothing { sequence = <M B A R N O T H I N G>; bindings = <&uc 0x29B1 0>; };  // barNothing = ⦱
     seq_m_barVBroken { sequence = <M B A R V B R O K E N>; bindings = <&uc 0xA6 0>; };  // barVBroken = ¦
     seq_m_barVDouble { sequence = <M B A R V D O U B L E>; bindings = <&uc 0x2016 0>; };  // barVDouble = ‖
     seq_m_barVO { sequence = <M B A R V O>; bindings = <&uc 0x29B6 0>; };  // barVO = ⦶
     seq_m_barVTriple { sequence = <M B A R V T R I P L E>; bindings = <&uc 0x2980 0>; };  // barVTriple = ⦀
-    seq_m_because { sequence = <M B E C A U S E>; bindings = <&uc 0x2235 0>; };  // because = ∵
+    seq_m_barrightarrow { sequence = <M B A R R I G H T A R R O W>; bindings = <&uc 0x21A6 0>; };  // barrightarrow = ↦
+    seq_m_because2 { sequence = <M B E C A U S E 2>; bindings = <&uc 0x2235 0>; };  // because2 = ∵
     seq_m_beth { sequence = <M B E T H>; bindings = <&uc 0x5D1 0>; };  // beth = ב
+    seq_m_bigInterleave { sequence = <M B I G I N T E R L E A V E>; bindings = <&uc 0x2AFC 0>; };  // bigInterleave = ⫼
+    seq_m_bigTackB { sequence = <M B I G T A C K B>; bindings = <&uc 0x27D9 0>; };  // bigTackB = ⟙
+    seq_m_bigXor { sequence = <M B I G X O R>; bindings = <&uc 0x2A01 0>; };  // bigXor = ⨁
     seq_m_bigcap { sequence = <M B I G C A P>; bindings = <&uc 0x22C2 0>; };  // bigcap = ⋂
     seq_m_bigcup { sequence = <M B I G C U P>; bindings = <&uc 0x22C3 0>; };  // bigcup = ⋃
-    seq_m_bot { sequence = <M B O T>; bindings = <&uc 0x22A5 0>; };  // bot = ⊥
+    seq_m_bishop_black { sequence = <M B I S H O P DOT B L A C K>; bindings = <&uc 0x265D 0>; };  // bishop.black = ♝
+    seq_m_bishop_white { sequence = <M B I S H O P DOT W H I T E>; bindings = <&uc 0x2657 0>; };  // bishop.white = ♗
+    seq_m_bot2 { sequence = <M B O T 2>; bindings = <&uc 0x22A5 0>; };  // bot2 = ⊥
     seq_m_bowtie_filled { sequence = <M B O W T I E DOT F I L L E D>; bindings = <&uc 0x29D3 0>; };  // bowtie.filled = ⧓
     seq_m_bowtie_stroked { sequence = <M B O W T I E DOT S T R O K E D>; bindings = <&uc 0x22C8 0>; };  // bowtie.stroked = ⋈
     seq_m_bowtieFilledL { sequence = <M B O W T I E F I L L E D L>; bindings = <&uc 0x29D1 0>; };  // bowtieFilledL = ⧑
@@ -181,9 +261,20 @@
     seq_m_bracketRStroked { sequence = <M B R A C K E T R S T R O K E D>; bindings = <&uc 0x27E7 0>; };  // bracketRStroked = ⟧
     seq_m_bracketRTickB { sequence = <M B R A C K E T R T I C K B>; bindings = <&uc 0x298E 0>; };  // bracketRTickB = ⦎
     seq_m_bracketRTickT { sequence = <M B R A C K E T R T I C K T>; bindings = <&uc 0x2990 0>; };  // bracketRTickT = ⦐
-    seq_m_bullet { sequence = <M B U L L E T>; bindings = <&uc 0x2022 0>; };  // bullet = •
+    seq_m_bull { sequence = <M B U L L>; bindings = <&uc 0x2022 0>; };  // bull = •
+    seq_m_cc_by { sequence = <M C C DOT B Y>; bindings = <&uc 0x1F16F 0>; };  // cc.by = 🅯
+    seq_m_cc_nc { sequence = <M C C DOT N C>; bindings = <&uc 0x1F10F 0>; };  // cc.nc = 🄏
+    seq_m_cc_nd { sequence = <M C C DOT N D>; bindings = <&uc 0x229C 0>; };  // cc.nd = ⊜
+    seq_m_cc_public { sequence = <M C C DOT P U B L I C>; bindings = <&uc 0x1F16E 0>; };  // cc.public = 🅮
+    seq_m_cc_sa { sequence = <M C C DOT S A>; bindings = <&uc 0x1F10E 0>; };  // cc.sa = 🄎
+    seq_m_cc_zero { sequence = <M C C DOT Z E R O>; bindings = <&uc 0x1F10D 0>; };  // cc.zero = 🄍
+    seq_m_ccwIntegral { sequence = <M C C W I N T E G R A L>; bindings = <&uc 0x2A11 0>; };  // ccwIntegral = ⨑
+    seq_m_cdot { sequence = <M C D O T>; bindings = <&uc 0x22C5 0>; };  // cdot = ⋅
     seq_m_ceil_l { sequence = <M C E I L DOT L>; bindings = <&uc 0x2308 0>; };  // ceil.l = ⌈
     seq_m_ceil_r { sequence = <M C E I L DOT R>; bindings = <&uc 0x2309 0>; };  // ceil.r = ⌉
+    seq_m_checkBallot { sequence = <M C H E C K B A L L O T>; bindings = <&uc 0x2611 0 &uc 0xFE0E 0>; };  // checkBallot = ☑
+    seq_m_checkmark { sequence = <M C H E C K M A R K>; bindings = <&uc 0x2713 0>; };  // checkmark = ✓
+    seq_m_chess { sequence = <M C H E S S>; bindings = <&uc 0x7B 0>; };  // chess = {
     seq_m_chevron_l { sequence = <M C H E V R O N DOT L>; bindings = <&uc 0x27E8 0>; };  // chevron.l = ⟨
     seq_m_chevron_r { sequence = <M C H E V R O N DOT R>; bindings = <&uc 0x27E9 0>; };  // chevron.r = ⟩
     seq_m_chevronLClosed { sequence = <M C H E V R O N L C L O S E D>; bindings = <&uc 0x2989 0>; };  // chevronLClosed = ⦉
@@ -197,21 +288,38 @@
     seq_m_circle_dotted { sequence = <M C I R C L E DOT D O T T E D>; bindings = <&uc 0x25CC 0>; };  // circle.dotted = ◌
     seq_m_circle_filled { sequence = <M C I R C L E DOT F I L L E D>; bindings = <&uc 0x25CF 0>; };  // circle.filled = ●
     seq_m_circle_stroked { sequence = <M C I R C L E DOT S T R O K E D>; bindings = <&uc 0x25CB 0>; };  // circle.stroked = ○
+    seq_m_circleEmptyset { sequence = <M C I R C L E E M P T Y S E T>; bindings = <&uc 0x29B2 0>; };  // circleEmptyset = ⦲
     seq_m_circleFilledBig { sequence = <M C I R C L E F I L L E D B I G>; bindings = <&uc 0x2B24 0>; };  // circleFilledBig = ⬤
     seq_m_circleFilledSmall { sequence = <M C I R C L E F I L L E D S M A L L>; bindings = <&uc 0x2219 0>; };  // circleFilledSmall = ∙
     seq_m_circleFilledTiny { sequence = <M C I R C L E F I L L E D T I N Y>; bindings = <&uc 0x2981 0>; };  // circleFilledTiny = ⦁
+    seq_m_circleNothing { sequence = <M C I R C L E N O T H I N G>; bindings = <&uc 0x29B2 0>; };  // circleNothing = ⦲
     seq_m_circleStrokedBig { sequence = <M C I R C L E S T R O K E D B I G>; bindings = <&uc 0x25EF 0>; };  // circleStrokedBig = ◯
     seq_m_circleStrokedSmall { sequence = <M C I R C L E S T R O K E D S M A L L>; bindings = <&uc 0x26AC 0>; };  // circleStrokedSmall = ⚬
     seq_m_circleStrokedTiny { sequence = <M C I R C L E S T R O K E D T I N Y>; bindings = <&uc 0x2218 0>; };  // circleStrokedTiny = ∘
-    seq_m_colon { sequence = <M C O L O N>; bindings = <&uc 0x3A 0>; };  // colon = :
+    seq_m_coProduct { sequence = <M C O P R O D U C T>; bindings = <&uc 0x2210 0>; };  // coProduct = ∐
+    seq_m_colon_currency { sequence = <M C O L O N DOT C U R R E N C Y>; bindings = <&uc 0x20A1 0>; };  // colon.currency = ₡
+    seq_m_colon_double { sequence = <M C O L O N DOT D O U B L E>; bindings = <&uc 0x2237 0>; };  // colon.double = ∷
+    seq_m_colon_eq { sequence = <M C O L O N DOT E Q>; bindings = <&uc 0x2254 0>; };  // colon.eq = ≔
+    seq_m_colon_tri { sequence = <M C O L O N DOT T R I>; bindings = <&uc 0x205D 0>; };  // colon.tri = ⁝
+    seq_m_colon2 { sequence = <M C O L O N 2>; bindings = <&uc 0x3A 0>; };  // colon2 = :
+    seq_m_colonDoubleEq { sequence = <M C O L O N D O U B L E E Q>; bindings = <&uc 0x2A74 0>; };  // colonDoubleEq = ⩴
+    seq_m_colonTriOp { sequence = <M C O L O N T R I O P>; bindings = <&uc 0x2AF6 0>; };  // colonTriOp = ⫶
     seq_m_comma { sequence = <M C O M M A>; bindings = <&uc 0x2C 0>; };  // comma = ,
+    seq_m_company { sequence = <M C O M P A N Y>; bindings = <&uc 0x2105 0>; };  // company = ℅
     seq_m_complement { sequence = <M C O M P L E M E N T>; bindings = <&uc 0x2201 0>; };  // complement = ∁
     seq_m_compose { sequence = <M C O M P O S E>; bindings = <&uc 0x2218 0>; };  // compose = ∘
+    seq_m_contintegral { sequence = <M C O N T I N T E G R A L>; bindings = <&uc 0x222E 0>; };  // contintegral = ∮
     seq_m_convolve { sequence = <M C O N V O L V E>; bindings = <&uc 0x2217 0>; };  // convolve = ∗
+    seq_m_copyleft { sequence = <M C O P Y L E F T>; bindings = <&uc 0x1F12F 0>; };  // copyleft = 🄯
+    seq_m_copyright { sequence = <M C O P Y R I G H T>; bindings = <&uc 0xA9 0 &uc 0xFE0E 0>; };  // copyright = ©
     seq_m_corner_l_b { sequence = <M C O R N E R DOT L DOT B>; bindings = <&uc 0x231E 0>; };  // corner.l.b = ⌞
     seq_m_corner_l_t { sequence = <M C O R N E R DOT L DOT T>; bindings = <&uc 0x231C 0>; };  // corner.l.t = ⌜
     seq_m_corner_r_b { sequence = <M C O R N E R DOT R DOT B>; bindings = <&uc 0x231F 0>; };  // corner.r.b = ⌟
     seq_m_corner_r_t { sequence = <M C O R N E R DOT R DOT T>; bindings = <&uc 0x231D 0>; };  // corner.r.t = ⌝
+    seq_m_crossBallot { sequence = <M C R O S S B A L L O T>; bindings = <&uc 0x2612 0>; };  // crossBallot = ☒
+    seq_m_crossmark { sequence = <M C R O S S M A R K>; bindings = <&uc 0x2717 0>; };  // crossmark = ✗
+    seq_m_cup { sequence = <M C U P>; bindings = <&uc 0x222A 0>; };  // cup = ∪
+    seq_m_cwIntegral { sequence = <M C W I N T E G R A L>; bindings = <&uc 0x2231 0>; };  // cwIntegral = ∱
     seq_m_dagger { sequence = <M D A G G E R>; bindings = <&uc 0x2020 0>; };  // dagger = †
     seq_m_daleth { sequence = <M D A L E T H>; bindings = <&uc 0x5D3 0>; };  // daleth = ד
     seq_m_dash_colon { sequence = <M D A S H DOT C O L O N>; bindings = <&uc 0x2239 0>; };  // dash.colon = ∹
@@ -222,8 +330,9 @@
     seq_m_dash_wave { sequence = <M D A S H DOT W A V E>; bindings = <&uc 0x301C 0>; };  // dash.wave = 〜
     seq_m_dashEmThree { sequence = <M D A S H E M T H R E E>; bindings = <&uc 0x2E3B 0>; };  // dashEmThree = ⸻
     seq_m_dashEmTwo { sequence = <M D A S H E M T W O>; bindings = <&uc 0x2E3A 0>; };  // dashEmTwo = ⸺
+    seq_m_dashIntegral { sequence = <M D A S H I N T E G R A L>; bindings = <&uc 0x2A0D 0>; };  // dashIntegral = ⨍
     seq_m_dashWaveDouble { sequence = <M D A S H W A V E D O U B L E>; bindings = <&uc 0x3030 0 &uc 0xFE0E 0>; };  // dashWaveDouble = 〰
-    seq_m_degree { sequence = <M D E G R E E>; bindings = <&uc 0xB0 0>; };  // degree = °
+    seq_m_degree2 { sequence = <M D E G R E E 2>; bindings = <&uc 0xB0 0>; };  // degree2 = °
     seq_m_diameter { sequence = <M D I A M E T E R>; bindings = <&uc 0x2300 0>; };  // diameter = ⌀
     seq_m_diamond_filled { sequence = <M D I A M O N D DOT F I L L E D>; bindings = <&uc 0x25C6 0>; };  // diamond.filled = ◆
     seq_m_diamond_stroked { sequence = <M D I A M O N D DOT S T R O K E D>; bindings = <&uc 0x25C7 0>; };  // diamond.stroked = ◇
@@ -238,7 +347,10 @@
     seq_m_die_six { sequence = <M D I E DOT S I X>; bindings = <&uc 0x2685 0>; };  // die.six = ⚅
     seq_m_die_three { sequence = <M D I E DOT T H R E E>; bindings = <&uc 0x2682 0>; };  // die.three = ⚂
     seq_m_die_two { sequence = <M D I E DOT T W O>; bindings = <&uc 0x2681 0>; };  // die.two = ⚁
-    seq_m_div { sequence = <M D I V>; bindings = <&uc 0xF7 0>; };  // div = ÷
+    seq_m_div_o { sequence = <M D I V DOT O>; bindings = <&uc 0x2A38 0>; };  // div.o = ⨸
+    seq_m_div_slanted_o { sequence = <M D I V DOT S L A N T E D DOT O>; bindings = <&uc 0x29BC 0>; };  // div.slanted.o = ⦼
+    seq_m_div2 { sequence = <M D I V 2>; bindings = <&uc 0xF7 0>; };  // div2 = ÷
+    seq_m_divides { sequence = <M D I V I D E S>; bindings = <&uc 0x2223 0>; };  // divides = ∣
     seq_m_dot_basic { sequence = <M D O T DOT B A S I C>; bindings = <&uc 0x2E 0>; };  // dot.basic = .
     seq_m_dot_c { sequence = <M D O T DOT C>; bindings = <&uc 0xB7 0>; };  // dot.c = ·
     seq_m_dot_double { sequence = <M D O T DOT D O U B L E>; bindings = <&uc 0xA8 0>; };  // dot.double = ¨
@@ -246,37 +358,117 @@
     seq_m_dot_quad { sequence = <M D O T DOT Q U A D>; bindings = <&uc 0x20DC 0>; };  // dot.quad = ◌⃜
     seq_m_dot_square { sequence = <M D O T DOT S Q U A R E>; bindings = <&uc 0x22A1 0>; };  // dot.square = ⊡
     seq_m_dot_triple { sequence = <M D O T DOT T R I P L E>; bindings = <&uc 0x20DB 0>; };  // dot.triple = ◌⃛
+    seq_m_dotAngleRight { sequence = <M D O T A N G L E R I G H T>; bindings = <&uc 0x299D 0>; };  // dotAngleRight = ⦝
     seq_m_dotOBig { sequence = <M D O T O B I G>; bindings = <&uc 0x2A00 0>; };  // dotOBig = ⨀
-    seq_m_dotOp { sequence = <M D O T O P>; bindings = <&uc 0x22C5 0>; };  // dotOp = ⋅
+    seq_m_dotless_i { sequence = <M D O T L E S S DOT I>; bindings = <&uc 0x131 0>; };  // dotless.i = ı
+    seq_m_dotless_j { sequence = <M D O T L E S S DOT J>; bindings = <&uc 0x237 0>; };  // dotless.j = ȷ
     seq_m_dots_down { sequence = <M D O T S DOT D O W N>; bindings = <&uc 0x22F1 0>; };  // dots.down = ⋱
     seq_m_dots_h { sequence = <M D O T S DOT H>; bindings = <&uc 0x2026 0>; };  // dots.h = …
     seq_m_dots_up { sequence = <M D O T S DOT U P>; bindings = <&uc 0x22F0 0>; };  // dots.up = ⋰
     seq_m_dots_v { sequence = <M D O T S DOT V>; bindings = <&uc 0x22EE 0>; };  // dots.v = ⋮
     seq_m_dotsHC { sequence = <M D O T S H C>; bindings = <&uc 0x22EF 0>; };  // dotsHC = ⋯
+    seq_m_doubleDagger { sequence = <M D O U B L E D A G G E R>; bindings = <&uc 0x2021 0>; };  // doubleDagger = ‡
+    seq_m_doubleExcl { sequence = <M D O U B L E E X C L>; bindings = <&uc 0x203C 0 &uc 0xFE0E 0>; };  // doubleExcl = ‼
+    seq_m_doubleFemale { sequence = <M D O U B L E F E M A L E>; bindings = <&uc 0x26A2 0>; };  // doubleFemale = ⚢
+    seq_m_doubleIntegral { sequence = <M D O U B L E I N T E G R A L>; bindings = <&uc 0x222C 0>; };  // doubleIntegral = ∬
+    seq_m_doubleMale { sequence = <M D O U B L E M A L E>; bindings = <&uc 0x26A3 0>; };  // doubleMale = ⚣
+    seq_m_doubleMultimap { sequence = <M D O U B L E M U L T I M A P>; bindings = <&uc 0x29DF 0>; };  // doubleMultimap = ⧟
+    seq_m_doubleQuest { sequence = <M D O U B L E Q U E S T>; bindings = <&uc 0x2047 0>; };  // doubleQuest = ⁇
+    seq_m_doubleTackLl { sequence = <M D O U B L E T A C K L L>; bindings = <&uc 0x2AE5 0>; };  // doubleTackLl = ⫥
+    seq_m_doublerightarrow { sequence = <M D O U B L E R I G H T A R R O W>; bindings = <&uc 0x21D2 0>; };  // doublerightarrow = ⇒
+    seq_m_downEqDots { sequence = <M D O W N E Q D O T S>; bindings = <&uc 0x2252 0>; };  // downEqDots = ≒
+    seq_m_downarrow { sequence = <M D O W N A R R O W>; bindings = <&uc 0x2193 0>; };  // downarrow = ↓
+    seq_m_dstruckArrowLTwoheadTail { sequence = <M D S T R U C K A R R O W L T W O H E A D T A I L>; bindings = <&uc 0x2B3D 0>; };  // dstruckArrowLTwoheadTail = ⬽
+    seq_m_dstruckArrowRTwoheadTail { sequence = <M D S T R U C K A R R O W R T W O H E A D T A I L>; bindings = <&uc 0x2918 0>; };  // dstruckArrowRTwoheadTail = ⤘
+    seq_m_ell2 { sequence = <M E L L 2>; bindings = <&uc 0x2113 0>; };  // ell2 = ℓ
     seq_m_ellipse_filled_h { sequence = <M E L L I P S E DOT F I L L E D DOT H>; bindings = <&uc 0x2B2C 0>; };  // ellipse.filled.h = ⬬
     seq_m_ellipse_filled_v { sequence = <M E L L I P S E DOT F I L L E D DOT V>; bindings = <&uc 0x2B2E 0>; };  // ellipse.filled.v = ⬮
     seq_m_ellipse_stroked_h { sequence = <M E L L I P S E DOT S T R O K E D DOT H>; bindings = <&uc 0x2B2D 0>; };  // ellipse.stroked.h = ⬭
     seq_m_ellipse_stroked_v { sequence = <M E L L I P S E DOT S T R O K E D DOT V>; bindings = <&uc 0x2B2F 0>; };  // ellipse.stroked.v = ⬯
-    seq_m_emptyset { sequence = <M E M P T Y S E T>; bindings = <&uc 0x2205 0>; };  // emptyset = ∅
-    seq_m_eq { sequence = <M E Q>; bindings = <&uc 0x3D 0>; };  // eq = =
+    seq_m_empty { sequence = <M E M P T Y>; bindings = <&uc 0x2205 0>; };  // empty = ∅
+    seq_m_eq_ast { sequence = <M E Q DOT A S T>; bindings = <&uc 0x2A6E 0>; };  // eq.ast = ⩮
+    seq_m_eq_colon { sequence = <M E Q DOT C O L O N>; bindings = <&uc 0x2255 0>; };  // eq.colon = ≕
+    seq_m_eq_def { sequence = <M E Q DOT D E F>; bindings = <&uc 0x225D 0>; };  // eq.def = ≝
+    seq_m_eq_delta { sequence = <M E Q DOT D E L T A>; bindings = <&uc 0x225C 0>; };  // eq.delta = ≜
+    seq_m_eq_dot { sequence = <M E Q DOT D O T>; bindings = <&uc 0x2250 0>; };  // eq.dot = ≐
+    seq_m_eq_equi { sequence = <M E Q DOT E Q U I>; bindings = <&uc 0x225A 0>; };  // eq.equi = ≚
+    seq_m_eq_est { sequence = <M E Q DOT E S T>; bindings = <&uc 0x2259 0>; };  // eq.est = ≙
+    seq_m_eq_gt { sequence = <M E Q DOT G T>; bindings = <&uc 0x22DD 0>; };  // eq.gt = ⋝
+    seq_m_eq_lt { sequence = <M E Q DOT L T>; bindings = <&uc 0x22DC 0>; };  // eq.lt = ⋜
+    seq_m_eq_m { sequence = <M E Q DOT M>; bindings = <&uc 0x225E 0>; };  // eq.m = ≞
+    seq_m_eq_not { sequence = <M E Q DOT N O T>; bindings = <&uc 0x2260 0>; };  // eq.not = ≠
+    seq_m_eq_o { sequence = <M E Q DOT O>; bindings = <&uc 0x229C 0>; };  // eq.o = ⊜
+    seq_m_eq_prec { sequence = <M E Q DOT P R E C>; bindings = <&uc 0x22DE 0>; };  // eq.prec = ⋞
+    seq_m_eq_quad { sequence = <M E Q DOT Q U A D>; bindings = <&uc 0x2263 0>; };  // eq.quad = ≣
+    seq_m_eq_quest { sequence = <M E Q DOT Q U E S T>; bindings = <&uc 0x225F 0>; };  // eq.quest = ≟
+    seq_m_eq_star { sequence = <M E Q DOT S T A R>; bindings = <&uc 0x225B 0>; };  // eq.star = ≛
+    seq_m_eq_succ { sequence = <M E Q DOT S U C C>; bindings = <&uc 0x22DF 0>; };  // eq.succ = ⋟
+    seq_m_eq_triple { sequence = <M E Q DOT T R I P L E>; bindings = <&uc 0x2261 0>; };  // eq.triple = ≡
+    seq_m_eqApprox { sequence = <M E Q A P P R O X>; bindings = <&uc 0x224A 0>; };  // eqApprox = ≊
+    seq_m_eqDots { sequence = <M E Q D O T S>; bindings = <&uc 0x2251 0>; };  // eqDots = ≑
+    seq_m_eqGtSlant { sequence = <M E Q G T S L A N T>; bindings = <&uc 0x2A96 0>; };  // eqGtSlant = ⪖
+    seq_m_eqLat { sequence = <M E Q L A T>; bindings = <&uc 0x2AAD 0>; };  // eqLat = ⪭
+    seq_m_eqLtSlant { sequence = <M E Q L T S L A N T>; bindings = <&uc 0x2A95 0>; };  // eqLtSlant = ⪕
+    seq_m_eqParallel { sequence = <M E Q P A R A L L E L>; bindings = <&uc 0x22D5 0>; };  // eqParallel = ⋕
+    seq_m_eqSmt { sequence = <M E Q S M T>; bindings = <&uc 0x2AAC 0>; };  // eqSmt = ⪬
+    seq_m_eqTripleNot { sequence = <M E Q T R I P L E N O T>; bindings = <&uc 0x2262 0>; };  // eqTripleNot = ≢
+    seq_m_equal { sequence = <M E Q U A L>; bindings = <&uc 0x3D 0>; };  // equal = =
+    seq_m_equiv { sequence = <M E Q U I V>; bindings = <&uc 0x2261 0>; };  // equiv = ≡
+    seq_m_errorbar_circle_filled { sequence = <M E R R O R B A R DOT C I R C L E DOT F I L L E D>; bindings = <&uc 0x29F3 0>; };  // errorbar.circle.filled = ⧳
+    seq_m_errorbar_circle_stroked { sequence = <M E R R O R B A R DOT C I R C L E DOT S T R O K E D>; bindings = <&uc 0x29F2 0>; };  // errorbar.circle.stroked = ⧲
+    seq_m_errorbar_diamond_filled { sequence = <M E R R O R B A R DOT D I A M O N D DOT F I L L E D>; bindings = <&uc 0x29F1 0>; };  // errorbar.diamond.filled = ⧱
+    seq_m_errorbar_diamond_stroked { sequence = <M E R R O R B A R DOT D I A M O N D DOT S T R O K E D>; bindings = <&uc 0x29F0 0>; };  // errorbar.diamond.stroked = ⧰
+    seq_m_errorbar_square_filled { sequence = <M E R R O R B A R DOT S Q U A R E DOT F I L L E D>; bindings = <&uc 0x29EF 0>; };  // errorbar.square.filled = ⧯
+    seq_m_errorbar_square_stroked { sequence = <M E R R O R B A R DOT S Q U A R E DOT S T R O K E D>; bindings = <&uc 0x29EE 0>; };  // errorbar.square.stroked = ⧮
     seq_m_excl { sequence = <M E X C L>; bindings = <&uc 0x21 0>; };  // excl = !
-    seq_m_exists { sequence = <M E X I S T S>; bindings = <&uc 0x2203 0>; };  // exists = ∃
+    seq_m_exists_not { sequence = <M E X I S T S DOT N O T>; bindings = <&uc 0x2204 0>; };  // exists.not = ∄
+    seq_m_exists2 { sequence = <M E X I S T S 2>; bindings = <&uc 0x2203 0>; };  // exists2 = ∃
     seq_m_female { sequence = <M F E M A L E>; bindings = <&uc 0x2640 0 &uc 0xFE0E 0>; };  // female = ♀
+    seq_m_feminine { sequence = <M F E M I N I N E>; bindings = <&uc 0xAA 0>; };  // feminine = ª
     seq_m_fence_dotted { sequence = <M F E N C E DOT D O T T E D>; bindings = <&uc 0x2999 0>; };  // fence.dotted = ⦙
     seq_m_fence_l { sequence = <M F E N C E DOT L>; bindings = <&uc 0x29D8 0>; };  // fence.l = ⧘
     seq_m_fence_r { sequence = <M F E N C E DOT R>; bindings = <&uc 0x29D9 0>; };  // fence.r = ⧙
     seq_m_fenceLDouble { sequence = <M F E N C E L D O U B L E>; bindings = <&uc 0x29DA 0>; };  // fenceLDouble = ⧚
     seq_m_fenceRDouble { sequence = <M F E N C E R D O U B L E>; bindings = <&uc 0x29DB 0>; };  // fenceRDouble = ⧛
+    seq_m_filledParallelogram { sequence = <M F I L L E D P A R A L L E L O G R A M>; bindings = <&uc 0x25B0 0>; };  // filledParallelogram = ▰
     seq_m_floor_l { sequence = <M F L O O R DOT L>; bindings = <&uc 0x230A 0>; };  // floor.l = ⌊
     seq_m_floor_r { sequence = <M F L O O R DOT R>; bindings = <&uc 0x230B 0>; };  // floor.r = ⌋
-    seq_m_forall { sequence = <M F O R A L L>; bindings = <&uc 0x2200 0>; };  // forall = ∀
+    seq_m_floral { sequence = <M F L O R A L>; bindings = <&uc 0x2766 0>; };  // floral = ❦
+    seq_m_forall2 { sequence = <M F O R A L L 2>; bindings = <&uc 0x2200 0>; };  // forall2 = ∀
     seq_m_forces { sequence = <M F O R C E S>; bindings = <&uc 0x22A9 0>; };  // forces = ⊩
     seq_m_frown { sequence = <M F R O W N>; bindings = <&uc 0x2322 0>; };  // frown = ⌢
     seq_m_gender { sequence = <M G E N D E R>; bindings = <&uc 0x7B 0>; };  // gender = {
-    seq_m_geq { sequence = <M G E Q>; bindings = <&uc 0x2265 0>; };  // geq = ≥
     seq_m_gimel { sequence = <M G I M E L>; bindings = <&uc 0x5D2 0>; };  // gimel = ג
     seq_m_gradient { sequence = <M G R A D I E N T>; bindings = <&uc 0x2207 0>; };  // gradient = ∇
-    seq_m_gt { sequence = <M G T>; bindings = <&uc 0x3E 0>; };  // gt = >
+    seq_m_greater { sequence = <M G R E A T E R>; bindings = <&uc 0x3E 0>; };  // greater = >
+    seq_m_gt_approx { sequence = <M G T DOT A P P R O X>; bindings = <&uc 0x2A86 0>; };  // gt.approx = ⪆
+    seq_m_gt_arc { sequence = <M G T DOT A R C>; bindings = <&uc 0x2AA7 0>; };  // gt.arc = ⪧
+    seq_m_gt_closed { sequence = <M G T DOT C L O S E D>; bindings = <&uc 0x22B3 0>; };  // gt.closed = ⊳
+    seq_m_gt_dot { sequence = <M G T DOT D O T>; bindings = <&uc 0x22D7 0>; };  // gt.dot = ⋗
+    seq_m_gt_double { sequence = <M G T DOT D O U B L E>; bindings = <&uc 0x226B 0>; };  // gt.double = ≫
+    seq_m_gt_eq { sequence = <M G T DOT E Q>; bindings = <&uc 0x2265 0>; };  // gt.eq = ≥
+    seq_m_gt_lt { sequence = <M G T DOT L T>; bindings = <&uc 0x2277 0>; };  // gt.lt = ≷
+    seq_m_gt_napprox { sequence = <M G T DOT N A P P R O X>; bindings = <&uc 0x2A8A 0>; };  // gt.napprox = ⪊
+    seq_m_gt_neq { sequence = <M G T DOT N E Q>; bindings = <&uc 0x2A88 0>; };  // gt.neq = ⪈
+    seq_m_gt_not { sequence = <M G T DOT N O T>; bindings = <&uc 0x226F 0>; };  // gt.not = ≯
+    seq_m_gt_ntilde { sequence = <M G T DOT N T I L D E>; bindings = <&uc 0x22E7 0>; };  // gt.ntilde = ⋧
+    seq_m_gt_o { sequence = <M G T DOT O>; bindings = <&uc 0x29C1 0>; };  // gt.o = ⧁
+    seq_m_gt_quest { sequence = <M G T DOT Q U E S T>; bindings = <&uc 0x2A7C 0>; };  // gt.quest = ⩼
+    seq_m_gt_tilde { sequence = <M G T DOT T I L D E>; bindings = <&uc 0x2273 0>; };  // gt.tilde = ≳
+    seq_m_gt_triple { sequence = <M G T DOT T R I P L E>; bindings = <&uc 0x22D9 0>; };  // gt.triple = ⋙
+    seq_m_gtArcEq { sequence = <M G T A R C E Q>; bindings = <&uc 0x2AA9 0>; };  // gtArcEq = ⪩
+    seq_m_gtClosedEq { sequence = <M G T C L O S E D E Q>; bindings = <&uc 0x22B5 0>; };  // gtClosedEq = ⊵
+    seq_m_gtClosedNot { sequence = <M G T C L O S E D N O T>; bindings = <&uc 0x22EB 0>; };  // gtClosedNot = ⋫
+    seq_m_gtDoubleNested { sequence = <M G T D O U B L E N E S T E D>; bindings = <&uc 0x2AA2 0>; };  // gtDoubleNested = ⪢
+    seq_m_gtEqLt { sequence = <M G T E Q L T>; bindings = <&uc 0x22DB 0>; };  // gtEqLt = ⋛
+    seq_m_gtEqNot { sequence = <M G T E Q N O T>; bindings = <&uc 0x2271 0>; };  // gtEqNot = ≱
+    seq_m_gtEqSlant { sequence = <M G T E Q S L A N T>; bindings = <&uc 0x2A7E 0>; };  // gtEqSlant = ⩾
+    seq_m_gtEquiv { sequence = <M G T E Q U I V>; bindings = <&uc 0x2A9A 0>; };  // gtEquiv = ⪚
+    seq_m_gtLtNot { sequence = <M G T L T N O T>; bindings = <&uc 0x2279 0>; };  // gtLtNot = ≹
+    seq_m_gtNequiv { sequence = <M G T N E Q U I V>; bindings = <&uc 0x2269 0>; };  // gtNequiv = ≩
+    seq_m_gtTildeNot { sequence = <M G T T I L D E N O T>; bindings = <&uc 0x2275 0>; };  // gtTildeNot = ≵
+    seq_m_gtTildeSlant { sequence = <M G T T I L D E S L A N T>; bindings = <&uc 0x2273 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // gtTildeSlant = ≳\vs{1}
+    seq_m_gtTripleNested { sequence = <M G T T R I P L E N E S T E D>; bindings = <&uc 0x2AF8 0>; };  // gtTripleNested = ⫸
     seq_m_harpoon_bl { sequence = <M H A R P O O N DOT B L>; bindings = <&uc 0x21C3 0>; };  // harpoon.bl = ⇃
     seq_m_harpoon_br { sequence = <M H A R P O O N DOT B R>; bindings = <&uc 0x21C2 0>; };  // harpoon.br = ⇂
     seq_m_harpoon_lb { sequence = <M H A R P O O N DOT L B>; bindings = <&uc 0x21BD 0>; };  // harpoon.lb = ↽
@@ -322,8 +514,14 @@
     seq_m_harpoons_tlbr { sequence = <M H A R P O O N S DOT T L B R>; bindings = <&uc 0x296E 0>; };  // harpoons.tlbr = ⥮
     seq_m_harpoons_tltr { sequence = <M H A R P O O N S DOT T L T R>; bindings = <&uc 0x2963 0>; };  // harpoons.tltr = ⥣
     seq_m_hash { sequence = <M H A S H>; bindings = <&uc 0x23 0 &uc 0xFE0E 0>; };  // hash = #
+    seq_m_hatApprox { sequence = <M H A T A P P R O X>; bindings = <&uc 0x2A6F 0>; };  // hatApprox = ⩯
+    seq_m_heavyBallotCheck { sequence = <M H E A V Y B A L L O T C H E C K>; bindings = <&uc 0x1F5F9 0>; };  // heavyBallotCheck = 🗹
+    seq_m_heavyCheckmark { sequence = <M H E A V Y C H E C K M A R K>; bindings = <&uc 0x2714 0 &uc 0xFE0E 0>; };  // heavyCheckmark = ✔
+    seq_m_heavyCrossmark { sequence = <M H E A V Y C R O S S M A R K>; bindings = <&uc 0x2718 0>; };  // heavyCrossmark = ✘
     seq_m_hexa_filled { sequence = <M H E X A DOT F I L L E D>; bindings = <&uc 0x2B22 0>; };  // hexa.filled = ⬢
     seq_m_hexa_stroked { sequence = <M H E X A DOT S T R O K E D>; bindings = <&uc 0x2B21 0>; };  // hexa.stroked = ⬡
+    seq_m_holeBullet { sequence = <M H O L E B U L L E T>; bindings = <&uc 0x25D8 0>; };  // holeBullet = ◘
+    seq_m_hookIntegralArrow { sequence = <M H O O K I N T E G R A L A R R O W>; bindings = <&uc 0x2A17 0>; };  // hookIntegralArrow = ⨗
     seq_m_hookleftarrow { sequence = <M H O O K L E F T A R R O W>; bindings = <&uc 0x21A9 0 &uc 0xFE0E 0>; };  // hookleftarrow = ↩
     seq_m_hookrightarrow { sequence = <M H O O K R I G H T A R R O W>; bindings = <&uc 0x21AA 0 &uc 0xFE0E 0>; };  // hookrightarrow = ↪
     seq_m_hourglass_filled { sequence = <M H O U R G L A S S DOT F I L L E D>; bindings = <&uc 0x29D7 0>; };  // hourglass.filled = ⧗
@@ -335,14 +533,49 @@
     seq_m_in_small { sequence = <M I N DOT S M A L L>; bindings = <&uc 0x220A 0>; };  // in.small = ∊
     seq_m_inRevNot { sequence = <M I N R E V N O T>; bindings = <&uc 0x220C 0>; };  // inRevNot = ∌
     seq_m_inRevSmall { sequence = <M I N R E V S M A L L>; bindings = <&uc 0x220D 0>; };  // inRevSmall = ∍
-    seq_m_infinity { sequence = <M I N F I N I T Y>; bindings = <&uc 0x221E 0>; };  // infinity = ∞
+    seq_m_incompleteInfinity { sequence = <M I N C O M P L E T E I N F I N I T Y>; bindings = <&uc 0x29DC 0>; };  // incompleteInfinity = ⧜
+    seq_m_inf { sequence = <M I N F>; bindings = <&uc 0x221E 0>; };  // inf = ∞
     seq_m_inset { sequence = <M I N S E T>; bindings = <&uc 0x2208 0>; };  // inset = ∈
     seq_m_integral { sequence = <M I N T E G R A L>; bindings = <&uc 0x222B 0>; };  // integral = ∫
-    seq_m_inter { sequence = <M I N T E R>; bindings = <&uc 0x2229 0>; };  // inter = ∩
+    seq_m_inter_and { sequence = <M I N T E R DOT A N D>; bindings = <&uc 0x2A44 0>; };  // inter.and = ⩄
+    seq_m_inter_dot { sequence = <M I N T E R DOT D O T>; bindings = <&uc 0x2A40 0>; };  // inter.dot = ⩀
+    seq_m_inter_double { sequence = <M I N T E R DOT D O U B L E>; bindings = <&uc 0x22D2 0>; };  // inter.double = ⋒
+    seq_m_inter_serif { sequence = <M I N T E R DOT S E R I F>; bindings = <&uc 0x2229 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // inter.serif = ∩\vs{1}
+    seq_m_inter_sq { sequence = <M I N T E R DOT S Q>; bindings = <&uc 0x2293 0>; };  // inter.sq = ⊓
+    seq_m_interIntegral { sequence = <M I N T E R I N T E G R A L>; bindings = <&uc 0x2A19 0>; };  // interIntegral = ⨙
+    seq_m_interSqBig { sequence = <M I N T E R S Q B I G>; bindings = <&uc 0x2A05 0>; };  // interSqBig = ⨅
+    seq_m_interSqDouble { sequence = <M I N T E R S Q D O U B L E>; bindings = <&uc 0x2A4E 0>; };  // interSqDouble = ⩎
+    seq_m_interSqSerif { sequence = <M I N T E R S Q S E R I F>; bindings = <&uc 0x2293 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // interSqSerif = ⊓\vs{1}
+    seq_m_interleave { sequence = <M I N T E R L E A V E>; bindings = <&uc 0x2AF4 0>; };  // interleave = ⫴
+    seq_m_interrobang { sequence = <M I N T E R R O B A N G>; bindings = <&uc 0x203D 0>; };  // interrobang = ‽
+    seq_m_intersec { sequence = <M I N T E R S E C>; bindings = <&uc 0x2229 0>; };  // intersec = ∩
+    seq_m_intersex { sequence = <M I N T E R S E X>; bindings = <&uc 0x26A5 0>; };  // intersex = ⚥
+    seq_m_invAmp { sequence = <M I N V A M P>; bindings = <&uc 0x214B 0>; };  // invAmp = ⅋
+    seq_m_invComma { sequence = <M I N V C O M M A>; bindings = <&uc 0x2E32 0>; };  // invComma = ⸲
+    seq_m_invDagger { sequence = <M I N V D A G G E R>; bindings = <&uc 0x2E38 0>; };  // invDagger = ⸸
+    seq_m_invExcl { sequence = <M I N V E X C L>; bindings = <&uc 0xA1 0>; };  // invExcl = ¡
+    seq_m_invInterrobang { sequence = <M I N V I N T E R R O B A N G>; bindings = <&uc 0x2E18 0>; };  // invInterrobang = ⸘
+    seq_m_invQuest { sequence = <M I N V Q U E S T>; bindings = <&uc 0xBF 0>; };  // invQuest = ¿
+    seq_m_invSemi { sequence = <M I N V S E M I>; bindings = <&uc 0x2E35 0>; };  // invSemi = ⸵
+    seq_m_king_black { sequence = <M K I N G DOT B L A C K>; bindings = <&uc 0x265A 0>; };  // king.black = ♚
+    seq_m_king_white { sequence = <M K I N G DOT W H I T E>; bindings = <&uc 0x2654 0>; };  // king.white = ♔
+    seq_m_knight_black { sequence = <M K N I G H T DOT B L A C K>; bindings = <&uc 0x265E 0>; };  // knight.black = ♞
+    seq_m_knight_white { sequence = <M K N I G H T DOT W H I T E>; bindings = <&uc 0x2658 0>; };  // knight.white = ♘
+    seq_m_lBowtieStrokedBig { sequence = <M L B O W T I E S T R O K E D B I G>; bindings = <&uc 0x27D5 0>; };  // lBowtieStrokedBig = ⟕
+    seq_m_lBullet { sequence = <M L B U L L E T>; bindings = <&uc 0x204C 0>; };  // lBullet = ⁌
+    seq_m_lDagger { sequence = <M L D A G G E R>; bindings = <&uc 0x2E36 0>; };  // lDagger = ⸶
+    seq_m_lEmptysetArrow { sequence = <M L E M P T Y S E T A R R O W>; bindings = <&uc 0x29B4 0>; };  // lEmptysetArrow = ⦴
+    seq_m_lFloral { sequence = <M L F L O R A L>; bindings = <&uc 0x2619 0>; };  // lFloral = ☙
+    seq_m_lNothingArrow { sequence = <M L N O T H I N G A R R O W>; bindings = <&uc 0x29B4 0>; };  // lNothingArrow = ⦴
     seq_m_laplace { sequence = <M L A P L A C E>; bindings = <&uc 0x2206 0>; };  // laplace = ∆
     seq_m_lat { sequence = <M L A T>; bindings = <&uc 0x2AAB 0>; };  // lat = ⪫
+    seq_m_leftarrow { sequence = <M L E F T A R R O W>; bindings = <&uc 0x2190 0>; };  // leftarrow = ←
     seq_m_leftrightarrow { sequence = <M L E F T R I G H T A R R O W>; bindings = <&uc 0x2194 0 &uc 0xFE0E 0>; };  // leftrightarrow = ↔
-    seq_m_leq { sequence = <M L E Q>; bindings = <&uc 0x2264 0>; };  // leq = ≤
+    seq_m_less { sequence = <M L E S S>; bindings = <&uc 0x3C 0>; };  // less = <
+    seq_m_lightCheckmark { sequence = <M L I G H T C H E C K M A R K>; bindings = <&uc 0x1F5F8 0>; };  // lightCheckmark = 🗸
+    seq_m_longMapsfrom { sequence = <M L O N G M A P S F R O M>; bindings = <&uc 0x27FB 0>; };  // longMapsfrom = ⟻
+    seq_m_longMapsto { sequence = <M L O N G M A P S T O>; bindings = <&uc 0x27FC 0>; };  // longMapsto = ⟼
+    seq_m_longTackL { sequence = <M L O N G T A C K L>; bindings = <&uc 0x27DE 0>; };  // longTackL = ⟞
     seq_m_longleftarrow { sequence = <M L O N G L E F T A R R O W>; bindings = <&uc 0x27F5 0>; };  // longleftarrow = ⟵
     seq_m_longrightarrow { sequence = <M L O N G R I G H T A R R O W>; bindings = <&uc 0x27F6 0>; };  // longrightarrow = ⟶
     seq_m_lozenge_filled { sequence = <M L O Z E N G E DOT F I L L E D>; bindings = <&uc 0x29EB 0>; };  // lozenge.filled = ⧫
@@ -351,29 +584,91 @@
     seq_m_lozengeFilledSmall { sequence = <M L O Z E N G E F I L L E D S M A L L>; bindings = <&uc 0x2B2A 0>; };  // lozengeFilledSmall = ⬪
     seq_m_lozengeStrokedMedium { sequence = <M L O Z E N G E S T R O K E D M E D I U M>; bindings = <&uc 0x2B28 0>; };  // lozengeStrokedMedium = ⬨
     seq_m_lozengeStrokedSmall { sequence = <M L O Z E N G E S T R O K E D S M A L L>; bindings = <&uc 0x2B2B 0>; };  // lozengeStrokedSmall = ⬫
-    seq_m_lt { sequence = <M L T>; bindings = <&uc 0x3C 0>; };  // lt = <
+    seq_m_lt_approx { sequence = <M L T DOT A P P R O X>; bindings = <&uc 0x2A85 0>; };  // lt.approx = ⪅
+    seq_m_lt_arc { sequence = <M L T DOT A R C>; bindings = <&uc 0x2AA6 0>; };  // lt.arc = ⪦
+    seq_m_lt_closed { sequence = <M L T DOT C L O S E D>; bindings = <&uc 0x22B2 0>; };  // lt.closed = ⊲
+    seq_m_lt_dot { sequence = <M L T DOT D O T>; bindings = <&uc 0x22D6 0>; };  // lt.dot = ⋖
+    seq_m_lt_double { sequence = <M L T DOT D O U B L E>; bindings = <&uc 0x226A 0>; };  // lt.double = ≪
+    seq_m_lt_eq { sequence = <M L T DOT E Q>; bindings = <&uc 0x2264 0>; };  // lt.eq = ≤
+    seq_m_lt_gt { sequence = <M L T DOT G T>; bindings = <&uc 0x2276 0>; };  // lt.gt = ≶
+    seq_m_lt_napprox { sequence = <M L T DOT N A P P R O X>; bindings = <&uc 0x2A89 0>; };  // lt.napprox = ⪉
+    seq_m_lt_neq { sequence = <M L T DOT N E Q>; bindings = <&uc 0x2A87 0>; };  // lt.neq = ⪇
+    seq_m_lt_not { sequence = <M L T DOT N O T>; bindings = <&uc 0x226E 0>; };  // lt.not = ≮
+    seq_m_lt_ntilde { sequence = <M L T DOT N T I L D E>; bindings = <&uc 0x22E6 0>; };  // lt.ntilde = ⋦
+    seq_m_lt_o { sequence = <M L T DOT O>; bindings = <&uc 0x29C0 0>; };  // lt.o = ⧀
+    seq_m_lt_quest { sequence = <M L T DOT Q U E S T>; bindings = <&uc 0x2A7B 0>; };  // lt.quest = ⩻
+    seq_m_lt_tilde { sequence = <M L T DOT T I L D E>; bindings = <&uc 0x2272 0>; };  // lt.tilde = ≲
+    seq_m_lt_triple { sequence = <M L T DOT T R I P L E>; bindings = <&uc 0x22D8 0>; };  // lt.triple = ⋘
+    seq_m_ltArcEq { sequence = <M L T A R C E Q>; bindings = <&uc 0x2AA8 0>; };  // ltArcEq = ⪨
+    seq_m_ltClosedEq { sequence = <M L T C L O S E D E Q>; bindings = <&uc 0x22B4 0>; };  // ltClosedEq = ⊴
+    seq_m_ltClosedNot { sequence = <M L T C L O S E D N O T>; bindings = <&uc 0x22EA 0>; };  // ltClosedNot = ⋪
+    seq_m_ltDoubleNested { sequence = <M L T D O U B L E N E S T E D>; bindings = <&uc 0x2AA1 0>; };  // ltDoubleNested = ⪡
+    seq_m_ltEqGt { sequence = <M L T E Q G T>; bindings = <&uc 0x22DA 0>; };  // ltEqGt = ⋚
+    seq_m_ltEqNot { sequence = <M L T E Q N O T>; bindings = <&uc 0x2270 0>; };  // ltEqNot = ≰
+    seq_m_ltEqSlant { sequence = <M L T E Q S L A N T>; bindings = <&uc 0x2A7D 0>; };  // ltEqSlant = ⩽
+    seq_m_ltEquiv { sequence = <M L T E Q U I V>; bindings = <&uc 0x2A99 0>; };  // ltEquiv = ⪙
+    seq_m_ltGtNot { sequence = <M L T G T N O T>; bindings = <&uc 0x2278 0>; };  // ltGtNot = ≸
+    seq_m_ltNequiv { sequence = <M L T N E Q U I V>; bindings = <&uc 0x2268 0>; };  // ltNequiv = ≨
+    seq_m_ltTildeNot { sequence = <M L T T I L D E N O T>; bindings = <&uc 0x2274 0>; };  // ltTildeNot = ≴
+    seq_m_ltTildeSlant { sequence = <M L T T I L D E S L A N T>; bindings = <&uc 0x2272 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // ltTildeSlant = ≲\vs{1}
+    seq_m_ltTripleNested { sequence = <M L T T R I P L E N E S T E D>; bindings = <&uc 0x2AF7 0>; };  // ltTripleNested = ⫷
     seq_m_male { sequence = <M M A L E>; bindings = <&uc 0x2642 0 &uc 0xFE0E 0>; };  // male = ♂
+    seq_m_maltese { sequence = <M M A L T E S E>; bindings = <&uc 0x2720 0>; };  // maltese = ✠
     seq_m_mapsfrom { sequence = <M M A P S F R O M>; bindings = <&uc 0x21A4 0>; };  // mapsfrom = ↤
     seq_m_mapsto { sequence = <M M A P S T O>; bindings = <&uc 0x21A6 0>; };  // mapsto = ↦
-    seq_m_measuredangle { sequence = <M M E A S U R E D A N G L E>; bindings = <&uc 0x221F 0>; };  // measuredangle = ∟
-    seq_m_minus { sequence = <M M I N U S>; bindings = <&uc 0x2212 0>; };  // minus = −
+    seq_m_masculine { sequence = <M M A S C U L I N E>; bindings = <&uc 0xBA 0>; };  // masculine = º
+    seq_m_mcTrademark { sequence = <M M C T R A D E M A R K>; bindings = <&uc 0x1F16A 0>; };  // mcTrademark = 🅪
+    seq_m_mdTrademark { sequence = <M M D T R A D E M A R K>; bindings = <&uc 0x1F16B 0>; };  // mdTrademark = 🅫
+    seq_m_minus_dot { sequence = <M M I N U S DOT D O T>; bindings = <&uc 0x2238 0>; };  // minus.dot = ∸
+    seq_m_minus_o { sequence = <M M I N U S DOT O>; bindings = <&uc 0x2296 0>; };  // minus.o = ⊖
+    seq_m_minus_square { sequence = <M M I N U S DOT S Q U A R E>; bindings = <&uc 0x229F 0>; };  // minus.square = ⊟
+    seq_m_minus_tilde { sequence = <M M I N U S DOT T I L D E>; bindings = <&uc 0x2242 0>; };  // minus.tilde = ≂
+    seq_m_minus_triangle { sequence = <M M I N U S DOT T R I A N G L E>; bindings = <&uc 0x2A3A 0>; };  // minus.triangle = ⨺
+    seq_m_minus2 { sequence = <M M I N U S 2>; bindings = <&uc 0x2212 0>; };  // minus2 = −
+    seq_m_minusHyph { sequence = <M M I N U S H Y P H>; bindings = <&uc 0x2D 0>; };  // minusHyph = -
+    seq_m_minusplus { sequence = <M M I N U S P L U S>; bindings = <&uc 0x2213 0>; };  // minusplus = ∓
     seq_m_models { sequence = <M M O D E L S>; bindings = <&uc 0x22A7 0>; };  // models = ⊧
-    seq_m_mp { sequence = <M M P>; bindings = <&uc 0x2213 0>; };  // mp = ∓
     seq_m_multimap { sequence = <M M U L T I M A P>; bindings = <&uc 0x22B8 0>; };  // multimap = ⊸
     seq_m_mustache_l { sequence = <M M U S T A C H E DOT L>; bindings = <&uc 0x23B0 0>; };  // mustache.l = ⎰
     seq_m_mustache_r { sequence = <M M U S T A C H E DOT R>; bindings = <&uc 0x23B1 0>; };  // mustache.r = ⎱
-    seq_m_nabla { sequence = <M N A B L A>; bindings = <&uc 0x2207 0>; };  // nabla = ∇
-    seq_m_nequiv { sequence = <M N E Q U I V>; bindings = <&uc 0x2262 0>; };  // nequiv = ≢
+    seq_m_nabla2 { sequence = <M N A B L A 2>; bindings = <&uc 0x2207 0>; };  // nabla2 = ∇
+    seq_m_neg { sequence = <M N E G>; bindings = <&uc 0xAC 0>; };  // neg = ¬
     seq_m_neuter { sequence = <M N E U T E R>; bindings = <&uc 0x26B2 0>; };  // neuter = ⚲
-    seq_m_not { sequence = <M N O T>; bindings = <&uc 0xAC 0>; };  // not = ¬
-    seq_m_nsimeq { sequence = <M N S I M E Q>; bindings = <&uc 0x2249 0>; };  // nsimeq = ≉
-    seq_m_nsubset { sequence = <M N S U B S E T>; bindings = <&uc 0x2284 0>; };  // nsubset = ⊄
-    seq_m_nsupset { sequence = <M N S U P S E T>; bindings = <&uc 0x2285 0>; };  // nsupset = ⊅
+    seq_m_nobreakHyph { sequence = <M N O B R E A K H Y P H>; bindings = <&uc 0x2011 0>; };  // nobreakHyph = ‑
+    seq_m_not_inv { sequence = <M N O T DOT I N V>; bindings = <&uc 0x2319 0>; };  // not.inv = ⌙
+    seq_m_not_rev { sequence = <M N O T DOT R E V>; bindings = <&uc 0x2310 0>; };  // not.rev = ⌐
+    seq_m_notApprox { sequence = <M N O T A P P R O X>; bindings = <&uc 0x2249 0>; };  // notApprox = ≉
+    seq_m_notAsymp { sequence = <M N O T A S Y M P>; bindings = <&uc 0x226D 0>; };  // notAsymp = ≭
+    seq_m_notBackslash { sequence = <M N O T B A C K S L A S H>; bindings = <&uc 0x29F7 0>; };  // notBackslash = ⧷
+    seq_m_notDivides { sequence = <M N O T D I V I D E S>; bindings = <&uc 0x2224 0>; };  // notDivides = ∤
+    seq_m_notEquiv { sequence = <M N O T E Q U I V>; bindings = <&uc 0x2262 0>; };  // notEquiv = ≢
+    seq_m_notForces { sequence = <M N O T F O R C E S>; bindings = <&uc 0x22AE 0>; };  // notForces = ⊮
+    seq_m_notGtClosedEq { sequence = <M N O T G T C L O S E D E Q>; bindings = <&uc 0x22ED 0>; };  // notGtClosedEq = ⋭
+    seq_m_notLtClosedEq { sequence = <M N O T L T C L O S E D E Q>; bindings = <&uc 0x22EC 0>; };  // notLtClosedEq = ⋬
+    seq_m_notParallel { sequence = <M N O T P A R A L L E L>; bindings = <&uc 0x2226 0>; };  // notParallel = ∦
+    seq_m_notPrecEqSlant { sequence = <M N O T P R E C E Q S L A N T>; bindings = <&uc 0x22E0 0>; };  // notPrecEqSlant = ⋠
+    seq_m_notSuccEqSlant { sequence = <M N O T S U C C E Q S L A N T>; bindings = <&uc 0x22E1 0>; };  // notSuccEqSlant = ⋡
+    seq_m_notTackRrDouble { sequence = <M N O T T A C K R R D O U B L E>; bindings = <&uc 0x22AF 0>; };  // notTackRrDouble = ⊯
+    seq_m_notTildeEquiv { sequence = <M N O T T I L D E E Q U I V>; bindings = <&uc 0x2247 0>; };  // notTildeEquiv = ≇
+    seq_m_nothing { sequence = <M N O T H I N G>; bindings = <&uc 0x2205 0>; };  // nothing = ∅
+    seq_m_notsubset { sequence = <M N O T S U B S E T>; bindings = <&uc 0x2284 0>; };  // notsubset = ⊄
+    seq_m_notsupset { sequence = <M N O T S U P S E T>; bindings = <&uc 0x2285 0>; };  // notsupset = ⊅
     seq_m_numero { sequence = <M N U M E R O>; bindings = <&uc 0x2116 0>; };  // numero = №
-    seq_m_oint { sequence = <M O I N T>; bindings = <&uc 0x222E 0>; };  // oint = ∮
+    seq_m_oBackslash { sequence = <M O B A C K S L A S H>; bindings = <&uc 0x29B8 0>; };  // oBackslash = ⦸
+    seq_m_oBullet { sequence = <M O B U L L E T>; bindings = <&uc 0x29BF 0>; };  // oBullet = ⦿
+    seq_m_oCompose { sequence = <M O C O M P O S E>; bindings = <&uc 0x229A 0>; };  // oCompose = ⊚
+    seq_m_oConvolve { sequence = <M O C O N V O L V E>; bindings = <&uc 0x229B 0>; };  // oConvolve = ⊛
+    seq_m_oParallel { sequence = <M O P A R A L L E L>; bindings = <&uc 0x29B7 0>; };  // oParallel = ⦷
+    seq_m_obtuseAngle { sequence = <M O B T U S E A N G L E>; bindings = <&uc 0x29A6 0>; };  // obtuseAngle = ⦦
     seq_m_oo { sequence = <M O O>; bindings = <&uc 0x221E 0>; };  // oo = ∞
-    seq_m_or { sequence = <M O R>; bindings = <&uc 0x2228 0>; };  // or = ∨
-    seq_m_parallel { sequence = <M P A R A L L E L>; bindings = <&uc 0x2225 0>; };  // parallel = ∥
+    seq_m_opBullet { sequence = <M O P B U L L E T>; bindings = <&uc 0x2219 0>; };  // opBullet = ∙
+    seq_m_or_big { sequence = <M O R DOT B I G>; bindings = <&uc 0x22C1 0>; };  // or.big = ⋁
+    seq_m_or_curly { sequence = <M O R DOT C U R L Y>; bindings = <&uc 0x22CE 0>; };  // or.curly = ⋎
+    seq_m_or_dot { sequence = <M O R DOT D O T>; bindings = <&uc 0x27C7 0>; };  // or.dot = ⟇
+    seq_m_or_double { sequence = <M O R DOT D O U B L E>; bindings = <&uc 0x2A54 0>; };  // or.double = ⩔
+    seq_m_ordinal { sequence = <M O R D I N A L>; bindings = <&uc 0x7B 0>; };  // ordinal = {
+    seq_m_original { sequence = <M O R I G I N A L>; bindings = <&uc 0x22B6 0>; };  // original = ⊶
+    seq_m_para { sequence = <M P A R A>; bindings = <&uc 0x2225 0>; };  // para = ∥
     seq_m_paren_b { sequence = <M P A R E N DOT B>; bindings = <&uc 0x23DD 0>; };  // paren.b = ⏝
     seq_m_paren_l { sequence = <M P A R E N DOT L>; bindings = <&uc 0x28 0>; };  // paren.l = (
     seq_m_paren_r { sequence = <M P A R E N DOT R>; bindings = <&uc 0x29 0>; };  // paren.r = )
@@ -384,33 +679,89 @@
     seq_m_parenRClosed { sequence = <M P A R E N R C L O S E D>; bindings = <&uc 0x2988 0>; };  // parenRClosed = ⦈
     seq_m_parenRFlat { sequence = <M P A R E N R F L A T>; bindings = <&uc 0x27EF 0>; };  // parenRFlat = ⟯
     seq_m_parenRStroked { sequence = <M P A R E N R S T R O K E D>; bindings = <&uc 0x2986 0>; };  // parenRStroked = ⦆
-    seq_m_partial { sequence = <M P A R T I A L>; bindings = <&uc 0x2202 0>; };  // partial = ∂
+    seq_m_partial2 { sequence = <M P A R T I A L 2>; bindings = <&uc 0x2202 0>; };  // partial2 = ∂
+    seq_m_pawn_black { sequence = <M P A W N DOT B L A C K>; bindings = <&uc 0x265F 0 &uc 0xFE0E 0>; };  // pawn.black = ♟
+    seq_m_pawn_white { sequence = <M P A W N DOT W H I T E>; bindings = <&uc 0x2659 0>; };  // pawn.white = ♙
+    seq_m_pee { sequence = <M P E E>; bindings = <&uc 0x2118 0>; };  // pee = ℘
     seq_m_penta_filled { sequence = <M P E N T A DOT F I L L E D>; bindings = <&uc 0x2B1F 0>; };  // penta.filled = ⬟
     seq_m_penta_stroked { sequence = <M P E N T A DOT S T R O K E D>; bindings = <&uc 0x2B20 0>; };  // penta.stroked = ⬠
     seq_m_percent { sequence = <M P E R C E N T>; bindings = <&uc 0x25 0>; };  // percent = %
     seq_m_permille { sequence = <M P E R M I L L E>; bindings = <&uc 0x2030 0>; };  // permille = ‰
     seq_m_permyriad { sequence = <M P E R M Y R I A D>; bindings = <&uc 0x2031 0>; };  // permyriad = ‱
-    seq_m_perp { sequence = <M P E R P>; bindings = <&uc 0x27C2 0>; };  // perp = ⟂
+    seq_m_perp_o { sequence = <M P E R P DOT O>; bindings = <&uc 0x29B9 0>; };  // perp.o = ⦹
+    seq_m_perpendicular { sequence = <M P E R P E N D I C U L A R>; bindings = <&uc 0x27C2 0>; };  // perpendicular = ⟂
     seq_m_pilcrow { sequence = <M P I L C R O W>; bindings = <&uc 0xB6 0>; };  // pilcrow = ¶
-    seq_m_plus { sequence = <M P L U S>; bindings = <&uc 0x2B 0>; };  // plus = +
-    seq_m_pm { sequence = <M P M>; bindings = <&uc 0xB1 0>; };  // pm = ±
+    seq_m_planck { sequence = <M P L A N C K>; bindings = <&uc 0x127 0>; };  // planck = ħ
+    seq_m_plus_dot { sequence = <M P L U S DOT D O T>; bindings = <&uc 0x2214 0>; };  // plus.dot = ∔
+    seq_m_plus_double { sequence = <M P L U S DOT D O U B L E>; bindings = <&uc 0x29FA 0>; };  // plus.double = ⧺
+    seq_m_plus_hat { sequence = <M P L U S DOT H A T>; bindings = <&uc 0x2A23 0>; };  // plus.hat = ⨣
+    seq_m_plus_o { sequence = <M P L U S DOT O>; bindings = <&uc 0x2295 0>; };  // plus.o = ⊕
+    seq_m_plus_square { sequence = <M P L U S DOT S Q U A R E>; bindings = <&uc 0x229E 0>; };  // plus.square = ⊞
+    seq_m_plus_triangle { sequence = <M P L U S DOT T R I A N G L E>; bindings = <&uc 0x2A39 0>; };  // plus.triangle = ⨹
+    seq_m_plus_triple { sequence = <M P L U S DOT T R I P L E>; bindings = <&uc 0x29FB 0>; };  // plus.triple = ⧻
+    seq_m_plus2 { sequence = <M P L U S 2>; bindings = <&uc 0x2B 0>; };  // plus2 = +
+    seq_m_plusOArrow { sequence = <M P L U S O A R R O W>; bindings = <&uc 0x27F4 0>; };  // plusOArrow = ⟴
+    seq_m_plusOBig { sequence = <M P L U S O B I G>; bindings = <&uc 0x2A01 0>; };  // plusOBig = ⨁
+    seq_m_plusOL { sequence = <M P L U S O L>; bindings = <&uc 0x2A2D 0>; };  // plusOL = ⨭
+    seq_m_plusOR { sequence = <M P L U S O R>; bindings = <&uc 0x2A2E 0>; };  // plusOR = ⨮
+    seq_m_plusminus { sequence = <M P L U S M I N U S>; bindings = <&uc 0xB1 0>; };  // plusminus = ±
+    seq_m_pointHyph { sequence = <M P O I N T H Y P H>; bindings = <&uc 0x2027 0>; };  // pointHyph = ‧
     seq_m_power_off { sequence = <M P O W E R DOT O F F>; bindings = <&uc 0x2B58 0>; };  // power.off = ⭘
     seq_m_power_on { sequence = <M P O W E R DOT O N>; bindings = <&uc 0x23FD 0>; };  // power.on = ⏽
     seq_m_power_sleep { sequence = <M P O W E R DOT S L E E P>; bindings = <&uc 0x23FE 0>; };  // power.sleep = ⏾
     seq_m_power_standby { sequence = <M P O W E R DOT S T A N D B Y>; bindings = <&uc 0x23FB 0>; };  // power.standby = ⏻
     seq_m_powerOnOff { sequence = <M P O W E R O N O F F>; bindings = <&uc 0x23FC 0>; };  // powerOnOff = ⏼
-    seq_m_prec { sequence = <M P R E C>; bindings = <&uc 0x227A 0>; };  // prec = ≺
+    seq_m_prec_approx { sequence = <M P R E C DOT A P P R O X>; bindings = <&uc 0x2AB7 0>; };  // prec.approx = ⪷
+    seq_m_prec_curly_eq { sequence = <M P R E C DOT C U R L Y DOT E Q>; bindings = <&uc 0x227C 0>; };  // prec.curly.eq = ≼
+    seq_m_prec_double { sequence = <M P R E C DOT D O U B L E>; bindings = <&uc 0x2ABB 0>; };  // prec.double = ⪻
+    seq_m_prec_eq { sequence = <M P R E C DOT E Q>; bindings = <&uc 0x2AAF 0>; };  // prec.eq = ⪯
+    seq_m_prec_napprox { sequence = <M P R E C DOT N A P P R O X>; bindings = <&uc 0x2AB9 0>; };  // prec.napprox = ⪹
+    seq_m_prec_neq { sequence = <M P R E C DOT N E Q>; bindings = <&uc 0x2AB1 0>; };  // prec.neq = ⪱
+    seq_m_prec_not { sequence = <M P R E C DOT N O T>; bindings = <&uc 0x2280 0>; };  // prec.not = ⊀
+    seq_m_prec_ntilde { sequence = <M P R E C DOT N T I L D E>; bindings = <&uc 0x22E8 0>; };  // prec.ntilde = ⋨
+    seq_m_prec_tilde { sequence = <M P R E C DOT T I L D E>; bindings = <&uc 0x227E 0>; };  // prec.tilde = ≾
+    seq_m_precCurlyEqNot { sequence = <M P R E C C U R L Y E Q N O T>; bindings = <&uc 0x22E0 0>; };  // precCurlyEqNot = ⋠
+    seq_m_precEqSlant { sequence = <M P R E C E Q S L A N T>; bindings = <&uc 0x227C 0>; };  // precEqSlant = ≼
+    seq_m_precEquiv { sequence = <M P R E C E Q U I V>; bindings = <&uc 0x2AB3 0>; };  // precEquiv = ⪳
+    seq_m_precNequiv { sequence = <M P R E C N E Q U I V>; bindings = <&uc 0x2AB5 0>; };  // precNequiv = ⪵
+    seq_m_precedes { sequence = <M P R E C E D E S>; bindings = <&uc 0x227A 0>; };  // precedes = ≺
     seq_m_product { sequence = <M P R O D U C T>; bindings = <&uc 0x220F 0>; };  // product = ∏
-    seq_m_prop { sequence = <M P R O P>; bindings = <&uc 0x221D 0>; };  // prop = ∝
+    seq_m_propto { sequence = <M P R O P T O>; bindings = <&uc 0x221D 0>; };  // propto = ∝
     seq_m_qed { sequence = <M Q E D>; bindings = <&uc 0x220E 0>; };  // qed = ∎
+    seq_m_quadIntegral { sequence = <M Q U A D I N T E G R A L>; bindings = <&uc 0x2A0C 0>; };  // quadIntegral = ⨌
+    seq_m_queen_black { sequence = <M Q U E E N DOT B L A C K>; bindings = <&uc 0x265B 0>; };  // queen.black = ♛
+    seq_m_queen_white { sequence = <M Q U E E N DOT W H I T E>; bindings = <&uc 0x2655 0>; };  // queen.white = ♕
     seq_m_quest { sequence = <M Q U E S T>; bindings = <&uc 0x3F 0>; };  // quest = ?
+    seq_m_rBowtieStrokedBig { sequence = <M R B O W T I E S T R O K E D B I G>; bindings = <&uc 0x27D6 0>; };  // rBowtieStrokedBig = ⟖
+    seq_m_rBullet { sequence = <M R B U L L E T>; bindings = <&uc 0x204D 0>; };  // rBullet = ⁍
+    seq_m_rDagger { sequence = <M R D A G G E R>; bindings = <&uc 0x2E37 0>; };  // rDagger = ⸷
+    seq_m_rEmptysetArrow { sequence = <M R E M P T Y S E T A R R O W>; bindings = <&uc 0x29B3 0>; };  // rEmptysetArrow = ⦳
+    seq_m_rFloral { sequence = <M R F L O R A L>; bindings = <&uc 0x2767 0>; };  // rFloral = ❧
+    seq_m_rMaleStroke { sequence = <M R M A L E S T R O K E>; bindings = <&uc 0x26A9 0>; };  // rMaleStroke = ⚩
+    seq_m_rNothingArrow { sequence = <M R N O T H I N G A R R O W>; bindings = <&uc 0x29B3 0>; };  // rNothingArrow = ⦳
     seq_m_ratio { sequence = <M R A T I O>; bindings = <&uc 0x2236 0>; };  // ratio = ∶
+    seq_m_realpart { sequence = <M R E A L P A R T>; bindings = <&uc 0x211C 0>; };  // realpart = ℜ
     seq_m_rect_filled_h { sequence = <M R E C T DOT F I L L E D DOT H>; bindings = <&uc 0x25AC 0>; };  // rect.filled.h = ▬
     seq_m_rect_filled_v { sequence = <M R E C T DOT F I L L E D DOT V>; bindings = <&uc 0x25AE 0>; };  // rect.filled.v = ▮
     seq_m_rect_stroked_h { sequence = <M R E C T DOT S T R O K E D DOT H>; bindings = <&uc 0x25AD 0>; };  // rect.stroked.h = ▭
     seq_m_rect_stroked_v { sequence = <M R E C T DOT S T R O K E D DOT V>; bindings = <&uc 0x25AF 0>; };  // rect.stroked.v = ▯
+    seq_m_refmark { sequence = <M R E F M A R K>; bindings = <&uc 0x203B 0>; };  // refmark = ※
+    seq_m_registeredTrademark { sequence = <M R E G I S T E R E D T R A D E M A R K>; bindings = <&uc 0xAE 0 &uc 0xFE0E 0>; };  // registeredTrademark = ®
+    seq_m_revAngle { sequence = <M R E V A N G L E>; bindings = <&uc 0x29A3 0>; };  // revAngle = ⦣
+    seq_m_revComma { sequence = <M R E V C O M M A>; bindings = <&uc 0x2E41 0>; };  // revComma = ⹁
+    seq_m_revDividesNot { sequence = <M R E V D I V I D E S N O T>; bindings = <&uc 0x2AEE 0>; };  // revDividesNot = ⫮
+    seq_m_revEmptyset { sequence = <M R E V E M P T Y S E T>; bindings = <&uc 0x29B0 0>; };  // revEmptyset = ⦰
+    seq_m_revNothing { sequence = <M R E V N O T H I N G>; bindings = <&uc 0x29B0 0>; };  // revNothing = ⦰
+    seq_m_revPilcrow { sequence = <M R E V P I L C R O W>; bindings = <&uc 0x204B 0>; };  // revPilcrow = ⁋
+    seq_m_revSemi { sequence = <M R E V S E M I>; bindings = <&uc 0x204F 0>; };  // revSemi = ⁏
+    seq_m_rightangle { sequence = <M R I G H T A N G L E>; bindings = <&uc 0x221F 0>; };  // rightangle = ∟
+    seq_m_rightarrow { sequence = <M R I G H T A R R O W>; bindings = <&uc 0x2192 0>; };  // rightarrow = →
+    seq_m_rook_black { sequence = <M R O O K DOT B L A C K>; bindings = <&uc 0x265C 0>; };  // rook.black = ♜
+    seq_m_rook_white { sequence = <M R O O K DOT W H I T E>; bindings = <&uc 0x2656 0>; };  // rook.white = ♖
+    seq_m_sAngle { sequence = <M S A N G L E>; bindings = <&uc 0x299E 0>; };  // sAngle = ⦞
     seq_m_section { sequence = <M S E C T I O N>; bindings = <&uc 0xA7 0>; };  // section = §
     seq_m_semi { sequence = <M S E M I>; bindings = <&uc 0x3B 0>; };  // semi = ;
+    seq_m_serviceTrademark { sequence = <M S E R V I C E T R A D E M A R K>; bindings = <&uc 0x2120 0>; };  // serviceTrademark = ℠
     seq_m_shell_b { sequence = <M S H E L L DOT B>; bindings = <&uc 0x23E1 0>; };  // shell.b = ⏡
     seq_m_shell_l { sequence = <M S H E L L DOT L>; bindings = <&uc 0x2772 0>; };  // shell.l = ❲
     seq_m_shell_r { sequence = <M S H E L L DOT R>; bindings = <&uc 0x2773 0>; };  // shell.r = ❳
@@ -419,17 +770,34 @@
     seq_m_shellLStroked { sequence = <M S H E L L L S T R O K E D>; bindings = <&uc 0x27EC 0>; };  // shellLStroked = ⟬
     seq_m_shellRFilled { sequence = <M S H E L L R F I L L E D>; bindings = <&uc 0x2998 0>; };  // shellRFilled = ⦘
     seq_m_shellRStroked { sequence = <M S H E L L R S T R O K E D>; bindings = <&uc 0x27ED 0>; };  // shellRStroked = ⟭
-    seq_m_simeq { sequence = <M S I M E Q>; bindings = <&uc 0x224A 0>; };  // simeq = ≊
-    seq_m_slash { sequence = <M S L A S H>; bindings = <&uc 0x2F 0>; };  // slash = /
+    seq_m_slantEquivGt { sequence = <M S L A N T E Q U I V G T>; bindings = <&uc 0x2A9C 0>; };  // slantEquivGt = ⪜
+    seq_m_slantEquivLt { sequence = <M S L A N T E Q U I V L T>; bindings = <&uc 0x2A9B 0>; };  // slantEquivLt = ⪛
+    seq_m_slantGtEqLt { sequence = <M S L A N T G T E Q L T>; bindings = <&uc 0x22DB 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // slantGtEqLt = ⋛\vs{1}
+    seq_m_slantGtEquiv { sequence = <M S L A N T G T E Q U I V>; bindings = <&uc 0x2AFA 0>; };  // slantGtEquiv = ⫺
+    seq_m_slantLatEq { sequence = <M S L A N T L A T E Q>; bindings = <&uc 0x2AAD 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // slantLatEq = ⪭\vs{1}
+    seq_m_slantLtEqGt { sequence = <M S L A N T L T E Q G T>; bindings = <&uc 0x22DA 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // slantLtEqGt = ⋚\vs{1}
+    seq_m_slantLtEquiv { sequence = <M S L A N T L T E Q U I V>; bindings = <&uc 0x2AF9 0>; };  // slantLtEquiv = ⫹
+    seq_m_slantSmtEq { sequence = <M S L A N T S M T E Q>; bindings = <&uc 0x2AAC 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // slantSmtEq = ⪬\vs{1}
+    seq_m_slash_big { sequence = <M S L A S H DOT B I G>; bindings = <&uc 0x29F8 0>; };  // slash.big = ⧸
+    seq_m_slash_double { sequence = <M S L A S H DOT D O U B L E>; bindings = <&uc 0x2AFD 0>; };  // slash.double = ⫽
+    seq_m_slash_o { sequence = <M S L A S H DOT O>; bindings = <&uc 0x2298 0>; };  // slash.o = ⊘
+    seq_m_slash_triple { sequence = <M S L A S H DOT T R I P L E>; bindings = <&uc 0x2AFB 0>; };  // slash.triple = ⫻
+    seq_m_slashIntegral { sequence = <M S L A S H I N T E G R A L>; bindings = <&uc 0x2A0F 0>; };  // slashIntegral = ⨏
     seq_m_smash { sequence = <M S M A S H>; bindings = <&uc 0x2A33 0>; };  // smash = ⨳
     seq_m_smile { sequence = <M S M I L E>; bindings = <&uc 0x2323 0>; };  // smile = ⌣
     seq_m_smt { sequence = <M S M T>; bindings = <&uc 0x2AAA 0>; };  // smt = ⪪
+    seq_m_softHyph { sequence = <M S O F T H Y P H>; bindings = <&uc 0xAD 0>; };  // softHyph = ­
+    seq_m_soundCopyright { sequence = <M S O U N D C O P Y R I G H T>; bindings = <&uc 0x2117 0>; };  // soundCopyright = ℗
+    seq_m_spatialAngle { sequence = <M S P A T I A L A N G L E>; bindings = <&uc 0x27C0 0>; };  // spatialAngle = ⟀
+    seq_m_sphericAngle { sequence = <M S P H E R I C A N G L E>; bindings = <&uc 0x2222 0>; };  // sphericAngle = ∢
     seq_m_square_filled { sequence = <M S Q U A R E DOT F I L L E D>; bindings = <&uc 0x25A0 0>; };  // square.filled = ■
     seq_m_square_stroked { sequence = <M S Q U A R E DOT S T R O K E D>; bindings = <&uc 0x25A1 0>; };  // square.stroked = □
+    seq_m_squareAngleRight { sequence = <M S Q U A R E A N G L E R I G H T>; bindings = <&uc 0x299C 0>; };  // squareAngleRight = ⦜
     seq_m_squareFilledBig { sequence = <M S Q U A R E F I L L E D B I G>; bindings = <&uc 0x2B1B 0 &uc 0xFE0E 0>; };  // squareFilledBig = ⬛
     seq_m_squareFilledMedium { sequence = <M S Q U A R E F I L L E D M E D I U M>; bindings = <&uc 0x25FC 0 &uc 0xFE0E 0>; };  // squareFilledMedium = ◼
     seq_m_squareFilledSmall { sequence = <M S Q U A R E F I L L E D S M A L L>; bindings = <&uc 0x25FE 0 &uc 0xFE0E 0>; };  // squareFilledSmall = ◾
     seq_m_squareFilledTiny { sequence = <M S Q U A R E F I L L E D T I N Y>; bindings = <&uc 0x25AA 0 &uc 0xFE0E 0>; };  // squareFilledTiny = ▪
+    seq_m_squareIntegral { sequence = <M S Q U A R E I N T E G R A L>; bindings = <&uc 0x2A16 0>; };  // squareIntegral = ⨖
     seq_m_squareStrokedBig { sequence = <M S Q U A R E S T R O K E D B I G>; bindings = <&uc 0x2B1C 0 &uc 0xFE0E 0>; };  // squareStrokedBig = ⬜
     seq_m_squareStrokedDotted { sequence = <M S Q U A R E S T R O K E D D O T T E D>; bindings = <&uc 0x2B1A 0>; };  // squareStrokedDotted = ⬚
     seq_m_squareStrokedMedium { sequence = <M S Q U A R E S T R O K E D M E D I U M>; bindings = <&uc 0x25FB 0 &uc 0xFE0E 0>; };  // squareStrokedMedium = ◻
@@ -437,17 +805,86 @@
     seq_m_squareStrokedSmall { sequence = <M S Q U A R E S T R O K E D S M A L L>; bindings = <&uc 0x25FD 0 &uc 0xFE0E 0>; };  // squareStrokedSmall = ◽
     seq_m_squareStrokedTiny { sequence = <M S Q U A R E S T R O K E D T I N Y>; bindings = <&uc 0x25AB 0 &uc 0xFE0E 0>; };  // squareStrokedTiny = ▫
     seq_m_star_filled { sequence = <M S T A R DOT F I L L E D>; bindings = <&uc 0x2605 0>; };  // star.filled = ★
-    seq_m_star_op { sequence = <M S T A R DOT O P>; bindings = <&uc 0x22C6 0>; };  // star.op = ⋆
     seq_m_star_stroked { sequence = <M S T A R DOT S T R O K E D>; bindings = <&uc 0x2606 0>; };  // star.stroked = ☆
-    seq_m_subeq { sequence = <M S U B E Q>; bindings = <&uc 0x2286 0>; };  // subeq = ⊆
-    seq_m_subset { sequence = <M S U B S E T>; bindings = <&uc 0x2282 0>; };  // subset = ⊂
-    seq_m_succ { sequence = <M S U C C>; bindings = <&uc 0x227B 0>; };  // succ = ≻
+    seq_m_starop { sequence = <M S T A R O P>; bindings = <&uc 0x22C6 0>; };  // starop = ⋆
+    seq_m_strokeMale { sequence = <M S T R O K E M A L E>; bindings = <&uc 0x26A6 0>; };  // strokeMale = ⚦
+    seq_m_strokedBullet { sequence = <M S T R O K E D B U L L E T>; bindings = <&uc 0x25E6 0>; };  // strokedBullet = ◦
+    seq_m_strokedParallelogram { sequence = <M S T R O K E D P A R A L L E L O G R A M>; bindings = <&uc 0x25B1 0>; };  // strokedParallelogram = ▱
+    seq_m_struckArrowLTwoheadTail { sequence = <M S T R U C K A R R O W L T W O H E A D T A I L>; bindings = <&uc 0x2B3C 0>; };  // struckArrowLTwoheadTail = ⬼
+    seq_m_struckArrowRTwoheadTail { sequence = <M S T R U C K A R R O W R T W O H E A D T A I L>; bindings = <&uc 0x2917 0>; };  // struckArrowRTwoheadTail = ⤗
+    seq_m_struckDivides { sequence = <M S T R U C K D I V I D E S>; bindings = <&uc 0x27CA 0>; };  // struckDivides = ⟊
+    seq_m_struckInterleave { sequence = <M S T R U C K I N T E R L E A V E>; bindings = <&uc 0x2AF5 0>; };  // struckInterleave = ⫵
+    seq_m_struckParallel { sequence = <M S T R U C K P A R A L L E L>; bindings = <&uc 0x2AF2 0>; };  // struckParallel = ⫲
+    seq_m_subset_approx { sequence = <M S U B S E T DOT A P P R O X>; bindings = <&uc 0x2AC9 0>; };  // subset.approx = ⫉
+    seq_m_subset_closed { sequence = <M S U B S E T DOT C L O S E D>; bindings = <&uc 0x2ACF 0>; };  // subset.closed = ⫏
+    seq_m_subset_dot { sequence = <M S U B S E T DOT D O T>; bindings = <&uc 0x2ABD 0>; };  // subset.dot = ⪽
+    seq_m_subset_double { sequence = <M S U B S E T DOT D O U B L E>; bindings = <&uc 0x22D0 0>; };  // subset.double = ⋐
+    seq_m_subset_eq_dot { sequence = <M S U B S E T DOT E Q DOT D O T>; bindings = <&uc 0x2AC3 0>; };  // subset.eq.dot = ⫃
+    seq_m_subset_eq_not { sequence = <M S U B S E T DOT E Q DOT N O T>; bindings = <&uc 0x2288 0>; };  // subset.eq.not = ⊈
+    seq_m_subset_eq_sq { sequence = <M S U B S E T DOT E Q DOT S Q>; bindings = <&uc 0x2291 0>; };  // subset.eq.sq = ⊑
+    seq_m_subset_equiv { sequence = <M S U B S E T DOT E Q U I V>; bindings = <&uc 0x2AC5 0>; };  // subset.equiv = ⫅
+    seq_m_subset_neq { sequence = <M S U B S E T DOT N E Q>; bindings = <&uc 0x228A 0>; };  // subset.neq = ⊊
+    seq_m_subset_plus { sequence = <M S U B S E T DOT P L U S>; bindings = <&uc 0x2ABF 0>; };  // subset.plus = ⪿
+    seq_m_subset_sq { sequence = <M S U B S E T DOT S Q>; bindings = <&uc 0x228F 0>; };  // subset.sq = ⊏
+    seq_m_subset_tilde { sequence = <M S U B S E T DOT T I L D E>; bindings = <&uc 0x2AC7 0>; };  // subset.tilde = ⫇
+    seq_m_subset_times { sequence = <M S U B S E T DOT T I M E S>; bindings = <&uc 0x2AC1 0>; };  // subset.times = ⫁
+    seq_m_subsetClosedEq { sequence = <M S U B S E T C L O S E D E Q>; bindings = <&uc 0x2AD1 0>; };  // subsetClosedEq = ⫑
+    seq_m_subsetNequiv { sequence = <M S U B S E T N E Q U I V>; bindings = <&uc 0x2ACB 0>; };  // subsetNequiv = ⫋
+    seq_m_subsetSqNeq { sequence = <M S U B S E T S Q N E Q>; bindings = <&uc 0x22E4 0>; };  // subsetSqNeq = ⋤
+    seq_m_subseteq { sequence = <M S U B S E T E Q>; bindings = <&uc 0x2286 0>; };  // subseteq = ⊆
+    seq_m_subsetof { sequence = <M S U B S E T O F>; bindings = <&uc 0x2282 0>; };  // subsetof = ⊂
+    seq_m_succ_approx { sequence = <M S U C C DOT A P P R O X>; bindings = <&uc 0x2AB8 0>; };  // succ.approx = ⪸
+    seq_m_succ_curly_eq { sequence = <M S U C C DOT C U R L Y DOT E Q>; bindings = <&uc 0x227D 0>; };  // succ.curly.eq = ≽
+    seq_m_succ_double { sequence = <M S U C C DOT D O U B L E>; bindings = <&uc 0x2ABC 0>; };  // succ.double = ⪼
+    seq_m_succ_eq { sequence = <M S U C C DOT E Q>; bindings = <&uc 0x2AB0 0>; };  // succ.eq = ⪰
+    seq_m_succ_napprox { sequence = <M S U C C DOT N A P P R O X>; bindings = <&uc 0x2ABA 0>; };  // succ.napprox = ⪺
+    seq_m_succ_neq { sequence = <M S U C C DOT N E Q>; bindings = <&uc 0x2AB2 0>; };  // succ.neq = ⪲
+    seq_m_succ_not { sequence = <M S U C C DOT N O T>; bindings = <&uc 0x2281 0>; };  // succ.not = ⊁
+    seq_m_succ_ntilde { sequence = <M S U C C DOT N T I L D E>; bindings = <&uc 0x22E9 0>; };  // succ.ntilde = ⋩
+    seq_m_succ_tilde { sequence = <M S U C C DOT T I L D E>; bindings = <&uc 0x227F 0>; };  // succ.tilde = ≿
+    seq_m_succCurlyEqNot { sequence = <M S U C C C U R L Y E Q N O T>; bindings = <&uc 0x22E1 0>; };  // succCurlyEqNot = ⋡
+    seq_m_succEqSlant { sequence = <M S U C C E Q S L A N T>; bindings = <&uc 0x227D 0>; };  // succEqSlant = ≽
+    seq_m_succEquiv { sequence = <M S U C C E Q U I V>; bindings = <&uc 0x2AB4 0>; };  // succEquiv = ⪴
+    seq_m_succNequiv { sequence = <M S U C C N E Q U I V>; bindings = <&uc 0x2AB6 0>; };  // succNequiv = ⪶
+    seq_m_succeeds { sequence = <M S U C C E E D S>; bindings = <&uc 0x227B 0>; };  // succeeds = ≻
+    seq_m_suit_club_filled { sequence = <M S U I T DOT C L U B DOT F I L L E D>; bindings = <&uc 0x2663 0 &uc 0xFE0E 0>; };  // suit.club.filled = ♣
+    seq_m_suit_club_stroked { sequence = <M S U I T DOT C L U B DOT S T R O K E D>; bindings = <&uc 0x2667 0>; };  // suit.club.stroked = ♧
+    seq_m_suit_diamond_filled { sequence = <M S U I T DOT D I A M O N D DOT F I L L E D>; bindings = <&uc 0x2666 0 &uc 0xFE0E 0>; };  // suit.diamond.filled = ♦
+    seq_m_suit_diamond_stroked { sequence = <M S U I T DOT D I A M O N D DOT S T R O K E D>; bindings = <&uc 0x2662 0>; };  // suit.diamond.stroked = ♢
+    seq_m_suit_heart_filled { sequence = <M S U I T DOT H E A R T DOT F I L L E D>; bindings = <&uc 0x2665 0 &uc 0xFE0E 0>; };  // suit.heart.filled = ♥
+    seq_m_suit_heart_stroked { sequence = <M S U I T DOT H E A R T DOT S T R O K E D>; bindings = <&uc 0x2661 0>; };  // suit.heart.stroked = ♡
+    seq_m_suit_spade_filled { sequence = <M S U I T DOT S P A D E DOT F I L L E D>; bindings = <&uc 0x2660 0 &uc 0xFE0E 0>; };  // suit.spade.filled = ♠
+    seq_m_suit_spade_stroked { sequence = <M S U I T DOT S P A D E DOT S T R O K E D>; bindings = <&uc 0x2664 0>; };  // suit.spade.stroked = ♤
     seq_m_sum { sequence = <M S U M>; bindings = <&uc 0x2211 0>; };  // sum = ∑
-    seq_m_supeq { sequence = <M S U P E Q>; bindings = <&uc 0x2287 0>; };  // supeq = ⊇
-    seq_m_supset { sequence = <M S U P S E T>; bindings = <&uc 0x2283 0>; };  // supset = ⊃
+    seq_m_supset_approx { sequence = <M S U P S E T DOT A P P R O X>; bindings = <&uc 0x2ACA 0>; };  // supset.approx = ⫊
+    seq_m_supset_closed { sequence = <M S U P S E T DOT C L O S E D>; bindings = <&uc 0x2AD0 0>; };  // supset.closed = ⫐
+    seq_m_supset_dot { sequence = <M S U P S E T DOT D O T>; bindings = <&uc 0x2ABE 0>; };  // supset.dot = ⪾
+    seq_m_supset_double { sequence = <M S U P S E T DOT D O U B L E>; bindings = <&uc 0x22D1 0>; };  // supset.double = ⋑
+    seq_m_supset_eq_dot { sequence = <M S U P S E T DOT E Q DOT D O T>; bindings = <&uc 0x2AC4 0>; };  // supset.eq.dot = ⫄
+    seq_m_supset_eq_not { sequence = <M S U P S E T DOT E Q DOT N O T>; bindings = <&uc 0x2289 0>; };  // supset.eq.not = ⊉
+    seq_m_supset_eq_sq { sequence = <M S U P S E T DOT E Q DOT S Q>; bindings = <&uc 0x2292 0>; };  // supset.eq.sq = ⊒
+    seq_m_supset_equiv { sequence = <M S U P S E T DOT E Q U I V>; bindings = <&uc 0x2AC6 0>; };  // supset.equiv = ⫆
+    seq_m_supset_neq { sequence = <M S U P S E T DOT N E Q>; bindings = <&uc 0x228B 0>; };  // supset.neq = ⊋
+    seq_m_supset_plus { sequence = <M S U P S E T DOT P L U S>; bindings = <&uc 0x2AC0 0>; };  // supset.plus = ⫀
+    seq_m_supset_sq { sequence = <M S U P S E T DOT S Q>; bindings = <&uc 0x2290 0>; };  // supset.sq = ⊐
+    seq_m_supset_tilde { sequence = <M S U P S E T DOT T I L D E>; bindings = <&uc 0x2AC8 0>; };  // supset.tilde = ⫈
+    seq_m_supset_times { sequence = <M S U P S E T DOT T I M E S>; bindings = <&uc 0x2AC2 0>; };  // supset.times = ⫂
+    seq_m_supsetClosedEq { sequence = <M S U P S E T C L O S E D E Q>; bindings = <&uc 0x2AD2 0>; };  // supsetClosedEq = ⫒
+    seq_m_supsetNequiv { sequence = <M S U P S E T N E Q U I V>; bindings = <&uc 0x2ACC 0>; };  // supsetNequiv = ⫌
+    seq_m_supsetSqNeq { sequence = <M S U P S E T S Q N E Q>; bindings = <&uc 0x22E5 0>; };  // supsetSqNeq = ⋥
+    seq_m_supseteq { sequence = <M S U P S E T E Q>; bindings = <&uc 0x2287 0>; };  // supseteq = ⊇
+    seq_m_supsetof { sequence = <M S U P S E T O F>; bindings = <&uc 0x2283 0>; };  // supsetof = ⊃
+    seq_m_surfIntegral { sequence = <M S U R F I N T E G R A L>; bindings = <&uc 0x222F 0>; };  // surfIntegral = ∯
+    seq_m_tAngleSpheric { sequence = <M T A N G L E S P H E R I C>; bindings = <&uc 0x29A1 0>; };  // tAngleSpheric = ⦡
+    seq_m_tMaleStroke { sequence = <M T M A L E S T R O K E>; bindings = <&uc 0x26A8 0>; };  // tMaleStroke = ⚨
     seq_m_tack_b { sequence = <M T A C K DOT B>; bindings = <&uc 0x22A4 0>; };  // tack.b = ⊤
     seq_m_tack_l { sequence = <M T A C K DOT L>; bindings = <&uc 0x22A3 0>; };  // tack.l = ⊣
-    seq_m_tack_r { sequence = <M T A C K DOT R>; bindings = <&uc 0x22A2 0>; };  // tack.r = ⊢
+    seq_m_tack_r_double { sequence = <M T A C K DOT R DOT D O U B L E>; bindings = <&uc 0x22A9 0>; };  // tack.r.double = ⊩
+    seq_m_tack_r_long { sequence = <M T A C K DOT R DOT L O N G>; bindings = <&uc 0x27DD 0>; };  // tack.r.long = ⟝
+    seq_m_tack_r_not { sequence = <M T A C K DOT R DOT N O T>; bindings = <&uc 0x22AC 0>; };  // tack.r.not = ⊬
+    seq_m_tack_r_short { sequence = <M T A C K DOT R DOT S H O R T>; bindings = <&uc 0x22A6 0>; };  // tack.r.short = ⊦
+    seq_m_tack_r_triple { sequence = <M T A C K DOT R DOT T R I P L E>; bindings = <&uc 0x22AA 0>; };  // tack.r.triple = ⊪
+    seq_m_tack_rr { sequence = <M T A C K DOT R R>; bindings = <&uc 0x22A8 0>; };  // tack.rr = ⊨
     seq_m_tack_t { sequence = <M T A C K DOT T>; bindings = <&uc 0x22A5 0>; };  // tack.t = ⊥
     seq_m_tackBDoubleShort { sequence = <M T A C K B D O U B L E S H O R T>; bindings = <&uc 0x2AE7 0>; };  // tackBDoubleShort = ⫧
     seq_m_tackBShort { sequence = <M T A C K B S H O R T>; bindings = <&uc 0x2ADF 0>; };  // tackBShort = ⫟
@@ -456,17 +893,18 @@
     seq_m_tackLR { sequence = <M T A C K L R>; bindings = <&uc 0x27DB 0>; };  // tackLR = ⟛
     seq_m_tackLShort { sequence = <M T A C K L S H O R T>; bindings = <&uc 0x2ADE 0>; };  // tackLShort = ⫞
     seq_m_tackLl { sequence = <M T A C K L L>; bindings = <&uc 0x2AE4 0>; };  // tackLl = ⫤
-    seq_m_tackRDouble { sequence = <M T A C K R D O U B L E>; bindings = <&uc 0x22A9 0>; };  // tackRDouble = ⊩
-    seq_m_tackRLong { sequence = <M T A C K R L O N G>; bindings = <&uc 0x27DD 0>; };  // tackRLong = ⟝
-    seq_m_tackRNot { sequence = <M T A C K R N O T>; bindings = <&uc 0x22AC 0>; };  // tackRNot = ⊬
-    seq_m_tackRShort { sequence = <M T A C K R S H O R T>; bindings = <&uc 0x22A6 0>; };  // tackRShort = ⊦
-    seq_m_tackRTriple { sequence = <M T A C K R T R I P L E>; bindings = <&uc 0x22AA 0>; };  // tackRTriple = ⊪
-    seq_m_tackRr { sequence = <M T A C K R R>; bindings = <&uc 0x22A8 0>; };  // tackRr = ⊨
+    seq_m_tackRDoubleNot { sequence = <M T A C K R D O U B L E N O T>; bindings = <&uc 0x22AE 0>; };  // tackRDoubleNot = ⊮
+    seq_m_tackRrDouble { sequence = <M T A C K R R D O U B L E>; bindings = <&uc 0x22AB 0>; };  // tackRrDouble = ⊫
+    seq_m_tackRrNot { sequence = <M T A C K R R N O T>; bindings = <&uc 0x22AD 0>; };  // tackRrNot = ⊭
+    seq_m_tackRrShort { sequence = <M T A C K R R S H O R T>; bindings = <&uc 0x22A7 0>; };  // tackRrShort = ⊧
+    seq_m_tackRrr { sequence = <M T A C K R R R>; bindings = <&uc 0x2AE2 0>; };  // tackRrr = ⫢
     seq_m_tackTBig { sequence = <M T A C K T B I G>; bindings = <&uc 0x27D8 0>; };  // tackTBig = ⟘
     seq_m_tackTDoubleShort { sequence = <M T A C K T D O U B L E S H O R T>; bindings = <&uc 0x2AE8 0>; };  // tackTDoubleShort = ⫨
     seq_m_tackTShort { sequence = <M T A C K T S H O R T>; bindings = <&uc 0x2AE0 0>; };  // tackTShort = ⫠
     seq_m_tackTt { sequence = <M T A C K T T>; bindings = <&uc 0x2AEB 0>; };  // tackTt = ⫫
-    seq_m_therefore { sequence = <M T H E R E F O R E>; bindings = <&uc 0x2234 0>; };  // therefore = ∴
+    seq_m_tackright { sequence = <M T A C K R I G H T>; bindings = <&uc 0x22A2 0>; };  // tackright = ⊢
+    seq_m_therefore2 { sequence = <M T H E R E F O R E 2>; bindings = <&uc 0x2234 0>; };  // therefore2 = ∴
+    seq_m_tieInfinity { sequence = <M T I E I N F I N I T Y>; bindings = <&uc 0x29DD 0>; };  // tieInfinity = ⧝
     seq_m_tilde_basic { sequence = <M T I L D E DOT B A S I C>; bindings = <&uc 0x7E 0>; };  // tilde.basic = ~
     seq_m_tilde_dot { sequence = <M T I L D E DOT D O T>; bindings = <&uc 0x2A6A 0>; };  // tilde.dot = ⩪
     seq_m_tilde_eq { sequence = <M T I L D E DOT E Q>; bindings = <&uc 0x2243 0>; };  // tilde.eq = ≃
@@ -482,10 +920,27 @@
     seq_m_tildeEquiv { sequence = <M T I L D E E Q U I V>; bindings = <&uc 0x2245 0>; };  // tildeEquiv = ≅
     seq_m_tildeGtSlant { sequence = <M T I L D E G T S L A N T>; bindings = <&uc 0x2A9E 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // tildeGtSlant = ⪞\vs{1}
     seq_m_tildeLtSlant { sequence = <M T I L D E L T S L A N T>; bindings = <&uc 0x2A9D 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // tildeLtSlant = ⪝\vs{1}
+    seq_m_tildeParallel { sequence = <M T I L D E P A R A L L E L>; bindings = <&uc 0x2AF3 0>; };  // tildeParallel = ⫳
     seq_m_tildeRevEquiv { sequence = <M T I L D E R E V E Q U I V>; bindings = <&uc 0x224C 0>; };  // tildeRevEquiv = ≌
-    seq_m_times { sequence = <M T I M E S>; bindings = <&uc 0xD7 0>; };  // times = ×
-    seq_m_top { sequence = <M T O P>; bindings = <&uc 0x22A4 0>; };  // top = ⊤
+    seq_m_times_big { sequence = <M T I M E S DOT B I G>; bindings = <&uc 0x2A09 0>; };  // times.big = ⨉
+    seq_m_times_div { sequence = <M T I M E S DOT D I V>; bindings = <&uc 0x22C7 0>; };  // times.div = ⋇
+    seq_m_times_l { sequence = <M T I M E S DOT L>; bindings = <&uc 0x22C9 0>; };  // times.l = ⋉
+    seq_m_times_o { sequence = <M T I M E S DOT O>; bindings = <&uc 0x2297 0>; };  // times.o = ⊗
+    seq_m_times_r { sequence = <M T I M E S DOT R>; bindings = <&uc 0x22CA 0>; };  // times.r = ⋊
+    seq_m_times_square { sequence = <M T I M E S DOT S Q U A R E>; bindings = <&uc 0x22A0 0>; };  // times.square = ⊠
+    seq_m_times_three_l { sequence = <M T I M E S DOT T H R E E DOT L>; bindings = <&uc 0x22CB 0>; };  // times.three.l = ⋋
+    seq_m_times_three_r { sequence = <M T I M E S DOT T H R E E DOT R>; bindings = <&uc 0x22CC 0>; };  // times.three.r = ⋌
+    seq_m_times_triangle { sequence = <M T I M E S DOT T R I A N G L E>; bindings = <&uc 0x2A3B 0>; };  // times.triangle = ⨻
+    seq_m_times2 { sequence = <M T I M E S 2>; bindings = <&uc 0xD7 0>; };  // times2 = ×
+    seq_m_timesIntegral { sequence = <M T I M E S I N T E G R A L>; bindings = <&uc 0x2A18 0>; };  // timesIntegral = ⨘
+    seq_m_timesOBig { sequence = <M T I M E S O B I G>; bindings = <&uc 0x2A02 0>; };  // timesOBig = ⨂
+    seq_m_timesOHat { sequence = <M T I M E S O H A T>; bindings = <&uc 0x2A36 0>; };  // timesOHat = ⨶
+    seq_m_timesOL { sequence = <M T I M E S O L>; bindings = <&uc 0x2A34 0>; };  // timesOL = ⨴
+    seq_m_timesOR { sequence = <M T I M E S O R>; bindings = <&uc 0x2A35 0>; };  // timesOR = ⨵
+    seq_m_top2 { sequence = <M T O P 2>; bindings = <&uc 0x22A4 0>; };  // top2 = ⊤
+    seq_m_trademark { sequence = <M T R A D E M A R K>; bindings = <&uc 0x2122 0 &uc 0xFE0E 0>; };  // trademark = ™
     seq_m_trans { sequence = <M T R A N S>; bindings = <&uc 0x26A7 0 &uc 0xFE0E 0>; };  // trans = ⚧
+    seq_m_triBullet { sequence = <M T R I B U L L E T>; bindings = <&uc 0x2023 0>; };  // triBullet = ‣
     seq_m_triangle_filled_b { sequence = <M T R I A N G L E DOT F I L L E D DOT B>; bindings = <&uc 0x25BC 0>; };  // triangle.filled.b = ▼
     seq_m_triangle_filled_l { sequence = <M T R I A N G L E DOT F I L L E D DOT L>; bindings = <&uc 0x25C0 0 &uc 0xFE0E 0>; };  // triangle.filled.l = ◀
     seq_m_triangle_filled_r { sequence = <M T R I A N G L E DOT F I L L E D DOT R>; bindings = <&uc 0x25B6 0 &uc 0xFE0E 0>; };  // triangle.filled.r = ▶
@@ -513,524 +968,69 @@
     seq_m_triangleStrokedRounded { sequence = <M T R I A N G L E S T R O K E D R O U N D E D>; bindings = <&uc 0x1F6C6 0>; };  // triangleStrokedRounded = 🛆
     seq_m_triangleStrokedTl { sequence = <M T R I A N G L E S T R O K E D T L>; bindings = <&uc 0x25F8 0>; };  // triangleStrokedTl = ◸
     seq_m_triangleStrokedTr { sequence = <M T R I A N G L E S T R O K E D T R>; bindings = <&uc 0x25F9 0>; };  // triangleStrokedTr = ◹
+    seq_m_tripleDagger { sequence = <M T R I P L E D A G G E R>; bindings = <&uc 0x2E4B 0>; };  // tripleDagger = ⹋
+    seq_m_tripleIntegral { sequence = <M T R I P L E I N T E G R A L>; bindings = <&uc 0x222D 0>; };  // tripleIntegral = ∭
     seq_m_underscore { sequence = <M U N D E R S C O R E>; bindings = <&uc 0x5F 0>; };  // underscore = _
-    seq_m_union { sequence = <M U N I O N>; bindings = <&uc 0x222A 0>; };  // union = ∪
+    seq_m_union_arrow { sequence = <M U N I O N DOT A R R O W>; bindings = <&uc 0x228C 0>; };  // union.arrow = ⊌
+    seq_m_union_dot { sequence = <M U N I O N DOT D O T>; bindings = <&uc 0x228D 0>; };  // union.dot = ⊍
+    seq_m_union_double { sequence = <M U N I O N DOT D O U B L E>; bindings = <&uc 0x22D3 0>; };  // union.double = ⋓
+    seq_m_union_minus { sequence = <M U N I O N DOT M I N U S>; bindings = <&uc 0x2A41 0>; };  // union.minus = ⩁
+    seq_m_union_or { sequence = <M U N I O N DOT O R>; bindings = <&uc 0x2A45 0>; };  // union.or = ⩅
+    seq_m_union_plus { sequence = <M U N I O N DOT P L U S>; bindings = <&uc 0x228E 0>; };  // union.plus = ⊎
+    seq_m_union_serif { sequence = <M U N I O N DOT S E R I F>; bindings = <&uc 0x222A 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // union.serif = ∪\vs{1}
+    seq_m_union_sq { sequence = <M U N I O N DOT S Q>; bindings = <&uc 0x2294 0>; };  // union.sq = ⊔
+    seq_m_unionDotBig { sequence = <M U N I O N D O T B I G>; bindings = <&uc 0x2A03 0>; };  // unionDotBig = ⨃
+    seq_m_unionIntegral { sequence = <M U N I O N I N T E G R A L>; bindings = <&uc 0x2A1A 0>; };  // unionIntegral = ⨚
+    seq_m_unionPlusBig { sequence = <M U N I O N P L U S B I G>; bindings = <&uc 0x2A04 0>; };  // unionPlusBig = ⨄
+    seq_m_unionSqBig { sequence = <M U N I O N S Q B I G>; bindings = <&uc 0x2A06 0>; };  // unionSqBig = ⨆
+    seq_m_unionSqDouble { sequence = <M U N I O N S Q D O U B L E>; bindings = <&uc 0x2A4F 0>; };  // unionSqDouble = ⩏
+    seq_m_unionSqSerif { sequence = <M U N I O N S Q S E R I F>; bindings = <&uc 0x2294 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // unionSqSerif = ⊔\vs{1}
+    seq_m_upEqDots { sequence = <M U P E Q D O T S>; bindings = <&uc 0x2253 0>; };  // upEqDots = ≓
+    seq_m_uparrow { sequence = <M U P A R R O W>; bindings = <&uc 0x2191 0>; };  // uparrow = ↑
+    seq_m_vee { sequence = <M V E E>; bindings = <&uc 0x2228 0>; };  // vee = ∨
+    seq_m_volIntegral { sequence = <M V O L I N T E G R A L>; bindings = <&uc 0x2230 0>; };  // volIntegral = ∰
+    seq_m_wedge { sequence = <M W E D G E>; bindings = <&uc 0x2227 0>; };  // wedge = ∧
     seq_m_without { sequence = <M W I T H O U T>; bindings = <&uc 0x2216 0>; };  // without = ∖
     seq_m_wreath { sequence = <M W R E A T H>; bindings = <&uc 0x2240 0>; };  // wreath = ≀
     seq_m_xor { sequence = <M X O R>; bindings = <&uc 0x2295 0>; };  // xor = ⊕
-    seq_m_zero { sequence = <M Z E R O>; bindings = <&uc 0x30 0 &uc 0xFE0E 0>; };  // zero = 0
+    seq_m_zero_slashed { sequence = <M Z E R O DOT S L A S H E D>; bindings = <&uc 0x30 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // zero.slashed = 0\vs{1}
+    seq_m_zeroEmptyset { sequence = <M Z E R O E M P T Y S E T>; bindings = <&uc 0x2205 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // zeroEmptyset = ∅\vs{1}
+    seq_m_zeroNothing { sequence = <M Z E R O N O T H I N G>; bindings = <&uc 0x2205 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // zeroNothing = ∅\vs{1}
 
-    /* --- available but disabled (508) ---
+    /* --- available but disabled (31) ---
      * Uncomment a line to enable it. Each is disabled because either
      * every spelling of its name was already taken, or it is beyond the
      * active limit. See docs/LEADER-SYMBOLS.md.
      */
-    // seq_m_AA { sequence = <M A A>; bindings = <&uc 0x1D538 0>; };  // AA = 𝔸
-    // seq_m_BB { sequence = <M B B>; bindings = <&uc 0x1D539 0>; };  // BB = 𝔹
     // seq_m_CC { sequence = <M C C>; bindings = <&uc 0x2102 0>; };  // CC = ℂ
-    // seq_m_DD { sequence = <M D D>; bindings = <&uc 0x1D53B 0>; };  // DD = 𝔻
-    // seq_m_EE { sequence = <M E E>; bindings = <&uc 0x1D53C 0>; };  // EE = 𝔼
-    // seq_m_FF { sequence = <M F F>; bindings = <&uc 0x1D53D 0>; };  // FF = 𝔽
-    // seq_m_GG { sequence = <M G G>; bindings = <&uc 0x1D53E 0>; };  // GG = 𝔾
-    // seq_m_HH { sequence = <M H H>; bindings = <&uc 0x210D 0>; };  // HH = ℍ
-    // seq_m_II { sequence = <M I I>; bindings = <&uc 0x1D540 0>; };  // II = 𝕀
     // seq_m_Im { sequence = <M I M>; bindings = <&uc 0x2111 0>; };  // Im = ℑ
-    // seq_m_JJ { sequence = <M J J>; bindings = <&uc 0x1D541 0>; };  // JJ = 𝕁
-    // seq_m_KK { sequence = <M K K>; bindings = <&uc 0x1D542 0>; };  // KK = 𝕂
-    // seq_m_LL { sequence = <M L L>; bindings = <&uc 0x1D543 0>; };  // LL = 𝕃
-    // seq_m_MM { sequence = <M M M>; bindings = <&uc 0x1D544 0>; };  // MM = 𝕄
-    // seq_m_NN { sequence = <M N N>; bindings = <&uc 0x2115 0>; };  // NN = ℕ
     // seq_m_OO { sequence = <M O O>; bindings = <&uc 0x1D546 0>; };  // OO = 𝕆
-    // seq_m_PP { sequence = <M P P>; bindings = <&uc 0x2119 0>; };  // PP = ℙ
-    // seq_m_QQ { sequence = <M Q Q>; bindings = <&uc 0x211A 0>; };  // QQ = ℚ
-    // seq_m_RR { sequence = <M R R>; bindings = <&uc 0x211D 0>; };  // RR = ℝ
-    // seq_m_Re { sequence = <M R E>; bindings = <&uc 0x211C 0>; };  // Re = ℜ
-    // seq_m_SS { sequence = <M S S>; bindings = <&uc 0x1D54A 0>; };  // SS = 𝕊
-    // seq_m_TT { sequence = <M T T>; bindings = <&uc 0x1D54B 0>; };  // TT = 𝕋
-    // seq_m_UU { sequence = <M U U>; bindings = <&uc 0x1D54C 0>; };  // UU = 𝕌
-    // seq_m_VV { sequence = <M V V>; bindings = <&uc 0x1D54D 0>; };  // VV = 𝕍
-    // seq_m_WW { sequence = <M W W>; bindings = <&uc 0x1D54E 0>; };  // WW = 𝕎
-    // seq_m_XX { sequence = <M X X>; bindings = <&uc 0x1D54F 0>; };  // XX = 𝕏
-    // seq_m_YY { sequence = <M Y Y>; bindings = <&uc 0x1D550 0>; };  // YY = 𝕐
-    // seq_m_ZZ { sequence = <M Z Z>; bindings = <&uc 0x2124 0>; };  // ZZ = ℤ
-    // seq_m_amp_inv { sequence = <M A M P DOT I N V>; bindings = <&uc 0x214B 0>; };  // amp.inv = ⅋
-    // seq_m_and_big { sequence = <M A N D DOT B I G>; bindings = <&uc 0x22C0 0>; };  // and.big = ⋀
-    // seq_m_and_curly { sequence = <M A N D DOT C U R L Y>; bindings = <&uc 0x22CF 0>; };  // and.curly = ⋏
-    // seq_m_and_dot { sequence = <M A N D DOT D O T>; bindings = <&uc 0x27D1 0>; };  // and.dot = ⟑
-    // seq_m_and_double { sequence = <M A N D DOT D O U B L E>; bindings = <&uc 0x2A53 0>; };  // and.double = ⩓
-    // seq_m_angle_acute { sequence = <M A N G L E DOT A C U T E>; bindings = <&uc 0x299F 0>; };  // angle.acute = ⦟
-    // seq_m_angle_arc { sequence = <M A N G L E DOT A R C>; bindings = <&uc 0x2221 0>; };  // angle.arc = ∡
     // seq_m_angle_arc_rev { sequence = <M A N G L E DOT A R C DOT R E V>; bindings = <&uc 0x299B 0>; };  // angle.arc.rev = ⦛
-    // seq_m_angle_azimuth { sequence = <M A N G L E DOT A Z I M U T H>; bindings = <&uc 0x237C 0>; };  // angle.azimuth = ⍼
-    // seq_m_angle_obtuse { sequence = <M A N G L E DOT O B T U S E>; bindings = <&uc 0x29A6 0>; };  // angle.obtuse = ⦦
-    // seq_m_angle_rev { sequence = <M A N G L E DOT R E V>; bindings = <&uc 0x29A3 0>; };  // angle.rev = ⦣
     // seq_m_angle_right_arc { sequence = <M A N G L E DOT R I G H T DOT A R C>; bindings = <&uc 0x22BE 0>; };  // angle.right.arc = ⊾
-    // seq_m_angle_right_dot { sequence = <M A N G L E DOT R I G H T DOT D O T>; bindings = <&uc 0x299D 0>; };  // angle.right.dot = ⦝
     // seq_m_angle_right_rev { sequence = <M A N G L E DOT R I G H T DOT R E V>; bindings = <&uc 0x2BFE 0>; };  // angle.right.rev = ⯾
-    // seq_m_angle_right_square { sequence = <M A N G L E DOT R I G H T DOT S Q U A R E>; bindings = <&uc 0x299C 0>; };  // angle.right.square = ⦜
-    // seq_m_angle_s { sequence = <M A N G L E DOT S>; bindings = <&uc 0x299E 0>; };  // angle.s = ⦞
-    // seq_m_angle_spatial { sequence = <M A N G L E DOT S P A T I A L>; bindings = <&uc 0x27C0 0>; };  // angle.spatial = ⟀
-    // seq_m_angle_spheric { sequence = <M A N G L E DOT S P H E R I C>; bindings = <&uc 0x2222 0>; };  // angle.spheric = ∢
     // seq_m_angle_spheric_rev { sequence = <M A N G L E DOT S P H E R I C DOT R E V>; bindings = <&uc 0x29A0 0>; };  // angle.spheric.rev = ⦠
-    // seq_m_angle_spheric_t { sequence = <M A N G L E DOT S P H E R I C DOT T>; bindings = <&uc 0x29A1 0>; };  // angle.spheric.t = ⦡
     // seq_m_angstrom { sequence = <M A N G S T R O M>; bindings = <&uc 0xC5 0>; };  // angstrom = Å
-    // seq_m_approx_hat { sequence = <M A P P R O X DOT H A T>; bindings = <&uc 0x2A6F 0>; };  // approx.hat = ⩯
-    // seq_m_arrow_bl_bar { sequence = <M A R R O W DOT B L DOT B A R>; bindings = <&uc 0x1F8BB 0>; };  // arrow.bl.bar = 🢻
-    // seq_m_arrow_bl_double { sequence = <M A R R O W DOT B L DOT D O U B L E>; bindings = <&uc 0x21D9 0>; };  // arrow.bl.double = ⇙
-    // seq_m_arrow_bl_filled { sequence = <M A R R O W DOT B L DOT F I L L E D>; bindings = <&uc 0x2B0B 0>; };  // arrow.bl.filled = ⬋
-    // seq_m_arrow_bl_hook { sequence = <M A R R O W DOT B L DOT H O O K>; bindings = <&uc 0x2926 0>; };  // arrow.bl.hook = ⤦
-    // seq_m_arrow_bl_stroked { sequence = <M A R R O W DOT B L DOT S T R O K E D>; bindings = <&uc 0x2B03 0>; };  // arrow.bl.stroked = ⬃
-    // seq_m_arrow_br_bar { sequence = <M A R R O W DOT B R DOT B A R>; bindings = <&uc 0x1F8BA 0>; };  // arrow.br.bar = 🢺
-    // seq_m_arrow_br_double { sequence = <M A R R O W DOT B R DOT D O U B L E>; bindings = <&uc 0x21D8 0>; };  // arrow.br.double = ⇘
-    // seq_m_arrow_br_filled { sequence = <M A R R O W DOT B R DOT F I L L E D>; bindings = <&uc 0x2B0A 0>; };  // arrow.br.filled = ⬊
-    // seq_m_arrow_br_hook { sequence = <M A R R O W DOT B R DOT H O O K>; bindings = <&uc 0x2925 0>; };  // arrow.br.hook = ⤥
-    // seq_m_arrow_br_stroked { sequence = <M A R R O W DOT B R DOT S T R O K E D>; bindings = <&uc 0x2B02 0>; };  // arrow.br.stroked = ⬂
-    // seq_m_arrow_l_double_bar { sequence = <M A R R O W DOT L DOT D O U B L E DOT B A R>; bindings = <&uc 0x2906 0>; };  // arrow.l.double.bar = ⤆
-    // seq_m_arrow_l_double_long { sequence = <M A R R O W DOT L DOT D O U B L E DOT L O N G>; bindings = <&uc 0x27F8 0>; };  // arrow.l.double.long = ⟸
-    // seq_m_arrow_l_double_long_bar { sequence = <M A R R O W DOT L DOT D O U B L E DOT L O N G DOT B A R>; bindings = <&uc 0x27FD 0>; };  // arrow.l.double.long.bar = ⟽
-    // seq_m_arrow_l_double_not { sequence = <M A R R O W DOT L DOT D O U B L E DOT N O T>; bindings = <&uc 0x21CD 0>; };  // arrow.l.double.not = ⇍
-    // seq_m_arrow_l_double_struck { sequence = <M A R R O W DOT L DOT D O U B L E DOT S T R U C K>; bindings = <&uc 0x2902 0>; };  // arrow.l.double.struck = ⤂
-    // seq_m_arrow_l_r_double_long { sequence = <M A R R O W DOT L DOT R DOT D O U B L E DOT L O N G>; bindings = <&uc 0x27FA 0>; };  // arrow.l.r.double.long = ⟺
-    // seq_m_arrow_l_r_double_not { sequence = <M A R R O W DOT L DOT R DOT D O U B L E DOT N O T>; bindings = <&uc 0x21CE 0>; };  // arrow.l.r.double.not = ⇎
-    // seq_m_arrow_l_r_double_struck { sequence = <M A R R O W DOT L DOT R DOT D O U B L E DOT S T R U C K>; bindings = <&uc 0x2904 0>; };  // arrow.l.r.double.struck = ⤄
-    // seq_m_arrow_l_tail_dstruck { sequence = <M A R R O W DOT L DOT T A I L DOT D S T R U C K>; bindings = <&uc 0x2B3A 0>; };  // arrow.l.tail.dstruck = ⬺
-    // seq_m_arrow_l_tail_struck { sequence = <M A R R O W DOT L DOT T A I L DOT S T R U C K>; bindings = <&uc 0x2B39 0>; };  // arrow.l.tail.struck = ⬹
-    // seq_m_arrow_l_twohead_bar { sequence = <M A R R O W DOT L DOT T W O H E A D DOT B A R>; bindings = <&uc 0x2B36 0>; };  // arrow.l.twohead.bar = ⬶
-    // seq_m_arrow_l_twohead_dstruck { sequence = <M A R R O W DOT L DOT T W O H E A D DOT D S T R U C K>; bindings = <&uc 0x2B35 0>; };  // arrow.l.twohead.dstruck = ⬵
-    // seq_m_arrow_l_twohead_struck { sequence = <M A R R O W DOT L DOT T W O H E A D DOT S T R U C K>; bindings = <&uc 0x2B34 0>; };  // arrow.l.twohead.struck = ⬴
-    // seq_m_arrow_l_twohead_tail { sequence = <M A R R O W DOT L DOT T W O H E A D DOT T A I L>; bindings = <&uc 0x2B3B 0>; };  // arrow.l.twohead.tail = ⬻
-    // seq_m_arrow_l_twohead_tail_dstruck { sequence = <M A R R O W DOT L DOT T W O H E A D DOT T A I L DOT D S T R U C K>; bindings = <&uc 0x2B3D 0>; };  // arrow.l.twohead.tail.dstruck = ⬽
-    // seq_m_arrow_l_twohead_tail_struck { sequence = <M A R R O W DOT L DOT T W O H E A D DOT T A I L DOT S T R U C K>; bindings = <&uc 0x2B3C 0>; };  // arrow.l.twohead.tail.struck = ⬼
-    // seq_m_arrow_r_double_long_bar { sequence = <M A R R O W DOT R DOT D O U B L E DOT L O N G DOT B A R>; bindings = <&uc 0x27FE 0>; };  // arrow.r.double.long.bar = ⟾
-    // seq_m_arrow_r_tail_dstruck { sequence = <M A R R O W DOT R DOT T A I L DOT D S T R U C K>; bindings = <&uc 0x2915 0>; };  // arrow.r.tail.dstruck = ⤕
-    // seq_m_arrow_r_tail_struck { sequence = <M A R R O W DOT R DOT T A I L DOT S T R U C K>; bindings = <&uc 0x2914 0>; };  // arrow.r.tail.struck = ⤔
-    // seq_m_arrow_r_twohead_bar { sequence = <M A R R O W DOT R DOT T W O H E A D DOT B A R>; bindings = <&uc 0x2905 0>; };  // arrow.r.twohead.bar = ⤅
-    // seq_m_arrow_r_twohead_dstruck { sequence = <M A R R O W DOT R DOT T W O H E A D DOT D S T R U C K>; bindings = <&uc 0x2901 0>; };  // arrow.r.twohead.dstruck = ⤁
-    // seq_m_arrow_r_twohead_struck { sequence = <M A R R O W DOT R DOT T W O H E A D DOT S T R U C K>; bindings = <&uc 0x2900 0>; };  // arrow.r.twohead.struck = ⤀
-    // seq_m_arrow_r_twohead_tail { sequence = <M A R R O W DOT R DOT T W O H E A D DOT T A I L>; bindings = <&uc 0x2916 0>; };  // arrow.r.twohead.tail = ⤖
-    // seq_m_arrow_r_twohead_tail_dstruck { sequence = <M A R R O W DOT R DOT T W O H E A D DOT T A I L DOT D S T R U C K>; bindings = <&uc 0x2918 0>; };  // arrow.r.twohead.tail.dstruck = ⤘
-    // seq_m_arrow_r_twohead_tail_struck { sequence = <M A R R O W DOT R DOT T W O H E A D DOT T A I L DOT S T R U C K>; bindings = <&uc 0x2917 0>; };  // arrow.r.twohead.tail.struck = ⤗
-    // seq_m_arrow_t_b_double { sequence = <M A R R O W DOT T DOT B DOT D O U B L E>; bindings = <&uc 0x21D5 0>; };  // arrow.t.b.double = ⇕
-    // seq_m_arrow_t_b_filled { sequence = <M A R R O W DOT T DOT B DOT F I L L E D>; bindings = <&uc 0x2B0D 0>; };  // arrow.t.b.filled = ⬍
-    // seq_m_arrow_t_b_stroked { sequence = <M A R R O W DOT T DOT B DOT S T R O K E D>; bindings = <&uc 0x21F3 0>; };  // arrow.t.b.stroked = ⇳
-    // seq_m_arrow_t_bar { sequence = <M A R R O W DOT T DOT B A R>; bindings = <&uc 0x21A5 0>; };  // arrow.t.bar = ↥
-    // seq_m_arrow_tl_bar { sequence = <M A R R O W DOT T L DOT B A R>; bindings = <&uc 0x1F8B8 0>; };  // arrow.tl.bar = 🢸
-    // seq_m_arrow_tl_br { sequence = <M A R R O W DOT T L DOT B R>; bindings = <&uc 0x2921 0>; };  // arrow.tl.br = ⤡
-    // seq_m_arrow_tl_double { sequence = <M A R R O W DOT T L DOT D O U B L E>; bindings = <&uc 0x21D6 0>; };  // arrow.tl.double = ⇖
-    // seq_m_arrow_tl_filled { sequence = <M A R R O W DOT T L DOT F I L L E D>; bindings = <&uc 0x2B09 0>; };  // arrow.tl.filled = ⬉
-    // seq_m_arrow_tl_hook { sequence = <M A R R O W DOT T L DOT H O O K>; bindings = <&uc 0x2923 0>; };  // arrow.tl.hook = ⤣
-    // seq_m_arrow_tl_stroked { sequence = <M A R R O W DOT T L DOT S T R O K E D>; bindings = <&uc 0x2B01 0>; };  // arrow.tl.stroked = ⬁
-    // seq_m_arrow_tr_bar { sequence = <M A R R O W DOT T R DOT B A R>; bindings = <&uc 0x1F8B9 0>; };  // arrow.tr.bar = 🢹
-    // seq_m_arrow_tr_bl { sequence = <M A R R O W DOT T R DOT B L>; bindings = <&uc 0x2922 0>; };  // arrow.tr.bl = ⤢
-    // seq_m_arrow_tr_double { sequence = <M A R R O W DOT T R DOT D O U B L E>; bindings = <&uc 0x21D7 0>; };  // arrow.tr.double = ⇗
-    // seq_m_arrow_tr_filled { sequence = <M A R R O W DOT T R DOT F I L L E D>; bindings = <&uc 0x2B08 0>; };  // arrow.tr.filled = ⬈
-    // seq_m_arrow_tr_hook { sequence = <M A R R O W DOT T R DOT H O O K>; bindings = <&uc 0x2924 0>; };  // arrow.tr.hook = ⤤
-    // seq_m_arrow_tr_stroked { sequence = <M A R R O W DOT T R DOT S T R O K E D>; bindings = <&uc 0x2B00 0>; };  // arrow.tr.stroked = ⬀
-    // seq_m_asymp_not { sequence = <M A S Y M P DOT N O T>; bindings = <&uc 0x226D 0>; };  // asymp.not = ≭
-    // seq_m_backslash_not { sequence = <M B A C K S L A S H DOT N O T>; bindings = <&uc 0x29F7 0>; };  // backslash.not = ⧷
-    // seq_m_backslash_o { sequence = <M B A C K S L A S H DOT O>; bindings = <&uc 0x29B8 0>; };  // backslash.o = ⦸
-    // seq_m_ballot { sequence = <M B A L L O T>; bindings = <&uc 0x2610 0>; };  // ballot = ☐
-    // seq_m_ballot_check { sequence = <M B A L L O T DOT C H E C K>; bindings = <&uc 0x2611 0 &uc 0xFE0E 0>; };  // ballot.check = ☑
-    // seq_m_ballot_check_heavy { sequence = <M B A L L O T DOT C H E C K DOT H E A V Y>; bindings = <&uc 0x1F5F9 0>; };  // ballot.check.heavy = 🗹
-    // seq_m_ballot_cross { sequence = <M B A L L O T DOT C R O S S>; bindings = <&uc 0x2612 0>; };  // ballot.cross = ☒
-    // seq_m_bishop_black { sequence = <M B I S H O P DOT B L A C K>; bindings = <&uc 0x265D 0>; };  // bishop.black = ♝
-    // seq_m_bishop_white { sequence = <M B I S H O P DOT W H I T E>; bindings = <&uc 0x2657 0>; };  // bishop.white = ♗
-    // seq_m_bowtie_stroked_big_l { sequence = <M B O W T I E DOT S T R O K E D DOT B I G DOT L>; bindings = <&uc 0x27D5 0>; };  // bowtie.stroked.big.l = ⟕
+    // seq_m_angzarr { sequence = <M A N G Z A R R>; bindings = <&uc 0x237C 0>; };  // angzarr = ⍼
     // seq_m_bowtie_stroked_big_l_r { sequence = <M B O W T I E DOT S T R O K E D DOT B I G DOT L DOT R>; bindings = <&uc 0x27D7 0>; };  // bowtie.stroked.big.l.r = ⟗
-    // seq_m_bowtie_stroked_big_r { sequence = <M B O W T I E DOT S T R O K E D DOT B I G DOT R>; bindings = <&uc 0x27D6 0>; };  // bowtie.stroked.big.r = ⟖
-    // seq_m_bullet_hole { sequence = <M B U L L E T DOT H O L E>; bindings = <&uc 0x25D8 0>; };  // bullet.hole = ◘
     // seq_m_bullet_hyph { sequence = <M B U L L E T DOT H Y P H>; bindings = <&uc 0x2043 0>; };  // bullet.hyph = ⁃
-    // seq_m_bullet_l { sequence = <M B U L L E T DOT L>; bindings = <&uc 0x204C 0>; };  // bullet.l = ⁌
-    // seq_m_bullet_o { sequence = <M B U L L E T DOT O>; bindings = <&uc 0x29BF 0>; };  // bullet.o = ⦿
-    // seq_m_bullet_op { sequence = <M B U L L E T DOT O P>; bindings = <&uc 0x2219 0>; };  // bullet.op = ∙
-    // seq_m_bullet_r { sequence = <M B U L L E T DOT R>; bindings = <&uc 0x204D 0>; };  // bullet.r = ⁍
-    // seq_m_bullet_stroked { sequence = <M B U L L E T DOT S T R O K E D>; bindings = <&uc 0x25E6 0>; };  // bullet.stroked = ◦
     // seq_m_bullet_stroked_o { sequence = <M B U L L E T DOT S T R O K E D DOT O>; bindings = <&uc 0x29BE 0>; };  // bullet.stroked.o = ⦾
-    // seq_m_bullet_tri { sequence = <M B U L L E T DOT T R I>; bindings = <&uc 0x2023 0>; };  // bullet.tri = ‣
     // seq_m_cc { sequence = <M C C>; bindings = <&uc 0x1F16D 0>; };  // cc = 🅭
-    // seq_m_cc_by { sequence = <M C C DOT B Y>; bindings = <&uc 0x1F16F 0>; };  // cc.by = 🅯
-    // seq_m_cc_nc { sequence = <M C C DOT N C>; bindings = <&uc 0x1F10F 0>; };  // cc.nc = 🄏
-    // seq_m_cc_nd { sequence = <M C C DOT N D>; bindings = <&uc 0x229C 0>; };  // cc.nd = ⊜
-    // seq_m_cc_public { sequence = <M C C DOT P U B L I C>; bindings = <&uc 0x1F16E 0>; };  // cc.public = 🅮
-    // seq_m_cc_sa { sequence = <M C C DOT S A>; bindings = <&uc 0x1F10E 0>; };  // cc.sa = 🄎
-    // seq_m_cc_zero { sequence = <M C C DOT Z E R O>; bindings = <&uc 0x1F10D 0>; };  // cc.zero = 🄍
-    // seq_m_checkmark { sequence = <M C H E C K M A R K>; bindings = <&uc 0x2713 0>; };  // checkmark = ✓
-    // seq_m_checkmark_heavy { sequence = <M C H E C K M A R K DOT H E A V Y>; bindings = <&uc 0x2714 0 &uc 0xFE0E 0>; };  // checkmark.heavy = ✔
-    // seq_m_checkmark_light { sequence = <M C H E C K M A R K DOT L I G H T>; bindings = <&uc 0x1F5F8 0>; };  // checkmark.light = 🗸
-    // seq_m_chess { sequence = <M C H E S S>; bindings = <&uc 0x7B 0>; };  // chess = {
-    // seq_m_co { sequence = <M C O>; bindings = <&uc 0x2105 0>; };  // co = ℅
-    // seq_m_colon_currency { sequence = <M C O L O N DOT C U R R E N C Y>; bindings = <&uc 0x20A1 0>; };  // colon.currency = ₡
-    // seq_m_colon_double { sequence = <M C O L O N DOT D O U B L E>; bindings = <&uc 0x2237 0>; };  // colon.double = ∷
-    // seq_m_colon_double_eq { sequence = <M C O L O N DOT D O U B L E DOT E Q>; bindings = <&uc 0x2A74 0>; };  // colon.double.eq = ⩴
-    // seq_m_colon_eq { sequence = <M C O L O N DOT E Q>; bindings = <&uc 0x2254 0>; };  // colon.eq = ≔
-    // seq_m_colon_tri { sequence = <M C O L O N DOT T R I>; bindings = <&uc 0x205D 0>; };  // colon.tri = ⁝
-    // seq_m_colon_tri_op { sequence = <M C O L O N DOT T R I DOT O P>; bindings = <&uc 0x2AF6 0>; };  // colon.tri.op = ⫶
-    // seq_m_comma_inv { sequence = <M C O M M A DOT I N V>; bindings = <&uc 0x2E32 0>; };  // comma.inv = ⸲
-    // seq_m_comma_rev { sequence = <M C O M M A DOT R E V>; bindings = <&uc 0x2E41 0>; };  // comma.rev = ⹁
-    // seq_m_compose_o { sequence = <M C O M P O S E DOT O>; bindings = <&uc 0x229A 0>; };  // compose.o = ⊚
-    // seq_m_convolve_o { sequence = <M C O N V O L V E DOT O>; bindings = <&uc 0x229B 0>; };  // convolve.o = ⊛
-    // seq_m_copyleft { sequence = <M C O P Y L E F T>; bindings = <&uc 0x1F12F 0>; };  // copyleft = 🄯
-    // seq_m_copyright { sequence = <M C O P Y R I G H T>; bindings = <&uc 0xA9 0 &uc 0xFE0E 0>; };  // copyright = ©
-    // seq_m_copyright_sound { sequence = <M C O P Y R I G H T DOT S O U N D>; bindings = <&uc 0x2117 0>; };  // copyright.sound = ℗
-    // seq_m_crossmark { sequence = <M C R O S S M A R K>; bindings = <&uc 0x2717 0>; };  // crossmark = ✗
-    // seq_m_crossmark_heavy { sequence = <M C R O S S M A R K DOT H E A V Y>; bindings = <&uc 0x2718 0>; };  // crossmark.heavy = ✘
-    // seq_m_dagger_double { sequence = <M D A G G E R DOT D O U B L E>; bindings = <&uc 0x2021 0>; };  // dagger.double = ‡
-    // seq_m_dagger_inv { sequence = <M D A G G E R DOT I N V>; bindings = <&uc 0x2E38 0>; };  // dagger.inv = ⸸
-    // seq_m_dagger_l { sequence = <M D A G G E R DOT L>; bindings = <&uc 0x2E36 0>; };  // dagger.l = ⸶
-    // seq_m_dagger_r { sequence = <M D A G G E R DOT R>; bindings = <&uc 0x2E37 0>; };  // dagger.r = ⸷
-    // seq_m_dagger_triple { sequence = <M D A G G E R DOT T R I P L E>; bindings = <&uc 0x2E4B 0>; };  // dagger.triple = ⹋
-    // seq_m_div_o { sequence = <M D I V DOT O>; bindings = <&uc 0x2A38 0>; };  // div.o = ⨸
-    // seq_m_div_slanted_o { sequence = <M D I V DOT S L A N T E D DOT O>; bindings = <&uc 0x29BC 0>; };  // div.slanted.o = ⦼
-    // seq_m_divides { sequence = <M D I V I D E S>; bindings = <&uc 0x2223 0>; };  // divides = ∣
-    // seq_m_divides_not { sequence = <M D I V I D E S DOT N O T>; bindings = <&uc 0x2224 0>; };  // divides.not = ∤
-    // seq_m_divides_not_rev { sequence = <M D I V I D E S DOT N O T DOT R E V>; bindings = <&uc 0x2AEE 0>; };  // divides.not.rev = ⫮
-    // seq_m_divides_struck { sequence = <M D I V I D E S DOT S T R U C K>; bindings = <&uc 0x27CA 0>; };  // divides.struck = ⟊
-    // seq_m_dotless_i { sequence = <M D O T L E S S DOT I>; bindings = <&uc 0x131 0>; };  // dotless.i = ı
-    // seq_m_dotless_j { sequence = <M D O T L E S S DOT J>; bindings = <&uc 0x237 0>; };  // dotless.j = ȷ
-    // seq_m_ell { sequence = <M E L L>; bindings = <&uc 0x2113 0>; };  // ell = ℓ
-    // seq_m_emptyset_arrow_l { sequence = <M E M P T Y S E T DOT A R R O W DOT L>; bindings = <&uc 0x29B4 0>; };  // emptyset.arrow.l = ⦴
-    // seq_m_emptyset_arrow_r { sequence = <M E M P T Y S E T DOT A R R O W DOT R>; bindings = <&uc 0x29B3 0>; };  // emptyset.arrow.r = ⦳
-    // seq_m_emptyset_bar { sequence = <M E M P T Y S E T DOT B A R>; bindings = <&uc 0x29B1 0>; };  // emptyset.bar = ⦱
-    // seq_m_emptyset_circle { sequence = <M E M P T Y S E T DOT C I R C L E>; bindings = <&uc 0x29B2 0>; };  // emptyset.circle = ⦲
-    // seq_m_emptyset_rev { sequence = <M E M P T Y S E T DOT R E V>; bindings = <&uc 0x29B0 0>; };  // emptyset.rev = ⦰
-    // seq_m_emptyset_zero { sequence = <M E M P T Y S E T DOT Z E R O>; bindings = <&uc 0x2205 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // emptyset.zero = ∅\vs{1}
-    // seq_m_eq_ast { sequence = <M E Q DOT A S T>; bindings = <&uc 0x2A6E 0>; };  // eq.ast = ⩮
-    // seq_m_eq_colon { sequence = <M E Q DOT C O L O N>; bindings = <&uc 0x2255 0>; };  // eq.colon = ≕
-    // seq_m_eq_def { sequence = <M E Q DOT D E F>; bindings = <&uc 0x225D 0>; };  // eq.def = ≝
-    // seq_m_eq_delta { sequence = <M E Q DOT D E L T A>; bindings = <&uc 0x225C 0>; };  // eq.delta = ≜
-    // seq_m_eq_dot { sequence = <M E Q DOT D O T>; bindings = <&uc 0x2250 0>; };  // eq.dot = ≐
-    // seq_m_eq_dots { sequence = <M E Q DOT D O T S>; bindings = <&uc 0x2251 0>; };  // eq.dots = ≑
-    // seq_m_eq_dots_down { sequence = <M E Q DOT D O T S DOT D O W N>; bindings = <&uc 0x2252 0>; };  // eq.dots.down = ≒
-    // seq_m_eq_dots_up { sequence = <M E Q DOT D O T S DOT U P>; bindings = <&uc 0x2253 0>; };  // eq.dots.up = ≓
-    // seq_m_eq_equi { sequence = <M E Q DOT E Q U I>; bindings = <&uc 0x225A 0>; };  // eq.equi = ≚
-    // seq_m_eq_est { sequence = <M E Q DOT E S T>; bindings = <&uc 0x2259 0>; };  // eq.est = ≙
-    // seq_m_eq_gt { sequence = <M E Q DOT G T>; bindings = <&uc 0x22DD 0>; };  // eq.gt = ⋝
-    // seq_m_eq_gt_slant { sequence = <M E Q DOT G T DOT S L A N T>; bindings = <&uc 0x2A96 0>; };  // eq.gt.slant = ⪖
-    // seq_m_eq_lt { sequence = <M E Q DOT L T>; bindings = <&uc 0x22DC 0>; };  // eq.lt = ⋜
-    // seq_m_eq_lt_slant { sequence = <M E Q DOT L T DOT S L A N T>; bindings = <&uc 0x2A95 0>; };  // eq.lt.slant = ⪕
-    // seq_m_eq_m { sequence = <M E Q DOT M>; bindings = <&uc 0x225E 0>; };  // eq.m = ≞
-    // seq_m_eq_not { sequence = <M E Q DOT N O T>; bindings = <&uc 0x2260 0>; };  // eq.not = ≠
-    // seq_m_eq_o { sequence = <M E Q DOT O>; bindings = <&uc 0x229C 0>; };  // eq.o = ⊜
-    // seq_m_eq_prec { sequence = <M E Q DOT P R E C>; bindings = <&uc 0x22DE 0>; };  // eq.prec = ⋞
-    // seq_m_eq_quad { sequence = <M E Q DOT Q U A D>; bindings = <&uc 0x2263 0>; };  // eq.quad = ≣
-    // seq_m_eq_quest { sequence = <M E Q DOT Q U E S T>; bindings = <&uc 0x225F 0>; };  // eq.quest = ≟
-    // seq_m_eq_star { sequence = <M E Q DOT S T A R>; bindings = <&uc 0x225B 0>; };  // eq.star = ≛
-    // seq_m_eq_succ { sequence = <M E Q DOT S U C C>; bindings = <&uc 0x22DF 0>; };  // eq.succ = ⋟
-    // seq_m_eq_triple { sequence = <M E Q DOT T R I P L E>; bindings = <&uc 0x2261 0>; };  // eq.triple = ≡
-    // seq_m_eq_triple_not { sequence = <M E Q DOT T R I P L E DOT N O T>; bindings = <&uc 0x2262 0>; };  // eq.triple.not = ≢
-    // seq_m_equiv { sequence = <M E Q U I V>; bindings = <&uc 0x2261 0>; };  // equiv = ≡
-    // seq_m_equiv_gt { sequence = <M E Q U I V DOT G T>; bindings = <&uc 0x2A9A 0>; };  // equiv.gt = ⪚
-    // seq_m_equiv_gt_slant { sequence = <M E Q U I V DOT G T DOT S L A N T>; bindings = <&uc 0x2A9C 0>; };  // equiv.gt.slant = ⪜
-    // seq_m_equiv_lt { sequence = <M E Q U I V DOT L T>; bindings = <&uc 0x2A99 0>; };  // equiv.lt = ⪙
-    // seq_m_equiv_lt_slant { sequence = <M E Q U I V DOT L T DOT S L A N T>; bindings = <&uc 0x2A9B 0>; };  // equiv.lt.slant = ⪛
-    // seq_m_errorbar_circle_filled { sequence = <M E R R O R B A R DOT C I R C L E DOT F I L L E D>; bindings = <&uc 0x29F3 0>; };  // errorbar.circle.filled = ⧳
-    // seq_m_errorbar_circle_stroked { sequence = <M E R R O R B A R DOT C I R C L E DOT S T R O K E D>; bindings = <&uc 0x29F2 0>; };  // errorbar.circle.stroked = ⧲
-    // seq_m_errorbar_diamond_filled { sequence = <M E R R O R B A R DOT D I A M O N D DOT F I L L E D>; bindings = <&uc 0x29F1 0>; };  // errorbar.diamond.filled = ⧱
-    // seq_m_errorbar_diamond_stroked { sequence = <M E R R O R B A R DOT D I A M O N D DOT S T R O K E D>; bindings = <&uc 0x29F0 0>; };  // errorbar.diamond.stroked = ⧰
-    // seq_m_errorbar_square_filled { sequence = <M E R R O R B A R DOT S Q U A R E DOT F I L L E D>; bindings = <&uc 0x29EF 0>; };  // errorbar.square.filled = ⧯
-    // seq_m_errorbar_square_stroked { sequence = <M E R R O R B A R DOT S Q U A R E DOT S T R O K E D>; bindings = <&uc 0x29EE 0>; };  // errorbar.square.stroked = ⧮
-    // seq_m_excl_double { sequence = <M E X C L DOT D O U B L E>; bindings = <&uc 0x203C 0 &uc 0xFE0E 0>; };  // excl.double = ‼
-    // seq_m_excl_inv { sequence = <M E X C L DOT I N V>; bindings = <&uc 0xA1 0>; };  // excl.inv = ¡
     // seq_m_excl_quest { sequence = <M E X C L DOT Q U E S T>; bindings = <&uc 0x2049 0 &uc 0xFE0E 0>; };  // excl.quest = ⁉
-    // seq_m_exists_not { sequence = <M E X I S T S DOT N O T>; bindings = <&uc 0x2204 0>; };  // exists.not = ∄
-    // seq_m_female_double { sequence = <M F E M A L E DOT D O U B L E>; bindings = <&uc 0x26A2 0>; };  // female.double = ⚢
     // seq_m_female_male { sequence = <M F E M A L E DOT M A L E>; bindings = <&uc 0x26A4 0>; };  // female.male = ⚤
-    // seq_m_feminine { sequence = <M F E M I N I N E>; bindings = <&uc 0xAA 0>; };  // feminine = ª
-    // seq_m_floral { sequence = <M F L O R A L>; bindings = <&uc 0x2766 0>; };  // floral = ❦
-    // seq_m_floral_l { sequence = <M F L O R A L DOT L>; bindings = <&uc 0x2619 0>; };  // floral.l = ☙
-    // seq_m_floral_r { sequence = <M F L O R A L DOT R>; bindings = <&uc 0x2767 0>; };  // floral.r = ❧
-    // seq_m_forces_not { sequence = <M F O R C E S DOT N O T>; bindings = <&uc 0x22AE 0>; };  // forces.not = ⊮
-    // seq_m_gt_approx { sequence = <M G T DOT A P P R O X>; bindings = <&uc 0x2A86 0>; };  // gt.approx = ⪆
-    // seq_m_gt_arc { sequence = <M G T DOT A R C>; bindings = <&uc 0x2AA7 0>; };  // gt.arc = ⪧
-    // seq_m_gt_arc_eq { sequence = <M G T DOT A R C DOT E Q>; bindings = <&uc 0x2AA9 0>; };  // gt.arc.eq = ⪩
-    // seq_m_gt_closed { sequence = <M G T DOT C L O S E D>; bindings = <&uc 0x22B3 0>; };  // gt.closed = ⊳
-    // seq_m_gt_closed_eq { sequence = <M G T DOT C L O S E D DOT E Q>; bindings = <&uc 0x22B5 0>; };  // gt.closed.eq = ⊵
-    // seq_m_gt_closed_eq_not { sequence = <M G T DOT C L O S E D DOT E Q DOT N O T>; bindings = <&uc 0x22ED 0>; };  // gt.closed.eq.not = ⋭
-    // seq_m_gt_closed_not { sequence = <M G T DOT C L O S E D DOT N O T>; bindings = <&uc 0x22EB 0>; };  // gt.closed.not = ⋫
-    // seq_m_gt_dot { sequence = <M G T DOT D O T>; bindings = <&uc 0x22D7 0>; };  // gt.dot = ⋗
-    // seq_m_gt_double { sequence = <M G T DOT D O U B L E>; bindings = <&uc 0x226B 0>; };  // gt.double = ≫
-    // seq_m_gt_double_nested { sequence = <M G T DOT D O U B L E DOT N E S T E D>; bindings = <&uc 0x2AA2 0>; };  // gt.double.nested = ⪢
-    // seq_m_gt_eq_lt { sequence = <M G T DOT E Q DOT L T>; bindings = <&uc 0x22DB 0>; };  // gt.eq.lt = ⋛
-    // seq_m_gt_eq_lt_slant { sequence = <M G T DOT E Q DOT L T DOT S L A N T>; bindings = <&uc 0x22DB 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // gt.eq.lt.slant = ⋛\vs{1}
-    // seq_m_gt_eq_not { sequence = <M G T DOT E Q DOT N O T>; bindings = <&uc 0x2271 0>; };  // gt.eq.not = ≱
-    // seq_m_gt_eq_slant { sequence = <M G T DOT E Q DOT S L A N T>; bindings = <&uc 0x2A7E 0>; };  // gt.eq.slant = ⩾
     // seq_m_gt_equiv { sequence = <M G T DOT E Q U I V>; bindings = <&uc 0x2267 0>; };  // gt.equiv = ≧
-    // seq_m_gt_equiv_slant { sequence = <M G T DOT E Q U I V DOT S L A N T>; bindings = <&uc 0x2AFA 0>; };  // gt.equiv.slant = ⫺
-    // seq_m_gt_lt { sequence = <M G T DOT L T>; bindings = <&uc 0x2277 0>; };  // gt.lt = ≷
-    // seq_m_gt_lt_not { sequence = <M G T DOT L T DOT N O T>; bindings = <&uc 0x2279 0>; };  // gt.lt.not = ≹
-    // seq_m_gt_napprox { sequence = <M G T DOT N A P P R O X>; bindings = <&uc 0x2A8A 0>; };  // gt.napprox = ⪊
-    // seq_m_gt_neq { sequence = <M G T DOT N E Q>; bindings = <&uc 0x2A88 0>; };  // gt.neq = ⪈
-    // seq_m_gt_nequiv { sequence = <M G T DOT N E Q U I V>; bindings = <&uc 0x2269 0>; };  // gt.nequiv = ≩
-    // seq_m_gt_not { sequence = <M G T DOT N O T>; bindings = <&uc 0x226F 0>; };  // gt.not = ≯
-    // seq_m_gt_ntilde { sequence = <M G T DOT N T I L D E>; bindings = <&uc 0x22E7 0>; };  // gt.ntilde = ⋧
-    // seq_m_gt_o { sequence = <M G T DOT O>; bindings = <&uc 0x29C1 0>; };  // gt.o = ⧁
-    // seq_m_gt_quest { sequence = <M G T DOT Q U E S T>; bindings = <&uc 0x2A7C 0>; };  // gt.quest = ⩼
-    // seq_m_gt_tilde { sequence = <M G T DOT T I L D E>; bindings = <&uc 0x2273 0>; };  // gt.tilde = ≳
-    // seq_m_gt_tilde_not { sequence = <M G T DOT T I L D E DOT N O T>; bindings = <&uc 0x2275 0>; };  // gt.tilde.not = ≵
-    // seq_m_gt_tilde_slant { sequence = <M G T DOT T I L D E DOT S L A N T>; bindings = <&uc 0x2273 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // gt.tilde.slant = ≳\vs{1}
-    // seq_m_gt_triple { sequence = <M G T DOT T R I P L E>; bindings = <&uc 0x22D9 0>; };  // gt.triple = ⋙
-    // seq_m_gt_triple_nested { sequence = <M G T DOT T R I P L E DOT N E S T E D>; bindings = <&uc 0x2AF8 0>; };  // gt.triple.nested = ⫸
-    // seq_m_hyph_minus { sequence = <M H Y P H DOT M I N U S>; bindings = <&uc 0x2D 0>; };  // hyph.minus = -
-    // seq_m_hyph_nobreak { sequence = <M H Y P H DOT N O B R E A K>; bindings = <&uc 0x2011 0>; };  // hyph.nobreak = ‑
-    // seq_m_hyph_point { sequence = <M H Y P H DOT P O I N T>; bindings = <&uc 0x2027 0>; };  // hyph.point = ‧
-    // seq_m_hyph_soft { sequence = <M H Y P H DOT S O F T>; bindings = <&uc 0xAD 0>; };  // hyph.soft = ­
-    // seq_m_infinity_bar { sequence = <M I N F I N I T Y DOT B A R>; bindings = <&uc 0x29DE 0>; };  // infinity.bar = ⧞
-    // seq_m_infinity_incomplete { sequence = <M I N F I N I T Y DOT I N C O M P L E T E>; bindings = <&uc 0x29DC 0>; };  // infinity.incomplete = ⧜
-    // seq_m_infinity_tie { sequence = <M I N F I N I T Y DOT T I E>; bindings = <&uc 0x29DD 0>; };  // infinity.tie = ⧝
-    // seq_m_integral_arrow_hook { sequence = <M I N T E G R A L DOT A R R O W DOT H O O K>; bindings = <&uc 0x2A17 0>; };  // integral.arrow.hook = ⨗
-    // seq_m_integral_ccw { sequence = <M I N T E G R A L DOT C C W>; bindings = <&uc 0x2A11 0>; };  // integral.ccw = ⨑
     // seq_m_integral_cont_ccw { sequence = <M I N T E G R A L DOT C O N T DOT C C W>; bindings = <&uc 0x2233 0>; };  // integral.cont.ccw = ∳
     // seq_m_integral_cont_cw { sequence = <M I N T E G R A L DOT C O N T DOT C W>; bindings = <&uc 0x2232 0>; };  // integral.cont.cw = ∲
-    // seq_m_integral_cw { sequence = <M I N T E G R A L DOT C W>; bindings = <&uc 0x2231 0>; };  // integral.cw = ∱
-    // seq_m_integral_dash { sequence = <M I N T E G R A L DOT D A S H>; bindings = <&uc 0x2A0D 0>; };  // integral.dash = ⨍
     // seq_m_integral_dash_double { sequence = <M I N T E G R A L DOT D A S H DOT D O U B L E>; bindings = <&uc 0x2A0E 0>; };  // integral.dash.double = ⨎
-    // seq_m_integral_double { sequence = <M I N T E G R A L DOT D O U B L E>; bindings = <&uc 0x222C 0>; };  // integral.double = ∬
-    // seq_m_integral_inter { sequence = <M I N T E G R A L DOT I N T E R>; bindings = <&uc 0x2A19 0>; };  // integral.inter = ⨙
-    // seq_m_integral_quad { sequence = <M I N T E G R A L DOT Q U A D>; bindings = <&uc 0x2A0C 0>; };  // integral.quad = ⨌
-    // seq_m_integral_slash { sequence = <M I N T E G R A L DOT S L A S H>; bindings = <&uc 0x2A0F 0>; };  // integral.slash = ⨏
-    // seq_m_integral_square { sequence = <M I N T E G R A L DOT S Q U A R E>; bindings = <&uc 0x2A16 0>; };  // integral.square = ⨖
-    // seq_m_integral_surf { sequence = <M I N T E G R A L DOT S U R F>; bindings = <&uc 0x222F 0>; };  // integral.surf = ∯
-    // seq_m_integral_times { sequence = <M I N T E G R A L DOT T I M E S>; bindings = <&uc 0x2A18 0>; };  // integral.times = ⨘
-    // seq_m_integral_triple { sequence = <M I N T E G R A L DOT T R I P L E>; bindings = <&uc 0x222D 0>; };  // integral.triple = ∭
-    // seq_m_integral_union { sequence = <M I N T E G R A L DOT U N I O N>; bindings = <&uc 0x2A1A 0>; };  // integral.union = ⨚
-    // seq_m_integral_vol { sequence = <M I N T E G R A L DOT V O L>; bindings = <&uc 0x2230 0>; };  // integral.vol = ∰
-    // seq_m_inter_and { sequence = <M I N T E R DOT A N D>; bindings = <&uc 0x2A44 0>; };  // inter.and = ⩄
-    // seq_m_inter_dot { sequence = <M I N T E R DOT D O T>; bindings = <&uc 0x2A40 0>; };  // inter.dot = ⩀
-    // seq_m_inter_double { sequence = <M I N T E R DOT D O U B L E>; bindings = <&uc 0x22D2 0>; };  // inter.double = ⋒
-    // seq_m_inter_serif { sequence = <M I N T E R DOT S E R I F>; bindings = <&uc 0x2229 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // inter.serif = ∩\vs{1}
-    // seq_m_inter_sq { sequence = <M I N T E R DOT S Q>; bindings = <&uc 0x2293 0>; };  // inter.sq = ⊓
-    // seq_m_inter_sq_big { sequence = <M I N T E R DOT S Q DOT B I G>; bindings = <&uc 0x2A05 0>; };  // inter.sq.big = ⨅
-    // seq_m_inter_sq_double { sequence = <M I N T E R DOT S Q DOT D O U B L E>; bindings = <&uc 0x2A4E 0>; };  // inter.sq.double = ⩎
-    // seq_m_inter_sq_serif { sequence = <M I N T E R DOT S Q DOT S E R I F>; bindings = <&uc 0x2293 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // inter.sq.serif = ⊓\vs{1}
-    // seq_m_interleave { sequence = <M I N T E R L E A V E>; bindings = <&uc 0x2AF4 0>; };  // interleave = ⫴
-    // seq_m_interleave_big { sequence = <M I N T E R L E A V E DOT B I G>; bindings = <&uc 0x2AFC 0>; };  // interleave.big = ⫼
-    // seq_m_interleave_struck { sequence = <M I N T E R L E A V E DOT S T R U C K>; bindings = <&uc 0x2AF5 0>; };  // interleave.struck = ⫵
-    // seq_m_interrobang { sequence = <M I N T E R R O B A N G>; bindings = <&uc 0x203D 0>; };  // interrobang = ‽
-    // seq_m_interrobang_inv { sequence = <M I N T E R R O B A N G DOT I N V>; bindings = <&uc 0x2E18 0>; };  // interrobang.inv = ⸘
-    // seq_m_intersex { sequence = <M I N T E R S E X>; bindings = <&uc 0x26A5 0>; };  // intersex = ⚥
-    // seq_m_king_black { sequence = <M K I N G DOT B L A C K>; bindings = <&uc 0x265A 0>; };  // king.black = ♚
-    // seq_m_king_white { sequence = <M K I N G DOT W H I T E>; bindings = <&uc 0x2654 0>; };  // king.white = ♔
-    // seq_m_knight_black { sequence = <M K N I G H T DOT B L A C K>; bindings = <&uc 0x265E 0>; };  // knight.black = ♞
-    // seq_m_knight_white { sequence = <M K N I G H T DOT W H I T E>; bindings = <&uc 0x2658 0>; };  // knight.white = ♘
-    // seq_m_lat_eq { sequence = <M L A T DOT E Q>; bindings = <&uc 0x2AAD 0>; };  // lat.eq = ⪭
-    // seq_m_lat_eq_slant { sequence = <M L A T DOT E Q DOT S L A N T>; bindings = <&uc 0x2AAD 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // lat.eq.slant = ⪭\vs{1}
-    // seq_m_lt_approx { sequence = <M L T DOT A P P R O X>; bindings = <&uc 0x2A85 0>; };  // lt.approx = ⪅
-    // seq_m_lt_arc { sequence = <M L T DOT A R C>; bindings = <&uc 0x2AA6 0>; };  // lt.arc = ⪦
-    // seq_m_lt_arc_eq { sequence = <M L T DOT A R C DOT E Q>; bindings = <&uc 0x2AA8 0>; };  // lt.arc.eq = ⪨
-    // seq_m_lt_closed { sequence = <M L T DOT C L O S E D>; bindings = <&uc 0x22B2 0>; };  // lt.closed = ⊲
-    // seq_m_lt_closed_eq { sequence = <M L T DOT C L O S E D DOT E Q>; bindings = <&uc 0x22B4 0>; };  // lt.closed.eq = ⊴
-    // seq_m_lt_closed_eq_not { sequence = <M L T DOT C L O S E D DOT E Q DOT N O T>; bindings = <&uc 0x22EC 0>; };  // lt.closed.eq.not = ⋬
-    // seq_m_lt_closed_not { sequence = <M L T DOT C L O S E D DOT N O T>; bindings = <&uc 0x22EA 0>; };  // lt.closed.not = ⋪
-    // seq_m_lt_dot { sequence = <M L T DOT D O T>; bindings = <&uc 0x22D6 0>; };  // lt.dot = ⋖
-    // seq_m_lt_double { sequence = <M L T DOT D O U B L E>; bindings = <&uc 0x226A 0>; };  // lt.double = ≪
-    // seq_m_lt_double_nested { sequence = <M L T DOT D O U B L E DOT N E S T E D>; bindings = <&uc 0x2AA1 0>; };  // lt.double.nested = ⪡
-    // seq_m_lt_eq_gt { sequence = <M L T DOT E Q DOT G T>; bindings = <&uc 0x22DA 0>; };  // lt.eq.gt = ⋚
-    // seq_m_lt_eq_gt_slant { sequence = <M L T DOT E Q DOT G T DOT S L A N T>; bindings = <&uc 0x22DA 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // lt.eq.gt.slant = ⋚\vs{1}
-    // seq_m_lt_eq_not { sequence = <M L T DOT E Q DOT N O T>; bindings = <&uc 0x2270 0>; };  // lt.eq.not = ≰
-    // seq_m_lt_eq_slant { sequence = <M L T DOT E Q DOT S L A N T>; bindings = <&uc 0x2A7D 0>; };  // lt.eq.slant = ⩽
     // seq_m_lt_equiv { sequence = <M L T DOT E Q U I V>; bindings = <&uc 0x2266 0>; };  // lt.equiv = ≦
-    // seq_m_lt_equiv_slant { sequence = <M L T DOT E Q U I V DOT S L A N T>; bindings = <&uc 0x2AF9 0>; };  // lt.equiv.slant = ⫹
-    // seq_m_lt_gt { sequence = <M L T DOT G T>; bindings = <&uc 0x2276 0>; };  // lt.gt = ≶
-    // seq_m_lt_gt_not { sequence = <M L T DOT G T DOT N O T>; bindings = <&uc 0x2278 0>; };  // lt.gt.not = ≸
-    // seq_m_lt_napprox { sequence = <M L T DOT N A P P R O X>; bindings = <&uc 0x2A89 0>; };  // lt.napprox = ⪉
-    // seq_m_lt_neq { sequence = <M L T DOT N E Q>; bindings = <&uc 0x2A87 0>; };  // lt.neq = ⪇
-    // seq_m_lt_nequiv { sequence = <M L T DOT N E Q U I V>; bindings = <&uc 0x2268 0>; };  // lt.nequiv = ≨
-    // seq_m_lt_not { sequence = <M L T DOT N O T>; bindings = <&uc 0x226E 0>; };  // lt.not = ≮
-    // seq_m_lt_ntilde { sequence = <M L T DOT N T I L D E>; bindings = <&uc 0x22E6 0>; };  // lt.ntilde = ⋦
-    // seq_m_lt_o { sequence = <M L T DOT O>; bindings = <&uc 0x29C0 0>; };  // lt.o = ⧀
-    // seq_m_lt_quest { sequence = <M L T DOT Q U E S T>; bindings = <&uc 0x2A7B 0>; };  // lt.quest = ⩻
-    // seq_m_lt_tilde { sequence = <M L T DOT T I L D E>; bindings = <&uc 0x2272 0>; };  // lt.tilde = ≲
-    // seq_m_lt_tilde_not { sequence = <M L T DOT T I L D E DOT N O T>; bindings = <&uc 0x2274 0>; };  // lt.tilde.not = ≴
-    // seq_m_lt_tilde_slant { sequence = <M L T DOT T I L D E DOT S L A N T>; bindings = <&uc 0x2272 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // lt.tilde.slant = ≲\vs{1}
-    // seq_m_lt_triple { sequence = <M L T DOT T R I P L E>; bindings = <&uc 0x22D8 0>; };  // lt.triple = ⋘
-    // seq_m_lt_triple_nested { sequence = <M L T DOT T R I P L E DOT N E S T E D>; bindings = <&uc 0x2AF7 0>; };  // lt.triple.nested = ⫷
-    // seq_m_male_double { sequence = <M M A L E DOT D O U B L E>; bindings = <&uc 0x26A3 0>; };  // male.double = ⚣
     // seq_m_male_female { sequence = <M M A L E DOT F E M A L E>; bindings = <&uc 0x26A4 0>; };  // male.female = ⚤
-    // seq_m_male_stroke { sequence = <M M A L E DOT S T R O K E>; bindings = <&uc 0x26A6 0>; };  // male.stroke = ⚦
-    // seq_m_male_stroke_r { sequence = <M M A L E DOT S T R O K E DOT R>; bindings = <&uc 0x26A9 0>; };  // male.stroke.r = ⚩
-    // seq_m_male_stroke_t { sequence = <M M A L E DOT S T R O K E DOT T>; bindings = <&uc 0x26A8 0>; };  // male.stroke.t = ⚨
-    // seq_m_maltese { sequence = <M M A L T E S E>; bindings = <&uc 0x2720 0>; };  // maltese = ✠
-    // seq_m_mapsfrom_long { sequence = <M M A P S F R O M DOT L O N G>; bindings = <&uc 0x27FB 0>; };  // mapsfrom.long = ⟻
-    // seq_m_mapsto_long { sequence = <M M A P S T O DOT L O N G>; bindings = <&uc 0x27FC 0>; };  // mapsto.long = ⟼
-    // seq_m_masculine { sequence = <M M A S C U L I N E>; bindings = <&uc 0xBA 0>; };  // masculine = º
-    // seq_m_minus_dot { sequence = <M M I N U S DOT D O T>; bindings = <&uc 0x2238 0>; };  // minus.dot = ∸
-    // seq_m_minus_o { sequence = <M M I N U S DOT O>; bindings = <&uc 0x2296 0>; };  // minus.o = ⊖
-    // seq_m_minus_square { sequence = <M M I N U S DOT S Q U A R E>; bindings = <&uc 0x229F 0>; };  // minus.square = ⊟
-    // seq_m_minus_tilde { sequence = <M M I N U S DOT T I L D E>; bindings = <&uc 0x2242 0>; };  // minus.tilde = ≂
-    // seq_m_minus_triangle { sequence = <M M I N U S DOT T R I A N G L E>; bindings = <&uc 0x2A3A 0>; };  // minus.triangle = ⨺
-    // seq_m_multimap_double { sequence = <M M U L T I M A P DOT D O U B L E>; bindings = <&uc 0x29DF 0>; };  // multimap.double = ⧟
-    // seq_m_not_inv { sequence = <M N O T DOT I N V>; bindings = <&uc 0x2319 0>; };  // not.inv = ⌙
-    // seq_m_not_rev { sequence = <M N O T DOT R E V>; bindings = <&uc 0x2310 0>; };  // not.rev = ⌐
-    // seq_m_nothing { sequence = <M N O T H I N G>; bindings = <&uc 0x2205 0>; };  // nothing = ∅
-    // seq_m_nothing_arrow_l { sequence = <M N O T H I N G DOT A R R O W DOT L>; bindings = <&uc 0x29B4 0>; };  // nothing.arrow.l = ⦴
-    // seq_m_nothing_arrow_r { sequence = <M N O T H I N G DOT A R R O W DOT R>; bindings = <&uc 0x29B3 0>; };  // nothing.arrow.r = ⦳
-    // seq_m_nothing_bar { sequence = <M N O T H I N G DOT B A R>; bindings = <&uc 0x29B1 0>; };  // nothing.bar = ⦱
-    // seq_m_nothing_circle { sequence = <M N O T H I N G DOT C I R C L E>; bindings = <&uc 0x29B2 0>; };  // nothing.circle = ⦲
-    // seq_m_nothing_rev { sequence = <M N O T H I N G DOT R E V>; bindings = <&uc 0x29B0 0>; };  // nothing.rev = ⦰
-    // seq_m_nothing_zero { sequence = <M N O T H I N G DOT Z E R O>; bindings = <&uc 0x2205 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // nothing.zero = ∅\vs{1}
-    // seq_m_or_big { sequence = <M O R DOT B I G>; bindings = <&uc 0x22C1 0>; };  // or.big = ⋁
-    // seq_m_or_curly { sequence = <M O R DOT C U R L Y>; bindings = <&uc 0x22CE 0>; };  // or.curly = ⋎
-    // seq_m_or_dot { sequence = <M O R DOT D O T>; bindings = <&uc 0x27C7 0>; };  // or.dot = ⟇
-    // seq_m_or_double { sequence = <M O R DOT D O U B L E>; bindings = <&uc 0x2A54 0>; };  // or.double = ⩔
-    // seq_m_ordinal { sequence = <M O R D I N A L>; bindings = <&uc 0x7B 0>; };  // ordinal = {
-    // seq_m_original { sequence = <M O R I G I N A L>; bindings = <&uc 0x22B6 0>; };  // original = ⊶
-    // seq_m_parallel_eq { sequence = <M P A R A L L E L DOT E Q>; bindings = <&uc 0x22D5 0>; };  // parallel.eq = ⋕
     // seq_m_parallel_equiv { sequence = <M P A R A L L E L DOT E Q U I V>; bindings = <&uc 0x2A68 0>; };  // parallel.equiv = ⩨
-    // seq_m_parallel_not { sequence = <M P A R A L L E L DOT N O T>; bindings = <&uc 0x2226 0>; };  // parallel.not = ∦
-    // seq_m_parallel_o { sequence = <M P A R A L L E L DOT O>; bindings = <&uc 0x29B7 0>; };  // parallel.o = ⦷
     // seq_m_parallel_slanted_eq { sequence = <M P A R A L L E L DOT S L A N T E D DOT E Q>; bindings = <&uc 0x29E3 0>; };  // parallel.slanted.eq = ⧣
     // seq_m_parallel_slanted_eq_tilde { sequence = <M P A R A L L E L DOT S L A N T E D DOT E Q DOT T I L D E>; bindings = <&uc 0x29E4 0>; };  // parallel.slanted.eq.tilde = ⧤
     // seq_m_parallel_slanted_equiv { sequence = <M P A R A L L E L DOT S L A N T E D DOT E Q U I V>; bindings = <&uc 0x29E5 0>; };  // parallel.slanted.equiv = ⧥
-    // seq_m_parallel_struck { sequence = <M P A R A L L E L DOT S T R U C K>; bindings = <&uc 0x2AF2 0>; };  // parallel.struck = ⫲
-    // seq_m_parallel_tilde { sequence = <M P A R A L L E L DOT T I L D E>; bindings = <&uc 0x2AF3 0>; };  // parallel.tilde = ⫳
-    // seq_m_parallelogram_filled { sequence = <M P A R A L L E L O G R A M DOT F I L L E D>; bindings = <&uc 0x25B0 0>; };  // parallelogram.filled = ▰
-    // seq_m_parallelogram_stroked { sequence = <M P A R A L L E L O G R A M DOT S T R O K E D>; bindings = <&uc 0x25B1 0>; };  // parallelogram.stroked = ▱
-    // seq_m_pawn_black { sequence = <M P A W N DOT B L A C K>; bindings = <&uc 0x265F 0 &uc 0xFE0E 0>; };  // pawn.black = ♟
-    // seq_m_pawn_white { sequence = <M P A W N DOT W H I T E>; bindings = <&uc 0x2659 0>; };  // pawn.white = ♙
-    // seq_m_pee { sequence = <M P E E>; bindings = <&uc 0x2118 0>; };  // pee = ℘
-    // seq_m_perp_o { sequence = <M P E R P DOT O>; bindings = <&uc 0x29B9 0>; };  // perp.o = ⦹
-    // seq_m_pilcrow_rev { sequence = <M P I L C R O W DOT R E V>; bindings = <&uc 0x204B 0>; };  // pilcrow.rev = ⁋
-    // seq_m_planck { sequence = <M P L A N C K>; bindings = <&uc 0x127 0>; };  // planck = ħ
-    // seq_m_plus_dot { sequence = <M P L U S DOT D O T>; bindings = <&uc 0x2214 0>; };  // plus.dot = ∔
-    // seq_m_plus_double { sequence = <M P L U S DOT D O U B L E>; bindings = <&uc 0x29FA 0>; };  // plus.double = ⧺
-    // seq_m_plus_hat { sequence = <M P L U S DOT H A T>; bindings = <&uc 0x2A23 0>; };  // plus.hat = ⨣
-    // seq_m_plus_o { sequence = <M P L U S DOT O>; bindings = <&uc 0x2295 0>; };  // plus.o = ⊕
-    // seq_m_plus_o_arrow { sequence = <M P L U S DOT O DOT A R R O W>; bindings = <&uc 0x27F4 0>; };  // plus.o.arrow = ⟴
-    // seq_m_plus_o_big { sequence = <M P L U S DOT O DOT B I G>; bindings = <&uc 0x2A01 0>; };  // plus.o.big = ⨁
-    // seq_m_plus_o_l { sequence = <M P L U S DOT O DOT L>; bindings = <&uc 0x2A2D 0>; };  // plus.o.l = ⨭
-    // seq_m_plus_o_r { sequence = <M P L U S DOT O DOT R>; bindings = <&uc 0x2A2E 0>; };  // plus.o.r = ⨮
-    // seq_m_plus_square { sequence = <M P L U S DOT S Q U A R E>; bindings = <&uc 0x229E 0>; };  // plus.square = ⊞
-    // seq_m_plus_triangle { sequence = <M P L U S DOT T R I A N G L E>; bindings = <&uc 0x2A39 0>; };  // plus.triangle = ⨹
-    // seq_m_plus_triple { sequence = <M P L U S DOT T R I P L E>; bindings = <&uc 0x29FB 0>; };  // plus.triple = ⧻
-    // seq_m_prec_approx { sequence = <M P R E C DOT A P P R O X>; bindings = <&uc 0x2AB7 0>; };  // prec.approx = ⪷
-    // seq_m_prec_curly_eq { sequence = <M P R E C DOT C U R L Y DOT E Q>; bindings = <&uc 0x227C 0>; };  // prec.curly.eq = ≼
-    // seq_m_prec_curly_eq_not { sequence = <M P R E C DOT C U R L Y DOT E Q DOT N O T>; bindings = <&uc 0x22E0 0>; };  // prec.curly.eq.not = ⋠
-    // seq_m_prec_double { sequence = <M P R E C DOT D O U B L E>; bindings = <&uc 0x2ABB 0>; };  // prec.double = ⪻
-    // seq_m_prec_eq { sequence = <M P R E C DOT E Q>; bindings = <&uc 0x2AAF 0>; };  // prec.eq = ⪯
-    // seq_m_prec_eq_slant { sequence = <M P R E C DOT E Q DOT S L A N T>; bindings = <&uc 0x227C 0>; };  // prec.eq.slant = ≼
-    // seq_m_prec_eq_slant_not { sequence = <M P R E C DOT E Q DOT S L A N T DOT N O T>; bindings = <&uc 0x22E0 0>; };  // prec.eq.slant.not = ⋠
-    // seq_m_prec_equiv { sequence = <M P R E C DOT E Q U I V>; bindings = <&uc 0x2AB3 0>; };  // prec.equiv = ⪳
-    // seq_m_prec_napprox { sequence = <M P R E C DOT N A P P R O X>; bindings = <&uc 0x2AB9 0>; };  // prec.napprox = ⪹
-    // seq_m_prec_neq { sequence = <M P R E C DOT N E Q>; bindings = <&uc 0x2AB1 0>; };  // prec.neq = ⪱
-    // seq_m_prec_nequiv { sequence = <M P R E C DOT N E Q U I V>; bindings = <&uc 0x2AB5 0>; };  // prec.nequiv = ⪵
-    // seq_m_prec_not { sequence = <M P R E C DOT N O T>; bindings = <&uc 0x2280 0>; };  // prec.not = ⊀
-    // seq_m_prec_ntilde { sequence = <M P R E C DOT N T I L D E>; bindings = <&uc 0x22E8 0>; };  // prec.ntilde = ⋨
-    // seq_m_prec_tilde { sequence = <M P R E C DOT T I L D E>; bindings = <&uc 0x227E 0>; };  // prec.tilde = ≾
-    // seq_m_product_co { sequence = <M P R O D U C T DOT C O>; bindings = <&uc 0x2210 0>; };  // product.co = ∐
-    // seq_m_queen_black { sequence = <M Q U E E N DOT B L A C K>; bindings = <&uc 0x265B 0>; };  // queen.black = ♛
-    // seq_m_queen_white { sequence = <M Q U E E N DOT W H I T E>; bindings = <&uc 0x2655 0>; };  // queen.white = ♕
-    // seq_m_quest_double { sequence = <M Q U E S T DOT D O U B L E>; bindings = <&uc 0x2047 0>; };  // quest.double = ⁇
     // seq_m_quest_excl { sequence = <M Q U E S T DOT E X C L>; bindings = <&uc 0x2048 0>; };  // quest.excl = ⁈
-    // seq_m_quest_inv { sequence = <M Q U E S T DOT I N V>; bindings = <&uc 0xBF 0>; };  // quest.inv = ¿
-    // seq_m_refmark { sequence = <M R E F M A R K>; bindings = <&uc 0x203B 0>; };  // refmark = ※
-    // seq_m_rook_black { sequence = <M R O O K DOT B L A C K>; bindings = <&uc 0x265C 0>; };  // rook.black = ♜
-    // seq_m_rook_white { sequence = <M R O O K DOT W H I T E>; bindings = <&uc 0x2656 0>; };  // rook.white = ♖
-    // seq_m_semi_inv { sequence = <M S E M I DOT I N V>; bindings = <&uc 0x2E35 0>; };  // semi.inv = ⸵
-    // seq_m_semi_rev { sequence = <M S E M I DOT R E V>; bindings = <&uc 0x204F 0>; };  // semi.rev = ⁏
-    // seq_m_slash_big { sequence = <M S L A S H DOT B I G>; bindings = <&uc 0x29F8 0>; };  // slash.big = ⧸
-    // seq_m_slash_double { sequence = <M S L A S H DOT D O U B L E>; bindings = <&uc 0x2AFD 0>; };  // slash.double = ⫽
-    // seq_m_slash_o { sequence = <M S L A S H DOT O>; bindings = <&uc 0x2298 0>; };  // slash.o = ⊘
-    // seq_m_slash_triple { sequence = <M S L A S H DOT T R I P L E>; bindings = <&uc 0x2AFB 0>; };  // slash.triple = ⫻
-    // seq_m_smt_eq { sequence = <M S M T DOT E Q>; bindings = <&uc 0x2AAC 0>; };  // smt.eq = ⪬
-    // seq_m_smt_eq_slant { sequence = <M S M T DOT E Q DOT S L A N T>; bindings = <&uc 0x2AAC 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // smt.eq.slant = ⪬\vs{1}
-    // seq_m_subset_approx { sequence = <M S U B S E T DOT A P P R O X>; bindings = <&uc 0x2AC9 0>; };  // subset.approx = ⫉
-    // seq_m_subset_closed { sequence = <M S U B S E T DOT C L O S E D>; bindings = <&uc 0x2ACF 0>; };  // subset.closed = ⫏
-    // seq_m_subset_closed_eq { sequence = <M S U B S E T DOT C L O S E D DOT E Q>; bindings = <&uc 0x2AD1 0>; };  // subset.closed.eq = ⫑
-    // seq_m_subset_dot { sequence = <M S U B S E T DOT D O T>; bindings = <&uc 0x2ABD 0>; };  // subset.dot = ⪽
-    // seq_m_subset_double { sequence = <M S U B S E T DOT D O U B L E>; bindings = <&uc 0x22D0 0>; };  // subset.double = ⋐
-    // seq_m_subset_eq_dot { sequence = <M S U B S E T DOT E Q DOT D O T>; bindings = <&uc 0x2AC3 0>; };  // subset.eq.dot = ⫃
-    // seq_m_subset_eq_not { sequence = <M S U B S E T DOT E Q DOT N O T>; bindings = <&uc 0x2288 0>; };  // subset.eq.not = ⊈
-    // seq_m_subset_eq_sq { sequence = <M S U B S E T DOT E Q DOT S Q>; bindings = <&uc 0x2291 0>; };  // subset.eq.sq = ⊑
+    // seq_m_slash { sequence = <M S L A S H>; bindings = <&uc 0x2F 0>; };  // slash = /
     // seq_m_subset_eq_sq_not { sequence = <M S U B S E T DOT E Q DOT S Q DOT N O T>; bindings = <&uc 0x22E2 0>; };  // subset.eq.sq.not = ⋢
-    // seq_m_subset_equiv { sequence = <M S U B S E T DOT E Q U I V>; bindings = <&uc 0x2AC5 0>; };  // subset.equiv = ⫅
-    // seq_m_subset_neq { sequence = <M S U B S E T DOT N E Q>; bindings = <&uc 0x228A 0>; };  // subset.neq = ⊊
-    // seq_m_subset_nequiv { sequence = <M S U B S E T DOT N E Q U I V>; bindings = <&uc 0x2ACB 0>; };  // subset.nequiv = ⫋
-    // seq_m_subset_plus { sequence = <M S U B S E T DOT P L U S>; bindings = <&uc 0x2ABF 0>; };  // subset.plus = ⪿
-    // seq_m_subset_sq { sequence = <M S U B S E T DOT S Q>; bindings = <&uc 0x228F 0>; };  // subset.sq = ⊏
-    // seq_m_subset_sq_neq { sequence = <M S U B S E T DOT S Q DOT N E Q>; bindings = <&uc 0x22E4 0>; };  // subset.sq.neq = ⋤
-    // seq_m_subset_tilde { sequence = <M S U B S E T DOT T I L D E>; bindings = <&uc 0x2AC7 0>; };  // subset.tilde = ⫇
-    // seq_m_subset_times { sequence = <M S U B S E T DOT T I M E S>; bindings = <&uc 0x2AC1 0>; };  // subset.times = ⫁
-    // seq_m_succ_approx { sequence = <M S U C C DOT A P P R O X>; bindings = <&uc 0x2AB8 0>; };  // succ.approx = ⪸
-    // seq_m_succ_curly_eq { sequence = <M S U C C DOT C U R L Y DOT E Q>; bindings = <&uc 0x227D 0>; };  // succ.curly.eq = ≽
-    // seq_m_succ_curly_eq_not { sequence = <M S U C C DOT C U R L Y DOT E Q DOT N O T>; bindings = <&uc 0x22E1 0>; };  // succ.curly.eq.not = ⋡
-    // seq_m_succ_double { sequence = <M S U C C DOT D O U B L E>; bindings = <&uc 0x2ABC 0>; };  // succ.double = ⪼
-    // seq_m_succ_eq { sequence = <M S U C C DOT E Q>; bindings = <&uc 0x2AB0 0>; };  // succ.eq = ⪰
-    // seq_m_succ_eq_slant { sequence = <M S U C C DOT E Q DOT S L A N T>; bindings = <&uc 0x227D 0>; };  // succ.eq.slant = ≽
-    // seq_m_succ_eq_slant_not { sequence = <M S U C C DOT E Q DOT S L A N T DOT N O T>; bindings = <&uc 0x22E1 0>; };  // succ.eq.slant.not = ⋡
-    // seq_m_succ_equiv { sequence = <M S U C C DOT E Q U I V>; bindings = <&uc 0x2AB4 0>; };  // succ.equiv = ⪴
-    // seq_m_succ_napprox { sequence = <M S U C C DOT N A P P R O X>; bindings = <&uc 0x2ABA 0>; };  // succ.napprox = ⪺
-    // seq_m_succ_neq { sequence = <M S U C C DOT N E Q>; bindings = <&uc 0x2AB2 0>; };  // succ.neq = ⪲
-    // seq_m_succ_nequiv { sequence = <M S U C C DOT N E Q U I V>; bindings = <&uc 0x2AB6 0>; };  // succ.nequiv = ⪶
-    // seq_m_succ_not { sequence = <M S U C C DOT N O T>; bindings = <&uc 0x2281 0>; };  // succ.not = ⊁
-    // seq_m_succ_ntilde { sequence = <M S U C C DOT N T I L D E>; bindings = <&uc 0x22E9 0>; };  // succ.ntilde = ⋩
-    // seq_m_succ_tilde { sequence = <M S U C C DOT T I L D E>; bindings = <&uc 0x227F 0>; };  // succ.tilde = ≿
-    // seq_m_suit_club_filled { sequence = <M S U I T DOT C L U B DOT F I L L E D>; bindings = <&uc 0x2663 0 &uc 0xFE0E 0>; };  // suit.club.filled = ♣
-    // seq_m_suit_club_stroked { sequence = <M S U I T DOT C L U B DOT S T R O K E D>; bindings = <&uc 0x2667 0>; };  // suit.club.stroked = ♧
-    // seq_m_suit_diamond_filled { sequence = <M S U I T DOT D I A M O N D DOT F I L L E D>; bindings = <&uc 0x2666 0 &uc 0xFE0E 0>; };  // suit.diamond.filled = ♦
-    // seq_m_suit_diamond_stroked { sequence = <M S U I T DOT D I A M O N D DOT S T R O K E D>; bindings = <&uc 0x2662 0>; };  // suit.diamond.stroked = ♢
-    // seq_m_suit_heart_filled { sequence = <M S U I T DOT H E A R T DOT F I L L E D>; bindings = <&uc 0x2665 0 &uc 0xFE0E 0>; };  // suit.heart.filled = ♥
-    // seq_m_suit_heart_stroked { sequence = <M S U I T DOT H E A R T DOT S T R O K E D>; bindings = <&uc 0x2661 0>; };  // suit.heart.stroked = ♡
-    // seq_m_suit_spade_filled { sequence = <M S U I T DOT S P A D E DOT F I L L E D>; bindings = <&uc 0x2660 0 &uc 0xFE0E 0>; };  // suit.spade.filled = ♠
-    // seq_m_suit_spade_stroked { sequence = <M S U I T DOT S P A D E DOT S T R O K E D>; bindings = <&uc 0x2664 0>; };  // suit.spade.stroked = ♤
     // seq_m_sum_integral { sequence = <M S U M DOT I N T E G R A L>; bindings = <&uc 0x2A0B 0>; };  // sum.integral = ⨋
-    // seq_m_supset_approx { sequence = <M S U P S E T DOT A P P R O X>; bindings = <&uc 0x2ACA 0>; };  // supset.approx = ⫊
-    // seq_m_supset_closed { sequence = <M S U P S E T DOT C L O S E D>; bindings = <&uc 0x2AD0 0>; };  // supset.closed = ⫐
-    // seq_m_supset_closed_eq { sequence = <M S U P S E T DOT C L O S E D DOT E Q>; bindings = <&uc 0x2AD2 0>; };  // supset.closed.eq = ⫒
-    // seq_m_supset_dot { sequence = <M S U P S E T DOT D O T>; bindings = <&uc 0x2ABE 0>; };  // supset.dot = ⪾
-    // seq_m_supset_double { sequence = <M S U P S E T DOT D O U B L E>; bindings = <&uc 0x22D1 0>; };  // supset.double = ⋑
-    // seq_m_supset_eq_dot { sequence = <M S U P S E T DOT E Q DOT D O T>; bindings = <&uc 0x2AC4 0>; };  // supset.eq.dot = ⫄
-    // seq_m_supset_eq_not { sequence = <M S U P S E T DOT E Q DOT N O T>; bindings = <&uc 0x2289 0>; };  // supset.eq.not = ⊉
-    // seq_m_supset_eq_sq { sequence = <M S U P S E T DOT E Q DOT S Q>; bindings = <&uc 0x2292 0>; };  // supset.eq.sq = ⊒
     // seq_m_supset_eq_sq_not { sequence = <M S U P S E T DOT E Q DOT S Q DOT N O T>; bindings = <&uc 0x22E3 0>; };  // supset.eq.sq.not = ⋣
-    // seq_m_supset_equiv { sequence = <M S U P S E T DOT E Q U I V>; bindings = <&uc 0x2AC6 0>; };  // supset.equiv = ⫆
-    // seq_m_supset_neq { sequence = <M S U P S E T DOT N E Q>; bindings = <&uc 0x228B 0>; };  // supset.neq = ⊋
-    // seq_m_supset_nequiv { sequence = <M S U P S E T DOT N E Q U I V>; bindings = <&uc 0x2ACC 0>; };  // supset.nequiv = ⫌
-    // seq_m_supset_plus { sequence = <M S U P S E T DOT P L U S>; bindings = <&uc 0x2AC0 0>; };  // supset.plus = ⫀
-    // seq_m_supset_sq { sequence = <M S U P S E T DOT S Q>; bindings = <&uc 0x2290 0>; };  // supset.sq = ⊐
-    // seq_m_supset_sq_neq { sequence = <M S U P S E T DOT S Q DOT N E Q>; bindings = <&uc 0x22E5 0>; };  // supset.sq.neq = ⋥
-    // seq_m_supset_tilde { sequence = <M S U P S E T DOT T I L D E>; bindings = <&uc 0x2AC8 0>; };  // supset.tilde = ⫈
-    // seq_m_supset_times { sequence = <M S U P S E T DOT T I M E S>; bindings = <&uc 0x2AC2 0>; };  // supset.times = ⫂
-    // seq_m_tack_b_big { sequence = <M T A C K DOT B DOT B I G>; bindings = <&uc 0x27D9 0>; };  // tack.b.big = ⟙
-    // seq_m_tack_l_long { sequence = <M T A C K DOT L DOT L O N G>; bindings = <&uc 0x27DE 0>; };  // tack.l.long = ⟞
-    // seq_m_tack_ll_double { sequence = <M T A C K DOT L L DOT D O U B L E>; bindings = <&uc 0x2AE5 0>; };  // tack.ll.double = ⫥
-    // seq_m_tack_r_double_not { sequence = <M T A C K DOT R DOT D O U B L E DOT N O T>; bindings = <&uc 0x22AE 0>; };  // tack.r.double.not = ⊮
-    // seq_m_tack_rr_double { sequence = <M T A C K DOT R R DOT D O U B L E>; bindings = <&uc 0x22AB 0>; };  // tack.rr.double = ⊫
-    // seq_m_tack_rr_double_not { sequence = <M T A C K DOT R R DOT D O U B L E DOT N O T>; bindings = <&uc 0x22AF 0>; };  // tack.rr.double.not = ⊯
-    // seq_m_tack_rr_not { sequence = <M T A C K DOT R R DOT N O T>; bindings = <&uc 0x22AD 0>; };  // tack.rr.not = ⊭
-    // seq_m_tack_rr_short { sequence = <M T A C K DOT R R DOT S H O R T>; bindings = <&uc 0x22A7 0>; };  // tack.rr.short = ⊧
-    // seq_m_tack_rrr { sequence = <M T A C K DOT R R R>; bindings = <&uc 0x2AE2 0>; };  // tack.rrr = ⫢
-    // seq_m_tilde_equiv_not { sequence = <M T I L D E DOT E Q U I V DOT N O T>; bindings = <&uc 0x2247 0>; };  // tilde.equiv.not = ≇
-    // seq_m_times_big { sequence = <M T I M E S DOT B I G>; bindings = <&uc 0x2A09 0>; };  // times.big = ⨉
-    // seq_m_times_div { sequence = <M T I M E S DOT D I V>; bindings = <&uc 0x22C7 0>; };  // times.div = ⋇
-    // seq_m_times_l { sequence = <M T I M E S DOT L>; bindings = <&uc 0x22C9 0>; };  // times.l = ⋉
-    // seq_m_times_o { sequence = <M T I M E S DOT O>; bindings = <&uc 0x2297 0>; };  // times.o = ⊗
-    // seq_m_times_o_big { sequence = <M T I M E S DOT O DOT B I G>; bindings = <&uc 0x2A02 0>; };  // times.o.big = ⨂
-    // seq_m_times_o_hat { sequence = <M T I M E S DOT O DOT H A T>; bindings = <&uc 0x2A36 0>; };  // times.o.hat = ⨶
-    // seq_m_times_o_l { sequence = <M T I M E S DOT O DOT L>; bindings = <&uc 0x2A34 0>; };  // times.o.l = ⨴
-    // seq_m_times_o_r { sequence = <M T I M E S DOT O DOT R>; bindings = <&uc 0x2A35 0>; };  // times.o.r = ⨵
-    // seq_m_times_r { sequence = <M T I M E S DOT R>; bindings = <&uc 0x22CA 0>; };  // times.r = ⋊
-    // seq_m_times_square { sequence = <M T I M E S DOT S Q U A R E>; bindings = <&uc 0x22A0 0>; };  // times.square = ⊠
-    // seq_m_times_three_l { sequence = <M T I M E S DOT T H R E E DOT L>; bindings = <&uc 0x22CB 0>; };  // times.three.l = ⋋
-    // seq_m_times_three_r { sequence = <M T I M E S DOT T H R E E DOT R>; bindings = <&uc 0x22CC 0>; };  // times.three.r = ⋌
-    // seq_m_times_triangle { sequence = <M T I M E S DOT T R I A N G L E>; bindings = <&uc 0x2A3B 0>; };  // times.triangle = ⨻
-    // seq_m_trademark { sequence = <M T R A D E M A R K>; bindings = <&uc 0x2122 0 &uc 0xFE0E 0>; };  // trademark = ™
-    // seq_m_trademark_mc { sequence = <M T R A D E M A R K DOT M C>; bindings = <&uc 0x1F16A 0>; };  // trademark.mc = 🅪
-    // seq_m_trademark_md { sequence = <M T R A D E M A R K DOT M D>; bindings = <&uc 0x1F16B 0>; };  // trademark.md = 🅫
-    // seq_m_trademark_registered { sequence = <M T R A D E M A R K DOT R E G I S T E R E D>; bindings = <&uc 0xAE 0 &uc 0xFE0E 0>; };  // trademark.registered = ®
-    // seq_m_trademark_service { sequence = <M T R A D E M A R K DOT S E R V I C E>; bindings = <&uc 0x2120 0>; };  // trademark.service = ℠
-    // seq_m_union_arrow { sequence = <M U N I O N DOT A R R O W>; bindings = <&uc 0x228C 0>; };  // union.arrow = ⊌
-    // seq_m_union_dot { sequence = <M U N I O N DOT D O T>; bindings = <&uc 0x228D 0>; };  // union.dot = ⊍
-    // seq_m_union_dot_big { sequence = <M U N I O N DOT D O T DOT B I G>; bindings = <&uc 0x2A03 0>; };  // union.dot.big = ⨃
-    // seq_m_union_double { sequence = <M U N I O N DOT D O U B L E>; bindings = <&uc 0x22D3 0>; };  // union.double = ⋓
-    // seq_m_union_minus { sequence = <M U N I O N DOT M I N U S>; bindings = <&uc 0x2A41 0>; };  // union.minus = ⩁
-    // seq_m_union_or { sequence = <M U N I O N DOT O R>; bindings = <&uc 0x2A45 0>; };  // union.or = ⩅
-    // seq_m_union_plus { sequence = <M U N I O N DOT P L U S>; bindings = <&uc 0x228E 0>; };  // union.plus = ⊎
-    // seq_m_union_plus_big { sequence = <M U N I O N DOT P L U S DOT B I G>; bindings = <&uc 0x2A04 0>; };  // union.plus.big = ⨄
-    // seq_m_union_serif { sequence = <M U N I O N DOT S E R I F>; bindings = <&uc 0x222A 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // union.serif = ∪\vs{1}
-    // seq_m_union_sq { sequence = <M U N I O N DOT S Q>; bindings = <&uc 0x2294 0>; };  // union.sq = ⊔
-    // seq_m_union_sq_big { sequence = <M U N I O N DOT S Q DOT B I G>; bindings = <&uc 0x2A06 0>; };  // union.sq.big = ⨆
-    // seq_m_union_sq_double { sequence = <M U N I O N DOT S Q DOT D O U B L E>; bindings = <&uc 0x2A4F 0>; };  // union.sq.double = ⩏
-    // seq_m_union_sq_serif { sequence = <M U N I O N DOT S Q DOT S E R I F>; bindings = <&uc 0x2294 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // union.sq.serif = ⊔\vs{1}
-    // seq_m_xor_big { sequence = <M X O R DOT B I G>; bindings = <&uc 0x2A01 0>; };  // xor.big = ⨁
-    // seq_m_zero_slashed { sequence = <M Z E R O DOT S L A S H E D>; bindings = <&uc 0x30 0 &uc 0x5C 0 &uc 0x76 0 &uc 0x73 0 &uc 0x7B 0 &uc 0x31 0 &uc 0x7D 0>; };  // zero.slashed = 0\vs{1}
+    // seq_m_zero { sequence = <M Z E R O>; bindings = <&uc 0x30 0 &uc 0xFE0E 0>; };  // zero = 0
 };

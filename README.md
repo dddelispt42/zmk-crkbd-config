@@ -71,9 +71,11 @@ Press it, then a short sequence:
 Names follow **typst/LaTeX**, so they are the ones you already type: `sum`,
 `approx`, `arrow.r`, `integral`. A `.` in a name is the `DOT` key.
 
-**500 math symbols and 500 emoji are active**; roughly 1,000 more are present
-but commented out in the generated files, ready to enable. The full list, with
-each symbol's glyph and status, is in [docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md).
+**977 math symbols and 1,260 emoji are active**, which is everything reachable
+given that two sequences cannot both exist when one is a prefix of the other.
+The remainder are emitted commented out in the generated files. The full list,
+with each symbol's glyph and status, is in
+[docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md).
 
 Where a typst name collides with another, the **LaTeX command** is used instead
 — `lt.eq` is `LEQ`, `union.big` is `BIGCUP`, `arrow.r.double` is `RIGHTARROW` —
@@ -90,8 +92,8 @@ and must not be edited by hand. To change the set, edit
 `scripts/gen_leader_symbols.py` and re-run it:
 
 ```sh
-./scripts/gen_leader_symbols.py            # 500 math + 500 emoji (default)
-./scripts/gen_leader_symbols.py --math 300 # smaller set
+./scripts/gen_leader_symbols.py            # everything reachable (default)
+./scripts/gen_leader_symbols.py --math 300 # cap the math set at 300 instead
 ```
 
 The generator ranks symbols by usefulness **first**, then resolves conflicts by

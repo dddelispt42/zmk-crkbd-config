@@ -247,6 +247,26 @@ COMMON_EMOJI_GLYPHS = (
 )
 
 
+# Unicode ranges that are labelled buttons rather than pictographs. These are
+# skipped entirely for emoji: `b` is U+1F171 NEGATIVE SQUARED LATIN CAPITAL
+# LETTER B (🅱), `cl` is U+1F191 SQUARED CL, `sa` is U+1F202 SQUARED KATAKANA
+# SA. They are short names, so they shadow hundreds of real emoji purely by
+# accident - `b` alone blocked 122.
+BUTTON_GLYPH_RANGES = (
+    (0x1F100, 0x1F1FF),  # enclosed alphanumerics
+    (0x1F200, 0x1F2FF),  # enclosed ideographic supplement
+    (0x3200, 0x32FF),    # enclosed CJK letters and months
+)
+
+
+def is_button_glyph(cps: list[int]) -> bool:
+    visible = [c for c in cps if c not in (VS15, VS16)]
+    if not visible:
+        return True
+    first = visible[0]
+    return any(lo <= first <= hi for lo, hi in BUTTON_GLYPH_RANGES)
+
+
 def emoji_rank(entry, _sections=None) -> tuple:
     """Sort key: lower is more useful."""
     name, spec = entry
@@ -339,6 +359,95 @@ RENAMES = {
     "Phi": "gPhi",
     "Psi": "gPsi",
     "Omega": "gOmega",
+    # --- Blocker renames -------------------------------------------------------
+    #
+    # A name that is a PREFIX of others cannot coexist with them, so a short
+    # base name like `inter` makes every longer `inter...` name unreachable -
+    # `intersection`, `intersex`, `intercal` and so on. Renaming the blocker to
+    # a distinct word frees the whole family, which is worth far more than the
+    # one symbol it moves.
+    #
+    # These are the highest-value moves, ordered roughly by how many names each
+    # one unblocks. The replacement is a descriptive word rather than a suffix,
+    # so it stays guessable: `inter` -> `intersec`, `arrow.l` -> `leftarrow`.
+    "arrow.l": "leftarrow",       # unblocks 51
+    "arrow.r": "rightarrow",      # 38
+    "arrow.t": "uparrow",         # 31
+    "arrow.b": "downarrow",       # 25
+    "in": "inset",                # 44
+    "gt": "greater",              # 31
+    "lt": "less",                 # 31
+    "eq": "equal",                # 30
+    "not": "neg",                 # 22
+    "space": "spc",               # 26
+    "co": "company",              # 23
+    "sub": "subst",               # 20
+    "subset": "subsetof",         # 19
+    "supset": "supsetof",         # 19
+    "integral": "int",            # 18
+    "angle": "ang",               # 16
+    "inter": "intersec",          # 15
+    "sp": "spc2",                 # 15
+    "prec": "precedes",           # 14
+    "succ": "succeeds",           # 14
+    "union": "cup",               # 14
+    "times": "times2",            # 13
+    "plus": "plus2",              # 12
+    "arrow.l.r": "leftrightarrow",# 12
+    "tack.r": "tackright",        # 12
+    "Re": "realpart",             # 12
+    "parallel": "para",           # 11
+    "bullet": "bull",             # 9
+    "em": "em2",                  # 7
+    "colon": "colon2",            # 6
+    # second tier
+    "arrow.l.long": "longleftarrow",
+    "arrow.r.long": "longrightarrow",
+    "arrow.l.hook": "hookleftarrow",
+    "arrow.r.hook": "hookrightarrow",
+    "arrow.r.double": "doublerightarrow",
+    "arrow.r.bar": "barrightarrow",
+    "subset.eq": "subseteq",
+    "supset.eq": "supseteq",
+    "union.big": "bigcup",
+    "inter.big": "bigcap",
+    "integral.cont": "contintegral",
+    "angle.right": "rightangle",
+    "plus.minus": "plusminus",
+    "minus.plus": "minusplus",
+    "approx.eq": "approxeq",
+    "approx.not": "approxnot",
+    "equiv.not": "equivnot",
+    "lt.eq": "lesseq",
+    "gt.eq": "greatereq",
+    "lt.eq.slant": "lesseqslant",
+    "gt.eq.slant": "greatereqslant",
+    "subset.not": "notsubset",
+    "supset.not": "notsupset",
+    "prop": "propto",
+    "perp": "perpendicular",
+    "therefore": "therefore2",
+    "because": "because2",
+    "emptyset": "empty",
+    "infinity": "inf",
+    "partial": "partial2",
+    "nabla": "nabla2",
+    "forall": "forall2",
+    "exists": "exists2",
+    "prime": "prime2",
+    "degree": "degree2",
+    "aleph": "aleph2",
+    "ell": "ell2",
+    "and": "wedge",
+    "or": "vee",
+    "top": "top2",
+    "bot": "bot2",
+    "div": "div2",
+    "minus": "minus2",
+    "dot.op": "cdot",
+    "star.op": "starop",
+    "lt.eq.gt": "lesseqgreater",
+    "gt.eq.lt": "greatereqless",
 }
 
 
@@ -557,6 +666,19 @@ def mark_prefix_conflicts(resolved, active_names):
 SOURCE_NAMES: set = set()
 
 
+def compact_reversed(name: str) -> str:
+    """A spelling with the last part first: `lat.eq` -> `eqLat`.
+
+    compact() keeps the base as a prefix, so it cannot escape a base name that
+    is itself taken - `lat.eq` -> `latEq` still begins with `LAT`. Moving the
+    qualifier to the front breaks that: `eqLat` shares no prefix with `lat`.
+    """
+    parts = name.split(".")
+    if len(parts) < 2:
+        return name
+    return parts[-1] + "".join(p.capitalize() for p in parts[:-1])
+
+
 def select_math_by_usefulness(entries, sections, limit, prefix="M"):
     """Pick the most useful `limit` math symbols, resolving every conflict.
 
@@ -585,8 +707,13 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
         return (prefix,) + name_to_keys(name)
 
     def clashes(keys):
+        # An EXACT match counts too. is_prefix() requires len(a) < len(b), so two
+        # IDENTICAL sequences were not "prefixes" of each other and the duplicate
+        # slipped through - gt.equiv and equiv.gt both landed on M G T E Q U I V,
+        # where the second is unreachable.
         return any(
-            is_prefix(other, keys) or is_prefix(keys, other) for other in taken_keys
+            other == keys or is_prefix(other, keys) or is_prefix(keys, other)
+            for other in taken_keys
         )
 
     ordered = sorted(entries, key=lambda e: usefulness(e[0], sections.get(e[0], "")))
@@ -612,6 +739,9 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
         comp = compact(name)
         if comp != name:
             cands.append(comp)
+        rev = compact_reversed(name)
+        if rev not in cands:
+            cands.append(rev)
 
         chosen = None
         for cand in cands:
@@ -653,8 +783,13 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
         return (prefix,) + name_to_keys(name)
 
     def clashes(keys):
+        # An EXACT match counts too. is_prefix() requires len(a) < len(b), so two
+        # IDENTICAL sequences were not "prefixes" of each other and the duplicate
+        # slipped through - gt.equiv and equiv.gt both landed on M G T E Q U I V,
+        # where the second is unreachable.
         return any(
-            is_prefix(other, keys) or is_prefix(keys, other) for other in taken_keys
+            other == keys or is_prefix(other, keys) or is_prefix(keys, other)
+            for other in taken_keys
         )
 
     def order(entry):
@@ -678,6 +813,9 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
         cps = spec_to_codepoints(spec)
         if not cps:
             continue
+        if is_button_glyph(cps):
+            commented.append((name, cps, to_keys(name), "labelled button glyph"))
+            continue
         if len(active) >= limit:
             commented.append((name, cps, to_keys(name), "beyond the active limit"))
             continue
@@ -686,6 +824,9 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
         comp = compact(name)
         if comp != name:
             cands.append(comp)
+        rev = compact_reversed(name)
+        if rev not in cands:
+            cands.append(rev)
 
         chosen = None
         for cand in cands:
@@ -850,8 +991,8 @@ def build_sections(path: pathlib.Path) -> dict:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true")
-    ap.add_argument("--math", type=int, default=500, help="number of math symbols")
-    ap.add_argument("--emoji", type=int, default=500, help="number of emoji")
+    ap.add_argument("--math", type=int, default=100000, help="cap on math symbols")
+    ap.add_argument("--emoji", type=int, default=100000, help="cap on emoji")
     args = ap.parse_args()
 
     print("parsing codex data")
@@ -927,6 +1068,23 @@ def main() -> int:
     write_docs(docs / "LEADER-SYMBOLS.md", m_active, m_comment, m_renamed,
                e_active, e_comment, e_renamed)
     print("  wrote docs/LEADER-SYMBOLS.md")
+
+    # Uniqueness. Both of these have caused a build failure or silent breakage:
+    # two nodes with the same name is a devicetree "duplicate node name" error,
+    # and two sequences with the same keys means the second is unreachable.
+    import collections as _c
+
+    for label, active in (("math ", m_active), ("emoji", e_active)):
+        seen_names = _c.Counter()
+        seen_keys = _c.Counter()
+        for _typst, used, _cps, keys in active:
+            seen_names["seq_" + re.sub(r"[^A-Za-z0-9_]", "_", used)] += 1
+            seen_keys[" ".join(keys)] += 1
+        dup_names = [k for k, v in seen_names.items() if v > 1]
+        dup_keys = [k for k, v in seen_keys.items() if v > 1]
+        if dup_names or dup_keys:
+            print(f"  {label}: DUPLICATES node={dup_names} keys={dup_keys}")
+            return 1
 
     # completeness: nothing may be silently dropped
     for label, active, comment, total in (

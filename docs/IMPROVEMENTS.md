@@ -148,8 +148,8 @@ What exists now:
 
 | set | active | present but commented |
 |---|---|---|
-| math symbols | 500 | 508 |
-| emoji | 500 | 886 |
+| math symbols | 977 | 31 |
+| emoji | 1,260 | 126 |
 
 plus 19 vulgar fractions and the super/subscripts on NUMNAV, 26 combining marks
 on the ACCENT layer, and Greek via `leader1 + G` (Shift for capitals).
@@ -165,18 +165,19 @@ Change the counts and re-run the generator; no hand editing:
 Constraints to keep in mind:
 
 * **`CONFIG_ZMK_LEADER_MAX_SEQUENCES`** is per leader instance and currently
-  1536 against 1049 in use. A larger set needs this raised, and the build
-  asserts it — which is how the last two jumps were caught.
+  3072 against 2286 in use. The build asserts it, which is how both previous
+  jumps were caught.
 * **Flash**: each active sequence costs `16 + 4 * MAX_KEYS_PER_SEQUENCE` bytes,
-  so the current 1000 are roughly 148 KB of the 1 MB available.
+  so the current 2,286 are roughly 321 KB of the 1 MB available.
 * **Prefix-freeness**: the generator resolves conflicts by renaming, but the
   name space is a tree, so every rename consumes a name.
 
 ### What is NOT done
 
-* The 508 disabled math symbols and 886 disabled emoji stay commented until
-  asked for. Enabling individual ones by hand is possible but the generator is
-  the intended route.
+* 31 math symbols and 126 emoji remain commented. Most clash with a name that
+  is already taken; the emoji include 31 labelled CJK/button glyphs (🅱, 🆑, 🈂)
+  which are deliberately skipped because they are buttons rather than
+  pictographs and their short names shadow hundreds of real emoji.
 * No `just` recipe wraps the generator yet — it is invoked directly.
 
 ## Things that are fine as they are
