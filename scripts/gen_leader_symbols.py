@@ -1192,16 +1192,17 @@ chosen.
 Leader, then `M`, then the name. {len(m_active)} active, {len(m_comment)}
 disabled.
 
-## Renames ({len(m_renamed)})
-
-These use a different name from their typst one, because the typst name was
-blocked by a shorter one that is already taken.
-
-{chr(10).join(f"* `{a}` -> `{b}`" for a, b in sorted(m_renamed)) or "* none"}
-
 ## Symbols
 
 {_table(m_active, m_comment)}
+
+## Renames ({len(m_renamed)})
+
+These use a different name from their typst one, because the typst name was
+blocked by a shorter one that is already taken. They are listed at the end so
+the table above stays the first thing you reach.
+
+{chr(10).join(f"* `{a}` -> `{b}`" for a, b in sorted(m_renamed)) or "* none"}
 """
     (docs_dir / "LEADER-MATH.md").write_text(math)
 
@@ -1215,16 +1216,17 @@ chosen.
 Leader, then `E`, then the name. {len(e_active)} active, {len(e_comment)}
 disabled.
 
-## Renames ({len(e_renamed)})
-
-These use a different name from their typst one, because the typst name was
-blocked by a shorter one that is already taken.
-
-{chr(10).join(f"* `{a}` -> `{b}`" for a, b in sorted(e_renamed)) or "* none"}
-
 ## Emoji
 
 {_table(e_active, e_comment)}
+
+## Renames ({len(e_renamed)})
+
+These use a different name from their typst one, because the typst name was
+blocked by a shorter one that is already taken. They are listed at the end so
+the table above stays the first thing you reach.
+
+{chr(10).join(f"* `{a}` -> `{b}`" for a, b in sorted(e_renamed)) or "* none"}
 """
     (docs_dir / "LEADER-EMOJI.md").write_text(emoji)
 
