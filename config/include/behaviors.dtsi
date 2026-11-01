@@ -104,9 +104,13 @@ ZMK_MOD_MORPH(num_sub_N0, bindings = <&kp N0 &uc UC_SUBSCRIPT_ZERO>; mods = <(MO
             compatible = "zmk,behavior-leader-key";
             #binding-cells = <0>;
             // Portuguese / English sign-offs
+            //
+            // NOTE: there is no `mo` ("Muito obrigado") here. As <M O> it was a
+            // prefix of every math sequence whose name starts with "o" (or, omega,
+            // omicron, ...), and a completed leader sequence fires immediately, so
+            // those 29 symbols were unreachable. Removed 2026-11; use `obr`/`oc`.
             cu  { sequence = <C U>;   bindings = <&m_sig_cumps>; };
             obr { sequence = <O B R>; bindings = <&m_sig_o>; };
-            mo  { sequence = <M O>;   bindings = <&m_sig_mo>; };
             oc  { sequence = <O C>;   bindings = <&m_sig_oc>; };
             co  { sequence = <C O>;   bindings = <&m_sig_co>; };
             br  { sequence = <B R>;   bindings = <&m_sig_br>; };

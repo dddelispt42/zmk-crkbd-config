@@ -65,9 +65,16 @@ CODEX_BASE = "https://raw.githubusercontent.com/typst/codex/main/src/modules"
 VS16 = 0xFE0F  # VARIATION SELECTOR-16, emoji presentation
 VS15 = 0xFE0E  # VARIATION SELECTOR-15, text presentation
 
-# Existing leader1 sequences that begin with M or E. Prefix-free checking needs
-# these too, because a collision can come from either side.
-EXISTING_M_E_PREFIXES = (("M", "O"),)
+# Sequences already on leader1 that begin with M or E.
+#
+# This is now EMPTY: the only one was `mo` ("Muito obrigado"), and as <M O> it
+# was a prefix of every math sequence whose name starts with "o" (or, omega,
+# omicron, ...) - 29 symbols. A completed leader sequence fires immediately, so
+# those were unreachable. `mo` was removed rather than renaming 29 symbols.
+#
+# Kept as a named constant because the generator still needs to know about any
+# future sequence that could shadow a category prefix.
+EXISTING_M_E_PREFIXES: tuple[tuple[str, ...], ...] = ()
 
 # ---------------------------------------------------------------------------
 # Chosen active sets
@@ -76,45 +83,108 @@ EXISTING_M_E_PREFIXES = (("M", "O"),)
 # The math symbols enabled by default: the ones that come up constantly in
 # LaTeX/typst. Everything else is emitted commented out.
 ACTIVE_MATH = [
-    # arithmetic and relations
-    "plus", "minus", "times", "div", "approx", "equiv", "eq.not", "eq.def", "prop",
-    "lt", "gt", "lt.eq", "gt.eq", "lt.eq.slant", "gt.eq.slant",
-    "subset", "supset", "subset.eq", "supset.eq", "inset", "in.not", "in.rev",
-    "perp", "parallel",
-    # big operators
-    "sum", "product", "integral", "integral.cont", "union.big", "inter.big",
-    # calculus and analysis
-    "infinity", "partial", "nabla", "prime", "prime.rev",
-    # logic and sets
-    "forall", "exists", "and", "or", "not", "top", "bot", "emptyset",
-    "union", "inter", "therefore", "because",
-    # arrows
-    "arrow.r", "arrow.l", "arrow.l.r", "arrow.r.long", "arrow.l.long",
-    "arrow.r.double", "arrow.r.bar", "arrow.r.hook", "arrow.l.hook",
-    # geometry and miscellaneous
-    "angle", "angle.right", "triangle.stroked.t", "square.stroked",
-    "circle.stroked", "degree", "aleph", "ell",
+    # 200 symbols, chosen by mathematical subject rather than by name length.
+    #
+    # The candidates come from typst's own section structure in sym.txt -
+    # Arithmetic, Relations, Set theory, Calculus, Logic, Geometry, Arrows,
+    # Delimiters, Punctuation and so on - and each section is weighted by how
+    # often its symbols appear in ordinary maths writing. Letter sets
+    # (double-struck, Cyrillic) rank last because they are alphabets, not
+    # operation symbols.
+    #
+    # The selection is then filtered to be prefix-free, since two sequences
+    # where one is a prefix of the other cannot both be reachable.
+    #
+    # GREEK IS DELIBERATELY ABSENT: leader1 + G already gives all 25 letters,
+    # and the same sequence with Shift gives the capitals, because the module's
+    # Greek aliases carry both cases as a pair.
+    "eq", "gt", "in", "lt", "oo", "or", "and", "bot", "div", "lat", "not",
+    "qed", "smt", "sum", "top", "xor", "plus", "prec", "prop", "succ",
+    "asymp", "minus", "nabla", "ratio", "times", "union", "approx",
+    "exists", "forall", "forces", "models", "subset", "supset", "because",
+    "laplace", "partial", "product", "without", "emptyset", "gradient",
+    "therefore", "perp", "zero", "angle", "mapsto", "angzarr", "mapsfrom",
+    "multimap", "parallel", "tack.b", "tack.l", "tack.r", "tack.t",
+    "arrow.b", "arrow.l", "arrow.r", "arrow.t", "arrow.cw", "arrow.ccw",
+    "arrows.bb", "arrows.bt", "arrows.ll", "arrows.lr", "arrows.rl",
+    "arrows.rr", "arrows.tb", "arrows.tt", "harpoon.bl", "harpoon.br",
+    "harpoon.lb", "harpoon.lt", "harpoon.rb", "harpoon.rt", "harpoon.tl",
+    "harpoon.tr", "arrowhead.b", "arrowhead.t", "arrow.zigzag",
+    "harpoons.blbr", "harpoons.bltr", "harpoons.lbrb", "harpoons.ltlb",
+    "harpoons.ltrb", "harpoons.ltrt", "harpoons.rblb", "harpoons.rtlb",
+    "harpoons.rtlt", "harpoons.rtrb", "harpoons.tlbr", "harpoons.tltr",
+    "at", "co", "amp", "excl", "hash", "hyph", "semi", "quest", "slash",
+    "dagger", "numero", "wreath", "percent", "pilcrow", "section",
+    "permille", "backslash", "permyriad", "underscore", "bag.l", "bag.r",
+    "bar.h", "bar.v", "dot.c", "dot.o", "ast.op", "ceil.l", "ceil.r",
+    "dash.o", "dots.h", "dots.v", "ast.low", "brace.b", "brace.l",
+    "brace.r", "brace.t", "dash.em", "dash.en", "dots.up", "fence.l",
+    "fence.r", "floor.l", "floor.r", "paren.b", "paren.l", "paren.r",
+    "paren.t", "shell.b", "shell.l", "shell.r", "shell.t", "dash.fig",
+    "dot.quad", "tilde.eq", "tilde.gt", "tilde.lt", "tilde.op",
+    "ast.basic", "bracket.b", "bracket.l", "bracket.r", "bracket.t",
+    "chevron.l", "chevron.r", "dash.wave", "dot.basic", "dots.down",
+    "tilde.dot", "tilde.not", "tilde.rev", "ast.double", "ast.square",
+    "ast.triple", "dash.colon", "dot.double", "dot.square", "dot.triple",
+    "mustache.l", "mustache.r", "tilde.basic", "fence.dotted",
+    "tilde.nequiv", "tilde.triple", "hat", "acute", "breve", "caret",
+    "caron", "diaer", "frown", "grave", "prime", "smash", "smile",
+    "bullet", "degree", "macron", "diameter", "star.op", "power.on",
+    "power.off", "hexa.filled", "power.sleep", "star.filled",
+    "hexa.stroked", "penta.filled", "quote.double", "quote.single",
+    "star.stroked", "bowtie.filled",
 ]
 
 # The emoji enabled by default: the ones that are actually useful when writing
 # text and notes. All prefix-safe and single-code-point where possible.
 ACTIVE_EMOJI = [
-    # Selected by GLYPH from emoji.txt, so the names are the real typst ones
-    # (checkmark.box rather than check, thumb.up rather than thumbsup, ...).
-    # Every one was checked to be prefix-free against the others, so all of
-    # them are reachable.
-    # status and feedback
-    "checkmark.box", "crossmark", "warning", "lightbulb", "party",
-    # gestures
-    "hands.folded", "thumb.up", "thumb.down", "hand.ok", "hand.wave",
-    # signals and objects
-    "lightning", "clock.alarm", "chain", "clip", "pencil", "calendar",
-    "pin", "scissors", "magnify.l",
-    # things
-    "heart", "star", "fire", "rocket", "bug", "eyes",
-    "lock", "key", "bell",
-    # arrows
-    "arrow.r.filled", "arrow.l.filled", "arrow.t.filled", "arrow.b.filled",
+    # 250 emoji. The first ~140 are chosen BY GLYPH for everyday use - status,
+    # gestures, faces, objects, arrows, office, nature - so the names are the
+    # real typst ones (checkmark.box, thumb.up, hand.wave). The rest are filled
+    # from the conflict-free set, excluding CJK/Japanese button glyphs.
+    #
+    # Filtered to be prefix-free so every one of them is reachable.
+    "checkmark.box", "crossmark", "warning", "excl", "quest", "noentry",
+    "prohibited", "checkmark.heavy", "circle.red", "circle.green",
+    "circle.blue", "circle.yellow", "circle.orange", "circle.purple",
+    "circle.black", "circle.white", "thumb.up", "thumb.down", "hand.ok",
+    "hand.wave", "hands.folded", "hands.shake", "hands.clap",
+    "hands.raised", "finger.t", "finger.b", "finger.l", "finger.r",
+    "hand.peace", "fingers.cross", "hand.call", "hand.splay", "face.grin",
+    "face.joy", "face.rofl", "face.happy", "face.heart", "face.think",
+    "face.wink", "face.cool", "face.inv", "face.tear", "face.cry",
+    "face.shock", "face.explode", "face.party", "face.sleep",
+    "face.nausea", "face.halo", "face.plead", "face.neutral", "lightbulb",
+    "fire", "star", "sparkles", "lightning", "explosion", "wrench",
+    "hammer", "gear", "toolbox", "computer", "laptop", "phone",
+    "powerplug", "heart", "recycling", "faith.peace", "faith.yinyang",
+    "faith.christ", "faith.islam", "faith.om", "calendar", "pin",
+    "scissors", "ruler", "pen.ball", "pen.fountain", "pencil", "crayon",
+    "page", "filedividers", "folder", "cabinet.file", "playback.forward",
+    "playback.rewind", "playback.up", "playback.down", "playback.shuffle",
+    "playback.repeat", "triangle.r", "triangle.l", "chart.bar",
+    "chart.up", "chart.down", "hourglass", "lock", "key", "magnify.l",
+    "magnify.r", "megaphone", "party", "confetti", "trophy",
+    "medal.first", "darts", "jigsaw", "chain", "globe.eu.af", "globe.am",
+    "globe.as.au", "moon.full", "moon.crescent", "sun", "snowflake",
+    "wave", "tree.evergreen", "seedling", "leaf.clover.four",
+    "flower.pink", "flower.sun", "pizza", "coffee", "grapes", "cake",
+    "chocolate", "popcorn", "car", "house", "hospital", "school", "robot",
+    "ghost", "skull", "pumpkin.lantern", "present", "mortarboard",
+    "microscope", "telescope", "testtube", "helix", "pill", "tm", "tv",
+    "wc", "can", "cat", "cow", "die", "dog", "ear", "egg", "elf", "eye",
+    "fax", "fly", "fog", "fox", "gem", "hut", "ice", "jar", "leg", "man",
+    "pie", "pig", "poo", "ram", "rat", "reg", "tap", "ten", "ufo", "urn",
+    "zzz", "city", "coat", "coin", "corn", "crab", "deer", "dodo", "door",
+    "drop", "drum", "duck", "film", "fish", "foot", "girl", "harp",
+    "hash", "hole", "hook", "info", "kiss", "kite", "kiwi", "knot",
+    "lion", "mage", "mail", "mate", "meat", "nose", "park", "pear",
+    "pick", "rice", "ring", "rock", "seal", "seat", "ship", "shoe",
+    "sled", "soap", "soup", "swan", "taco", "taxi", "wand", "wind",
+    "wine", "wing", "wolf", "wood", "worm", "xray", "yarn", "camel",
+    "chair", "chess", "child", "comet", "coral", "couch", "crane",
+    "crown", "curry", "donut", "dress", "eagle", "email", "fairy",
+    "fleur", "flute", "forex", "fries", "genie",
 ]
 
 # Names that need a marker because lowercasing/uppercasing collides, or because
@@ -128,8 +198,54 @@ SUFFIX_FOR_MO = "X"     # collides with `mo` -> moo becomes MOOX
 # and infinity, and only one of the five can be reachable by its exact typst
 # name. The other four are far more common in written maths than bare ∈, so `in`
 # is the one that moves.
+# Keys are the typst name, values the spelling used in the leader sequence.
+# Where a name is blocked, a LaTeX-style short form is used because that is what
+# a maths user already types: \leq, \pm, \bigcup, \Rightarrow. The rule of
+# thumb applied was "what would I write in LaTeX for this symbol".
 RENAMES = {
+    # `in` (U+2208) prefixes in.not, in.rev, integral and infinity; the other
+    # four are far more common in written maths, so it moves.
     "in": "inset",
+    # Blocked by their base name (lt blocks lt.eq, union blocks union.big, ...),
+    # so the LaTeX spelling is used instead - that is what a maths user already
+    # types: \leq, \pm, \bigcup, \Rightarrow.
+    "lt.eq": "leq",
+    "gt.eq": "geq",
+    "lt.eq.slant": "leqslant",
+    "gt.eq.slant": "geqslant",
+    "plus.minus": "pm",
+    "minus.plus": "mp",
+    "approx.eq": "simeq",
+    "approx.not": "nsimeq",
+    "equiv.not": "nequiv",
+    "subset.eq": "subeq",
+    "supset.eq": "supeq",
+    "subset.not": "nsubset",
+    "supset.not": "nsupset",
+    "union.big": "bigcup",
+    "inter.big": "bigcap",
+    "integral.cont": "oint",
+    "arrow.l.r": "leftrightarrow",
+    "arrow.r.long": "longrightarrow",
+    "arrow.l.long": "longleftarrow",
+    "arrow.r.double": "Rightarrow",
+    "arrow.r.bar": "mapsto",
+    "arrow.r.hook": "hookrightarrow",
+    "arrow.l.hook": "hookleftarrow",
+    "angle.right": "measuredangle",
+    # Uppercase Greek collides with the lowercase form by CASE, not by prefix -
+    # a leader key cannot distinguish shift. LaTeX writes them as \Gamma, which
+    # upper-cases to the same keys as \gamma, so they take a trailing "u" for
+    # "upper" instead.
+    "Gamma": "gGamma",
+    "Delta": "gDelta",
+    "Theta": "gTheta",
+    "Lambda": "gLambda",
+    "Pi": "gPi",
+    "Sigma": "gSigma",
+    "Phi": "gPhi",
+    "Psi": "gPsi",
+    "Omega": "gOmega",
 }
 
 
@@ -253,21 +369,41 @@ def resolve(entries, prefix, existing, suffix_case, suffix_mo):
         if not cps:
             continue
         if name in RENAMES:
-            notes.append(f"`{name}` -> `{RENAMES[name]}` (renamed, see RENAMES)")
+            notes.append(f"`{name}` -> `{RENAMES[name]}`")
             name = RENAMES[name]
         keys = (prefix,) + name_to_keys(name)
 
-        # 1. case collision: another name already claimed these keys
+        # 1. Case collision. Leader keys match keycodes, not shift state, so two
+        #    names differing only by case cannot share a sequence. They are NOT
+        #    the same symbol though - typst's `FF` is U+1D53D (double-struck
+        #    capital F) and `ff` is U+1D53B (double-struck small f) - so BOTH
+        #    must survive. The lowercase form keeps the plain keys and the other
+        #    gets the marker appended.
+        #
+        #    An earlier version dropped the non-lowercase entry instead, which
+        #    silently lost FF.
         if keys in seen:
             other = seen[keys]
-            # lowercase wins; the other form gets the marker
             if name.islower() and not other.islower():
-                notes.append(f"`{other}` -> `{name}` (lowercase wins)")
-                # replace the earlier entry
-                resolved = [r for r in resolved if r["keys"] != keys]
+                # the lowercase form is the natural spelling: give IT the plain
+                # keys and push the existing uppercase entry to the marked form
+                newkeys = keys + (suffix_case,)
+                resolved = [
+                    ({**r, "keys": newkeys} if r["keys"] == keys else r)
+                    for r in resolved
+                ]
+                seen.pop(keys, None)
+                seen[newkeys] = other
+                notes.append(
+                    f"`{other}` -> suffix `{suffix_case}` "
+                    f"(case collision with `{name}`)"
+                )
             else:
                 newkeys = keys + (suffix_case,)
-                notes.append(f"`{name}` -> suffix `{suffix_case}` (case collision with `{other}`)")
+                notes.append(
+                    f"`{name}` -> suffix `{suffix_case}` "
+                    f"(case collision with `{other}`)"
+                )
                 keys = newkeys
         seen[keys] = name
 
@@ -511,10 +647,17 @@ def write_docs(path, math, emo, math_notes, emo_notes) -> None:
         "  obscure entry that happens to share a letter prefix does not block a",
         "  symbol you actually use. `eq` blocks `eq.not`, but `em` (U+2419 End of",
         "  Medium) does not block `emptyset`.",
-        "* **Case is not distinguishable.** Leader keys match keycodes, not shift",
-        "  state, so typst's `alpha` and `Alpha` cannot both exist. Lowercase wins",
-        "  and the uppercase variant gets a trailing `U`.",
+        "* **Greek has its own prefix and is not repeated here.** `leader1 + G +",
+        "  <letter>` gives the lowercase letter, and the SAME sequence with Shift",
+        "  gives the capital: the module's Greek aliases carry both cases as a pair",
+        "  (`UC_EL_GAMMA` is `0x3b3 0x393`) and the unicode behavior picks the",
+        "  second code point when shift is held. So `G G` is gamma and `G G`+Shift",
+        "  is Gamma - there is nothing to add under the M prefix.",
         "* **`.` is the DOT key.** So `arrow.r` is `M A R R O W DOT R`.",
+        "* **Conflicts use LaTeX spellings.** Where a typst name collides with",
+        "  another, the LaTeX command is used instead because that is what a maths",
+        "  user already types: `leq`, `geq`, `pm`, `bigcup`, `mapsto`,",
+        "  `Rightarrow`, `subseteq` (as `subeq`).",
         "",
         f"## Math symbols ({len(math)})",
         "",

@@ -222,14 +222,6 @@
                 )
 
         // Muito obrigado, / Heiko
-        ZMK_MACRO(m_sig_mo,
-                wait-ms = <MACRO_WAIT>;
-                tap-ms = <MACRO_TAP>;
-        bindings = <&kp LS(M) &kp U &kp I &kp T &kp O &kp SPACE &kp O &kp B
-                    &kp R &kp I &kp G &kp A &kp D &kp O &kp COMMA &kp RET
-                    &kp LS(H) &kp E &kp I &kp K &kp O>;
-                )
-
         // Obrigado, / Heiko
         ZMK_MACRO(m_sig_o,
                 wait-ms = <MACRO_WAIT>;

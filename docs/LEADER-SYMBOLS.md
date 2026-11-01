@@ -25,12 +25,19 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
   obscure entry that happens to share a letter prefix does not block a
   symbol you actually use. `eq` blocks `eq.not`, but `em` (U+2419 End of
   Medium) does not block `emptyset`.
-* **Case is not distinguishable.** Leader keys match keycodes, not shift
-  state, so typst's `alpha` and `Alpha` cannot both exist. Lowercase wins
-  and the uppercase variant gets a trailing `U`.
+* **Greek has its own prefix and is not repeated here.** `leader1 + G +
+  <letter>` gives the lowercase letter, and the SAME sequence with Shift
+  gives the capital: the module's Greek aliases carry both cases as a pair
+  (`UC_EL_GAMMA` is `0x3b3 0x393`) and the unicode behavior picks the
+  second code point when shift is held. So `G G` is gamma and `G G`+Shift
+  is Gamma - there is nothing to add under the M prefix.
 * **`.` is the DOT key.** So `arrow.r` is `M A R R O W DOT R`.
+* **Conflicts use LaTeX spellings.** Where a typst name collides with
+  another, the LaTeX command is used instead because that is what a maths
+  user already types: `leq`, `geq`, `pm`, `bigcup`, `mapsto`,
+  `Rightarrow`, `subseteq` (as `subeq`).
 
-## Math symbols (1263)
+## Math symbols (1264)
 
 | sequence | name | chars | status |
 |---|---|---|---|
@@ -41,13 +48,12 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M C C U` | `CC` | ℂ | available (commented out) |
 | `M C H I U` | `Chi` | Χ | available (commented out) |
 | `M D D` | `DD` | 𝔻 | available (commented out) |
-| `M D E L T A U` | `Delta` | Δ | available (commented out) |
 | `M D I G A M M A U` | `Digamma` | Ϝ | available (commented out) |
 | `M E E` | `EE` | 𝔼 | available (commented out) |
 | `M E P S I L O N U` | `Epsilon` | Ε | available (commented out) |
 | `M E T A U` | `Eta` | Η | available (commented out) |
+| `M F F U` | `FF` | 𝔽 | available (commented out) |
 | `M G G` | `GG` | 𝔾 | available (commented out) |
-| `M G A M M A U` | `Gamma` | Γ | available (commented out) |
 | `M H H` | `HH` | ℍ | available (commented out) |
 | `M I I` | `II` | 𝕀 | available (commented out) |
 | `M I M` | `Im` | ℑ | available (commented out) |
@@ -56,29 +62,23 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M K K` | `KK` | 𝕂 | available (commented out) |
 | `M K A P P A U` | `Kappa` | Κ | available (commented out) |
 | `M L L` | `LL` | 𝕃 | available (commented out) |
-| `M L A M B D A U` | `Lambda` | Λ | available (commented out) |
 | `M M M` | `MM` | 𝕄 | available (commented out) |
 | `M M U U` | `Mu` | Μ | available (commented out) |
 | `M N N` | `NN` | ℕ | available (commented out) |
 | `M N U U` | `Nu` | Ν | available (commented out) |
-| `M O O U X` | `OO` | 𝕆 | available (commented out) |
-| `M O M E G A U X` | `Omega` | Ω | available (commented out) |
-| `M O M E G A DOT I N V X` | `Omega.inv` | ℧ | available (commented out) |
-| `M O M I C R O N U X` | `Omicron` | Ο | available (commented out) |
+| `M O O U` | `OO` | 𝕆 | available (commented out) |
+| `M O M E G A DOT I N V` | `Omega.inv` | ℧ | available (commented out) |
+| `M O M I C R O N U` | `Omicron` | Ο | available (commented out) |
 | `M P P` | `PP` | ℙ | available (commented out) |
-| `M P H I U` | `Phi` | Φ | available (commented out) |
-| `M P I U` | `Pi` | Π | available (commented out) |
-| `M P S I U` | `Psi` | Ψ | available (commented out) |
 | `M Q Q` | `QQ` | ℚ | available (commented out) |
 | `M R R` | `RR` | ℝ | available (commented out) |
 | `M R E` | `Re` | ℜ | available (commented out) |
 | `M R H O U` | `Rho` | Ρ | available (commented out) |
+| `M R I G H T A R R O W` | `Rightarrow` | ⇒ | available (commented out) |
 | `M S S` | `SS` | 𝕊 | available (commented out) |
 | `M S H A U` | `Sha` | Ш | available (commented out) |
-| `M S I G M A U` | `Sigma` | Σ | available (commented out) |
 | `M T T` | `TT` | 𝕋 | available (commented out) |
 | `M T A U U` | `Tau` | Τ | available (commented out) |
-| `M T H E T A U` | `Theta` | Θ | available (commented out) |
 | `M T H E T A DOT A L T U` | `Theta.alt` | ϴ | available (commented out) |
 | `M U U` | `UU` | 𝕌 | available (commented out) |
 | `M U P S I L O N U` | `Upsilon` | Υ | available (commented out) |
@@ -90,13 +90,13 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M Z Z` | `ZZ` | ℤ | available (commented out) |
 | `M Z E T A U` | `Zeta` | Ζ | available (commented out) |
 | `M A C K` | `ack` | ␆ // ACKnowledge | available (commented out) |
-| `M A C U T E` | `acute` | ´ | available (commented out) |
+| `M A C U T E` | `acute` | ´ | active |
 | `M A C U T E DOT D O U B L E` | `acute.double` | ˝ | available (commented out) |
 | `M A F G H A N I` | `afghani` | ؋ | available (commented out) |
-| `M A L E P H` | `aleph` | א | active |
+| `M A L E P H` | `aleph` | א | available (commented out) |
 | `M A L P H A` | `alpha` | α | available (commented out) |
 | `M A L T` | `alt` | ⎇ | available (commented out) |
-| `M A M P` | `amp` | & | available (commented out) |
+| `M A M P` | `amp` | & | active |
 | `M A M P DOT I N V` | `amp.inv` | ⅋ | available (commented out) |
 | `M A N D` | `and` | ∧ | active |
 | `M A N D DOT B I G` | `and.big` | ⋀ | available (commented out) |
@@ -110,7 +110,6 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M A N G L E DOT A Z I M U T H` | `angle.azimuth` | ⍼ | available (commented out) |
 | `M A N G L E DOT O B T U S E` | `angle.obtuse` | ⦦ | available (commented out) |
 | `M A N G L E DOT R E V` | `angle.rev` | ⦣ | available (commented out) |
-| `M A N G L E DOT R I G H T` | `angle.right` | ∟ | disabled - prefix of another name |
 | `M A N G L E DOT R I G H T DOT A R C` | `angle.right.arc` | ⊾ | available (commented out) |
 | `M A N G L E DOT R I G H T DOT D O T` | `angle.right.dot` | ⦝ | available (commented out) |
 | `M A N G L E DOT R I G H T DOT R E V` | `angle.right.rev` | ⯾ | available (commented out) |
@@ -121,12 +120,10 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M A N G L E DOT S P H E R I C DOT R E V` | `angle.spheric.rev` | ⦠ | available (commented out) |
 | `M A N G L E DOT S P H E R I C DOT T` | `angle.spheric.t` | ⦡ | available (commented out) |
 | `M A N G S T R O M` | `angstrom` | Å | available (commented out) |
-| `M A N G Z A R R` | `angzarr` | ⍼ | available (commented out) |
+| `M A N G Z A R R` | `angzarr` | ⍼ | active |
 | `M A P P R O X` | `approx` | ≈ | active |
-| `M A P P R O X DOT E Q` | `approx.eq` | ≊ | available (commented out) |
 | `M A P P R O X DOT H A T` | `approx.hat` | ⩯ | available (commented out) |
-| `M A P P R O X DOT N O T` | `approx.not` | ≉ | available (commented out) |
-| `M A R R O W DOT B` | `arrow.b` | ↓ | available (commented out) |
+| `M A R R O W DOT B` | `arrow.b` | ↓ | active |
 | `M A R R O W DOT B DOT B A R` | `arrow.b.bar` | ↧ | available (commented out) |
 | `M A R R O W DOT B DOT C U R V E` | `arrow.b.curve` | ⤵ | available (commented out) |
 | `M A R R O W DOT B DOT D A S H E D` | `arrow.b.dashed` | ⇣ | available (commented out) |
@@ -152,9 +149,9 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M A R R O W DOT B R DOT F I L L E D` | `arrow.br.filled` | ⬊ | available (commented out) |
 | `M A R R O W DOT B R DOT H O O K` | `arrow.br.hook` | ⤥ | available (commented out) |
 | `M A R R O W DOT B R DOT S T R O K E D` | `arrow.br.stroked` | ⬂ | available (commented out) |
-| `M A R R O W DOT C C W` | `arrow.ccw` | ↺ | available (commented out) |
+| `M A R R O W DOT C C W` | `arrow.ccw` | ↺ | active |
 | `M A R R O W DOT C C W DOT H A L F` | `arrow.ccw.half` | ↶ | available (commented out) |
-| `M A R R O W DOT C W` | `arrow.cw` | ↻ | available (commented out) |
+| `M A R R O W DOT C W` | `arrow.cw` | ↻ | active |
 | `M A R R O W DOT C W DOT H A L F` | `arrow.cw.half` | ↷ | available (commented out) |
 | `M A R R O W DOT L` | `arrow.l` | ← | active |
 | `M A R R O W DOT L DOT B A R` | `arrow.l.bar` | ↤ | available (commented out) |
@@ -169,15 +166,12 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M A R R O W DOT L DOT D O U B L E DOT S T R U C K` | `arrow.l.double.struck` | ⤂ | available (commented out) |
 | `M A R R O W DOT L DOT D S T R U C K` | `arrow.l.dstruck` | ⇺ | available (commented out) |
 | `M A R R O W DOT L DOT F I L L E D` | `arrow.l.filled` | ⬅ | available (commented out) |
-| `M A R R O W DOT L DOT H O O K` | `arrow.l.hook` | ↩ | disabled - prefix of another name |
-| `M A R R O W DOT L DOT L O N G` | `arrow.l.long` | ⟵ | disabled - prefix of another name |
 | `M A R R O W DOT L DOT L O N G DOT B A R` | `arrow.l.long.bar` | ⟻ | available (commented out) |
 | `M A R R O W DOT L DOT L O N G DOT S Q U I G G L Y` | `arrow.l.long.squiggly` | ⬳ | available (commented out) |
 | `M A R R O W DOT L DOT L O O P` | `arrow.l.loop` | ↫ | available (commented out) |
 | `M A R R O W DOT L DOT N O T` | `arrow.l.not` | ↚ | available (commented out) |
 | `M A R R O W DOT L DOT O P E N` | `arrow.l.open` | ⇽ | available (commented out) |
 | `M A R R O W DOT L DOT Q U A D` | `arrow.l.quad` | ⭅ | available (commented out) |
-| `M A R R O W DOT L DOT R` | `arrow.l.r` | ↔ | disabled - prefix of another name |
 | `M A R R O W DOT L DOT R DOT D O U B L E` | `arrow.l.r.double` | ⇔ | available (commented out) |
 | `M A R R O W DOT L DOT R DOT D O U B L E DOT L O N G` | `arrow.l.r.double.long` | ⟺ | available (commented out) |
 | `M A R R O W DOT L DOT R DOT D O U B L E DOT N O T` | `arrow.l.r.double.not` | ⇎ | available (commented out) |
@@ -209,11 +203,9 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M A R R O W DOT L DOT T W O H E A D DOT T A I L DOT S T R U C K` | `arrow.l.twohead.tail.struck` | ⬼ | available (commented out) |
 | `M A R R O W DOT L DOT W A V E` | `arrow.l.wave` | ↜ | available (commented out) |
 | `M A R R O W DOT R` | `arrow.r` | → | active |
-| `M A R R O W DOT R DOT B A R` | `arrow.r.bar` | ↦ | disabled - prefix of another name |
 | `M A R R O W DOT R DOT C U R V E` | `arrow.r.curve` | ⤷ | available (commented out) |
 | `M A R R O W DOT R DOT D A S H E D` | `arrow.r.dashed` | ⇢ | available (commented out) |
 | `M A R R O W DOT R DOT D O T T E D` | `arrow.r.dotted` | ⤑ | available (commented out) |
-| `M A R R O W DOT R DOT D O U B L E` | `arrow.r.double` | ⇒ | disabled - prefix of another name |
 | `M A R R O W DOT R DOT D O U B L E DOT B A R` | `arrow.r.double.bar` | ⤇ | available (commented out) |
 | `M A R R O W DOT R DOT D O U B L E DOT L O N G` | `arrow.r.double.long` | ⟹ | available (commented out) |
 | `M A R R O W DOT R DOT D O U B L E DOT L O N G DOT B A R` | `arrow.r.double.long.bar` | ⟾ | available (commented out) |
@@ -221,8 +213,6 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M A R R O W DOT R DOT D O U B L E DOT S T R U C K` | `arrow.r.double.struck` | ⤃ | available (commented out) |
 | `M A R R O W DOT R DOT D S T R U C K` | `arrow.r.dstruck` | ⇻ | available (commented out) |
 | `M A R R O W DOT R DOT F I L L E D` | `arrow.r.filled` | ➡ | available (commented out) |
-| `M A R R O W DOT R DOT H O O K` | `arrow.r.hook` | ↪ | disabled - prefix of another name |
-| `M A R R O W DOT R DOT L O N G` | `arrow.r.long` | ⟶ | disabled - prefix of another name |
 | `M A R R O W DOT R DOT L O N G DOT B A R` | `arrow.r.long.bar` | ⟼ | available (commented out) |
 | `M A R R O W DOT R DOT L O N G DOT S Q U I G G L Y` | `arrow.r.long.squiggly` | ⟿ | available (commented out) |
 | `M A R R O W DOT R DOT L O O P` | `arrow.r.loop` | ↬ | available (commented out) |
@@ -247,7 +237,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M A R R O W DOT R DOT T W O H E A D DOT T A I L DOT D S T R U C K` | `arrow.r.twohead.tail.dstruck` | ⤘ | available (commented out) |
 | `M A R R O W DOT R DOT T W O H E A D DOT T A I L DOT S T R U C K` | `arrow.r.twohead.tail.struck` | ⤗ | available (commented out) |
 | `M A R R O W DOT R DOT W A V E` | `arrow.r.wave` | ↝ | available (commented out) |
-| `M A R R O W DOT T` | `arrow.t` | ↑ | available (commented out) |
+| `M A R R O W DOT T` | `arrow.t` | ↑ | active |
 | `M A R R O W DOT T DOT B` | `arrow.t.b` | ↕ | available (commented out) |
 | `M A R R O W DOT T DOT B DOT D O U B L E` | `arrow.t.b.double` | ⇕ | available (commented out) |
 | `M A R R O W DOT T DOT B DOT F I L L E D` | `arrow.t.b.filled` | ⬍ | available (commented out) |
@@ -279,43 +269,43 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M A R R O W DOT T R DOT F I L L E D` | `arrow.tr.filled` | ⬈ | available (commented out) |
 | `M A R R O W DOT T R DOT H O O K` | `arrow.tr.hook` | ⤤ | available (commented out) |
 | `M A R R O W DOT T R DOT S T R O K E D` | `arrow.tr.stroked` | ⬀ | available (commented out) |
-| `M A R R O W DOT Z I G Z A G` | `arrow.zigzag` | ↯ | available (commented out) |
-| `M A R R O W H E A D DOT B` | `arrowhead.b` | ⌄ | available (commented out) |
-| `M A R R O W H E A D DOT T` | `arrowhead.t` | ⌃ | available (commented out) |
-| `M A R R O W S DOT B B` | `arrows.bb` | ⇊ | available (commented out) |
-| `M A R R O W S DOT B T` | `arrows.bt` | ⇵ | available (commented out) |
-| `M A R R O W S DOT L L` | `arrows.ll` | ⇇ | available (commented out) |
+| `M A R R O W DOT Z I G Z A G` | `arrow.zigzag` | ↯ | active |
+| `M A R R O W H E A D DOT B` | `arrowhead.b` | ⌄ | active |
+| `M A R R O W H E A D DOT T` | `arrowhead.t` | ⌃ | active |
+| `M A R R O W S DOT B B` | `arrows.bb` | ⇊ | active |
+| `M A R R O W S DOT B T` | `arrows.bt` | ⇵ | active |
+| `M A R R O W S DOT L L` | `arrows.ll` | ⇇ | active |
 | `M A R R O W S DOT L L L` | `arrows.lll` | ⬱ | available (commented out) |
-| `M A R R O W S DOT L R` | `arrows.lr` | ⇆ | available (commented out) |
+| `M A R R O W S DOT L R` | `arrows.lr` | ⇆ | active |
 | `M A R R O W S DOT L R DOT S T O P` | `arrows.lr.stop` | ↹ | available (commented out) |
-| `M A R R O W S DOT R L` | `arrows.rl` | ⇄ | available (commented out) |
+| `M A R R O W S DOT R L` | `arrows.rl` | ⇄ | active |
 | `M A R R O W S DOT R L DOT L O N G` | `arrows.rl.long` | 🣐 | available (commented out) |
-| `M A R R O W S DOT R R` | `arrows.rr` | ⇉ | available (commented out) |
+| `M A R R O W S DOT R R` | `arrows.rr` | ⇉ | active |
 | `M A R R O W S DOT R R R` | `arrows.rrr` | ⇶ | available (commented out) |
-| `M A R R O W S DOT T B` | `arrows.tb` | ⇅ | available (commented out) |
-| `M A R R O W S DOT T T` | `arrows.tt` | ⇈ | available (commented out) |
-| `M A S T DOT B A S I C` | `ast.basic` | * | available (commented out) |
-| `M A S T DOT D O U B L E` | `ast.double` | ⁑ | available (commented out) |
-| `M A S T DOT L O W` | `ast.low` | ⁎ | available (commented out) |
-| `M A S T DOT O P` | `ast.op` | ∗ | available (commented out) |
+| `M A R R O W S DOT T B` | `arrows.tb` | ⇅ | active |
+| `M A R R O W S DOT T T` | `arrows.tt` | ⇈ | active |
+| `M A S T DOT B A S I C` | `ast.basic` | * | active |
+| `M A S T DOT D O U B L E` | `ast.double` | ⁑ | active |
+| `M A S T DOT L O W` | `ast.low` | ⁎ | active |
+| `M A S T DOT O P` | `ast.op` | ∗ | active |
 | `M A S T DOT O P DOT O` | `ast.op.o` | ⊛ | available (commented out) |
-| `M A S T DOT S Q U A R E` | `ast.square` | ⧆ | available (commented out) |
-| `M A S T DOT T R I P L E` | `ast.triple` | ⁂ | available (commented out) |
-| `M A S Y M P` | `asymp` | ≍ | available (commented out) |
+| `M A S T DOT S Q U A R E` | `ast.square` | ⧆ | active |
+| `M A S T DOT T R I P L E` | `ast.triple` | ⁂ | active |
+| `M A S Y M P` | `asymp` | ≍ | active |
 | `M A S Y M P DOT N O T` | `asymp.not` | ≭ | available (commented out) |
-| `M A T` | `at` | @ | available (commented out) |
-| `M B A C K S L A S H` | `backslash` | \ | available (commented out) |
+| `M A T` | `at` | @ | active |
+| `M B A C K S L A S H` | `backslash` | \ | active |
 | `M B A C K S L A S H DOT N O T` | `backslash.not` | ⧷ | available (commented out) |
 | `M B A C K S L A S H DOT O` | `backslash.o` | ⦸ | available (commented out) |
-| `M B A G DOT L` | `bag.l` | ⟅ | available (commented out) |
-| `M B A G DOT R` | `bag.r` | ⟆ | available (commented out) |
+| `M B A G DOT L` | `bag.l` | ⟅ | active |
+| `M B A G DOT R` | `bag.r` | ⟆ | active |
 | `M B A H T` | `baht` | ฿ | available (commented out) |
 | `M B A L L O T` | `ballot` | ☐ | available (commented out) |
 | `M B A L L O T DOT C H E C K` | `ballot.check` | ☑ | available (commented out) |
 | `M B A L L O T DOT C H E C K DOT H E A V Y` | `ballot.check.heavy` | 🗹 | available (commented out) |
 | `M B A L L O T DOT C R O S S` | `ballot.cross` | ☒ | available (commented out) |
-| `M B A R DOT H` | `bar.h` | ― | available (commented out) |
-| `M B A R DOT V` | `bar.v` | | | available (commented out) |
+| `M B A R DOT H` | `bar.h` | ― | active |
+| `M B A R DOT V` | `bar.v` | | | active |
 | `M B A R DOT V DOT B R O K E N` | `bar.v.broken` | ¦ | available (commented out) |
 | `M B A R DOT V DOT D O U B L E` | `bar.v.double` | ‖ | available (commented out) |
 | `M B A R DOT V DOT O` | `bar.v.o` | ⦶ | available (commented out) |
@@ -325,11 +315,13 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M B E T A` | `beta` | β | available (commented out) |
 | `M B E T A DOT A L T` | `beta.alt` | ϐ | available (commented out) |
 | `M B E T H` | `beth` | ב | available (commented out) |
+| `M B I G C A P` | `bigcap` | ⋂ | available (commented out) |
+| `M B I G C U P` | `bigcup` | ⋃ | available (commented out) |
 | `M B I S H O P DOT B L A C K` | `bishop.black` | ♝ | available (commented out) |
 | `M B I S H O P DOT W H I T E` | `bishop.white` | ♗ | available (commented out) |
 | `M B I T C O I N` | `bitcoin` | ₿ | available (commented out) |
 | `M B O T` | `bot` | ⊥ | active |
-| `M B O W T I E DOT F I L L E D` | `bowtie.filled` | ⧓ | available (commented out) |
+| `M B O W T I E DOT F I L L E D` | `bowtie.filled` | ⧓ | active |
 | `M B O W T I E DOT F I L L E D DOT L` | `bowtie.filled.l` | ⧑ | available (commented out) |
 | `M B O W T I E DOT F I L L E D DOT R` | `bowtie.filled.r` | ⧒ | available (commented out) |
 | `M B O W T I E DOT S T R O K E D` | `bowtie.stroked` | ⋈ | available (commented out) |
@@ -337,25 +329,25 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M B O W T I E DOT S T R O K E D DOT B I G DOT L` | `bowtie.stroked.big.l` | ⟕ | available (commented out) |
 | `M B O W T I E DOT S T R O K E D DOT B I G DOT L DOT R` | `bowtie.stroked.big.l.r` | ⟗ | available (commented out) |
 | `M B O W T I E DOT S T R O K E D DOT B I G DOT R` | `bowtie.stroked.big.r` | ⟖ | available (commented out) |
-| `M B R A C E DOT B` | `brace.b` | ⏟ | available (commented out) |
-| `M B R A C E DOT L` | `brace.l` | { | available (commented out) |
+| `M B R A C E DOT B` | `brace.b` | ⏟ | active |
+| `M B R A C E DOT L` | `brace.l` | { | active |
 | `M B R A C E DOT L DOT S T R O K E D` | `brace.l.stroked` | ⦃ | available (commented out) |
-| `M B R A C E DOT R` | `brace.r` | } | available (commented out) |
+| `M B R A C E DOT R` | `brace.r` | } | active |
 | `M B R A C E DOT R DOT S T R O K E D` | `brace.r.stroked` | ⦄ | available (commented out) |
-| `M B R A C E DOT T` | `brace.t` | ⏞ | available (commented out) |
-| `M B R A C K E T DOT B` | `bracket.b` | ⎵ | available (commented out) |
-| `M B R A C K E T DOT L` | `bracket.l` | [ | available (commented out) |
+| `M B R A C E DOT T` | `brace.t` | ⏞ | active |
+| `M B R A C K E T DOT B` | `bracket.b` | ⎵ | active |
+| `M B R A C K E T DOT L` | `bracket.l` | [ | active |
 | `M B R A C K E T DOT L DOT S T R O K E D` | `bracket.l.stroked` | ⟦ | available (commented out) |
 | `M B R A C K E T DOT L DOT T I C K DOT B` | `bracket.l.tick.b` | ⦏ | available (commented out) |
 | `M B R A C K E T DOT L DOT T I C K DOT T` | `bracket.l.tick.t` | ⦍ | available (commented out) |
-| `M B R A C K E T DOT R` | `bracket.r` | ] | available (commented out) |
+| `M B R A C K E T DOT R` | `bracket.r` | ] | active |
 | `M B R A C K E T DOT R DOT S T R O K E D` | `bracket.r.stroked` | ⟧ | available (commented out) |
 | `M B R A C K E T DOT R DOT T I C K DOT B` | `bracket.r.tick.b` | ⦎ | available (commented out) |
 | `M B R A C K E T DOT R DOT T I C K DOT T` | `bracket.r.tick.t` | ⦐ | available (commented out) |
-| `M B R A C K E T DOT T` | `bracket.t` | ⎴ | available (commented out) |
-| `M B R E V E` | `breve` | ˘ | available (commented out) |
+| `M B R A C K E T DOT T` | `bracket.t` | ⎴ | active |
+| `M B R E V E` | `breve` | ˘ | active |
 | `M B S` | `bs` | ␈ // BackSpace | available (commented out) |
-| `M B U L L E T` | `bullet` | • | available (commented out) |
+| `M B U L L E T` | `bullet` | • | active |
 | `M B U L L E T DOT H O L E` | `bullet.hole` | ◘ | available (commented out) |
 | `M B U L L E T DOT H Y P H` | `bullet.hyph` | ⁃ | available (commented out) |
 | `M B U L L E T DOT L` | `bullet.l` | ⁌ | available (commented out) |
@@ -368,8 +360,8 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M C A N` | `can` | ␘ // CANcel | available (commented out) |
 | `M C A P S L O C K` | `capslock` | ⇪ | available (commented out) |
 | `M C A P S L O C K DOT P E D E S T A L` | `capslock.pedestal` | ⇫ | available (commented out) |
-| `M C A R E T` | `caret` | ‸ | available (commented out) |
-| `M C A R O N` | `caron` | ˇ | available (commented out) |
+| `M C A R E T` | `caret` | ‸ | active |
+| `M C A R O N` | `caron` | ˇ | active |
 | `M C C` | `cc` | 🅭 | available (commented out) |
 | `M C C DOT B Y` | `cc.by` | 🅯 | available (commented out) |
 | `M C C DOT N C` | `cc.nc` | 🄏 | available (commented out) |
@@ -378,19 +370,19 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M C C DOT S A` | `cc.sa` | 🄎 | available (commented out) |
 | `M C C DOT Z E R O` | `cc.zero` | 🄍 | available (commented out) |
 | `M C E D I` | `cedi` | ₵ | available (commented out) |
-| `M C E I L DOT L` | `ceil.l` | ⌈ | available (commented out) |
-| `M C E I L DOT R` | `ceil.r` | ⌉ | available (commented out) |
+| `M C E I L DOT L` | `ceil.l` | ⌈ | active |
+| `M C E I L DOT R` | `ceil.r` | ⌉ | active |
 | `M C E N T` | `cent` | ¢ | available (commented out) |
 | `M C H E C K M A R K` | `checkmark` | ✓ | available (commented out) |
 | `M C H E C K M A R K DOT H E A V Y` | `checkmark.heavy` | ✔ | available (commented out) |
 | `M C H E C K M A R K DOT L I G H T` | `checkmark.light` | 🗸 | available (commented out) |
 | `M C H E S S` | `chess` | { | available (commented out) |
-| `M C H E V R O N DOT L` | `chevron.l` | ⟨ | available (commented out) |
+| `M C H E V R O N DOT L` | `chevron.l` | ⟨ | active |
 | `M C H E V R O N DOT L DOT C L O S E D` | `chevron.l.closed` | ⦉ | available (commented out) |
 | `M C H E V R O N DOT L DOT C U R L Y` | `chevron.l.curly` | ⧼ | available (commented out) |
 | `M C H E V R O N DOT L DOT D O T` | `chevron.l.dot` | ⦑ | available (commented out) |
 | `M C H E V R O N DOT L DOT D O U B L E` | `chevron.l.double` | ⟪ | available (commented out) |
-| `M C H E V R O N DOT R` | `chevron.r` | ⟩ | available (commented out) |
+| `M C H E V R O N DOT R` | `chevron.r` | ⟩ | active |
 | `M C H E V R O N DOT R DOT C L O S E D` | `chevron.r.closed` | ⦊ | available (commented out) |
 | `M C H E V R O N DOT R DOT C U R L Y` | `chevron.r.curly` | ⧽ | available (commented out) |
 | `M C H E V R O N DOT R DOT D O T` | `chevron.r.dot` | ⦒ | available (commented out) |
@@ -401,13 +393,13 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M C I R C L E DOT F I L L E D DOT B I G` | `circle.filled.big` | ⬤ | available (commented out) |
 | `M C I R C L E DOT F I L L E D DOT S M A L L` | `circle.filled.small` | ∙ | available (commented out) |
 | `M C I R C L E DOT F I L L E D DOT T I N Y` | `circle.filled.tiny` | ⦁ | available (commented out) |
-| `M C I R C L E DOT S T R O K E D` | `circle.stroked` | ○ | active |
+| `M C I R C L E DOT S T R O K E D` | `circle.stroked` | ○ | available (commented out) |
 | `M C I R C L E DOT S T R O K E D DOT B I G` | `circle.stroked.big` | ◯ | available (commented out) |
 | `M C I R C L E DOT S T R O K E D DOT S M A L L` | `circle.stroked.small` | ⚬ | available (commented out) |
 | `M C I R C L E DOT S T R O K E D DOT T I N Y` | `circle.stroked.tiny` | ∘ | available (commented out) |
 | `M C L E A R` | `clear` | ⌧ | available (commented out) |
 | `M C M D` | `cmd` | ⌘ | available (commented out) |
-| `M C O` | `co` | ℅ | available (commented out) |
+| `M C O` | `co` | ℅ | active |
 | `M C O L O N` | `colon` | : | available (commented out) |
 | `M C O L O N DOT C U R R E N C Y` | `colon.currency` | ₡ | available (commented out) |
 | `M C O L O N DOT D O U B L E` | `colon.double` | ∷ | available (commented out) |
@@ -435,21 +427,21 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M C R O S S M A R K` | `crossmark` | ✗ | available (commented out) |
 | `M C R O S S M A R K DOT H E A V Y` | `crossmark.heavy` | ✘ | available (commented out) |
 | `M C U R R E N C Y` | `currency` | ¤ | available (commented out) |
-| `M D A G G E R` | `dagger` | † | available (commented out) |
+| `M D A G G E R` | `dagger` | † | active |
 | `M D A G G E R DOT D O U B L E` | `dagger.double` | ‡ | available (commented out) |
 | `M D A G G E R DOT I N V` | `dagger.inv` | ⸸ | available (commented out) |
 | `M D A G G E R DOT L` | `dagger.l` | ⸶ | available (commented out) |
 | `M D A G G E R DOT R` | `dagger.r` | ⸷ | available (commented out) |
 | `M D A G G E R DOT T R I P L E` | `dagger.triple` | ⹋ | available (commented out) |
 | `M D A L E T H` | `daleth` | ד | available (commented out) |
-| `M D A S H DOT C O L O N` | `dash.colon` | ∹ | available (commented out) |
-| `M D A S H DOT E M` | `dash.em` | — | available (commented out) |
+| `M D A S H DOT C O L O N` | `dash.colon` | ∹ | active |
+| `M D A S H DOT E M` | `dash.em` | — | active |
 | `M D A S H DOT E M DOT T H R E E` | `dash.em.three` | ⸻ | available (commented out) |
 | `M D A S H DOT E M DOT T W O` | `dash.em.two` | ⸺ | available (commented out) |
-| `M D A S H DOT E N` | `dash.en` | – | available (commented out) |
-| `M D A S H DOT F I G` | `dash.fig` | ‒ | available (commented out) |
-| `M D A S H DOT O` | `dash.o` | ⊝ | available (commented out) |
-| `M D A S H DOT W A V E` | `dash.wave` | 〜 | available (commented out) |
+| `M D A S H DOT E N` | `dash.en` | – | active |
+| `M D A S H DOT F I G` | `dash.fig` | ‒ | active |
+| `M D A S H DOT O` | `dash.o` | ⊝ | active |
+| `M D A S H DOT W A V E` | `dash.wave` | 〜 | active |
 | `M D A S H DOT W A V E DOT D O U B L E` | `dash.wave.double` | 〰 | available (commented out) |
 | `M D C` | `dc` | // Device Control | available (commented out) |
 | `M D C DOT F O U R` | `dc.four` | ␔ | available (commented out) |
@@ -459,8 +451,8 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M D E G R E E` | `degree` | ° | active |
 | `M D E L` | `del` | ␡ // DELete | available (commented out) |
 | `M D E L T A` | `delta` | δ | available (commented out) |
-| `M D I A E R` | `diaer` | ¨ | available (commented out) |
-| `M D I A M E T E R` | `diameter` | ⌀ | available (commented out) |
+| `M D I A E R` | `diaer` | ¨ | active |
+| `M D I A M E T E R` | `diameter` | ⌀ | active |
 | `M D I A M O N D DOT F I L L E D` | `diamond.filled` | ◆ | available (commented out) |
 | `M D I A M O N D DOT F I L L E D DOT M E D I U M` | `diamond.filled.medium` | ⬥ | available (commented out) |
 | `M D I A M O N D DOT F I L L E D DOT S M A L L` | `diamond.filled.small` | ⬩ | available (commented out) |
@@ -486,26 +478,26 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M D O L L A R` | `dollar` | $ | available (commented out) |
 | `M D O N G` | `dong` | ₫ | available (commented out) |
 | `M D O R O M E` | `dorome` | ߾ | available (commented out) |
-| `M D O T DOT B A S I C` | `dot.basic` | . | available (commented out) |
-| `M D O T DOT C` | `dot.c` | · | available (commented out) |
-| `M D O T DOT D O U B L E` | `dot.double` | ¨ | available (commented out) |
-| `M D O T DOT O` | `dot.o` | ⊙ | available (commented out) |
+| `M D O T DOT B A S I C` | `dot.basic` | . | active |
+| `M D O T DOT C` | `dot.c` | · | active |
+| `M D O T DOT D O U B L E` | `dot.double` | ¨ | active |
+| `M D O T DOT O` | `dot.o` | ⊙ | active |
 | `M D O T DOT O DOT B I G` | `dot.o.big` | ⨀ | available (commented out) |
 | `M D O T DOT O P` | `dot.op` | ⋅ | available (commented out) |
-| `M D O T DOT Q U A D` | `dot.quad` | ⃜ | available (commented out) |
-| `M D O T DOT S Q U A R E` | `dot.square` | ⊡ | available (commented out) |
-| `M D O T DOT T R I P L E` | `dot.triple` | ⃛ | available (commented out) |
+| `M D O T DOT Q U A D` | `dot.quad` | ⃜ | active |
+| `M D O T DOT S Q U A R E` | `dot.square` | ⊡ | active |
+| `M D O T DOT T R I P L E` | `dot.triple` | ⃛ | active |
 | `M D O T L E S S DOT I` | `dotless.i` | ı | available (commented out) |
 | `M D O T L E S S DOT J` | `dotless.j` | ȷ | available (commented out) |
-| `M D O T S DOT D O W N` | `dots.down` | ⋱ | available (commented out) |
-| `M D O T S DOT H` | `dots.h` | … | available (commented out) |
+| `M D O T S DOT D O W N` | `dots.down` | ⋱ | active |
+| `M D O T S DOT H` | `dots.h` | … | active |
 | `M D O T S DOT H DOT C` | `dots.h.c` | ⋯ | available (commented out) |
-| `M D O T S DOT U P` | `dots.up` | ⋰ | available (commented out) |
-| `M D O T S DOT V` | `dots.v` | ⋮ | available (commented out) |
+| `M D O T S DOT U P` | `dots.up` | ⋰ | active |
+| `M D O T S DOT V` | `dots.v` | ⋮ | active |
 | `M D R A M` | `dram` | ֏ | available (commented out) |
 | `M E A R T H` | `earth` | 🜨 | available (commented out) |
 | `M E A R T H DOT A L T` | `earth.alt` | ♁ | available (commented out) |
-| `M E L L` | `ell` | ℓ | active |
+| `M E L L` | `ell` | ℓ | available (commented out) |
 | `M E L L I P S E DOT F I L L E D DOT H` | `ellipse.filled.h` | ⬬ | available (commented out) |
 | `M E L L I P S E DOT F I L L E D DOT V` | `ellipse.filled.v` | ⬮ | available (commented out) |
 | `M E L L I P S E DOT S T R O K E D DOT H` | `ellipse.stroked.h` | ⬭ | available (commented out) |
@@ -525,10 +517,10 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M E P S I L O N` | `epsilon` | ε | available (commented out) |
 | `M E P S I L O N DOT A L T` | `epsilon.alt` | ϵ | available (commented out) |
 | `M E P S I L O N DOT A L T DOT R E V` | `epsilon.alt.rev` | ϶ | available (commented out) |
-| `M E Q` | `eq` | = | available (commented out) |
+| `M E Q` | `eq` | = | active |
 | `M E Q DOT A S T` | `eq.ast` | ⩮ | available (commented out) |
 | `M E Q DOT C O L O N` | `eq.colon` | ≕ | available (commented out) |
-| `M E Q DOT D E F` | `eq.def` | ≝ | active |
+| `M E Q DOT D E F` | `eq.def` | ≝ | available (commented out) |
 | `M E Q DOT D E L T A` | `eq.delta` | ≜ | available (commented out) |
 | `M E Q DOT D O T` | `eq.dot` | ≐ | available (commented out) |
 | `M E Q DOT D O T S` | `eq.dots` | ≑ | available (commented out) |
@@ -541,7 +533,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M E Q DOT L T` | `eq.lt` | ⋜ | available (commented out) |
 | `M E Q DOT L T DOT S L A N T` | `eq.lt.slant` | ⪕ | available (commented out) |
 | `M E Q DOT M` | `eq.m` | ≞ | available (commented out) |
-| `M E Q DOT N O T` | `eq.not` | ≠ | active |
+| `M E Q DOT N O T` | `eq.not` | ≠ | available (commented out) |
 | `M E Q DOT O` | `eq.o` | ⊜ | available (commented out) |
 | `M E Q DOT P R E C` | `eq.prec` | ⋞ | available (commented out) |
 | `M E Q DOT Q U A D` | `eq.quad` | ≣ | available (commented out) |
@@ -550,12 +542,11 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M E Q DOT S U C C` | `eq.succ` | ⋟ | available (commented out) |
 | `M E Q DOT T R I P L E` | `eq.triple` | ≡ | available (commented out) |
 | `M E Q DOT T R I P L E DOT N O T` | `eq.triple.not` | ≢ | available (commented out) |
-| `M E Q U I V` | `equiv` | ≡ | active |
+| `M E Q U I V` | `equiv` | ≡ | available (commented out) |
 | `M E Q U I V DOT G T` | `equiv.gt` | ⪚ | available (commented out) |
 | `M E Q U I V DOT G T DOT S L A N T` | `equiv.gt.slant` | ⪜ | available (commented out) |
 | `M E Q U I V DOT L T` | `equiv.lt` | ⪙ | available (commented out) |
 | `M E Q U I V DOT L T DOT S L A N T` | `equiv.lt.slant` | ⪛ | available (commented out) |
-| `M E Q U I V DOT N O T` | `equiv.not` | ≢ | available (commented out) |
 | `M E R A S E DOT L` | `erase.l` | ⌫ | available (commented out) |
 | `M E R A S E DOT R` | `erase.r` | ⌦ | available (commented out) |
 | `M E R R O R B A R DOT C I R C L E DOT F I L L E D` | `errorbar.circle.filled` | ⧳ | available (commented out) |
@@ -570,7 +561,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M E T B` | `etb` | ␗ // End of Transmission Block | available (commented out) |
 | `M E T X` | `etx` | ␃ // End of TeXt | available (commented out) |
 | `M E U R O` | `euro` | € | available (commented out) |
-| `M E X C L` | `excl` | ! | available (commented out) |
+| `M E X C L` | `excl` | ! | active |
 | `M E X C L DOT D O U B L E` | `excl.double` | ‼ | available (commented out) |
 | `M E X C L DOT I N V` | `excl.inv` | ¡ | available (commented out) |
 | `M E X C L DOT Q U E S T` | `excl.quest` | ⁉ | available (commented out) |
@@ -580,10 +571,10 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M F E M A L E DOT D O U B L E` | `female.double` | ⚢ | available (commented out) |
 | `M F E M A L E DOT M A L E` | `female.male` | ⚤ | available (commented out) |
 | `M F E M I N I N E` | `feminine` | ª | available (commented out) |
-| `M F E N C E DOT D O T T E D` | `fence.dotted` | ⦙ | available (commented out) |
-| `M F E N C E DOT L` | `fence.l` | ⧘ | available (commented out) |
+| `M F E N C E DOT D O T T E D` | `fence.dotted` | ⦙ | active |
+| `M F E N C E DOT L` | `fence.l` | ⧘ | active |
 | `M F E N C E DOT L DOT D O U B L E` | `fence.l.double` | ⧚ | available (commented out) |
-| `M F E N C E DOT R` | `fence.r` | ⧙ | available (commented out) |
+| `M F E N C E DOT R` | `fence.r` | ⧙ | active |
 | `M F E N C E DOT R DOT D O U B L E` | `fence.r.double` | ⧛ | available (commented out) |
 | `M F F` | `ff` | ␌ // Form Feed | available (commented out) |
 | `M F L A T` | `flat` | ♭ | available (commented out) |
@@ -591,21 +582,32 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M F L A T DOT D O U B L E` | `flat.double` | 𝄫 | available (commented out) |
 | `M F L A T DOT Q U A R T E R` | `flat.quarter` | 𝄳 | available (commented out) |
 | `M F L A T DOT T` | `flat.t` | 𝄬 | available (commented out) |
-| `M F L O O R DOT L` | `floor.l` | ⌊ | available (commented out) |
-| `M F L O O R DOT R` | `floor.r` | ⌋ | available (commented out) |
+| `M F L O O R DOT L` | `floor.l` | ⌊ | active |
+| `M F L O O R DOT R` | `floor.r` | ⌋ | active |
 | `M F L O R A L` | `floral` | ❦ | available (commented out) |
 | `M F L O R A L DOT L` | `floral.l` | ☙ | available (commented out) |
 | `M F L O R A L DOT R` | `floral.r` | ❧ | available (commented out) |
 | `M F O R A L L` | `forall` | ∀ | active |
-| `M F O R C E S` | `forces` | ⊩ | available (commented out) |
+| `M F O R C E S` | `forces` | ⊩ | active |
 | `M F O R C E S DOT N O T` | `forces.not` | ⊮ | available (commented out) |
-| `M F R O W N` | `frown` | ⌢ | available (commented out) |
+| `M F R O W N` | `frown` | ⌢ | active |
 | `M F S` | `fs` | ␜ // File Separator | available (commented out) |
+| `M G D E L T A` | `gDelta` | Δ | available (commented out) |
+| `M G G A M M A` | `gGamma` | Γ | available (commented out) |
+| `M G L A M B D A` | `gLambda` | Λ | available (commented out) |
+| `M G O M E G A` | `gOmega` | Ω | available (commented out) |
+| `M G P H I` | `gPhi` | Φ | available (commented out) |
+| `M G P I` | `gPi` | Π | available (commented out) |
+| `M G P S I` | `gPsi` | Ψ | available (commented out) |
+| `M G S I G M A` | `gSigma` | Σ | available (commented out) |
+| `M G T H E T A` | `gTheta` | Θ | available (commented out) |
 | `M G A M M A` | `gamma` | γ | available (commented out) |
 | `M G E N D E R` | `gender` | { | available (commented out) |
+| `M G E Q` | `geq` | ≥ | available (commented out) |
+| `M G E Q S L A N T` | `geqslant` | ⩾ | available (commented out) |
 | `M G I M E L` | `gimel` | ג | available (commented out) |
-| `M G R A D I E N T` | `gradient` | ∇ | available (commented out) |
-| `M G R A V E` | `grave` | ` | available (commented out) |
+| `M G R A D I E N T` | `gradient` | ∇ | active |
+| `M G R A V E` | `grave` | ` | active |
 | `M G S` | `gs` | ␝ // Group Separator | available (commented out) |
 | `M G T` | `gt` | > | active |
 | `M G T DOT A P P R O X` | `gt.approx` | ⪆ | available (commented out) |
@@ -618,11 +620,9 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M G T DOT D O T` | `gt.dot` | ⋗ | available (commented out) |
 | `M G T DOT D O U B L E` | `gt.double` | ≫ | available (commented out) |
 | `M G T DOT D O U B L E DOT N E S T E D` | `gt.double.nested` | ⪢ | available (commented out) |
-| `M G T DOT E Q` | `gt.eq` | ≥ | disabled - prefix of another name |
 | `M G T DOT E Q DOT L T` | `gt.eq.lt` | ⋛ | available (commented out) |
 | `M G T DOT E Q DOT L T DOT S L A N T` | `gt.eq.lt.slant` | ⋛\vs{1} | available (commented out) |
 | `M G T DOT E Q DOT N O T` | `gt.eq.not` | ≱ | available (commented out) |
-| `M G T DOT E Q DOT S L A N T` | `gt.eq.slant` | ⩾ | disabled - prefix of another name |
 | `M G T DOT E Q U I V` | `gt.equiv` | ≧ | available (commented out) |
 | `M G T DOT E Q U I V DOT S L A N T` | `gt.equiv.slant` | ⫺ | available (commented out) |
 | `M G T DOT L T` | `gt.lt` | ≷ | available (commented out) |
@@ -640,78 +640,79 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M G T DOT T R I P L E` | `gt.triple` | ⋙ | available (commented out) |
 | `M G T DOT T R I P L E DOT N E S T E D` | `gt.triple.nested` | ⫸ | available (commented out) |
 | `M G U A R A N I` | `guarani` | ₲ | available (commented out) |
-| `M H A R P O O N DOT B L` | `harpoon.bl` | ⇃ | available (commented out) |
+| `M H A R P O O N DOT B L` | `harpoon.bl` | ⇃ | active |
 | `M H A R P O O N DOT B L DOT B A R` | `harpoon.bl.bar` | ⥡ | available (commented out) |
 | `M H A R P O O N DOT B L DOT S T O P` | `harpoon.bl.stop` | ⥙ | available (commented out) |
-| `M H A R P O O N DOT B R` | `harpoon.br` | ⇂ | available (commented out) |
+| `M H A R P O O N DOT B R` | `harpoon.br` | ⇂ | active |
 | `M H A R P O O N DOT B R DOT B A R` | `harpoon.br.bar` | ⥝ | available (commented out) |
 | `M H A R P O O N DOT B R DOT S T O P` | `harpoon.br.stop` | ⥕ | available (commented out) |
-| `M H A R P O O N DOT L B` | `harpoon.lb` | ↽ | available (commented out) |
+| `M H A R P O O N DOT L B` | `harpoon.lb` | ↽ | active |
 | `M H A R P O O N DOT L B DOT B A R` | `harpoon.lb.bar` | ⥞ | available (commented out) |
 | `M H A R P O O N DOT L B DOT R B` | `harpoon.lb.rb` | ⥐ | available (commented out) |
 | `M H A R P O O N DOT L B DOT R T` | `harpoon.lb.rt` | ⥋ | available (commented out) |
 | `M H A R P O O N DOT L B DOT S T O P` | `harpoon.lb.stop` | ⥖ | available (commented out) |
-| `M H A R P O O N DOT L T` | `harpoon.lt` | ↼ | available (commented out) |
+| `M H A R P O O N DOT L T` | `harpoon.lt` | ↼ | active |
 | `M H A R P O O N DOT L T DOT B A R` | `harpoon.lt.bar` | ⥚ | available (commented out) |
 | `M H A R P O O N DOT L T DOT R B` | `harpoon.lt.rb` | ⥊ | available (commented out) |
 | `M H A R P O O N DOT L T DOT R T` | `harpoon.lt.rt` | ⥎ | available (commented out) |
 | `M H A R P O O N DOT L T DOT S T O P` | `harpoon.lt.stop` | ⥒ | available (commented out) |
-| `M H A R P O O N DOT R B` | `harpoon.rb` | ⇁ | available (commented out) |
+| `M H A R P O O N DOT R B` | `harpoon.rb` | ⇁ | active |
 | `M H A R P O O N DOT R B DOT B A R` | `harpoon.rb.bar` | ⥟ | available (commented out) |
 | `M H A R P O O N DOT R B DOT S T O P` | `harpoon.rb.stop` | ⥗ | available (commented out) |
-| `M H A R P O O N DOT R T` | `harpoon.rt` | ⇀ | available (commented out) |
+| `M H A R P O O N DOT R T` | `harpoon.rt` | ⇀ | active |
 | `M H A R P O O N DOT R T DOT B A R` | `harpoon.rt.bar` | ⥛ | available (commented out) |
 | `M H A R P O O N DOT R T DOT S T O P` | `harpoon.rt.stop` | ⥓ | available (commented out) |
-| `M H A R P O O N DOT T L` | `harpoon.tl` | ↿ | available (commented out) |
+| `M H A R P O O N DOT T L` | `harpoon.tl` | ↿ | active |
 | `M H A R P O O N DOT T L DOT B A R` | `harpoon.tl.bar` | ⥠ | available (commented out) |
 | `M H A R P O O N DOT T L DOT B L` | `harpoon.tl.bl` | ⥑ | available (commented out) |
 | `M H A R P O O N DOT T L DOT B R` | `harpoon.tl.br` | ⥍ | available (commented out) |
 | `M H A R P O O N DOT T L DOT S T O P` | `harpoon.tl.stop` | ⥘ | available (commented out) |
-| `M H A R P O O N DOT T R` | `harpoon.tr` | ↾ | available (commented out) |
+| `M H A R P O O N DOT T R` | `harpoon.tr` | ↾ | active |
 | `M H A R P O O N DOT T R DOT B A R` | `harpoon.tr.bar` | ⥜ | available (commented out) |
 | `M H A R P O O N DOT T R DOT B L` | `harpoon.tr.bl` | ⥌ | available (commented out) |
 | `M H A R P O O N DOT T R DOT B R` | `harpoon.tr.br` | ⥏ | available (commented out) |
 | `M H A R P O O N DOT T R DOT S T O P` | `harpoon.tr.stop` | ⥔ | available (commented out) |
-| `M H A R P O O N S DOT B L B R` | `harpoons.blbr` | ⥥ | available (commented out) |
-| `M H A R P O O N S DOT B L T R` | `harpoons.bltr` | ⥯ | available (commented out) |
-| `M H A R P O O N S DOT L B R B` | `harpoons.lbrb` | ⥧ | available (commented out) |
-| `M H A R P O O N S DOT L T L B` | `harpoons.ltlb` | ⥢ | available (commented out) |
-| `M H A R P O O N S DOT L T R B` | `harpoons.ltrb` | ⇋ | available (commented out) |
-| `M H A R P O O N S DOT L T R T` | `harpoons.ltrt` | ⥦ | available (commented out) |
-| `M H A R P O O N S DOT R B L B` | `harpoons.rblb` | ⥩ | available (commented out) |
-| `M H A R P O O N S DOT R T L B` | `harpoons.rtlb` | ⇌ | available (commented out) |
-| `M H A R P O O N S DOT R T L T` | `harpoons.rtlt` | ⥨ | available (commented out) |
-| `M H A R P O O N S DOT R T R B` | `harpoons.rtrb` | ⥤ | available (commented out) |
-| `M H A R P O O N S DOT T L B R` | `harpoons.tlbr` | ⥮ | available (commented out) |
-| `M H A R P O O N S DOT T L T R` | `harpoons.tltr` | ⥣ | available (commented out) |
-| `M H A S H` | `hash` | # | available (commented out) |
-| `M H A T` | `hat` | ^ | available (commented out) |
-| `M H E X A DOT F I L L E D` | `hexa.filled` | ⬢ | available (commented out) |
-| `M H E X A DOT S T R O K E D` | `hexa.stroked` | ⬡ | available (commented out) |
+| `M H A R P O O N S DOT B L B R` | `harpoons.blbr` | ⥥ | active |
+| `M H A R P O O N S DOT B L T R` | `harpoons.bltr` | ⥯ | active |
+| `M H A R P O O N S DOT L B R B` | `harpoons.lbrb` | ⥧ | active |
+| `M H A R P O O N S DOT L T L B` | `harpoons.ltlb` | ⥢ | active |
+| `M H A R P O O N S DOT L T R B` | `harpoons.ltrb` | ⇋ | active |
+| `M H A R P O O N S DOT L T R T` | `harpoons.ltrt` | ⥦ | active |
+| `M H A R P O O N S DOT R B L B` | `harpoons.rblb` | ⥩ | active |
+| `M H A R P O O N S DOT R T L B` | `harpoons.rtlb` | ⇌ | active |
+| `M H A R P O O N S DOT R T L T` | `harpoons.rtlt` | ⥨ | active |
+| `M H A R P O O N S DOT R T R B` | `harpoons.rtrb` | ⥤ | active |
+| `M H A R P O O N S DOT T L B R` | `harpoons.tlbr` | ⥮ | active |
+| `M H A R P O O N S DOT T L T R` | `harpoons.tltr` | ⥣ | active |
+| `M H A S H` | `hash` | # | active |
+| `M H A T` | `hat` | ^ | active |
+| `M H E X A DOT F I L L E D` | `hexa.filled` | ⬢ | active |
+| `M H E X A DOT S T R O K E D` | `hexa.stroked` | ⬡ | active |
+| `M H O O K L E F T A R R O W` | `hookleftarrow` | ↩ | available (commented out) |
+| `M H O O K R I G H T A R R O W` | `hookrightarrow` | ↪ | available (commented out) |
 | `M H O U R G L A S S DOT F I L L E D` | `hourglass.filled` | ⧗ | available (commented out) |
 | `M H O U R G L A S S DOT S T R O K E D` | `hourglass.stroked` | ⧖ | available (commented out) |
 | `M H R Y V N I A` | `hryvnia` | ₴ | available (commented out) |
 | `M H T` | `ht` | ␉ // Horizontal Tabulation | available (commented out) |
-| `M H Y P H` | `hyph` | ‐ | available (commented out) |
+| `M H Y P H` | `hyph` | ‐ | active |
 | `M H Y P H DOT M I N U S` | `hyph.minus` | - | available (commented out) |
 | `M H Y P H DOT N O B R E A K` | `hyph.nobreak` | ‑ | available (commented out) |
 | `M H Y P H DOT P O I N T` | `hyph.point` | ‧ | available (commented out) |
 | `M H Y P H DOT S O F T` | `hyph.soft` | ­ | available (commented out) |
 | `M I M A G E` | `image` | ⊷ | available (commented out) |
-| `M I N DOT N O T` | `in.not` | ∉ | active |
-| `M I N DOT R E V` | `in.rev` | ∋ | active |
+| `M I N DOT N O T` | `in.not` | ∉ | available (commented out) |
+| `M I N DOT R E V` | `in.rev` | ∋ | available (commented out) |
 | `M I N DOT R E V DOT N O T` | `in.rev.not` | ∌ | available (commented out) |
 | `M I N DOT R E V DOT S M A L L` | `in.rev.small` | ∍ | available (commented out) |
 | `M I N DOT S M A L L` | `in.small` | ∊ | available (commented out) |
-| `M I N F I N I T Y` | `infinity` | ∞ | active |
+| `M I N F I N I T Y` | `infinity` | ∞ | available (commented out) |
 | `M I N F I N I T Y DOT B A R` | `infinity.bar` | ⧞ | available (commented out) |
 | `M I N F I N I T Y DOT I N C O M P L E T E` | `infinity.incomplete` | ⧜ | available (commented out) |
 | `M I N F I N I T Y DOT T I E` | `infinity.tie` | ⧝ | available (commented out) |
-| `M I N S E T` | `inset` | ∈ | active |
-| `M I N T E G R A L` | `integral` | ∫ | active |
+| `M I N S E T` | `inset` | ∈ | available (commented out) |
+| `M I N T E G R A L` | `integral` | ∫ | available (commented out) |
 | `M I N T E G R A L DOT A R R O W DOT H O O K` | `integral.arrow.hook` | ⨗ | available (commented out) |
 | `M I N T E G R A L DOT C C W` | `integral.ccw` | ⨑ | available (commented out) |
-| `M I N T E G R A L DOT C O N T` | `integral.cont` | ∮ | disabled - prefix of another name |
 | `M I N T E G R A L DOT C O N T DOT C C W` | `integral.cont.ccw` | ∳ | available (commented out) |
 | `M I N T E G R A L DOT C O N T DOT C W` | `integral.cont.cw` | ∲ | available (commented out) |
 | `M I N T E G R A L DOT C W` | `integral.cw` | ∱ | available (commented out) |
@@ -727,9 +728,8 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M I N T E G R A L DOT T R I P L E` | `integral.triple` | ∭ | available (commented out) |
 | `M I N T E G R A L DOT U N I O N` | `integral.union` | ⨚ | available (commented out) |
 | `M I N T E G R A L DOT V O L` | `integral.vol` | ∰ | available (commented out) |
-| `M I N T E R` | `inter` | ∩ | active |
+| `M I N T E R` | `inter` | ∩ | available (commented out) |
 | `M I N T E R DOT A N D` | `inter.and` | ⩄ | available (commented out) |
-| `M I N T E R DOT B I G` | `inter.big` | ⋂ | disabled - prefix of another name |
 | `M I N T E R DOT D O T` | `inter.dot` | ⩀ | available (commented out) |
 | `M I N T E R DOT D O U B L E` | `inter.double` | ⋒ | available (commented out) |
 | `M I N T E R DOT S E R I F` | `inter.serif` | ∩\vs{1} | available (commented out) |
@@ -755,13 +755,18 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M K N I G H T DOT B L A C K` | `knight.black` | ♞ | available (commented out) |
 | `M K N I G H T DOT W H I T E` | `knight.white` | ♘ | available (commented out) |
 | `M L A M B D A` | `lambda` | λ | available (commented out) |
-| `M L A P L A C E` | `laplace` | ∆ | available (commented out) |
+| `M L A P L A C E` | `laplace` | ∆ | active |
 | `M L A R I` | `lari` | ₾ | available (commented out) |
-| `M L A T` | `lat` | ⪫ | available (commented out) |
+| `M L A T` | `lat` | ⪫ | active |
 | `M L A T DOT E Q` | `lat.eq` | ⪭ | available (commented out) |
 | `M L A T DOT E Q DOT S L A N T` | `lat.eq.slant` | ⪭\vs{1} | available (commented out) |
+| `M L E F T R I G H T A R R O W` | `leftrightarrow` | ↔ | available (commented out) |
+| `M L E Q` | `leq` | ≤ | available (commented out) |
+| `M L E Q S L A N T` | `leqslant` | ⩽ | available (commented out) |
 | `M L F` | `lf` | ␊ // Line Feed | available (commented out) |
 | `M L I R A` | `lira` | ₺ | available (commented out) |
+| `M L O N G L E F T A R R O W` | `longleftarrow` | ⟵ | available (commented out) |
+| `M L O N G R I G H T A R R O W` | `longrightarrow` | ⟶ | available (commented out) |
 | `M L O Z E N G E DOT F I L L E D` | `lozenge.filled` | ⧫ | available (commented out) |
 | `M L O Z E N G E DOT F I L L E D DOT M E D I U M` | `lozenge.filled.medium` | ⬧ | available (commented out) |
 | `M L O Z E N G E DOT F I L L E D DOT S M A L L` | `lozenge.filled.small` | ⬪ | available (commented out) |
@@ -780,11 +785,9 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M L T DOT D O T` | `lt.dot` | ⋖ | available (commented out) |
 | `M L T DOT D O U B L E` | `lt.double` | ≪ | available (commented out) |
 | `M L T DOT D O U B L E DOT N E S T E D` | `lt.double.nested` | ⪡ | available (commented out) |
-| `M L T DOT E Q` | `lt.eq` | ≤ | disabled - prefix of another name |
 | `M L T DOT E Q DOT G T` | `lt.eq.gt` | ⋚ | available (commented out) |
 | `M L T DOT E Q DOT G T DOT S L A N T` | `lt.eq.gt.slant` | ⋚\vs{1} | available (commented out) |
 | `M L T DOT E Q DOT N O T` | `lt.eq.not` | ≰ | available (commented out) |
-| `M L T DOT E Q DOT S L A N T` | `lt.eq.slant` | ⩽ | disabled - prefix of another name |
 | `M L T DOT E Q U I V` | `lt.equiv` | ≦ | available (commented out) |
 | `M L T DOT E Q U I V DOT S L A N T` | `lt.equiv.slant` | ⫹ | available (commented out) |
 | `M L T DOT G T` | `lt.gt` | ≶ | available (commented out) |
@@ -801,7 +804,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M L T DOT T I L D E DOT S L A N T` | `lt.tilde.slant` | ≲\vs{1} | available (commented out) |
 | `M L T DOT T R I P L E` | `lt.triple` | ⋘ | available (commented out) |
 | `M L T DOT T R I P L E DOT N E S T E D` | `lt.triple.nested` | ⫷ | available (commented out) |
-| `M M A C R O N` | `macron` | ¯ | available (commented out) |
+| `M M A C R O N` | `macron` | ¯ | active |
 | `M M A L E` | `male` | ♂ | available (commented out) |
 | `M M A L E DOT D O U B L E` | `male.double` | ⚣ | available (commented out) |
 | `M M A L E DOT F E M A L E` | `male.female` | ⚤ | available (commented out) |
@@ -810,27 +813,29 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M M A L E DOT S T R O K E DOT T` | `male.stroke.t` | ⚨ | available (commented out) |
 | `M M A L T E S E` | `maltese` | ✠ | available (commented out) |
 | `M M A N A T` | `manat` | ₼ | available (commented out) |
-| `M M A P S F R O M` | `mapsfrom` | ↤ | available (commented out) |
+| `M M A P S F R O M` | `mapsfrom` | ↤ | active |
 | `M M A P S F R O M DOT L O N G` | `mapsfrom.long` | ⟻ | available (commented out) |
-| `M M A P S T O` | `mapsto` | ↦ | available (commented out) |
+| `M M A P S T O` | `mapsto` | ↦ | active |
+| `M M A P S T O U` | `mapsto` | ↦ | disabled - prefix of another name |
 | `M M A P S T O DOT L O N G` | `mapsto.long` | ⟼ | available (commented out) |
 | `M M A R S` | `mars` | ♂ | available (commented out) |
 | `M M A S C U L I N E` | `masculine` | º | available (commented out) |
+| `M M E A S U R E D A N G L E` | `measuredangle` | ∟ | available (commented out) |
 | `M M E R C U R Y` | `mercury` | ☿ | available (commented out) |
 | `M M I N U S` | `minus` | − | active |
 | `M M I N U S DOT D O T` | `minus.dot` | ∸ | available (commented out) |
 | `M M I N U S DOT O` | `minus.o` | ⊖ | available (commented out) |
-| `M M I N U S DOT P L U S` | `minus.plus` | ∓ | available (commented out) |
 | `M M I N U S DOT S Q U A R E` | `minus.square` | ⊟ | available (commented out) |
 | `M M I N U S DOT T I L D E` | `minus.tilde` | ≂ | available (commented out) |
 | `M M I N U S DOT T R I A N G L E` | `minus.triangle` | ⨺ | available (commented out) |
 | `M M I N Y` | `miny` | ⧿ | available (commented out) |
-| `M M O D E L S` | `models` | ⊧ | available (commented out) |
+| `M M O D E L S` | `models` | ⊧ | active |
+| `M M P` | `mp` | ∓ | available (commented out) |
 | `M M U` | `mu` | μ | available (commented out) |
-| `M M U L T I M A P` | `multimap` | ⊸ | available (commented out) |
+| `M M U L T I M A P` | `multimap` | ⊸ | active |
 | `M M U L T I M A P DOT D O U B L E` | `multimap.double` | ⧟ | available (commented out) |
-| `M M U S T A C H E DOT L` | `mustache.l` | ⎰ | available (commented out) |
-| `M M U S T A C H E DOT R` | `mustache.r` | ⎱ | available (commented out) |
+| `M M U S T A C H E DOT L` | `mustache.l` | ⎰ | active |
+| `M M U S T A C H E DOT R` | `mustache.r` | ⎱ | active |
 | `M N A B L A` | `nabla` | ∇ | active |
 | `M N A I R A` | `naira` | ₦ | available (commented out) |
 | `M N A K` | `nak` | ␕ // Negative AcKnowledge | available (commented out) |
@@ -839,6 +844,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M N A T U R A L DOT T` | `natural.t` | 𝄮 | available (commented out) |
 | `M N E P T U N E` | `neptune` | ♆ | available (commented out) |
 | `M N E P T U N E DOT A L T` | `neptune.alt` | ⯉ | available (commented out) |
+| `M N E Q U I V` | `nequiv` | ≢ | available (commented out) |
 | `M N E U T E R` | `neuter` | ⚲ | available (commented out) |
 | `M N L` | `nl` | ␤ // New Line | available (commented out) |
 | `M N O T` | `not` | ¬ | active |
@@ -864,20 +870,24 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M N O T H I N G DOT C I R C L E` | `nothing.circle` | ⦲ | available (commented out) |
 | `M N O T H I N G DOT R E V` | `nothing.rev` | ⦰ | available (commented out) |
 | `M N O T H I N G DOT Z E R O` | `nothing.zero` | ∅\vs{1} | available (commented out) |
+| `M N S I M E Q` | `nsimeq` | ≉ | available (commented out) |
+| `M N S U B S E T` | `nsubset` | ⊄ | available (commented out) |
+| `M N S U P S E T` | `nsupset` | ⊅ | available (commented out) |
 | `M N U` | `nu` | ν | available (commented out) |
 | `M N U L` | `nul` | ␀ // NULL | available (commented out) |
-| `M N U M E R O` | `numero` | № | available (commented out) |
-| `M O M E G A X` | `omega` | ω | available (commented out) |
-| `M O M I C R O N X` | `omicron` | ο | available (commented out) |
-| `M O O X` | `oo` | ∞ | available (commented out) |
-| `M O P T I O N X` | `option` | ⌥ | available (commented out) |
-| `M O R X` | `or` | ∨ | active |
-| `M O R DOT B I G X` | `or.big` | ⋁ | available (commented out) |
-| `M O R DOT C U R L Y X` | `or.curly` | ⋎ | available (commented out) |
-| `M O R DOT D O T X` | `or.dot` | ⟇ | available (commented out) |
-| `M O R DOT D O U B L E X` | `or.double` | ⩔ | available (commented out) |
-| `M O R D I N A L X` | `ordinal` | { | available (commented out) |
-| `M O R I G I N A L X` | `original` | ⊶ | available (commented out) |
+| `M N U M E R O` | `numero` | № | active |
+| `M O I N T` | `oint` | ∮ | available (commented out) |
+| `M O M E G A` | `omega` | ω | available (commented out) |
+| `M O M I C R O N` | `omicron` | ο | available (commented out) |
+| `M O O` | `oo` | ∞ | active |
+| `M O P T I O N` | `option` | ⌥ | available (commented out) |
+| `M O R` | `or` | ∨ | active |
+| `M O R DOT B I G` | `or.big` | ⋁ | available (commented out) |
+| `M O R DOT C U R L Y` | `or.curly` | ⋎ | available (commented out) |
+| `M O R DOT D O T` | `or.dot` | ⟇ | available (commented out) |
+| `M O R DOT D O U B L E` | `or.double` | ⩔ | available (commented out) |
+| `M O R D I N A L` | `ordinal` | { | available (commented out) |
+| `M O R I G I N A L` | `original` | ⊶ | available (commented out) |
 | `M P A G E D O W N` | `pagedown` | ⇟ | available (commented out) |
 | `M P A G E D O W N DOT A L T` | `pagedown.alt` | ⎘ | available (commented out) |
 | `M P A G E U P` | `pageup` | ⇞ | available (commented out) |
@@ -894,26 +904,26 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M P A R A L L E L DOT T I L D E` | `parallel.tilde` | ⫳ | available (commented out) |
 | `M P A R A L L E L O G R A M DOT F I L L E D` | `parallelogram.filled` | ▰ | available (commented out) |
 | `M P A R A L L E L O G R A M DOT S T R O K E D` | `parallelogram.stroked` | ▱ | available (commented out) |
-| `M P A R E N DOT B` | `paren.b` | ⏝ | available (commented out) |
-| `M P A R E N DOT L` | `paren.l` | ( | available (commented out) |
+| `M P A R E N DOT B` | `paren.b` | ⏝ | active |
+| `M P A R E N DOT L` | `paren.l` | ( | active |
 | `M P A R E N DOT L DOT C L O S E D` | `paren.l.closed` | ⦇ | available (commented out) |
 | `M P A R E N DOT L DOT F L A T` | `paren.l.flat` | ⟮ | available (commented out) |
 | `M P A R E N DOT L DOT S T R O K E D` | `paren.l.stroked` | ⦅ | available (commented out) |
-| `M P A R E N DOT R` | `paren.r` | ) | available (commented out) |
+| `M P A R E N DOT R` | `paren.r` | ) | active |
 | `M P A R E N DOT R DOT C L O S E D` | `paren.r.closed` | ⦈ | available (commented out) |
 | `M P A R E N DOT R DOT F L A T` | `paren.r.flat` | ⟯ | available (commented out) |
 | `M P A R E N DOT R DOT S T R O K E D` | `paren.r.stroked` | ⦆ | available (commented out) |
-| `M P A R E N DOT T` | `paren.t` | ⏜ | available (commented out) |
+| `M P A R E N DOT T` | `paren.t` | ⏜ | active |
 | `M P A R T I A L` | `partial` | ∂ | active |
 | `M P A T A C A` | `pataca` | $ | available (commented out) |
 | `M P A W N DOT B L A C K` | `pawn.black` | ♟ | available (commented out) |
 | `M P A W N DOT W H I T E` | `pawn.white` | ♙ | available (commented out) |
 | `M P E E` | `pee` | ℘ | available (commented out) |
-| `M P E N T A DOT F I L L E D` | `penta.filled` | ⬟ | available (commented out) |
+| `M P E N T A DOT F I L L E D` | `penta.filled` | ⬟ | active |
 | `M P E N T A DOT S T R O K E D` | `penta.stroked` | ⬠ | available (commented out) |
-| `M P E R C E N T` | `percent` | % | available (commented out) |
-| `M P E R M I L L E` | `permille` | ‰ | available (commented out) |
-| `M P E R M Y R I A D` | `permyriad` | ‱ | available (commented out) |
+| `M P E R C E N T` | `percent` | % | active |
+| `M P E R M I L L E` | `permille` | ‰ | active |
+| `M P E R M Y R I A D` | `permyriad` | ‱ | active |
 | `M P E R P` | `perp` | ⟂ | active |
 | `M P E R P DOT O` | `perp.o` | ⦹ | available (commented out) |
 | `M P E S O` | `peso` | $ | available (commented out) |
@@ -922,14 +932,13 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M P H I DOT A L T` | `phi.alt` | ϕ | available (commented out) |
 | `M P I` | `pi` | π | available (commented out) |
 | `M P I DOT A L T` | `pi.alt` | ϖ | available (commented out) |
-| `M P I L C R O W` | `pilcrow` | ¶ | available (commented out) |
+| `M P I L C R O W` | `pilcrow` | ¶ | active |
 | `M P I L C R O W DOT R E V` | `pilcrow.rev` | ⁋ | available (commented out) |
 | `M P L A N C K` | `planck` | ħ | available (commented out) |
 | `M P L U S` | `plus` | + | active |
 | `M P L U S DOT D O T` | `plus.dot` | ∔ | available (commented out) |
 | `M P L U S DOT D O U B L E` | `plus.double` | ⧺ | available (commented out) |
 | `M P L U S DOT H A T` | `plus.hat` | ⨣ | available (commented out) |
-| `M P L U S DOT M I N U S` | `plus.minus` | ± | available (commented out) |
 | `M P L U S DOT O` | `plus.o` | ⊕ | available (commented out) |
 | `M P L U S DOT O DOT A R R O W` | `plus.o.arrow` | ⟴ | available (commented out) |
 | `M P L U S DOT O DOT B I G` | `plus.o.big` | ⨁ | available (commented out) |
@@ -938,13 +947,14 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M P L U S DOT S Q U A R E` | `plus.square` | ⊞ | available (commented out) |
 | `M P L U S DOT T R I A N G L E` | `plus.triangle` | ⨹ | available (commented out) |
 | `M P L U S DOT T R I P L E` | `plus.triple` | ⧻ | available (commented out) |
+| `M P M` | `pm` | ± | available (commented out) |
 | `M P O U N D` | `pound` | £ | available (commented out) |
-| `M P O W E R DOT O F F` | `power.off` | ⭘ | available (commented out) |
-| `M P O W E R DOT O N` | `power.on` | ⏽ | available (commented out) |
+| `M P O W E R DOT O F F` | `power.off` | ⭘ | active |
+| `M P O W E R DOT O N` | `power.on` | ⏽ | active |
 | `M P O W E R DOT O N DOT O F F` | `power.on.off` | ⏼ | available (commented out) |
-| `M P O W E R DOT S L E E P` | `power.sleep` | ⏾ | available (commented out) |
+| `M P O W E R DOT S L E E P` | `power.sleep` | ⏾ | active |
 | `M P O W E R DOT S T A N D B Y` | `power.standby` | ⏻ | available (commented out) |
-| `M P R E C` | `prec` | ≺ | available (commented out) |
+| `M P R E C` | `prec` | ≺ | active |
 | `M P R E C DOT A P P R O X` | `prec.approx` | ⪷ | available (commented out) |
 | `M P R E C DOT C U R L Y DOT E Q` | `prec.curly.eq` | ≼ | available (commented out) |
 | `M P R E C DOT C U R L Y DOT E Q DOT N O T` | `prec.curly.eq.not` | ⋠ | available (commented out) |
@@ -963,17 +973,17 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M P R I M E DOT D O U B L E` | `prime.double` | ″ | available (commented out) |
 | `M P R I M E DOT D O U B L E DOT R E V` | `prime.double.rev` | ‶ | available (commented out) |
 | `M P R I M E DOT Q U A D` | `prime.quad` | ⁗ | available (commented out) |
-| `M P R I M E DOT R E V` | `prime.rev` | ‵ | disabled - prefix of another name |
+| `M P R I M E DOT R E V` | `prime.rev` | ‵ | available (commented out) |
 | `M P R I M E DOT T R I P L E` | `prime.triple` | ‴ | available (commented out) |
 | `M P R I M E DOT T R I P L E DOT R E V` | `prime.triple.rev` | ‷ | available (commented out) |
 | `M P R O D U C T` | `product` | ∏ | active |
 | `M P R O D U C T DOT C O` | `product.co` | ∐ | available (commented out) |
 | `M P R O P` | `prop` | ∝ | active |
 | `M P S I` | `psi` | ψ | available (commented out) |
-| `M Q E D` | `qed` | ∎ | available (commented out) |
+| `M Q E D` | `qed` | ∎ | active |
 | `M Q U E E N DOT B L A C K` | `queen.black` | ♛ | available (commented out) |
 | `M Q U E E N DOT W H I T E` | `queen.white` | ♕ | available (commented out) |
-| `M Q U E S T` | `quest` | ? | available (commented out) |
+| `M Q U E S T` | `quest` | ? | active |
 | `M Q U E S T DOT D O U B L E` | `quest.double` | ⁇ | available (commented out) |
 | `M Q U E S T DOT E X C L` | `quest.excl` | ⁈ | available (commented out) |
 | `M Q U E S T DOT I N V` | `quest.inv` | ¿ | available (commented out) |
@@ -981,7 +991,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M Q U O T E DOT C H E V R O N DOT L DOT S I N G L E` | `quote.chevron.l.single` | ‹ | available (commented out) |
 | `M Q U O T E DOT C H E V R O N DOT R DOT D O U B L E` | `quote.chevron.r.double` | » | available (commented out) |
 | `M Q U O T E DOT C H E V R O N DOT R DOT S I N G L E` | `quote.chevron.r.single` | › | available (commented out) |
-| `M Q U O T E DOT D O U B L E` | `quote.double` | " | available (commented out) |
+| `M Q U O T E DOT D O U B L E` | `quote.double` | " | active |
 | `M Q U O T E DOT H I G H DOT D O U B L E` | `quote.high.double` | ‟ | available (commented out) |
 | `M Q U O T E DOT H I G H DOT S I N G L E` | `quote.high.single` | ‛ | available (commented out) |
 | `M Q U O T E DOT L DOT D O U B L E` | `quote.l.double` | “ | available (commented out) |
@@ -990,8 +1000,8 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M Q U O T E DOT L O W DOT S I N G L E` | `quote.low.single` | ‚ | available (commented out) |
 | `M Q U O T E DOT R DOT D O U B L E` | `quote.r.double` | ” | available (commented out) |
 | `M Q U O T E DOT R DOT S I N G L E` | `quote.r.single` | ’ | available (commented out) |
-| `M Q U O T E DOT S I N G L E` | `quote.single` | ' | available (commented out) |
-| `M R A T I O` | `ratio` | ∶ | available (commented out) |
+| `M Q U O T E DOT S I N G L E` | `quote.single` | ' | active |
+| `M R A T I O` | `ratio` | ∶ | active |
 | `M R E C T DOT F I L L E D DOT H` | `rect.filled.h` | ▬ | available (commented out) |
 | `M R E C T DOT F I L L E D DOT V` | `rect.filled.v` | ▮ | available (commented out) |
 | `M R E C T DOT S T R O K E D DOT H` | `rect.stroked.h` | ▭ | available (commented out) |
@@ -1018,8 +1028,8 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M R U P E E DOT T A M I L` | `rupee.tamil` | ௹ | available (commented out) |
 | `M R U P E E DOT W A N C H O` | `rupee.wancho` | 𞋿 | available (commented out) |
 | `M S A T U R N` | `saturn` | ♄ | available (commented out) |
-| `M S E C T I O N` | `section` | § | available (commented out) |
-| `M S E M I` | `semi` | ; | available (commented out) |
+| `M S E C T I O N` | `section` | § | active |
+| `M S E M I` | `semi` | ; | active |
 | `M S E M I DOT I N V` | `semi.inv` | ⸵ | available (commented out) |
 | `M S E M I DOT R E V` | `semi.rev` | ⁏ | available (commented out) |
 | `M S H A` | `sha` | ш | available (commented out) |
@@ -1029,26 +1039,27 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M S H A R P DOT Q U A R T E R` | `sharp.quarter` | 𝄲 | available (commented out) |
 | `M S H A R P DOT T` | `sharp.t` | 𝄰 | available (commented out) |
 | `M S H E K E L` | `shekel` | ₪ | available (commented out) |
-| `M S H E L L DOT B` | `shell.b` | ⏡ | available (commented out) |
-| `M S H E L L DOT L` | `shell.l` | ❲ | available (commented out) |
+| `M S H E L L DOT B` | `shell.b` | ⏡ | active |
+| `M S H E L L DOT L` | `shell.l` | ❲ | active |
 | `M S H E L L DOT L DOT F I L L E D` | `shell.l.filled` | ⦗ | available (commented out) |
 | `M S H E L L DOT L DOT S T R O K E D` | `shell.l.stroked` | ⟬ | available (commented out) |
-| `M S H E L L DOT R` | `shell.r` | ❳ | available (commented out) |
+| `M S H E L L DOT R` | `shell.r` | ❳ | active |
 | `M S H E L L DOT R DOT F I L L E D` | `shell.r.filled` | ⦘ | available (commented out) |
 | `M S H E L L DOT R DOT S T R O K E D` | `shell.r.stroked` | ⟭ | available (commented out) |
-| `M S H E L L DOT T` | `shell.t` | ⏠ | available (commented out) |
+| `M S H E L L DOT T` | `shell.t` | ⏠ | active |
 | `M S H I F T` | `shift` | ⇧ | available (commented out) |
 | `M S I` | `si` | ␏ // Shift In | available (commented out) |
 | `M S I G M A` | `sigma` | σ | available (commented out) |
 | `M S I G M A DOT A L T` | `sigma.alt` | ς | available (commented out) |
-| `M S L A S H` | `slash` | / | available (commented out) |
+| `M S I M E Q` | `simeq` | ≊ | available (commented out) |
+| `M S L A S H` | `slash` | / | active |
 | `M S L A S H DOT B I G` | `slash.big` | ⧸ | available (commented out) |
 | `M S L A S H DOT D O U B L E` | `slash.double` | ⫽ | available (commented out) |
 | `M S L A S H DOT O` | `slash.o` | ⊘ | available (commented out) |
 | `M S L A S H DOT T R I P L E` | `slash.triple` | ⫻ | available (commented out) |
-| `M S M A S H` | `smash` | ⨳ | available (commented out) |
-| `M S M I L E` | `smile` | ⌣ | available (commented out) |
-| `M S M T` | `smt` | ⪪ | available (commented out) |
+| `M S M A S H` | `smash` | ⨳ | active |
+| `M S M I L E` | `smile` | ⌣ | active |
+| `M S M T` | `smt` | ⪪ | active |
 | `M S M T DOT E Q` | `smt.eq` | ⪬ | available (commented out) |
 | `M S M T DOT E Q DOT S L A N T` | `smt.eq.slant` | ⪬\vs{1} | available (commented out) |
 | `M S O` | `so` | ␎ // Shift Out | available (commented out) |
@@ -1075,25 +1086,25 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M S Q U A R E DOT F I L L E D DOT M E D I U M` | `square.filled.medium` | ◼ | available (commented out) |
 | `M S Q U A R E DOT F I L L E D DOT S M A L L` | `square.filled.small` | ◾ | available (commented out) |
 | `M S Q U A R E DOT F I L L E D DOT T I N Y` | `square.filled.tiny` | ▪ | available (commented out) |
-| `M S Q U A R E DOT S T R O K E D` | `square.stroked` | □ | active |
+| `M S Q U A R E DOT S T R O K E D` | `square.stroked` | □ | available (commented out) |
 | `M S Q U A R E DOT S T R O K E D DOT B I G` | `square.stroked.big` | ⬜ | available (commented out) |
 | `M S Q U A R E DOT S T R O K E D DOT D O T T E D` | `square.stroked.dotted` | ⬚ | available (commented out) |
 | `M S Q U A R E DOT S T R O K E D DOT M E D I U M` | `square.stroked.medium` | ◻ | available (commented out) |
 | `M S Q U A R E DOT S T R O K E D DOT R O U N D E D` | `square.stroked.rounded` | ▢ | available (commented out) |
 | `M S Q U A R E DOT S T R O K E D DOT S M A L L` | `square.stroked.small` | ◽ | available (commented out) |
 | `M S Q U A R E DOT S T R O K E D DOT T I N Y` | `square.stroked.tiny` | ▫ | available (commented out) |
-| `M S T A R DOT F I L L E D` | `star.filled` | ★ | available (commented out) |
-| `M S T A R DOT O P` | `star.op` | ⋆ | available (commented out) |
-| `M S T A R DOT S T R O K E D` | `star.stroked` | ☆ | available (commented out) |
+| `M S T A R DOT F I L L E D` | `star.filled` | ★ | active |
+| `M S T A R DOT O P` | `star.op` | ⋆ | active |
+| `M S T A R DOT S T R O K E D` | `star.stroked` | ☆ | active |
 | `M S T X` | `stx` | ␂ // Start of TeXt | available (commented out) |
 | `M S U B` | `sub` | ␚ // SUBstitute | available (commented out) |
+| `M S U B E Q` | `subeq` | ⊆ | available (commented out) |
 | `M S U B S E T` | `subset` | ⊂ | active |
 | `M S U B S E T DOT A P P R O X` | `subset.approx` | ⫉ | available (commented out) |
 | `M S U B S E T DOT C L O S E D` | `subset.closed` | ⫏ | available (commented out) |
 | `M S U B S E T DOT C L O S E D DOT E Q` | `subset.closed.eq` | ⫑ | available (commented out) |
 | `M S U B S E T DOT D O T` | `subset.dot` | ⪽ | available (commented out) |
 | `M S U B S E T DOT D O U B L E` | `subset.double` | ⋐ | available (commented out) |
-| `M S U B S E T DOT E Q` | `subset.eq` | ⊆ | disabled - prefix of another name |
 | `M S U B S E T DOT E Q DOT D O T` | `subset.eq.dot` | ⫃ | available (commented out) |
 | `M S U B S E T DOT E Q DOT N O T` | `subset.eq.not` | ⊈ | available (commented out) |
 | `M S U B S E T DOT E Q DOT S Q` | `subset.eq.sq` | ⊑ | available (commented out) |
@@ -1101,13 +1112,12 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M S U B S E T DOT E Q U I V` | `subset.equiv` | ⫅ | available (commented out) |
 | `M S U B S E T DOT N E Q` | `subset.neq` | ⊊ | available (commented out) |
 | `M S U B S E T DOT N E Q U I V` | `subset.nequiv` | ⫋ | available (commented out) |
-| `M S U B S E T DOT N O T` | `subset.not` | ⊄ | available (commented out) |
 | `M S U B S E T DOT P L U S` | `subset.plus` | ⪿ | available (commented out) |
 | `M S U B S E T DOT S Q` | `subset.sq` | ⊏ | available (commented out) |
 | `M S U B S E T DOT S Q DOT N E Q` | `subset.sq.neq` | ⋤ | available (commented out) |
 | `M S U B S E T DOT T I L D E` | `subset.tilde` | ⫇ | available (commented out) |
 | `M S U B S E T DOT T I M E S` | `subset.times` | ⫁ | available (commented out) |
-| `M S U C C` | `succ` | ≻ | available (commented out) |
+| `M S U C C` | `succ` | ≻ | active |
 | `M S U C C DOT A P P R O X` | `succ.approx` | ⪸ | available (commented out) |
 | `M S U C C DOT C U R L Y DOT E Q` | `succ.curly.eq` | ≽ | available (commented out) |
 | `M S U C C DOT C U R L Y DOT E Q DOT N O T` | `succ.curly.eq.not` | ⋡ | available (commented out) |
@@ -1133,13 +1143,13 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M S U M` | `sum` | ∑ | active |
 | `M S U M DOT I N T E G R A L` | `sum.integral` | ⨋ | available (commented out) |
 | `M S U N` | `sun` | ☉ | available (commented out) |
+| `M S U P E Q` | `supeq` | ⊇ | available (commented out) |
 | `M S U P S E T` | `supset` | ⊃ | active |
 | `M S U P S E T DOT A P P R O X` | `supset.approx` | ⫊ | available (commented out) |
 | `M S U P S E T DOT C L O S E D` | `supset.closed` | ⫐ | available (commented out) |
 | `M S U P S E T DOT C L O S E D DOT E Q` | `supset.closed.eq` | ⫒ | available (commented out) |
 | `M S U P S E T DOT D O T` | `supset.dot` | ⪾ | available (commented out) |
 | `M S U P S E T DOT D O U B L E` | `supset.double` | ⋑ | available (commented out) |
-| `M S U P S E T DOT E Q` | `supset.eq` | ⊇ | disabled - prefix of another name |
 | `M S U P S E T DOT E Q DOT D O T` | `supset.eq.dot` | ⫄ | available (commented out) |
 | `M S U P S E T DOT E Q DOT N O T` | `supset.eq.not` | ⊉ | available (commented out) |
 | `M S U P S E T DOT E Q DOT S Q` | `supset.eq.sq` | ⊒ | available (commented out) |
@@ -1147,7 +1157,6 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M S U P S E T DOT E Q U I V` | `supset.equiv` | ⫆ | available (commented out) |
 | `M S U P S E T DOT N E Q` | `supset.neq` | ⊋ | available (commented out) |
 | `M S U P S E T DOT N E Q U I V` | `supset.nequiv` | ⫌ | available (commented out) |
-| `M S U P S E T DOT N O T` | `supset.not` | ⊅ | available (commented out) |
 | `M S U P S E T DOT P L U S` | `supset.plus` | ⫀ | available (commented out) |
 | `M S U P S E T DOT S Q` | `supset.sq` | ⊐ | available (commented out) |
 | `M S U P S E T DOT S Q DOT N E Q` | `supset.sq.neq` | ⋥ | available (commented out) |
@@ -1156,19 +1165,19 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M S Y N` | `syn` | ␖ // SYNchronous idle | available (commented out) |
 | `M T A B` | `tab` | ↹ | available (commented out) |
 | `M T A B DOT R` | `tab.r` | ⇥ | available (commented out) |
-| `M T A C K DOT B` | `tack.b` | ⊤ | available (commented out) |
+| `M T A C K DOT B` | `tack.b` | ⊤ | active |
 | `M T A C K DOT B DOT B I G` | `tack.b.big` | ⟙ | available (commented out) |
 | `M T A C K DOT B DOT D O U B L E DOT S H O R T` | `tack.b.double.short` | ⫧ | available (commented out) |
 | `M T A C K DOT B DOT S H O R T` | `tack.b.short` | ⫟ | available (commented out) |
 | `M T A C K DOT B B` | `tack.bb` | ⫪ | available (commented out) |
-| `M T A C K DOT L` | `tack.l` | ⊣ | available (commented out) |
+| `M T A C K DOT L` | `tack.l` | ⊣ | active |
 | `M T A C K DOT L DOT D O U B L E` | `tack.l.double` | ⫣ | available (commented out) |
 | `M T A C K DOT L DOT L O N G` | `tack.l.long` | ⟞ | available (commented out) |
 | `M T A C K DOT L DOT R` | `tack.l.r` | ⟛ | available (commented out) |
 | `M T A C K DOT L DOT S H O R T` | `tack.l.short` | ⫞ | available (commented out) |
 | `M T A C K DOT L L` | `tack.ll` | ⫤ | available (commented out) |
 | `M T A C K DOT L L DOT D O U B L E` | `tack.ll.double` | ⫥ | available (commented out) |
-| `M T A C K DOT R` | `tack.r` | ⊢ | available (commented out) |
+| `M T A C K DOT R` | `tack.r` | ⊢ | active |
 | `M T A C K DOT R DOT D O U B L E` | `tack.r.double` | ⊩ | available (commented out) |
 | `M T A C K DOT R DOT D O U B L E DOT N O T` | `tack.r.double.not` | ⊮ | available (commented out) |
 | `M T A C K DOT R DOT L O N G` | `tack.r.long` | ⟝ | available (commented out) |
@@ -1181,7 +1190,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M T A C K DOT R R DOT N O T` | `tack.rr.not` | ⊭ | available (commented out) |
 | `M T A C K DOT R R DOT S H O R T` | `tack.rr.short` | ⊧ | available (commented out) |
 | `M T A C K DOT R R R` | `tack.rrr` | ⫢ | available (commented out) |
-| `M T A C K DOT T` | `tack.t` | ⊥ | available (commented out) |
+| `M T A C K DOT T` | `tack.t` | ⊥ | active |
 | `M T A C K DOT T DOT B I G` | `tack.t.big` | ⟘ | available (commented out) |
 | `M T A C K DOT T DOT D O U B L E DOT S H O R T` | `tack.t.double.short` | ⫨ | available (commented out) |
 | `M T A C K DOT T DOT S H O R T` | `tack.t.short` | ⫠ | available (commented out) |
@@ -1193,23 +1202,23 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M T H E R E F O R E` | `therefore` | ∴ | active |
 | `M T H E T A` | `theta` | θ | available (commented out) |
 | `M T H E T A DOT A L T` | `theta.alt` | ϑ | available (commented out) |
-| `M T I L D E DOT B A S I C` | `tilde.basic` | ~ | available (commented out) |
-| `M T I L D E DOT D O T` | `tilde.dot` | ⩪ | available (commented out) |
-| `M T I L D E DOT E Q` | `tilde.eq` | ≃ | available (commented out) |
+| `M T I L D E DOT B A S I C` | `tilde.basic` | ~ | active |
+| `M T I L D E DOT D O T` | `tilde.dot` | ⩪ | active |
+| `M T I L D E DOT E Q` | `tilde.eq` | ≃ | active |
 | `M T I L D E DOT E Q DOT N O T` | `tilde.eq.not` | ≄ | available (commented out) |
 | `M T I L D E DOT E Q DOT R E V` | `tilde.eq.rev` | ⋍ | available (commented out) |
 | `M T I L D E DOT E Q U I V` | `tilde.equiv` | ≅ | available (commented out) |
 | `M T I L D E DOT E Q U I V DOT N O T` | `tilde.equiv.not` | ≇ | available (commented out) |
-| `M T I L D E DOT G T` | `tilde.gt` | ⪞ | available (commented out) |
+| `M T I L D E DOT G T` | `tilde.gt` | ⪞ | active |
 | `M T I L D E DOT G T DOT S L A N T` | `tilde.gt.slant` | ⪞\vs{1} | available (commented out) |
-| `M T I L D E DOT L T` | `tilde.lt` | ⪝ | available (commented out) |
+| `M T I L D E DOT L T` | `tilde.lt` | ⪝ | active |
 | `M T I L D E DOT L T DOT S L A N T` | `tilde.lt.slant` | ⪝\vs{1} | available (commented out) |
-| `M T I L D E DOT N E Q U I V` | `tilde.nequiv` | ≆ | available (commented out) |
-| `M T I L D E DOT N O T` | `tilde.not` | ≁ | available (commented out) |
-| `M T I L D E DOT O P` | `tilde.op` | ∼ | available (commented out) |
-| `M T I L D E DOT R E V` | `tilde.rev` | ∽ | available (commented out) |
+| `M T I L D E DOT N E Q U I V` | `tilde.nequiv` | ≆ | active |
+| `M T I L D E DOT N O T` | `tilde.not` | ≁ | active |
+| `M T I L D E DOT O P` | `tilde.op` | ∼ | active |
+| `M T I L D E DOT R E V` | `tilde.rev` | ∽ | active |
 | `M T I L D E DOT R E V DOT E Q U I V` | `tilde.rev.equiv` | ≌ | available (commented out) |
-| `M T I L D E DOT T R I P L E` | `tilde.triple` | ≋ | available (commented out) |
+| `M T I L D E DOT T R I P L E` | `tilde.triple` | ≋ | active |
 | `M T I M E S` | `times` | × | active |
 | `M T I M E S DOT B I G` | `times.big` | ⨉ | available (commented out) |
 | `M T I M E S DOT D I V` | `times.div` | ⋇ | available (commented out) |
@@ -1257,13 +1266,12 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M T R I A N G L E DOT S T R O K E D DOT S M A L L DOT L` | `triangle.stroked.small.l` | ◃ | available (commented out) |
 | `M T R I A N G L E DOT S T R O K E D DOT S M A L L DOT R` | `triangle.stroked.small.r` | ▹ | available (commented out) |
 | `M T R I A N G L E DOT S T R O K E D DOT S M A L L DOT T` | `triangle.stroked.small.t` | ▵ | available (commented out) |
-| `M T R I A N G L E DOT S T R O K E D DOT T` | `triangle.stroked.t` | △ | active |
+| `M T R I A N G L E DOT S T R O K E D DOT T` | `triangle.stroked.t` | △ | available (commented out) |
 | `M T R I A N G L E DOT S T R O K E D DOT T L` | `triangle.stroked.tl` | ◸ | available (commented out) |
 | `M T R I A N G L E DOT S T R O K E D DOT T R` | `triangle.stroked.tr` | ◹ | available (commented out) |
-| `M U N D E R S C O R E` | `underscore` | _ | available (commented out) |
+| `M U N D E R S C O R E` | `underscore` | _ | active |
 | `M U N I O N` | `union` | ∪ | active |
 | `M U N I O N DOT A R R O W` | `union.arrow` | ⊌ | available (commented out) |
-| `M U N I O N DOT B I G` | `union.big` | ⋃ | disabled - prefix of another name |
 | `M U N I O N DOT D O T` | `union.dot` | ⊍ | available (commented out) |
 | `M U N I O N DOT D O T DOT B I G` | `union.dot.big` | ⨃ | available (commented out) |
 | `M U N I O N DOT D O U B L E` | `union.double` | ⋓ | available (commented out) |
@@ -1282,16 +1290,16 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `M U S` | `us` | ␟ // Unit Separator | available (commented out) |
 | `M V E N U S` | `venus` | ♀ | available (commented out) |
 | `M V T` | `vt` | ␋ // Vertical Tabulation | available (commented out) |
-| `M W I T H O U T` | `without` | ∖ | available (commented out) |
+| `M W I T H O U T` | `without` | ∖ | active |
 | `M W J` | `wj` | ⁠ | available (commented out) |
 | `M W O N` | `won` | ₩ | available (commented out) |
-| `M W R E A T H` | `wreath` | ≀ | available (commented out) |
+| `M W R E A T H` | `wreath` | ≀ | active |
 | `M X I` | `xi` | ξ | available (commented out) |
-| `M X O R` | `xor` | ⊕ | available (commented out) |
+| `M X O R` | `xor` | ⊕ | active |
 | `M X O R DOT B I G` | `xor.big` | ⨁ | available (commented out) |
 | `M Y E N` | `yen` | ¥ | available (commented out) |
 | `M Y U A N` | `yuan` | ¥ | available (commented out) |
-| `M Z E R O` | `zero` | 0 | available (commented out) |
+| `M Z E R O` | `zero` | 0 | active |
 | `M Z E R O DOT S L A S H E D` | `zero.slashed` | 0\vs{1} | available (commented out) |
 | `M Z E T A` | `zeta` | ζ | available (commented out) |
 | `M Z W J` | `zwj` | ‍ | available (commented out) |
@@ -1328,21 +1336,18 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E A R M DOT M U S C L E` | `arm.muscle` | 💪 | available (commented out) |
 | `E A R M DOT S E L F I E` | `arm.selfie` | 🤳 | available (commented out) |
 | `E A R R O W DOT B DOT C U R V E` | `arrow.b.curve` | ⤵ | available (commented out) |
-| `E A R R O W DOT B DOT F I L L E D` | `arrow.b.filled` | ⬇ | active |
+| `E A R R O W DOT B DOT F I L L E D` | `arrow.b.filled` | ⬇ | available (commented out) |
 | `E A R R O W DOT B L` | `arrow.bl` | ↙ | available (commented out) |
 | `E A R R O W DOT B R` | `arrow.br` | ↘ | available (commented out) |
 | `E A R R O W DOT L DOT B A C K` | `arrow.l.back` | 🔙 | available (commented out) |
 | `E A R R O W DOT L DOT E N D` | `arrow.l.end` | 🔚 | available (commented out) |
-| `E A R R O W DOT L DOT F I L L E D` | `arrow.l.filled` | ⬅ | active |
-| `E A R R O W DOT L DOT H O O K` | `arrow.l.hook` | ↩ | available (commented out) |
-| `E A R R O W DOT L DOT R` | `arrow.l.r` | ↔ | available (commented out) |
+| `E A R R O W DOT L DOT F I L L E D` | `arrow.l.filled` | ⬅ | available (commented out) |
 | `E A R R O W DOT L DOT R DOT O N` | `arrow.l.r.on` | 🔛 | available (commented out) |
-| `E A R R O W DOT R DOT F I L L E D` | `arrow.r.filled` | ➡ | active |
-| `E A R R O W DOT R DOT H O O K` | `arrow.r.hook` | ↪ | available (commented out) |
+| `E A R R O W DOT R DOT F I L L E D` | `arrow.r.filled` | ➡ | available (commented out) |
 | `E A R R O W DOT R DOT S O O N` | `arrow.r.soon` | 🔜 | available (commented out) |
 | `E A R R O W DOT T DOT B` | `arrow.t.b` | ↕ | available (commented out) |
 | `E A R R O W DOT T DOT C U R V E` | `arrow.t.curve` | ⤴ | available (commented out) |
-| `E A R R O W DOT T DOT F I L L E D` | `arrow.t.filled` | ⬆ | active |
+| `E A R R O W DOT T DOT F I L L E D` | `arrow.t.filled` | ⬆ | available (commented out) |
 | `E A R R O W DOT T DOT T O P` | `arrow.t.top` | 🔝 | available (commented out) |
 | `E A R R O W DOT T L` | `arrow.tl` | ↖ | available (commented out) |
 | `E A R R O W DOT T R` | `arrow.tr` | ↗ | available (commented out) |
@@ -1397,7 +1402,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E B E E T` | `beet` | 🫜 | available (commented out) |
 | `E B E E T L E` | `beetle` | 🪲 | available (commented out) |
 | `E B E E T L E DOT L A D Y` | `beetle.lady` | 🐞 | available (commented out) |
-| `E B E L L` | `bell` | 🔔 | active |
+| `E B E L L` | `bell` | 🔔 | available (commented out) |
 | `E B E L L DOT D I N G` | `bell.ding` | 🛎 | available (commented out) |
 | `E B E L L DOT N O T` | `bell.not` | 🔕 | available (commented out) |
 | `E B E N T O` | `bento` | 🍱 | available (commented out) |
@@ -1463,7 +1468,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E B U B B L E T E A` | `bubbletea` | 🧋 | available (commented out) |
 | `E B U C K E T` | `bucket` | 🪣 | available (commented out) |
 | `E B U F F A L O DOT W A T E R` | `buffalo.water` | 🐃 | available (commented out) |
-| `E B U G` | `bug` | 🐛 | active |
+| `E B U G` | `bug` | 🐛 | available (commented out) |
 | `E B U I L D E R` | `builder` | 👷 | available (commented out) |
 | `E B U R G E R` | `burger` | 🍔 | available (commented out) |
 | `E B U R R I T O` | `burrito` | 🌯 | available (commented out) |
@@ -1477,18 +1482,18 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E B U T T O N` | `button` | 🔲 | available (commented out) |
 | `E B U T T O N DOT A L T` | `button.alt` | 🔳 | available (commented out) |
 | `E B U T T O N DOT R A D I O` | `button.radio` | 🔘 | available (commented out) |
-| `E C A B I N E T DOT F I L E` | `cabinet.file` | 🗄 | available (commented out) |
+| `E C A B I N E T DOT F I L E` | `cabinet.file` | 🗄 | active |
 | `E C A B L E C A R` | `cablecar` | 🚠 | available (commented out) |
 | `E C A B L E C A R DOT S M A L L` | `cablecar.small` | 🚡 | available (commented out) |
 | `E C A C T U S` | `cactus` | 🌵 | available (commented out) |
-| `E C A K E` | `cake` | 🎂 | available (commented out) |
+| `E C A K E` | `cake` | 🎂 | active |
 | `E C A K E DOT F I S H` | `cake.fish` | 🍥 | available (commented out) |
 | `E C A K E DOT M O O N` | `cake.moon` | 🥮 | available (commented out) |
 | `E C A K E DOT S L I C E` | `cake.slice` | 🍰 | available (commented out) |
 | `E C A L E N D A R` | `calendar` | 📅 | active |
 | `E C A L E N D A R DOT S P I R A L` | `calendar.spiral` | 🗓 | available (commented out) |
 | `E C A L E N D A R DOT T E A R O F F` | `calendar.tearoff` | 📆 | available (commented out) |
-| `E C A M E L` | `camel` | 🐫 | available (commented out) |
+| `E C A M E L` | `camel` | 🐫 | active |
 | `E C A M E L DOT D R O M E D A R` | `camel.dromedar` | 🐪 | available (commented out) |
 | `E C A M E R A` | `camera` | 📷 | available (commented out) |
 | `E C A M E R A DOT F L A S H` | `camera.flash` | 📸 | available (commented out) |
@@ -1496,11 +1501,11 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E C A M E R A DOT M O V I E DOT B O X` | `camera.movie.box` | 🎦 | available (commented out) |
 | `E C A M E R A DOT V I D E O` | `camera.video` | 📹 | available (commented out) |
 | `E C A M P I N G` | `camping` | 🏕 | available (commented out) |
-| `E C A N` | `can` | 🥫 | available (commented out) |
+| `E C A N` | `can` | 🥫 | active |
 | `E C A N D L E` | `candle` | 🕯 | available (commented out) |
 | `E C A N D Y` | `candy` | 🍬 | available (commented out) |
 | `E C A N E` | `cane` | 🦯 | available (commented out) |
-| `E C A R` | `car` | 🚗 | available (commented out) |
+| `E C A R` | `car` | 🚗 | active |
 | `E C A R DOT F R O N T` | `car.front` | 🚘 | available (commented out) |
 | `E C A R DOT P I C K U P` | `car.pickup` | 🛻 | available (commented out) |
 | `E C A R DOT P O L I C E` | `car.police` | 🚓 | available (commented out) |
@@ -1516,7 +1521,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E C A S S E T T E` | `cassette` | 📼 | available (commented out) |
 | `E C A S T L E DOT E U` | `castle.eu` | 🏰 | available (commented out) |
 | `E C A S T L E DOT J P` | `castle.jp` | 🏯 | available (commented out) |
-| `E C A T` | `cat` | 🐈 | available (commented out) |
+| `E C A T` | `cat` | 🐈 | active |
 | `E C A T DOT F A C E` | `cat.face` | 🐱 | available (commented out) |
 | `E C A T DOT F A C E DOT A N G R Y` | `cat.face.angry` | 😾 | available (commented out) |
 | `E C A T DOT F A C E DOT C R Y` | `cat.face.cry` | 😿 | available (commented out) |
@@ -1529,17 +1534,17 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E C A T DOT F A C E DOT S M I R K` | `cat.face.smirk` | 😼 | available (commented out) |
 | `E C H A I N` | `chain` | 🔗 | active |
 | `E C H A I N S` | `chains` | ⛓ | available (commented out) |
-| `E C H A I R` | `chair` | 🪑 | available (commented out) |
+| `E C H A I R` | `chair` | 🪑 | active |
 | `E C H A M P A G N E` | `champagne` | 🍾 | available (commented out) |
-| `E C H A R T DOT B A R` | `chart.bar` | 📊 | available (commented out) |
-| `E C H A R T DOT D O W N` | `chart.down` | 📉 | available (commented out) |
-| `E C H A R T DOT U P` | `chart.up` | 📈 | available (commented out) |
+| `E C H A R T DOT B A R` | `chart.bar` | 📊 | active |
+| `E C H A R T DOT D O W N` | `chart.down` | 📉 | active |
+| `E C H A R T DOT U P` | `chart.up` | 📈 | active |
 | `E C H A R T DOT Y E N DOT U P` | `chart.yen.up` | 💹 | available (commented out) |
 | `E C H E C K M A R K DOT B O X` | `checkmark.box` | ✅ | active |
-| `E C H E C K M A R K DOT H E A V Y` | `checkmark.heavy` | ✔ | available (commented out) |
+| `E C H E C K M A R K DOT H E A V Y` | `checkmark.heavy` | ✔ | active |
 | `E C H E E S E` | `cheese` | 🧀 | available (commented out) |
 | `E C H E R R I E S` | `cherries` | 🍒 | available (commented out) |
-| `E C H E S S` | `chess` | ♟ | available (commented out) |
+| `E C H E S S` | `chess` | ♟ | active |
 | `E C H E S T N U T` | `chestnut` | 🌰 | available (commented out) |
 | `E C H I C K E N` | `chicken` | 🐔 | available (commented out) |
 | `E C H I C K E N DOT B A B Y` | `chicken.baby` | 🐥 | available (commented out) |
@@ -1547,26 +1552,26 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E C H I C K E N DOT B A B Y DOT H E A D` | `chicken.baby.head` | 🐤 | available (commented out) |
 | `E C H I C K E N DOT L E G` | `chicken.leg` | 🍗 | available (commented out) |
 | `E C H I C K E N DOT M A L E` | `chicken.male` | 🐓 | available (commented out) |
-| `E C H I L D` | `child` | 🧒 | available (commented out) |
+| `E C H I L D` | `child` | 🧒 | active |
 | `E C H I P M U N K` | `chipmunk` | 🐿 | available (commented out) |
-| `E C H O C O L A T E` | `chocolate` | 🍫 | available (commented out) |
+| `E C H O C O L A T E` | `chocolate` | 🍫 | active |
 | `E C H O P S T I C K S` | `chopsticks` | 🥢 | available (commented out) |
 | `E C H U R C H` | `church` | ⛪ | available (commented out) |
 | `E C H U R C H DOT L O V E` | `church.love` | 💒 | available (commented out) |
 | `E C I G A R E T T E` | `cigarette` | 🚬 | available (commented out) |
 | `E C I G A R E T T E DOT N O T` | `cigarette.not` | 🚭 | available (commented out) |
-| `E C I R C L E DOT B L A C K` | `circle.black` | ⚫ | available (commented out) |
-| `E C I R C L E DOT B L U E` | `circle.blue` | 🔵 | available (commented out) |
+| `E C I R C L E DOT B L A C K` | `circle.black` | ⚫ | active |
+| `E C I R C L E DOT B L U E` | `circle.blue` | 🔵 | active |
 | `E C I R C L E DOT B R O W N` | `circle.brown` | 🟤 | available (commented out) |
-| `E C I R C L E DOT G R E E N` | `circle.green` | 🟢 | available (commented out) |
-| `E C I R C L E DOT O R A N G E` | `circle.orange` | 🟠 | available (commented out) |
-| `E C I R C L E DOT P U R P L E` | `circle.purple` | 🟣 | available (commented out) |
-| `E C I R C L E DOT R E D` | `circle.red` | 🔴 | available (commented out) |
+| `E C I R C L E DOT G R E E N` | `circle.green` | 🟢 | active |
+| `E C I R C L E DOT O R A N G E` | `circle.orange` | 🟠 | active |
+| `E C I R C L E DOT P U R P L E` | `circle.purple` | 🟣 | active |
+| `E C I R C L E DOT R E D` | `circle.red` | 🔴 | active |
 | `E C I R C L E DOT S T R O K E D` | `circle.stroked` | ⭕ | available (commented out) |
-| `E C I R C L E DOT W H I T E` | `circle.white` | ⚪ | available (commented out) |
-| `E C I R C L E DOT Y E L L O W` | `circle.yellow` | 🟡 | available (commented out) |
+| `E C I R C L E DOT W H I T E` | `circle.white` | ⚪ | active |
+| `E C I R C L E DOT Y E L L O W` | `circle.yellow` | 🟡 | active |
 | `E C I R C U S` | `circus` | 🎪 | available (commented out) |
-| `E C I T Y` | `city` | 🏙 | available (commented out) |
+| `E C I T Y` | `city` | 🏙 | active |
 | `E C I T Y DOT D U S K` | `city.dusk` | 🌆 | available (commented out) |
 | `E C I T Y DOT N I G H T` | `city.night` | 🌃 | available (commented out) |
 | `E C I T Y DOT S U N S E T` | `city.sunset` | 🌇 | available (commented out) |
@@ -1574,10 +1579,10 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E C L A M P` | `clamp` | 🗜 | available (commented out) |
 | `E C L A P P E R B O A R D` | `clapperboard` | 🎬 | available (commented out) |
 | `E C L I M B I N G` | `climbing` | 🧗 | available (commented out) |
-| `E C L I P` | `clip` | 📎 | active |
+| `E C L I P` | `clip` | 📎 | available (commented out) |
 | `E C L I P B O A R D` | `clipboard` | 📋 | available (commented out) |
 | `E C L I P S` | `clips` | 🖇 | available (commented out) |
-| `E C L O C K DOT A L A R M` | `clock.alarm` | ⏰ | active |
+| `E C L O C K DOT A L A R M` | `clock.alarm` | ⏰ | available (commented out) |
 | `E C L O C K DOT E I G H T` | `clock.eight` | 🕗 | available (commented out) |
 | `E C L O C K DOT E I G H T DOT T H I R T Y` | `clock.eight.thirty` | 🕣 | available (commented out) |
 | `E C L O C K DOT E L E V E N` | `clock.eleven` | 🕚 | available (commented out) |
@@ -1613,20 +1618,20 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E C L O U D DOT S U N DOT H I D D E N` | `cloud.sun.hidden` | 🌥 | available (commented out) |
 | `E C L O U D DOT S U N DOT R A I N` | `cloud.sun.rain` | 🌦 | available (commented out) |
 | `E C L O U D DOT T H U N D E R` | `cloud.thunder` | 🌩 | available (commented out) |
-| `E C O A T` | `coat` | 🧥 | available (commented out) |
+| `E C O A T` | `coat` | 🧥 | active |
 | `E C O A T DOT L A B` | `coat.lab` | 🥼 | available (commented out) |
 | `E C O C K R O A C H` | `cockroach` | 🪳 | available (commented out) |
 | `E C O C K T A I L DOT M A R T I N I` | `cocktail.martini` | 🍸 | available (commented out) |
 | `E C O C K T A I L DOT T R O P I C A L` | `cocktail.tropical` | 🍹 | available (commented out) |
 | `E C O C O N U T` | `coconut` | 🥥 | available (commented out) |
-| `E C O F F E E` | `coffee` | ☕ | available (commented out) |
+| `E C O F F E E` | `coffee` | ☕ | active |
 | `E C O F F I N` | `coffin` | ⚰ | available (commented out) |
-| `E C O I N` | `coin` | 🪙 | available (commented out) |
-| `E C O M E T` | `comet` | ☄ | available (commented out) |
+| `E C O I N` | `coin` | 🪙 | active |
+| `E C O M E T` | `comet` | ☄ | active |
 | `E C O M P A S S` | `compass` | 🧭 | available (commented out) |
-| `E C O M P U T E R` | `computer` | 🖥 | available (commented out) |
+| `E C O M P U T E R` | `computer` | 🖥 | active |
 | `E C O M P U T E R M O U S E` | `computermouse` | 🖱 | available (commented out) |
-| `E C O N F E T T I` | `confetti` | 🎊 | available (commented out) |
+| `E C O N F E T T I` | `confetti` | 🎊 | active |
 | `E C O N S T R U C T I O N` | `construction` | 🚧 | available (commented out) |
 | `E C O N T R O L L E R` | `controller` | 🎮 | available (commented out) |
 | `E C O O K I E` | `cookie` | 🍪 | available (commented out) |
@@ -1634,29 +1639,29 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E C O O K I N G` | `cooking` | 🍳 | available (commented out) |
 | `E C O O L` | `cool` | 🆒 | available (commented out) |
 | `E C O P Y R I G H T` | `copyright` | © | available (commented out) |
-| `E C O R A L` | `coral` | 🪸 | available (commented out) |
-| `E C O R N` | `corn` | 🌽 | available (commented out) |
-| `E C O U C H` | `couch` | 🛋 | available (commented out) |
+| `E C O R A L` | `coral` | 🪸 | active |
+| `E C O R N` | `corn` | 🌽 | active |
+| `E C O U C H` | `couch` | 🛋 | active |
 | `E C O U P L E` | `couple` | 💑 | available (commented out) |
-| `E C O W` | `cow` | 🐄 | available (commented out) |
+| `E C O W` | `cow` | 🐄 | active |
 | `E C O W DOT F A C E` | `cow.face` | 🐮 | available (commented out) |
-| `E C R A B` | `crab` | 🦀 | available (commented out) |
-| `E C R A N E` | `crane` | 🏗 | available (commented out) |
-| `E C R A Y O N` | `crayon` | 🖍 | available (commented out) |
+| `E C R A B` | `crab` | 🦀 | active |
+| `E C R A N E` | `crane` | 🏗 | active |
+| `E C R A Y O N` | `crayon` | 🖍 | active |
 | `E C R I C K E T` | `cricket` | 🦗 | available (commented out) |
 | `E C R I C K E T B A T` | `cricketbat` | 🏏 | available (commented out) |
 | `E C R O C O D I L E` | `crocodile` | 🐊 | available (commented out) |
 | `E C R O I S S A N T` | `croissant` | 🥐 | available (commented out) |
 | `E C R O S S M A R K` | `crossmark` | ❌ | active |
 | `E C R O S S M A R K DOT B O X` | `crossmark.box` | ❎ | available (commented out) |
-| `E C R O W N` | `crown` | 👑 | available (commented out) |
+| `E C R O W N` | `crown` | 👑 | active |
 | `E C R U T C H` | `crutch` | 🩼 | available (commented out) |
 | `E C R Y S T A L` | `crystal` | 🔮 | available (commented out) |
 | `E C U C U M B E R` | `cucumber` | 🥒 | available (commented out) |
 | `E C U P DOT S T R A W` | `cup.straw` | 🥤 | available (commented out) |
 | `E C U P C A K E` | `cupcake` | 🧁 | available (commented out) |
 | `E C U R L I N G` | `curling` | 🥌 | available (commented out) |
-| `E C U R R Y` | `curry` | 🍛 | available (commented out) |
+| `E C U R R Y` | `curry` | 🍛 | active |
 | `E C U S T A R D` | `custard` | 🍮 | available (commented out) |
 | `E C U S T O M S` | `customs` | 🛃 | available (commented out) |
 | `E C U T L E R Y` | `cutlery` | 🍴 | available (commented out) |
@@ -1667,9 +1672,9 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E D A N C I N G DOT B U N N Y DOT W O M E N` | `dancing.bunny.women` | 👯‍♀ | available (commented out) |
 | `E D A N C I N G DOT M A N` | `dancing.man` | 🕺 | available (commented out) |
 | `E D A N C I N G DOT W O M A N` | `dancing.woman` | 💃 | available (commented out) |
-| `E D A R T S` | `darts` | 🎯 | available (commented out) |
+| `E D A R T S` | `darts` | 🎯 | active |
 | `E D A S H DOT W A V E DOT D O U B L E` | `dash.wave.double` | 〰 | available (commented out) |
-| `E D E E R` | `deer` | 🦌 | available (commented out) |
+| `E D E E R` | `deer` | 🦌 | active |
 | `E D E S E R T` | `desert` | 🏜 | available (commented out) |
 | `E D E T E C T I V E` | `detective` | 🕵 | available (commented out) |
 | `E D I A M O N D DOT B L U E` | `diamond.blue` | 🔷 | available (commented out) |
@@ -1677,7 +1682,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E D I A M O N D DOT D O T` | `diamond.dot` | 💠 | available (commented out) |
 | `E D I A M O N D DOT O R A N G E` | `diamond.orange` | 🔶 | available (commented out) |
 | `E D I A M O N D DOT O R A N G E DOT S M A L L` | `diamond.orange.small` | 🔸 | available (commented out) |
-| `E D I E` | `die` | 🎲 | available (commented out) |
+| `E D I E` | `die` | 🎲 | active |
 | `E D I N O DOT P O D` | `dino.pod` | 🦕 | available (commented out) |
 | `E D I N O DOT R E X` | `dino.rex` | 🦖 | available (commented out) |
 | `E D I S C DOT C D` | `disc.cd` | 💿 | available (commented out) |
@@ -1685,45 +1690,45 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E D I S C DOT M I N I` | `disc.mini` | 💽 | available (commented out) |
 | `E D I S C O B A L L` | `discoball` | 🪩 | available (commented out) |
 | `E D I V I N G` | `diving` | 🤿 | available (commented out) |
-| `E D O D O` | `dodo` | 🦤 | available (commented out) |
-| `E D O G` | `dog` | 🐕 | available (commented out) |
+| `E D O D O` | `dodo` | 🦤 | active |
+| `E D O G` | `dog` | 🐕 | active |
 | `E D O G DOT F A C E` | `dog.face` | 🐶 | available (commented out) |
 | `E D O G DOT G U I D E` | `dog.guide` | 🦮 | available (commented out) |
 | `E D O G DOT P O O D L E` | `dog.poodle` | 🐩 | available (commented out) |
 | `E D O L L A R` | `dollar` | 💲 | available (commented out) |
 | `E D O L P H I N` | `dolphin` | 🐬 | available (commented out) |
 | `E D O N K E Y` | `donkey` | 🫏 | available (commented out) |
-| `E D O N U T` | `donut` | 🍩 | available (commented out) |
-| `E D O O R` | `door` | 🚪 | available (commented out) |
+| `E D O N U T` | `donut` | 🍩 | active |
+| `E D O O R` | `door` | 🚪 | active |
 | `E D O V E DOT P E A C E` | `dove.peace` | 🕊 | available (commented out) |
 | `E D R A G O N` | `dragon` | 🐉 | available (commented out) |
 | `E D R A G O N DOT F A C E` | `dragon.face` | 🐲 | available (commented out) |
-| `E D R E S S` | `dress` | 👗 | available (commented out) |
+| `E D R E S S` | `dress` | 👗 | active |
 | `E D R E S S DOT K I M O N O` | `dress.kimono` | 👘 | available (commented out) |
 | `E D R E S S DOT S A R I` | `dress.sari` | 🥻 | available (commented out) |
-| `E D R O P` | `drop` | 💧 | available (commented out) |
+| `E D R O P` | `drop` | 💧 | active |
 | `E D R O P S` | `drops` | 💦 | available (commented out) |
-| `E D R U M` | `drum` | 🥁 | available (commented out) |
+| `E D R U M` | `drum` | 🥁 | active |
 | `E D R U M DOT B I G` | `drum.big` | 🪘 | available (commented out) |
-| `E D U C K` | `duck` | 🦆 | available (commented out) |
+| `E D U C K` | `duck` | 🦆 | active |
 | `E D U M P L I N G` | `dumpling` | 🥟 | available (commented out) |
-| `E E A G L E` | `eagle` | 🦅 | available (commented out) |
-| `E E A R` | `ear` | 👂 | available (commented out) |
+| `E E A G L E` | `eagle` | 🦅 | active |
+| `E E A R` | `ear` | 👂 | active |
 | `E E A R DOT A I D` | `ear.aid` | 🦻 | available (commented out) |
-| `E E G G` | `egg` | 🥚 | available (commented out) |
+| `E E G G` | `egg` | 🥚 | active |
 | `E E I G H T E E N DOT N O T` | `eighteen.not` | 🔞 | available (commented out) |
 | `E E L E P H A N T` | `elephant` | 🐘 | available (commented out) |
 | `E E L E V A T O R` | `elevator` | 🛗 | available (commented out) |
-| `E E L F` | `elf` | 🧝 | available (commented out) |
-| `E E M A I L` | `email` | 📧 | available (commented out) |
-| `E E X C L` | `excl` | ❗ | available (commented out) |
+| `E E L F` | `elf` | 🧝 | active |
+| `E E M A I L` | `email` | 📧 | active |
+| `E E X C L` | `excl` | ❗ | active |
 | `E E X C L DOT D O U B L E` | `excl.double` | ‼ | available (commented out) |
 | `E E X C L DOT Q U E S T` | `excl.quest` | ⁉ | available (commented out) |
 | `E E X C L DOT W H I T E` | `excl.white` | ❕ | available (commented out) |
-| `E E X P L O S I O N` | `explosion` | 💥 | available (commented out) |
+| `E E X P L O S I O N` | `explosion` | 💥 | active |
 | `E E X T I N G U I S H E R` | `extinguisher` | 🧯 | available (commented out) |
-| `E E Y E` | `eye` | 👁 | available (commented out) |
-| `E E Y E S` | `eyes` | 👀 | active |
+| `E E Y E` | `eye` | 👁 | active |
+| `E E Y E S` | `eyes` | 👀 | available (commented out) |
 | `E F A C E DOT A N G R Y` | `face.angry` | 😠 | available (commented out) |
 | `E F A C E DOT A N G R Y DOT R E D` | `face.angry.red` | 😡 | available (commented out) |
 | `E F A C E DOT A N G U I S H` | `face.anguish` | 😧 | available (commented out) |
@@ -1734,10 +1739,10 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E F A C E DOT C L O W N` | `face.clown` | 🤡 | available (commented out) |
 | `E F A C E DOT C O L D` | `face.cold` | 🥶 | available (commented out) |
 | `E F A C E DOT C O N C E R N` | `face.concern` | 😦 | available (commented out) |
-| `E F A C E DOT C O O L` | `face.cool` | 😎 | available (commented out) |
+| `E F A C E DOT C O O L` | `face.cool` | 😎 | active |
 | `E F A C E DOT C O V E R` | `face.cover` | 🤭 | available (commented out) |
 | `E F A C E DOT C O W B O Y` | `face.cowboy` | 🤠 | available (commented out) |
-| `E F A C E DOT C R Y` | `face.cry` | 😭 | available (commented out) |
+| `E F A C E DOT C R Y` | `face.cry` | 😭 | active |
 | `E F A C E DOT D E V I L DOT F R O W N` | `face.devil.frown` | 👿 | available (commented out) |
 | `E F A C E DOT D E V I L DOT S M I L E` | `face.devil.smile` | 😈 | available (commented out) |
 | `E F A C E DOT D I A G O N A L` | `face.diagonal` | 🫤 | available (commented out) |
@@ -1749,7 +1754,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E F A C E DOT D O W N` | `face.down` | 😞 | available (commented out) |
 | `E F A C E DOT D O W N DOT S W E A T` | `face.down.sweat` | 😓 | available (commented out) |
 | `E F A C E DOT D R O O L` | `face.drool` | 🤤 | available (commented out) |
-| `E F A C E DOT E X P L O D E` | `face.explode` | 🤯 | available (commented out) |
+| `E F A C E DOT E X P L O D E` | `face.explode` | 🤯 | active |
 | `E F A C E DOT E Y E R O L L` | `face.eyeroll` | 🙄 | available (commented out) |
 | `E F A C E DOT F E A R` | `face.fear` | 😨 | available (commented out) |
 | `E F A C E DOT F E A R DOT S W E A T` | `face.fear.sweat` | 😰 | available (commented out) |
@@ -1760,15 +1765,15 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E F A C E DOT F R O W N DOT S L I G H T` | `face.frown.slight` | 🙁 | available (commented out) |
 | `E F A C E DOT F R U S T` | `face.frust` | 😣 | available (commented out) |
 | `E F A C E DOT G O O F Y` | `face.goofy` | 🤪 | available (commented out) |
-| `E F A C E DOT G R I N` | `face.grin` | 😀 | available (commented out) |
-| `E F A C E DOT H A L O` | `face.halo` | 😇 | available (commented out) |
-| `E F A C E DOT H A P P Y` | `face.happy` | 😊 | available (commented out) |
-| `E F A C E DOT H E A R T` | `face.heart` | 😍 | available (commented out) |
+| `E F A C E DOT G R I N` | `face.grin` | 😀 | active |
+| `E F A C E DOT H A L O` | `face.halo` | 😇 | active |
+| `E F A C E DOT H A P P Y` | `face.happy` | 😊 | active |
+| `E F A C E DOT H E A R T` | `face.heart` | 😍 | active |
 | `E F A C E DOT H E A R T S` | `face.hearts` | 🥰 | available (commented out) |
 | `E F A C E DOT H E A T` | `face.heat` | 🥵 | available (commented out) |
 | `E F A C E DOT H U G` | `face.hug` | 🤗 | available (commented out) |
-| `E F A C E DOT I N V` | `face.inv` | 🙃 | available (commented out) |
-| `E F A C E DOT J O Y` | `face.joy` | 😂 | available (commented out) |
+| `E F A C E DOT I N V` | `face.inv` | 🙃 | active |
+| `E F A C E DOT J O Y` | `face.joy` | 😂 | active |
 | `E F A C E DOT K I S S` | `face.kiss` | 😗 | available (commented out) |
 | `E F A C E DOT K I S S DOT B L U S H` | `face.kiss.blush` | 😚 | available (commented out) |
 | `E F A C E DOT K I S S DOT H E A R T` | `face.kiss.heart` | 😘 | available (commented out) |
@@ -1780,22 +1785,22 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E F A C E DOT M E L T` | `face.melt` | 🫠 | available (commented out) |
 | `E F A C E DOT M O N E Y` | `face.money` | 🤑 | available (commented out) |
 | `E F A C E DOT M O N O C L E` | `face.monocle` | 🧐 | available (commented out) |
-| `E F A C E DOT N A U S E A` | `face.nausea` | 🤢 | available (commented out) |
+| `E F A C E DOT N A U S E A` | `face.nausea` | 🤢 | active |
 | `E F A C E DOT N E R D` | `face.nerd` | 🤓 | available (commented out) |
-| `E F A C E DOT N E U T R A L` | `face.neutral` | 😐 | available (commented out) |
+| `E F A C E DOT N E U T R A L` | `face.neutral` | 😐 | active |
 | `E F A C E DOT O P E N` | `face.open` | 😃 | available (commented out) |
-| `E F A C E DOT P A R T Y` | `face.party` | 🥳 | available (commented out) |
+| `E F A C E DOT P A R T Y` | `face.party` | 🥳 | active |
 | `E F A C E DOT P E E K` | `face.peek` | 🫣 | available (commented out) |
-| `E F A C E DOT P L E A D` | `face.plead` | 🥺 | available (commented out) |
+| `E F A C E DOT P L E A D` | `face.plead` | 🥺 | active |
 | `E F A C E DOT R E L I E F` | `face.relief` | 😌 | available (commented out) |
-| `E F A C E DOT R O F L` | `face.rofl` | 🤣 | available (commented out) |
+| `E F A C E DOT R O F L` | `face.rofl` | 🤣 | active |
 | `E F A C E DOT S A D` | `face.sad` | 😔 | available (commented out) |
 | `E F A C E DOT S A L U T E` | `face.salute` | 🫡 | available (commented out) |
 | `E F A C E DOT S H A K I N G` | `face.shaking` | 🫨 | available (commented out) |
-| `E F A C E DOT S H O C K` | `face.shock` | 😱 | available (commented out) |
+| `E F A C E DOT S H O C K` | `face.shock` | 😱 | active |
 | `E F A C E DOT S H U S H` | `face.shush` | 🤫 | available (commented out) |
 | `E F A C E DOT S K E P T I C` | `face.skeptic` | 🤨 | available (commented out) |
-| `E F A C E DOT S L E E P` | `face.sleep` | 😴 | available (commented out) |
+| `E F A C E DOT S L E E P` | `face.sleep` | 😴 | active |
 | `E F A C E DOT S L E E P Y` | `face.sleepy` | 😪 | available (commented out) |
 | `E F A C E DOT S M I L E` | `face.smile` | 😄 | available (commented out) |
 | `E F A C E DOT S M I L E DOT S L I G H T` | `face.smile.slight` | 🙂 | available (commented out) |
@@ -1810,11 +1815,11 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E F A C E DOT S U F F E R` | `face.suffer` | 😖 | available (commented out) |
 | `E F A C E DOT S U R P R I S E` | `face.surprise` | 😯 | available (commented out) |
 | `E F A C E DOT S Y M B O L S` | `face.symbols` | 🤬 | available (commented out) |
-| `E F A C E DOT T E A R` | `face.tear` | 😢 | available (commented out) |
+| `E F A C E DOT T E A R` | `face.tear` | 😢 | active |
 | `E F A C E DOT T E A R DOT R E L I E F` | `face.tear.relief` | 😥 | available (commented out) |
 | `E F A C E DOT T E A R DOT W I T H H E L D` | `face.tear.withheld` | 🥹 | available (commented out) |
 | `E F A C E DOT T E E T H` | `face.teeth` | 😬 | available (commented out) |
-| `E F A C E DOT T H I N K` | `face.think` | 🤔 | available (commented out) |
+| `E F A C E DOT T H I N K` | `face.think` | 🤔 | active |
 | `E F A C E DOT T I R E D` | `face.tired` | 🫩 | available (commented out) |
 | `E F A C E DOT T O N G U E` | `face.tongue` | 😛 | available (commented out) |
 | `E F A C E DOT T O N G U E DOT S Q U I N T` | `face.tongue.squint` | 😝 | available (commented out) |
@@ -1823,53 +1828,53 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E F A C E DOT U N H A P P Y` | `face.unhappy` | 😕 | available (commented out) |
 | `E F A C E DOT V O M I T` | `face.vomit` | 🤮 | available (commented out) |
 | `E F A C E DOT W E A R Y` | `face.weary` | 😩 | available (commented out) |
-| `E F A C E DOT W I N K` | `face.wink` | 😉 | available (commented out) |
+| `E F A C E DOT W I N K` | `face.wink` | 😉 | active |
 | `E F A C E DOT W O O Z Y` | `face.woozy` | 🥴 | available (commented out) |
 | `E F A C E DOT W O R R Y` | `face.worry` | 😟 | available (commented out) |
 | `E F A C E DOT W O W` | `face.wow` | 😮 | available (commented out) |
 | `E F A C E DOT Y A W N` | `face.yawn` | 🥱 | available (commented out) |
 | `E F A C E DOT Z I P` | `face.zip` | 🤐 | available (commented out) |
 | `E F A C T O R Y` | `factory` | 🏭 | available (commented out) |
-| `E F A I R Y` | `fairy` | 🧚 | available (commented out) |
-| `E F A I T H DOT C H R I S T` | `faith.christ` | ✝ | available (commented out) |
+| `E F A I R Y` | `fairy` | 🧚 | active |
+| `E F A I T H DOT C H R I S T` | `faith.christ` | ✝ | active |
 | `E F A I T H DOT D H A R M A` | `faith.dharma` | ☸ | available (commented out) |
-| `E F A I T H DOT I S L A M` | `faith.islam` | ☪ | available (commented out) |
+| `E F A I T H DOT I S L A M` | `faith.islam` | ☪ | active |
 | `E F A I T H DOT J U D A I S M` | `faith.judaism` | ✡ | available (commented out) |
 | `E F A I T H DOT K H A N D A` | `faith.khanda` | 🪯 | available (commented out) |
 | `E F A I T H DOT M E N O R A H` | `faith.menorah` | 🕎 | available (commented out) |
-| `E F A I T H DOT O M` | `faith.om` | 🕉 | available (commented out) |
+| `E F A I T H DOT O M` | `faith.om` | 🕉 | active |
 | `E F A I T H DOT O R T H O D O X` | `faith.orthodox` | ☦ | available (commented out) |
-| `E F A I T H DOT P E A C E` | `faith.peace` | ☮ | available (commented out) |
+| `E F A I T H DOT P E A C E` | `faith.peace` | ☮ | active |
 | `E F A I T H DOT S T A R DOT D O T` | `faith.star.dot` | 🔯 | available (commented out) |
 | `E F A I T H DOT W O R S H I P` | `faith.worship` | 🛐 | available (commented out) |
-| `E F A I T H DOT Y I N Y A N G` | `faith.yinyang` | ☯ | available (commented out) |
+| `E F A I T H DOT Y I N Y A N G` | `faith.yinyang` | ☯ | active |
 | `E F A L A F E L` | `falafel` | 🧆 | available (commented out) |
 | `E F A M I L Y` | `family` | 👪 | available (commented out) |
-| `E F A X` | `fax` | 📠 | available (commented out) |
+| `E F A X` | `fax` | 📠 | active |
 | `E F E A T H E R` | `feather` | 🪶 | available (commented out) |
 | `E F E E D I N G DOT B R E A S T` | `feeding.breast` | 🤱 | available (commented out) |
 | `E F E N C I N G` | `fencing` | 🤺 | available (commented out) |
 | `E F E R R I S W H E E L` | `ferriswheel` | 🎡 | available (commented out) |
 | `E F I G H T C L O U D` | `fightcloud` | 🫯 | available (commented out) |
 | `E F I L E B O X` | `filebox` | 🗃 | available (commented out) |
-| `E F I L E D I V I D E R S` | `filedividers` | 🗂 | available (commented out) |
-| `E F I L M` | `film` | 🎞 | available (commented out) |
-| `E F I N G E R DOT B` | `finger.b` | 👇 | available (commented out) |
+| `E F I L E D I V I D E R S` | `filedividers` | 🗂 | active |
+| `E F I L M` | `film` | 🎞 | active |
+| `E F I N G E R DOT B` | `finger.b` | 👇 | active |
 | `E F I N G E R DOT F R O N T` | `finger.front` | 🫵 | available (commented out) |
-| `E F I N G E R DOT L` | `finger.l` | 👈 | available (commented out) |
+| `E F I N G E R DOT L` | `finger.l` | 👈 | active |
 | `E F I N G E R DOT M` | `finger.m` | 🖕 | available (commented out) |
-| `E F I N G E R DOT R` | `finger.r` | 👉 | available (commented out) |
-| `E F I N G E R DOT T` | `finger.t` | 👆 | available (commented out) |
+| `E F I N G E R DOT R` | `finger.r` | 👉 | active |
+| `E F I N G E R DOT T` | `finger.t` | 👆 | active |
 | `E F I N G E R DOT T DOT A L T` | `finger.t.alt` | ☝ | available (commented out) |
 | `E F I N G E R P R I N T` | `fingerprint` | 🫆 | available (commented out) |
-| `E F I N G E R S DOT C R O S S` | `fingers.cross` | 🤞 | available (commented out) |
+| `E F I N G E R S DOT C R O S S` | `fingers.cross` | 🤞 | active |
 | `E F I N G E R S DOT P I N C H` | `fingers.pinch` | 🤌 | available (commented out) |
 | `E F I N G E R S DOT S N A P` | `fingers.snap` | 🫰 | available (commented out) |
 | `E F I R E` | `fire` | 🔥 | active |
 | `E F I R E C R A C K E R` | `firecracker` | 🧨 | available (commented out) |
 | `E F I R E E N G I N E` | `fireengine` | 🚒 | available (commented out) |
 | `E F I R E W O R K S` | `fireworks` | 🎆 | available (commented out) |
-| `E F I S H` | `fish` | 🐟 | available (commented out) |
+| `E F I S H` | `fish` | 🐟 | active |
 | `E F I S H DOT T R O P I C A L` | `fish.tropical` | 🐠 | available (commented out) |
 | `E F I S H I N G` | `fishing` | 🎣 | available (commented out) |
 | `E F I S T DOT F R O N T` | `fist.front` | 👊 | available (commented out) |
@@ -1885,53 +1890,53 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E F L A M I N G O` | `flamingo` | 🦩 | available (commented out) |
 | `E F L A S H L I G H T` | `flashlight` | 🔦 | available (commented out) |
 | `E F L A T B R E A D` | `flatbread` | 🫓 | available (commented out) |
-| `E F L E U R` | `fleur` | ⚜ | available (commented out) |
+| `E F L E U R` | `fleur` | ⚜ | active |
 | `E F L O P P Y` | `floppy` | 💾 | available (commented out) |
 | `E F L O W E R DOT H I B I S C U S` | `flower.hibiscus` | 🌺 | available (commented out) |
 | `E F L O W E R DOT H Y A C I N T H` | `flower.hyacinth` | 🪻 | available (commented out) |
 | `E F L O W E R DOT L O T U S` | `flower.lotus` | 🪷 | available (commented out) |
-| `E F L O W E R DOT P I N K` | `flower.pink` | 🌸 | available (commented out) |
+| `E F L O W E R DOT P I N K` | `flower.pink` | 🌸 | active |
 | `E F L O W E R DOT R O S E` | `flower.rose` | 🌹 | available (commented out) |
-| `E F L O W E R DOT S U N` | `flower.sun` | 🌻 | available (commented out) |
+| `E F L O W E R DOT S U N` | `flower.sun` | 🌻 | active |
 | `E F L O W E R DOT T U L I P` | `flower.tulip` | 🌷 | available (commented out) |
 | `E F L O W E R DOT W H I T E` | `flower.white` | 💮 | available (commented out) |
 | `E F L O W E R DOT W I L T E D` | `flower.wilted` | 🥀 | available (commented out) |
 | `E F L O W E R DOT Y E L L O W` | `flower.yellow` | 🌼 | available (commented out) |
-| `E F L U T E` | `flute` | 🪈 | available (commented out) |
-| `E F L Y` | `fly` | 🪰 | available (commented out) |
-| `E F O G` | `fog` | 🌫 | available (commented out) |
-| `E F O L D E R` | `folder` | 📁 | available (commented out) |
+| `E F L U T E` | `flute` | 🪈 | active |
+| `E F L Y` | `fly` | 🪰 | active |
+| `E F O G` | `fog` | 🌫 | active |
+| `E F O L D E R` | `folder` | 📁 | active |
 | `E F O L D E R DOT O P E N` | `folder.open` | 📂 | available (commented out) |
 | `E F O N D U E` | `fondue` | 🫕 | available (commented out) |
-| `E F O O T` | `foot` | 🦶 | available (commented out) |
+| `E F O O T` | `foot` | 🦶 | active |
 | `E F O O T B A L L` | `football` | ⚽ | available (commented out) |
 | `E F O O T B A L L DOT A M` | `football.am` | 🏈 | available (commented out) |
-| `E F O R E X` | `forex` | 💱 | available (commented out) |
+| `E F O R E X` | `forex` | 💱 | active |
 | `E F O U N T A I N` | `fountain` | ⛲ | available (commented out) |
-| `E F O X` | `fox` | 🦊 | available (commented out) |
+| `E F O X` | `fox` | 🦊 | active |
 | `E F R E E` | `free` | 🆓 | available (commented out) |
-| `E F R I E S` | `fries` | 🍟 | available (commented out) |
+| `E F R I E S` | `fries` | 🍟 | active |
 | `E F R I S B E E` | `frisbee` | 🥏 | available (commented out) |
 | `E F R O G DOT F A C E` | `frog.face` | 🐸 | available (commented out) |
 | `E F U E L P U M P` | `fuelpump` | ⛽ | available (commented out) |
 | `E G A C H I` | `gachi` | 🈷 | available (commented out) |
 | `E G A R L I C` | `garlic` | 🧄 | available (commented out) |
-| `E G E A R` | `gear` | ⚙ | available (commented out) |
-| `E G E M` | `gem` | 💎 | available (commented out) |
-| `E G E N I E` | `genie` | 🧞 | available (commented out) |
-| `E G H O S T` | `ghost` | 👻 | available (commented out) |
+| `E G E A R` | `gear` | ⚙ | active |
+| `E G E M` | `gem` | 💎 | active |
+| `E G E N I E` | `genie` | 🧞 | active |
+| `E G H O S T` | `ghost` | 👻 | active |
 | `E G I N G E R` | `ginger` | 🫚 | available (commented out) |
 | `E G I R A F F E` | `giraffe` | 🦒 | available (commented out) |
-| `E G I R L` | `girl` | 👧 | available (commented out) |
+| `E G I R L` | `girl` | 👧 | active |
 | `E G L A S S DOT C L I N K` | `glass.clink` | 🥂 | available (commented out) |
 | `E G L A S S DOT M I L K` | `glass.milk` | 🥛 | available (commented out) |
 | `E G L A S S DOT P O U R` | `glass.pour` | 🫗 | available (commented out) |
 | `E G L A S S DOT T U M B L E R` | `glass.tumbler` | 🥃 | available (commented out) |
 | `E G L A S S E S` | `glasses` | 👓 | available (commented out) |
 | `E G L A S S E S DOT S U N` | `glasses.sun` | 🕶 | available (commented out) |
-| `E G L O B E DOT A M` | `globe.am` | 🌎 | available (commented out) |
-| `E G L O B E DOT A S DOT A U` | `globe.as.au` | 🌏 | available (commented out) |
-| `E G L O B E DOT E U DOT A F` | `globe.eu.af` | 🌍 | available (commented out) |
+| `E G L O B E DOT A M` | `globe.am` | 🌎 | active |
+| `E G L O B E DOT A S DOT A U` | `globe.as.au` | 🌏 | active |
+| `E G L O B E DOT E U DOT A F` | `globe.eu.af` | 🌍 | active |
 | `E G L O B E DOT M E R I D I A N` | `globe.meridian` | 🌐 | available (commented out) |
 | `E G L O V E S` | `gloves` | 🧤 | available (commented out) |
 | `E G O` | `go` | 🈴 | available (commented out) |
@@ -1941,24 +1946,24 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E G O L F I N G` | `golfing` | 🏌 | available (commented out) |
 | `E G O O S E` | `goose` | 🪿 | available (commented out) |
 | `E G O R I L L A` | `gorilla` | 🦍 | available (commented out) |
-| `E G R A P E S` | `grapes` | 🍇 | available (commented out) |
+| `E G R A P E S` | `grapes` | 🍇 | active |
 | `E G U A R D DOT M A N` | `guard.man` | 💂 | available (commented out) |
 | `E G U I T A R` | `guitar` | 🎸 | available (commented out) |
 | `E G Y M N A S T I C S` | `gymnastics` | 🤸 | available (commented out) |
 | `E H A I R C U T` | `haircut` | 💇 | available (commented out) |
 | `E H A I R P I C K` | `hairpick` | 🪮 | available (commented out) |
-| `E H A M M E R` | `hammer` | 🔨 | available (commented out) |
+| `E H A M M E R` | `hammer` | 🔨 | active |
 | `E H A M M E R DOT P I C K` | `hammer.pick` | ⚒ | available (commented out) |
 | `E H A M M E R DOT W R E N C H` | `hammer.wrench` | 🛠 | available (commented out) |
 | `E H A M S A` | `hamsa` | 🪬 | available (commented out) |
 | `E H A M S T E R DOT F A C E` | `hamster.face` | 🐹 | available (commented out) |
 | `E H A N D DOT B` | `hand.b` | 🫳 | available (commented out) |
-| `E H A N D DOT C A L L` | `hand.call` | 🤙 | available (commented out) |
+| `E H A N D DOT C A L L` | `hand.call` | 🤙 | active |
 | `E H A N D DOT L` | `hand.l` | 🫲 | available (commented out) |
 | `E H A N D DOT L O V E` | `hand.love` | 🤟 | available (commented out) |
 | `E H A N D DOT O K` | `hand.ok` | 👌 | active |
 | `E H A N D DOT P A R T` | `hand.part` | 🖖 | available (commented out) |
-| `E H A N D DOT P E A C E` | `hand.peace` | ✌ | available (commented out) |
+| `E H A N D DOT P E A C E` | `hand.peace` | ✌ | active |
 | `E H A N D DOT P I N C H` | `hand.pinch` | 🤏 | available (commented out) |
 | `E H A N D DOT P U S H I N G DOT L` | `hand.pushing.l` | 🫷 | available (commented out) |
 | `E H A N D DOT P U S H I N G DOT R` | `hand.pushing.r` | 🫸 | available (commented out) |
@@ -1966,7 +1971,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E H A N D DOT R A I S E D` | `hand.raised` | ✋ | available (commented out) |
 | `E H A N D DOT R A I S E D DOT A L T` | `hand.raised.alt` | 🤚 | available (commented out) |
 | `E H A N D DOT R O C K` | `hand.rock` | 🤘 | available (commented out) |
-| `E H A N D DOT S P L A Y` | `hand.splay` | 🖐 | available (commented out) |
+| `E H A N D DOT S P L A Y` | `hand.splay` | 🖐 | active |
 | `E H A N D DOT T` | `hand.t` | 🫴 | available (commented out) |
 | `E H A N D DOT W A V E` | `hand.wave` | 👋 | active |
 | `E H A N D DOT W R I T E` | `hand.write` | ✍ | available (commented out) |
@@ -1977,15 +1982,15 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E H A N D H O L D I N G DOT M A N DOT M A N` | `handholding.man.man` | 👬 | available (commented out) |
 | `E H A N D H O L D I N G DOT W O M A N DOT M A N` | `handholding.woman.man` | 👫 | available (commented out) |
 | `E H A N D H O L D I N G DOT W O M A N DOT W O M A N` | `handholding.woman.woman` | 👭 | available (commented out) |
-| `E H A N D S DOT C L A P` | `hands.clap` | 👏 | available (commented out) |
+| `E H A N D S DOT C L A P` | `hands.clap` | 👏 | active |
 | `E H A N D S DOT F O L D E D` | `hands.folded` | 🙏 | active |
 | `E H A N D S DOT H E A R T` | `hands.heart` | 🫶 | available (commented out) |
 | `E H A N D S DOT O P E N` | `hands.open` | 👐 | available (commented out) |
 | `E H A N D S DOT P A L M S` | `hands.palms` | 🤲 | available (commented out) |
-| `E H A N D S DOT R A I S E D` | `hands.raised` | 🙌 | available (commented out) |
-| `E H A N D S DOT S H A K E` | `hands.shake` | 🤝 | available (commented out) |
-| `E H A R P` | `harp` | 🪉 | available (commented out) |
-| `E H A S H` | `hash` | # | available (commented out) |
+| `E H A N D S DOT R A I S E D` | `hands.raised` | 🙌 | active |
+| `E H A N D S DOT S H A K E` | `hands.shake` | 🤝 | active |
+| `E H A R P` | `harp` | 🪉 | active |
+| `E H A S H` | `hash` | # | active |
 | `E H A T DOT R I B B O N` | `hat.ribbon` | 👒 | available (commented out) |
 | `E H A T DOT T O P` | `hat.top` | 🎩 | available (commented out) |
 | `E H E A D P H O N E` | `headphone` | 🎧 | available (commented out) |
@@ -2014,46 +2019,48 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E H E A R T DOT Y E L L O W` | `heart.yellow` | 💛 | available (commented out) |
 | `E H E D G E H O G` | `hedgehog` | 🦔 | available (commented out) |
 | `E H E L I C O P T E R` | `helicopter` | 🚁 | available (commented out) |
-| `E H E L I X` | `helix` | 🧬 | available (commented out) |
+| `E H E L I X` | `helix` | 🧬 | active |
 | `E H E L M E T DOT C R O S S` | `helmet.cross` | ⛑ | available (commented out) |
 | `E H E L M E T DOT M I L I T A R Y` | `helmet.military` | 🪖 | available (commented out) |
 | `E H I` | `hi` | ㊙ | available (commented out) |
 | `E H I P P O` | `hippo` | 🦛 | available (commented out) |
 | `E H O C K E Y` | `hockey` | 🏑 | available (commented out) |
-| `E H O L E` | `hole` | 🕳 | available (commented out) |
+| `E H O L E` | `hole` | 🕳 | active |
 | `E H O N E Y` | `honey` | 🍯 | available (commented out) |
 | `E H O N G B A O` | `hongbao` | 🧧 | available (commented out) |
-| `E H O O K` | `hook` | 🪝 | available (commented out) |
+| `E H O O K` | `hook` | 🪝 | active |
+| `E H O O K L E F T A R R O W` | `hookleftarrow` | ↩ | available (commented out) |
+| `E H O O K R I G H T A R R O W` | `hookrightarrow` | ↪ | available (commented out) |
 | `E H O R N DOT P O S T A L` | `horn.postal` | 📯 | available (commented out) |
 | `E H O R S E` | `horse` | 🐎 | available (commented out) |
 | `E H O R S E DOT C A R O U S E L` | `horse.carousel` | 🎠 | available (commented out) |
 | `E H O R S E DOT F A C E` | `horse.face` | 🐴 | available (commented out) |
 | `E H O R S E DOT R A C E` | `horse.race` | 🏇 | available (commented out) |
-| `E H O S P I T A L` | `hospital` | 🏥 | available (commented out) |
+| `E H O S P I T A L` | `hospital` | 🏥 | active |
 | `E H O T D O G` | `hotdog` | 🌭 | available (commented out) |
 | `E H O T E L` | `hotel` | 🏨 | available (commented out) |
 | `E H O T E L DOT L O V E` | `hotel.love` | 🏩 | available (commented out) |
 | `E H O T S P R I N G` | `hotspring` | ♨ | available (commented out) |
-| `E H O U R G L A S S` | `hourglass` | ⌛ | available (commented out) |
+| `E H O U R G L A S S` | `hourglass` | ⌛ | active |
 | `E H O U R G L A S S DOT F L O W` | `hourglass.flow` | ⏳ | available (commented out) |
-| `E H O U S E` | `house` | 🏠 | available (commented out) |
+| `E H O U S E` | `house` | 🏠 | active |
 | `E H O U S E DOT D E R E L I C T` | `house.derelict` | 🏚 | available (commented out) |
 | `E H O U S E DOT G A R D E N` | `house.garden` | 🏡 | available (commented out) |
 | `E H O U S E DOT M U L T I P L E` | `house.multiple` | 🏘 | available (commented out) |
 | `E H U N D R E D` | `hundred` | 💯 | available (commented out) |
-| `E H U T` | `hut` | 🛖 | available (commented out) |
-| `E I C E` | `ice` | 🧊 | available (commented out) |
+| `E H U T` | `hut` | 🛖 | active |
+| `E I C E` | `ice` | 🧊 | active |
 | `E I C E C R E A M` | `icecream` | 🍨 | available (commented out) |
 | `E I C E C R E A M DOT S H A V E D` | `icecream.shaved` | 🍧 | available (commented out) |
 | `E I C E C R E A M DOT S O F T` | `icecream.soft` | 🍦 | available (commented out) |
 | `E I C E H O C K E Y` | `icehockey` | 🏒 | available (commented out) |
 | `E I D` | `id` | 🆔 | available (commented out) |
-| `E I N F O` | `info` | ℹ | available (commented out) |
+| `E I N F O` | `info` | ℹ | active |
 | `E I Z A K A Y A` | `izakaya` | 🏮 | available (commented out) |
-| `E J A R` | `jar` | 🫙 | available (commented out) |
+| `E J A R` | `jar` | 🫙 | active |
 | `E J E A N S` | `jeans` | 👖 | available (commented out) |
 | `E J E L L Y F I S H` | `jellyfish` | 🪼 | available (commented out) |
-| `E J I G S A W` | `jigsaw` | 🧩 | available (commented out) |
+| `E J I G S A W` | `jigsaw` | 🧩 | active |
 | `E J O Y S T I C K` | `joystick` | 🕹 | available (commented out) |
 | `E J U G G L I N G` | `juggling` | 🤹 | available (commented out) |
 | `E J U I C E` | `juice` | 🧃 | available (commented out) |
@@ -2067,13 +2074,13 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E K E Y` | `key` | 🔑 | active |
 | `E K E Y DOT O L D` | `key.old` | 🗝 | available (commented out) |
 | `E K E Y B O A R D` | `keyboard` | ⌨ | available (commented out) |
-| `E K I S S` | `kiss` | 💏 | available (commented out) |
+| `E K I S S` | `kiss` | 💏 | active |
 | `E K I S S M A R K` | `kissmark` | 💋 | available (commented out) |
-| `E K I T E` | `kite` | 🪁 | available (commented out) |
-| `E K I W I` | `kiwi` | 🥝 | available (commented out) |
+| `E K I T E` | `kite` | 🪁 | active |
+| `E K I W I` | `kiwi` | 🥝 | active |
 | `E K N I F E` | `knife` | 🔪 | available (commented out) |
 | `E K N I F E DOT D A G G E R` | `knife.dagger` | 🗡 | available (commented out) |
-| `E K N O T` | `knot` | 🪢 | available (commented out) |
+| `E K N O T` | `knot` | 🪢 | active |
 | `E K O A L A` | `koala` | 🐨 | available (commented out) |
 | `E K O I N O B O R I` | `koinobori` | 🎏 | available (commented out) |
 | `E K O K O` | `koko` | 🈁 | available (commented out) |
@@ -2083,15 +2090,16 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E L A D D E R` | `ladder` | 🪜 | available (commented out) |
 | `E L A M P DOT D I Y A` | `lamp.diya` | 🪔 | available (commented out) |
 | `E L A N D S L I D E` | `landslide` | 🛘 | available (commented out) |
-| `E L A P T O P` | `laptop` | 💻 | available (commented out) |
-| `E L E A F DOT C L O V E R DOT F O U R` | `leaf.clover.four` | 🍀 | available (commented out) |
+| `E L A P T O P` | `laptop` | 💻 | active |
+| `E L E A F DOT C L O V E R DOT F O U R` | `leaf.clover.four` | 🍀 | active |
 | `E L E A F DOT C L O V E R DOT T H R E E` | `leaf.clover.three` | ☘ | available (commented out) |
 | `E L E A F DOT F A L L` | `leaf.fall` | 🍂 | available (commented out) |
 | `E L E A F DOT H E R B` | `leaf.herb` | 🌿 | available (commented out) |
 | `E L E A F DOT M A P L E` | `leaf.maple` | 🍁 | available (commented out) |
 | `E L E A F DOT W I N D` | `leaf.wind` | 🍃 | available (commented out) |
 | `E L E F T L U G G A G E` | `leftluggage` | 🛅 | available (commented out) |
-| `E L E G` | `leg` | 🦵 | available (commented out) |
+| `E L E F T R I G H T A R R O W` | `leftrightarrow` | ↔ | available (commented out) |
+| `E L E G` | `leg` | 🦵 | active |
 | `E L E G DOT M E C H` | `leg.mech` | 🦿 | available (commented out) |
 | `E L E M O N` | `lemon` | 🍋 | available (commented out) |
 | `E L E O P A R D` | `leopard` | 🐆 | available (commented out) |
@@ -2099,7 +2107,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E L I B E R T Y` | `liberty` | 🗽 | available (commented out) |
 | `E L I G H T B U L B` | `lightbulb` | 💡 | active |
 | `E L I G H T N I N G` | `lightning` | ⚡ | active |
-| `E L I O N` | `lion` | 🦁 | available (commented out) |
+| `E L I O N` | `lion` | 🦁 | active |
 | `E L I P S T I C K` | `lipstick` | 💄 | available (commented out) |
 | `E L I T T E R` | `litter` | 🚮 | available (commented out) |
 | `E L I T T E R DOT N O T` | `litter.not` | 🚯 | available (commented out) |
@@ -2114,19 +2122,19 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E L O T I O N` | `lotion` | 🧴 | available (commented out) |
 | `E L U G G A G E` | `luggage` | 🧳 | available (commented out) |
 | `E L U N G S` | `lungs` | 🫁 | available (commented out) |
-| `E M A G E` | `mage` | 🧙 | available (commented out) |
+| `E M A G E` | `mage` | 🧙 | active |
 | `E M A G N E T` | `magnet` | 🧲 | available (commented out) |
 | `E M A G N I F Y DOT L` | `magnify.l` | 🔍 | active |
-| `E M A G N I F Y DOT R` | `magnify.r` | 🔎 | available (commented out) |
+| `E M A G N I F Y DOT R` | `magnify.r` | 🔎 | active |
 | `E M A H J O N G DOT D R A G O N DOT R E D` | `mahjong.dragon.red` | 🀄 | available (commented out) |
-| `E M A I L` | `mail` | ✉ | available (commented out) |
+| `E M A I L` | `mail` | ✉ | active |
 | `E M A I L DOT A R R O W` | `mail.arrow` | 📩 | available (commented out) |
 | `E M A I L B O X DOT C L O S E D DOT E M P T Y` | `mailbox.closed.empty` | 📪 | available (commented out) |
 | `E M A I L B O X DOT C L O S E D DOT F U L L` | `mailbox.closed.full` | 📫 | available (commented out) |
 | `E M A I L B O X DOT O P E N DOT E M P T Y` | `mailbox.open.empty` | 📭 | available (commented out) |
 | `E M A I L B O X DOT O P E N DOT F U L L` | `mailbox.open.full` | 📬 | available (commented out) |
 | `E M A M M O T H` | `mammoth` | 🦣 | available (commented out) |
-| `E M A N` | `man` | 👨 | available (commented out) |
+| `E M A N` | `man` | 👨 | active |
 | `E M A N DOT B O X` | `man.box` | 🚹 | available (commented out) |
 | `E M A N DOT C R O W N` | `man.crown` | 🤴 | available (commented out) |
 | `E M A N DOT G U A P I M A O` | `man.guapimao` | 👲 | available (commented out) |
@@ -2141,16 +2149,16 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E M A R A C A S` | `maracas` | 🪇 | available (commented out) |
 | `E M A R T I A L A R T S` | `martialarts` | 🥋 | available (commented out) |
 | `E M A S K S` | `masks` | 🎭 | available (commented out) |
-| `E M A T E` | `mate` | 🧉 | available (commented out) |
+| `E M A T E` | `mate` | 🧉 | active |
 | `E M A T R Y O S H K A` | `matryoshka` | 🪆 | available (commented out) |
-| `E M E A T` | `meat` | 🥩 | available (commented out) |
+| `E M E A T` | `meat` | 🥩 | active |
 | `E M E A T DOT B O N E` | `meat.bone` | 🍖 | available (commented out) |
-| `E M E D A L DOT F I R S T` | `medal.first` | 🥇 | available (commented out) |
+| `E M E D A L DOT F I R S T` | `medal.first` | 🥇 | active |
 | `E M E D A L DOT M I L I T A R Y` | `medal.military` | 🎖 | available (commented out) |
 | `E M E D A L DOT S E C O N D` | `medal.second` | 🥈 | available (commented out) |
 | `E M E D A L DOT S P O R T S` | `medal.sports` | 🏅 | available (commented out) |
 | `E M E D A L DOT T H I R D` | `medal.third` | 🥉 | available (commented out) |
-| `E M E G A P H O N E` | `megaphone` | 📢 | available (commented out) |
+| `E M E G A P H O N E` | `megaphone` | 📢 | active |
 | `E M E G A P H O N E DOT S I M P L E` | `megaphone.simple` | 📣 | available (commented out) |
 | `E M E L O N` | `melon` | 🍈 | available (commented out) |
 | `E M E R P E R S O N` | `merperson` | 🧜 | available (commented out) |
@@ -2158,7 +2166,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E M I C R O B E` | `microbe` | 🦠 | available (commented out) |
 | `E M I C R O P H O N E` | `microphone` | 🎤 | available (commented out) |
 | `E M I C R O P H O N E DOT S T U D I O` | `microphone.studio` | 🎙 | available (commented out) |
-| `E M I C R O S C O P E` | `microscope` | 🔬 | available (commented out) |
+| `E M I C R O S C O P E` | `microscope` | 🔬 | active |
 | `E M I L K Y W A Y` | `milkyway` | 🌌 | available (commented out) |
 | `E M I R R O R` | `mirror` | 🪞 | available (commented out) |
 | `E M I X E R` | `mixer` | 🎛 | available (commented out) |
@@ -2173,8 +2181,8 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E M O N K E Y DOT H E A R DOT N O T` | `monkey.hear.not` | 🙉 | available (commented out) |
 | `E M O N K E Y DOT S E E DOT N O T` | `monkey.see.not` | 🙈 | available (commented out) |
 | `E M O N K E Y DOT S P E A K DOT N O T` | `monkey.speak.not` | 🙊 | available (commented out) |
-| `E M O O N DOT C R E S C E N T` | `moon.crescent` | 🌙 | available (commented out) |
-| `E M O O N DOT F U L L` | `moon.full` | 🌕 | available (commented out) |
+| `E M O O N DOT C R E S C E N T` | `moon.crescent` | 🌙 | active |
+| `E M O O N DOT F U L L` | `moon.full` | 🌕 | active |
 | `E M O O N DOT F U L L DOT F A C E` | `moon.full.face` | 🌝 | available (commented out) |
 | `E M O O N DOT N E W` | `moon.new` | 🌑 | available (commented out) |
 | `E M O O N DOT N E W DOT F A C E` | `moon.new.face` | 🌚 | available (commented out) |
@@ -2187,7 +2195,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E M O O N DOT W A X DOT T W O` | `moon.wax.two` | 🌓 | available (commented out) |
 | `E M O O N DOT W A X DOT T W O DOT F A C E` | `moon.wax.two.face` | 🌛 | available (commented out) |
 | `E M O O S E` | `moose` | 🫎 | available (commented out) |
-| `E M O R T A R B O A R D` | `mortarboard` | 🎓 | available (commented out) |
+| `E M O R T A R B O A R D` | `mortarboard` | 🎓 | active |
 | `E M O S Q U E` | `mosque` | 🕌 | available (commented out) |
 | `E M O S Q U I T O` | `mosquito` | 🦟 | available (commented out) |
 | `E M O T O R C Y C L E` | `motorcycle` | 🏍 | available (commented out) |
@@ -2219,8 +2227,8 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E N G` | `ng` | 🆖 | available (commented out) |
 | `E N I N G Y O` | `ningyo` | 🎎 | available (commented out) |
 | `E N I N J A` | `ninja` | 🥷 | available (commented out) |
-| `E N O E N T R Y` | `noentry` | ⛔ | available (commented out) |
-| `E N O S E` | `nose` | 👃 | available (commented out) |
+| `E N O E N T R Y` | `noentry` | ⛔ | active |
+| `E N O S E` | `nose` | 👃 | active |
 | `E N O T E B O O K` | `notebook` | 📓 | available (commented out) |
 | `E N O T E B O O K DOT D E C O` | `notebook.deco` | 📔 | available (commented out) |
 | `E N O T E P A D` | `notepad` | 🗒 | available (commented out) |
@@ -2243,7 +2251,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E O Y S T E R` | `oyster` | 🦪 | available (commented out) |
 | `E P A C K A G E` | `package` | 📦 | available (commented out) |
 | `E P A E L L A` | `paella` | 🥘 | available (commented out) |
-| `E P A G E` | `page` | 📄 | available (commented out) |
+| `E P A G E` | `page` | 📄 | active |
 | `E P A G E DOT C U R L` | `page.curl` | 📃 | available (commented out) |
 | `E P A G E DOT P E N C I L` | `page.pencil` | 📝 | available (commented out) |
 | `E P A G E R` | `pager` | 📟 | available (commented out) |
@@ -2253,7 +2261,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E P A N C A K E S` | `pancakes` | 🥞 | available (commented out) |
 | `E P A N D A` | `panda` | 🐼 | available (commented out) |
 | `E P A R A C H U T E` | `parachute` | 🪂 | available (commented out) |
-| `E P A R K` | `park` | 🏞 | available (commented out) |
+| `E P A R K` | `park` | 🏞 | active |
 | `E P A R K I N G` | `parking` | 🅿 | available (commented out) |
 | `E P A R R O T` | `parrot` | 🦜 | available (commented out) |
 | `E P A R T A L T E R A T I O N` | `partalteration` | 〽 | available (commented out) |
@@ -2262,11 +2270,11 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E P E A C O C K` | `peacock` | 🦚 | available (commented out) |
 | `E P E A N U T S` | `peanuts` | 🥜 | available (commented out) |
 | `E P E A P O D` | `peapod` | 🫛 | available (commented out) |
-| `E P E A R` | `pear` | 🍐 | available (commented out) |
+| `E P E A R` | `pear` | 🍐 | active |
 | `E P E D E S T R I A N` | `pedestrian` | 🚶 | available (commented out) |
 | `E P E D E S T R I A N DOT N O T` | `pedestrian.not` | 🚷 | available (commented out) |
-| `E P E N DOT B A L L` | `pen.ball` | 🖊 | available (commented out) |
-| `E P E N DOT F O U N T A I N` | `pen.fountain` | 🖋 | available (commented out) |
+| `E P E N DOT B A L L` | `pen.ball` | 🖊 | active |
+| `E P E N DOT F O U N T A I N` | `pen.fountain` | 🖋 | active |
 | `E P E N C I L` | `pencil` | ✏ | active |
 | `E P E N G U I N` | `penguin` | 🐧 | available (commented out) |
 | `E P E P P E R` | `pepper` | 🫑 | available (commented out) |
@@ -2294,7 +2302,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E P E R S O N DOT S T A N D` | `person.stand` | 🧍 | available (commented out) |
 | `E P E R S O N DOT S T E A M` | `person.steam` | 🧖 | available (commented out) |
 | `E P E T R I` | `petri` | 🧫 | available (commented out) |
-| `E P H O N E` | `phone` | 📱 | available (commented out) |
+| `E P H O N E` | `phone` | 📱 | active |
 | `E P H O N E DOT A R R O W` | `phone.arrow` | 📲 | available (commented out) |
 | `E P H O N E DOT C L A S S I C` | `phone.classic` | ☎ | available (commented out) |
 | `E P H O N E DOT N O T` | `phone.not` | 📵 | available (commented out) |
@@ -2303,62 +2311,62 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E P H O N E DOT S I G N A L` | `phone.signal` | 📶 | available (commented out) |
 | `E P H O N E DOT V I B R A T E` | `phone.vibrate` | 📳 | available (commented out) |
 | `E P I A N O` | `piano` | 🎹 | available (commented out) |
-| `E P I C K` | `pick` | ⛏ | available (commented out) |
-| `E P I E` | `pie` | 🥧 | available (commented out) |
-| `E P I G` | `pig` | 🐖 | available (commented out) |
+| `E P I C K` | `pick` | ⛏ | active |
+| `E P I E` | `pie` | 🥧 | active |
+| `E P I G` | `pig` | 🐖 | active |
 | `E P I G DOT F A C E` | `pig.face` | 🐷 | available (commented out) |
 | `E P I G DOT N O S E` | `pig.nose` | 🐽 | available (commented out) |
-| `E P I L L` | `pill` | 💊 | available (commented out) |
+| `E P I L L` | `pill` | 💊 | active |
 | `E P I N` | `pin` | 📌 | active |
 | `E P I N DOT R O U N D` | `pin.round` | 📍 | available (commented out) |
 | `E P I N A T A` | `pinata` | 🪅 | available (commented out) |
 | `E P I N E A P P L E` | `pineapple` | 🍍 | available (commented out) |
 | `E P I N G P O N G` | `pingpong` | 🏓 | available (commented out) |
 | `E P I S T O L` | `pistol` | 🔫 | available (commented out) |
-| `E P I Z Z A` | `pizza` | 🍕 | available (commented out) |
+| `E P I Z Z A` | `pizza` | 🍕 | active |
 | `E P L A C A R D` | `placard` | 🪧 | available (commented out) |
 | `E P L A N E T` | `planet` | 🪐 | available (commented out) |
 | `E P L A N T` | `plant` | 🪴 | available (commented out) |
 | `E P L A S T E R` | `plaster` | 🩹 | available (commented out) |
 | `E P L A T E DOT C U T L E R Y` | `plate.cutlery` | 🍽 | available (commented out) |
-| `E P L A Y B A C K DOT D O W N` | `playback.down` | ⏬ | available (commented out) |
+| `E P L A Y B A C K DOT D O W N` | `playback.down` | ⏬ | active |
 | `E P L A Y B A C K DOT E J E C T` | `playback.eject` | ⏏ | available (commented out) |
-| `E P L A Y B A C K DOT F O R W A R D` | `playback.forward` | ⏩ | available (commented out) |
+| `E P L A Y B A C K DOT F O R W A R D` | `playback.forward` | ⏩ | active |
 | `E P L A Y B A C K DOT P A U S E` | `playback.pause` | ⏸ | available (commented out) |
 | `E P L A Y B A C K DOT R E C O R D` | `playback.record` | ⏺ | available (commented out) |
-| `E P L A Y B A C K DOT R E P E A T` | `playback.repeat` | 🔁 | available (commented out) |
+| `E P L A Y B A C K DOT R E P E A T` | `playback.repeat` | 🔁 | active |
 | `E P L A Y B A C K DOT R E P E A T DOT O N C E` | `playback.repeat.once` | 🔂 | available (commented out) |
 | `E P L A Y B A C K DOT R E P E A T DOT V` | `playback.repeat.v` | 🔃 | available (commented out) |
 | `E P L A Y B A C K DOT R E S T A R T` | `playback.restart` | ⏮ | available (commented out) |
-| `E P L A Y B A C K DOT R E W I N D` | `playback.rewind` | ⏪ | available (commented out) |
-| `E P L A Y B A C K DOT S H U F F L E` | `playback.shuffle` | 🔀 | available (commented out) |
+| `E P L A Y B A C K DOT R E W I N D` | `playback.rewind` | ⏪ | active |
+| `E P L A Y B A C K DOT S H U F F L E` | `playback.shuffle` | 🔀 | active |
 | `E P L A Y B A C K DOT S K I P` | `playback.skip` | ⏭ | available (commented out) |
 | `E P L A Y B A C K DOT S T O P` | `playback.stop` | ⏹ | available (commented out) |
 | `E P L A Y B A C K DOT T O G G L E` | `playback.toggle` | ⏯ | available (commented out) |
-| `E P L A Y B A C K DOT U P` | `playback.up` | ⏫ | available (commented out) |
+| `E P L A Y B A C K DOT U P` | `playback.up` | ⏫ | active |
 | `E P L A Y I N G C A R D DOT F L O W E R` | `playingcard.flower` | 🎴 | available (commented out) |
 | `E P L A Y I N G C A R D DOT J O K E R` | `playingcard.joker` | 🃏 | available (commented out) |
 | `E P L U N G E R` | `plunger` | 🪠 | available (commented out) |
 | `E P O L I C E O F F I C E R` | `policeofficer` | 👮 | available (commented out) |
-| `E P O O` | `poo` | 💩 | available (commented out) |
-| `E P O P C O R N` | `popcorn` | 🍿 | available (commented out) |
+| `E P O O` | `poo` | 💩 | active |
+| `E P O P C O R N` | `popcorn` | 🍿 | active |
 | `E P O S T DOT E U` | `post.eu` | 🏤 | available (commented out) |
 | `E P O S T DOT J P` | `post.jp` | 🏣 | available (commented out) |
 | `E P O S T B O X` | `postbox` | 📮 | available (commented out) |
 | `E P O T A T O` | `potato` | 🥔 | available (commented out) |
 | `E P O T A T O DOT S W E E T` | `potato.sweet` | 🍠 | available (commented out) |
 | `E P O U C H` | `pouch` | 👝 | available (commented out) |
-| `E P O W E R P L U G` | `powerplug` | 🔌 | available (commented out) |
-| `E P R E S E N T` | `present` | 🎁 | available (commented out) |
+| `E P O W E R P L U G` | `powerplug` | 🔌 | active |
+| `E P R E S E N T` | `present` | 🎁 | active |
 | `E P R E T Z E L` | `pretzel` | 🥨 | available (commented out) |
 | `E P R I N T E R` | `printer` | 🖨 | available (commented out) |
 | `E P R I N T S DOT F O O T` | `prints.foot` | 👣 | available (commented out) |
 | `E P R I N T S DOT P A W` | `prints.paw` | 🐾 | available (commented out) |
-| `E P R O H I B I T E D` | `prohibited` | 🚫 | available (commented out) |
+| `E P R O H I B I T E D` | `prohibited` | 🚫 | active |
 | `E P R O J E C T O R` | `projector` | 📽 | available (commented out) |
-| `E P U M P K I N DOT L A N T E R N` | `pumpkin.lantern` | 🎃 | available (commented out) |
+| `E P U M P K I N DOT L A N T E R N` | `pumpkin.lantern` | 🎃 | active |
 | `E P U R S E` | `purse` | 👛 | available (commented out) |
-| `E Q U E S T` | `quest` | ❓ | available (commented out) |
+| `E Q U E S T` | `quest` | ❓ | active |
 | `E Q U E S T DOT W H I T E` | `quest.white` | ❔ | available (commented out) |
 | `E R A B B I T` | `rabbit` | 🐇 | available (commented out) |
 | `E R A B B I T DOT F A C E` | `rabbit.face` | 🐰 | available (commented out) |
@@ -2367,29 +2375,29 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E R A D I O A C T I V E` | `radioactive` | ☢ | available (commented out) |
 | `E R A I L W A Y` | `railway` | 🛤 | available (commented out) |
 | `E R A I N B O W` | `rainbow` | 🌈 | available (commented out) |
-| `E R A M` | `ram` | 🐏 | available (commented out) |
-| `E R A T` | `rat` | 🐀 | available (commented out) |
+| `E R A M` | `ram` | 🐏 | active |
+| `E R A T` | `rat` | 🐀 | active |
 | `E R A Z O R` | `razor` | 🪒 | available (commented out) |
 | `E R E C E I P T` | `receipt` | 🧾 | available (commented out) |
-| `E R E C Y C L I N G` | `recycling` | ♻ | available (commented out) |
-| `E R E G` | `reg` | ® | available (commented out) |
+| `E R E C Y C L I N G` | `recycling` | ♻ | active |
+| `E R E G` | `reg` | ® | active |
 | `E R E S T R O O M` | `restroom` | 🚻 | available (commented out) |
 | `E R H I N O` | `rhino` | 🦏 | available (commented out) |
 | `E R I B B O N` | `ribbon` | 🎀 | available (commented out) |
 | `E R I B B O N DOT R E M I N D` | `ribbon.remind` | 🎗 | available (commented out) |
-| `E R I C E` | `rice` | 🍚 | available (commented out) |
+| `E R I C E` | `rice` | 🍚 | active |
 | `E R I C E DOT C R A C K E R` | `rice.cracker` | 🍘 | available (commented out) |
 | `E R I C E DOT E A R` | `rice.ear` | 🌾 | available (commented out) |
 | `E R I C E DOT O N I G I R I` | `rice.onigiri` | 🍙 | available (commented out) |
-| `E R I N G` | `ring` | 💍 | available (commented out) |
+| `E R I N G` | `ring` | 💍 | active |
 | `E R I N G B U O Y` | `ringbuoy` | 🛟 | available (commented out) |
-| `E R O B O T` | `robot` | 🤖 | available (commented out) |
-| `E R O C K` | `rock` | 🪨 | available (commented out) |
-| `E R O C K E T` | `rocket` | 🚀 | active |
+| `E R O B O T` | `robot` | 🤖 | active |
+| `E R O C K` | `rock` | 🪨 | active |
+| `E R O C K E T` | `rocket` | 🚀 | available (commented out) |
 | `E R O L L E R C O A S T E R` | `rollercoaster` | 🎢 | available (commented out) |
 | `E R O S E T T E` | `rosette` | 🏵 | available (commented out) |
 | `E R U G B Y` | `rugby` | 🏉 | available (commented out) |
-| `E R U L E R` | `ruler` | 📏 | available (commented out) |
+| `E R U L E R` | `ruler` | 📏 | active |
 | `E R U L E R DOT T R I A N G L E` | `ruler.triangle` | 📐 | available (commented out) |
 | `E R U N N I N G` | `running` | 🏃 | available (commented out) |
 | `E S A` | `sa` | 🈂 | available (commented out) |
@@ -2407,27 +2415,27 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E S A X O P H O N E` | `saxophone` | 🎷 | available (commented out) |
 | `E S C A L E S` | `scales` | ⚖ | available (commented out) |
 | `E S C A R F` | `scarf` | 🧣 | available (commented out) |
-| `E S C H O O L` | `school` | 🏫 | available (commented out) |
+| `E S C H O O L` | `school` | 🏫 | active |
 | `E S C I S S O R S` | `scissors` | ✂ | active |
 | `E S C O O T E R` | `scooter` | 🛴 | available (commented out) |
 | `E S C O O T E R DOT M O T O R` | `scooter.motor` | 🛵 | available (commented out) |
 | `E S C O R P I O N` | `scorpion` | 🦂 | available (commented out) |
 | `E S C R E W D R I V E R` | `screwdriver` | 🪛 | available (commented out) |
 | `E S C R O L L` | `scroll` | 📜 | available (commented out) |
-| `E S E A L` | `seal` | 🦭 | available (commented out) |
-| `E S E A T` | `seat` | 💺 | available (commented out) |
-| `E S E E D L I N G` | `seedling` | 🌱 | available (commented out) |
+| `E S E A L` | `seal` | 🦭 | active |
+| `E S E A T` | `seat` | 💺 | active |
+| `E S E E D L I N G` | `seedling` | 🌱 | active |
 | `E S H A R K` | `shark` | 🦈 | available (commented out) |
 | `E S H E E P` | `sheep` | 🐑 | available (commented out) |
 | `E S H E L L DOT S P I R A L` | `shell.spiral` | 🐚 | available (commented out) |
 | `E S H I E L D` | `shield` | 🛡 | available (commented out) |
 | `E S H I N` | `shin` | 🈸 | available (commented out) |
-| `E S H I P` | `ship` | 🚢 | available (commented out) |
+| `E S H I P` | `ship` | 🚢 | active |
 | `E S H I P DOT C R U I S E` | `ship.cruise` | 🛳 | available (commented out) |
 | `E S H I P DOT F E R R Y` | `ship.ferry` | ⛴ | available (commented out) |
 | `E S H I R T DOT S P O R T S` | `shirt.sports` | 🎽 | available (commented out) |
 | `E S H I R T DOT T` | `shirt.t` | 👕 | available (commented out) |
-| `E S H O E` | `shoe` | 👞 | available (commented out) |
+| `E S H O E` | `shoe` | 👞 | active |
 | `E S H O E DOT B A L L E T` | `shoe.ballet` | 🩰 | available (commented out) |
 | `E S H O E DOT F L A T` | `shoe.flat` | 🥿 | available (commented out) |
 | `E S H O E DOT H E E L` | `shoe.heel` | 👠 | available (commented out) |
@@ -2459,10 +2467,10 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E S K E W E R DOT D A N G O` | `skewer.dango` | 🍡 | available (commented out) |
 | `E S K E W E R DOT O D E N` | `skewer.oden` | 🍢 | available (commented out) |
 | `E S K I I N G` | `skiing` | ⛷ | available (commented out) |
-| `E S K U L L` | `skull` | 💀 | available (commented out) |
+| `E S K U L L` | `skull` | 💀 | active |
 | `E S K U L L DOT B O N E S` | `skull.bones` | ☠ | available (commented out) |
 | `E S K U N K` | `skunk` | 🦨 | available (commented out) |
-| `E S L E D` | `sled` | 🛷 | available (commented out) |
+| `E S L E D` | `sled` | 🛷 | active |
 | `E S L I D E` | `slide` | 🛝 | available (commented out) |
 | `E S L I D E R` | `slider` | 🎚 | available (commented out) |
 | `E S L O T H` | `sloth` | 🦥 | available (commented out) |
@@ -2470,18 +2478,18 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E S N A I L` | `snail` | 🐌 | available (commented out) |
 | `E S N A K E` | `snake` | 🐍 | available (commented out) |
 | `E S N O W B O A R D I N G` | `snowboarding` | 🏂 | available (commented out) |
-| `E S N O W F L A K E` | `snowflake` | ❄ | available (commented out) |
+| `E S N O W F L A K E` | `snowflake` | ❄ | active |
 | `E S N O W M A N` | `snowman` | ⛄ | available (commented out) |
 | `E S N O W M A N DOT S N O W` | `snowman.snow` | ☃ | available (commented out) |
-| `E S O A P` | `soap` | 🧼 | available (commented out) |
+| `E S O A P` | `soap` | 🧼 | active |
 | `E S O C K S` | `socks` | 🧦 | available (commented out) |
 | `E S O F T B A L L` | `softball` | 🥎 | available (commented out) |
 | `E S O S` | `sos` | 🆘 | available (commented out) |
-| `E S O U P` | `soup` | 🍲 | available (commented out) |
+| `E S O U P` | `soup` | 🍲 | active |
 | `E S P A G H E T T I` | `spaghetti` | 🍝 | available (commented out) |
 | `E S P A R K L E DOT B O X` | `sparkle.box` | ❇ | available (commented out) |
 | `E S P A R K L E R` | `sparkler` | 🎇 | available (commented out) |
-| `E S P A R K L E S` | `sparkles` | ✨ | available (commented out) |
+| `E S P A R K L E S` | `sparkles` | ✨ | active |
 | `E S P E A K E R` | `speaker` | 🔈 | available (commented out) |
 | `E S P E A K E R DOT N O T` | `speaker.not` | 🔇 | available (commented out) |
 | `E S P E A K E R DOT W A V E` | `speaker.wave` | 🔉 | available (commented out) |
@@ -2522,7 +2530,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E S U I T DOT D I A M O N D` | `suit.diamond` | ♦ | available (commented out) |
 | `E S U I T DOT H E A R T` | `suit.heart` | ♥ | available (commented out) |
 | `E S U I T DOT S P A D E` | `suit.spade` | ♠ | available (commented out) |
-| `E S U N` | `sun` | ☀ | available (commented out) |
+| `E S U N` | `sun` | ☀ | active |
 | `E S U N DOT C L O U D` | `sun.cloud` | 🌤 | available (commented out) |
 | `E S U N DOT F A C E` | `sun.face` | 🌞 | available (commented out) |
 | `E S U N R I S E` | `sunrise` | 🌅 | available (commented out) |
@@ -2530,32 +2538,32 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E S U P E R V I L L A I N` | `supervillain` | 🦹 | available (commented out) |
 | `E S U R F I N G` | `surfing` | 🏄 | available (commented out) |
 | `E S U S H I` | `sushi` | 🍣 | available (commented out) |
-| `E S W A N` | `swan` | 🦢 | available (commented out) |
+| `E S W A N` | `swan` | 🦢 | active |
 | `E S W I M M I N G` | `swimming` | 🏊 | available (commented out) |
 | `E S W I M S U I T` | `swimsuit` | 🩱 | available (commented out) |
 | `E S W O R D S` | `swords` | ⚔ | available (commented out) |
 | `E S Y M B O L S` | `symbols` | 🔣 | available (commented out) |
 | `E S Y N A G O G U E` | `synagogue` | 🕍 | available (commented out) |
 | `E S Y R I N G E` | `syringe` | 💉 | available (commented out) |
-| `E T A C O` | `taco` | 🌮 | available (commented out) |
+| `E T A C O` | `taco` | 🌮 | active |
 | `E T A K E O U T` | `takeout` | 🥡 | available (commented out) |
 | `E T A M A L E` | `tamale` | 🫔 | available (commented out) |
 | `E T A N A B A T A` | `tanabata` | 🎋 | available (commented out) |
 | `E T A N G E R I N E` | `tangerine` | 🍊 | available (commented out) |
-| `E T A P` | `tap` | 🚰 | available (commented out) |
+| `E T A P` | `tap` | 🚰 | active |
 | `E T A P DOT N O T` | `tap.not` | 🚱 | available (commented out) |
-| `E T A X I` | `taxi` | 🚕 | available (commented out) |
+| `E T A X I` | `taxi` | 🚕 | active |
 | `E T A X I DOT F R O N T` | `taxi.front` | 🚖 | available (commented out) |
 | `E T E A C U P` | `teacup` | 🍵 | available (commented out) |
 | `E T E A P O T` | `teapot` | 🫖 | available (commented out) |
 | `E T E D D Y` | `teddy` | 🧸 | available (commented out) |
-| `E T E L E S C O P E` | `telescope` | 🔭 | available (commented out) |
+| `E T E L E S C O P E` | `telescope` | 🔭 | active |
 | `E T E M P L E` | `temple` | 🛕 | available (commented out) |
-| `E T E N` | `ten` | 🔟 | available (commented out) |
+| `E T E N` | `ten` | 🔟 | active |
 | `E T E N G U` | `tengu` | 👺 | available (commented out) |
 | `E T E N N I S` | `tennis` | 🎾 | available (commented out) |
 | `E T E N T` | `tent` | ⛺ | available (commented out) |
-| `E T E S T T U B E` | `testtube` | 🧪 | available (commented out) |
+| `E T E S T T U B E` | `testtube` | 🧪 | active |
 | `E T H E R M O M E T E R` | `thermometer` | 🌡 | available (commented out) |
 | `E T H R E A D` | `thread` | 🧵 | available (commented out) |
 | `E T H U M B DOT D O W N` | `thumb.down` | 👎 | active |
@@ -2564,14 +2572,14 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E T I C K E T DOT T R A V E L` | `ticket.travel` | 🎫 | available (commented out) |
 | `E T I G E R` | `tiger` | 🐅 | available (commented out) |
 | `E T I G E R DOT F A C E` | `tiger.face` | 🐯 | available (commented out) |
-| `E T M` | `tm` | ™ | available (commented out) |
+| `E T M` | `tm` | ™ | active |
 | `E T O I L E T` | `toilet` | 🚽 | available (commented out) |
 | `E T O I L E T P A P E R` | `toiletpaper` | 🧻 | available (commented out) |
 | `E T O K U` | `toku` | 🉐 | available (commented out) |
 | `E T O M A T O` | `tomato` | 🍅 | available (commented out) |
 | `E T O M B S T O N E` | `tombstone` | 🪦 | available (commented out) |
 | `E T O N G U E` | `tongue` | 👅 | available (commented out) |
-| `E T O O L B O X` | `toolbox` | 🧰 | available (commented out) |
+| `E T O O L B O X` | `toolbox` | 🧰 | active |
 | `E T O O T H` | `tooth` | 🦷 | available (commented out) |
 | `E T O O T H B R U S H` | `toothbrush` | 🪥 | available (commented out) |
 | `E T O R N A D O` | `tornado` | 🌪 | available (commented out) |
@@ -2599,28 +2607,28 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E T R A Y DOT O U T B O X` | `tray.outbox` | 📤 | available (commented out) |
 | `E T R E A S U R E` | `treasure` | 🪎 | available (commented out) |
 | `E T R E E DOT D E C I D U O U S` | `tree.deciduous` | 🌳 | available (commented out) |
-| `E T R E E DOT E V E R G R E E N` | `tree.evergreen` | 🌲 | available (commented out) |
+| `E T R E E DOT E V E R G R E E N` | `tree.evergreen` | 🌲 | active |
 | `E T R E E DOT L E A F L E S S` | `tree.leafless` | 🪾 | available (commented out) |
 | `E T R E E DOT P A L M` | `tree.palm` | 🌴 | available (commented out) |
 | `E T R E E DOT X M A S` | `tree.xmas` | 🎄 | available (commented out) |
 | `E T R I A N G L E DOT B` | `triangle.b` | 🔽 | available (commented out) |
 | `E T R I A N G L E DOT B DOT R E D` | `triangle.b.red` | 🔻 | available (commented out) |
-| `E T R I A N G L E DOT L` | `triangle.l` | ◀ | available (commented out) |
-| `E T R I A N G L E DOT R` | `triangle.r` | ▶ | available (commented out) |
+| `E T R I A N G L E DOT L` | `triangle.l` | ◀ | active |
+| `E T R I A N G L E DOT R` | `triangle.r` | ▶ | active |
 | `E T R I A N G L E DOT T` | `triangle.t` | 🔼 | available (commented out) |
 | `E T R I A N G L E DOT T DOT R E D` | `triangle.t.red` | 🔺 | available (commented out) |
 | `E T R I D E N T` | `trident` | 🔱 | available (commented out) |
 | `E T R O L L` | `troll` | 🧌 | available (commented out) |
 | `E T R O M B O N E` | `trombone` | 🪊 | available (commented out) |
-| `E T R O P H Y` | `trophy` | 🏆 | available (commented out) |
+| `E T R O P H Y` | `trophy` | 🏆 | active |
 | `E T R U C K` | `truck` | 🚚 | available (commented out) |
 | `E T R U C K DOT T R A I L E R` | `truck.trailer` | 🚛 | available (commented out) |
 | `E T R U M P E T` | `trumpet` | 🎺 | available (commented out) |
 | `E T S U K I M I` | `tsukimi` | 🎑 | available (commented out) |
 | `E T U R K E Y` | `turkey` | 🦃 | available (commented out) |
 | `E T U R T L E` | `turtle` | 🐢 | available (commented out) |
-| `E T V` | `tv` | 📺 | available (commented out) |
-| `E U F O` | `ufo` | 🛸 | available (commented out) |
+| `E T V` | `tv` | 📺 | active |
+| `E U F O` | `ufo` | 🛸 | active |
 | `E U M B R E L L A DOT C L O S E D` | `umbrella.closed` | 🌂 | available (commented out) |
 | `E U M B R E L L A DOT O P E N` | `umbrella.open` | ☂ | available (commented out) |
 | `E U M B R E L L A DOT R A I N` | `umbrella.rain` | ☔ | available (commented out) |
@@ -2628,21 +2636,21 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E U N I C O R N` | `unicorn` | 🦄 | available (commented out) |
 | `E U N K N O W N` | `unknown` | 🦳 | available (commented out) |
 | `E U P` | `up` | 🆙 | available (commented out) |
-| `E U R N` | `urn` | ⚱ | available (commented out) |
+| `E U R N` | `urn` | ⚱ | active |
 | `E V A M P I R E` | `vampire` | 🧛 | available (commented out) |
 | `E V I O L I N` | `violin` | 🎻 | available (commented out) |
 | `E V O L C A N O` | `volcano` | 🌋 | available (commented out) |
 | `E V O L L E Y B A L L` | `volleyball` | 🏐 | available (commented out) |
 | `E V S` | `vs` | 🆚 | available (commented out) |
 | `E W A F F L E` | `waffle` | 🧇 | available (commented out) |
-| `E W A N D` | `wand` | 🪄 | available (commented out) |
+| `E W A N D` | `wand` | 🪄 | active |
 | `E W A R N I N G` | `warning` | ⚠ | active |
 | `E W A T C H` | `watch` | ⌚ | available (commented out) |
 | `E W A T C H DOT S T O P` | `watch.stop` | ⏱ | available (commented out) |
 | `E W A T E R M E L O N` | `watermelon` | 🍉 | available (commented out) |
 | `E W A T E R P O L O` | `waterpolo` | 🤽 | available (commented out) |
-| `E W A V E` | `wave` | 🌊 | available (commented out) |
-| `E W C` | `wc` | 🚾 | available (commented out) |
+| `E W A V E` | `wave` | 🌊 | active |
+| `E W C` | `wc` | 🚾 | active |
 | `E W E I G H T L I F T I N G` | `weightlifting` | 🏋 | available (commented out) |
 | `E W H A L E` | `whale` | 🐋 | available (commented out) |
 | `E W H A L E DOT S P O U T` | `whale.spout` | 🐳 | available (commented out) |
@@ -2650,24 +2658,24 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E W H E E L C H A I R` | `wheelchair` | 🦽 | available (commented out) |
 | `E W H E E L C H A I R DOT B O X` | `wheelchair.box` | ♿ | available (commented out) |
 | `E W H E E L C H A I R DOT M O T O R` | `wheelchair.motor` | 🦼 | available (commented out) |
-| `E W I N D` | `wind` | 🌬 | available (commented out) |
+| `E W I N D` | `wind` | 🌬 | active |
 | `E W I N D C H I M E` | `windchime` | 🎐 | available (commented out) |
 | `E W I N D O W` | `window` | 🪟 | available (commented out) |
-| `E W I N E` | `wine` | 🍷 | available (commented out) |
-| `E W I N G` | `wing` | 🪽 | available (commented out) |
+| `E W I N E` | `wine` | 🍷 | active |
+| `E W I N G` | `wing` | 🪽 | active |
 | `E W I R E L E S S` | `wireless` | 🛜 | available (commented out) |
-| `E W O L F` | `wolf` | 🐺 | available (commented out) |
+| `E W O L F` | `wolf` | 🐺 | active |
 | `E W O M A N` | `woman` | 👩 | available (commented out) |
 | `E W O M A N DOT B O X` | `woman.box` | 🚺 | available (commented out) |
 | `E W O M A N DOT C R O W N` | `woman.crown` | 👸 | available (commented out) |
 | `E W O M A N DOT O L D` | `woman.old` | 👵 | available (commented out) |
 | `E W O M A N DOT P R E G N A N T` | `woman.pregnant` | 🤰 | available (commented out) |
-| `E W O O D` | `wood` | 🪵 | available (commented out) |
-| `E W O R M` | `worm` | 🪱 | available (commented out) |
-| `E W R E N C H` | `wrench` | 🔧 | available (commented out) |
+| `E W O O D` | `wood` | 🪵 | active |
+| `E W O R M` | `worm` | 🪱 | active |
+| `E W R E N C H` | `wrench` | 🔧 | active |
 | `E W R E S T L I N G` | `wrestling` | 🤼 | available (commented out) |
-| `E X R A Y` | `xray` | 🩻 | available (commented out) |
-| `E Y A R N` | `yarn` | 🧶 | available (commented out) |
+| `E X R A Y` | `xray` | 🩻 | active |
+| `E Y A R N` | `yarn` | 🧶 | active |
 | `E Y O` | `yo` | 🈺 | available (commented out) |
 | `E Y O Y O` | `yoyo` | 🪀 | available (commented out) |
 | `E Y U B I` | `yubi` | 🈯 | available (commented out) |
@@ -2687,7 +2695,7 @@ collides with the existing sign-off sequences (`A G`, `C U`, `T Y`, ...).
 | `E Z O D I A C DOT T A U R U S` | `zodiac.taurus` | ♉ | available (commented out) |
 | `E Z O D I A C DOT V I R G O` | `zodiac.virgo` | ♍ | available (commented out) |
 | `E Z O M B I E` | `zombie` | 🧟 | available (commented out) |
-| `E Z Z Z` | `zzz` | 💤 | available (commented out) |
+| `E Z Z Z` | `zzz` | 💤 | active |
 
 ## Exceptions applied
 
@@ -2695,42 +2703,54 @@ These names do not use their plain typst spelling, for the reasons above.
 
 ### Math
 
-* `original` -> suffix `X` (existing `M O` is a prefix)
-* `in` -> `inset` (renamed, see RENAMES)
-* `oo` -> suffix `X` (existing `M O` is a prefix)
-* `or` -> suffix `X` (existing `M O` is a prefix)
-* `or.big` -> suffix `X` (existing `M O` is a prefix)
-* `or.curly` -> suffix `X` (existing `M O` is a prefix)
-* `or.dot` -> suffix `X` (existing `M O` is a prefix)
-* `or.double` -> suffix `X` (existing `M O` is a prefix)
-* `ordinal` -> suffix `X` (existing `M O` is a prefix)
-* `omega` -> suffix `X` (existing `M O` is a prefix)
-* `omicron` -> suffix `X` (existing `M O` is a prefix)
+* `plus.minus` -> `pm`
+* `minus.plus` -> `mp`
+* `gt.eq` -> `geq`
+* `gt.eq.slant` -> `geqslant`
+* `lt.eq` -> `leq`
+* `lt.eq.slant` -> `leqslant`
+* `approx.eq` -> `simeq`
+* `approx.not` -> `nsimeq`
+* `equiv.not` -> `nequiv`
+* `in` -> `inset`
+* `subset.eq` -> `subeq`
+* `subset.not` -> `nsubset`
+* `supset.eq` -> `supeq`
+* `supset.not` -> `nsupset`
+* `union.big` -> `bigcup`
+* `inter.big` -> `bigcap`
+* `integral.cont` -> `oint`
+* `angle.right` -> `measuredangle`
+* `arrow.r.bar` -> `mapsto`
+* `mapsto` -> suffix `U` (case collision with `mapsto`)
+* `arrow.r.double` -> `Rightarrow`
+* `arrow.r.hook` -> `hookrightarrow`
+* `arrow.r.long` -> `longrightarrow`
+* `arrow.l.hook` -> `hookleftarrow`
+* `arrow.l.long` -> `longleftarrow`
+* `arrow.l.r` -> `leftrightarrow`
 * `Alpha` -> suffix `U` (case collision with `alpha`)
 * `Beta` -> suffix `U` (case collision with `beta`)
 * `Chi` -> suffix `U` (case collision with `chi`)
-* `Delta` -> suffix `U` (case collision with `delta`)
+* `Delta` -> `gDelta`
 * `Digamma` -> suffix `U` (case collision with `digamma`)
 * `Epsilon` -> suffix `U` (case collision with `epsilon`)
 * `Eta` -> suffix `U` (case collision with `eta`)
-* `Gamma` -> suffix `U` (case collision with `gamma`)
+* `Gamma` -> `gGamma`
 * `Iota` -> suffix `U` (case collision with `iota`)
 * `Kappa` -> suffix `U` (case collision with `kappa`)
-* `Lambda` -> suffix `U` (case collision with `lambda`)
+* `Lambda` -> `gLambda`
 * `Mu` -> suffix `U` (case collision with `mu`)
 * `Nu` -> suffix `U` (case collision with `nu`)
-* `Omega` -> suffix `U` (case collision with `omega`)
-* `Omega` -> suffix `X` (existing `M O` is a prefix)
-* `Omega.inv` -> suffix `X` (existing `M O` is a prefix)
+* `Omega` -> `gOmega`
 * `Omicron` -> suffix `U` (case collision with `omicron`)
-* `Omicron` -> suffix `X` (existing `M O` is a prefix)
-* `Phi` -> suffix `U` (case collision with `phi`)
-* `Pi` -> suffix `U` (case collision with `pi`)
-* `Psi` -> suffix `U` (case collision with `psi`)
+* `Phi` -> `gPhi`
+* `Pi` -> `gPi`
+* `Psi` -> `gPsi`
 * `Rho` -> suffix `U` (case collision with `rho`)
-* `Sigma` -> suffix `U` (case collision with `sigma`)
+* `Sigma` -> `gSigma`
 * `Tau` -> suffix `U` (case collision with `tau`)
-* `Theta` -> suffix `U` (case collision with `theta`)
+* `Theta` -> `gTheta`
 * `Theta.alt` -> suffix `U` (case collision with `theta.alt`)
 * `Upsilon` -> suffix `U` (case collision with `upsilon`)
 * `Xi` -> suffix `U` (case collision with `xi`)
@@ -2738,12 +2758,13 @@ These names do not use their plain typst spelling, for the reasons above.
 * `Sha` -> suffix `U` (case collision with `sha`)
 * `CC` -> suffix `U` (case collision with `cc`)
 * `OO` -> suffix `U` (case collision with `oo`)
-* `OO` -> suffix `X` (existing `M O` is a prefix)
-* `FF` -> `ff` (lowercase wins)
+* `FF` -> suffix `U` (case collision with `ff`)
 * `space` -> suffix `U` (case collision with `space`)
-* `option` -> suffix `X` (existing `M O` is a prefix)
 * `esc` -> suffix `U` (case collision with `esc`)
 
 ### Emoji
 
 * `ABCD` -> suffix `U` (case collision with `abcd`)
+* `arrow.r.hook` -> `hookrightarrow`
+* `arrow.l.hook` -> `hookleftarrow`
+* `arrow.l.r` -> `leftrightarrow`
