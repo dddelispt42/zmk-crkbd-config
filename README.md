@@ -68,6 +68,34 @@ Press it, then a short sequence:
 | **sign-offs** | leader, two or three letters | `O B R` → "Obrigado,\nHeiko" |
 | **unicode mode** | leader, `U X L/W/M` | switch the input method to Linux/Windows/macOS |
 
+### Unicode input needs a host-side helper on Windows and Linux
+
+Every symbol, emoji, Greek letter and ACCENT mark is typed by entering a code
+point, and each OS does that differently. The mode is switched with
+`leader` `U X L` / `U X W` / `U X M`, and **Windows is the boot default**.
+
+| mode | needs | can reach |
+|---|---|---|
+| `UXW` Windows | [WinCompose](https://github.com/ell1010/wincompose) installed | everything |
+| `UXL` Linux | an input method (fcitx5) | everything |
+| `UXM` macOS | nothing | everything |
+
+**Windows requires WinCompose.** Without it the keyboard still sends the
+sequence but nothing appears - for *any* symbol, not just some. Install it and
+it runs at startup. If you prefer no extra software, `UC_MODE_WIN_ALT`
+(HexNumpad) works out of the box but cannot reach code points above U+FFFF,
+which excludes most emoji.
+
+### The vector arrows and harpoons never attach to the letter
+
+The five arrow/harpoon marks on the ACCENT layer (`←  →  ↔  ⃐  ⃑`) do not merge
+with the preceding character, on any OS. That is Unicode, not the keyboard:
+unlike `e` + acute, which folds into one precomposed character, arrows and
+harpoons have **no precomposed form anywhere**, so there is nothing to fold
+into. Whether they render stacked over the letter or beside it depends on the
+application and font. Word and most LaTeX editors handle them; plain text
+fields often do not.
+
 Names follow **typst/LaTeX** and are never renamed: `sum`, `approx`, `and`,
 `arrow.r`. Dots inside a name are dropped, so `arrow.cm` is `M A R R O W C M`.
 

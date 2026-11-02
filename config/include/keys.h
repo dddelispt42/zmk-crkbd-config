@@ -116,6 +116,31 @@
 #define UC_COMBINING_INVERTED_BREVE      0x0311  0  /* combining inverted breve */
 #define UC_COMBINING_COMMA_ABOVE         0x0313  0  /* combining comma above */
 
+/*
+ * Above: arrows and harpoons, as used for vectors.
+ *
+ * THESE FIVE NEVER MERGE WITH THE PRECEDING LETTER, and that is expected.
+ *
+ * They are category Mn (non-spacing marks) with no precomposed partner anywhere
+ * in Unicode. Normalisation (NFC) can only fold `base + mark` into a single
+ * character when that character exists - `e` + U+0301 becomes U+00E9, one code
+ * point, which is why ordinary accents appear to "merge". There is no such
+ * character for U+20D0-20D1 or U+20D6-20E1: checked against every ASCII base,
+ * Unicode's composition table maps none of them. So the mark must be drawn by
+ * the renderer on top of the previous character, and how well that works is
+ * purely a question of the font and the application.
+ *
+ * In practice: Word and most LaTeX editors render these correctly when the font
+ * has them; many plain-text fields (browsers, terminals, some Windows controls)
+ * either show a dotted circle placeholder or draw the mark beside the letter.
+ * This is not a ZMK or keymap problem and cannot be fixed from here.
+ *
+ * On Windows specifically, the mode matters. If the default-mode is
+ * UC_MODE_WIN_COMPOSE the host needs the WinCompose utility installed
+ * (https://github.com/ell1010/wincompose) - without it nothing is emitted at
+ * all, for any code point, not just these. UC_MODE_WIN_ALT (HexNumpad) does not
+ * need extra software but cannot reach code points above U+FFFF.
+ */
 /* Above: arrows and harpoons, as used for vectors */
 #define UC_COMBINING_LEFT_ARROW_ABOVE        0x20D6  0  /* combining left arrow */
 #define UC_COMBINING_RIGHT_ARROW_ABOVE       0x20D7  0  /* combining right arrow */
@@ -131,14 +156,33 @@
 #define UC_COMBINING_MACRON_BELOW        0x0331  0  /* combining macron below */
 
 /*
- * Deliberately NOT defined: ring below, cedilla, ogonek and low line as
- * below-marks, and every enclosing variant other than the circle.
+ * Below: formerly omitted, added when the duplicate accents were dropped.
  *
- * The ACCENT layer has 28 free cells on both boards (verified by counting the
- * &trans entries in the parsed keymap: 36 bindings with 8 used on the 36-key
- * boards, 34 with 6 used on sweep - 28 free either way). The 26 marks above
- * leave 2 spare. The four omitted ones are the least used in LaTeX/typst math;
- * add them here if a use appears.
+ * These four were left out of the first version of this layer because there
+ * were more marks than free cells. They are back now that five cells came free:
+ * on the ACCENT layer Q, W, E and R held combining marks whose SPACING
+ * equivalents already sit on the right home row, and Z held c-cedilla.
+ *
+ *   dropped from Q   combining grave       (spacing ` is on ACCENT + RM4)
+ *   dropped from W   combining acute       (spacing ´ is on ACCENT + RM1)
+ *   dropped from E   combining circumflex  (spacing ^ is on ACCENT + RM3)
+ *   dropped from R   combining tilde       (spacing ~ is on ACCENT + RM2)
+ *   dropped from Z   c-cedilla             (not needed)
+ *
+ * The spacing accents are category Sk and stand alone; these are category Mn
+ * and attach to the preceding character. Both are still reachable - the
+ * combining GRAVE/ACUTE/CIRCUMFLEX/TILDE are typing characters now rather than
+ * math ones, which is what "duplicate" meant.
+ */
+#define UC_COMBINING_RING_BELOW          0x0325  0  /* combining ring below */
+#define UC_COMBINING_CEDILLA             0x0327  0  /* combining cedilla */
+#define UC_COMBINING_OGONEK              0x0328  0  /* combining ogonek */
+#define UC_COMBINING_LOW_LINE            0x0332  0  /* combining low line (underline) */
+
+/*
+ * Still deliberately NOT defined: every enclosing variant other than the
+ * circle. One cell on the ACCENT layer is spare, so a use can be added without
+ * having to drop anything else.
  */
 
 /* Overlays: strike-through and cancellation marks */
