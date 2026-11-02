@@ -28,7 +28,7 @@ disabled.
 | `E A R R O W B R` | `arrow.br` | ↘ | active |
 | `E A R R O W L B A C K` | `arrow.l.back` | 🔙 | active |
 | `E A R R O W L F I L L E D` | `arrow.l.filled` | ⬅ | active |
-| `E A R R O W L R` | `arrow.l.r` | ↔ | active |
+| `E A R R O W L R DOT` | `arrow.l.r` | ↔ | active |
 | `E A R R O W L R O N` | `arrow.l.r.on` | 🔛 | active |
 | `E A R R O W R F I L L E D` | `arrow.r.filled` | ➡ | active |
 | `E A R R O W R S O O N` | `arrow.r.soon` | 🔜 | active |
@@ -52,7 +52,7 @@ disabled.
 | `E B A S E B A L L` | `baseball` | ⚾ | active |
 | `E B A S E C A P` | `basecap` | 🧢 | active |
 | `E B A T DOT` | `bat` | 🦇 | active |
-| `E B A T T E R Y` | `battery` | 🔋 | active |
+| `E B A T T E R Y DOT` | `battery` | 🔋 | active |
 | `E B A T T E R Y L O W` | `battery.low` | 🪫 | active |
 | `E B E A D S` | `beads` | 📿 | active |
 | `E B E A N S` | `beans` | 🫘 | active |
@@ -60,12 +60,12 @@ disabled.
 | `E B E D` | `bed` | 🛏 | active |
 | `E B E E DOT` | `bee` | 🐝 | active |
 | `E B E E R` | `beer` | 🍺 | active |
-| `E B E E T L E` | `beetle` | 🪲 | active |
+| `E B E E T L E DOT` | `beetle` | 🪲 | active |
 | `E B E E T L E L A D Y` | `beetle.lady` | 🐞 | active |
 | `E B E L L DOT` | `bell` | 🔔 | active |
 | `E B E L L N O T` | `bell.not` | 🔕 | active |
 | `E B I C Y C L I S T` | `bicyclist` | 🚴 | active |
-| `E B I K E` | `bike` | 🚲 | active |
+| `E B I K E DOT` | `bike` | 🚲 | active |
 | `E B I K E N O T` | `bike.not` | 🚳 | active |
 | `E B I L L I A R D S` | `billiards` | 🎱 | active |
 | `E B I N` | `bin` | 🗑 | active |
@@ -81,7 +81,7 @@ disabled.
 | `E B O O K O P E N` | `book.open` | 📖 | active |
 | `E B O O K S` | `books` | 📚 | active |
 | `E B O U Q U E T` | `bouquet` | 💐 | active |
-| `E B O W` | `bow` | 🏹 | active |
+| `E B O W DOT` | `bow` | 🏹 | active |
 | `E B O W L I N G` | `bowling` | 🎳 | active |
 | `E B O Y` | `boy` | 👦 | active |
 | `E B R A I N` | `brain` | 🧠 | active |
@@ -100,7 +100,7 @@ disabled.
 | `E B U S` | `bus` | 🚌 | active |
 | `E B U T T E R F L Y` | `butterfly` | 🦋 | active |
 | `E C A B I N E T F I L E` | `cabinet.file` | 🗄 | active |
-| `E C A K E` | `cake` | 🎂 | active |
+| `E C A K E DOT` | `cake` | 🎂 | active |
 | `E C A K E M O O N` | `cake.moon` | 🥮 | active |
 | `E C A L E N D A R DOT` | `calendar` | 📅 | active |
 | `E C A L E N D A R S P I R A L` | `calendar.spiral` | 🗓 | active |
@@ -117,7 +117,7 @@ disabled.
 | `E C A R T` | `cart` | 🛒 | active |
 | `E C A T DOT` | `cat` | 🐈 | active |
 | `E C A T F A C E` | `cat.face` | 🐱 | active |
-| `E C H A I N` | `chain` | 🔗 | active |
+| `E C H A I N DOT` | `chain` | 🔗 | active |
 | `E C H A I N S` | `chains` | ⛓ | active |
 | `E C H A I R` | `chair` | 🪑 | active |
 | `E C H A M P A G N E` | `champagne` | 🍾 | active |
@@ -199,7 +199,7 @@ disabled.
 | `E E X T I N G U I S H E R` | `extinguisher` | 🧯 | active |
 | `E E Y E DOT` | `eye` | 👁 | active |
 | `E E Y E S` | `eyes` | 👀 | active |
-| `E F A C E A N G R Y` | `face.angry` | 😠 | active |
+| `E F A C E A N G R Y DOT` | `face.angry` | 😠 | active |
 | `E F A C E A N G R Y R E D` | `face.angry.red` | 😡 | active |
 | `E F A C E A N G U I S H` | `face.anguish` | 😧 | active |
 | `E F A C E A S T O N I S H` | `face.astonish` | 😲 | active |
@@ -232,7 +232,7 @@ disabled.
 | `E F A C E G R I N` | `face.grin` | 😀 | active |
 | `E F A C E H A L O` | `face.halo` | 😇 | active |
 | `E F A C E H A P P Y` | `face.happy` | 😊 | active |
-| `E F A C E H E A R T` | `face.heart` | 😍 | active |
+| `E F A C E H E A R T DOT` | `face.heart` | 😍 | active |
 | `E F A C E H E A R T S` | `face.hearts` | 🥰 | active |
 | `E F A C E H E A T` | `face.heat` | 🥵 | active |
 | `E F A C E H U G` | `face.hug` | 🤗 | active |
@@ -261,9 +261,9 @@ disabled.
 | `E F A C E S H O C K` | `face.shock` | 😱 | active |
 | `E F A C E S H U S H` | `face.shush` | 🤫 | active |
 | `E F A C E S K E P T I C` | `face.skeptic` | 🤨 | active |
-| `E F A C E S L E E P` | `face.sleep` | 😴 | active |
+| `E F A C E S L E E P DOT` | `face.sleep` | 😴 | active |
 | `E F A C E S L E E P Y` | `face.sleepy` | 😪 | active |
-| `E F A C E S M I L E` | `face.smile` | 😄 | active |
+| `E F A C E S M I L E DOT` | `face.smile` | 😄 | active |
 | `E F A C E S M I L E S W E A T` | `face.smile.sweat` | 😅 | active |
 | `E F A C E S M I R K` | `face.smirk` | 😏 | active |
 | `E F A C E S N E E Z E` | `face.sneeze` | 🤧 | active |
@@ -274,12 +274,12 @@ disabled.
 | `E F A C E S U F F E R` | `face.suffer` | 😖 | active |
 | `E F A C E S U R P R I S E` | `face.surprise` | 😯 | active |
 | `E F A C E S Y M B O L S` | `face.symbols` | 🤬 | active |
-| `E F A C E T E A R` | `face.tear` | 😢 | active |
+| `E F A C E T E A R DOT` | `face.tear` | 😢 | active |
 | `E F A C E T E A R W I T H H E L D` | `face.tear.withheld` | 🥹 | active |
 | `E F A C E T E E T H` | `face.teeth` | 😬 | active |
 | `E F A C E T H I N K` | `face.think` | 🤔 | active |
 | `E F A C E T I R E D` | `face.tired` | 🫩 | active |
-| `E F A C E T O N G U E` | `face.tongue` | 😛 | active |
+| `E F A C E T O N G U E DOT` | `face.tongue` | 😛 | active |
 | `E F A C E T O N G U E S Q U I N T` | `face.tongue.squint` | 😝 | active |
 | `E F A C E T O N G U E W I N K` | `face.tongue.wink` | 😜 | active |
 | `E F A C E T R I U M P H` | `face.triumph` | 😤 | active |
@@ -307,9 +307,9 @@ disabled.
 | `E F I N G E R B` | `finger.b` | 👇 | active |
 | `E F I N G E R L` | `finger.l` | 👈 | active |
 | `E F I N G E R R` | `finger.r` | 👉 | active |
-| `E F I N G E R T DOT` | `finger.t` | 👆 | active |
+| `E F I N G E R T` | `finger.t` | 👆 | active |
 | `E F I N G E R S C R O S S` | `fingers.cross` | 🤞 | active |
-| `E F I R E` | `fire` | 🔥 | active |
+| `E F I R E DOT` | `fire` | 🔥 | active |
 | `E F I R E C R A C K E R` | `firecracker` | 🧨 | active |
 | `E F I S H` | `fish` | 🐟 | active |
 | `E F L A G G O A L` | `flag.goal` | 🏁 | active |
@@ -335,7 +335,7 @@ disabled.
 | `E G H O S T` | `ghost` | 👻 | active |
 | `E G I R A F F E` | `giraffe` | 🦒 | active |
 | `E G I R L` | `girl` | 👧 | active |
-| `E G L A S S E S` | `glasses` | 👓 | active |
+| `E G L A S S E S DOT` | `glasses` | 👓 | active |
 | `E G L A S S E S S U N` | `glasses.sun` | 🕶 | active |
 | `E G L O B E A M` | `globe.am` | 🌎 | active |
 | `E G L O B E A S A U` | `globe.as.au` | 🌏 | active |
@@ -378,7 +378,7 @@ disabled.
 | `E H O U S E` | `house` | 🏠 | active |
 | `E H U N D R E D` | `hundred` | 💯 | active |
 | `E H U T` | `hut` | 🛖 | active |
-| `E I C E` | `ice` | 🧊 | active |
+| `E I C E DOT` | `ice` | 🧊 | active |
 | `E I C E C R E A M` | `icecream` | 🍨 | active |
 | `E I N F O` | `info` | ℹ | active |
 | `E J A R` | `jar` | 🫙 | active |
@@ -388,7 +388,7 @@ disabled.
 | `E K E B A B` | `kebab` | 🥙 | active |
 | `E K E Y DOT` | `key` | 🔑 | active |
 | `E K E Y B O A R D` | `keyboard` | ⌨ | active |
-| `E K I S S` | `kiss` | 💏 | active |
+| `E K I S S DOT` | `kiss` | 💏 | active |
 | `E K I S S M A R K` | `kissmark` | 💋 | active |
 | `E K I T E` | `kite` | 🪁 | active |
 | `E K I W I` | `kiwi` | 🥝 | active |
@@ -439,7 +439,7 @@ disabled.
 | `E M O T O R W A Y` | `motorway` | 🛣 | active |
 | `E M O U S E DOT` | `mouse` | 🐁 | active |
 | `E M O U S E F A C E` | `mouse.face` | 🐭 | active |
-| `E M O U T H` | `mouth` | 👄 | active |
+| `E M O U T H DOT` | `mouth` | 👄 | active |
 | `E M O U T H B I T E` | `mouth.bite` | 🫦 | active |
 | `E N E W S P A P E R` | `newspaper` | 📰 | active |
 | `E N I N J A` | `ninja` | 🥷 | active |
@@ -473,7 +473,7 @@ disabled.
 | `E P E N G U I N` | `penguin` | 🐧 | active |
 | `E P E R S O N B L O N D E` | `person.blonde` | 👱 | active |
 | `E P E T R I` | `petri` | 🧫 | active |
-| `E P H O N E` | `phone` | 📱 | active |
+| `E P H O N E DOT` | `phone` | 📱 | active |
 | `E P H O N E A R R O W` | `phone.arrow` | 📲 | active |
 | `E P H O N E S I G N A L` | `phone.signal` | 📶 | active |
 | `E P I A N O` | `piano` | 🎹 | active |
@@ -542,7 +542,7 @@ disabled.
 | `E S H I P` | `ship` | 🚢 | active |
 | `E S H O E` | `shoe` | 👞 | active |
 | `E S H O W E R` | `shower` | 🚿 | active |
-| `E S K U L L` | `skull` | 💀 | active |
+| `E S K U L L DOT` | `skull` | 💀 | active |
 | `E S K U L L B O N E S` | `skull.bones` | ☠ | active |
 | `E S L E D` | `sled` | 🛷 | active |
 | `E S L O T H` | `sloth` | 🦥 | active |
@@ -556,14 +556,14 @@ disabled.
 | `E S P A G H E T T I` | `spaghetti` | 🍝 | active |
 | `E S P A R K L E S` | `sparkles` | ✨ | active |
 | `E S P E A K E R` | `speaker` | 🔈 | active |
-| `E S P I D E R` | `spider` | 🕷 | active |
+| `E S P I D E R DOT` | `spider` | 🕷 | active |
 | `E S P I D E R W E B` | `spiderweb` | 🕸 | active |
 | `E S P O O N` | `spoon` | 🥄 | active |
 | `E S Q U I D` | `squid` | 🦑 | active |
 | `E S T A R DOT` | `star` | ⭐ | active |
 | `E S T A R G L O W` | `star.glow` | 🌟 | active |
 | `E S T E T H O S C O P E` | `stethoscope` | 🩺 | active |
-| `E S U N` | `sun` | ☀ | active |
+| `E S U N DOT` | `sun` | ☀ | active |
 | `E S U N F A C E` | `sun.face` | 🌞 | active |
 | `E S U N R I S E` | `sunrise` | 🌅 | active |
 | `E S U P E R H E R O` | `superhero` | 🦸 | active |
@@ -590,7 +590,7 @@ disabled.
 | `E T O O L B O X` | `toolbox` | 🧰 | active |
 | `E T O O T H B R U S H` | `toothbrush` | 🪥 | active |
 | `E T R A C K B A L L` | `trackball` | 🖲 | active |
-| `E T R A I N` | `train` | 🚆 | active |
+| `E T R A I N DOT` | `train` | 🚆 | active |
 | `E T R A I N S T E A M` | `train.steam` | 🚂 | active |
 | `E T R A N S G E N D E R` | `transgender` | ⚧ | active |
 | `E T R E A S U R E` | `treasure` | 🪎 | active |
@@ -607,12 +607,12 @@ disabled.
 | `E V O L C A N O` | `volcano` | 🌋 | active |
 | `E W A N D` | `wand` | 🪄 | active |
 | `E W A R N I N G` | `warning` | ⚠ | active |
-| `E W A T C H` | `watch` | ⌚ | active |
+| `E W A T C H DOT` | `watch` | ⌚ | active |
 | `E W A T C H S T O P` | `watch.stop` | ⏱ | active |
 | `E W A V E` | `wave` | 🌊 | active |
 | `E W C` | `wc` | 🚾 | active |
 | `E W H E E L` | `wheel` | 🛞 | active |
-| `E W I N D` | `wind` | 🌬 | active |
+| `E W I N D DOT` | `wind` | 🌬 | active |
 | `E W I N D O W` | `window` | 🪟 | active |
 | `E W I N E` | `wine` | 🍷 | active |
 | `E W I R E L E S S` | `wireless` | 🛜 | active |
@@ -628,7 +628,7 @@ disabled.
 | `E A B C D` | `ABCD` | 🔠 | disabled: not enabled |
 | `E A` | `a` | 🅰 | disabled: labelled button glyph |
 | `E A B` | `ab` | 🆎 | disabled: labelled button glyph |
-| `E A B C DOT` | `abc` | 🔤 | disabled: not enabled |
+| `E A B C` | `abc` | 🔤 | disabled: not enabled |
 | `E A B C D` | `abcd` | 🔡 | disabled: not enabled |
 | `E A I R P L A N E L A N D I N G` | `airplane.landing` | 🛬 | disabled: not enabled |
 | `E A I R P L A N E S M A L L` | `airplane.small` | 🛩 | disabled: not enabled |
@@ -1118,7 +1118,7 @@ disabled.
 | `E O` | `o` | 🅾 | disabled: labelled button glyph |
 | `E O C T O P U S` | `octopus` | 🐙 | disabled: not enabled |
 | `E O K` | `ok` | 🆗 | disabled: labelled button glyph |
-| `E O N I DOT` | `oni` | 👹 | disabled: not enabled |
+| `E O N I` | `oni` | 👹 | disabled: not enabled |
 | `E O T T E R` | `otter` | 🦦 | disabled: not enabled |
 | `E O Y S T E R` | `oyster` | 🦪 | disabled: not enabled |
 | `E P A E L L A` | `paella` | 🥘 | disabled: not enabled |
@@ -1308,7 +1308,7 @@ disabled.
 | `E T A P N O T` | `tap.not` | 🚱 | disabled: not enabled |
 | `E T A X I F R O N T` | `taxi.front` | 🚖 | disabled: not enabled |
 | `E T E M P L E` | `temple` | 🛕 | disabled: not enabled |
-| `E T E N DOT` | `ten` | 🔟 | disabled: not enabled |
+| `E T E N` | `ten` | 🔟 | disabled: not enabled |
 | `E T E N N I S` | `tennis` | 🎾 | disabled: not enabled |
 | `E T H R E A D` | `thread` | 🧵 | disabled: not enabled |
 | `E T I C K E T E V E N T` | `ticket.event` | 🎟 | disabled: not enabled |

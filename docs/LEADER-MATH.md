@@ -11,7 +11,7 @@ disabled.
 
 | sequence | name | char | status |
 |---|---|---|---|
-| `M I M` | `Im` | ℑ | active |
+| `M I M DOT` | `Im` | ℑ | active |
 | `M N N` | `NN` | ℕ | active |
 | `M Q Q` | `QQ` | ℚ | active |
 | `M R R` | `RR` | ℝ | active |
@@ -68,19 +68,19 @@ disabled.
 | `M A R R O W L C U R V E` | `arrow.l.curve` | ⤶ | active |
 | `M A R R O W L D A S H E D` | `arrow.l.dashed` | ⇠ | active |
 | `M A R R O W L D O T T E D` | `arrow.l.dotted` | ⬸ | active |
-| `M A R R O W L D O U B L E` | `arrow.l.double` | ⇐ | active |
-| `M A R R O W L D O U B L E L O N G` | `arrow.l.double.long` | ⟸ | active |
+| `M A R R O W L D O U B L E DOT` | `arrow.l.double` | ⇐ | active |
+| `M A R R O W L D O U B L E L O N G DOT` | `arrow.l.double.long` | ⟸ | active |
 | `M A R R O W L D O U B L E L O N G B A R` | `arrow.l.double.long.bar` | ⟽ | active |
 | `M A R R O W L F I L L E D` | `arrow.l.filled` | ⬅ | active |
 | `M A R R O W L H O O K` | `arrow.l.hook` | ↩ | active |
-| `M A R R O W L L O N G` | `arrow.l.long` | ⟵ | active |
+| `M A R R O W L L O N G DOT` | `arrow.l.long` | ⟵ | active |
 | `M A R R O W L L O N G S Q U I G G L Y` | `arrow.l.long.squiggly` | ⬳ | active |
 | `M A R R O W L L O O P` | `arrow.l.loop` | ↫ | active |
 | `M A R R O W L N O T` | `arrow.l.not` | ↚ | active |
 | `M A R R O W L O P E N` | `arrow.l.open` | ⇽ | active |
 | `M A R R O W L Q U A D` | `arrow.l.quad` | ⭅ | active |
-| `M A R R O W L R` | `arrow.l.r` | ↔ | active |
-| `M A R R O W L R D O U B L E` | `arrow.l.r.double` | ⇔ | active |
+| `M A R R O W L R DOT` | `arrow.l.r` | ↔ | active |
+| `M A R R O W L R D O U B L E DOT` | `arrow.l.r.double` | ⇔ | active |
 | `M A R R O W L R D O U B L E L O N G` | `arrow.l.r.double.long` | ⟺ | active |
 | `M A R R O W L R D O U B L E N O T` | `arrow.l.r.double.not` | ⇎ | active |
 | `M A R R O W L R D O U B L E S T R U C K` | `arrow.l.r.double.struck` | ⤄ | active |
@@ -100,12 +100,12 @@ disabled.
 | `M A R R O W R C U R V E` | `arrow.r.curve` | ⤷ | active |
 | `M A R R O W R D A S H E D` | `arrow.r.dashed` | ⇢ | active |
 | `M A R R O W R D O T T E D` | `arrow.r.dotted` | ⤑ | active |
-| `M A R R O W R D O U B L E` | `arrow.r.double` | ⇒ | active |
-| `M A R R O W R D O U B L E L O N G` | `arrow.r.double.long` | ⟹ | active |
+| `M A R R O W R D O U B L E DOT` | `arrow.r.double` | ⇒ | active |
+| `M A R R O W R D O U B L E L O N G DOT` | `arrow.r.double.long` | ⟹ | active |
 | `M A R R O W R D O U B L E L O N G B A R` | `arrow.r.double.long.bar` | ⟾ | active |
 | `M A R R O W R F I L L E D` | `arrow.r.filled` | ➡ | active |
 | `M A R R O W R H O O K` | `arrow.r.hook` | ↪ | active |
-| `M A R R O W R L O N G` | `arrow.r.long` | ⟶ | active |
+| `M A R R O W R L O N G DOT` | `arrow.r.long` | ⟶ | active |
 | `M A R R O W R L O N G S Q U I G G L Y` | `arrow.r.long.squiggly` | ⟿ | active |
 | `M A R R O W R L O O P` | `arrow.r.loop` | ↬ | active |
 | `M A R R O W R N O T` | `arrow.r.not` | ↛ | active |
@@ -153,7 +153,7 @@ disabled.
 | `M A R R O W S B T` | `arrows.bt` | ⇵ | active |
 | `M A R R O W S L L DOT` | `arrows.ll` | ⇇ | active |
 | `M A R R O W S L L L` | `arrows.lll` | ⬱ | active |
-| `M A R R O W S L R` | `arrows.lr` | ⇆ | active |
+| `M A R R O W S L R DOT` | `arrows.lr` | ⇆ | active |
 | `M A R R O W S L R S T O P` | `arrows.lr.stop` | ↹ | active |
 | `M A R R O W S R L` | `arrows.rl` | ⇄ | active |
 | `M A R R O W S R R DOT` | `arrows.rr` | ⇉ | active |
@@ -176,22 +176,22 @@ disabled.
 | `M C C P U B L I C` | `cc.public` | 🅮 | active |
 | `M C C S A` | `cc.sa` | 🄎 | active |
 | `M C C Z E R O` | `cc.zero` | 🄍 | active |
-| `M C H E C K M A R K` | `checkmark` | ✓ | active |
+| `M C H E C K M A R K DOT` | `checkmark` | ✓ | active |
 | `M C H E C K M A R K H E A V Y` | `checkmark.heavy` | ✔ | active |
 | `M C H E C K M A R K L I G H T` | `checkmark.light` | 🗸 | active |
 | `M C H E S S` | `chess` | { | active |
 | `M C H E V R O N L C U R L Y` | `chevron.l.curly` | ⧼ | active |
 | `M C H E V R O N R C U R L Y` | `chevron.r.curly` | ⧽ | active |
-| `M C O` | `co` | ℅ | active |
+| `M C O DOT` | `co` | ℅ | active |
 | `M C O L O N E Q` | `colon.eq` | ≔ | active |
 | `M C O M P L E M E N T` | `complement` | ∁ | active |
-| `M C O M P O S E DOT` | `compose` | ∘ | active |
+| `M C O M P O S E` | `compose` | ∘ | active |
 | `M C O N V O L V E DOT` | `convolve` | ∗ | active |
 | `M C O N V O L V E O` | `convolve.o` | ⊛ | active |
 | `M C O P Y L E F T` | `copyleft` | 🄯 | active |
-| `M C O P Y R I G H T` | `copyright` | © | active |
+| `M C O P Y R I G H T DOT` | `copyright` | © | active |
 | `M C O P Y R I G H T S O U N D` | `copyright.sound` | ℗ | active |
-| `M C R O S S M A R K` | `crossmark` | ✗ | active |
+| `M C R O S S M A R K DOT` | `crossmark` | ✗ | active |
 | `M C R O S S M A R K H E A V Y` | `crossmark.heavy` | ✘ | active |
 | `M D A G G E R` | `dagger` | † | active |
 | `M D A S H W A V E D O U B L E` | `dash.wave.double` | 〰 | active |
@@ -233,12 +233,12 @@ disabled.
 | `M E X C L Q U E S T` | `excl.quest` | ⁉ | active |
 | `M E X I S T S DOT` | `exists` | ∃ | active |
 | `M E X I S T S N O T` | `exists.not` | ∄ | active |
-| `M F E M A L E` | `female` | ♀ | active |
+| `M F E M A L E DOT` | `female` | ♀ | active |
 | `M F E M A L E D O U B L E` | `female.double` | ⚢ | active |
 | `M F E M A L E M A L E` | `female.male` | ⚤ | active |
-| `M F E N C E L` | `fence.l` | ⧘ | active |
+| `M F E N C E L DOT` | `fence.l` | ⧘ | active |
 | `M F E N C E L D O U B L E` | `fence.l.double` | ⧚ | active |
-| `M F E N C E R` | `fence.r` | ⧙ | active |
+| `M F E N C E R DOT` | `fence.r` | ⧙ | active |
 | `M F E N C E R D O U B L E` | `fence.r.double` | ⧛ | active |
 | `M F O R A L L` | `forall` | ∀ | active |
 | `M F O R C E S DOT` | `forces` | ⊩ | active |
@@ -248,9 +248,9 @@ disabled.
 | `M G T A R C DOT` | `gt.arc` | ⪧ | active |
 | `M G T A R C E Q` | `gt.arc.eq` | ⪩ | active |
 | `M G T C L O S E D DOT` | `gt.closed` | ⊳ | active |
-| `M G T C L O S E D E Q DOT` | `gt.closed.eq` | ⊵ | active |
+| `M G T C L O S E D E Q` | `gt.closed.eq` | ⊵ | active |
 | `M G T E Q DOT` | `gt.eq` | ≥ | active |
-| `M G T E Q L T DOT` | `gt.eq.lt` | ⋛ | active |
+| `M G T E Q L T` | `gt.eq.lt` | ⋛ | active |
 | `M G T E Q N O T` | `gt.eq.not` | ≱ | active |
 | `M G T E Q S L A N T` | `gt.eq.slant` | ⩾ | active |
 | `M G T E Q U I V DOT` | `gt.equiv` | ≧ | active |
@@ -266,7 +266,7 @@ disabled.
 | `M G T Q U E S T` | `gt.quest` | ⩼ | active |
 | `M G T T I L D E DOT` | `gt.tilde` | ≳ | active |
 | `M G T T I L D E N O T` | `gt.tilde.not` | ≵ | active |
-| `M G T T R I P L E DOT` | `gt.triple` | ⋙ | active |
+| `M G T T R I P L E` | `gt.triple` | ⋙ | active |
 | `M H A R P O O N B L` | `harpoon.bl` | ⇃ | active |
 | `M H A R P O O N B R` | `harpoon.br` | ⇂ | active |
 | `M H A R P O O N L B DOT` | `harpoon.lb` | ↽ | active |
@@ -309,27 +309,27 @@ disabled.
 | `M I N F I N I T Y I N C O M P L E T E` | `infinity.incomplete` | ⧜ | active |
 | `M I N F I N I T Y T I E` | `infinity.tie` | ⧝ | active |
 | `M I N T E G R A L DOT` | `integral` | ∫ | active |
-| `M I N T E G R A L C O N T DOT` | `integral.cont` | ∮ | active |
-| `M I N T E G R A L D A S H DOT` | `integral.dash` | ⨍ | active |
+| `M I N T E G R A L C O N T` | `integral.cont` | ∮ | active |
+| `M I N T E G R A L D A S H` | `integral.dash` | ⨍ | active |
 | `M I N T E G R A L D O U B L E` | `integral.double` | ∬ | active |
 | `M I N T E G R A L T R I P L E` | `integral.triple` | ∭ | active |
 | `M I N T E R DOT` | `inter` | ∩ | active |
 | `M I N T E R B I G` | `inter.big` | ⋂ | active |
 | `M I N T E R S Q DOT` | `inter.sq` | ⊓ | active |
 | `M I N T E R S Q B I G` | `inter.sq.big` | ⨅ | active |
-| `M I N T E R R O B A N G` | `interrobang` | ‽ | active |
+| `M I N T E R R O B A N G DOT` | `interrobang` | ‽ | active |
 | `M I N T E R R O B A N G I N V` | `interrobang.inv` | ⸘ | active |
 | `M I N T E R S E X` | `intersex` | ⚥ | active |
 | `M L A P L A C E` | `laplace` | ∆ | active |
 | `M L A T DOT` | `lat` | ⪫ | active |
-| `M L A T E Q DOT` | `lat.eq` | ⪭ | active |
+| `M L A T E Q` | `lat.eq` | ⪭ | active |
 | `M L O Z E N G E F I L L E D M E D I U M` | `lozenge.filled.medium` | ⬧ | active |
 | `M L T A P P R O X` | `lt.approx` | ⪅ | active |
 | `M L T A R C DOT` | `lt.arc` | ⪦ | active |
 | `M L T A R C E Q` | `lt.arc.eq` | ⪨ | active |
-| `M L T C L O S E D DOT` | `lt.closed` | ⊲ | active |
+| `M L T C L O S E D` | `lt.closed` | ⊲ | active |
 | `M L T E Q DOT` | `lt.eq` | ≤ | active |
-| `M L T E Q G T DOT` | `lt.eq.gt` | ⋚ | active |
+| `M L T E Q G T` | `lt.eq.gt` | ⋚ | active |
 | `M L T E Q N O T` | `lt.eq.not` | ≰ | active |
 | `M L T E Q S L A N T` | `lt.eq.slant` | ⩽ | active |
 | `M L T E Q U I V DOT` | `lt.equiv` | ≦ | active |
@@ -345,8 +345,8 @@ disabled.
 | `M L T Q U E S T` | `lt.quest` | ⩻ | active |
 | `M L T T I L D E DOT` | `lt.tilde` | ≲ | active |
 | `M L T T I L D E N O T` | `lt.tilde.not` | ≴ | active |
-| `M L T T R I P L E DOT` | `lt.triple` | ⋘ | active |
-| `M M A L E` | `male` | ♂ | active |
+| `M L T T R I P L E` | `lt.triple` | ⋘ | active |
+| `M M A L E DOT` | `male` | ♂ | active |
 | `M M A L E D O U B L E` | `male.double` | ⚣ | active |
 | `M M A L E F E M A L E` | `male.female` | ⚤ | active |
 | `M M A L T E S E` | `maltese` | ✠ | active |
@@ -383,7 +383,7 @@ disabled.
 | `M P E E` | `pee` | ℘ | active |
 | `M P E R M I L L E` | `permille` | ‰ | active |
 | `M P E R M Y R I A D` | `permyriad` | ‱ | active |
-| `M P E R P DOT` | `perp` | ⟂ | active |
+| `M P E R P` | `perp` | ⟂ | active |
 | `M P I L C R O W` | `pilcrow` | ¶ | active |
 | `M P L A N C K` | `planck` | ħ | active |
 | `M P L U S M I N U S` | `plus.minus` | ± | active |
@@ -392,7 +392,7 @@ disabled.
 | `M P L U S S Q U A R E` | `plus.square` | ⊞ | active |
 | `M P L U S T R I A N G L E` | `plus.triangle` | ⨹ | active |
 | `M P L U S T R I P L E` | `plus.triple` | ⧻ | active |
-| `M P O W E R O N` | `power.on` | ⏽ | active |
+| `M P O W E R O N DOT` | `power.on` | ⏽ | active |
 | `M P O W E R O N O F F` | `power.on.off` | ⏼ | active |
 | `M P O W E R S L E E P` | `power.sleep` | ⏾ | active |
 | `M P O W E R S T A N D B Y` | `power.standby` | ⏻ | active |
@@ -419,7 +419,7 @@ disabled.
 | `M Q U E S T I N V` | `quest.inv` | ¿ | active |
 | `M R A T I O` | `ratio` | ∶ | active |
 | `M S L A S H B I G` | `slash.big` | ⧸ | active |
-| `M S M T DOT` | `smt` | ⪪ | active |
+| `M S M T` | `smt` | ⪪ | active |
 | `M S U B S E T DOT` | `subset` | ⊂ | active |
 | `M S U B S E T A P P R O X` | `subset.approx` | ⫉ | active |
 | `M S U B S E T E Q DOT` | `subset.eq` | ⊆ | active |
@@ -461,7 +461,7 @@ disabled.
 | `M S U P S E T N E Q DOT` | `supset.neq` | ⊋ | active |
 | `M S U P S E T N E Q U I V` | `supset.nequiv` | ⫌ | active |
 | `M S U P S E T N O T` | `supset.not` | ⊅ | active |
-| `M S U P S E T S Q DOT` | `supset.sq` | ⊐ | active |
+| `M S U P S E T S Q` | `supset.sq` | ⊐ | active |
 | `M S U P S E T T I L D E` | `supset.tilde` | ⫈ | active |
 | `M T A C K B DOT` | `tack.b` | ⊤ | active |
 | `M T A C K B B I G` | `tack.b.big` | ⟙ | active |
@@ -499,7 +499,7 @@ disabled.
 | `M T I M E S T H R E E R` | `times.three.r` | ⋌ | active |
 | `M T I M E S T R I A N G L E` | `times.triangle` | ⨻ | active |
 | `M T O P` | `top` | ⊤ | active |
-| `M T R A D E M A R K` | `trademark` | ™ | active |
+| `M T R A D E M A R K DOT` | `trademark` | ™ | active |
 | `M T R A D E M A R K M C` | `trademark.mc` | 🅪 | active |
 | `M T R A D E M A R K M D` | `trademark.md` | 🅫 | active |
 | `M T R A D E M A R K R E G I S T E R E D` | `trademark.registered` | ® | active |
@@ -740,10 +740,10 @@ disabled.
 | `M E M P T Y S E T A R R O W R` | `emptyset.arrow.r` | ⦳ | disabled: not enabled |
 | `M E M P T Y S E T C I R C L E` | `emptyset.circle` | ⦲ | disabled: not enabled |
 | `M E M P T Y S E T Z E R O` | `emptyset.zero` | ∅\vs{1} | disabled: not enabled |
-| `M E Q DOT` | `eq` | = | disabled: not enabled |
+| `M E Q` | `eq` | = | disabled: not enabled |
 | `M E Q D E L T A` | `eq.delta` | ≜ | disabled: not enabled |
-| `M E Q D O T DOT` | `eq.dot` | ≐ | disabled: not enabled |
-| `M E Q D O T S DOT` | `eq.dots` | ≑ | disabled: not enabled |
+| `M E Q D O T` | `eq.dot` | ≐ | disabled: not enabled |
+| `M E Q D O T S` | `eq.dots` | ≑ | disabled: not enabled |
 | `M E Q M` | `eq.m` | ≞ | disabled: not enabled |
 | `M E Q O` | `eq.o` | ⊜ | disabled: not enabled |
 | `M E Q S T A R` | `eq.star` | ≛ | disabled: not enabled |
@@ -765,11 +765,11 @@ disabled.
 | `M F R O W N` | `frown` | ⌢ | disabled: not enabled |
 | `M G E N D E R` | `gender` | { | disabled: not enabled |
 | `M G I M E L` | `gimel` | ג | disabled: not enabled |
-| `M G T DOT` | `gt` | > | disabled: not enabled |
+| `M G T` | `gt` | > | disabled: not enabled |
 | `M G T C L O S E D E Q N O T` | `gt.closed.eq.not` | ⋭ | disabled: not enabled |
 | `M G T C L O S E D N O T` | `gt.closed.not` | ⋫ | disabled: not enabled |
 | `M G T D O T` | `gt.dot` | ⋗ | disabled: not enabled |
-| `M G T D O U B L E DOT` | `gt.double` | ≫ | disabled: not enabled |
+| `M G T D O U B L E` | `gt.double` | ≫ | disabled: not enabled |
 | `M G T D O U B L E N E S T E D` | `gt.double.nested` | ⪢ | disabled: not enabled |
 | `M G T E Q L T S L A N T` | `gt.eq.lt.slant` | ⋛\vs{1} | disabled: not enabled |
 | `M G T T I L D E S L A N T` | `gt.tilde.slant` | ≳\vs{1} | disabled: not enabled |
@@ -831,12 +831,12 @@ disabled.
 | `M L O Z E N G E S T R O K E D` | `lozenge.stroked` | ◊ | disabled: not enabled |
 | `M L O Z E N G E S T R O K E D M E D I U M` | `lozenge.stroked.medium` | ⬨ | disabled: not enabled |
 | `M L O Z E N G E S T R O K E D S M A L L` | `lozenge.stroked.small` | ⬫ | disabled: not enabled |
-| `M L T DOT` | `lt` | < | disabled: not enabled |
-| `M L T C L O S E D E Q DOT` | `lt.closed.eq` | ⊴ | disabled: not enabled |
+| `M L T` | `lt` | < | disabled: not enabled |
+| `M L T C L O S E D E Q` | `lt.closed.eq` | ⊴ | disabled: not enabled |
 | `M L T C L O S E D E Q N O T` | `lt.closed.eq.not` | ⋬ | disabled: not enabled |
 | `M L T C L O S E D N O T` | `lt.closed.not` | ⋪ | disabled: not enabled |
 | `M L T D O T` | `lt.dot` | ⋖ | disabled: not enabled |
-| `M L T D O U B L E DOT` | `lt.double` | ≪ | disabled: not enabled |
+| `M L T D O U B L E` | `lt.double` | ≪ | disabled: not enabled |
 | `M L T D O U B L E N E S T E D` | `lt.double.nested` | ⪡ | disabled: not enabled |
 | `M L T E Q G T S L A N T` | `lt.eq.gt.slant` | ⋚\vs{1} | disabled: not enabled |
 | `M L T T I L D E S L A N T` | `lt.tilde.slant` | ≲\vs{1} | disabled: not enabled |
@@ -845,7 +845,7 @@ disabled.
 | `M M A L E S T R O K E R` | `male.stroke.r` | ⚩ | disabled: not enabled |
 | `M M A L E S T R O K E T` | `male.stroke.t` | ⚨ | disabled: not enabled |
 | `M M A S C U L I N E` | `masculine` | º | disabled: not enabled |
-| `M M I N U S DOT` | `minus` | − | disabled: not enabled |
+| `M M I N U S` | `minus` | − | disabled: not enabled |
 | `M M I N U S D O T` | `minus.dot` | ∸ | disabled: not enabled |
 | `M M I N U S S Q U A R E` | `minus.square` | ⊟ | disabled: not enabled |
 | `M M U S T A C H E L` | `mustache.l` | ⎰ | disabled: not enabled |
@@ -882,7 +882,7 @@ disabled.
 | `M P E R C E N T` | `percent` | % | disabled: not enabled |
 | `M P E R P O` | `perp.o` | ⦹ | disabled: not enabled |
 | `M P I L C R O W R E V` | `pilcrow.rev` | ⁋ | disabled: not enabled |
-| `M P L U S DOT` | `plus` | + | disabled: not enabled |
+| `M P L U S` | `plus` | + | disabled: not enabled |
 | `M P L U S D O T` | `plus.dot` | ∔ | disabled: not enabled |
 | `M P L U S D O U B L E` | `plus.double` | ⧺ | disabled: not enabled |
 | `M P L U S H A T` | `plus.hat` | ⨣ | disabled: not enabled |
@@ -919,7 +919,7 @@ disabled.
 | `M S L A S H T R I P L E` | `slash.triple` | ⫻ | disabled: not enabled |
 | `M S M A S H` | `smash` | ⨳ | disabled: not enabled |
 | `M S M I L E` | `smile` | ⌣ | disabled: not enabled |
-| `M S M T E Q DOT` | `smt.eq` | ⪬ | disabled: not enabled |
+| `M S M T E Q` | `smt.eq` | ⪬ | disabled: not enabled |
 | `M S M T E Q S L A N T` | `smt.eq.slant` | ⪬\vs{1} | disabled: not enabled |
 | `M S Q U A R E F I L L E D` | `square.filled` | ■ | disabled: not enabled |
 | `M S Q U A R E F I L L E D B I G` | `square.filled.big` | ⬛ | disabled: not enabled |
@@ -936,7 +936,7 @@ disabled.
 | `M S T A R F I L L E D` | `star.filled` | ★ | disabled: not enabled |
 | `M S T A R O P` | `star.op` | ⋆ | disabled: not enabled |
 | `M S T A R S T R O K E D` | `star.stroked` | ☆ | disabled: not enabled |
-| `M S U B S E T C L O S E D DOT` | `subset.closed` | ⫏ | disabled: not enabled |
+| `M S U B S E T C L O S E D` | `subset.closed` | ⫏ | disabled: not enabled |
 | `M S U B S E T C L O S E D E Q` | `subset.closed.eq` | ⫑ | disabled: not enabled |
 | `M S U B S E T D O T` | `subset.dot` | ⪽ | disabled: not enabled |
 | `M S U B S E T D O U B L E` | `subset.double` | ⋐ | disabled: not enabled |
@@ -950,7 +950,7 @@ disabled.
 | `M S U I T H E A R T S T R O K E D` | `suit.heart.stroked` | ♡ | disabled: not enabled |
 | `M S U I T S P A D E F I L L E D` | `suit.spade.filled` | ♠ | disabled: not enabled |
 | `M S U I T S P A D E S T R O K E D` | `suit.spade.stroked` | ♤ | disabled: not enabled |
-| `M S U P S E T C L O S E D DOT` | `supset.closed` | ⫐ | disabled: not enabled |
+| `M S U P S E T C L O S E D` | `supset.closed` | ⫐ | disabled: not enabled |
 | `M S U P S E T C L O S E D E Q` | `supset.closed.eq` | ⫒ | disabled: not enabled |
 | `M S U P S E T D O T` | `supset.dot` | ⪾ | disabled: not enabled |
 | `M S U P S E T D O U B L E` | `supset.double` | ⋑ | disabled: not enabled |
@@ -1006,16 +1006,16 @@ disabled.
 | `M T R I A N G L E S T R O K E D T R` | `triangle.stroked.tr` | ◹ | disabled: not enabled |
 | `M U N D E R S C O R E` | `underscore` | _ | disabled: not enabled |
 | `M U N I O N A R R O W` | `union.arrow` | ⊌ | disabled: not enabled |
-| `M U N I O N D O T DOT` | `union.dot` | ⊍ | disabled: not enabled |
+| `M U N I O N D O T` | `union.dot` | ⊍ | disabled: not enabled |
 | `M U N I O N D O T B I G` | `union.dot.big` | ⨃ | disabled: not enabled |
 | `M U N I O N D O U B L E` | `union.double` | ⋓ | disabled: not enabled |
 | `M U N I O N M I N U S` | `union.minus` | ⩁ | disabled: not enabled |
 | `M U N I O N O R` | `union.or` | ⩅ | disabled: not enabled |
-| `M U N I O N P L U S DOT` | `union.plus` | ⊎ | disabled: not enabled |
+| `M U N I O N P L U S` | `union.plus` | ⊎ | disabled: not enabled |
 | `M U N I O N P L U S B I G` | `union.plus.big` | ⨄ | disabled: not enabled |
 | `M U N I O N S E R I F` | `union.serif` | ∪\vs{1} | disabled: not enabled |
 | `M U N I O N S Q D O U B L E` | `union.sq.double` | ⩏ | disabled: not enabled |
 | `M U N I O N S Q S E R I F` | `union.sq.serif` | ⊔\vs{1} | disabled: not enabled |
 | `M W R E A T H` | `wreath` | ≀ | disabled: not enabled |
-| `M Z E R O DOT` | `zero` | 0 | disabled: not enabled |
+| `M Z E R O` | `zero` | 0 | disabled: not enabled |
 | `M Z E R O S L A S H E D` | `zero.slashed` | 0\vs{1} | disabled: not enabled |
