@@ -14,19 +14,26 @@ Do not edit by hand.
 Press the leader key, then the category letter, then the name one letter at a
 time.
 
-**Dots are usually dropped.** `arrow.cm` is typed `M A R R O W C M`, not
-`... DOT C M`; the parts are glued together because a DOT mid-sequence was hard
-to predict.
+**Every name is written as typst spells it, with the dots removed.** So
+`arrow.cm` is `M A R R O W C M` and `and` is `M A N D`.
 
-**A few names keep their DOTs.** Gluing is skipped where it would make one
-sequence a prefix of another, because a leader sequence fires the moment its
-length is reached - the shorter would win and the longer would be unreachable.
+**Where a name is the start of a longer one, a DOT goes on the END.** `and` is
+followed by `and.big`, `and.curly` and others, so `and` itself is
+`M A N D DOT` while `and.big` is `M A N D B I G`.
 
-That affects 70 of the 500 math names and 4 emoji. Nearly all are arrows: glued,
-`arrow.bl` becomes `ARROWBL`, which is a prefix of `arrowBlBar` (the renamed
-`arrow.bl.bar`), so the DOT has to stay to keep them apart. The rule of thumb is
-that **arrows keep DOT and everything else does not**; the tables below give the
-exact sequence for every entry, so nothing has to be guessed.
+That trailing DOT is the whole trick, and it is discoverable without a manual:
+there is no timeout on the leader, so if you type `M A N D` and nothing happens
+you are still inside a live leader. Adding the DOT completes it. Nothing has
+been sent to the host, so there is nothing to undo - the symbol simply appears.
+If you had to remember an internal DOT, or a different spelling like `wedge`,
+there would be no such signal.
+
+**Names are never renamed to avoid a clash.** The only exceptions are pairs that
+collide exactly, like typst's `alpha` and `Alpha`, which no punctuation can
+separate - a leader key matches keycodes, not shift state. Uppercase Greek takes
+a leading `g` for that reason: `Gamma` is `M G G A M M A`.
+
+The tables below give the exact sequence for every entry, active or not.
 
 | what | type | example |
 |---|---|---|

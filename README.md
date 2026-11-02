@@ -68,12 +68,17 @@ Press it, then a short sequence:
 | **sign-offs** | leader, two or three letters | `O B R` → "Obrigado,\nHeiko" |
 | **unicode mode** | leader, `U X L/W/M` | switch the input method to Linux/Windows/macOS |
 
-Names follow **typst/LaTeX**, so they are the ones you already type: `sum`,
-`approx`, `arrow.r`, `integral`. Dots in a name are **dropped**: `arrow.cm` is
-typed `M A R R O W C M`. A few arrows keep their DOTs to stay distinct from
-their own variants, and the tables in
-[docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md) give the exact sequence for
-every entry.
+Names follow **typst/LaTeX** and are never renamed: `sum`, `approx`, `and`,
+`arrow.r`. Dots inside a name are dropped, so `arrow.cm` is `M A R R O W C M`.
+
+Where a name is the start of a longer one, a **DOT goes on the end**: `and` is
+`M A N D DOT`, because `and.big` and `and.curly` also exist. If you type the
+short form and nothing appears, the leader is still live - add the DOT.
+
+Exact collisions like typst's `alpha`/`Alpha` cannot be separated by punctuation
+(there is no timeout, and leader keys ignore shift), so uppercase Greek takes a
+leading `g`: `M G G A M M A`. [docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md)
+lists the exact sequence for every entry.
 
 **500 math symbols and 451 emoji are active.** The cap is a RAM budget, not a
 limit on what is reachable: the leader sequences live in RAM (the module declares
@@ -106,6 +111,29 @@ and must not be edited by hand. To change the set, edit
 The generator ranks symbols by usefulness **first**, then resolves conflicts by
 renaming rather than dropping (`arrow.r.bar` → `arrowRBar`), and asserts that
 nothing is silently lost.
+
+## Using the laptop keyboard (keyd)
+
+When the split board stays at home, `keyd/` carries the same layout onto the
+Lenovo X390 Yoga's internal keyboard. keyd has no thumb cluster, so the six
+thumb behaviours are relocated to CapsLock (leader), Tab (NUMNAV), right AltGr
+(SYMBOL) and Backspace; `key_repeat`, the MOUSE layer and the BLUETH layer are
+dropped because keyd cannot express them.
+
+* [docs/KEYD-X390.md](docs/KEYD-X390.md) — how to install it and reach each
+  feature; what is and is not possible.
+* [docs/KEYD-ANALYSIS.md](docs/KEYD-ANALYSIS.md) — the design reasoning and the
+  keyd/ZMK differences that matter.
+* [docs/KEYD-VERIFICATION.md](docs/KEYD-VERIFICATION.md) — adversarial review,
+  with the six defects it found and how each was fixed.
+
+`keyd/x390.conf` is generated — do not edit it by hand:
+
+```sh
+python3 keyd/tools/gen_x390.py          # regenerate from the ZMK sources
+python3 keyd/tools/gen_x390.py --check  # fail if the file is stale
+python3 keyd/tools/audit.py             # checks keyd check does not do
+```
 
 ## Repository layout
 

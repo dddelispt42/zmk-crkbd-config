@@ -318,40 +318,14 @@ SUFFIX_FOR_MO = "X"     # collides with `mo` -> moo becomes MOOX
 # a maths user already types: \leq, \pm, \bigcup, \Rightarrow. The rule of
 # thumb applied was "what would I write in LaTeX for this symbol".
 RENAMES = {
-    # `in` (U+2208) prefixes in.not, in.rev, integral and infinity; the other
-    # four are far more common in written maths, so it moves.
-    "in": "inset",
-    # Blocked by their base name (lt blocks lt.eq, union blocks union.big, ...),
-    # so the LaTeX spelling is used instead - that is what a maths user already
-    # types: \leq, \pm, \bigcup, \Rightarrow.
-    "lt.eq": "leq",
-    "gt.eq": "geq",
-    "lt.eq.slant": "leqslant",
-    "gt.eq.slant": "geqslant",
-    "plus.minus": "pm",
-    "minus.plus": "mp",
-    "approx.eq": "simeq",
-    "approx.not": "nsimeq",
-    "equiv.not": "nequiv",
-    "subset.eq": "subeq",
-    "supset.eq": "supeq",
-    "subset.not": "nsubset",
-    "supset.not": "nsupset",
-    "union.big": "bigcup",
-    "inter.big": "bigcap",
-    "integral.cont": "oint",
-    "arrow.l.r": "leftrightarrow",
-    "arrow.r.long": "longrightarrow",
-    "arrow.l.long": "longleftarrow",
-    "arrow.r.double": "Rightarrow",
-    "arrow.r.bar": "mapsto",
-    "arrow.r.hook": "hookrightarrow",
-    "arrow.l.hook": "hookleftarrow",
-    "angle.right": "measuredangle",
-    # Uppercase Greek collides with the lowercase form by CASE, not by prefix -
-    # a leader key cannot distinguish shift. LaTeX writes them as \Gamma, which
-    # upper-cases to the same keys as \gamma, so they take a trailing "u" for
-    # "upper" instead.
+    # Renames exist ONLY for names that collide EXACTLY, which no amount of
+    # punctuation can separate. That means the case pairs: typst has both
+    # `alpha` and `Alpha`, and a leader key cannot tell them apart because it
+    # matches keycodes, not shift state.
+    #
+    # Prefix collisions - where one name is a prefix of another - are NOT solved
+    # here. They are solved with a trailing DOT, which keeps every name
+    # spellable as typst writes it. See emitted_keys().
     "Gamma": "gGamma",
     "Delta": "gDelta",
     "Theta": "gTheta",
@@ -361,97 +335,7 @@ RENAMES = {
     "Phi": "gPhi",
     "Psi": "gPsi",
     "Omega": "gOmega",
-    # --- Blocker renames -------------------------------------------------------
-    #
-    # A name that is a PREFIX of others cannot coexist with them, so a short
-    # base name like `inter` makes every longer `inter...` name unreachable -
-    # `intersection`, `intersex`, `intercal` and so on. Renaming the blocker to
-    # a distinct word frees the whole family, which is worth far more than the
-    # one symbol it moves.
-    #
-    # These are the highest-value moves, ordered roughly by how many names each
-    # one unblocks. The replacement is a descriptive word rather than a suffix,
-    # so it stays guessable: `inter` -> `intersec`, `arrow.l` -> `leftarrow`.
-    "arrow.l": "leftarrow",       # unblocks 51
-    "arrow.r": "rightarrow",      # 38
-    "arrow.t": "uparrow",         # 31
-    "arrow.b": "downarrow",       # 25
-    "in": "inset",                # 44
-    "gt": "greater",              # 31
-    "lt": "less",                 # 31
-    "eq": "equal",                # 30
-    "not": "neg",                 # 22
-    "space": "spc",               # 26
-    "co": "company",              # 23
-    "sub": "subst",               # 20
-    "subset": "subsetof",         # 19
-    "supset": "supsetof",         # 19
-    "integral": "int",            # 18
-    "angle": "ang",               # 16
-    "inter": "intersec",          # 15
-    "sp": "spc2",                 # 15
-    "prec": "precedes",           # 14
-    "succ": "succeeds",           # 14
-    "union": "cup",               # 14
-    "times": "times2",            # 13
-    "plus": "plus2",              # 12
-    "arrow.l.r": "leftrightarrow",# 12
-    "tack.r": "tackright",        # 12
-    "Re": "realpart",             # 12
-    "parallel": "para",           # 11
-    "bullet": "bull",             # 9
-    "em": "em2",                  # 7
-    "colon": "colon2",            # 6
-    # second tier
-    "arrow.l.long": "longleftarrow",
-    "arrow.r.long": "longrightarrow",
-    "arrow.l.hook": "hookleftarrow",
-    "arrow.r.hook": "hookrightarrow",
-    "arrow.r.double": "doublerightarrow",
-    "arrow.r.bar": "barrightarrow",
-    "subset.eq": "subseteq",
-    "supset.eq": "supseteq",
-    "union.big": "bigcup",
-    "inter.big": "bigcap",
-    "integral.cont": "contintegral",
-    "angle.right": "rightangle",
-    "plus.minus": "plusminus",
-    "minus.plus": "minusplus",
-    "approx.eq": "approxeq",
-    "approx.not": "approxnot",
-    "equiv.not": "equivnot",
-    "lt.eq": "lesseq",
-    "gt.eq": "greatereq",
-    "lt.eq.slant": "lesseqslant",
-    "gt.eq.slant": "greatereqslant",
-    "subset.not": "notsubset",
-    "supset.not": "notsupset",
-    "prop": "propto",
-    "perp": "perpendicular",
-    "therefore": "therefore2",
-    "because": "because2",
-    "emptyset": "empty",
-    "infinity": "inf",
-    "partial": "partial2",
-    "nabla": "nabla2",
-    "forall": "forall2",
-    "exists": "exists2",
-    "prime": "prime2",
-    "degree": "degree2",
-    "aleph": "aleph2",
-    "ell": "ell2",
-    "and": "wedge",
-    "or": "vee",
-    "top": "top2",
-    "bot": "bot2",
-    "div": "div2",
-    "minus": "minus2",
-    "dot.op": "cdot",
-    "star.op": "starop",
-    "lt.eq.gt": "lesseqgreater",
-    "gt.eq.lt": "greatereqless",
 }
-
 
 # ---------------------------------------------------------------------------
 # Parsing
@@ -545,84 +429,45 @@ def name_to_keys(name: str) -> tuple[str, ...]:
     return tuple("DOT" if ch == "." else ch.upper() for ch in name)
 
 
-def glued_keys(name: str, prefix: str) -> tuple[str, ...]:
-    """The sequence for a name with the dots REMOVED: `arrow.cm` -> ARROWCM.
+def emitted_keys(name: str, prefix: str, needs_dot: bool) -> tuple[str, ...]:
+    """The leader sequence for `name`.
 
-    Typing DOT mid-sequence turned out to be hard to predict, so the default is
-    now to glue the parts together.
+    All internal dots are REMOVED, so `arrow.cm` is typed ARROWCM. Where the
+    resulting sequence would be a prefix of another one, a single DOT is
+    appended: ARROWCMDOT. The trailing DOT is what keeps `and` and `and.big`
+    both reachable without renaming either.
+
+    Why a trailing DOT rather than an internal one: there is no timeout on the
+    leader, so if you type the short form and nothing happens, you are still
+    holding a live leader and can simply add the DOT to complete it. Nothing has
+    been typed to the host, so there is nothing to undo. An internal DOT has no
+    such signal - you have to remember which names contain one.
     """
-    return (prefix,) + tuple(ch.upper() for ch in name.replace(".", ""))
+    keys = [ch.upper() for ch in name.replace(".", "")]
+    if needs_dot:
+        keys.append("DOT")
+    return (prefix,) + tuple(keys)
 
 
-def dotted_keys(name: str, prefix: str) -> tuple[str, ...]:
-    """The sequence for a name with '.' typed as the DOT key."""
-    return (prefix,) + name_to_keys(name)
+def dot_needed(names, prefix: str) -> set:
+    """Names whose sequence must end in DOT to avoid being a prefix of another.
 
+    With every internal dot stripped, a clash can only take one shape: sequence
+    A is a strict prefix of sequence B. A trailing DOT fixes it outright, since
+    no other sequence contains a DOT at that position - every other name is
+    fully glued. So a single pass is enough; there is nothing to iterate.
 
-def finalise_forms(active, prefix: str) -> list:
-    """Re-derive glued vs dotted for the ACTIVE set, and rebuild the keys.
-
-    choose_forms() must only see names that are actually enabled. Running it over
-    every candidate makes inactive names force DOTs onto active ones - the first
-    attempt did exactly that and left 223 of 500 math sequences dotted when the
-    real minimum is far lower.
-
-    Selection itself runs on the DOT spelling, which is prefix-safe, so this is
-    a pure simplification pass: nothing can become unreachable here, names can
-    only lose their DOTs.
+    Names that collide EXACTLY (same letters, e.g. `alpha` and `Alpha`) cannot
+    be separated by punctuation at all and are handled by RENAMES instead.
     """
-    # The clash analysis must run on the spellings that will actually be EMITTED,
-    # i.e. `used`, not `typst`. For a renamed entry the two differ (`in` is
-    # emitted as `inset`), and analysing the wrong string both missed real
-    # clashes and invented false ones - which is why short names like `eq.o`
-    # kept a DOT they did not need.
-    forms = choose_forms([used for _typst, used, _cps, _keys in active], prefix)
-    out = []
-    for typst, used, cps, _keys in active:
-        keys = (
-            glued_keys(used, prefix)
-            if forms.get(used) == "glued"
-            else dotted_keys(used, prefix)
-        )
-        out.append((typst, used, cps, keys))
+    glued = {n: tuple(ch.upper() for ch in n.replace(".", "")) for n in names}
+    out = set()
+    for a in names:
+        ka = glued[a]
+        if any(b != a and len(ka) < len(glued[b]) and glued[b][: len(ka)] == ka
+               for b in names):
+            out.add(a)
     return out
-
-
-def choose_forms(names, prefix: str) -> dict:
-    """Decide, for each name, whether to glue it or keep its DOTs.
-
-    Gluing is the default. A name keeps its DOTs only when gluing it would make
-    it a PREFIX of another name, or another name a prefix of it.
-
-    Why that matters: a leader sequence completes the moment its length is
-    reached, so if `arrowb` and `arrowbbar` both exist, typing M A R R O W B
-    fires `arrowb` and `arrowbbar` can never be reached. DOT separates them.
-
-    The decision is iterated to a fixed point. A single pass cannot work: making
-    one name safe to glue changes what its neighbours may safely do, so the set
-    is re-checked after each change until nothing more can be glued.
-
-    Returns name -> form, where form is "glued" or "dotted".
-    """
-    dotted = set()
-    changed = True
-    while changed:
-        changed = False
-        forms = {
-            n: (dotted_keys(n, prefix) if n in dotted else glued_keys(n, prefix))
-            for n in names
-        }
-        for n in names:
-            if n in dotted:
-                continue
-            mine = forms[n]
-            if any(
-                m != n and (is_prefix(mine, forms[m]) or is_prefix(forms[m], mine))
-                for m in names
-            ):
-                dotted.add(n)
-                changed = True
-    return {n: ("dotted" if n in dotted else "glued") for n in names}
 
 
 def split_name(name: str) -> tuple[str, str]:
@@ -789,20 +634,19 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
         return (prefix,) + name_to_keys(name)
 
     def clashes(keys):
-        # An EXACT match counts too. is_prefix() requires len(a) < len(b), so two
-        # IDENTICAL sequences were not "prefixes" of each other and the duplicate
-        # slipped through - gt.equiv and equiv.gt both landed on M G T E Q U I V,
-        # where the second is unreachable.
-        return any(
-            other == keys or is_prefix(other, keys) or is_prefix(keys, other)
-            for other in taken_keys
-        )
+        """True only for an EXACT duplicate.
 
-    # Selection uses the DOT spelling throughout, which is prefix-safe by
-    # construction. Once the active set is known, finalise_forms() re-derives
-    # which of those names can drop their DOTs.
+        Prefix clashes are deliberately allowed now: the shorter sequence is
+        given a trailing DOT by apply_trailing_dots(), so both remain reachable.
+        """
+        return any(other == keys for other in taken_keys)
+
+    # Selection works on the ALL-GLUED form, with a trailing DOT where needed.
+    # The trailing DOT is only decided once the active set is known, so during
+    # selection every name uses its plain glued keys and the prefix check below
+    # does the disambiguating.
     def keys_for(cand):
-        return dotted_keys(cand, prefix)
+        return (prefix,) + tuple(ch.upper() for ch in cand.replace(".", ""))
 
     ordered = sorted(entries, key=lambda e: usefulness(e[0], sections.get(e[0], "")))
     for name, spec in ordered:
@@ -814,44 +658,31 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
             # .data, so every active one costs bytes that ZMK's own stack and
             # buffers also need. Renamed symbols count like any other; they were
             # previously exempt, which quietly overshot the requested count.
-            commented.append((name, cps, to_keys(name), "beyond the active limit"))
+            commented.append(
+                (name, cps, keys_for(name), "beyond the active limit")
+            )
             continue
 
-        # candidate spellings, in order of preference
-        # Candidate spellings, in order of preference. A rename may NOT target a
-        # name that is itself a symbol: typst has both `mapsto` and
-        # `arrow.r.bar`, they are the same glyph, and renaming the second to the
-        # first produced two nodes with the same name - a devicetree
-        # "duplicate node name" error at build time.
-        cands = []
-        if name in RENAMES and RENAMES[name] not in SOURCE_NAMES:
-            cands.append(RENAMES[name])
-        cands.append(name)
-        comp = compact(name)
-        if comp != name:
-            cands.append(comp)
-        rev = compact_reversed(name)
-        if rev not in cands:
-            cands.append(rev)
+        # The spelling is the typst name itself, or its RENAMES entry when the
+        # name collides EXACTLY with another (the case pairs). Prefix clashes
+        # are not resolved here - they get a trailing DOT in
+        # apply_trailing_dots(), which is the whole point of the design: keep
+        # every name spellable as typst writes it.
+        cand = RENAMES.get(name, name)
+        keys = keys_for(cand)
 
-        chosen = None
-        for cand in cands:
-            keys = keys_for(cand)
-            if not clashes(keys):
-                chosen = (cand, keys)
-                break
-
-        if chosen is None:
-            commented.append((name, cps, keys_for(name), "every spelling clashes"))
+        # Only an EXACT duplicate is fatal. A prefix clash is fine: the shorter
+        # sequence will take a trailing DOT.
+        if any(k == keys for k in taken_keys):
+            commented.append((name, cps, keys, "duplicate spelling"))
             continue
 
-        cand, keys = chosen
         taken_keys.add(keys)
         active.append((name, cand, cps, keys))
         if cand != name:
             renamed.append((name, cand))
 
-    return finalise_forms(active, prefix), renamed, commented
+    return apply_trailing_dots(active, prefix), renamed, commented
 
 
 def select_emoji_by_usefulness(entries, limit, prefix="E"):
@@ -901,45 +732,34 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
         return (skip, pos, dots, ln, nm)
 
     def keys_for(cand):
-        return dotted_keys(cand, prefix)
+        return (prefix,) + tuple(ch.upper() for ch in cand.replace(".", ""))
 
     for name, spec in sorted(entries, key=order):
         cps = spec_to_codepoints(spec)
         if not cps:
             continue
         if is_button_glyph(cps):
-            commented.append((name, cps, to_keys(name), "labelled button glyph"))
+            commented.append(
+                (name, cps, keys_for(name), "labelled button glyph")
+            )
             continue
         if len(active) >= limit:
             commented.append((name, cps, keys_for(name), "beyond the active limit"))
             continue
 
-        cands = [name]
-        comp = compact(name)
-        if comp != name:
-            cands.append(comp)
-        rev = compact_reversed(name)
-        if rev not in cands:
-            cands.append(rev)
+        # Same rule as the math set: the typst name is the spelling, and a
+        # prefix clash is resolved with a trailing DOT rather than a rename.
+        cand = name
+        keys = keys_for(cand)
 
-        chosen = None
-        for cand in cands:
-            keys = keys_for(cand)
-            if not clashes(keys):
-                chosen = (cand, keys)
-                break
-
-        if chosen is None:
-            commented.append((name, cps, keys_for(name), "every spelling clashes"))
+        if any(k == keys for k in taken_keys):
+            commented.append((name, cps, keys, "duplicate spelling"))
             continue
 
-        cand, keys = chosen
         taken_keys.add(keys)
         active.append((name, cand, cps, keys))
-        if cand != name:
-            renamed.append((name, cand))
 
-    return finalise_forms(active, prefix), renamed, commented
+    return apply_trailing_dots(active, prefix), renamed, commented
 
 
 def cp_literal(cps: list[int]) -> str:
@@ -1016,6 +836,20 @@ def emit_sequences(resolved, active_names, leader_name, header_comment):
 # Main
 # ---------------------------------------------------------------------------
 
+def apply_trailing_dots(active, prefix: str) -> list:
+    """Finalise the sequences: glue every name, add a trailing DOT where needed.
+
+    Runs on the ACTIVE set, not on all candidates: a name that is disabled must
+    not force a DOT onto a name that is enabled.
+    """
+    used = [u for _t, u, _c, _k in active]
+    needs = dot_needed(used, prefix)
+    return [
+        (t, u, c, emitted_keys(u, prefix, u in needs))
+        for t, u, c, _k in active
+    ]
+
+
 def emit_selected(active, commented, leader_name, cat, header):
     """Write the .dtsi fragment for one category.
 
@@ -1032,9 +866,16 @@ def emit_selected(active, commented, leader_name, cat, header):
         )
     out.append("")
     out.append(f"    /* --- available but disabled ({len(commented)}) ---")
-    out.append("     * Uncomment a line to enable it. Each is disabled because either")
-    out.append("     * every spelling of its name was already taken, or it is beyond the")
-    out.append("     * active limit. See docs/LEADER-SYMBOLS.md.")
+    out.append("     * Uncomment a line to enable it. Each is disabled because it is")
+    out.append("     * beyond the active limit, or its spelling is an exact duplicate of")
+    out.append("     * another name (typst's `alpha` and `Alpha`, which no punctuation")
+    out.append("     * can separate).")
+    out.append("     *")
+    out.append("     * NOTE: a name that is a PREFIX of an enabled one needs a trailing")
+    out.append("     * DOT appended before it will work - otherwise the shorter sequence")
+    out.append("     * fires first and the longer becomes unreachable. Re-running the")
+    out.append("     * generator adds those automatically; a hand-uncommented line does")
+    out.append("     * not get one.")
     out.append("     */")
     for typst, cps, keys, why in sorted(commented, key=lambda r: r[0]):
         node = f"seq_{cat}_" + re.sub(r"[^A-Za-z0-9_]", "_", typst)
@@ -1236,19 +1077,26 @@ Do not edit by hand.
 Press the leader key, then the category letter, then the name one letter at a
 time.
 
-**Dots are usually dropped.** `arrow.cm` is typed `M A R R O W C M`, not
-`... DOT C M`; the parts are glued together because a DOT mid-sequence was hard
-to predict.
+**Every name is written as typst spells it, with the dots removed.** So
+`arrow.cm` is `M A R R O W C M` and `and` is `M A N D`.
 
-**A few names keep their DOTs.** Gluing is skipped where it would make one
-sequence a prefix of another, because a leader sequence fires the moment its
-length is reached - the shorter would win and the longer would be unreachable.
+**Where a name is the start of a longer one, a DOT goes on the END.** `and` is
+followed by `and.big`, `and.curly` and others, so `and` itself is
+`M A N D DOT` while `and.big` is `M A N D B I G`.
 
-That affects 70 of the 500 math names and 4 emoji. Nearly all are arrows: glued,
-`arrow.bl` becomes `ARROWBL`, which is a prefix of `arrowBlBar` (the renamed
-`arrow.bl.bar`), so the DOT has to stay to keep them apart. The rule of thumb is
-that **arrows keep DOT and everything else does not**; the tables below give the
-exact sequence for every entry, so nothing has to be guessed.
+That trailing DOT is the whole trick, and it is discoverable without a manual:
+there is no timeout on the leader, so if you type `M A N D` and nothing happens
+you are still inside a live leader. Adding the DOT completes it. Nothing has
+been sent to the host, so there is nothing to undo - the symbol simply appears.
+If you had to remember an internal DOT, or a different spelling like `wedge`,
+there would be no such signal.
+
+**Names are never renamed to avoid a clash.** The only exceptions are pairs that
+collide exactly, like typst's `alpha` and `Alpha`, which no punctuation can
+separate - a leader key matches keycodes, not shift state. Uppercase Greek takes
+a leading `g` for that reason: `Gamma` is `M G G A M M A`.
+
+The tables below give the exact sequence for every entry, active or not.
 
 | what | type | example |
 |---|---|---|

@@ -11,12 +11,11 @@ disabled.
 
 | sequence | name | char | status |
 |---|---|---|---|
-| `E A B A C U S` | `abacus` | 🧮 | active |
-| `E A B C` | `abc` | 🔤 | active |
+| `E A B C D` | `ABCD` | 🔠 | active |
+| `E A B C DOT` | `abc` | 🔤 | active |
 | `E A E S C U L A P I U S` | `aesculapius` | ⚕ | active |
 | `E A I R P L A N E` | `airplane` | ✈ | active |
 | `E A L I E N` | `alien` | 👽 | active |
-| `E A N C H O R` | `anchor` | ⚓ | active |
 | `E A N G E R` | `anger` | 💢 | active |
 | `E A N T` | `ant` | 🐜 | active |
 | `E A P P L E R E D` | `apple.red` | 🍎 | active |
@@ -38,33 +37,29 @@ disabled.
 | `E A X E` | `axe` | 🪓 | active |
 | `E B A B Y` | `baby` | 👶 | active |
 | `E B A C O N` | `bacon` | 🥓 | active |
-| `E B A D G E R` | `badger` | 🦡 | active |
 | `E B A G E L` | `bagel` | 🥯 | active |
 | `E B A L L O O N` | `balloon` | 🎈 | active |
 | `E B A N A N A` | `banana` | 🍌 | active |
 | `E B A N J O` | `banjo` | 🪕 | active |
 | `E B A N K` | `bank` | 🏦 | active |
-| `E B A S K E T` | `basket` | 🧺 | active |
+| `E B A T DOT` | `bat` | 🦇 | active |
 | `E B A T T E R Y` | `battery` | 🔋 | active |
 | `E B E A D S` | `beads` | 📿 | active |
 | `E B E A N S` | `beans` | 🫘 | active |
 | `E B E A R` | `bear` | 🐻 | active |
-| `E B E A V E R` | `beaver` | 🦫 | active |
 | `E B E D` | `bed` | 🛏 | active |
+| `E B E E DOT` | `bee` | 🐝 | active |
 | `E B E E R` | `beer` | 🍺 | active |
 | `E B E E T` | `beet` | 🫜 | active |
-| `E B E L L` | `bell` | 🔔 | active |
+| `E B E L L DOT` | `bell` | 🔔 | active |
+| `E B E L L N O T` | `bell.not` | 🔕 | active |
 | `E B E N T O` | `bento` | 🍱 | active |
 | `E B I K E` | `bike` | 🚲 | active |
-| `E B I K I N I` | `bikini` | 👙 | active |
 | `E B I N` | `bin` | 🗑 | active |
 | `E B I O H A Z A R D` | `biohazard` | ☣ | active |
 | `E B I R D` | `bird` | 🐦 | active |
 | `E B I S O N` | `bison` | 🦬 | active |
-| `E B L A C K H E A R T` | `blackHeart` | 🖤 | renamed from `heart.black` |
 | `E B L O O D` | `blood` | 🩸 | active |
-| `E B L O U S E` | `blouse` | 👚 | active |
-| `E B L U E H E A R T` | `blueHeart` | 💙 | renamed from `heart.blue` |
 | `E B O A R` | `boar` | 🐗 | active |
 | `E B O A T S A I L` | `boat.sail` | ⛵ | active |
 | `E B O L T` | `bolt` | 🔩 | active |
@@ -72,33 +67,31 @@ disabled.
 | `E B O N E` | `bone` | 🦴 | active |
 | `E B O O K S` | `books` | 📚 | active |
 | `E B O W` | `bow` | 🏹 | active |
-| `E B O X I N G` | `boxing` | 🥊 | active |
 | `E B O Y` | `boy` | 👦 | active |
 | `E B R A I N` | `brain` | 🧠 | active |
 | `E B R E A D` | `bread` | 🍞 | active |
 | `E B R I C K` | `brick` | 🧱 | active |
 | `E B R I D E` | `bride` | 👰 | active |
-| `E B R I E F S` | `briefs` | 🩲 | active |
-| `E B R O K E N H E A R T` | `brokenHeart` | 💔 | renamed from `heart.broken` |
 | `E B R O O M` | `broom` | 🧹 | active |
 | `E B R U S H` | `brush` | 🖌 | active |
 | `E B U B B L E A N G E R R` | `bubble.anger.r` | 🗯 | active |
 | `E B U B B L E S P E E C H R` | `bubble.speech.r` | 💬 | active |
 | `E B U B B L E T H O U G H T` | `bubble.thought` | 💭 | active |
-| `E B U C K E T` | `bucket` | 🪣 | active |
 | `E B U G` | `bug` | 🐛 | active |
 | `E B U R G E R` | `burger` | 🍔 | active |
 | `E B U S` | `bus` | 🚌 | active |
-| `E B U T T E R` | `butter` | 🧈 | active |
-| `E B U T T O N` | `button` | 🔲 | active |
 | `E C A B I N E T F I L E` | `cabinet.file` | 🗄 | active |
-| `E C A C T U S` | `cactus` | 🌵 | active |
 | `E C A K E` | `cake` | 🎂 | active |
-| `E C A L E N D A R` | `calendar` | 📅 | active |
+| `E C A L E N D A R DOT` | `calendar` | 📅 | active |
+| `E C A L E N D A R S P I R A L` | `calendar.spiral` | 🗓 | active |
+| `E C A L E N D A R T E A R O F F` | `calendar.tearoff` | 📆 | active |
 | `E C A M E L` | `camel` | 🐫 | active |
-| `E C A M E R A` | `camera` | 📷 | active |
-| `E C A N` | `can` | 🥫 | active |
-| `E C A R` | `car` | 🚗 | active |
+| `E C A N DOT` | `can` | 🥫 | active |
+| `E C A N D Y` | `candy` | 🍬 | active |
+| `E C A N E` | `cane` | 🦯 | active |
+| `E C A R DOT` | `car` | 🚗 | active |
+| `E C A R T` | `cart` | 🛒 | active |
+| `E C A T DOT` | `cat` | 🐈 | active |
 | `E C A T F A C E` | `cat.face` | 🐱 | active |
 | `E C H A I N` | `chain` | 🔗 | active |
 | `E C H A I R` | `chair` | 🪑 | active |
@@ -107,11 +100,9 @@ disabled.
 | `E C H A R T U P` | `chart.up` | 📈 | active |
 | `E C H E C K M A R K B O X` | `checkmark.box` | ✅ | active |
 | `E C H E C K M A R K H E A V Y` | `checkmark.heavy` | ✔ | active |
-| `E C H E E S E` | `cheese` | 🧀 | active |
 | `E C H E S S` | `chess` | ♟ | active |
 | `E C H I L D` | `child` | 🧒 | active |
 | `E C H O C O L A T E` | `chocolate` | 🍫 | active |
-| `E C H U R C H` | `church` | ⛪ | active |
 | `E C I R C L E B L A C K` | `circle.black` | ⚫ | active |
 | `E C I R C L E B L U E` | `circle.blue` | 🔵 | active |
 | `E C I R C L E G R E E N` | `circle.green` | 🟢 | active |
@@ -122,7 +113,8 @@ disabled.
 | `E C I R C L E Y E L L O W` | `circle.yellow` | 🟡 | active |
 | `E C I T Y` | `city` | 🏙 | active |
 | `E C L A M P` | `clamp` | 🗜 | active |
-| `E C L I P` | `clip` | 📎 | active |
+| `E C L I P DOT` | `clip` | 📎 | active |
+| `E C L I P S` | `clips` | 🖇 | active |
 | `E C L O C K A L A R M` | `clock.alarm` | ⏰ | active |
 | `E C L O C K F I V E` | `clock.five` | 🕔 | active |
 | `E C L O C K F O U R` | `clock.four` | 🕓 | active |
@@ -131,6 +123,7 @@ disabled.
 | `E C L O C K T H R E E` | `clock.three` | 🕒 | active |
 | `E C L O C K T I M E R` | `clock.timer` | ⏲ | active |
 | `E C L O C K T W O` | `clock.two` | 🕑 | active |
+| `E C L O U D DOT` | `cloud` | ☁ | active |
 | `E C L O U D R A I N` | `cloud.rain` | 🌧 | active |
 | `E C L O U D S T O R M` | `cloud.storm` | ⛈ | active |
 | `E C L O U D S U N` | `cloud.sun` | ⛅ | active |
@@ -138,7 +131,8 @@ disabled.
 | `E C O F F E E` | `coffee` | ☕ | active |
 | `E C O I N` | `coin` | 🪙 | active |
 | `E C O M E T` | `comet` | ☄ | active |
-| `E C O M P U T E R` | `computer` | 🖥 | active |
+| `E C O M P U T E R DOT` | `computer` | 🖥 | active |
+| `E C O M P U T E R M O U S E` | `computermouse` | 🖱 | active |
 | `E C O N F E T T I` | `confetti` | 🎊 | active |
 | `E C O R A L` | `coral` | 🪸 | active |
 | `E C O R N` | `corn` | 🌽 | active |
@@ -154,12 +148,13 @@ disabled.
 | `E D E E R` | `deer` | 🦌 | active |
 | `E D I E` | `die` | 🎲 | active |
 | `E D O D O` | `dodo` | 🦤 | active |
+| `E D O G DOT` | `dog` | 🐕 | active |
 | `E D O G F A C E` | `dog.face` | 🐶 | active |
 | `E D O N U T` | `donut` | 🍩 | active |
 | `E D O O R` | `door` | 🚪 | active |
-| `E D O U B L E E X C L` | `doubleExcl` | ‼ | renamed from `excl.double` |
 | `E D R E S S` | `dress` | 👗 | active |
-| `E D R O P` | `drop` | 💧 | active |
+| `E D R O P DOT` | `drop` | 💧 | active |
+| `E D R O P S` | `drops` | 💦 | active |
 | `E D R U M` | `drum` | 🥁 | active |
 | `E D U C K` | `duck` | 🦆 | active |
 | `E E A G L E` | `eagle` | 🦅 | active |
@@ -167,9 +162,12 @@ disabled.
 | `E E G G` | `egg` | 🥚 | active |
 | `E E L F` | `elf` | 🧝 | active |
 | `E E M A I L` | `email` | 📧 | active |
-| `E E X C L` | `excl` | ❗ | active |
+| `E E X C L DOT` | `excl` | ❗ | active |
+| `E E X C L D O U B L E` | `excl.double` | ‼ | active |
+| `E E X C L Q U E S T` | `excl.quest` | ⁉ | active |
 | `E E X P L O S I O N` | `explosion` | 💥 | active |
-| `E E Y E` | `eye` | 👁 | active |
+| `E E Y E DOT` | `eye` | 👁 | active |
+| `E E Y E S` | `eyes` | 👀 | active |
 | `E F A C E C O O L` | `face.cool` | 😎 | active |
 | `E F A C E C R Y` | `face.cry` | 😭 | active |
 | `E F A C E E X P L O D E` | `face.explode` | 🤯 | active |
@@ -204,8 +202,8 @@ disabled.
 | `E F I N G E R B` | `finger.b` | 👇 | active |
 | `E F I N G E R L` | `finger.l` | 👈 | active |
 | `E F I N G E R R` | `finger.r` | 👉 | active |
-| `E F I N G E R DOT T DOT A L T` | `finger.t.alt` | ☝ | active |
-| `E F I N G E R T` | `fingerT` | 👆 | renamed from `finger.t` |
+| `E F I N G E R T DOT` | `finger.t` | 👆 | active |
+| `E F I N G E R T A L T` | `finger.t.alt` | ☝ | active |
 | `E F I N G E R S C R O S S` | `fingers.cross` | 🤞 | active |
 | `E F I R E` | `fire` | 🔥 | active |
 | `E F I S H` | `fish` | 🐟 | active |
@@ -228,12 +226,10 @@ disabled.
 | `E G L O B E A M` | `globe.am` | 🌎 | active |
 | `E G L O B E A S A U` | `globe.as.au` | 🌏 | active |
 | `E G L O B E E U A F` | `globe.eu.af` | 🌍 | active |
-| `E G L O W S T A R` | `glowStar` | 🌟 | renamed from `star.glow` |
 | `E G O A L` | `goal` | 🥅 | active |
 | `E G O A T` | `goat` | 🐐 | active |
 | `E G O O S E` | `goose` | 🪿 | active |
 | `E G R A P E S` | `grapes` | 🍇 | active |
-| `E G R E E N H E A R T` | `greenHeart` | 💚 | renamed from `heart.green` |
 | `E H A M M E R` | `hammer` | 🔨 | active |
 | `E H A M S A` | `hamsa` | 🪬 | active |
 | `E H A N D C A L L` | `hand.call` | 🤙 | active |
@@ -248,7 +244,14 @@ disabled.
 | `E H A N D S S H A K E` | `hands.shake` | 🤝 | active |
 | `E H A R P` | `harp` | 🪉 | active |
 | `E H A S H` | `hash` | # | active |
-| `E H E A R T` | `heart` | ❤ | active |
+| `E H E A R T DOT` | `heart` | ❤ | active |
+| `E H E A R T B L A C K` | `heart.black` | 🖤 | active |
+| `E H E A R T B L U E` | `heart.blue` | 💙 | active |
+| `E H E A R T B R O K E N` | `heart.broken` | 💔 | active |
+| `E H E A R T G R E E N` | `heart.green` | 💚 | active |
+| `E H E A R T O R A N G E` | `heart.orange` | 🧡 | active |
+| `E H E A R T P U R P L E` | `heart.purple` | 💜 | active |
+| `E H E A R T W H I T E` | `heart.white` | 🤍 | active |
 | `E H E L I X` | `helix` | 🧬 | active |
 | `E H I P P O` | `hippo` | 🦛 | active |
 | `E H O L E` | `hole` | 🕳 | active |
@@ -257,6 +260,7 @@ disabled.
 | `E H O R S E` | `horse` | 🐎 | active |
 | `E H O S P I T A L` | `hospital` | 🏥 | active |
 | `E H O T E L` | `hotel` | 🏨 | active |
+| `E H O U R G L A S S DOT` | `hourglass` | ⌛ | active |
 | `E H O U R G L A S S F L O W` | `hourglass.flow` | ⏳ | active |
 | `E H O U S E` | `house` | 🏠 | active |
 | `E H U T` | `hut` | 🛖 | active |
@@ -268,6 +272,7 @@ disabled.
 | `E J U I C E` | `juice` | 🧃 | active |
 | `E K A A B A` | `kaaba` | 🕋 | active |
 | `E K E B A B` | `kebab` | 🥙 | active |
+| `E K E Y DOT` | `key` | 🔑 | active |
 | `E K E Y O L D` | `key.old` | 🗝 | active |
 | `E K E Y B O A R D` | `keyboard` | ⌨ | active |
 | `E K I S S` | `kiss` | 💏 | active |
@@ -285,18 +290,21 @@ disabled.
 | `E L I G H T N I N G` | `lightning` | ⚡ | active |
 | `E L I O N` | `lion` | 🦁 | active |
 | `E L L A M A` | `llama` | 🦙 | active |
-| `E L O C K` | `lock` | 🔒 | active |
+| `E L O C K DOT` | `lock` | 🔒 | active |
+| `E L O C K O P E N` | `lock.open` | 🔓 | active |
 | `E L U N G S` | `lungs` | 🫁 | active |
 | `E M A G E` | `mage` | 🧙 | active |
 | `E M A G N I F Y L` | `magnify.l` | 🔍 | active |
 | `E M A G N I F Y R` | `magnify.r` | 🔎 | active |
 | `E M A I L` | `mail` | ✉ | active |
-| `E M A N` | `man` | 👨 | active |
+| `E M A N DOT` | `man` | 👨 | active |
+| `E M A N G O` | `mango` | 🥭 | active |
 | `E M A S K S` | `masks` | 🎭 | active |
 | `E M A T E` | `mate` | 🧉 | active |
 | `E M E A T` | `meat` | 🥩 | active |
 | `E M E D A L F I R S T` | `medal.first` | 🥇 | active |
-| `E M E G A P H O N E` | `megaphone` | 📢 | active |
+| `E M E G A P H O N E DOT` | `megaphone` | 📢 | active |
+| `E M E G A P H O N E S I M P L E` | `megaphone.simple` | 📣 | active |
 | `E M E L O N` | `melon` | 🍈 | active |
 | `E M E T R O` | `metro` | Ⓜ | active |
 | `E M I C R O S C O P E` | `microscope` | 🔬 | active |
@@ -305,6 +313,7 @@ disabled.
 | `E M O O N F U L L` | `moon.full` | 🌕 | active |
 | `E M O O S E` | `moose` | 🫎 | active |
 | `E M O R T A R B O A R D` | `mortarboard` | 🎓 | active |
+| `E M O U S E DOT` | `mouse` | 🐁 | active |
 | `E M O U S E F A C E` | `mouse.face` | 🐭 | active |
 | `E M O U T H` | `mouth` | 👄 | active |
 | `E M O Y A I` | `moyai` | 🗿 | active |
@@ -312,18 +321,17 @@ disabled.
 | `E N I N J A` | `ninja` | 🥷 | active |
 | `E N O E N T R Y` | `noentry` | ⛔ | active |
 | `E N O S E` | `nose` | 👃 | active |
-| `E N O T B E L L` | `notBell` | 🔕 | renamed from `bell.not` |
 | `E N O T E S` | `notes` | 🎵 | active |
 | `E O F F I C E` | `office` | 🏢 | active |
 | `E O I L` | `oil` | 🛢 | active |
 | `E O L I V E` | `olive` | 🫒 | active |
-| `E O N I` | `oni` | 👹 | active |
-| `E O P E N L O C K` | `openLock` | 🔓 | renamed from `lock.open` |
-| `E O R A N G E H E A R T` | `orangeHeart` | 🧡 | renamed from `heart.orange` |
+| `E O N I DOT` | `oni` | 👹 | active |
+| `E O N I O N` | `onion` | 🧅 | active |
 | `E O R C A` | `orca` | 🫍 | active |
 | `E O T T E R` | `otter` | 🦦 | active |
 | `E O W L` | `owl` | 🦉 | active |
 | `E O X` | `ox` | 🐂 | active |
+| `E P A G E DOT` | `page` | 📄 | active |
 | `E P A G E C U R L` | `page.curl` | 📃 | active |
 | `E P A G E P E N C I L` | `page.pencil` | 📝 | active |
 | `E P A G E R` | `pager` | 📟 | active |
@@ -343,17 +351,18 @@ disabled.
 | `E P I E` | `pie` | 🥧 | active |
 | `E P I G` | `pig` | 🐖 | active |
 | `E P I L L` | `pill` | 💊 | active |
-| `E P I N` | `pin` | 📌 | active |
+| `E P I N DOT` | `pin` | 📌 | active |
+| `E P I N R O U N D` | `pin.round` | 📍 | active |
 | `E P I Z Z A` | `pizza` | 🍕 | active |
 | `E P L A N T` | `plant` | 🪴 | active |
 | `E P L A Y B A C K D O W N` | `playback.down` | ⏬ | active |
 | `E P L A Y B A C K F O R W A R D` | `playback.forward` | ⏩ | active |
-| `E P L A Y B A C K DOT R E P E A T DOT O N C E` | `playback.repeat.once` | 🔂 | active |
-| `E P L A Y B A C K DOT R E P E A T DOT V` | `playback.repeat.v` | 🔃 | active |
+| `E P L A Y B A C K R E P E A T DOT` | `playback.repeat` | 🔁 | active |
+| `E P L A Y B A C K R E P E A T O N C E` | `playback.repeat.once` | 🔂 | active |
+| `E P L A Y B A C K R E P E A T V` | `playback.repeat.v` | 🔃 | active |
 | `E P L A Y B A C K R E W I N D` | `playback.rewind` | ⏪ | active |
 | `E P L A Y B A C K S H U F F L E` | `playback.shuffle` | 🔀 | active |
 | `E P L A Y B A C K U P` | `playback.up` | ⏫ | active |
-| `E P L A Y B A C K R E P E A T` | `playbackRepeat` | 🔁 | renamed from `playback.repeat` |
 | `E P O O` | `poo` | 💩 | active |
 | `E P O P C O R N` | `popcorn` | 🍿 | active |
 | `E P O U C H` | `pouch` | 👝 | active |
@@ -361,9 +370,9 @@ disabled.
 | `E P R E S E N T` | `present` | 🎁 | active |
 | `E P R O H I B I T E D` | `prohibited` | 🚫 | active |
 | `E P U M P K I N L A N T E R N` | `pumpkin.lantern` | 🎃 | active |
-| `E P U R P L E H E A R T` | `purpleHeart` | 💜 | renamed from `heart.purple` |
 | `E P U R S E` | `purse` | 👛 | active |
 | `E Q U E S T` | `quest` | ❓ | active |
+| `E R A D I O DOT` | `radio` | 📻 | active |
 | `E R A D I O A C T I V E` | `radioactive` | ☢ | active |
 | `E R A M` | `ram` | 🐏 | active |
 | `E R A T` | `rat` | 🐀 | active |
@@ -374,10 +383,11 @@ disabled.
 | `E R I C E` | `rice` | 🍚 | active |
 | `E R I N G` | `ring` | 💍 | active |
 | `E R O B O T` | `robot` | 🤖 | active |
+| `E R O C K DOT` | `rock` | 🪨 | active |
 | `E R O C K E T` | `rocket` | 🚀 | active |
-| `E R O U N D P I N` | `roundPin` | 📍 | renamed from `pin.round` |
 | `E R U G B Y` | `rugby` | 🏉 | active |
-| `E R U L E R` | `ruler` | 📏 | active |
+| `E R U L E R DOT` | `ruler` | 📏 | active |
+| `E R U L E R T R I A N G L E` | `ruler.triangle` | 📐 | active |
 | `E S A K E` | `sake` | 🍶 | active |
 | `E S A L A D` | `salad` | 🥗 | active |
 | `E S A L T` | `salt` | 🧂 | active |
@@ -392,7 +402,6 @@ disabled.
 | `E S H E E P` | `sheep` | 🐑 | active |
 | `E S H I P` | `ship` | 🚢 | active |
 | `E S H O E` | `shoe` | 👞 | active |
-| `E S I M P L E M E G A P H O N E` | `simpleMegaphone` | 📣 | renamed from `megaphone.simple` |
 | `E S I R E N` | `siren` | 🚨 | active |
 | `E S K U L L` | `skull` | 💀 | active |
 | `E S K U N K` | `skunk` | 🦨 | active |
@@ -407,37 +416,33 @@ disabled.
 | `E S O C K S` | `socks` | 🧦 | active |
 | `E S O U P` | `soup` | 🍲 | active |
 | `E S P A R K L E S` | `sparkles` | ✨ | active |
-| `E S P I R A L C A L E N D A R` | `spiralCalendar` | 🗓 | renamed from `calendar.spiral` |
 | `E S P O O N` | `spoon` | 🥄 | active |
 | `E S Q U I D` | `squid` | 🦑 | active |
-| `E S T A R` | `star` | ⭐ | active |
+| `E S T A R DOT` | `star` | ⭐ | active |
+| `E S T A R G L O W` | `star.glow` | 🌟 | active |
 | `E S U N` | `sun` | ☀ | active |
 | `E S U S H I` | `sushi` | 🍣 | active |
 | `E S W A N` | `swan` | 🦢 | active |
 | `E T A C O` | `taco` | 🌮 | active |
 | `E T A P` | `tap` | 🚰 | active |
 | `E T A X I` | `taxi` | 🚕 | active |
-| `E T E A R O F F C A L E N D A R` | `tearoffCalendar` | 📆 | renamed from `calendar.tearoff` |
 | `E T E D D Y` | `teddy` | 🧸 | active |
 | `E T E L E S C O P E` | `telescope` | 🔭 | active |
-| `E T E N` | `ten` | 🔟 | active |
+| `E T E N DOT` | `ten` | 🔟 | active |
+| `E T E N G U` | `tengu` | 👺 | active |
+| `E T E N T` | `tent` | ⛺ | active |
 | `E T E S T T U B E` | `testtube` | 🧪 | active |
 | `E T H U M B D O W N` | `thumb.down` | 👎 | active |
 | `E T H U M B U P` | `thumb.up` | 👍 | active |
-| `E T I G E R` | `tiger` | 🐅 | active |
 | `E T M` | `tm` | ™ | active |
 | `E T O O L B O X` | `toolbox` | 🧰 | active |
-| `E T O O T H` | `tooth` | 🦷 | active |
 | `E T R A I N S T E A M` | `train.steam` | 🚂 | active |
 | `E T R E E E V E R G R E E N` | `tree.evergreen` | 🌲 | active |
 | `E T R I A N G L E B R E D` | `triangle.b.red` | 🔻 | active |
 | `E T R I A N G L E L` | `triangle.l` | ◀ | active |
-| `E T R I A N G L E DOT R` | `triangle.r` | ▶ | active |
+| `E T R I A N G L E R` | `triangle.r` | ▶ | active |
 | `E T R I A N G L E T R E D` | `triangle.t.red` | 🔺 | active |
-| `E T R I A N G L E R U L E R` | `triangleRuler` | 📐 | renamed from `ruler.triangle` |
-| `E T R O L L` | `troll` | 🧌 | active |
 | `E T R O P H Y` | `trophy` | 🏆 | active |
-| `E T R U C K` | `truck` | 🚚 | active |
 | `E T V` | `tv` | 📺 | active |
 | `E U F O` | `ufo` | 🛸 | active |
 | `E U R N` | `urn` | ⚱ | active |
@@ -446,511 +451,507 @@ disabled.
 | `E W A T C H S T O P` | `watch.stop` | ⏱ | active |
 | `E W A V E` | `wave` | 🌊 | active |
 | `E W C` | `wc` | 🚾 | active |
-| `E W H A L E` | `whale` | 🐋 | active |
-| `E W H E E L` | `wheel` | 🛞 | active |
-| `E W H I T E H E A R T` | `whiteHeart` | 🤍 | renamed from `heart.white` |
 | `E W I N D` | `wind` | 🌬 | active |
 | `E W I N E` | `wine` | 🍷 | active |
 | `E W I N G` | `wing` | 🪽 | active |
 | `E W O L F` | `wolf` | 🐺 | active |
-| `E W O M A N` | `woman` | 👩 | active |
 | `E W O O D` | `wood` | 🪵 | active |
 | `E W O R M` | `worm` | 🪱 | active |
 | `E W R E N C H` | `wrench` | 🔧 | active |
 | `E X R A Y` | `xray` | 🩻 | active |
 | `E Y A R N` | `yarn` | 🧶 | active |
 | `E Y O Y O` | `yoyo` | 🪀 | active |
-| `E Z E B R A` | `zebra` | 🦓 | active |
 | `E Z Z Z` | `zzz` | 💤 | active |
-| `E A B C D` | `ABCD` | 🔠 | disabled: every spelling clashes |
 | `E A` | `a` | 🅰 | disabled: labelled button glyph |
 | `E A B` | `ab` | 🆎 | disabled: labelled button glyph |
-| `E A B C D` | `abcd` | 🔡 | disabled: every spelling clashes |
+| `E A B A C U S` | `abacus` | 🧮 | disabled: beyond the active limit |
+| `E A B C D` | `abcd` | 🔡 | disabled: duplicate spelling |
 | `E A C C O R D I O N` | `accordion` | 🪗 | disabled: beyond the active limit |
-| `E A I R P L A N E DOT L A N D I N G` | `airplane.landing` | 🛬 | disabled: beyond the active limit |
-| `E A I R P L A N E DOT S M A L L` | `airplane.small` | 🛩 | disabled: beyond the active limit |
-| `E A I R P L A N E DOT T A K E O F F` | `airplane.takeoff` | 🛫 | disabled: beyond the active limit |
+| `E A I R P L A N E L A N D I N G` | `airplane.landing` | 🛬 | disabled: beyond the active limit |
+| `E A I R P L A N E S M A L L` | `airplane.small` | 🛩 | disabled: beyond the active limit |
+| `E A I R P L A N E T A K E O F F` | `airplane.takeoff` | 🛫 | disabled: beyond the active limit |
 | `E A L E M B I C` | `alembic` | ⚗ | disabled: beyond the active limit |
-| `E A L I E N DOT M O N S T E R` | `alien.monster` | 👾 | disabled: beyond the active limit |
+| `E A L I E N M O N S T E R` | `alien.monster` | 👾 | disabled: beyond the active limit |
 | `E A M B U L A N C E` | `ambulance` | 🚑 | disabled: beyond the active limit |
 | `E A M P H O R A` | `amphora` | 🏺 | disabled: beyond the active limit |
-| `E A P P L E DOT G R E E N` | `apple.green` | 🍏 | disabled: beyond the active limit |
-| `E A R M DOT M E C H` | `arm.mech` | 🦾 | disabled: beyond the active limit |
-| `E A R M DOT S E L F I E` | `arm.selfie` | 🤳 | disabled: beyond the active limit |
-| `E A R R O W DOT B DOT C U R V E` | `arrow.b.curve` | ⤵ | disabled: beyond the active limit |
-| `E A R R O W DOT L DOT B A C K` | `arrow.l.back` | 🔙 | disabled: beyond the active limit |
-| `E A R R O W DOT L DOT E N D` | `arrow.l.end` | 🔚 | disabled: beyond the active limit |
-| `E A R R O W DOT L DOT H O O K` | `arrow.l.hook` | ↩ | disabled: beyond the active limit |
-| `E A R R O W DOT L DOT R DOT O N` | `arrow.l.r.on` | 🔛 | disabled: beyond the active limit |
-| `E A R R O W DOT R DOT H O O K` | `arrow.r.hook` | ↪ | disabled: beyond the active limit |
-| `E A R R O W DOT R DOT S O O N` | `arrow.r.soon` | 🔜 | disabled: beyond the active limit |
-| `E A R R O W DOT T DOT C U R V E` | `arrow.t.curve` | ⤴ | disabled: beyond the active limit |
-| `E A R R O W DOT T DOT T O P` | `arrow.t.top` | 🔝 | disabled: beyond the active limit |
-| `E A S T DOT B O X` | `ast.box` | ✳ | disabled: beyond the active limit |
+| `E A N C H O R` | `anchor` | ⚓ | disabled: beyond the active limit |
+| `E A P P L E G R E E N` | `apple.green` | 🍏 | disabled: beyond the active limit |
+| `E A R M M E C H` | `arm.mech` | 🦾 | disabled: beyond the active limit |
+| `E A R M S E L F I E` | `arm.selfie` | 🤳 | disabled: beyond the active limit |
+| `E A R R O W B C U R V E` | `arrow.b.curve` | ⤵ | disabled: beyond the active limit |
+| `E A R R O W L B A C K` | `arrow.l.back` | 🔙 | disabled: beyond the active limit |
+| `E A R R O W L E N D` | `arrow.l.end` | 🔚 | disabled: beyond the active limit |
+| `E A R R O W L H O O K` | `arrow.l.hook` | ↩ | disabled: beyond the active limit |
+| `E A R R O W L R O N` | `arrow.l.r.on` | 🔛 | disabled: beyond the active limit |
+| `E A R R O W R H O O K` | `arrow.r.hook` | ↪ | disabled: beyond the active limit |
+| `E A R R O W R S O O N` | `arrow.r.soon` | 🔜 | disabled: beyond the active limit |
+| `E A R R O W T C U R V E` | `arrow.t.curve` | ⤴ | disabled: beyond the active limit |
+| `E A R R O W T T O P` | `arrow.t.top` | 🔝 | disabled: beyond the active limit |
+| `E A S T B O X` | `ast.box` | ✳ | disabled: beyond the active limit |
 | `E A U B E R G I N E` | `aubergine` | 🍆 | disabled: beyond the active limit |
 | `E A V O C A D O` | `avocado` | 🥑 | disabled: beyond the active limit |
 | `E B` | `b` | 🅱 | disabled: labelled button glyph |
-| `E B A B Y DOT A N G E L` | `baby.angel` | 👼 | disabled: beyond the active limit |
-| `E B A B Y DOT B O X` | `baby.box` | 🚼 | disabled: beyond the active limit |
+| `E B A B Y A N G E L` | `baby.angel` | 👼 | disabled: beyond the active limit |
+| `E B A B Y B O X` | `baby.box` | 🚼 | disabled: beyond the active limit |
 | `E B A B Y B O T T L E` | `babybottle` | 🍼 | disabled: beyond the active limit |
 | `E B A C K P A C K` | `backpack` | 🎒 | disabled: beyond the active limit |
+| `E B A D G E R` | `badger` | 🦡 | disabled: beyond the active limit |
 | `E B A D M I N T O N` | `badminton` | 🏸 | disabled: beyond the active limit |
 | `E B A G G A G E C L A I M` | `baggageclaim` | 🛄 | disabled: beyond the active limit |
 | `E B A G U E T T E` | `baguette` | 🥖 | disabled: beyond the active limit |
-| `E B A L L O T DOT C H E C K` | `ballot.check` | ☑ | disabled: beyond the active limit |
+| `E B A L L O T C H E C K` | `ballot.check` | ☑ | disabled: beyond the active limit |
 | `E B A L L O T B O X` | `ballotbox` | 🗳 | disabled: beyond the active limit |
 | `E B A R B E R P O L E` | `barberpole` | 💈 | disabled: beyond the active limit |
 | `E B A S E B A L L` | `baseball` | ⚾ | disabled: beyond the active limit |
 | `E B A S E C A P` | `basecap` | 🧢 | disabled: beyond the active limit |
+| `E B A S K E T` | `basket` | 🧺 | disabled: beyond the active limit |
 | `E B A S K E T B A L L` | `basketball` | ⛹ | disabled: beyond the active limit |
-| `E B A S K E T B A L L DOT B A L L` | `basketball.ball` | 🏀 | disabled: beyond the active limit |
-| `E B A T` | `bat` | 🦇 | disabled: every spelling clashes |
+| `E B A S K E T B A L L B A L L` | `basketball.ball` | 🏀 | disabled: beyond the active limit |
 | `E B A T H T U B` | `bathtub` | 🛀 | disabled: beyond the active limit |
-| `E B A T H T U B DOT F O A M` | `bathtub.foam` | 🛁 | disabled: beyond the active limit |
-| `E B A T T E R Y DOT L O W` | `battery.low` | 🪫 | disabled: beyond the active limit |
-| `E B E A C H DOT P A L M` | `beach.palm` | 🏝 | disabled: beyond the active limit |
-| `E B E A C H DOT U M B R E L L A` | `beach.umbrella` | 🏖 | disabled: beyond the active limit |
-| `E B E D DOT P E R S O N` | `bed.person` | 🛌 | disabled: beyond the active limit |
-| `E B E E` | `bee` | 🐝 | disabled: every spelling clashes |
-| `E B E E R DOT C L I N K` | `beer.clink` | 🍻 | disabled: beyond the active limit |
-| `E B E E T L E` | `beetle` | 🪲 | disabled: every spelling clashes |
-| `E B E E T L E DOT L A D Y` | `beetle.lady` | 🐞 | disabled: beyond the active limit |
-| `E B E L L DOT D I N G` | `bell.ding` | 🛎 | disabled: beyond the active limit |
+| `E B A T H T U B F O A M` | `bathtub.foam` | 🛁 | disabled: beyond the active limit |
+| `E B A T T E R Y L O W` | `battery.low` | 🪫 | disabled: beyond the active limit |
+| `E B E A C H P A L M` | `beach.palm` | 🏝 | disabled: beyond the active limit |
+| `E B E A C H U M B R E L L A` | `beach.umbrella` | 🏖 | disabled: beyond the active limit |
+| `E B E A V E R` | `beaver` | 🦫 | disabled: beyond the active limit |
+| `E B E D P E R S O N` | `bed.person` | 🛌 | disabled: beyond the active limit |
+| `E B E E R C L I N K` | `beer.clink` | 🍻 | disabled: beyond the active limit |
+| `E B E E T L E` | `beetle` | 🪲 | disabled: beyond the active limit |
+| `E B E E T L E L A D Y` | `beetle.lady` | 🐞 | disabled: beyond the active limit |
+| `E B E L L D I N G` | `bell.ding` | 🛎 | disabled: beyond the active limit |
 | `E B I C Y C L I S T` | `bicyclist` | 🚴 | disabled: beyond the active limit |
-| `E B I C Y C L I S T DOT M O U N T A I N` | `bicyclist.mountain` | 🚵 | disabled: beyond the active limit |
+| `E B I C Y C L I S T M O U N T A I N` | `bicyclist.mountain` | 🚵 | disabled: beyond the active limit |
 | `E B I G F O O T` | `bigfoot` | 🫈 | disabled: beyond the active limit |
-| `E B I K E DOT N O T` | `bike.not` | 🚳 | disabled: beyond the active limit |
+| `E B I K E N O T` | `bike.not` | 🚳 | disabled: beyond the active limit |
+| `E B I K I N I` | `bikini` | 👙 | disabled: beyond the active limit |
 | `E B I L L I A R D S` | `billiards` | 🎱 | disabled: beyond the active limit |
+| `E B L O U S E` | `blouse` | 👚 | disabled: beyond the active limit |
 | `E B L O W F I S H` | `blowfish` | 🐡 | disabled: beyond the active limit |
 | `E B L U E B E R R I E S` | `blueberries` | 🫐 | disabled: beyond the active limit |
-| `E B O A T DOT C A N O E` | `boat.canoe` | 🛶 | disabled: beyond the active limit |
-| `E B O A T DOT M O T O R` | `boat.motor` | 🛥 | disabled: beyond the active limit |
-| `E B O A T DOT R O W` | `boat.row` | 🚣 | disabled: beyond the active limit |
-| `E B O A T DOT S P E E D` | `boat.speed` | 🚤 | disabled: beyond the active limit |
-| `E B O O K DOT B L U E` | `book.blue` | 📘 | disabled: beyond the active limit |
-| `E B O O K DOT G R E E N` | `book.green` | 📗 | disabled: beyond the active limit |
-| `E B O O K DOT O P E N` | `book.open` | 📖 | disabled: beyond the active limit |
-| `E B O O K DOT O R A N G E` | `book.orange` | 📙 | disabled: beyond the active limit |
-| `E B O O K DOT R E D` | `book.red` | 📕 | disabled: beyond the active limit |
-| `E B O O K DOT S P I R A L` | `book.spiral` | 📒 | disabled: beyond the active limit |
+| `E B O A T C A N O E` | `boat.canoe` | 🛶 | disabled: beyond the active limit |
+| `E B O A T M O T O R` | `boat.motor` | 🛥 | disabled: beyond the active limit |
+| `E B O A T R O W` | `boat.row` | 🚣 | disabled: beyond the active limit |
+| `E B O A T S P E E D` | `boat.speed` | 🚤 | disabled: beyond the active limit |
+| `E B O O K B L U E` | `book.blue` | 📘 | disabled: beyond the active limit |
+| `E B O O K G R E E N` | `book.green` | 📗 | disabled: beyond the active limit |
+| `E B O O K O P E N` | `book.open` | 📖 | disabled: beyond the active limit |
+| `E B O O K O R A N G E` | `book.orange` | 📙 | disabled: beyond the active limit |
+| `E B O O K R E D` | `book.red` | 📕 | disabled: beyond the active limit |
+| `E B O O K S P I R A L` | `book.spiral` | 📒 | disabled: beyond the active limit |
 | `E B O O K M A R K` | `bookmark` | 🔖 | disabled: beyond the active limit |
 | `E B O O M E R A N G` | `boomerang` | 🪃 | disabled: beyond the active limit |
 | `E B O R D E R C O N T R O L` | `bordercontrol` | 🛂 | disabled: beyond the active limit |
 | `E B O U Q U E T` | `bouquet` | 💐 | disabled: beyond the active limit |
-| `E B O W L DOT S P O O N` | `bowl.spoon` | 🥣 | disabled: beyond the active limit |
-| `E B O W L DOT S T E A M` | `bowl.steam` | 🍜 | disabled: beyond the active limit |
+| `E B O W L S P O O N` | `bowl.spoon` | 🥣 | disabled: beyond the active limit |
+| `E B O W L S T E A M` | `bowl.steam` | 🍜 | disabled: beyond the active limit |
 | `E B O W L I N G` | `bowling` | 🎳 | disabled: beyond the active limit |
-| `E B R I D G E DOT F O G` | `bridge.fog` | 🌁 | disabled: beyond the active limit |
-| `E B R I D G E DOT N I G H T` | `bridge.night` | 🌉 | disabled: beyond the active limit |
+| `E B O X I N G` | `boxing` | 🥊 | disabled: beyond the active limit |
+| `E B R I D G E F O G` | `bridge.fog` | 🌁 | disabled: beyond the active limit |
+| `E B R I D G E N I G H T` | `bridge.night` | 🌉 | disabled: beyond the active limit |
 | `E B R I E F C A S E` | `briefcase` | 💼 | disabled: beyond the active limit |
-| `E B R I G H T N E S S DOT H I G H` | `brightness.high` | 🔆 | disabled: beyond the active limit |
-| `E B R I G H T N E S S DOT L O W` | `brightness.low` | 🔅 | disabled: beyond the active limit |
+| `E B R I E F S` | `briefs` | 🩲 | disabled: beyond the active limit |
+| `E B R I G H T N E S S H I G H` | `brightness.high` | 🔆 | disabled: beyond the active limit |
+| `E B R I G H T N E S S L O W` | `brightness.low` | 🔅 | disabled: beyond the active limit |
 | `E B R O C C O L I` | `broccoli` | 🥦 | disabled: beyond the active limit |
-| `E B U B B L E DOT S P E E C H DOT L` | `bubble.speech.l` | 🗨 | disabled: beyond the active limit |
+| `E B U B B L E S P E E C H L` | `bubble.speech.l` | 🗨 | disabled: beyond the active limit |
 | `E B U B B L E S` | `bubbles` | 🫧 | disabled: beyond the active limit |
 | `E B U B B L E T E A` | `bubbletea` | 🧋 | disabled: beyond the active limit |
-| `E B U F F A L O DOT W A T E R` | `buffalo.water` | 🐃 | disabled: beyond the active limit |
+| `E B U C K E T` | `bucket` | 🪣 | disabled: beyond the active limit |
+| `E B U F F A L O W A T E R` | `buffalo.water` | 🐃 | disabled: beyond the active limit |
 | `E B U I L D E R` | `builder` | 👷 | disabled: beyond the active limit |
 | `E B U R R I T O` | `burrito` | 🌯 | disabled: beyond the active limit |
-| `E B U S DOT F R O N T` | `bus.front` | 🚍 | disabled: beyond the active limit |
-| `E B U S DOT S M A L L` | `bus.small` | 🚐 | disabled: beyond the active limit |
-| `E B U S DOT S T O P` | `bus.stop` | 🚏 | disabled: beyond the active limit |
-| `E B U S DOT T R O L L E Y` | `bus.trolley` | 🚎 | disabled: beyond the active limit |
+| `E B U S F R O N T` | `bus.front` | 🚍 | disabled: beyond the active limit |
+| `E B U S S M A L L` | `bus.small` | 🚐 | disabled: beyond the active limit |
+| `E B U S S T O P` | `bus.stop` | 🚏 | disabled: beyond the active limit |
+| `E B U S T R O L L E Y` | `bus.trolley` | 🚎 | disabled: beyond the active limit |
+| `E B U T T E R` | `butter` | 🧈 | disabled: beyond the active limit |
 | `E B U T T E R F L Y` | `butterfly` | 🦋 | disabled: beyond the active limit |
-| `E B U T T O N DOT A L T` | `button.alt` | 🔳 | disabled: beyond the active limit |
-| `E B U T T O N DOT R A D I O` | `button.radio` | 🔘 | disabled: beyond the active limit |
+| `E B U T T O N` | `button` | 🔲 | disabled: beyond the active limit |
+| `E B U T T O N A L T` | `button.alt` | 🔳 | disabled: beyond the active limit |
+| `E B U T T O N R A D I O` | `button.radio` | 🔘 | disabled: beyond the active limit |
 | `E C A B L E C A R` | `cablecar` | 🚠 | disabled: beyond the active limit |
-| `E C A B L E C A R DOT S M A L L` | `cablecar.small` | 🚡 | disabled: beyond the active limit |
-| `E C A K E DOT F I S H` | `cake.fish` | 🍥 | disabled: beyond the active limit |
-| `E C A K E DOT M O O N` | `cake.moon` | 🥮 | disabled: beyond the active limit |
-| `E C A K E DOT S L I C E` | `cake.slice` | 🍰 | disabled: beyond the active limit |
-| `E C A M E L DOT D R O M E D A R` | `camel.dromedar` | 🐪 | disabled: beyond the active limit |
-| `E C A M E R A DOT F L A S H` | `camera.flash` | 📸 | disabled: beyond the active limit |
-| `E C A M E R A DOT M O V I E` | `camera.movie` | 🎥 | disabled: beyond the active limit |
-| `E C A M E R A DOT M O V I E DOT B O X` | `camera.movie.box` | 🎦 | disabled: beyond the active limit |
-| `E C A M E R A DOT V I D E O` | `camera.video` | 📹 | disabled: beyond the active limit |
+| `E C A B L E C A R S M A L L` | `cablecar.small` | 🚡 | disabled: beyond the active limit |
+| `E C A C T U S` | `cactus` | 🌵 | disabled: beyond the active limit |
+| `E C A K E F I S H` | `cake.fish` | 🍥 | disabled: beyond the active limit |
+| `E C A K E M O O N` | `cake.moon` | 🥮 | disabled: beyond the active limit |
+| `E C A K E S L I C E` | `cake.slice` | 🍰 | disabled: beyond the active limit |
+| `E C A M E L D R O M E D A R` | `camel.dromedar` | 🐪 | disabled: beyond the active limit |
+| `E C A M E R A` | `camera` | 📷 | disabled: beyond the active limit |
+| `E C A M E R A F L A S H` | `camera.flash` | 📸 | disabled: beyond the active limit |
+| `E C A M E R A M O V I E` | `camera.movie` | 🎥 | disabled: beyond the active limit |
+| `E C A M E R A M O V I E B O X` | `camera.movie.box` | 🎦 | disabled: beyond the active limit |
+| `E C A M E R A V I D E O` | `camera.video` | 📹 | disabled: beyond the active limit |
 | `E C A M P I N G` | `camping` | 🏕 | disabled: beyond the active limit |
-| `E C A N D L E` | `candle` | 🕯 | disabled: every spelling clashes |
-| `E C A N D Y` | `candy` | 🍬 | disabled: every spelling clashes |
-| `E C A N E` | `cane` | 🦯 | disabled: every spelling clashes |
-| `E C A R DOT F R O N T` | `car.front` | 🚘 | disabled: beyond the active limit |
-| `E C A R DOT P I C K U P` | `car.pickup` | 🛻 | disabled: beyond the active limit |
-| `E C A R DOT P O L I C E` | `car.police` | 🚓 | disabled: beyond the active limit |
-| `E C A R DOT P O L I C E DOT F R O N T` | `car.police.front` | 🚔 | disabled: beyond the active limit |
-| `E C A R DOT R A C I N G` | `car.racing` | 🏎 | disabled: beyond the active limit |
-| `E C A R DOT R I C K S H A W` | `car.rickshaw` | 🛺 | disabled: beyond the active limit |
-| `E C A R DOT S U V` | `car.suv` | 🚙 | disabled: beyond the active limit |
-| `E C A R D DOT C R E D I T` | `card.credit` | 💳 | disabled: beyond the active limit |
-| `E C A R D DOT I D` | `card.id` | 🪪 | disabled: beyond the active limit |
+| `E C A N D L E` | `candle` | 🕯 | disabled: beyond the active limit |
+| `E C A R F R O N T` | `car.front` | 🚘 | disabled: beyond the active limit |
+| `E C A R P I C K U P` | `car.pickup` | 🛻 | disabled: beyond the active limit |
+| `E C A R P O L I C E` | `car.police` | 🚓 | disabled: beyond the active limit |
+| `E C A R P O L I C E F R O N T` | `car.police.front` | 🚔 | disabled: beyond the active limit |
+| `E C A R R A C I N G` | `car.racing` | 🏎 | disabled: beyond the active limit |
+| `E C A R R I C K S H A W` | `car.rickshaw` | 🛺 | disabled: beyond the active limit |
+| `E C A R S U V` | `car.suv` | 🚙 | disabled: beyond the active limit |
+| `E C A R D C R E D I T` | `card.credit` | 💳 | disabled: beyond the active limit |
+| `E C A R D I D` | `card.id` | 🪪 | disabled: beyond the active limit |
 | `E C A R D I N D E X` | `cardindex` | 📇 | disabled: beyond the active limit |
-| `E C A R R O T` | `carrot` | 🥕 | disabled: every spelling clashes |
-| `E C A R T` | `cart` | 🛒 | disabled: every spelling clashes |
+| `E C A R R O T` | `carrot` | 🥕 | disabled: beyond the active limit |
 | `E C A S S E T T E` | `cassette` | 📼 | disabled: beyond the active limit |
-| `E C A S T L E DOT E U` | `castle.eu` | 🏰 | disabled: beyond the active limit |
-| `E C A S T L E DOT J P` | `castle.jp` | 🏯 | disabled: beyond the active limit |
-| `E C A T` | `cat` | 🐈 | disabled: every spelling clashes |
-| `E C A T DOT F A C E DOT A N G R Y` | `cat.face.angry` | 😾 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT C R Y` | `cat.face.cry` | 😿 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT H E A R T` | `cat.face.heart` | 😻 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT J O Y` | `cat.face.joy` | 😹 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT K I S S` | `cat.face.kiss` | 😽 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT L A U G H` | `cat.face.laugh` | 😸 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT S H O C K` | `cat.face.shock` | 🙀 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT S M I L E` | `cat.face.smile` | 😺 | disabled: beyond the active limit |
-| `E C A T DOT F A C E DOT S M I R K` | `cat.face.smirk` | 😼 | disabled: beyond the active limit |
-| `E C H A I N S` | `chains` | ⛓ | disabled: every spelling clashes |
+| `E C A S T L E E U` | `castle.eu` | 🏰 | disabled: beyond the active limit |
+| `E C A S T L E J P` | `castle.jp` | 🏯 | disabled: beyond the active limit |
+| `E C A T F A C E A N G R Y` | `cat.face.angry` | 😾 | disabled: beyond the active limit |
+| `E C A T F A C E C R Y` | `cat.face.cry` | 😿 | disabled: beyond the active limit |
+| `E C A T F A C E H E A R T` | `cat.face.heart` | 😻 | disabled: beyond the active limit |
+| `E C A T F A C E J O Y` | `cat.face.joy` | 😹 | disabled: beyond the active limit |
+| `E C A T F A C E K I S S` | `cat.face.kiss` | 😽 | disabled: beyond the active limit |
+| `E C A T F A C E L A U G H` | `cat.face.laugh` | 😸 | disabled: beyond the active limit |
+| `E C A T F A C E S H O C K` | `cat.face.shock` | 🙀 | disabled: beyond the active limit |
+| `E C A T F A C E S M I L E` | `cat.face.smile` | 😺 | disabled: beyond the active limit |
+| `E C A T F A C E S M I R K` | `cat.face.smirk` | 😼 | disabled: beyond the active limit |
+| `E C H A I N S` | `chains` | ⛓ | disabled: beyond the active limit |
 | `E C H A M P A G N E` | `champagne` | 🍾 | disabled: beyond the active limit |
-| `E C H A R T DOT Y E N DOT U P` | `chart.yen.up` | 💹 | disabled: beyond the active limit |
+| `E C H A R T Y E N U P` | `chart.yen.up` | 💹 | disabled: beyond the active limit |
+| `E C H E E S E` | `cheese` | 🧀 | disabled: beyond the active limit |
 | `E C H E R R I E S` | `cherries` | 🍒 | disabled: beyond the active limit |
 | `E C H E S T N U T` | `chestnut` | 🌰 | disabled: beyond the active limit |
 | `E C H I C K E N` | `chicken` | 🐔 | disabled: beyond the active limit |
-| `E C H I C K E N DOT B A B Y` | `chicken.baby` | 🐥 | disabled: beyond the active limit |
-| `E C H I C K E N DOT B A B Y DOT E G G` | `chicken.baby.egg` | 🐣 | disabled: beyond the active limit |
-| `E C H I C K E N DOT B A B Y DOT H E A D` | `chicken.baby.head` | 🐤 | disabled: beyond the active limit |
-| `E C H I C K E N DOT L E G` | `chicken.leg` | 🍗 | disabled: beyond the active limit |
-| `E C H I C K E N DOT M A L E` | `chicken.male` | 🐓 | disabled: beyond the active limit |
+| `E C H I C K E N B A B Y` | `chicken.baby` | 🐥 | disabled: beyond the active limit |
+| `E C H I C K E N B A B Y E G G` | `chicken.baby.egg` | 🐣 | disabled: beyond the active limit |
+| `E C H I C K E N B A B Y H E A D` | `chicken.baby.head` | 🐤 | disabled: beyond the active limit |
+| `E C H I C K E N L E G` | `chicken.leg` | 🍗 | disabled: beyond the active limit |
+| `E C H I C K E N M A L E` | `chicken.male` | 🐓 | disabled: beyond the active limit |
 | `E C H I P M U N K` | `chipmunk` | 🐿 | disabled: beyond the active limit |
 | `E C H O P S T I C K S` | `chopsticks` | 🥢 | disabled: beyond the active limit |
-| `E C H U R C H DOT L O V E` | `church.love` | 💒 | disabled: beyond the active limit |
+| `E C H U R C H` | `church` | ⛪ | disabled: beyond the active limit |
+| `E C H U R C H L O V E` | `church.love` | 💒 | disabled: beyond the active limit |
 | `E C I G A R E T T E` | `cigarette` | 🚬 | disabled: beyond the active limit |
-| `E C I G A R E T T E DOT N O T` | `cigarette.not` | 🚭 | disabled: beyond the active limit |
-| `E C I R C L E DOT B R O W N` | `circle.brown` | 🟤 | disabled: beyond the active limit |
-| `E C I R C L E DOT S T R O K E D` | `circle.stroked` | ⭕ | disabled: beyond the active limit |
+| `E C I G A R E T T E N O T` | `cigarette.not` | 🚭 | disabled: beyond the active limit |
+| `E C I R C L E B R O W N` | `circle.brown` | 🟤 | disabled: beyond the active limit |
+| `E C I R C L E S T R O K E D` | `circle.stroked` | ⭕ | disabled: beyond the active limit |
 | `E C I R C U S` | `circus` | 🎪 | disabled: beyond the active limit |
-| `E C I T Y DOT D U S K` | `city.dusk` | 🌆 | disabled: beyond the active limit |
-| `E C I T Y DOT N I G H T` | `city.night` | 🌃 | disabled: beyond the active limit |
-| `E C I T Y DOT S U N S E T` | `city.sunset` | 🌇 | disabled: beyond the active limit |
+| `E C I T Y D U S K` | `city.dusk` | 🌆 | disabled: beyond the active limit |
+| `E C I T Y N I G H T` | `city.night` | 🌃 | disabled: beyond the active limit |
+| `E C I T Y S U N S E T` | `city.sunset` | 🌇 | disabled: beyond the active limit |
 | `E C L` | `cl` | 🆑 | disabled: labelled button glyph |
 | `E C L A P P E R B O A R D` | `clapperboard` | 🎬 | disabled: beyond the active limit |
 | `E C L I M B I N G` | `climbing` | 🧗 | disabled: beyond the active limit |
 | `E C L I P B O A R D` | `clipboard` | 📋 | disabled: beyond the active limit |
-| `E C L I P S` | `clips` | 🖇 | disabled: every spelling clashes |
-| `E C L O C K DOT E I G H T` | `clock.eight` | 🕗 | disabled: beyond the active limit |
-| `E C L O C K DOT E I G H T DOT T H I R T Y` | `clock.eight.thirty` | 🕣 | disabled: beyond the active limit |
-| `E C L O C K DOT E L E V E N` | `clock.eleven` | 🕚 | disabled: beyond the active limit |
-| `E C L O C K DOT E L E V E N DOT T H I R T Y` | `clock.eleven.thirty` | 🕦 | disabled: beyond the active limit |
-| `E C L O C K DOT F I V E DOT T H I R T Y` | `clock.five.thirty` | 🕠 | disabled: beyond the active limit |
-| `E C L O C K DOT F O U R DOT T H I R T Y` | `clock.four.thirty` | 🕟 | disabled: beyond the active limit |
-| `E C L O C K DOT N I N E` | `clock.nine` | 🕘 | disabled: beyond the active limit |
-| `E C L O C K DOT N I N E DOT T H I R T Y` | `clock.nine.thirty` | 🕤 | disabled: beyond the active limit |
-| `E C L O C K DOT O L D` | `clock.old` | 🕰 | disabled: beyond the active limit |
-| `E C L O C K DOT O N E DOT T H I R T Y` | `clock.one.thirty` | 🕜 | disabled: beyond the active limit |
-| `E C L O C K DOT S E V E N` | `clock.seven` | 🕖 | disabled: beyond the active limit |
-| `E C L O C K DOT S E V E N DOT T H I R T Y` | `clock.seven.thirty` | 🕢 | disabled: beyond the active limit |
-| `E C L O C K DOT S I X DOT T H I R T Y` | `clock.six.thirty` | 🕡 | disabled: beyond the active limit |
-| `E C L O C K DOT T E N` | `clock.ten` | 🕙 | disabled: beyond the active limit |
-| `E C L O C K DOT T E N DOT T H I R T Y` | `clock.ten.thirty` | 🕥 | disabled: beyond the active limit |
-| `E C L O C K DOT T H R E E DOT T H I R T Y` | `clock.three.thirty` | 🕞 | disabled: beyond the active limit |
-| `E C L O C K DOT T W E L V E` | `clock.twelve` | 🕛 | disabled: beyond the active limit |
-| `E C L O C K DOT T W E L V E DOT T H I R T Y` | `clock.twelve.thirty` | 🕧 | disabled: beyond the active limit |
-| `E C L O C K DOT T W O DOT T H I R T Y` | `clock.two.thirty` | 🕝 | disabled: beyond the active limit |
-| `E C L O U D` | `cloud` | ☁ | disabled: every spelling clashes |
-| `E C L O U D DOT D U S T` | `cloud.dust` | 💨 | disabled: beyond the active limit |
-| `E C L O U D DOT S N O W` | `cloud.snow` | 🌨 | disabled: beyond the active limit |
-| `E C L O U D DOT S U N DOT H I D D E N` | `cloud.sun.hidden` | 🌥 | disabled: beyond the active limit |
-| `E C L O U D DOT S U N DOT R A I N` | `cloud.sun.rain` | 🌦 | disabled: beyond the active limit |
-| `E C L O U D DOT T H U N D E R` | `cloud.thunder` | 🌩 | disabled: beyond the active limit |
-| `E C O A T DOT L A B` | `coat.lab` | 🥼 | disabled: beyond the active limit |
+| `E C L O C K E I G H T` | `clock.eight` | 🕗 | disabled: beyond the active limit |
+| `E C L O C K E I G H T T H I R T Y` | `clock.eight.thirty` | 🕣 | disabled: beyond the active limit |
+| `E C L O C K E L E V E N` | `clock.eleven` | 🕚 | disabled: beyond the active limit |
+| `E C L O C K E L E V E N T H I R T Y` | `clock.eleven.thirty` | 🕦 | disabled: beyond the active limit |
+| `E C L O C K F I V E T H I R T Y` | `clock.five.thirty` | 🕠 | disabled: beyond the active limit |
+| `E C L O C K F O U R T H I R T Y` | `clock.four.thirty` | 🕟 | disabled: beyond the active limit |
+| `E C L O C K N I N E` | `clock.nine` | 🕘 | disabled: beyond the active limit |
+| `E C L O C K N I N E T H I R T Y` | `clock.nine.thirty` | 🕤 | disabled: beyond the active limit |
+| `E C L O C K O L D` | `clock.old` | 🕰 | disabled: beyond the active limit |
+| `E C L O C K O N E T H I R T Y` | `clock.one.thirty` | 🕜 | disabled: beyond the active limit |
+| `E C L O C K S E V E N` | `clock.seven` | 🕖 | disabled: beyond the active limit |
+| `E C L O C K S E V E N T H I R T Y` | `clock.seven.thirty` | 🕢 | disabled: beyond the active limit |
+| `E C L O C K S I X T H I R T Y` | `clock.six.thirty` | 🕡 | disabled: beyond the active limit |
+| `E C L O C K T E N` | `clock.ten` | 🕙 | disabled: beyond the active limit |
+| `E C L O C K T E N T H I R T Y` | `clock.ten.thirty` | 🕥 | disabled: beyond the active limit |
+| `E C L O C K T H R E E T H I R T Y` | `clock.three.thirty` | 🕞 | disabled: beyond the active limit |
+| `E C L O C K T W E L V E` | `clock.twelve` | 🕛 | disabled: beyond the active limit |
+| `E C L O C K T W E L V E T H I R T Y` | `clock.twelve.thirty` | 🕧 | disabled: beyond the active limit |
+| `E C L O C K T W O T H I R T Y` | `clock.two.thirty` | 🕝 | disabled: beyond the active limit |
+| `E C L O U D D U S T` | `cloud.dust` | 💨 | disabled: beyond the active limit |
+| `E C L O U D S N O W` | `cloud.snow` | 🌨 | disabled: beyond the active limit |
+| `E C L O U D S U N H I D D E N` | `cloud.sun.hidden` | 🌥 | disabled: beyond the active limit |
+| `E C L O U D S U N R A I N` | `cloud.sun.rain` | 🌦 | disabled: beyond the active limit |
+| `E C L O U D T H U N D E R` | `cloud.thunder` | 🌩 | disabled: beyond the active limit |
+| `E C O A T L A B` | `coat.lab` | 🥼 | disabled: beyond the active limit |
 | `E C O C K R O A C H` | `cockroach` | 🪳 | disabled: beyond the active limit |
-| `E C O C K T A I L DOT M A R T I N I` | `cocktail.martini` | 🍸 | disabled: beyond the active limit |
-| `E C O C K T A I L DOT T R O P I C A L` | `cocktail.tropical` | 🍹 | disabled: beyond the active limit |
+| `E C O C K T A I L M A R T I N I` | `cocktail.martini` | 🍸 | disabled: beyond the active limit |
+| `E C O C K T A I L T R O P I C A L` | `cocktail.tropical` | 🍹 | disabled: beyond the active limit |
 | `E C O C O N U T` | `coconut` | 🥥 | disabled: beyond the active limit |
 | `E C O F F I N` | `coffin` | ⚰ | disabled: beyond the active limit |
 | `E C O M P A S S` | `compass` | 🧭 | disabled: beyond the active limit |
-| `E C O M P U T E R M O U S E` | `computermouse` | 🖱 | disabled: every spelling clashes |
 | `E C O N S T R U C T I O N` | `construction` | 🚧 | disabled: beyond the active limit |
 | `E C O N T R O L L E R` | `controller` | 🎮 | disabled: beyond the active limit |
 | `E C O O K I E` | `cookie` | 🍪 | disabled: beyond the active limit |
-| `E C O O K I E DOT F O R T U N E` | `cookie.fortune` | 🥠 | disabled: beyond the active limit |
+| `E C O O K I E F O R T U N E` | `cookie.fortune` | 🥠 | disabled: beyond the active limit |
 | `E C O O K I N G` | `cooking` | 🍳 | disabled: beyond the active limit |
 | `E C O O L` | `cool` | 🆒 | disabled: labelled button glyph |
 | `E C O P Y R I G H T` | `copyright` | © | disabled: beyond the active limit |
 | `E C O U P L E` | `couple` | 💑 | disabled: beyond the active limit |
-| `E C O W DOT F A C E` | `cow.face` | 🐮 | disabled: beyond the active limit |
+| `E C O W F A C E` | `cow.face` | 🐮 | disabled: beyond the active limit |
 | `E C R I C K E T` | `cricket` | 🦗 | disabled: beyond the active limit |
 | `E C R I C K E T B A T` | `cricketbat` | 🏏 | disabled: beyond the active limit |
 | `E C R O C O D I L E` | `crocodile` | 🐊 | disabled: beyond the active limit |
 | `E C R O I S S A N T` | `croissant` | 🥐 | disabled: beyond the active limit |
-| `E C R O S S M A R K DOT B O X` | `crossmark.box` | ❎ | disabled: beyond the active limit |
+| `E C R O S S M A R K B O X` | `crossmark.box` | ❎ | disabled: beyond the active limit |
 | `E C R U T C H` | `crutch` | 🩼 | disabled: beyond the active limit |
 | `E C R Y S T A L` | `crystal` | 🔮 | disabled: beyond the active limit |
 | `E C U C U M B E R` | `cucumber` | 🥒 | disabled: beyond the active limit |
-| `E C U P DOT S T R A W` | `cup.straw` | 🥤 | disabled: beyond the active limit |
+| `E C U P S T R A W` | `cup.straw` | 🥤 | disabled: beyond the active limit |
 | `E C U P C A K E` | `cupcake` | 🧁 | disabled: beyond the active limit |
 | `E C U R L I N G` | `curling` | 🥌 | disabled: beyond the active limit |
 | `E C U S T A R D` | `custard` | 🍮 | disabled: beyond the active limit |
 | `E C U S T O M S` | `customs` | 🛃 | disabled: beyond the active limit |
 | `E C U T L E R Y` | `cutlery` | 🍴 | disabled: beyond the active limit |
 | `E C Y C L O N E` | `cyclone` | 🌀 | disabled: beyond the active limit |
-| `E D A N C I N G DOT B A L L E T` | `dancing.ballet` | 🧑‍🩰 | disabled: beyond the active limit |
-| `E D A N C I N G DOT B U N N Y` | `dancing.bunny` | 👯 | disabled: beyond the active limit |
-| `E D A N C I N G DOT B U N N Y DOT M E N` | `dancing.bunny.men` | 👯‍♂ | disabled: beyond the active limit |
-| `E D A N C I N G DOT B U N N Y DOT W O M E N` | `dancing.bunny.women` | 👯‍♀ | disabled: beyond the active limit |
-| `E D A N C I N G DOT M A N` | `dancing.man` | 🕺 | disabled: beyond the active limit |
-| `E D A N C I N G DOT W O M A N` | `dancing.woman` | 💃 | disabled: beyond the active limit |
-| `E D A S H DOT W A V E DOT D O U B L E` | `dash.wave.double` | 〰 | disabled: beyond the active limit |
+| `E D A N C I N G B A L L E T` | `dancing.ballet` | 🧑‍🩰 | disabled: beyond the active limit |
+| `E D A N C I N G B U N N Y` | `dancing.bunny` | 👯 | disabled: beyond the active limit |
+| `E D A N C I N G B U N N Y M E N` | `dancing.bunny.men` | 👯‍♂ | disabled: beyond the active limit |
+| `E D A N C I N G B U N N Y W O M E N` | `dancing.bunny.women` | 👯‍♀ | disabled: beyond the active limit |
+| `E D A N C I N G M A N` | `dancing.man` | 🕺 | disabled: beyond the active limit |
+| `E D A N C I N G W O M A N` | `dancing.woman` | 💃 | disabled: beyond the active limit |
+| `E D A S H W A V E D O U B L E` | `dash.wave.double` | 〰 | disabled: beyond the active limit |
 | `E D E S E R T` | `desert` | 🏜 | disabled: beyond the active limit |
 | `E D E T E C T I V E` | `detective` | 🕵 | disabled: beyond the active limit |
-| `E D I A M O N D DOT B L U E` | `diamond.blue` | 🔷 | disabled: beyond the active limit |
-| `E D I A M O N D DOT B L U E DOT S M A L L` | `diamond.blue.small` | 🔹 | disabled: beyond the active limit |
-| `E D I A M O N D DOT D O T` | `diamond.dot` | 💠 | disabled: beyond the active limit |
-| `E D I A M O N D DOT O R A N G E` | `diamond.orange` | 🔶 | disabled: beyond the active limit |
-| `E D I A M O N D DOT O R A N G E DOT S M A L L` | `diamond.orange.small` | 🔸 | disabled: beyond the active limit |
-| `E D I N O DOT P O D` | `dino.pod` | 🦕 | disabled: beyond the active limit |
-| `E D I N O DOT R E X` | `dino.rex` | 🦖 | disabled: beyond the active limit |
-| `E D I S C DOT C D` | `disc.cd` | 💿 | disabled: beyond the active limit |
-| `E D I S C DOT D V D` | `disc.dvd` | 📀 | disabled: beyond the active limit |
-| `E D I S C DOT M I N I` | `disc.mini` | 💽 | disabled: beyond the active limit |
+| `E D I A M O N D B L U E` | `diamond.blue` | 🔷 | disabled: beyond the active limit |
+| `E D I A M O N D B L U E S M A L L` | `diamond.blue.small` | 🔹 | disabled: beyond the active limit |
+| `E D I A M O N D D O T` | `diamond.dot` | 💠 | disabled: beyond the active limit |
+| `E D I A M O N D O R A N G E` | `diamond.orange` | 🔶 | disabled: beyond the active limit |
+| `E D I A M O N D O R A N G E S M A L L` | `diamond.orange.small` | 🔸 | disabled: beyond the active limit |
+| `E D I N O P O D` | `dino.pod` | 🦕 | disabled: beyond the active limit |
+| `E D I N O R E X` | `dino.rex` | 🦖 | disabled: beyond the active limit |
+| `E D I S C C D` | `disc.cd` | 💿 | disabled: beyond the active limit |
+| `E D I S C D V D` | `disc.dvd` | 📀 | disabled: beyond the active limit |
+| `E D I S C M I N I` | `disc.mini` | 💽 | disabled: beyond the active limit |
 | `E D I S C O B A L L` | `discoball` | 🪩 | disabled: beyond the active limit |
 | `E D I V I N G` | `diving` | 🤿 | disabled: beyond the active limit |
-| `E D O G` | `dog` | 🐕 | disabled: every spelling clashes |
-| `E D O G DOT G U I D E` | `dog.guide` | 🦮 | disabled: beyond the active limit |
-| `E D O G DOT P O O D L E` | `dog.poodle` | 🐩 | disabled: beyond the active limit |
+| `E D O G G U I D E` | `dog.guide` | 🦮 | disabled: beyond the active limit |
+| `E D O G P O O D L E` | `dog.poodle` | 🐩 | disabled: beyond the active limit |
 | `E D O L L A R` | `dollar` | 💲 | disabled: beyond the active limit |
 | `E D O L P H I N` | `dolphin` | 🐬 | disabled: beyond the active limit |
 | `E D O N K E Y` | `donkey` | 🫏 | disabled: beyond the active limit |
-| `E D O V E DOT P E A C E` | `dove.peace` | 🕊 | disabled: beyond the active limit |
+| `E D O V E P E A C E` | `dove.peace` | 🕊 | disabled: beyond the active limit |
 | `E D R A G O N` | `dragon` | 🐉 | disabled: beyond the active limit |
-| `E D R A G O N DOT F A C E` | `dragon.face` | 🐲 | disabled: beyond the active limit |
-| `E D R E S S DOT K I M O N O` | `dress.kimono` | 👘 | disabled: beyond the active limit |
-| `E D R E S S DOT S A R I` | `dress.sari` | 🥻 | disabled: beyond the active limit |
-| `E D R O P S` | `drops` | 💦 | disabled: every spelling clashes |
-| `E D R U M DOT B I G` | `drum.big` | 🪘 | disabled: beyond the active limit |
+| `E D R A G O N F A C E` | `dragon.face` | 🐲 | disabled: beyond the active limit |
+| `E D R E S S K I M O N O` | `dress.kimono` | 👘 | disabled: beyond the active limit |
+| `E D R E S S S A R I` | `dress.sari` | 🥻 | disabled: beyond the active limit |
+| `E D R U M B I G` | `drum.big` | 🪘 | disabled: beyond the active limit |
 | `E D U M P L I N G` | `dumpling` | 🥟 | disabled: beyond the active limit |
-| `E E A R DOT A I D` | `ear.aid` | 🦻 | disabled: beyond the active limit |
-| `E E I G H T E E N DOT N O T` | `eighteen.not` | 🔞 | disabled: beyond the active limit |
+| `E E A R A I D` | `ear.aid` | 🦻 | disabled: beyond the active limit |
+| `E E I G H T E E N N O T` | `eighteen.not` | 🔞 | disabled: beyond the active limit |
 | `E E L E P H A N T` | `elephant` | 🐘 | disabled: beyond the active limit |
 | `E E L E V A T O R` | `elevator` | 🛗 | disabled: beyond the active limit |
-| `E E X C L DOT Q U E S T` | `excl.quest` | ⁉ | disabled: every spelling clashes |
-| `E E X C L DOT W H I T E` | `excl.white` | ❕ | disabled: beyond the active limit |
+| `E E X C L W H I T E` | `excl.white` | ❕ | disabled: beyond the active limit |
 | `E E X T I N G U I S H E R` | `extinguisher` | 🧯 | disabled: beyond the active limit |
-| `E E Y E S` | `eyes` | 👀 | disabled: every spelling clashes |
-| `E F A C E DOT A N G R Y` | `face.angry` | 😠 | disabled: beyond the active limit |
-| `E F A C E DOT A N G R Y DOT R E D` | `face.angry.red` | 😡 | disabled: beyond the active limit |
-| `E F A C E DOT A N G U I S H` | `face.anguish` | 😧 | disabled: beyond the active limit |
-| `E F A C E DOT A S T O N I S H` | `face.astonish` | 😲 | disabled: beyond the active limit |
-| `E F A C E DOT B A N D A G E` | `face.bandage` | 🤕 | disabled: beyond the active limit |
-| `E F A C E DOT B E A M` | `face.beam` | 😁 | disabled: beyond the active limit |
-| `E F A C E DOT B L A N K` | `face.blank` | 😶 | disabled: beyond the active limit |
-| `E F A C E DOT C L O W N` | `face.clown` | 🤡 | disabled: beyond the active limit |
-| `E F A C E DOT C O L D` | `face.cold` | 🥶 | disabled: beyond the active limit |
-| `E F A C E DOT C O N C E R N` | `face.concern` | 😦 | disabled: beyond the active limit |
-| `E F A C E DOT C O V E R` | `face.cover` | 🤭 | disabled: beyond the active limit |
-| `E F A C E DOT C O W B O Y` | `face.cowboy` | 🤠 | disabled: beyond the active limit |
-| `E F A C E DOT D E V I L DOT F R O W N` | `face.devil.frown` | 👿 | disabled: beyond the active limit |
-| `E F A C E DOT D E V I L DOT S M I L E` | `face.devil.smile` | 😈 | disabled: beyond the active limit |
-| `E F A C E DOT D I A G O N A L` | `face.diagonal` | 🫤 | disabled: beyond the active limit |
-| `E F A C E DOT D I S G U I S E` | `face.disguise` | 🥸 | disabled: beyond the active limit |
-| `E F A C E DOT D I S T O R T E D` | `face.distorted` | 🫪 | disabled: beyond the active limit |
-| `E F A C E DOT D I S T R E S S` | `face.distress` | 😫 | disabled: beyond the active limit |
-| `E F A C E DOT D I Z Z Y` | `face.dizzy` | 😵 | disabled: beyond the active limit |
-| `E F A C E DOT D O T T E D` | `face.dotted` | 🫥 | disabled: beyond the active limit |
-| `E F A C E DOT D O W N` | `face.down` | 😞 | disabled: beyond the active limit |
-| `E F A C E DOT D O W N DOT S W E A T` | `face.down.sweat` | 😓 | disabled: beyond the active limit |
-| `E F A C E DOT D R O O L` | `face.drool` | 🤤 | disabled: beyond the active limit |
-| `E F A C E DOT E Y E R O L L` | `face.eyeroll` | 🙄 | disabled: beyond the active limit |
-| `E F A C E DOT F E A R` | `face.fear` | 😨 | disabled: beyond the active limit |
-| `E F A C E DOT F E A R DOT S W E A T` | `face.fear.sweat` | 😰 | disabled: beyond the active limit |
-| `E F A C E DOT F E V E R` | `face.fever` | 🤒 | disabled: beyond the active limit |
-| `E F A C E DOT F L U S H` | `face.flush` | 😳 | disabled: beyond the active limit |
-| `E F A C E DOT F R I E N D L Y` | `face.friendly` | ☺ | disabled: beyond the active limit |
-| `E F A C E DOT F R O W N` | `face.frown` | ☹ | disabled: beyond the active limit |
-| `E F A C E DOT F R O W N DOT S L I G H T` | `face.frown.slight` | 🙁 | disabled: beyond the active limit |
-| `E F A C E DOT F R U S T` | `face.frust` | 😣 | disabled: beyond the active limit |
-| `E F A C E DOT G O O F Y` | `face.goofy` | 🤪 | disabled: beyond the active limit |
-| `E F A C E DOT H E A R T S` | `face.hearts` | 🥰 | disabled: beyond the active limit |
-| `E F A C E DOT H E A T` | `face.heat` | 🥵 | disabled: beyond the active limit |
-| `E F A C E DOT H U G` | `face.hug` | 🤗 | disabled: beyond the active limit |
-| `E F A C E DOT K I S S` | `face.kiss` | 😗 | disabled: beyond the active limit |
-| `E F A C E DOT K I S S DOT B L U S H` | `face.kiss.blush` | 😚 | disabled: beyond the active limit |
-| `E F A C E DOT K I S S DOT H E A R T` | `face.kiss.heart` | 😘 | disabled: beyond the active limit |
-| `E F A C E DOT K I S S DOT S M I L E` | `face.kiss.smile` | 😙 | disabled: beyond the active limit |
-| `E F A C E DOT L I C K` | `face.lick` | 😋 | disabled: beyond the active limit |
-| `E F A C E DOT L I E` | `face.lie` | 🤥 | disabled: beyond the active limit |
-| `E F A C E DOT M A S K` | `face.mask` | 😷 | disabled: beyond the active limit |
-| `E F A C E DOT M E H` | `face.meh` | 😒 | disabled: beyond the active limit |
-| `E F A C E DOT M E L T` | `face.melt` | 🫠 | disabled: beyond the active limit |
-| `E F A C E DOT M O N E Y` | `face.money` | 🤑 | disabled: beyond the active limit |
-| `E F A C E DOT M O N O C L E` | `face.monocle` | 🧐 | disabled: beyond the active limit |
-| `E F A C E DOT N E R D` | `face.nerd` | 🤓 | disabled: beyond the active limit |
-| `E F A C E DOT O P E N` | `face.open` | 😃 | disabled: beyond the active limit |
-| `E F A C E DOT P E E K` | `face.peek` | 🫣 | disabled: beyond the active limit |
-| `E F A C E DOT R E L I E F` | `face.relief` | 😌 | disabled: beyond the active limit |
-| `E F A C E DOT S A D` | `face.sad` | 😔 | disabled: beyond the active limit |
-| `E F A C E DOT S H A K I N G` | `face.shaking` | 🫨 | disabled: beyond the active limit |
-| `E F A C E DOT S H U S H` | `face.shush` | 🤫 | disabled: beyond the active limit |
-| `E F A C E DOT S K E P T I C` | `face.skeptic` | 🤨 | disabled: beyond the active limit |
-| `E F A C E DOT S L E E P Y` | `face.sleepy` | 😪 | disabled: beyond the active limit |
-| `E F A C E DOT S M I L E` | `face.smile` | 😄 | disabled: beyond the active limit |
-| `E F A C E DOT S M I L E DOT S L I G H T` | `face.smile.slight` | 🙂 | disabled: beyond the active limit |
-| `E F A C E DOT S M I L E DOT T E A R` | `face.smile.tear` | 🥲 | disabled: beyond the active limit |
-| `E F A C E DOT S M I R K` | `face.smirk` | 😏 | disabled: beyond the active limit |
-| `E F A C E DOT S N E E Z E` | `face.sneeze` | 🤧 | disabled: beyond the active limit |
-| `E F A C E DOT S P E A K DOT N O T` | `face.speak.not` | 🫢 | disabled: beyond the active limit |
-| `E F A C E DOT S Q U I N T` | `face.squint` | 😆 | disabled: beyond the active limit |
-| `E F A C E DOT S T A R S` | `face.stars` | 🤩 | disabled: beyond the active limit |
-| `E F A C E DOT S U F F E R` | `face.suffer` | 😖 | disabled: beyond the active limit |
-| `E F A C E DOT S U R P R I S E` | `face.surprise` | 😯 | disabled: beyond the active limit |
-| `E F A C E DOT S Y M B O L S` | `face.symbols` | 🤬 | disabled: beyond the active limit |
-| `E F A C E DOT T E A R DOT R E L I E F` | `face.tear.relief` | 😥 | disabled: beyond the active limit |
-| `E F A C E DOT T E A R DOT W I T H H E L D` | `face.tear.withheld` | 🥹 | disabled: beyond the active limit |
-| `E F A C E DOT T E E T H` | `face.teeth` | 😬 | disabled: beyond the active limit |
-| `E F A C E DOT T I R E D` | `face.tired` | 🫩 | disabled: beyond the active limit |
-| `E F A C E DOT T O N G U E` | `face.tongue` | 😛 | disabled: beyond the active limit |
-| `E F A C E DOT T O N G U E DOT S Q U I N T` | `face.tongue.squint` | 😝 | disabled: beyond the active limit |
-| `E F A C E DOT T O N G U E DOT W I N K` | `face.tongue.wink` | 😜 | disabled: beyond the active limit |
-| `E F A C E DOT T R I U M P H` | `face.triumph` | 😤 | disabled: beyond the active limit |
-| `E F A C E DOT U N H A P P Y` | `face.unhappy` | 😕 | disabled: beyond the active limit |
-| `E F A C E DOT V O M I T` | `face.vomit` | 🤮 | disabled: beyond the active limit |
-| `E F A C E DOT W E A R Y` | `face.weary` | 😩 | disabled: beyond the active limit |
-| `E F A C E DOT W O O Z Y` | `face.woozy` | 🥴 | disabled: beyond the active limit |
-| `E F A C E DOT W O R R Y` | `face.worry` | 😟 | disabled: beyond the active limit |
-| `E F A C E DOT W O W` | `face.wow` | 😮 | disabled: beyond the active limit |
-| `E F A C E DOT Y A W N` | `face.yawn` | 🥱 | disabled: beyond the active limit |
-| `E F A C E DOT Z I P` | `face.zip` | 🤐 | disabled: beyond the active limit |
+| `E F A C E A N G R Y` | `face.angry` | 😠 | disabled: beyond the active limit |
+| `E F A C E A N G R Y R E D` | `face.angry.red` | 😡 | disabled: beyond the active limit |
+| `E F A C E A N G U I S H` | `face.anguish` | 😧 | disabled: beyond the active limit |
+| `E F A C E A S T O N I S H` | `face.astonish` | 😲 | disabled: beyond the active limit |
+| `E F A C E B A N D A G E` | `face.bandage` | 🤕 | disabled: beyond the active limit |
+| `E F A C E B E A M` | `face.beam` | 😁 | disabled: beyond the active limit |
+| `E F A C E B L A N K` | `face.blank` | 😶 | disabled: beyond the active limit |
+| `E F A C E C L O W N` | `face.clown` | 🤡 | disabled: beyond the active limit |
+| `E F A C E C O L D` | `face.cold` | 🥶 | disabled: beyond the active limit |
+| `E F A C E C O N C E R N` | `face.concern` | 😦 | disabled: beyond the active limit |
+| `E F A C E C O V E R` | `face.cover` | 🤭 | disabled: beyond the active limit |
+| `E F A C E C O W B O Y` | `face.cowboy` | 🤠 | disabled: beyond the active limit |
+| `E F A C E D E V I L F R O W N` | `face.devil.frown` | 👿 | disabled: beyond the active limit |
+| `E F A C E D E V I L S M I L E` | `face.devil.smile` | 😈 | disabled: beyond the active limit |
+| `E F A C E D I A G O N A L` | `face.diagonal` | 🫤 | disabled: beyond the active limit |
+| `E F A C E D I S G U I S E` | `face.disguise` | 🥸 | disabled: beyond the active limit |
+| `E F A C E D I S T O R T E D` | `face.distorted` | 🫪 | disabled: beyond the active limit |
+| `E F A C E D I S T R E S S` | `face.distress` | 😫 | disabled: beyond the active limit |
+| `E F A C E D I Z Z Y` | `face.dizzy` | 😵 | disabled: beyond the active limit |
+| `E F A C E D O T T E D` | `face.dotted` | 🫥 | disabled: beyond the active limit |
+| `E F A C E D O W N` | `face.down` | 😞 | disabled: beyond the active limit |
+| `E F A C E D O W N S W E A T` | `face.down.sweat` | 😓 | disabled: beyond the active limit |
+| `E F A C E D R O O L` | `face.drool` | 🤤 | disabled: beyond the active limit |
+| `E F A C E E Y E R O L L` | `face.eyeroll` | 🙄 | disabled: beyond the active limit |
+| `E F A C E F E A R` | `face.fear` | 😨 | disabled: beyond the active limit |
+| `E F A C E F E A R S W E A T` | `face.fear.sweat` | 😰 | disabled: beyond the active limit |
+| `E F A C E F E V E R` | `face.fever` | 🤒 | disabled: beyond the active limit |
+| `E F A C E F L U S H` | `face.flush` | 😳 | disabled: beyond the active limit |
+| `E F A C E F R I E N D L Y` | `face.friendly` | ☺ | disabled: beyond the active limit |
+| `E F A C E F R O W N` | `face.frown` | ☹ | disabled: beyond the active limit |
+| `E F A C E F R O W N S L I G H T` | `face.frown.slight` | 🙁 | disabled: beyond the active limit |
+| `E F A C E F R U S T` | `face.frust` | 😣 | disabled: beyond the active limit |
+| `E F A C E G O O F Y` | `face.goofy` | 🤪 | disabled: beyond the active limit |
+| `E F A C E H E A R T S` | `face.hearts` | 🥰 | disabled: beyond the active limit |
+| `E F A C E H E A T` | `face.heat` | 🥵 | disabled: beyond the active limit |
+| `E F A C E H U G` | `face.hug` | 🤗 | disabled: beyond the active limit |
+| `E F A C E K I S S` | `face.kiss` | 😗 | disabled: beyond the active limit |
+| `E F A C E K I S S B L U S H` | `face.kiss.blush` | 😚 | disabled: beyond the active limit |
+| `E F A C E K I S S H E A R T` | `face.kiss.heart` | 😘 | disabled: beyond the active limit |
+| `E F A C E K I S S S M I L E` | `face.kiss.smile` | 😙 | disabled: beyond the active limit |
+| `E F A C E L I C K` | `face.lick` | 😋 | disabled: beyond the active limit |
+| `E F A C E L I E` | `face.lie` | 🤥 | disabled: beyond the active limit |
+| `E F A C E M A S K` | `face.mask` | 😷 | disabled: beyond the active limit |
+| `E F A C E M E H` | `face.meh` | 😒 | disabled: beyond the active limit |
+| `E F A C E M E L T` | `face.melt` | 🫠 | disabled: beyond the active limit |
+| `E F A C E M O N E Y` | `face.money` | 🤑 | disabled: beyond the active limit |
+| `E F A C E M O N O C L E` | `face.monocle` | 🧐 | disabled: beyond the active limit |
+| `E F A C E N E R D` | `face.nerd` | 🤓 | disabled: beyond the active limit |
+| `E F A C E O P E N` | `face.open` | 😃 | disabled: beyond the active limit |
+| `E F A C E P E E K` | `face.peek` | 🫣 | disabled: beyond the active limit |
+| `E F A C E R E L I E F` | `face.relief` | 😌 | disabled: beyond the active limit |
+| `E F A C E S A D` | `face.sad` | 😔 | disabled: beyond the active limit |
+| `E F A C E S H A K I N G` | `face.shaking` | 🫨 | disabled: beyond the active limit |
+| `E F A C E S H U S H` | `face.shush` | 🤫 | disabled: beyond the active limit |
+| `E F A C E S K E P T I C` | `face.skeptic` | 🤨 | disabled: beyond the active limit |
+| `E F A C E S L E E P Y` | `face.sleepy` | 😪 | disabled: beyond the active limit |
+| `E F A C E S M I L E` | `face.smile` | 😄 | disabled: beyond the active limit |
+| `E F A C E S M I L E S L I G H T` | `face.smile.slight` | 🙂 | disabled: beyond the active limit |
+| `E F A C E S M I L E T E A R` | `face.smile.tear` | 🥲 | disabled: beyond the active limit |
+| `E F A C E S M I R K` | `face.smirk` | 😏 | disabled: beyond the active limit |
+| `E F A C E S N E E Z E` | `face.sneeze` | 🤧 | disabled: beyond the active limit |
+| `E F A C E S P E A K N O T` | `face.speak.not` | 🫢 | disabled: beyond the active limit |
+| `E F A C E S Q U I N T` | `face.squint` | 😆 | disabled: beyond the active limit |
+| `E F A C E S T A R S` | `face.stars` | 🤩 | disabled: beyond the active limit |
+| `E F A C E S U F F E R` | `face.suffer` | 😖 | disabled: beyond the active limit |
+| `E F A C E S U R P R I S E` | `face.surprise` | 😯 | disabled: beyond the active limit |
+| `E F A C E S Y M B O L S` | `face.symbols` | 🤬 | disabled: beyond the active limit |
+| `E F A C E T E A R R E L I E F` | `face.tear.relief` | 😥 | disabled: beyond the active limit |
+| `E F A C E T E A R W I T H H E L D` | `face.tear.withheld` | 🥹 | disabled: beyond the active limit |
+| `E F A C E T E E T H` | `face.teeth` | 😬 | disabled: beyond the active limit |
+| `E F A C E T I R E D` | `face.tired` | 🫩 | disabled: beyond the active limit |
+| `E F A C E T O N G U E` | `face.tongue` | 😛 | disabled: beyond the active limit |
+| `E F A C E T O N G U E S Q U I N T` | `face.tongue.squint` | 😝 | disabled: beyond the active limit |
+| `E F A C E T O N G U E W I N K` | `face.tongue.wink` | 😜 | disabled: beyond the active limit |
+| `E F A C E T R I U M P H` | `face.triumph` | 😤 | disabled: beyond the active limit |
+| `E F A C E U N H A P P Y` | `face.unhappy` | 😕 | disabled: beyond the active limit |
+| `E F A C E V O M I T` | `face.vomit` | 🤮 | disabled: beyond the active limit |
+| `E F A C E W E A R Y` | `face.weary` | 😩 | disabled: beyond the active limit |
+| `E F A C E W O O Z Y` | `face.woozy` | 🥴 | disabled: beyond the active limit |
+| `E F A C E W O R R Y` | `face.worry` | 😟 | disabled: beyond the active limit |
+| `E F A C E W O W` | `face.wow` | 😮 | disabled: beyond the active limit |
+| `E F A C E Y A W N` | `face.yawn` | 🥱 | disabled: beyond the active limit |
+| `E F A C E Z I P` | `face.zip` | 🤐 | disabled: beyond the active limit |
 | `E F A C T O R Y` | `factory` | 🏭 | disabled: beyond the active limit |
-| `E F A I T H DOT D H A R M A` | `faith.dharma` | ☸ | disabled: beyond the active limit |
-| `E F A I T H DOT J U D A I S M` | `faith.judaism` | ✡ | disabled: beyond the active limit |
-| `E F A I T H DOT K H A N D A` | `faith.khanda` | 🪯 | disabled: beyond the active limit |
-| `E F A I T H DOT M E N O R A H` | `faith.menorah` | 🕎 | disabled: beyond the active limit |
-| `E F A I T H DOT O R T H O D O X` | `faith.orthodox` | ☦ | disabled: beyond the active limit |
-| `E F A I T H DOT S T A R DOT D O T` | `faith.star.dot` | 🔯 | disabled: beyond the active limit |
-| `E F A I T H DOT W O R S H I P` | `faith.worship` | 🛐 | disabled: beyond the active limit |
+| `E F A I T H D H A R M A` | `faith.dharma` | ☸ | disabled: beyond the active limit |
+| `E F A I T H J U D A I S M` | `faith.judaism` | ✡ | disabled: beyond the active limit |
+| `E F A I T H K H A N D A` | `faith.khanda` | 🪯 | disabled: beyond the active limit |
+| `E F A I T H M E N O R A H` | `faith.menorah` | 🕎 | disabled: beyond the active limit |
+| `E F A I T H O R T H O D O X` | `faith.orthodox` | ☦ | disabled: beyond the active limit |
+| `E F A I T H S T A R D O T` | `faith.star.dot` | 🔯 | disabled: beyond the active limit |
+| `E F A I T H W O R S H I P` | `faith.worship` | 🛐 | disabled: beyond the active limit |
 | `E F A L A F E L` | `falafel` | 🧆 | disabled: beyond the active limit |
 | `E F A M I L Y` | `family` | 👪 | disabled: beyond the active limit |
 | `E F E A T H E R` | `feather` | 🪶 | disabled: beyond the active limit |
-| `E F E E D I N G DOT B R E A S T` | `feeding.breast` | 🤱 | disabled: beyond the active limit |
+| `E F E E D I N G B R E A S T` | `feeding.breast` | 🤱 | disabled: beyond the active limit |
 | `E F E N C I N G` | `fencing` | 🤺 | disabled: beyond the active limit |
 | `E F E R R I S W H E E L` | `ferriswheel` | 🎡 | disabled: beyond the active limit |
 | `E F I G H T C L O U D` | `fightcloud` | 🫯 | disabled: beyond the active limit |
 | `E F I L E B O X` | `filebox` | 🗃 | disabled: beyond the active limit |
-| `E F I N G E R DOT F R O N T` | `finger.front` | 🫵 | disabled: beyond the active limit |
-| `E F I N G E R DOT M` | `finger.m` | 🖕 | disabled: beyond the active limit |
+| `E F I N G E R F R O N T` | `finger.front` | 🫵 | disabled: beyond the active limit |
+| `E F I N G E R M` | `finger.m` | 🖕 | disabled: beyond the active limit |
 | `E F I N G E R P R I N T` | `fingerprint` | 🫆 | disabled: beyond the active limit |
-| `E F I N G E R S DOT P I N C H` | `fingers.pinch` | 🤌 | disabled: beyond the active limit |
-| `E F I N G E R S DOT S N A P` | `fingers.snap` | 🫰 | disabled: beyond the active limit |
+| `E F I N G E R S P I N C H` | `fingers.pinch` | 🤌 | disabled: beyond the active limit |
+| `E F I N G E R S S N A P` | `fingers.snap` | 🫰 | disabled: beyond the active limit |
 | `E F I R E C R A C K E R` | `firecracker` | 🧨 | disabled: beyond the active limit |
 | `E F I R E E N G I N E` | `fireengine` | 🚒 | disabled: beyond the active limit |
 | `E F I R E W O R K S` | `fireworks` | 🎆 | disabled: beyond the active limit |
-| `E F I S H DOT T R O P I C A L` | `fish.tropical` | 🐠 | disabled: beyond the active limit |
+| `E F I S H T R O P I C A L` | `fish.tropical` | 🐠 | disabled: beyond the active limit |
 | `E F I S H I N G` | `fishing` | 🎣 | disabled: beyond the active limit |
-| `E F I S T DOT F R O N T` | `fist.front` | 👊 | disabled: beyond the active limit |
-| `E F I S T DOT L` | `fist.l` | 🤛 | disabled: beyond the active limit |
-| `E F I S T DOT R` | `fist.r` | 🤜 | disabled: beyond the active limit |
-| `E F I S T DOT R A I S E D` | `fist.raised` | ✊ | disabled: beyond the active limit |
-| `E F L A G DOT B L A C K` | `flag.black` | 🏴 | disabled: beyond the active limit |
-| `E F L A G DOT G O A L` | `flag.goal` | 🏁 | disabled: beyond the active limit |
-| `E F L A G DOT G O L F` | `flag.golf` | ⛳ | disabled: beyond the active limit |
-| `E F L A G DOT R E D` | `flag.red` | 🚩 | disabled: beyond the active limit |
-| `E F L A G DOT W H I T E` | `flag.white` | 🏳 | disabled: beyond the active limit |
-| `E F L A G S DOT J P DOT C R O S S E D` | `flags.jp.crossed` | 🎌 | disabled: beyond the active limit |
+| `E F I S T F R O N T` | `fist.front` | 👊 | disabled: beyond the active limit |
+| `E F I S T L` | `fist.l` | 🤛 | disabled: beyond the active limit |
+| `E F I S T R` | `fist.r` | 🤜 | disabled: beyond the active limit |
+| `E F I S T R A I S E D` | `fist.raised` | ✊ | disabled: beyond the active limit |
+| `E F L A G B L A C K` | `flag.black` | 🏴 | disabled: beyond the active limit |
+| `E F L A G G O A L` | `flag.goal` | 🏁 | disabled: beyond the active limit |
+| `E F L A G G O L F` | `flag.golf` | ⛳ | disabled: beyond the active limit |
+| `E F L A G R E D` | `flag.red` | 🚩 | disabled: beyond the active limit |
+| `E F L A G W H I T E` | `flag.white` | 🏳 | disabled: beyond the active limit |
+| `E F L A G S J P C R O S S E D` | `flags.jp.crossed` | 🎌 | disabled: beyond the active limit |
 | `E F L A M I N G O` | `flamingo` | 🦩 | disabled: beyond the active limit |
 | `E F L A S H L I G H T` | `flashlight` | 🔦 | disabled: beyond the active limit |
 | `E F L A T B R E A D` | `flatbread` | 🫓 | disabled: beyond the active limit |
 | `E F L O P P Y` | `floppy` | 💾 | disabled: beyond the active limit |
-| `E F L O W E R DOT H I B I S C U S` | `flower.hibiscus` | 🌺 | disabled: beyond the active limit |
-| `E F L O W E R DOT H Y A C I N T H` | `flower.hyacinth` | 🪻 | disabled: beyond the active limit |
-| `E F L O W E R DOT L O T U S` | `flower.lotus` | 🪷 | disabled: beyond the active limit |
-| `E F L O W E R DOT R O S E` | `flower.rose` | 🌹 | disabled: beyond the active limit |
-| `E F L O W E R DOT T U L I P` | `flower.tulip` | 🌷 | disabled: beyond the active limit |
-| `E F L O W E R DOT W H I T E` | `flower.white` | 💮 | disabled: beyond the active limit |
-| `E F L O W E R DOT W I L T E D` | `flower.wilted` | 🥀 | disabled: beyond the active limit |
-| `E F L O W E R DOT Y E L L O W` | `flower.yellow` | 🌼 | disabled: beyond the active limit |
-| `E F O L D E R DOT O P E N` | `folder.open` | 📂 | disabled: beyond the active limit |
+| `E F L O W E R H I B I S C U S` | `flower.hibiscus` | 🌺 | disabled: beyond the active limit |
+| `E F L O W E R H Y A C I N T H` | `flower.hyacinth` | 🪻 | disabled: beyond the active limit |
+| `E F L O W E R L O T U S` | `flower.lotus` | 🪷 | disabled: beyond the active limit |
+| `E F L O W E R R O S E` | `flower.rose` | 🌹 | disabled: beyond the active limit |
+| `E F L O W E R T U L I P` | `flower.tulip` | 🌷 | disabled: beyond the active limit |
+| `E F L O W E R W H I T E` | `flower.white` | 💮 | disabled: beyond the active limit |
+| `E F L O W E R W I L T E D` | `flower.wilted` | 🥀 | disabled: beyond the active limit |
+| `E F L O W E R Y E L L O W` | `flower.yellow` | 🌼 | disabled: beyond the active limit |
+| `E F O L D E R O P E N` | `folder.open` | 📂 | disabled: beyond the active limit |
 | `E F O N D U E` | `fondue` | 🫕 | disabled: beyond the active limit |
 | `E F O O T B A L L` | `football` | ⚽ | disabled: beyond the active limit |
-| `E F O O T B A L L DOT A M` | `football.am` | 🏈 | disabled: beyond the active limit |
+| `E F O O T B A L L A M` | `football.am` | 🏈 | disabled: beyond the active limit |
 | `E F O U N T A I N` | `fountain` | ⛲ | disabled: beyond the active limit |
 | `E F R E E` | `free` | 🆓 | disabled: labelled button glyph |
 | `E F R I S B E E` | `frisbee` | 🥏 | disabled: beyond the active limit |
-| `E F R O G DOT F A C E` | `frog.face` | 🐸 | disabled: beyond the active limit |
+| `E F R O G F A C E` | `frog.face` | 🐸 | disabled: beyond the active limit |
 | `E F U E L P U M P` | `fuelpump` | ⛽ | disabled: beyond the active limit |
 | `E G A C H I` | `gachi` | 🈷 | disabled: labelled button glyph |
 | `E G A R L I C` | `garlic` | 🧄 | disabled: beyond the active limit |
 | `E G I N G E R` | `ginger` | 🫚 | disabled: beyond the active limit |
 | `E G I R A F F E` | `giraffe` | 🦒 | disabled: beyond the active limit |
-| `E G L A S S DOT C L I N K` | `glass.clink` | 🥂 | disabled: beyond the active limit |
-| `E G L A S S DOT M I L K` | `glass.milk` | 🥛 | disabled: beyond the active limit |
-| `E G L A S S DOT P O U R` | `glass.pour` | 🫗 | disabled: beyond the active limit |
-| `E G L A S S DOT T U M B L E R` | `glass.tumbler` | 🥃 | disabled: beyond the active limit |
+| `E G L A S S C L I N K` | `glass.clink` | 🥂 | disabled: beyond the active limit |
+| `E G L A S S M I L K` | `glass.milk` | 🥛 | disabled: beyond the active limit |
+| `E G L A S S P O U R` | `glass.pour` | 🫗 | disabled: beyond the active limit |
+| `E G L A S S T U M B L E R` | `glass.tumbler` | 🥃 | disabled: beyond the active limit |
 | `E G L A S S E S` | `glasses` | 👓 | disabled: beyond the active limit |
-| `E G L A S S E S DOT S U N` | `glasses.sun` | 🕶 | disabled: beyond the active limit |
-| `E G L O B E DOT M E R I D I A N` | `globe.meridian` | 🌐 | disabled: beyond the active limit |
+| `E G L A S S E S S U N` | `glasses.sun` | 🕶 | disabled: beyond the active limit |
+| `E G L O B E M E R I D I A N` | `globe.meridian` | 🌐 | disabled: beyond the active limit |
 | `E G L O V E S` | `gloves` | 🧤 | disabled: beyond the active limit |
 | `E G O` | `go` | 🈴 | disabled: labelled button glyph |
 | `E G O G G L E S` | `goggles` | 🥽 | disabled: beyond the active limit |
 | `E G O L F I N G` | `golfing` | 🏌 | disabled: beyond the active limit |
 | `E G O R I L L A` | `gorilla` | 🦍 | disabled: beyond the active limit |
-| `E G U A R D DOT M A N` | `guard.man` | 💂 | disabled: beyond the active limit |
+| `E G U A R D M A N` | `guard.man` | 💂 | disabled: beyond the active limit |
 | `E G U I T A R` | `guitar` | 🎸 | disabled: beyond the active limit |
 | `E G Y M N A S T I C S` | `gymnastics` | 🤸 | disabled: beyond the active limit |
 | `E H A I R C U T` | `haircut` | 💇 | disabled: beyond the active limit |
 | `E H A I R P I C K` | `hairpick` | 🪮 | disabled: beyond the active limit |
-| `E H A M M E R DOT P I C K` | `hammer.pick` | ⚒ | disabled: beyond the active limit |
-| `E H A M M E R DOT W R E N C H` | `hammer.wrench` | 🛠 | disabled: beyond the active limit |
-| `E H A M S T E R DOT F A C E` | `hamster.face` | 🐹 | disabled: beyond the active limit |
-| `E H A N D DOT B` | `hand.b` | 🫳 | disabled: beyond the active limit |
-| `E H A N D DOT L` | `hand.l` | 🫲 | disabled: beyond the active limit |
-| `E H A N D DOT L O V E` | `hand.love` | 🤟 | disabled: beyond the active limit |
-| `E H A N D DOT P A R T` | `hand.part` | 🖖 | disabled: beyond the active limit |
-| `E H A N D DOT P I N C H` | `hand.pinch` | 🤏 | disabled: beyond the active limit |
-| `E H A N D DOT P U S H I N G DOT L` | `hand.pushing.l` | 🫷 | disabled: beyond the active limit |
-| `E H A N D DOT P U S H I N G DOT R` | `hand.pushing.r` | 🫸 | disabled: beyond the active limit |
-| `E H A N D DOT R` | `hand.r` | 🫱 | disabled: beyond the active limit |
-| `E H A N D DOT R A I S E D DOT A L T` | `hand.raised.alt` | 🤚 | disabled: beyond the active limit |
-| `E H A N D DOT R O C K` | `hand.rock` | 🤘 | disabled: beyond the active limit |
-| `E H A N D DOT T` | `hand.t` | 🫴 | disabled: beyond the active limit |
-| `E H A N D DOT W R I T E` | `hand.write` | ✍ | disabled: beyond the active limit |
+| `E H A M M E R P I C K` | `hammer.pick` | ⚒ | disabled: beyond the active limit |
+| `E H A M M E R W R E N C H` | `hammer.wrench` | 🛠 | disabled: beyond the active limit |
+| `E H A M S T E R F A C E` | `hamster.face` | 🐹 | disabled: beyond the active limit |
+| `E H A N D B` | `hand.b` | 🫳 | disabled: beyond the active limit |
+| `E H A N D L` | `hand.l` | 🫲 | disabled: beyond the active limit |
+| `E H A N D L O V E` | `hand.love` | 🤟 | disabled: beyond the active limit |
+| `E H A N D P A R T` | `hand.part` | 🖖 | disabled: beyond the active limit |
+| `E H A N D P I N C H` | `hand.pinch` | 🤏 | disabled: beyond the active limit |
+| `E H A N D P U S H I N G L` | `hand.pushing.l` | 🫷 | disabled: beyond the active limit |
+| `E H A N D P U S H I N G R` | `hand.pushing.r` | 🫸 | disabled: beyond the active limit |
+| `E H A N D R` | `hand.r` | 🫱 | disabled: beyond the active limit |
+| `E H A N D R A I S E D A L T` | `hand.raised.alt` | 🤚 | disabled: beyond the active limit |
+| `E H A N D R O C K` | `hand.rock` | 🤘 | disabled: beyond the active limit |
+| `E H A N D T` | `hand.t` | 🫴 | disabled: beyond the active limit |
+| `E H A N D W R I T E` | `hand.write` | ✍ | disabled: beyond the active limit |
 | `E H A N D B A G` | `handbag` | 👜 | disabled: beyond the active limit |
 | `E H A N D B A L L` | `handball` | 🤾 | disabled: beyond the active limit |
 | `E H A N D F A N` | `handfan` | 🪭 | disabled: beyond the active limit |
 | `E H A N D H O L D I N G` | `handholding` | 🧑‍🤝‍🧑 | disabled: beyond the active limit |
-| `E H A N D H O L D I N G DOT M A N DOT M A N` | `handholding.man.man` | 👬 | disabled: beyond the active limit |
-| `E H A N D H O L D I N G DOT W O M A N DOT M A N` | `handholding.woman.man` | 👫 | disabled: beyond the active limit |
-| `E H A N D H O L D I N G DOT W O M A N DOT W O M A N` | `handholding.woman.woman` | 👭 | disabled: beyond the active limit |
-| `E H A N D S DOT H E A R T` | `hands.heart` | 🫶 | disabled: beyond the active limit |
-| `E H A N D S DOT O P E N` | `hands.open` | 👐 | disabled: beyond the active limit |
-| `E H A N D S DOT P A L M S` | `hands.palms` | 🤲 | disabled: beyond the active limit |
-| `E H A T DOT R I B B O N` | `hat.ribbon` | 👒 | disabled: beyond the active limit |
-| `E H A T DOT T O P` | `hat.top` | 🎩 | disabled: beyond the active limit |
+| `E H A N D H O L D I N G M A N M A N` | `handholding.man.man` | 👬 | disabled: beyond the active limit |
+| `E H A N D H O L D I N G W O M A N M A N` | `handholding.woman.man` | 👫 | disabled: beyond the active limit |
+| `E H A N D H O L D I N G W O M A N W O M A N` | `handholding.woman.woman` | 👭 | disabled: beyond the active limit |
+| `E H A N D S H E A R T` | `hands.heart` | 🫶 | disabled: beyond the active limit |
+| `E H A N D S O P E N` | `hands.open` | 👐 | disabled: beyond the active limit |
+| `E H A N D S P A L M S` | `hands.palms` | 🤲 | disabled: beyond the active limit |
+| `E H A T R I B B O N` | `hat.ribbon` | 👒 | disabled: beyond the active limit |
+| `E H A T T O P` | `hat.top` | 🎩 | disabled: beyond the active limit |
 | `E H E A D P H O N E` | `headphone` | 🎧 | disabled: beyond the active limit |
-| `E H E A R T DOT A R R O W` | `heart.arrow` | 💘 | disabled: beyond the active limit |
-| `E H E A R T DOT B E A T` | `heart.beat` | 💓 | disabled: beyond the active limit |
-| `E H E A R T DOT B O X` | `heart.box` | 💟 | disabled: beyond the active limit |
-| `E H E A R T DOT B R O W N` | `heart.brown` | 🤎 | disabled: beyond the active limit |
-| `E H E A R T DOT D O U B L E` | `heart.double` | 💕 | disabled: beyond the active limit |
-| `E H E A R T DOT E X C L` | `heart.excl` | ❣ | disabled: beyond the active limit |
-| `E H E A R T DOT G R A Y` | `heart.gray` | 🩶 | disabled: beyond the active limit |
-| `E H E A R T DOT G R O W` | `heart.grow` | 💗 | disabled: beyond the active limit |
-| `E H E A R T DOT L I G H T B L U E` | `heart.lightblue` | 🩵 | disabled: beyond the active limit |
-| `E H E A R T DOT P I N K` | `heart.pink` | 🩷 | disabled: beyond the active limit |
-| `E H E A R T DOT R E A L` | `heart.real` | 🫀 | disabled: beyond the active limit |
-| `E H E A R T DOT R E V O L V E` | `heart.revolve` | 💞 | disabled: beyond the active limit |
-| `E H E A R T DOT R I B B O N` | `heart.ribbon` | 💝 | disabled: beyond the active limit |
-| `E H E A R T DOT S P A R K` | `heart.spark` | 💖 | disabled: beyond the active limit |
-| `E H E A R T DOT Y E L L O W` | `heart.yellow` | 💛 | disabled: beyond the active limit |
+| `E H E A R T A R R O W` | `heart.arrow` | 💘 | disabled: beyond the active limit |
+| `E H E A R T B E A T` | `heart.beat` | 💓 | disabled: beyond the active limit |
+| `E H E A R T B O X` | `heart.box` | 💟 | disabled: beyond the active limit |
+| `E H E A R T B R O W N` | `heart.brown` | 🤎 | disabled: beyond the active limit |
+| `E H E A R T D O U B L E` | `heart.double` | 💕 | disabled: beyond the active limit |
+| `E H E A R T E X C L` | `heart.excl` | ❣ | disabled: beyond the active limit |
+| `E H E A R T G R A Y` | `heart.gray` | 🩶 | disabled: beyond the active limit |
+| `E H E A R T G R O W` | `heart.grow` | 💗 | disabled: beyond the active limit |
+| `E H E A R T L I G H T B L U E` | `heart.lightblue` | 🩵 | disabled: beyond the active limit |
+| `E H E A R T P I N K` | `heart.pink` | 🩷 | disabled: beyond the active limit |
+| `E H E A R T R E A L` | `heart.real` | 🫀 | disabled: beyond the active limit |
+| `E H E A R T R E V O L V E` | `heart.revolve` | 💞 | disabled: beyond the active limit |
+| `E H E A R T R I B B O N` | `heart.ribbon` | 💝 | disabled: beyond the active limit |
+| `E H E A R T S P A R K` | `heart.spark` | 💖 | disabled: beyond the active limit |
+| `E H E A R T Y E L L O W` | `heart.yellow` | 💛 | disabled: beyond the active limit |
 | `E H E D G E H O G` | `hedgehog` | 🦔 | disabled: beyond the active limit |
 | `E H E L I C O P T E R` | `helicopter` | 🚁 | disabled: beyond the active limit |
-| `E H E L M E T DOT C R O S S` | `helmet.cross` | ⛑ | disabled: beyond the active limit |
-| `E H E L M E T DOT M I L I T A R Y` | `helmet.military` | 🪖 | disabled: beyond the active limit |
+| `E H E L M E T C R O S S` | `helmet.cross` | ⛑ | disabled: beyond the active limit |
+| `E H E L M E T M I L I T A R Y` | `helmet.military` | 🪖 | disabled: beyond the active limit |
 | `E H I` | `hi` | ㊙ | disabled: labelled button glyph |
 | `E H O C K E Y` | `hockey` | 🏑 | disabled: beyond the active limit |
 | `E H O N G B A O` | `hongbao` | 🧧 | disabled: beyond the active limit |
-| `E H O R N DOT P O S T A L` | `horn.postal` | 📯 | disabled: beyond the active limit |
-| `E H O R S E DOT C A R O U S E L` | `horse.carousel` | 🎠 | disabled: beyond the active limit |
-| `E H O R S E DOT F A C E` | `horse.face` | 🐴 | disabled: beyond the active limit |
-| `E H O R S E DOT R A C E` | `horse.race` | 🏇 | disabled: beyond the active limit |
+| `E H O R N P O S T A L` | `horn.postal` | 📯 | disabled: beyond the active limit |
+| `E H O R S E C A R O U S E L` | `horse.carousel` | 🎠 | disabled: beyond the active limit |
+| `E H O R S E F A C E` | `horse.face` | 🐴 | disabled: beyond the active limit |
+| `E H O R S E R A C E` | `horse.race` | 🏇 | disabled: beyond the active limit |
 | `E H O T D O G` | `hotdog` | 🌭 | disabled: beyond the active limit |
-| `E H O T E L DOT L O V E` | `hotel.love` | 🏩 | disabled: beyond the active limit |
+| `E H O T E L L O V E` | `hotel.love` | 🏩 | disabled: beyond the active limit |
 | `E H O T S P R I N G` | `hotspring` | ♨ | disabled: beyond the active limit |
-| `E H O U R G L A S S` | `hourglass` | ⌛ | disabled: every spelling clashes |
-| `E H O U S E DOT D E R E L I C T` | `house.derelict` | 🏚 | disabled: beyond the active limit |
-| `E H O U S E DOT G A R D E N` | `house.garden` | 🏡 | disabled: beyond the active limit |
-| `E H O U S E DOT M U L T I P L E` | `house.multiple` | 🏘 | disabled: beyond the active limit |
+| `E H O U S E D E R E L I C T` | `house.derelict` | 🏚 | disabled: beyond the active limit |
+| `E H O U S E G A R D E N` | `house.garden` | 🏡 | disabled: beyond the active limit |
+| `E H O U S E M U L T I P L E` | `house.multiple` | 🏘 | disabled: beyond the active limit |
 | `E H U N D R E D` | `hundred` | 💯 | disabled: beyond the active limit |
 | `E I C E C R E A M` | `icecream` | 🍨 | disabled: beyond the active limit |
-| `E I C E C R E A M DOT S H A V E D` | `icecream.shaved` | 🍧 | disabled: beyond the active limit |
-| `E I C E C R E A M DOT S O F T` | `icecream.soft` | 🍦 | disabled: beyond the active limit |
+| `E I C E C R E A M S H A V E D` | `icecream.shaved` | 🍧 | disabled: beyond the active limit |
+| `E I C E C R E A M S O F T` | `icecream.soft` | 🍦 | disabled: beyond the active limit |
 | `E I C E H O C K E Y` | `icehockey` | 🏒 | disabled: beyond the active limit |
 | `E I D` | `id` | 🆔 | disabled: labelled button glyph |
 | `E I Z A K A Y A` | `izakaya` | 🏮 | disabled: beyond the active limit |
@@ -962,131 +963,126 @@ disabled.
 | `E K A D O M A T S U` | `kadomatsu` | 🎍 | disabled: beyond the active limit |
 | `E K A N G A R O O` | `kangaroo` | 🦘 | disabled: beyond the active limit |
 | `E K A R A` | `kara` | 🈳 | disabled: labelled button glyph |
-| `E K E Y` | `key` | 🔑 | disabled: every spelling clashes |
 | `E K I S S M A R K` | `kissmark` | 💋 | disabled: beyond the active limit |
-| `E K N I F E DOT D A G G E R` | `knife.dagger` | 🗡 | disabled: beyond the active limit |
+| `E K N I F E D A G G E R` | `knife.dagger` | 🗡 | disabled: beyond the active limit |
 | `E K O I N O B O R I` | `koinobori` | 🎏 | disabled: beyond the active limit |
 | `E K O K O` | `koko` | 🈁 | disabled: labelled button glyph |
 | `E K O N` | `kon` | 🈲 | disabled: labelled button glyph |
 | `E L A C R O S S E` | `lacrosse` | 🥍 | disabled: beyond the active limit |
 | `E L A D D E R` | `ladder` | 🪜 | disabled: beyond the active limit |
-| `E L A M P DOT D I Y A` | `lamp.diya` | 🪔 | disabled: beyond the active limit |
+| `E L A M P D I Y A` | `lamp.diya` | 🪔 | disabled: beyond the active limit |
 | `E L A N D S L I D E` | `landslide` | 🛘 | disabled: beyond the active limit |
-| `E L E A F DOT C L O V E R DOT T H R E E` | `leaf.clover.three` | ☘ | disabled: beyond the active limit |
-| `E L E A F DOT F A L L` | `leaf.fall` | 🍂 | disabled: beyond the active limit |
-| `E L E A F DOT H E R B` | `leaf.herb` | 🌿 | disabled: beyond the active limit |
-| `E L E A F DOT M A P L E` | `leaf.maple` | 🍁 | disabled: beyond the active limit |
-| `E L E A F DOT W I N D` | `leaf.wind` | 🍃 | disabled: beyond the active limit |
+| `E L E A F C L O V E R T H R E E` | `leaf.clover.three` | ☘ | disabled: beyond the active limit |
+| `E L E A F F A L L` | `leaf.fall` | 🍂 | disabled: beyond the active limit |
+| `E L E A F H E R B` | `leaf.herb` | 🌿 | disabled: beyond the active limit |
+| `E L E A F M A P L E` | `leaf.maple` | 🍁 | disabled: beyond the active limit |
+| `E L E A F W I N D` | `leaf.wind` | 🍃 | disabled: beyond the active limit |
 | `E L E F T L U G G A G E` | `leftluggage` | 🛅 | disabled: beyond the active limit |
-| `E L E G DOT M E C H` | `leg.mech` | 🦿 | disabled: beyond the active limit |
+| `E L E G M E C H` | `leg.mech` | 🦿 | disabled: beyond the active limit |
 | `E L E O P A R D` | `leopard` | 🐆 | disabled: beyond the active limit |
-| `E L E T T E R DOT L O V E` | `letter.love` | 💌 | disabled: beyond the active limit |
+| `E L E T T E R L O V E` | `letter.love` | 💌 | disabled: beyond the active limit |
 | `E L I B E R T Y` | `liberty` | 🗽 | disabled: beyond the active limit |
 | `E L I P S T I C K` | `lipstick` | 💄 | disabled: beyond the active limit |
 | `E L I T T E R` | `litter` | 🚮 | disabled: beyond the active limit |
-| `E L I T T E R DOT N O T` | `litter.not` | 🚯 | disabled: beyond the active limit |
+| `E L I T T E R N O T` | `litter.not` | 🚯 | disabled: beyond the active limit |
 | `E L I Z A R D` | `lizard` | 🦎 | disabled: beyond the active limit |
 | `E L O B S T E R` | `lobster` | 🦞 | disabled: beyond the active limit |
-| `E L O C K DOT K E Y` | `lock.key` | 🔐 | disabled: beyond the active limit |
-| `E L O C K DOT P E N` | `lock.pen` | 🔏 | disabled: beyond the active limit |
+| `E L O C K K E Y` | `lock.key` | 🔐 | disabled: beyond the active limit |
+| `E L O C K P E N` | `lock.pen` | 🔏 | disabled: beyond the active limit |
 | `E L O L L I P O P` | `lollipop` | 🍭 | disabled: beyond the active limit |
 | `E L O T I O N` | `lotion` | 🧴 | disabled: beyond the active limit |
 | `E L U G G A G E` | `luggage` | 🧳 | disabled: beyond the active limit |
 | `E M A G N E T` | `magnet` | 🧲 | disabled: beyond the active limit |
-| `E M A H J O N G DOT D R A G O N DOT R E D` | `mahjong.dragon.red` | 🀄 | disabled: beyond the active limit |
-| `E M A I L DOT A R R O W` | `mail.arrow` | 📩 | disabled: beyond the active limit |
-| `E M A I L B O X DOT C L O S E D DOT E M P T Y` | `mailbox.closed.empty` | 📪 | disabled: beyond the active limit |
-| `E M A I L B O X DOT C L O S E D DOT F U L L` | `mailbox.closed.full` | 📫 | disabled: beyond the active limit |
-| `E M A I L B O X DOT O P E N DOT E M P T Y` | `mailbox.open.empty` | 📭 | disabled: beyond the active limit |
-| `E M A I L B O X DOT O P E N DOT F U L L` | `mailbox.open.full` | 📬 | disabled: beyond the active limit |
+| `E M A H J O N G D R A G O N R E D` | `mahjong.dragon.red` | 🀄 | disabled: beyond the active limit |
+| `E M A I L A R R O W` | `mail.arrow` | 📩 | disabled: beyond the active limit |
+| `E M A I L B O X C L O S E D E M P T Y` | `mailbox.closed.empty` | 📪 | disabled: beyond the active limit |
+| `E M A I L B O X C L O S E D F U L L` | `mailbox.closed.full` | 📫 | disabled: beyond the active limit |
+| `E M A I L B O X O P E N E M P T Y` | `mailbox.open.empty` | 📭 | disabled: beyond the active limit |
+| `E M A I L B O X O P E N F U L L` | `mailbox.open.full` | 📬 | disabled: beyond the active limit |
 | `E M A M M O T H` | `mammoth` | 🦣 | disabled: beyond the active limit |
-| `E M A N DOT B O X` | `man.box` | 🚹 | disabled: beyond the active limit |
-| `E M A N DOT C R O W N` | `man.crown` | 🤴 | disabled: beyond the active limit |
-| `E M A N DOT G U A P I M A O` | `man.guapimao` | 👲 | disabled: beyond the active limit |
-| `E M A N DOT L E V I T A T E` | `man.levitate` | 🕴 | disabled: beyond the active limit |
-| `E M A N DOT O L D` | `man.old` | 👴 | disabled: beyond the active limit |
-| `E M A N DOT P R E G N A N T` | `man.pregnant` | 🫃 | disabled: beyond the active limit |
-| `E M A N DOT T U R B A N` | `man.turban` | 👳 | disabled: beyond the active limit |
-| `E M A N DOT T U X E D O` | `man.tuxedo` | 🤵 | disabled: beyond the active limit |
-| `E M A N G O` | `mango` | 🥭 | disabled: every spelling clashes |
-| `E M A P DOT J P` | `map.jp` | 🗾 | disabled: beyond the active limit |
-| `E M A P DOT W O R L D` | `map.world` | 🗺 | disabled: beyond the active limit |
+| `E M A N B O X` | `man.box` | 🚹 | disabled: beyond the active limit |
+| `E M A N C R O W N` | `man.crown` | 🤴 | disabled: beyond the active limit |
+| `E M A N G U A P I M A O` | `man.guapimao` | 👲 | disabled: beyond the active limit |
+| `E M A N L E V I T A T E` | `man.levitate` | 🕴 | disabled: beyond the active limit |
+| `E M A N O L D` | `man.old` | 👴 | disabled: beyond the active limit |
+| `E M A N P R E G N A N T` | `man.pregnant` | 🫃 | disabled: beyond the active limit |
+| `E M A N T U R B A N` | `man.turban` | 👳 | disabled: beyond the active limit |
+| `E M A N T U X E D O` | `man.tuxedo` | 🤵 | disabled: beyond the active limit |
+| `E M A P J P` | `map.jp` | 🗾 | disabled: beyond the active limit |
+| `E M A P W O R L D` | `map.world` | 🗺 | disabled: beyond the active limit |
 | `E M A R A C A S` | `maracas` | 🪇 | disabled: beyond the active limit |
 | `E M A R T I A L A R T S` | `martialarts` | 🥋 | disabled: beyond the active limit |
 | `E M A T R Y O S H K A` | `matryoshka` | 🪆 | disabled: beyond the active limit |
-| `E M E A T DOT B O N E` | `meat.bone` | 🍖 | disabled: beyond the active limit |
-| `E M E D A L DOT M I L I T A R Y` | `medal.military` | 🎖 | disabled: beyond the active limit |
-| `E M E D A L DOT S E C O N D` | `medal.second` | 🥈 | disabled: beyond the active limit |
-| `E M E D A L DOT S P O R T S` | `medal.sports` | 🏅 | disabled: beyond the active limit |
-| `E M E D A L DOT T H I R D` | `medal.third` | 🥉 | disabled: beyond the active limit |
+| `E M E A T B O N E` | `meat.bone` | 🍖 | disabled: beyond the active limit |
+| `E M E D A L M I L I T A R Y` | `medal.military` | 🎖 | disabled: beyond the active limit |
+| `E M E D A L S E C O N D` | `medal.second` | 🥈 | disabled: beyond the active limit |
+| `E M E D A L S P O R T S` | `medal.sports` | 🏅 | disabled: beyond the active limit |
+| `E M E D A L T H I R D` | `medal.third` | 🥉 | disabled: beyond the active limit |
 | `E M E R P E R S O N` | `merperson` | 🧜 | disabled: beyond the active limit |
 | `E M I C R O B E` | `microbe` | 🦠 | disabled: beyond the active limit |
 | `E M I C R O P H O N E` | `microphone` | 🎤 | disabled: beyond the active limit |
-| `E M I C R O P H O N E DOT S T U D I O` | `microphone.studio` | 🎙 | disabled: beyond the active limit |
+| `E M I C R O P H O N E S T U D I O` | `microphone.studio` | 🎙 | disabled: beyond the active limit |
 | `E M I L K Y W A Y` | `milkyway` | 🌌 | disabled: beyond the active limit |
 | `E M I R R O R` | `mirror` | 🪞 | disabled: beyond the active limit |
-| `E M O N E Y DOT B A G` | `money.bag` | 💰 | disabled: beyond the active limit |
-| `E M O N E Y DOT D O L L A R` | `money.dollar` | 💵 | disabled: beyond the active limit |
-| `E M O N E Y DOT E U R O` | `money.euro` | 💶 | disabled: beyond the active limit |
-| `E M O N E Y DOT P O U N D` | `money.pound` | 💷 | disabled: beyond the active limit |
-| `E M O N E Y DOT W I N G S` | `money.wings` | 💸 | disabled: beyond the active limit |
-| `E M O N E Y DOT Y E N` | `money.yen` | 💴 | disabled: beyond the active limit |
+| `E M O N E Y B A G` | `money.bag` | 💰 | disabled: beyond the active limit |
+| `E M O N E Y D O L L A R` | `money.dollar` | 💵 | disabled: beyond the active limit |
+| `E M O N E Y E U R O` | `money.euro` | 💶 | disabled: beyond the active limit |
+| `E M O N E Y P O U N D` | `money.pound` | 💷 | disabled: beyond the active limit |
+| `E M O N E Y W I N G S` | `money.wings` | 💸 | disabled: beyond the active limit |
+| `E M O N E Y Y E N` | `money.yen` | 💴 | disabled: beyond the active limit |
 | `E M O N K E Y` | `monkey` | 🐒 | disabled: beyond the active limit |
-| `E M O N K E Y DOT F A C E` | `monkey.face` | 🐵 | disabled: beyond the active limit |
-| `E M O N K E Y DOT H E A R DOT N O T` | `monkey.hear.not` | 🙉 | disabled: beyond the active limit |
-| `E M O N K E Y DOT S E E DOT N O T` | `monkey.see.not` | 🙈 | disabled: beyond the active limit |
-| `E M O N K E Y DOT S P E A K DOT N O T` | `monkey.speak.not` | 🙊 | disabled: beyond the active limit |
-| `E M O O N DOT F U L L DOT F A C E` | `moon.full.face` | 🌝 | disabled: beyond the active limit |
-| `E M O O N DOT N E W` | `moon.new` | 🌑 | disabled: beyond the active limit |
-| `E M O O N DOT N E W DOT F A C E` | `moon.new.face` | 🌚 | disabled: beyond the active limit |
-| `E M O O N DOT W A N E DOT O N E` | `moon.wane.one` | 🌖 | disabled: beyond the active limit |
-| `E M O O N DOT W A N E DOT T H R E E` | `moon.wane.three` | 🌘 | disabled: beyond the active limit |
-| `E M O O N DOT W A N E DOT T H R E E DOT F A C E` | `moon.wane.three.face` | 🌜 | disabled: beyond the active limit |
-| `E M O O N DOT W A N E DOT T W O` | `moon.wane.two` | 🌗 | disabled: beyond the active limit |
-| `E M O O N DOT W A X DOT O N E` | `moon.wax.one` | 🌒 | disabled: beyond the active limit |
-| `E M O O N DOT W A X DOT T H R E E` | `moon.wax.three` | 🌔 | disabled: beyond the active limit |
-| `E M O O N DOT W A X DOT T W O` | `moon.wax.two` | 🌓 | disabled: beyond the active limit |
-| `E M O O N DOT W A X DOT T W O DOT F A C E` | `moon.wax.two.face` | 🌛 | disabled: beyond the active limit |
+| `E M O N K E Y F A C E` | `monkey.face` | 🐵 | disabled: beyond the active limit |
+| `E M O N K E Y H E A R N O T` | `monkey.hear.not` | 🙉 | disabled: beyond the active limit |
+| `E M O N K E Y S E E N O T` | `monkey.see.not` | 🙈 | disabled: beyond the active limit |
+| `E M O N K E Y S P E A K N O T` | `monkey.speak.not` | 🙊 | disabled: beyond the active limit |
+| `E M O O N F U L L F A C E` | `moon.full.face` | 🌝 | disabled: beyond the active limit |
+| `E M O O N N E W` | `moon.new` | 🌑 | disabled: beyond the active limit |
+| `E M O O N N E W F A C E` | `moon.new.face` | 🌚 | disabled: beyond the active limit |
+| `E M O O N W A N E O N E` | `moon.wane.one` | 🌖 | disabled: beyond the active limit |
+| `E M O O N W A N E T H R E E` | `moon.wane.three` | 🌘 | disabled: beyond the active limit |
+| `E M O O N W A N E T H R E E F A C E` | `moon.wane.three.face` | 🌜 | disabled: beyond the active limit |
+| `E M O O N W A N E T W O` | `moon.wane.two` | 🌗 | disabled: beyond the active limit |
+| `E M O O N W A X O N E` | `moon.wax.one` | 🌒 | disabled: beyond the active limit |
+| `E M O O N W A X T H R E E` | `moon.wax.three` | 🌔 | disabled: beyond the active limit |
+| `E M O O N W A X T W O` | `moon.wax.two` | 🌓 | disabled: beyond the active limit |
+| `E M O O N W A X T W O F A C E` | `moon.wax.two.face` | 🌛 | disabled: beyond the active limit |
 | `E M O S Q U E` | `mosque` | 🕌 | disabled: beyond the active limit |
 | `E M O S Q U I T O` | `mosquito` | 🦟 | disabled: beyond the active limit |
 | `E M O T O R C Y C L E` | `motorcycle` | 🏍 | disabled: beyond the active limit |
 | `E M O T O R W A Y` | `motorway` | 🛣 | disabled: beyond the active limit |
 | `E M O U N T A I N` | `mountain` | ⛰ | disabled: beyond the active limit |
-| `E M O U N T A I N DOT F U J I` | `mountain.fuji` | 🗻 | disabled: beyond the active limit |
-| `E M O U N T A I N DOT S N O W` | `mountain.snow` | 🏔 | disabled: beyond the active limit |
-| `E M O U N T A I N DOT S U N R I S E` | `mountain.sunrise` | 🌄 | disabled: beyond the active limit |
-| `E M O U S E` | `mouse` | 🐁 | disabled: every spelling clashes |
+| `E M O U N T A I N F U J I` | `mountain.fuji` | 🗻 | disabled: beyond the active limit |
+| `E M O U N T A I N S N O W` | `mountain.snow` | 🏔 | disabled: beyond the active limit |
+| `E M O U N T A I N S U N R I S E` | `mountain.sunrise` | 🌄 | disabled: beyond the active limit |
 | `E M O U S E T R A P` | `mousetrap` | 🪤 | disabled: beyond the active limit |
-| `E M O U T H DOT B I T E` | `mouth.bite` | 🫦 | disabled: beyond the active limit |
+| `E M O U T H B I T E` | `mouth.bite` | 🫦 | disabled: beyond the active limit |
 | `E M U R Y O` | `muryo` | 🈚 | disabled: labelled button glyph |
 | `E M U S E U M` | `museum` | 🏛 | disabled: beyond the active limit |
 | `E M U S H R O O M` | `mushroom` | 🍄 | disabled: beyond the active limit |
 | `E M U S I C A L S C O R E` | `musicalscore` | 🎼 | disabled: beyond the active limit |
-| `E N A I L S DOT P O L I S H` | `nails.polish` | 💅 | disabled: beyond the active limit |
+| `E N A I L S P O L I S H` | `nails.polish` | 💅 | disabled: beyond the active limit |
 | `E N A M E B A D G E` | `namebadge` | 📛 | disabled: beyond the active limit |
 | `E N E C K T I E` | `necktie` | 👔 | disabled: beyond the active limit |
 | `E N E E D L E` | `needle` | 🪡 | disabled: beyond the active limit |
-| `E N E S T DOT E G G S` | `nest.eggs` | 🪺 | disabled: beyond the active limit |
-| `E N E S T DOT E M P T Y` | `nest.empty` | 🪹 | disabled: beyond the active limit |
+| `E N E S T E G G S` | `nest.eggs` | 🪺 | disabled: beyond the active limit |
+| `E N E S T E M P T Y` | `nest.empty` | 🪹 | disabled: beyond the active limit |
 | `E N E W` | `new` | 🆕 | disabled: labelled button glyph |
 | `E N E W S P A P E R` | `newspaper` | 📰 | disabled: beyond the active limit |
-| `E N E W S P A P E R DOT R O L L E D` | `newspaper.rolled` | 🗞 | disabled: beyond the active limit |
+| `E N E W S P A P E R R O L L E D` | `newspaper.rolled` | 🗞 | disabled: beyond the active limit |
 | `E N G` | `ng` | 🆖 | disabled: labelled button glyph |
 | `E N I N G Y O` | `ningyo` | 🎎 | disabled: beyond the active limit |
 | `E N O T E B O O K` | `notebook` | 📓 | disabled: beyond the active limit |
-| `E N O T E B O O K DOT D E C O` | `notebook.deco` | 📔 | disabled: beyond the active limit |
+| `E N O T E B O O K D E C O` | `notebook.deco` | 📔 | disabled: beyond the active limit |
 | `E N O T E P A D` | `notepad` | 🗒 | disabled: beyond the active limit |
-| `E N O T E S DOT T R I P L E` | `notes.triple` | 🎶 | disabled: beyond the active limit |
+| `E N O T E S T R I P L E` | `notes.triple` | 🎶 | disabled: beyond the active limit |
 | `E N U M B E R S` | `numbers` | 🔢 | disabled: beyond the active limit |
 | `E O` | `o` | 🅾 | disabled: labelled button glyph |
 | `E O C T O P U S` | `octopus` | 🐙 | disabled: beyond the active limit |
 | `E O K` | `ok` | 🆗 | disabled: labelled button glyph |
-| `E O N I O N` | `onion` | 🧅 | disabled: every spelling clashes |
 | `E O R A N G U T A N` | `orangutan` | 🦧 | disabled: beyond the active limit |
 | `E O Y S T E R` | `oyster` | 🦪 | disabled: beyond the active limit |
 | `E P A C K A G E` | `package` | 📦 | disabled: beyond the active limit |
 | `E P A E L L A` | `paella` | 🥘 | disabled: beyond the active limit |
-| `E P A G E` | `page` | 📄 | disabled: every spelling clashes |
 | `E P A I N T I N G` | `painting` | 🖼 | disabled: beyond the active limit |
 | `E P A L E T T E` | `palette` | 🎨 | disabled: beyond the active limit |
 | `E P A N C A K E S` | `pancakes` | 🥞 | disabled: beyond the active limit |
@@ -1098,41 +1094,41 @@ disabled.
 | `E P E A N U T S` | `peanuts` | 🥜 | disabled: beyond the active limit |
 | `E P E A P O D` | `peapod` | 🫛 | disabled: beyond the active limit |
 | `E P E D E S T R I A N` | `pedestrian` | 🚶 | disabled: beyond the active limit |
-| `E P E D E S T R I A N DOT N O T` | `pedestrian.not` | 🚷 | disabled: beyond the active limit |
+| `E P E D E S T R I A N N O T` | `pedestrian.not` | 🚷 | disabled: beyond the active limit |
 | `E P E N G U I N` | `penguin` | 🐧 | disabled: beyond the active limit |
 | `E P E P P E R` | `pepper` | 🫑 | disabled: beyond the active limit |
-| `E P E P P E R DOT H O T` | `pepper.hot` | 🌶 | disabled: beyond the active limit |
+| `E P E P P E R H O T` | `pepper.hot` | 🌶 | disabled: beyond the active limit |
 | `E P E R S O N` | `person` | 🧑 | disabled: beyond the active limit |
-| `E P E R S O N DOT A N G R Y` | `person.angry` | 🙎 | disabled: beyond the active limit |
-| `E P E R S O N DOT B E A R D` | `person.beard` | 🧔 | disabled: beyond the active limit |
-| `E P E R S O N DOT B L O N D E` | `person.blonde` | 👱 | disabled: beyond the active limit |
-| `E P E R S O N DOT B O W` | `person.bow` | 🙇 | disabled: beyond the active limit |
-| `E P E R S O N DOT C R O W N` | `person.crown` | 🫅 | disabled: beyond the active limit |
-| `E P E R S O N DOT D E A F` | `person.deaf` | 🧏 | disabled: beyond the active limit |
-| `E P E R S O N DOT F A C E P A L M` | `person.facepalm` | 🤦 | disabled: beyond the active limit |
-| `E P E R S O N DOT F R O W N` | `person.frown` | 🙍 | disabled: beyond the active limit |
-| `E P E R S O N DOT H I J A B` | `person.hijab` | 🧕 | disabled: beyond the active limit |
-| `E P E R S O N DOT K N E E L` | `person.kneel` | 🧎 | disabled: beyond the active limit |
-| `E P E R S O N DOT L O T U S` | `person.lotus` | 🧘 | disabled: beyond the active limit |
-| `E P E R S O N DOT M A S S A G E` | `person.massage` | 💆 | disabled: beyond the active limit |
-| `E P E R S O N DOT N O` | `person.no` | 🙅 | disabled: beyond the active limit |
-| `E P E R S O N DOT O K` | `person.ok` | 🙆 | disabled: beyond the active limit |
-| `E P E R S O N DOT O L D` | `person.old` | 🧓 | disabled: beyond the active limit |
-| `E P E R S O N DOT P R E G N A N T` | `person.pregnant` | 🫄 | disabled: beyond the active limit |
-| `E P E R S O N DOT R A I S E` | `person.raise` | 🙋 | disabled: beyond the active limit |
-| `E P E R S O N DOT S A S S Y` | `person.sassy` | 💁 | disabled: beyond the active limit |
-| `E P E R S O N DOT S H R U G` | `person.shrug` | 🤷 | disabled: beyond the active limit |
-| `E P E R S O N DOT S T A N D` | `person.stand` | 🧍 | disabled: beyond the active limit |
-| `E P E R S O N DOT S T E A M` | `person.steam` | 🧖 | disabled: beyond the active limit |
-| `E P H O N E DOT A R R O W` | `phone.arrow` | 📲 | disabled: beyond the active limit |
-| `E P H O N E DOT C L A S S I C` | `phone.classic` | ☎ | disabled: beyond the active limit |
-| `E P H O N E DOT N O T` | `phone.not` | 📵 | disabled: beyond the active limit |
-| `E P H O N E DOT O F F` | `phone.off` | 📴 | disabled: beyond the active limit |
-| `E P H O N E DOT R E C E I V E R` | `phone.receiver` | 📞 | disabled: beyond the active limit |
-| `E P H O N E DOT S I G N A L` | `phone.signal` | 📶 | disabled: beyond the active limit |
-| `E P H O N E DOT V I B R A T E` | `phone.vibrate` | 📳 | disabled: beyond the active limit |
-| `E P I G DOT F A C E` | `pig.face` | 🐷 | disabled: beyond the active limit |
-| `E P I G DOT N O S E` | `pig.nose` | 🐽 | disabled: beyond the active limit |
+| `E P E R S O N A N G R Y` | `person.angry` | 🙎 | disabled: beyond the active limit |
+| `E P E R S O N B E A R D` | `person.beard` | 🧔 | disabled: beyond the active limit |
+| `E P E R S O N B L O N D E` | `person.blonde` | 👱 | disabled: beyond the active limit |
+| `E P E R S O N B O W` | `person.bow` | 🙇 | disabled: beyond the active limit |
+| `E P E R S O N C R O W N` | `person.crown` | 🫅 | disabled: beyond the active limit |
+| `E P E R S O N D E A F` | `person.deaf` | 🧏 | disabled: beyond the active limit |
+| `E P E R S O N F A C E P A L M` | `person.facepalm` | 🤦 | disabled: beyond the active limit |
+| `E P E R S O N F R O W N` | `person.frown` | 🙍 | disabled: beyond the active limit |
+| `E P E R S O N H I J A B` | `person.hijab` | 🧕 | disabled: beyond the active limit |
+| `E P E R S O N K N E E L` | `person.kneel` | 🧎 | disabled: beyond the active limit |
+| `E P E R S O N L O T U S` | `person.lotus` | 🧘 | disabled: beyond the active limit |
+| `E P E R S O N M A S S A G E` | `person.massage` | 💆 | disabled: beyond the active limit |
+| `E P E R S O N N O` | `person.no` | 🙅 | disabled: beyond the active limit |
+| `E P E R S O N O K` | `person.ok` | 🙆 | disabled: beyond the active limit |
+| `E P E R S O N O L D` | `person.old` | 🧓 | disabled: beyond the active limit |
+| `E P E R S O N P R E G N A N T` | `person.pregnant` | 🫄 | disabled: beyond the active limit |
+| `E P E R S O N R A I S E` | `person.raise` | 🙋 | disabled: beyond the active limit |
+| `E P E R S O N S A S S Y` | `person.sassy` | 💁 | disabled: beyond the active limit |
+| `E P E R S O N S H R U G` | `person.shrug` | 🤷 | disabled: beyond the active limit |
+| `E P E R S O N S T A N D` | `person.stand` | 🧍 | disabled: beyond the active limit |
+| `E P E R S O N S T E A M` | `person.steam` | 🧖 | disabled: beyond the active limit |
+| `E P H O N E A R R O W` | `phone.arrow` | 📲 | disabled: beyond the active limit |
+| `E P H O N E C L A S S I C` | `phone.classic` | ☎ | disabled: beyond the active limit |
+| `E P H O N E N O T` | `phone.not` | 📵 | disabled: beyond the active limit |
+| `E P H O N E O F F` | `phone.off` | 📴 | disabled: beyond the active limit |
+| `E P H O N E R E C E I V E R` | `phone.receiver` | 📞 | disabled: beyond the active limit |
+| `E P H O N E S I G N A L` | `phone.signal` | 📶 | disabled: beyond the active limit |
+| `E P H O N E V I B R A T E` | `phone.vibrate` | 📳 | disabled: beyond the active limit |
+| `E P I G F A C E` | `pig.face` | 🐷 | disabled: beyond the active limit |
+| `E P I G N O S E` | `pig.nose` | 🐽 | disabled: beyond the active limit |
 | `E P I N A T A` | `pinata` | 🪅 | disabled: beyond the active limit |
 | `E P I N E A P P L E` | `pineapple` | 🍍 | disabled: beyond the active limit |
 | `E P I N G P O N G` | `pingpong` | 🏓 | disabled: beyond the active limit |
@@ -1140,44 +1136,42 @@ disabled.
 | `E P L A C A R D` | `placard` | 🪧 | disabled: beyond the active limit |
 | `E P L A N E T` | `planet` | 🪐 | disabled: beyond the active limit |
 | `E P L A S T E R` | `plaster` | 🩹 | disabled: beyond the active limit |
-| `E P L A T E DOT C U T L E R Y` | `plate.cutlery` | 🍽 | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT E J E C T` | `playback.eject` | ⏏ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT P A U S E` | `playback.pause` | ⏸ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT R E C O R D` | `playback.record` | ⏺ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT R E S T A R T` | `playback.restart` | ⏮ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT S K I P` | `playback.skip` | ⏭ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT S T O P` | `playback.stop` | ⏹ | disabled: beyond the active limit |
-| `E P L A Y B A C K DOT T O G G L E` | `playback.toggle` | ⏯ | disabled: beyond the active limit |
-| `E P L A Y I N G C A R D DOT F L O W E R` | `playingcard.flower` | 🎴 | disabled: beyond the active limit |
-| `E P L A Y I N G C A R D DOT J O K E R` | `playingcard.joker` | 🃏 | disabled: beyond the active limit |
+| `E P L A T E C U T L E R Y` | `plate.cutlery` | 🍽 | disabled: beyond the active limit |
+| `E P L A Y B A C K E J E C T` | `playback.eject` | ⏏ | disabled: beyond the active limit |
+| `E P L A Y B A C K P A U S E` | `playback.pause` | ⏸ | disabled: beyond the active limit |
+| `E P L A Y B A C K R E C O R D` | `playback.record` | ⏺ | disabled: beyond the active limit |
+| `E P L A Y B A C K R E S T A R T` | `playback.restart` | ⏮ | disabled: beyond the active limit |
+| `E P L A Y B A C K S K I P` | `playback.skip` | ⏭ | disabled: beyond the active limit |
+| `E P L A Y B A C K S T O P` | `playback.stop` | ⏹ | disabled: beyond the active limit |
+| `E P L A Y B A C K T O G G L E` | `playback.toggle` | ⏯ | disabled: beyond the active limit |
+| `E P L A Y I N G C A R D F L O W E R` | `playingcard.flower` | 🎴 | disabled: beyond the active limit |
+| `E P L A Y I N G C A R D J O K E R` | `playingcard.joker` | 🃏 | disabled: beyond the active limit |
 | `E P L U N G E R` | `plunger` | 🪠 | disabled: beyond the active limit |
 | `E P O L I C E O F F I C E R` | `policeofficer` | 👮 | disabled: beyond the active limit |
-| `E P O S T DOT E U` | `post.eu` | 🏤 | disabled: beyond the active limit |
-| `E P O S T DOT J P` | `post.jp` | 🏣 | disabled: beyond the active limit |
+| `E P O S T E U` | `post.eu` | 🏤 | disabled: beyond the active limit |
+| `E P O S T J P` | `post.jp` | 🏣 | disabled: beyond the active limit |
 | `E P O S T B O X` | `postbox` | 📮 | disabled: beyond the active limit |
 | `E P O T A T O` | `potato` | 🥔 | disabled: beyond the active limit |
-| `E P O T A T O DOT S W E E T` | `potato.sweet` | 🍠 | disabled: beyond the active limit |
+| `E P O T A T O S W E E T` | `potato.sweet` | 🍠 | disabled: beyond the active limit |
 | `E P R E T Z E L` | `pretzel` | 🥨 | disabled: beyond the active limit |
 | `E P R I N T E R` | `printer` | 🖨 | disabled: beyond the active limit |
-| `E P R I N T S DOT F O O T` | `prints.foot` | 👣 | disabled: beyond the active limit |
-| `E P R I N T S DOT P A W` | `prints.paw` | 🐾 | disabled: beyond the active limit |
+| `E P R I N T S F O O T` | `prints.foot` | 👣 | disabled: beyond the active limit |
+| `E P R I N T S P A W` | `prints.paw` | 🐾 | disabled: beyond the active limit |
 | `E P R O J E C T O R` | `projector` | 📽 | disabled: beyond the active limit |
-| `E Q U E S T DOT W H I T E` | `quest.white` | ❔ | disabled: beyond the active limit |
+| `E Q U E S T W H I T E` | `quest.white` | ❔ | disabled: beyond the active limit |
 | `E R A B B I T` | `rabbit` | 🐇 | disabled: beyond the active limit |
-| `E R A B B I T DOT F A C E` | `rabbit.face` | 🐰 | disabled: beyond the active limit |
+| `E R A B B I T F A C E` | `rabbit.face` | 🐰 | disabled: beyond the active limit |
 | `E R A C C O O N` | `raccoon` | 🦝 | disabled: beyond the active limit |
-| `E R A D I O` | `radio` | 📻 | disabled: every spelling clashes |
 | `E R A I L W A Y` | `railway` | 🛤 | disabled: beyond the active limit |
 | `E R A I N B O W` | `rainbow` | 🌈 | disabled: beyond the active limit |
 | `E R E C E I P T` | `receipt` | 🧾 | disabled: beyond the active limit |
 | `E R E S T R O O M` | `restroom` | 🚻 | disabled: beyond the active limit |
 | `E R I B B O N` | `ribbon` | 🎀 | disabled: beyond the active limit |
-| `E R I B B O N DOT R E M I N D` | `ribbon.remind` | 🎗 | disabled: beyond the active limit |
-| `E R I C E DOT C R A C K E R` | `rice.cracker` | 🍘 | disabled: beyond the active limit |
-| `E R I C E DOT E A R` | `rice.ear` | 🌾 | disabled: beyond the active limit |
-| `E R I C E DOT O N I G I R I` | `rice.onigiri` | 🍙 | disabled: beyond the active limit |
+| `E R I B B O N R E M I N D` | `ribbon.remind` | 🎗 | disabled: beyond the active limit |
+| `E R I C E C R A C K E R` | `rice.cracker` | 🍘 | disabled: beyond the active limit |
+| `E R I C E E A R` | `rice.ear` | 🌾 | disabled: beyond the active limit |
+| `E R I C E O N I G I R I` | `rice.onigiri` | 🍙 | disabled: beyond the active limit |
 | `E R I N G B U O Y` | `ringbuoy` | 🛟 | disabled: beyond the active limit |
-| `E R O C K` | `rock` | 🪨 | disabled: every spelling clashes |
 | `E R O L L E R C O A S T E R` | `rollercoaster` | 🎢 | disabled: beyond the active limit |
 | `E R O S E T T E` | `rosette` | 🏵 | disabled: beyond the active limit |
 | `E R U N N I N G` | `running` | 🏃 | disabled: beyond the active limit |
@@ -1185,102 +1179,102 @@ disabled.
 | `E S A F E T Y P I N` | `safetypin` | 🧷 | disabled: beyond the active limit |
 | `E S A F E T Y V E S T` | `safetyvest` | 🦺 | disabled: beyond the active limit |
 | `E S A N D W I C H` | `sandwich` | 🥪 | disabled: beyond the active limit |
-| `E S A N T A DOT M A N` | `santa.man` | 🎅 | disabled: beyond the active limit |
-| `E S A N T A DOT W O M A N` | `santa.woman` | 🤶 | disabled: beyond the active limit |
+| `E S A N T A M A N` | `santa.man` | 🎅 | disabled: beyond the active limit |
+| `E S A N T A W O M A N` | `santa.woman` | 🤶 | disabled: beyond the active limit |
 | `E S A T D I S H` | `satdish` | 📡 | disabled: beyond the active limit |
 | `E S A T E L L I T E` | `satellite` | 🛰 | disabled: beyond the active limit |
 | `E S A X O P H O N E` | `saxophone` | 🎷 | disabled: beyond the active limit |
 | `E S C A L E S` | `scales` | ⚖ | disabled: beyond the active limit |
 | `E S C O O T E R` | `scooter` | 🛴 | disabled: beyond the active limit |
-| `E S C O O T E R DOT M O T O R` | `scooter.motor` | 🛵 | disabled: beyond the active limit |
+| `E S C O O T E R M O T O R` | `scooter.motor` | 🛵 | disabled: beyond the active limit |
 | `E S C O R P I O N` | `scorpion` | 🦂 | disabled: beyond the active limit |
 | `E S C R E W D R I V E R` | `screwdriver` | 🪛 | disabled: beyond the active limit |
 | `E S C R O L L` | `scroll` | 📜 | disabled: beyond the active limit |
-| `E S H E L L DOT S P I R A L` | `shell.spiral` | 🐚 | disabled: beyond the active limit |
+| `E S H E L L S P I R A L` | `shell.spiral` | 🐚 | disabled: beyond the active limit |
 | `E S H I E L D` | `shield` | 🛡 | disabled: beyond the active limit |
 | `E S H I N` | `shin` | 🈸 | disabled: labelled button glyph |
-| `E S H I P DOT C R U I S E` | `ship.cruise` | 🛳 | disabled: beyond the active limit |
-| `E S H I P DOT F E R R Y` | `ship.ferry` | ⛴ | disabled: beyond the active limit |
-| `E S H I R T DOT S P O R T S` | `shirt.sports` | 🎽 | disabled: beyond the active limit |
-| `E S H I R T DOT T` | `shirt.t` | 👕 | disabled: beyond the active limit |
-| `E S H O E DOT B A L L E T` | `shoe.ballet` | 🩰 | disabled: beyond the active limit |
-| `E S H O E DOT F L A T` | `shoe.flat` | 🥿 | disabled: beyond the active limit |
-| `E S H O E DOT H E E L` | `shoe.heel` | 👠 | disabled: beyond the active limit |
-| `E S H O E DOT H I K E` | `shoe.hike` | 🥾 | disabled: beyond the active limit |
-| `E S H O E DOT I C E` | `shoe.ice` | ⛸ | disabled: beyond the active limit |
-| `E S H O E DOT R O L L E R` | `shoe.roller` | 🛼 | disabled: beyond the active limit |
-| `E S H O E DOT S A N D A L DOT H E E L` | `shoe.sandal.heel` | 👡 | disabled: beyond the active limit |
-| `E S H O E DOT S K I` | `shoe.ski` | 🎿 | disabled: beyond the active limit |
-| `E S H O E DOT S N E A K E R` | `shoe.sneaker` | 👟 | disabled: beyond the active limit |
-| `E S H O E DOT T A L L` | `shoe.tall` | 👢 | disabled: beyond the active limit |
-| `E S H O E DOT T H O N G` | `shoe.thong` | 🩴 | disabled: beyond the active limit |
+| `E S H I P C R U I S E` | `ship.cruise` | 🛳 | disabled: beyond the active limit |
+| `E S H I P F E R R Y` | `ship.ferry` | ⛴ | disabled: beyond the active limit |
+| `E S H I R T S P O R T S` | `shirt.sports` | 🎽 | disabled: beyond the active limit |
+| `E S H I R T T` | `shirt.t` | 👕 | disabled: beyond the active limit |
+| `E S H O E B A L L E T` | `shoe.ballet` | 🩰 | disabled: beyond the active limit |
+| `E S H O E F L A T` | `shoe.flat` | 🥿 | disabled: beyond the active limit |
+| `E S H O E H E E L` | `shoe.heel` | 👠 | disabled: beyond the active limit |
+| `E S H O E H I K E` | `shoe.hike` | 🥾 | disabled: beyond the active limit |
+| `E S H O E I C E` | `shoe.ice` | ⛸ | disabled: beyond the active limit |
+| `E S H O E R O L L E R` | `shoe.roller` | 🛼 | disabled: beyond the active limit |
+| `E S H O E S A N D A L H E E L` | `shoe.sandal.heel` | 👡 | disabled: beyond the active limit |
+| `E S H O E S K I` | `shoe.ski` | 🎿 | disabled: beyond the active limit |
+| `E S H O E S N E A K E R` | `shoe.sneaker` | 👟 | disabled: beyond the active limit |
+| `E S H O E T A L L` | `shoe.tall` | 👢 | disabled: beyond the active limit |
+| `E S H O E T H O N G` | `shoe.thong` | 🩴 | disabled: beyond the active limit |
 | `E S H O P P I N G` | `shopping` | 🛍 | disabled: beyond the active limit |
 | `E S H O R T S` | `shorts` | 🩳 | disabled: beyond the active limit |
 | `E S H O S H I N S H A` | `shoshinsha` | 🔰 | disabled: beyond the active limit |
 | `E S H O V E L` | `shovel` | 🪏 | disabled: beyond the active limit |
 | `E S H O W E R` | `shower` | 🚿 | disabled: beyond the active limit |
 | `E S H R I M P` | `shrimp` | 🦐 | disabled: beyond the active limit |
-| `E S H R I M P DOT F R I E D` | `shrimp.fried` | 🍤 | disabled: beyond the active limit |
+| `E S H R I M P F R I E D` | `shrimp.fried` | 🍤 | disabled: beyond the active limit |
 | `E S H R I N E` | `shrine` | ⛩ | disabled: beyond the active limit |
 | `E S H U K U` | `shuku` | ㊗ | disabled: labelled button glyph |
-| `E S I G N DOT C R O S S I N G` | `sign.crossing` | 🚸 | disabled: beyond the active limit |
-| `E S I G N DOT S T O P` | `sign.stop` | 🛑 | disabled: beyond the active limit |
+| `E S I G N C R O S S I N G` | `sign.crossing` | 🚸 | disabled: beyond the active limit |
+| `E S I G N S T O P` | `sign.stop` | 🛑 | disabled: beyond the active limit |
 | `E S I L H O U E T T E` | `silhouette` | 👤 | disabled: beyond the active limit |
-| `E S I L H O U E T T E DOT D O U B L E` | `silhouette.double` | 👥 | disabled: beyond the active limit |
-| `E S I L H O U E T T E DOT H U G` | `silhouette.hug` | 🫂 | disabled: beyond the active limit |
-| `E S I L H O U E T T E DOT S P E A K` | `silhouette.speak` | 🗣 | disabled: beyond the active limit |
+| `E S I L H O U E T T E D O U B L E` | `silhouette.double` | 👥 | disabled: beyond the active limit |
+| `E S I L H O U E T T E H U G` | `silhouette.hug` | 🫂 | disabled: beyond the active limit |
+| `E S I L H O U E T T E S P E A K` | `silhouette.speak` | 🗣 | disabled: beyond the active limit |
 | `E S K A T E B O A R D` | `skateboard` | 🛹 | disabled: beyond the active limit |
-| `E S K E W E R DOT D A N G O` | `skewer.dango` | 🍡 | disabled: beyond the active limit |
-| `E S K E W E R DOT O D E N` | `skewer.oden` | 🍢 | disabled: beyond the active limit |
+| `E S K E W E R D A N G O` | `skewer.dango` | 🍡 | disabled: beyond the active limit |
+| `E S K E W E R O D E N` | `skewer.oden` | 🍢 | disabled: beyond the active limit |
 | `E S K I I N G` | `skiing` | ⛷ | disabled: beyond the active limit |
-| `E S K U L L DOT B O N E S` | `skull.bones` | ☠ | disabled: beyond the active limit |
+| `E S K U L L B O N E S` | `skull.bones` | ☠ | disabled: beyond the active limit |
 | `E S L I D E R` | `slider` | 🎚 | disabled: beyond the active limit |
 | `E S N O W B O A R D I N G` | `snowboarding` | 🏂 | disabled: beyond the active limit |
 | `E S N O W M A N` | `snowman` | ⛄ | disabled: beyond the active limit |
-| `E S N O W M A N DOT S N O W` | `snowman.snow` | ☃ | disabled: beyond the active limit |
+| `E S N O W M A N S N O W` | `snowman.snow` | ☃ | disabled: beyond the active limit |
 | `E S O F T B A L L` | `softball` | 🥎 | disabled: beyond the active limit |
 | `E S O S` | `sos` | 🆘 | disabled: labelled button glyph |
 | `E S P A G H E T T I` | `spaghetti` | 🍝 | disabled: beyond the active limit |
-| `E S P A R K L E DOT B O X` | `sparkle.box` | ❇ | disabled: beyond the active limit |
+| `E S P A R K L E B O X` | `sparkle.box` | ❇ | disabled: beyond the active limit |
 | `E S P A R K L E R` | `sparkler` | 🎇 | disabled: beyond the active limit |
 | `E S P E A K E R` | `speaker` | 🔈 | disabled: beyond the active limit |
-| `E S P E A K E R DOT N O T` | `speaker.not` | 🔇 | disabled: beyond the active limit |
-| `E S P E A K E R DOT W A V E` | `speaker.wave` | 🔉 | disabled: beyond the active limit |
-| `E S P E A K E R DOT W A V E S` | `speaker.waves` | 🔊 | disabled: beyond the active limit |
+| `E S P E A K E R N O T` | `speaker.not` | 🔇 | disabled: beyond the active limit |
+| `E S P E A K E R W A V E` | `speaker.wave` | 🔉 | disabled: beyond the active limit |
+| `E S P E A K E R W A V E S` | `speaker.waves` | 🔊 | disabled: beyond the active limit |
 | `E S P I D E R` | `spider` | 🕷 | disabled: beyond the active limit |
 | `E S P I D E R W E B` | `spiderweb` | 🕸 | disabled: beyond the active limit |
 | `E S P I N A C H` | `spinach` | 🥬 | disabled: beyond the active limit |
 | `E S P L A T T E R` | `splatter` | 🫟 | disabled: beyond the active limit |
 | `E S P O N G E` | `sponge` | 🧽 | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L A C K` | `square.black` | ⬛ | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L A C K DOT M E D I U M` | `square.black.medium` | ◼ | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L A C K DOT S M A L L` | `square.black.small` | ◾ | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L A C K DOT T I N Y` | `square.black.tiny` | ▪ | disabled: beyond the active limit |
-| `E S Q U A R E DOT B L U E` | `square.blue` | 🟦 | disabled: beyond the active limit |
-| `E S Q U A R E DOT B R O W N` | `square.brown` | 🟫 | disabled: beyond the active limit |
-| `E S Q U A R E DOT G R E E N` | `square.green` | 🟩 | disabled: beyond the active limit |
-| `E S Q U A R E DOT O R A N G E` | `square.orange` | 🟧 | disabled: beyond the active limit |
-| `E S Q U A R E DOT P U R P L E` | `square.purple` | 🟪 | disabled: beyond the active limit |
-| `E S Q U A R E DOT R E D` | `square.red` | 🟥 | disabled: beyond the active limit |
-| `E S Q U A R E DOT W H I T E` | `square.white` | ⬜ | disabled: beyond the active limit |
-| `E S Q U A R E DOT W H I T E DOT M E D I U M` | `square.white.medium` | ◻ | disabled: beyond the active limit |
-| `E S Q U A R E DOT W H I T E DOT S M A L L` | `square.white.small` | ◽ | disabled: beyond the active limit |
-| `E S Q U A R E DOT W H I T E DOT T I N Y` | `square.white.tiny` | ▫ | disabled: beyond the active limit |
-| `E S Q U A R E DOT Y E L L O W` | `square.yellow` | 🟨 | disabled: beyond the active limit |
+| `E S Q U A R E B L A C K` | `square.black` | ⬛ | disabled: beyond the active limit |
+| `E S Q U A R E B L A C K M E D I U M` | `square.black.medium` | ◼ | disabled: beyond the active limit |
+| `E S Q U A R E B L A C K S M A L L` | `square.black.small` | ◾ | disabled: beyond the active limit |
+| `E S Q U A R E B L A C K T I N Y` | `square.black.tiny` | ▪ | disabled: beyond the active limit |
+| `E S Q U A R E B L U E` | `square.blue` | 🟦 | disabled: beyond the active limit |
+| `E S Q U A R E B R O W N` | `square.brown` | 🟫 | disabled: beyond the active limit |
+| `E S Q U A R E G R E E N` | `square.green` | 🟩 | disabled: beyond the active limit |
+| `E S Q U A R E O R A N G E` | `square.orange` | 🟧 | disabled: beyond the active limit |
+| `E S Q U A R E P U R P L E` | `square.purple` | 🟪 | disabled: beyond the active limit |
+| `E S Q U A R E R E D` | `square.red` | 🟥 | disabled: beyond the active limit |
+| `E S Q U A R E W H I T E` | `square.white` | ⬜ | disabled: beyond the active limit |
+| `E S Q U A R E W H I T E M E D I U M` | `square.white.medium` | ◻ | disabled: beyond the active limit |
+| `E S Q U A R E W H I T E S M A L L` | `square.white.small` | ◽ | disabled: beyond the active limit |
+| `E S Q U A R E W H I T E T I N Y` | `square.white.tiny` | ▫ | disabled: beyond the active limit |
+| `E S Q U A R E Y E L L O W` | `square.yellow` | 🟨 | disabled: beyond the active limit |
 | `E S T A D I U M` | `stadium` | 🏟 | disabled: beyond the active limit |
-| `E S T A R DOT A R C` | `star.arc` | 💫 | disabled: beyond the active limit |
-| `E S T A R DOT B O X` | `star.box` | ✴ | disabled: beyond the active limit |
-| `E S T A R DOT S H O O T` | `star.shoot` | 🌠 | disabled: beyond the active limit |
+| `E S T A R A R C` | `star.arc` | 💫 | disabled: beyond the active limit |
+| `E S T A R B O X` | `star.box` | ✴ | disabled: beyond the active limit |
+| `E S T A R S H O O T` | `star.shoot` | 🌠 | disabled: beyond the active limit |
 | `E S T E T H O S C O P E` | `stethoscope` | 🩺 | disabled: beyond the active limit |
-| `E S T O R E DOT B I G` | `store.big` | 🏬 | disabled: beyond the active limit |
-| `E S T O R E DOT S M A L L` | `store.small` | 🏪 | disabled: beyond the active limit |
+| `E S T O R E B I G` | `store.big` | 🏬 | disabled: beyond the active limit |
+| `E S T O R E S M A L L` | `store.small` | 🏪 | disabled: beyond the active limit |
 | `E S T R A W B E R R Y` | `strawberry` | 🍓 | disabled: beyond the active limit |
-| `E S U I T DOT C L U B` | `suit.club` | ♣ | disabled: beyond the active limit |
-| `E S U I T DOT D I A M O N D` | `suit.diamond` | ♦ | disabled: beyond the active limit |
-| `E S U I T DOT H E A R T` | `suit.heart` | ♥ | disabled: beyond the active limit |
-| `E S U I T DOT S P A D E` | `suit.spade` | ♠ | disabled: beyond the active limit |
-| `E S U N DOT C L O U D` | `sun.cloud` | 🌤 | disabled: beyond the active limit |
-| `E S U N DOT F A C E` | `sun.face` | 🌞 | disabled: beyond the active limit |
+| `E S U I T C L U B` | `suit.club` | ♣ | disabled: beyond the active limit |
+| `E S U I T D I A M O N D` | `suit.diamond` | ♦ | disabled: beyond the active limit |
+| `E S U I T H E A R T` | `suit.heart` | ♥ | disabled: beyond the active limit |
+| `E S U I T S P A D E` | `suit.spade` | ♠ | disabled: beyond the active limit |
+| `E S U N C L O U D` | `sun.cloud` | 🌤 | disabled: beyond the active limit |
+| `E S U N F A C E` | `sun.face` | 🌞 | disabled: beyond the active limit |
 | `E S U N R I S E` | `sunrise` | 🌅 | disabled: beyond the active limit |
 | `E S U P E R H E R O` | `superhero` | 🦸 | disabled: beyond the active limit |
 | `E S U P E R V I L L A I N` | `supervillain` | 🦹 | disabled: beyond the active limit |
@@ -1295,66 +1289,68 @@ disabled.
 | `E T A M A L E` | `tamale` | 🫔 | disabled: beyond the active limit |
 | `E T A N A B A T A` | `tanabata` | 🎋 | disabled: beyond the active limit |
 | `E T A N G E R I N E` | `tangerine` | 🍊 | disabled: beyond the active limit |
-| `E T A P DOT N O T` | `tap.not` | 🚱 | disabled: beyond the active limit |
-| `E T A X I DOT F R O N T` | `taxi.front` | 🚖 | disabled: beyond the active limit |
+| `E T A P N O T` | `tap.not` | 🚱 | disabled: beyond the active limit |
+| `E T A X I F R O N T` | `taxi.front` | 🚖 | disabled: beyond the active limit |
 | `E T E A C U P` | `teacup` | 🍵 | disabled: beyond the active limit |
 | `E T E A P O T` | `teapot` | 🫖 | disabled: beyond the active limit |
 | `E T E M P L E` | `temple` | 🛕 | disabled: beyond the active limit |
-| `E T E N G U` | `tengu` | 👺 | disabled: every spelling clashes |
 | `E T E N N I S` | `tennis` | 🎾 | disabled: beyond the active limit |
-| `E T E N T` | `tent` | ⛺ | disabled: every spelling clashes |
 | `E T H E R M O M E T E R` | `thermometer` | 🌡 | disabled: beyond the active limit |
 | `E T H R E A D` | `thread` | 🧵 | disabled: beyond the active limit |
-| `E T I C K E T DOT E V E N T` | `ticket.event` | 🎟 | disabled: beyond the active limit |
-| `E T I C K E T DOT T R A V E L` | `ticket.travel` | 🎫 | disabled: beyond the active limit |
-| `E T I G E R DOT F A C E` | `tiger.face` | 🐯 | disabled: beyond the active limit |
+| `E T I C K E T E V E N T` | `ticket.event` | 🎟 | disabled: beyond the active limit |
+| `E T I C K E T T R A V E L` | `ticket.travel` | 🎫 | disabled: beyond the active limit |
+| `E T I G E R` | `tiger` | 🐅 | disabled: beyond the active limit |
+| `E T I G E R F A C E` | `tiger.face` | 🐯 | disabled: beyond the active limit |
 | `E T O I L E T` | `toilet` | 🚽 | disabled: beyond the active limit |
 | `E T O I L E T P A P E R` | `toiletpaper` | 🧻 | disabled: beyond the active limit |
 | `E T O K U` | `toku` | 🉐 | disabled: labelled button glyph |
 | `E T O M A T O` | `tomato` | 🍅 | disabled: beyond the active limit |
 | `E T O M B S T O N E` | `tombstone` | 🪦 | disabled: beyond the active limit |
 | `E T O N G U E` | `tongue` | 👅 | disabled: beyond the active limit |
+| `E T O O T H` | `tooth` | 🦷 | disabled: beyond the active limit |
 | `E T O O T H B R U S H` | `toothbrush` | 🪥 | disabled: beyond the active limit |
 | `E T O R N A D O` | `tornado` | 🌪 | disabled: beyond the active limit |
-| `E T O W E R DOT T O K Y O` | `tower.tokyo` | 🗼 | disabled: beyond the active limit |
+| `E T O W E R T O K Y O` | `tower.tokyo` | 🗼 | disabled: beyond the active limit |
 | `E T R A C K B A L L` | `trackball` | 🖲 | disabled: beyond the active limit |
 | `E T R A C T O R` | `tractor` | 🚜 | disabled: beyond the active limit |
-| `E T R A F F I C L I G H T DOT H` | `trafficlight.h` | 🚥 | disabled: beyond the active limit |
-| `E T R A F F I C L I G H T DOT V` | `trafficlight.v` | 🚦 | disabled: beyond the active limit |
-| `E T R A I N` | `train` | 🚆 | disabled: every spelling clashes |
-| `E T R A I N DOT C A R` | `train.car` | 🚃 | disabled: beyond the active limit |
-| `E T R A I N DOT L I G H T` | `train.light` | 🚈 | disabled: beyond the active limit |
-| `E T R A I N DOT M E T R O` | `train.metro` | 🚇 | disabled: beyond the active limit |
-| `E T R A I N DOT M O N O` | `train.mono` | 🚝 | disabled: beyond the active limit |
-| `E T R A I N DOT M O U N T A I N` | `train.mountain` | 🚞 | disabled: beyond the active limit |
-| `E T R A I N DOT S P E E D` | `train.speed` | 🚄 | disabled: beyond the active limit |
-| `E T R A I N DOT S P E E D DOT B U L L E T` | `train.speed.bullet` | 🚅 | disabled: beyond the active limit |
-| `E T R A I N DOT S T O P` | `train.stop` | 🚉 | disabled: beyond the active limit |
-| `E T R A I N DOT S U S P E N D` | `train.suspend` | 🚟 | disabled: beyond the active limit |
-| `E T R A I N DOT T R A M` | `train.tram` | 🚊 | disabled: beyond the active limit |
-| `E T R A I N DOT T R A M DOT C A R` | `train.tram.car` | 🚋 | disabled: beyond the active limit |
+| `E T R A F F I C L I G H T H` | `trafficlight.h` | 🚥 | disabled: beyond the active limit |
+| `E T R A F F I C L I G H T V` | `trafficlight.v` | 🚦 | disabled: beyond the active limit |
+| `E T R A I N` | `train` | 🚆 | disabled: beyond the active limit |
+| `E T R A I N C A R` | `train.car` | 🚃 | disabled: beyond the active limit |
+| `E T R A I N L I G H T` | `train.light` | 🚈 | disabled: beyond the active limit |
+| `E T R A I N M E T R O` | `train.metro` | 🚇 | disabled: beyond the active limit |
+| `E T R A I N M O N O` | `train.mono` | 🚝 | disabled: beyond the active limit |
+| `E T R A I N M O U N T A I N` | `train.mountain` | 🚞 | disabled: beyond the active limit |
+| `E T R A I N S P E E D` | `train.speed` | 🚄 | disabled: beyond the active limit |
+| `E T R A I N S P E E D B U L L E T` | `train.speed.bullet` | 🚅 | disabled: beyond the active limit |
+| `E T R A I N S T O P` | `train.stop` | 🚉 | disabled: beyond the active limit |
+| `E T R A I N S U S P E N D` | `train.suspend` | 🚟 | disabled: beyond the active limit |
+| `E T R A I N T R A M` | `train.tram` | 🚊 | disabled: beyond the active limit |
+| `E T R A I N T R A M C A R` | `train.tram.car` | 🚋 | disabled: beyond the active limit |
 | `E T R A N S G E N D E R` | `transgender` | ⚧ | disabled: beyond the active limit |
-| `E T R A Y DOT I N B O X` | `tray.inbox` | 📥 | disabled: beyond the active limit |
-| `E T R A Y DOT M A I L` | `tray.mail` | 📨 | disabled: beyond the active limit |
-| `E T R A Y DOT O U T B O X` | `tray.outbox` | 📤 | disabled: beyond the active limit |
+| `E T R A Y I N B O X` | `tray.inbox` | 📥 | disabled: beyond the active limit |
+| `E T R A Y M A I L` | `tray.mail` | 📨 | disabled: beyond the active limit |
+| `E T R A Y O U T B O X` | `tray.outbox` | 📤 | disabled: beyond the active limit |
 | `E T R E A S U R E` | `treasure` | 🪎 | disabled: beyond the active limit |
-| `E T R E E DOT D E C I D U O U S` | `tree.deciduous` | 🌳 | disabled: beyond the active limit |
-| `E T R E E DOT L E A F L E S S` | `tree.leafless` | 🪾 | disabled: beyond the active limit |
-| `E T R E E DOT P A L M` | `tree.palm` | 🌴 | disabled: beyond the active limit |
-| `E T R E E DOT X M A S` | `tree.xmas` | 🎄 | disabled: beyond the active limit |
-| `E T R I A N G L E DOT B` | `triangle.b` | 🔽 | disabled: beyond the active limit |
-| `E T R I A N G L E DOT T` | `triangle.t` | 🔼 | disabled: beyond the active limit |
+| `E T R E E D E C I D U O U S` | `tree.deciduous` | 🌳 | disabled: beyond the active limit |
+| `E T R E E L E A F L E S S` | `tree.leafless` | 🪾 | disabled: beyond the active limit |
+| `E T R E E P A L M` | `tree.palm` | 🌴 | disabled: beyond the active limit |
+| `E T R E E X M A S` | `tree.xmas` | 🎄 | disabled: beyond the active limit |
+| `E T R I A N G L E B` | `triangle.b` | 🔽 | disabled: beyond the active limit |
+| `E T R I A N G L E T` | `triangle.t` | 🔼 | disabled: beyond the active limit |
 | `E T R I D E N T` | `trident` | 🔱 | disabled: beyond the active limit |
+| `E T R O L L` | `troll` | 🧌 | disabled: beyond the active limit |
 | `E T R O M B O N E` | `trombone` | 🪊 | disabled: beyond the active limit |
-| `E T R U C K DOT T R A I L E R` | `truck.trailer` | 🚛 | disabled: beyond the active limit |
+| `E T R U C K` | `truck` | 🚚 | disabled: beyond the active limit |
+| `E T R U C K T R A I L E R` | `truck.trailer` | 🚛 | disabled: beyond the active limit |
 | `E T R U M P E T` | `trumpet` | 🎺 | disabled: beyond the active limit |
 | `E T S U K I M I` | `tsukimi` | 🎑 | disabled: beyond the active limit |
 | `E T U R K E Y` | `turkey` | 🦃 | disabled: beyond the active limit |
 | `E T U R T L E` | `turtle` | 🐢 | disabled: beyond the active limit |
-| `E U M B R E L L A DOT C L O S E D` | `umbrella.closed` | 🌂 | disabled: beyond the active limit |
-| `E U M B R E L L A DOT O P E N` | `umbrella.open` | ☂ | disabled: beyond the active limit |
-| `E U M B R E L L A DOT R A I N` | `umbrella.rain` | ☔ | disabled: beyond the active limit |
-| `E U M B R E L L A DOT S U N` | `umbrella.sun` | ⛱ | disabled: beyond the active limit |
+| `E U M B R E L L A C L O S E D` | `umbrella.closed` | 🌂 | disabled: beyond the active limit |
+| `E U M B R E L L A O P E N` | `umbrella.open` | ☂ | disabled: beyond the active limit |
+| `E U M B R E L L A R A I N` | `umbrella.rain` | ☔ | disabled: beyond the active limit |
+| `E U M B R E L L A S U N` | `umbrella.sun` | ⛱ | disabled: beyond the active limit |
 | `E U N I C O R N` | `unicorn` | 🦄 | disabled: beyond the active limit |
 | `E U N K N O W N` | `unknown` | 🦳 | disabled: beyond the active limit |
 | `E U P` | `up` | 🆙 | disabled: labelled button glyph |
@@ -1364,61 +1360,48 @@ disabled.
 | `E V O L L E Y B A L L` | `volleyball` | 🏐 | disabled: beyond the active limit |
 | `E V S` | `vs` | 🆚 | disabled: labelled button glyph |
 | `E W A F F L E` | `waffle` | 🧇 | disabled: beyond the active limit |
-| `E W A T C H` | `watch` | ⌚ | disabled: every spelling clashes |
+| `E W A T C H` | `watch` | ⌚ | disabled: beyond the active limit |
 | `E W A T E R M E L O N` | `watermelon` | 🍉 | disabled: beyond the active limit |
 | `E W A T E R P O L O` | `waterpolo` | 🤽 | disabled: beyond the active limit |
 | `E W E I G H T L I F T I N G` | `weightlifting` | 🏋 | disabled: beyond the active limit |
-| `E W H A L E DOT S P O U T` | `whale.spout` | 🐳 | disabled: beyond the active limit |
+| `E W H A L E` | `whale` | 🐋 | disabled: beyond the active limit |
+| `E W H A L E S P O U T` | `whale.spout` | 🐳 | disabled: beyond the active limit |
+| `E W H E E L` | `wheel` | 🛞 | disabled: beyond the active limit |
 | `E W H E E L C H A I R` | `wheelchair` | 🦽 | disabled: beyond the active limit |
-| `E W H E E L C H A I R DOT B O X` | `wheelchair.box` | ♿ | disabled: beyond the active limit |
-| `E W H E E L C H A I R DOT M O T O R` | `wheelchair.motor` | 🦼 | disabled: beyond the active limit |
+| `E W H E E L C H A I R B O X` | `wheelchair.box` | ♿ | disabled: beyond the active limit |
+| `E W H E E L C H A I R M O T O R` | `wheelchair.motor` | 🦼 | disabled: beyond the active limit |
 | `E W I N D C H I M E` | `windchime` | 🎐 | disabled: beyond the active limit |
 | `E W I N D O W` | `window` | 🪟 | disabled: beyond the active limit |
 | `E W I R E L E S S` | `wireless` | 🛜 | disabled: beyond the active limit |
-| `E W O M A N DOT B O X` | `woman.box` | 🚺 | disabled: beyond the active limit |
-| `E W O M A N DOT C R O W N` | `woman.crown` | 👸 | disabled: beyond the active limit |
-| `E W O M A N DOT O L D` | `woman.old` | 👵 | disabled: beyond the active limit |
-| `E W O M A N DOT P R E G N A N T` | `woman.pregnant` | 🤰 | disabled: beyond the active limit |
+| `E W O M A N` | `woman` | 👩 | disabled: beyond the active limit |
+| `E W O M A N B O X` | `woman.box` | 🚺 | disabled: beyond the active limit |
+| `E W O M A N C R O W N` | `woman.crown` | 👸 | disabled: beyond the active limit |
+| `E W O M A N O L D` | `woman.old` | 👵 | disabled: beyond the active limit |
+| `E W O M A N P R E G N A N T` | `woman.pregnant` | 🤰 | disabled: beyond the active limit |
 | `E W R E S T L I N G` | `wrestling` | 🤼 | disabled: beyond the active limit |
 | `E Y O` | `yo` | 🈺 | disabled: labelled button glyph |
 | `E Y U B I` | `yubi` | 🈯 | disabled: labelled button glyph |
 | `E Y U R Y O` | `yuryo` | 🈶 | disabled: labelled button glyph |
-| `E Z O D I A C DOT A Q U A R I U S` | `zodiac.aquarius` | ♒ | disabled: beyond the active limit |
-| `E Z O D I A C DOT A R I E S` | `zodiac.aries` | ♈ | disabled: beyond the active limit |
-| `E Z O D I A C DOT C A N C E R` | `zodiac.cancer` | ♋ | disabled: beyond the active limit |
-| `E Z O D I A C DOT C A P R I` | `zodiac.capri` | ♑ | disabled: beyond the active limit |
-| `E Z O D I A C DOT G E M I N I` | `zodiac.gemini` | ♊ | disabled: beyond the active limit |
-| `E Z O D I A C DOT L E O` | `zodiac.leo` | ♌ | disabled: beyond the active limit |
-| `E Z O D I A C DOT L I B R A` | `zodiac.libra` | ♎ | disabled: beyond the active limit |
-| `E Z O D I A C DOT O P H I` | `zodiac.ophi` | ⛎ | disabled: beyond the active limit |
-| `E Z O D I A C DOT P I S C E S` | `zodiac.pisces` | ♓ | disabled: beyond the active limit |
-| `E Z O D I A C DOT S A G I T` | `zodiac.sagit` | ♐ | disabled: beyond the active limit |
-| `E Z O D I A C DOT S C O R P I O` | `zodiac.scorpio` | ♏ | disabled: beyond the active limit |
-| `E Z O D I A C DOT T A U R U S` | `zodiac.taurus` | ♉ | disabled: beyond the active limit |
-| `E Z O D I A C DOT V I R G O` | `zodiac.virgo` | ♍ | disabled: beyond the active limit |
+| `E Z E B R A` | `zebra` | 🦓 | disabled: beyond the active limit |
+| `E Z O D I A C A Q U A R I U S` | `zodiac.aquarius` | ♒ | disabled: beyond the active limit |
+| `E Z O D I A C A R I E S` | `zodiac.aries` | ♈ | disabled: beyond the active limit |
+| `E Z O D I A C C A N C E R` | `zodiac.cancer` | ♋ | disabled: beyond the active limit |
+| `E Z O D I A C C A P R I` | `zodiac.capri` | ♑ | disabled: beyond the active limit |
+| `E Z O D I A C G E M I N I` | `zodiac.gemini` | ♊ | disabled: beyond the active limit |
+| `E Z O D I A C L E O` | `zodiac.leo` | ♌ | disabled: beyond the active limit |
+| `E Z O D I A C L I B R A` | `zodiac.libra` | ♎ | disabled: beyond the active limit |
+| `E Z O D I A C O P H I` | `zodiac.ophi` | ⛎ | disabled: beyond the active limit |
+| `E Z O D I A C P I S C E S` | `zodiac.pisces` | ♓ | disabled: beyond the active limit |
+| `E Z O D I A C S A G I T` | `zodiac.sagit` | ♐ | disabled: beyond the active limit |
+| `E Z O D I A C S C O R P I O` | `zodiac.scorpio` | ♏ | disabled: beyond the active limit |
+| `E Z O D I A C T A U R U S` | `zodiac.taurus` | ♉ | disabled: beyond the active limit |
+| `E Z O D I A C V I R G O` | `zodiac.virgo` | ♍ | disabled: beyond the active limit |
 | `E Z O M B I E` | `zombie` | 🧟 | disabled: beyond the active limit |
 
-## Renames (18)
+## Renames (0)
 
 These use a different name from their typst one, because the typst name was
 blocked by a shorter one that is already taken. They are listed at the end so
 the table above stays the first thing you reach.
 
-* `bell.not` -> `notBell`
-* `calendar.spiral` -> `spiralCalendar`
-* `calendar.tearoff` -> `tearoffCalendar`
-* `excl.double` -> `doubleExcl`
-* `finger.t` -> `fingerT`
-* `heart.black` -> `blackHeart`
-* `heart.blue` -> `blueHeart`
-* `heart.broken` -> `brokenHeart`
-* `heart.green` -> `greenHeart`
-* `heart.orange` -> `orangeHeart`
-* `heart.purple` -> `purpleHeart`
-* `heart.white` -> `whiteHeart`
-* `lock.open` -> `openLock`
-* `megaphone.simple` -> `simpleMegaphone`
-* `pin.round` -> `roundPin`
-* `playback.repeat` -> `playbackRepeat`
-* `ruler.triangle` -> `triangleRuler`
-* `star.glow` -> `glowStar`
+* none
