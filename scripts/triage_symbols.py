@@ -237,20 +237,27 @@ for (const id of ['onlyoff', 'onlyon', 'namefilter']) {{
   if (el) el.addEventListener('input', refresh);
 }}
 refresh();
-}});  // end DOMContentLoaded
-
-document.getElementById('submit').addEventListener('click', async () => {{
-  const btn = document.getElementById('submit');
-  btn.disabled = true; btn.textContent = 'writing...';
-  const res = await fetch('/submit', {{
-    method: 'POST',
-    headers: {{'Content-Type': 'application/json'}},
-    body: JSON.stringify({{category: cat, enabled: ROWS.filter(r => r.on).map(r => r.typst)}})
+  // This handler must stay INSIDE the DOMContentLoaded closure: ROWS and cat
+  // are declared in it. It used to sit after the closing brace and threw
+  // "ROWS is not defined" on submit.
+  document.getElementById('submit').addEventListener('click', async () => {{
+    const btn = document.getElementById('submit');
+    btn.disabled = true;
+    btn.textContent = 'writing...';
+    const res = await fetch('/submit', {{
+      method: 'POST',
+      headers: {{'Content-Type': 'application/json'}},
+      body: JSON.stringify({{
+        category: cat,
+        enabled: ROWS.filter(r => r.on).map(r => r.typst),
+      }}),
+    }});
+    const out = await res.json();
+    document.body.innerHTML =
+      '<pre style="padding:2rem;font-size:1rem">' +
+      (out.message || out.error) + '</pre>';
   }});
-  const out = await res.json();
-  document.body.innerHTML = '<pre style="padding:2rem;font-size:1rem">' +
-    (out.message || out.error) + '</pre>';
-}});
+}});  // end DOMContentLoaded
 </script>
 </html>
 """
