@@ -164,6 +164,18 @@ symbols-gen:
 verify-nesting:
     ./scripts/check_macro_nesting.py
 
+# Check that no macro overflows the behaviour queue.
+#
+# ZMK drops the excess silently, so a truncated macro leaves a key held down -
+# which looks like a stuck key rather than a queue problem.
+#
+# check that every macro fits in the behaviour queue
+verify-queue:
+    ./scripts/check_macro_queue.py
+
+# run every static check
+verify: verify-nesting verify-queue
+
 # initialize west
 init:
     west init -l config
