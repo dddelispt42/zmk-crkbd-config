@@ -172,6 +172,12 @@ PAGE = """<!doctype html>
 </table>
 <button id="submit">Submit and write .dtsi</button>
 <script>
+// Everything runs after the document is fully parsed. The page is ~280 KB with
+// 1355 rows, and the script sits at the very end: binding synchronously left
+// later rows unparsed on a slower (network) load, so getElementById returned
+// null for them, the loop threw, and only the early rows stayed bound - which
+// is what made the list appear to re-sort and the filters appear dead.
+document.addEventListener('DOMContentLoaded', () => {{
 const ROWS = {rows_json};
 const BYTES = {bytes_per_seq};
 const KNOWN_GOOD = {known_good};
@@ -192,8 +198,12 @@ function refresh() {{
   const onlyOff = document.getElementById('onlyoff').checked;
   const onlyOn  = document.getElementById('onlyon').checked;
   const q = document.getElementById('namefilter').value.toLowerCase();
-  for (const r of ROWS) {{
-    const tr = document.getElementById(r.typst);
+  // Hide rows by walking the table, not by id lookup, so one missing row cannot
+  // abort the loop and leave everything after it unfiltered.
+  let i = 0;
+  for (const tr of tbody.querySelectorAll('tr')) {{
+    const r = ROWS[i++];
+    if (!r) continue;
     tr.classList.toggle('off', !r.on);
     let show = true;
     if (onlyOff && r.on) show = false;
@@ -203,16 +213,31 @@ function refresh() {{
   }}
 }}
 
-for (const r of ROWS) {{
-  const tr = document.getElementById(r.typst);
-  const cb = tr.querySelector('input');
+// Bind by walking the DOM rather than looking each row up by id.
+//
+// The id lookup threw `cb is null` on the emoji page: a single failed
+// getElementById aborted the whole loop, so every later row was left unbound.
+// The visible symptom was the list appearing to re-sort, because only the
+// early rows still responded to the filters.
+//
+// Indexing the <tr> elements directly removes the lookup, and therefore the
+// name-to-id matching that can go wrong on a large page.
+const trs = tbody.querySelectorAll('tr');
+for (let i = 0; i < ROWS.length; i++) {{
+  const r = ROWS[i];
+  const tr = trs[i];
+  if (!tr) continue;
+  const cb = tr.querySelector('input[type=checkbox]');
+  if (!cb) continue;
   cb.checked = r.on;
   cb.addEventListener('change', () => {{ r.on = cb.checked; refresh(); }});
 }}
-for (const id of ['onlyoff','onlyon','namefilter']) {{
-  document.getElementById(id).addEventListener('input', refresh);
+for (const id of ['onlyoff', 'onlyon', 'namefilter']) {{
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('input', refresh);
 }}
 refresh();
+}});  // end DOMContentLoaded
 
 document.getElementById('submit').addEventListener('click', async () => {{
   const btn = document.getElementById('submit');
@@ -306,6 +331,11 @@ def rewrite_dtsi(state: dict, enabled: set) -> str:
 
 
 class Handler(BaseHTTPRequestHandler):
+    # HTTP/1.1 with an explicit Content-Length, rather than the default 1.0 that
+    # closes the socket per response. The page is ~280 KB, and a predictable
+    # framed body is easier for the browser to hand to the parser in one piece.
+    protocol_version = "HTTP/1.1"
+
     state: dict = {}
 
     def log_message(self, *_args) -> None:  # quieter console
@@ -352,7 +382,7 @@ def main() -> int:
     state = load_category(args.category)
     Handler.state = state
 
-    url = f"http://127.0.0.1:{args.port}/"
+    url = f"http://0.0.0.0:{args.port}/"
     print(f"  {args.category}: {len(state['rows'])} candidates, "
           f"{state['enabled_count']} enabled")
     print(f"  serving {url}  (Ctrl-C to abort without writing anything)")
@@ -360,7 +390,7 @@ def main() -> int:
         webbrowser.open(url)
 
     try:
-        HTTPServer(("127.0.0.1", args.port), Handler).serve_forever()
+        HTTPServer(("0.0.0.0", args.port), Handler).serve_forever()
     except KeyboardInterrupt:
         print("\n  aborted, nothing written")
     return 0
