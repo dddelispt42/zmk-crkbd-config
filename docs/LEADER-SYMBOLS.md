@@ -6,8 +6,8 @@ Do not edit by hand.
 
 | page | what | active | disabled |
 |---|---|---|---|
-| [LEADER-MATH.md](LEADER-MATH.md) | math symbols, leader + `M` | 509 | 499 |
-| [LEADER-EMOJI.md](LEADER-EMOJI.md) | emoji, leader + `E` | 614 | 772 |
+| [LEADER-MATH.md](LEADER-MATH.md) | math symbols, leader + `M` | 461 | 547 |
+| [LEADER-EMOJI.md](LEADER-EMOJI.md) | emoji, leader + `E` | 509 | 877 |
 
 ## How to type them
 
