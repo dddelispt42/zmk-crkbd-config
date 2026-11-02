@@ -62,8 +62,8 @@ Press it, then a short sequence:
 
 | what | how | example |
 |---|---|---|
-| **math symbols** | leader, `M`, then the symbol's name | `M S U M` → ∑, `M L E Q` → ≤ |
-| **emoji** | leader, `E`, then the name | `E H E A R T` → ❤, `E T H U M B DOT U P` → 👍 |
+| **math symbols** | leader, `M`, then the symbol's name | `M S U M` → ∑, `M L T E Q DOT` → ≤ |
+| **emoji** | leader, `E`, then the name | `E H E A R T` → ❤, `E T H U M B U P` → 👍 |
 | **Greek** | leader, `G`, then one letter | `G G` → γ, `G G`+Shift → Γ |
 | **sign-offs** | leader, two or three letters | `O B R` → "Obrigado,\nHeiko" |
 | **unicode mode** | leader, `U X L/W/M` | switch the input method to Linux/Windows/macOS |
@@ -72,13 +72,16 @@ Names follow **typst/LaTeX** and are never renamed: `sum`, `approx`, `and`,
 `arrow.r`. Dots inside a name are dropped, so `arrow.cm` is `M A R R O W C M`.
 
 Where a name is the start of a longer one, a **DOT goes on the end**: `and` is
-`M A N D DOT`, because `and.big` and `and.curly` also exist. If you type the
-short form and nothing appears, the leader is still live - add the DOT.
+`M A N D DOT` and `lt.eq` is `M L T E Q DOT`, because `and.big`, `lt.eq.slant`
+and others also exist. If you type the short form and nothing appears, the
+leader is still live - add the DOT. Trying `M S U M` and getting ∑ with no DOT,
+then `M L T E Q` and getting nothing, is the intended way to discover it.
 
-Exact collisions like typst's `alpha`/`Alpha` cannot be separated by punctuation
-(there is no timeout, and leader keys ignore shift), so uppercase Greek takes a
-leading `g`: `M G G A M M A`. [docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md)
-lists the exact sequence for every entry.
+Greek is **not** under `M` at all - it has its own prefix, so `leader` `G` `G`
+gives γ and the same with Shift gives Γ. See the Greek row above.
+
+[docs/LEADER-SYMBOLS.md](docs/LEADER-SYMBOLS.md) lists the exact sequence for
+every entry, active or disabled.
 
 **500 math symbols and 451 emoji are active.** The cap is a RAM budget, not a
 limit on what is reachable: the leader sequences live in RAM (the module declares

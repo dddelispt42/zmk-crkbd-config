@@ -14,6 +14,13 @@ Do not edit by hand.
 Press the leader key, then the category letter, then the name one letter at a
 time.
 
+| what | type | example |
+|---|---|---|
+| math symbol | leader, `M`, name | `M S U M` gives ∑ |
+| emoji | leader, `E`, name | `E H E A R T` gives ❤ |
+| Greek | leader, `G`, one letter | `G G` gives γ, `G G`+Shift gives Γ |
+| sign-off | leader, 2-3 letters | `O B R` gives "Obrigado," then a newline then "Heiko" |
+
 **Every name is written as typst spells it, with the dots removed.** So
 `arrow.cm` is `M A R R O W C M` and `and` is `M A N D`.
 
@@ -28,49 +35,35 @@ been sent to the host, so there is nothing to undo - the symbol simply appears.
 If you had to remember an internal DOT, or a different spelling like `wedge`,
 there would be no such signal.
 
-**Names are never renamed to avoid a clash.** The only exceptions are pairs that
-collide exactly, like typst's `alpha` and `Alpha`, which no punctuation can
-separate - a leader key matches keycodes, not shift state. Uppercase Greek takes
-a leading `g` for that reason: `Gamma` is `M G G A M M A`.
+**Names are never renamed.** Every entry is typed as typst spells it, minus the
+dots. Where two names would collide exactly - typst has both `alpha` and
+`Alpha` - the pair cannot be separated by punctuation, since a leader key
+matches keycodes and not shift state. Greek is not affected: it lives under its
+own `G` prefix and is not part of this set at all.
 
 The tables below give the exact sequence for every entry, active or not.
-
-| what | type | example |
-|---|---|---|
-| math symbol | leader, `M`, name | `M S U M` gives ∑ |
-| emoji | leader, `E`, name | `E H E A R T` gives ❤ |
-| Greek | leader, `G`, one letter | `G G` gives γ, `G G`+Shift gives Γ |
-| sign-off | leader, 2-3 letters | `O B R` gives "Obrigado," then a newline then "Heiko" |
 
 Names follow **typst/LaTeX**, so they are the ones you already type: `sum`,
 `approx`, `arrow.r`, `integral`.
 
 ## How the set is chosen
 
-Symbols are ranked by **usefulness first**, then conflicts are resolved - not
-the other way round. A name that clashes with one already taken is *renamed*
-rather than dropped:
+Symbols are ranked by **usefulness first**, by the section of typst's symbol
+table they come from. Arithmetic, relations, set theory, calculus and logic rank
+above the letter sets, which are alphabets rather than operation symbols.
 
-* to its **LaTeX command** where one exists - `lt.eq` becomes `leq`,
-  `union.big` becomes `bigcup`
-* to a **compact spelling** joining the dotted parts - `arrow.r.bar` becomes
-  `arrowRBar`
-* to a **reversed spelling** when the compact one still starts with a taken
-  base - `lat.eq` becomes `eqLat`
+The active count is then capped. That cap is a RAM budget, not a limit on what
+is reachable: the leader sequences live in RAM at 144 bytes each, so about a
+thousand fit alongside ZMK's BLE and Studio. Everything beyond the cap is
+emitted commented out, ready to enable.
 
-A short base name is a prefix of its whole family, so it blocks every longer
-name that starts with it. The highest-value blockers are therefore renamed to
-distinct words - `inter` to `intersec`, `arrow.l` to `leftarrow` - which frees
-the family rather than just the one symbol. Every rename is listed on the
-category page.
+Nothing is removed and nothing is renamed. Of the ~1000 offered math symbols and
+~1380 emoji, 500 and 451 are enabled and the rest are in the `.dtsi` as
+comments.
 
-A symbol is only disabled if **every** spelling of it is already taken. Nothing
-is removed: disabled entries are emitted commented out in the `.dtsi` and
-listed below the active ones.
-
-Greek is absent from the math set on purpose. `leader1 + G` already covers all
-25 letters and, because the module's Greek aliases carry both cases as a pair
-(`UC_EL_GAMMA` is `0x3b3 0x393`), holding Shift gives the capital.
+Greek is absent from the math set on purpose: `leader1 + G` already covers all
+25 letters, and holding Shift gives the capitals, so repeating them under `M`
+would be redundant.
 
 ## Adding or changing symbols
 

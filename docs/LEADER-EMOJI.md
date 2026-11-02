@@ -1397,11 +1397,3 @@ disabled.
 | `E Z O D I A C T A U R U S` | `zodiac.taurus` | ♉ | disabled: beyond the active limit |
 | `E Z O D I A C V I R G O` | `zodiac.virgo` | ♍ | disabled: beyond the active limit |
 | `E Z O M B I E` | `zombie` | 🧟 | disabled: beyond the active limit |
-
-## Renames (0)
-
-These use a different name from their typst one, because the typst name was
-blocked by a shorter one that is already taken. They are listed at the end so
-the table above stays the first thing you reach.
-
-* none

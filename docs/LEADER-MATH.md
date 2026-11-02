@@ -1019,11 +1019,3 @@ disabled.
 | `M T R I A N G L E S T R O K E D T R` | `triangle.stroked.tr` | ◹ | disabled: beyond the active limit |
 | `M U N D E R S C O R E` | `underscore` | _ | disabled: beyond the active limit |
 | `M W R E A T H` | `wreath` | ≀ | disabled: beyond the active limit |
-
-## Renames (0)
-
-These use a different name from their typst one, because the typst name was
-blocked by a shorter one that is already taken. They are listed at the end so
-the table above stays the first thing you reach.
-
-* none
