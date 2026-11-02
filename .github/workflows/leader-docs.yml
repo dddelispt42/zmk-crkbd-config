@@ -21,6 +21,18 @@ on:
 permissions:
   contents: write
 
+# Only one workflow may push at a time.
+#
+# This job and the draw job both write to the repo and are both triggered by the
+# same edit to config/include/leader-*.dtsi. When they overlap, whichever pushes
+# second is rejected - which is what broke the draw job, whose
+# --force-with-lease push was refused with "stale info" after this job pushed.
+# Serialising them (with the SAME group name in draw-keymaps.yml) removes the
+# race. cancel-in-progress is false so a queued writer is not dropped.
+concurrency:
+  group: repo-writers
+  cancel-in-progress: false
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -48,6 +60,9 @@ jobs:
       - name: Commit if the docs changed
         run: |
           set -euo pipefail
+          REMOTE="https://x-access-token:${GITHUB_TOKEN}@${GITHUB_SERVER_URL#https://}/${GITHUB_REPOSITORY}.git"
+          BRANCH="${GITHUB_REF_NAME}"
+
           if git diff --quiet -- 'docs/LEADER-*.md'; then
             echo "docs already in step with the .dtsi files"
             exit 0
@@ -55,17 +70,28 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/LEADER-*.md
-          # Plain commit, matching the draw workflow: rewriting published
-          # history on every change was destructive.
+          # A plain commit that only adds to history. Never amend or force-push:
+          # rewriting a published branch is destructive, and it is what made the
+          # draw job fail with a stale --force-with-lease.
           git commit -m "chore: regenerate leader symbol docs"
-          # Checkout is on a detached HEAD for push events, so there is no
-          # current branch to push. Name the ref explicitly, and read the branch
-          # from the event so this also works on workflow_dispatch.
-          BRANCH="${GITHUB_REF_NAME}"
-          # persist-credentials is false, so supply the token to this one push
-          # rather than storing it in .git/config.
-          git push \
-            "https://x-access-token:${GITHUB_TOKEN}@${GITHUB_SERVER_URL#https://}/${GITHUB_REPOSITORY}.git" \
-            "HEAD:refs/heads/${BRANCH}"
+
+          # Retry once on a non-fast-forward. The concurrency group above should
+          # prevent this, but a push can still race with a manual one, and
+          # rebasing onto the new tip is safe here because nothing depends on
+          # this commit being the tip.
+          for attempt in 1 2; do
+            # Checkout is on a detached HEAD for push events, so there is no
+            # current branch to name. Push HEAD explicitly.
+            if git push "$REMOTE" "HEAD:refs/heads/${BRANCH}"; then
+              exit 0
+            fi
+            if [ "$attempt" = 2 ]; then
+              echo "push failed twice, giving up" >&2
+              exit 1
+            fi
+            echo "push rejected, rebasing onto the new tip and retrying"
+            git fetch "$REMOTE" "$BRANCH"
+            git rebase FETCH_HEAD
+          done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

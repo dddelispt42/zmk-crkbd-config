@@ -15,6 +15,16 @@ on:
       # - "images/keymap-img/keymap_drawer.config.yaml"
       # - 'boards/*/*/*.keymap'
 
+# Only one workflow may push at a time.
+#
+# The draw job and the leader-docs job both write to the repo, and both are
+# triggered by the same edit to config/include/leader-*.dtsi. When they overlap,
+# whichever pushes second is rejected. Serialising them here (and in
+# leader-docs.yml, with the SAME group name) removes the race.
+concurrency:
+  group: repo-writers
+  cancel-in-progress: false
+
 jobs:
   draw:
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
@@ -31,6 +41,15 @@ jobs:
       output_folder: "img"            # path to save produced SVG and keymap YAML files
       parse_args: ""  # map of extra args to pass to `keymap parse`, e.g. "corne:'-l Def Lwr Rse' cradio:''"
       draw_args: ""   # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"
-      amend_commit: true # amend generated files to commit that produces them
+      # FALSE, deliberately. With amend_commit the action rewrites the commit
+      # that triggered the run and pushes it with --force-with-lease, which
+      # fails with "stale info" the moment anything else lands on main first -
+      # as happened when the leader-docs job pushed while this job was running.
+      #
+      # The images are derived artifacts, so they do not need to be folded into
+      # the triggering commit. A normal commit is also recoverable: history is
+      # only ever added to, never rewritten.
+      amend_commit: false
+      commit_message: "chore: redraw keymaps"
       fail_on_error: true
       debug_mode: false
