@@ -1,0 +1,59 @@
+# Keep docs/LEADER-*.md aligned with the generated .dtsi files.
+#
+# The triage tool (`just symbols`) edits config/include/leader-*.dtsi directly,
+# which is the source of truth for what is enabled. The markdown tables are
+# derived from those files, so without this job they would drift the moment
+# someone toggles a symbol and forgets to regenerate.
+#
+# The job regenerates and commits only if something changed. It reads no
+# network and touches no code - `--docs-only` parses the committed .dtsi.
+name: Leader docs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "config/include/leader-math.dtsi"
+      - "config/include/leader-emoji.dtsi"
+      - "scripts/gen_leader_symbols.py"
+      - ".github/workflows/leader-docs.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      # Pinned to a commit hash, not a tag: zizmor's unpinned-uses policy
+      # requires it and the pre-commit hook enforces it. The trailing comment
+      # records which release the hash is, the conventional form.
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          # No credentials are needed after checkout, and persisting them into
+          # the workspace is what zizmor's artipacked audit warns about.
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065  # v5.6.0
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate the leader docs from the .dtsi files
+        run: ./scripts/gen_leader_symbols.py --docs-only --offline
+
+      - name: Commit if the docs changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- 'docs/LEADER-*.md'; then
+            echo "docs already in step with the .dtsi files"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/LEADER-*.md
+          # Plain commit, matching the draw workflow: rewriting published
+          # history on every change was destructive.
+          git commit -m "chore: regenerate leader symbol docs"
+          git push

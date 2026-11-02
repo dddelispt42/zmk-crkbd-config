@@ -611,7 +611,30 @@ def compact_reversed(name: str) -> str:
     return parts[-1] + "".join(p.capitalize() for p in parts[:-1])
 
 
-def select_math_by_usefulness(entries, sections, limit, prefix="M"):
+def read_enabled(path: pathlib.Path, cat: str) -> set:
+    """The set of names enabled in an existing generated .dtsi.
+
+    A line is enabled if it is not preceded by `//`. This file is the source of
+    truth for which symbols are active: the triage tool edits it directly, and
+    the generator reads it back so a regeneration preserves those choices
+    instead of resetting them to a count.
+
+    Returns an empty set if the file does not exist yet, which is the correct
+    behaviour for a first run.
+    """
+    if not path.is_file():
+        return set()
+    text = path.read_text(encoding="utf-8")
+    # Node names have every character that is not [A-Za-z0-9_] replaced with an
+    # underscore, so `and.big` is emitted as `seq_m_and_big`. Map back, or every
+    # dotted name would look disabled and be reset on the next regeneration.
+    return {
+        node.replace("_", ".")
+        for node in re.findall(rf"^\s+seq_{cat}_(\w+) \{{ sequence", text, re.M)
+    }
+
+
+def select_math_by_usefulness(entries, sections, enabled, prefix="M"):
     """Pick the most useful `limit` math symbols, resolving every conflict.
 
     The algorithm, which follows the stated intent - rank by usefulness first,
@@ -658,14 +681,10 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
         cps = spec_to_codepoints(spec)
         if not cps:
             continue
-        if len(active) >= limit:
-            # The limit is a RAM budget, not a nicety: the sequences live in
-            # .data, so every active one costs bytes that ZMK's own stack and
-            # buffers also need. Renamed symbols count like any other; they were
-            # previously exempt, which quietly overshot the requested count.
-            commented.append(
-                (name, cps, keys_for(name), "beyond the active limit")
-            )
+        if name not in enabled:
+            # Not selected. `enabled` comes from the existing .dtsi, so this is
+            # the set the triage tool left behind rather than a count.
+            commented.append((name, cps, keys_for(name), "not enabled"))
             continue
 
         # The spelling is the typst name itself, or its RENAMES entry when the
@@ -690,7 +709,7 @@ def select_math_by_usefulness(entries, sections, limit, prefix="M"):
     return apply_trailing_dots(active, prefix), renamed, commented
 
 
-def select_emoji_by_usefulness(entries, limit, prefix="E"):
+def select_emoji_by_usefulness(entries, enabled, prefix="E"):
     """Pick the most useful `limit` emoji, resolving conflicts by rename.
 
     Same algorithm as the math selector, but emoji have no LaTeX names and no
@@ -748,8 +767,8 @@ def select_emoji_by_usefulness(entries, limit, prefix="E"):
                 (name, cps, keys_for(name), "labelled button glyph")
             )
             continue
-        if len(active) >= limit:
-            commented.append((name, cps, keys_for(name), "beyond the active limit"))
+        if name not in enabled:
+            commented.append((name, cps, keys_for(name), "not enabled"))
             continue
 
         # Same rule as the math set: the typst name is the spelling, and a
@@ -928,18 +947,94 @@ def build_sections(path: pathlib.Path) -> dict:
     return out
 
 
+def docs_from_dtsi() -> int:
+    """Regenerate only the markdown, reading the .dtsi files as the source.
+
+    The .dtsi already records everything the docs need: the enabled set, each
+    entry's spelling and glyph, and the trailing-DOT decision. So no typst fetch
+    is required and the .dtsi files are never written - which makes this safe to
+    run in CI on every change.
+    """
+    inc = REPO / "config" / "include"
+    docs_dir = REPO / "docs"
+
+    def parse(path: pathlib.Path, cat: str):
+        """(typst, used, cps, keys) for each entry, active or commented."""
+        active, commented = [], []
+        text = path.read_text(encoding="utf-8")
+        for m in re.finditer(
+            rf"^([ \t]*)(// )?(seq_{cat}_(\w+))(\s+\{{ sequence = <([^>]+)>; "
+            rf"bindings = <([^>]+)>; \}};\s*//\s*(\S+))",
+            text,
+            re.M,
+        ):
+            _indent, off, _node, used_node, _ws, seq, binds, typst = m.groups()
+            keys = tuple(seq.split())
+            cps = [int(x, 16) for x in re.findall(r"&uc 0x([0-9A-Fa-f]+) 0", binds)]
+            used = used_node.replace("_", ".")
+            if off:
+                # _table expects commented entries as (typst, cps, keys, why),
+                # which differs from the active tuple. Passing the active shape
+                # for both put `used` into the cps slot and crashed on chr().
+                #
+                # The .dtsi does not record WHY an entry is disabled, so the
+                # reason is re-derived here. Button glyphs are the one case that
+                # is determinable from the glyph itself, and they are excluded
+                # rather than merely unselected - worth keeping distinct so the
+                # docs match what the full generator writes.
+                why = (
+                    "labelled button glyph"
+                    if cat == "e" and is_button_glyph(cps)
+                    else "not enabled"
+                )
+                commented.append((typst, cps, keys, why))
+            else:
+                active.append((typst, used, cps, keys))
+        return active, commented
+
+    m_active, m_comment = parse(inc / "leader-math.dtsi", "m")
+    e_active, e_comment = parse(inc / "leader-emoji.dtsi", "e")
+
+    # Sort alphabetically for the tables, as the full generator does.
+    m_active.sort(key=lambda r: r[1])
+    e_active.sort(key=lambda r: r[1])
+    m_comment.sort(key=lambda r: r[0])
+    e_comment.sort(key=lambda r: r[0])
+
+    write_docs(docs_dir, m_active, m_comment, [], e_active, e_comment, [])
+    print(f"  math : {len(m_active)} active, {len(m_comment)} disabled")
+    print(f"  emoji: {len(e_active)} active, {len(e_comment)} disabled")
+    print("  wrote docs/LEADER-SYMBOLS.md, LEADER-MATH.md, LEADER-EMOJI.md")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--offline", action="store_true")
     ap.add_argument(
-        "--math", type=int, default=500,
-        help="cap on math symbols (default 500; see RTF docstring for the RAM budget)",
+        "--math", type=int, default=None,
+        help=(
+            "enable the N most useful math symbols, ignoring the enabled set in "
+            "the existing .dtsi. Omit to preserve what is already enabled, which "
+            "is the normal case and what the triage tool relies on."
+        ),
     )
     ap.add_argument(
-        "--emoji", type=int, default=451,
-        help="cap on emoji (default 451, so math+emoji stays at ~1000 sequences)",
+        "--emoji", type=int, default=None,
+        help="enable the N most useful emoji, ignoring the existing .dtsi",
+    )
+    ap.add_argument(
+        "--docs-only", action="store_true",
+        help=(
+            "regenerate docs/LEADER-*.md from the existing .dtsi files and stop. "
+            "Used by `just docs` and CI, where the typst source is not fetched "
+            "and the .dtsi must not be touched."
+        ),
     )
     args = ap.parse_args()
+
+    if args.docs_only:
+        return docs_from_dtsi()
 
     print("parsing codex data")
     sym_path = fetch("sym.txt", args.offline)
@@ -964,12 +1059,33 @@ def main() -> int:
     print(f"  math candidates: {len(math_entries)} "
           f"(of {len(sym)}; Greek, accents and non-maths sections excluded)")
 
-    # Rank by usefulness first, then resolve conflicts. Renaming is what makes
-    # a large set possible: without it, bare `arrow.r` shadows its whole family.
+    # Which symbols are enabled comes from the generated .dtsi files, which the
+    # triage tool writes. That makes the .dtsi the single source of truth: a
+    # regeneration preserves your triage rather than resetting it to a count,
+    # and any NEW typst symbol appears disabled until you enable it.
+    #
+    # --math/--emoji override this with "the N most useful", which is only for
+    # bootstrapping or deliberately starting over.
+    inc_dir = REPO / "config" / "include"
+    if args.math is not None:
+        ordered_math = sorted(
+            math_entries, key=lambda e: usefulness(e[0], sections.get(e[0], ""))
+        )
+        m_enabled = {n for n, _ in ordered_math[: args.math]}
+    else:
+        m_enabled = read_enabled(inc_dir / "leader-math.dtsi", "m")
+
+    if args.emoji is not None:
+        e_enabled = {n for n, _ in emoji[: args.emoji]}
+    else:
+        e_enabled = read_enabled(inc_dir / "leader-emoji.dtsi", "e")
+
+    print(f"  enabled from .dtsi: math {len(m_enabled)}, emoji {len(e_enabled)}")
+
     m_active, m_renamed, m_comment = select_math_by_usefulness(
-        math_entries, sections, args.math
+        math_entries, sections, m_enabled
     )
-    e_active, e_renamed, e_comment = select_emoji_by_usefulness(emoji, args.emoji)
+    e_active, e_renamed, e_comment = select_emoji_by_usefulness(emoji, e_enabled)
 
     print(f"  math : {len(m_active)} active, {len(m_renamed)} renamed, "
           f"{len(m_comment)} commented")

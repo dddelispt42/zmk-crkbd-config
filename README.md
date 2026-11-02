@@ -100,20 +100,36 @@ Note the leader sequences are **not drawn** in the keymap SVGs: at this size
 they would paginate into hundreds of virtual layers. The markdown reference
 above is the documentation.
 
-### Adding or changing symbols
-
-The two `leader-*.dtsi` files are **generated** from typst's own symbol tables
-and must not be edited by hand. To change the set, edit
-`scripts/gen_leader_symbols.py` and re-run it:
+### Choosing which symbols are enabled
 
 ```sh
-./scripts/gen_leader_symbols.py            # 500 math + 451 emoji (default)
-./scripts/gen_leader_symbols.py --math 300 --emoji 300   # smaller set
+just symbols              # math,  http://127.0.0.1:8000
+just symbols emoji        # emoji
 ```
 
-The generator ranks symbols by usefulness **first**, then resolves conflicts by
-renaming rather than dropping (`arrow.r.bar` → `arrowRBar`), and asserts that
-nothing is silently lost.
+Serves a local page listing every candidate — enabled and disabled — with its
+glyph, typst name and leader sequence, and a toggle per row. A live counter
+shows the RAM the current selection costs and warns past the size known to link.
+Nothing is written until **Submit**, which comments the chosen lines in or out
+of the `.dtsi` and exits. Ctrl-C leaves the files untouched.
+
+There is no separate state file: **the `.dtsi` is the source of truth.** The tool
+reads the enabled set from it, and the generator reads it back, so triage
+choices survive regeneration and a new upstream typst symbol arrives disabled.
+
+### Regenerating
+
+```sh
+just symbols-docs         # rewrite docs/LEADER-*.md from the .dtsi files
+just symbols-gen          # pull new symbols from typst, then rewrite everything
+```
+
+`symbols-docs` reads only `config/include/leader-*.dtsi`, so it needs no network
+and changes no code. A CI job runs it on every change to those files and commits
+the result, which is what keeps the tables below the code rather than beside it.
+
+`symbols-gen` re-fetches typst's tables. The enabled set is preserved, so it is
+only needed to pick up new symbols upstream.
 
 ## Using the laptop keyboard (keyd)
 
@@ -155,7 +171,8 @@ config/
   sweep.keymap            /
   *.json                  keymap-drawer physical layouts
 scripts/check_macro_nesting.py  devicetree nesting guard
-scripts/gen_leader_symbols.py   regenerates the two leader-*.dtsi files
+scripts/gen_leader_symbols.py   regenerates the leader .dtsi files and docs
+scripts/triage_symbols.py       web page for choosing which symbols are enabled
 zmk_macro_gen.py                turns typed text into a ZMK_MACRO block
 docs/LEADER-SYMBOLS.md          the leader symbol reference index (generated)
 docs/LEADER-MATH.md             math symbol table (generated)

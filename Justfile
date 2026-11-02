@@ -128,6 +128,38 @@ clean-draw:
 # `/ { ... }` root node, so calling one inside another node body is invalid
 # devicetree.
 #
+# Triage which symbols and emoji are enabled, in a local web page.
+#
+# Serves a table of every candidate with its glyph, typst name and leader
+# sequence, and a toggle per row. Nothing is written until Submit, which edits
+# the generated .dtsi in place (commenting lines in or out) and exits.
+#
+# The .dtsi is the source of truth - this script and `symbols-docs` both read
+# it back - so triage choices survive regeneration, and a new typst symbol
+# arrives disabled until you enable it.
+#
+# triage enabled symbols and emoji in a web page
+symbols category="math" port="8000":
+    ./scripts/triage_symbols.py --category {{ category }} --port {{ port }}
+
+# Regenerate the leader docs from the generated .dtsi files.
+#
+# Reads only config/include/leader-*.dtsi, so it needs no network and writes no
+# code. This is what keeps docs/LEADER-*.md aligned with whatever `just symbols`
+# left behind, and it is what CI runs.
+#
+# regenerate the leader symbol and emoji docs
+symbols-docs:
+    ./scripts/gen_leader_symbols.py --docs-only --offline
+
+# Regenerate the .dtsi files AND the docs from typst's upstream tables. Only
+# needed to pull in new typst symbols; the enabled set is read back from the
+# existing .dtsi, so your triage is preserved.
+#
+# regenerate .dtsi files and docs from typst
+symbols-gen:
+    ./scripts/gen_leader_symbols.py
+
 # check that no self-wrapping macro is nested inside a node body
 verify-nesting:
     ./scripts/check_macro_nesting.py
