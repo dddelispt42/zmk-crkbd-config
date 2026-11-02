@@ -31,8 +31,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
         with:
-          # No credentials are needed after checkout, and persisting them into
-          # the workspace is what zizmor's artipacked audit warns about.
+          # Keep the token out of .git/config: zizmor's artipacked audit warns
+          # when credentials are persisted into the workspace. The commit step
+          # passes the token to the one `git push` that needs it instead, so it
+          # never survives past that command.
           persist-credentials: false
 
       - name: Set up Python
@@ -56,4 +58,14 @@ jobs:
           # Plain commit, matching the draw workflow: rewriting published
           # history on every change was destructive.
           git commit -m "chore: regenerate leader symbol docs"
-          git push
+          # Checkout is on a detached HEAD for push events, so there is no
+          # current branch to push. Name the ref explicitly, and read the branch
+          # from the event so this also works on workflow_dispatch.
+          BRANCH="${GITHUB_REF_NAME}"
+          # persist-credentials is false, so supply the token to this one push
+          # rather than storing it in .git/config.
+          git push \
+            "https://x-access-token:${GITHUB_TOKEN}@${GITHUB_SERVER_URL#https://}/${GITHUB_REPOSITORY}.git" \
+            "HEAD:refs/heads/${BRANCH}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
