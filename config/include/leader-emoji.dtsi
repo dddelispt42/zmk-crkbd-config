@@ -9,8 +9,8 @@
 
 &leader1 {
     /* --- active (614) --- */
-    seq_e_abacus { sequence = <E A B A C U S>; bindings = <&uc 0x1F9EE 0>; };  // abacus = 🧮
-    seq_e_accordion { sequence = <E A C C O R D I O N>; bindings = <&uc 0x1FA97 0>; };  // accordion = 🪗
+    // seq_e_abacus { sequence = <E A B A C U S>; bindings = <&uc 0x1F9EE 0>; };  // abacus = 🧮
+    // seq_e_accordion { sequence = <E A C C O R D I O N>; bindings = <&uc 0x1FA97 0>; };  // accordion = 🪗
     seq_e_aesculapius { sequence = <E A E S C U L A P I U S>; bindings = <&uc 0x2695 0 &uc 0xFE0F 0>; };  // aesculapius = ⚕
     seq_e_airplane { sequence = <E A I R P L A N E>; bindings = <&uc 0x2708 0 &uc 0xFE0F 0>; };  // airplane = ✈
     seq_e_alien { sequence = <E A L I E N>; bindings = <&uc 0x1F47D 0 &uc 0xFE0F 0>; };  // alien = 👽
@@ -27,7 +27,7 @@
     seq_e_arrow_l_back { sequence = <E A R R O W L B A C K>; bindings = <&uc 0x1F519 0>; };  // arrow.l.back = 🔙
     seq_e_arrow_l_filled { sequence = <E A R R O W L F I L L E D>; bindings = <&uc 0x2B05 0 &uc 0xFE0F 0>; };  // arrow.l.filled = ⬅
     seq_e_arrow_l_r { sequence = <E A R R O W L R DOT>; bindings = <&uc 0x2194 0 &uc 0xFE0F 0>; };  // arrow.l.r = ↔
-    seq_e_arrow_l_r_on { sequence = <E A R R O W L R O N>; bindings = <&uc 0x1F51B 0>; };  // arrow.l.r.on = 🔛
+    // seq_e_arrow_l_r_on { sequence = <E A R R O W L R O N>; bindings = <&uc 0x1F51B 0>; };  // arrow.l.r.on = 🔛
     seq_e_arrow_r_filled { sequence = <E A R R O W R F I L L E D>; bindings = <&uc 0x27A1 0 &uc 0xFE0F 0>; };  // arrow.r.filled = ➡
     seq_e_arrow_r_soon { sequence = <E A R R O W R S O O N>; bindings = <&uc 0x1F51C 0>; };  // arrow.r.soon = 🔜
     seq_e_arrow_t_b { sequence = <E A R R O W T B>; bindings = <&uc 0x2195 0 &uc 0xFE0F 0>; };  // arrow.t.b = ↕
@@ -35,7 +35,7 @@
     seq_e_arrow_t_filled { sequence = <E A R R O W T F I L L E D>; bindings = <&uc 0x2B06 0 &uc 0xFE0F 0>; };  // arrow.t.filled = ⬆
     seq_e_arrow_tl { sequence = <E A R R O W T L>; bindings = <&uc 0x2196 0 &uc 0xFE0F 0>; };  // arrow.tl = ↖
     seq_e_arrow_tr { sequence = <E A R R O W T R>; bindings = <&uc 0x2197 0 &uc 0xFE0F 0>; };  // arrow.tr = ↗
-    seq_e_arrows_cycle { sequence = <E A R R O W S C Y C L E>; bindings = <&uc 0x1F504 0>; };  // arrows.cycle = 🔄
+    // seq_e_arrows_cycle { sequence = <E A R R O W S C Y C L E>; bindings = <&uc 0x1F504 0>; };  // arrows.cycle = 🔄
     seq_e_atm { sequence = <E A T M>; bindings = <&uc 0x1F3E7 0>; };  // atm = 🏧
     seq_e_atom { sequence = <E A T O M>; bindings = <&uc 0x269B 0 &uc 0xFE0F 0>; };  // atom = ⚛
     seq_e_avocado { sequence = <E A V O C A D O>; bindings = <&uc 0x1F951 0>; };  // avocado = 🥑
@@ -47,45 +47,45 @@
     seq_e_balloon { sequence = <E B A L L O O N>; bindings = <&uc 0x1F388 0>; };  // balloon = 🎈
     seq_e_banana { sequence = <E B A N A N A>; bindings = <&uc 0x1F34C 0>; };  // banana = 🍌
     seq_e_bank { sequence = <E B A N K>; bindings = <&uc 0x1F3E6 0>; };  // bank = 🏦
-    seq_e_baseball { sequence = <E B A S E B A L L>; bindings = <&uc 0x26BE 0 &uc 0xFE0F 0>; };  // baseball = ⚾
+    // seq_e_baseball { sequence = <E B A S E B A L L>; bindings = <&uc 0x26BE 0 &uc 0xFE0F 0>; };  // baseball = ⚾
     seq_e_basecap { sequence = <E B A S E C A P>; bindings = <&uc 0x1F9E2 0>; };  // basecap = 🧢
     seq_e_bat { sequence = <E B A T DOT>; bindings = <&uc 0x1F987 0>; };  // bat = 🦇
     seq_e_battery { sequence = <E B A T T E R Y DOT>; bindings = <&uc 0x1F50B 0>; };  // battery = 🔋
     seq_e_battery_low { sequence = <E B A T T E R Y L O W>; bindings = <&uc 0x1FAAB 0>; };  // battery.low = 🪫
-    seq_e_beads { sequence = <E B E A D S>; bindings = <&uc 0x1F4FF 0>; };  // beads = 📿
-    seq_e_beans { sequence = <E B E A N S>; bindings = <&uc 0x1FAD8 0>; };  // beans = 🫘
+    // seq_e_beads { sequence = <E B E A D S>; bindings = <&uc 0x1F4FF 0>; };  // beads = 📿
+    // seq_e_beans { sequence = <E B E A N S>; bindings = <&uc 0x1FAD8 0>; };  // beans = 🫘
     seq_e_bear { sequence = <E B E A R>; bindings = <&uc 0x1F43B 0>; };  // bear = 🐻
     seq_e_bed { sequence = <E B E D>; bindings = <&uc 0x1F6CF 0 &uc 0xFE0F 0>; };  // bed = 🛏
     seq_e_bee { sequence = <E B E E DOT>; bindings = <&uc 0x1F41D 0>; };  // bee = 🐝
     seq_e_beer { sequence = <E B E E R>; bindings = <&uc 0x1F37A 0>; };  // beer = 🍺
     seq_e_beetle { sequence = <E B E E T L E DOT>; bindings = <&uc 0x1FAB2 0>; };  // beetle = 🪲
-    seq_e_beetle_lady { sequence = <E B E E T L E L A D Y>; bindings = <&uc 0x1F41E 0>; };  // beetle.lady = 🐞
+    // seq_e_beetle_lady { sequence = <E B E E T L E L A D Y>; bindings = <&uc 0x1F41E 0>; };  // beetle.lady = 🐞
     seq_e_bell { sequence = <E B E L L DOT>; bindings = <&uc 0x1F514 0>; };  // bell = 🔔
     seq_e_bell_not { sequence = <E B E L L N O T>; bindings = <&uc 0x1F515 0>; };  // bell.not = 🔕
     seq_e_bicyclist { sequence = <E B I C Y C L I S T>; bindings = <&uc 0x1F6B4 0>; };  // bicyclist = 🚴
     seq_e_bike { sequence = <E B I K E DOT>; bindings = <&uc 0x1F6B2 0 &uc 0xFE0F 0>; };  // bike = 🚲
-    seq_e_bike_not { sequence = <E B I K E N O T>; bindings = <&uc 0x1F6B3 0>; };  // bike.not = 🚳
+    // seq_e_bike_not { sequence = <E B I K E N O T>; bindings = <&uc 0x1F6B3 0>; };  // bike.not = 🚳
     seq_e_billiards { sequence = <E B I L L I A R D S>; bindings = <&uc 0x1F3B1 0>; };  // billiards = 🎱
     seq_e_bin { sequence = <E B I N>; bindings = <&uc 0x1F5D1 0 &uc 0xFE0F 0>; };  // bin = 🗑
     seq_e_biohazard { sequence = <E B I O H A Z A R D>; bindings = <&uc 0x2623 0 &uc 0xFE0F 0>; };  // biohazard = ☣
     seq_e_bird { sequence = <E B I R D>; bindings = <&uc 0x1F426 0 &uc 0xFE0F 0>; };  // bird = 🐦
     seq_e_blood { sequence = <E B L O O D>; bindings = <&uc 0x1FA78 0>; };  // blood = 🩸
-    seq_e_blueberries { sequence = <E B L U E B E R R I E S>; bindings = <&uc 0x1FAD0 0>; };  // blueberries = 🫐
-    seq_e_boar { sequence = <E B O A R>; bindings = <&uc 0x1F417 0>; };  // boar = 🐗
-    seq_e_boat_sail { sequence = <E B O A T S A I L>; bindings = <&uc 0x26F5 0 &uc 0xFE0F 0>; };  // boat.sail = ⛵
+    // seq_e_blueberries { sequence = <E B L U E B E R R I E S>; bindings = <&uc 0x1FAD0 0>; };  // blueberries = 🫐
+    // seq_e_boar { sequence = <E B O A R>; bindings = <&uc 0x1F417 0>; };  // boar = 🐗
+    // seq_e_boat_sail { sequence = <E B O A T S A I L>; bindings = <&uc 0x26F5 0 &uc 0xFE0F 0>; };  // boat.sail = ⛵
     seq_e_bolt { sequence = <E B O L T>; bindings = <&uc 0x1F529 0>; };  // bolt = 🔩
     seq_e_bomb { sequence = <E B O M B>; bindings = <&uc 0x1F4A3 0 &uc 0xFE0F 0>; };  // bomb = 💣
     seq_e_bone { sequence = <E B O N E>; bindings = <&uc 0x1F9B4 0>; };  // bone = 🦴
-    seq_e_book_open { sequence = <E B O O K O P E N>; bindings = <&uc 0x1F4D6 0>; };  // book.open = 📖
+    // seq_e_book_open { sequence = <E B O O K O P E N>; bindings = <&uc 0x1F4D6 0>; };  // book.open = 📖
     seq_e_books { sequence = <E B O O K S>; bindings = <&uc 0x1F4DA 0 &uc 0xFE0F 0>; };  // books = 📚
     seq_e_bouquet { sequence = <E B O U Q U E T>; bindings = <&uc 0x1F490 0>; };  // bouquet = 💐
     seq_e_bow { sequence = <E B O W DOT>; bindings = <&uc 0x1F3F9 0>; };  // bow = 🏹
-    seq_e_bowling { sequence = <E B O W L I N G>; bindings = <&uc 0x1F3B3 0>; };  // bowling = 🎳
-    seq_e_boy { sequence = <E B O Y>; bindings = <&uc 0x1F466 0>; };  // boy = 👦
+    // seq_e_bowling { sequence = <E B O W L I N G>; bindings = <&uc 0x1F3B3 0>; };  // bowling = 🎳
+    // seq_e_boy { sequence = <E B O Y>; bindings = <&uc 0x1F466 0>; };  // boy = 👦
     seq_e_brain { sequence = <E B R A I N>; bindings = <&uc 0x1F9E0 0>; };  // brain = 🧠
     seq_e_bread { sequence = <E B R E A D>; bindings = <&uc 0x1F35E 0>; };  // bread = 🍞
     seq_e_brick { sequence = <E B R I C K>; bindings = <&uc 0x1F9F1 0>; };  // brick = 🧱
-    seq_e_bride { sequence = <E B R I D E>; bindings = <&uc 0x1F470 0>; };  // bride = 👰
+    // seq_e_bride { sequence = <E B R I D E>; bindings = <&uc 0x1F470 0>; };  // bride = 👰
     seq_e_broom { sequence = <E B R O O M>; bindings = <&uc 0x1F9F9 0>; };  // broom = 🧹
     seq_e_brush { sequence = <E B R U S H>; bindings = <&uc 0x1F58C 0 &uc 0xFE0F 0>; };  // brush = 🖌
     seq_e_bubble_anger_r { sequence = <E B U B B L E A N G E R R>; bindings = <&uc 0x1F5EF 0 &uc 0xFE0F 0>; };  // bubble.anger.r = 🗯
@@ -96,13 +96,13 @@
     seq_e_builder { sequence = <E B U I L D E R>; bindings = <&uc 0x1F477 0>; };  // builder = 👷
     seq_e_burger { sequence = <E B U R G E R>; bindings = <&uc 0x1F354 0>; };  // burger = 🍔
     seq_e_bus { sequence = <E B U S>; bindings = <&uc 0x1F68C 0>; };  // bus = 🚌
-    seq_e_butterfly { sequence = <E B U T T E R F L Y>; bindings = <&uc 0x1F98B 0>; };  // butterfly = 🦋
+    // seq_e_butterfly { sequence = <E B U T T E R F L Y>; bindings = <&uc 0x1F98B 0>; };  // butterfly = 🦋
     seq_e_cabinet_file { sequence = <E C A B I N E T F I L E>; bindings = <&uc 0x1F5C4 0 &uc 0xFE0F 0>; };  // cabinet.file = 🗄
     seq_e_cake { sequence = <E C A K E DOT>; bindings = <&uc 0x1F382 0>; };  // cake = 🎂
     seq_e_cake_moon { sequence = <E C A K E M O O N>; bindings = <&uc 0x1F96E 0>; };  // cake.moon = 🥮
     seq_e_calendar { sequence = <E C A L E N D A R DOT>; bindings = <&uc 0x1F4C5 0>; };  // calendar = 📅
     seq_e_calendar_spiral { sequence = <E C A L E N D A R S P I R A L>; bindings = <&uc 0x1F5D3 0 &uc 0xFE0F 0>; };  // calendar.spiral = 🗓
-    seq_e_camel { sequence = <E C A M E L>; bindings = <&uc 0x1F42B 0>; };  // camel = 🐫
+    // seq_e_camel { sequence = <E C A M E L>; bindings = <&uc 0x1F42B 0>; };  // camel = 🐫
     seq_e_camera { sequence = <E C A M E R A>; bindings = <&uc 0x1F4F7 0 &uc 0xFE0F 0>; };  // camera = 📷
     seq_e_camping { sequence = <E C A M P I N G>; bindings = <&uc 0x1F3D5 0 &uc 0xFE0F 0>; };  // camping = 🏕
     seq_e_can { sequence = <E C A N DOT>; bindings = <&uc 0x1F96B 0>; };  // can = 🥫
@@ -111,9 +111,9 @@
     seq_e_car { sequence = <E C A R DOT>; bindings = <&uc 0x1F697 0>; };  // car = 🚗
     seq_e_card_credit { sequence = <E C A R D C R E D I T>; bindings = <&uc 0x1F4B3 0 &uc 0xFE0F 0>; };  // card.credit = 💳
     seq_e_card_id { sequence = <E C A R D I D>; bindings = <&uc 0x1FAAA 0>; };  // card.id = 🪪
-    seq_e_carrot { sequence = <E C A R R O T>; bindings = <&uc 0x1F955 0>; };  // carrot = 🥕
+    // seq_e_carrot { sequence = <E C A R R O T>; bindings = <&uc 0x1F955 0>; };  // carrot = 🥕
     seq_e_cart { sequence = <E C A R T>; bindings = <&uc 0x1F6D2 0>; };  // cart = 🛒
-    seq_e_cat { sequence = <E C A T DOT>; bindings = <&uc 0x1F408 0 &uc 0xFE0F 0>; };  // cat = 🐈
+    // seq_e_cat { sequence = <E C A T DOT>; bindings = <&uc 0x1F408 0 &uc 0xFE0F 0>; };  // cat = 🐈
     seq_e_cat_face { sequence = <E C A T F A C E>; bindings = <&uc 0x1F431 0>; };  // cat.face = 🐱
     seq_e_chain { sequence = <E C H A I N DOT>; bindings = <&uc 0x1F517 0>; };  // chain = 🔗
     seq_e_chains { sequence = <E C H A I N S>; bindings = <&uc 0x26D3 0 &uc 0xFE0F 0>; };  // chains = ⛓
@@ -123,8 +123,8 @@
     seq_e_chart_up { sequence = <E C H A R T U P>; bindings = <&uc 0x1F4C8 0>; };  // chart.up = 📈
     seq_e_checkmark_box { sequence = <E C H E C K M A R K B O X>; bindings = <&uc 0x2705 0 &uc 0xFE0F 0>; };  // checkmark.box = ✅
     seq_e_checkmark_heavy { sequence = <E C H E C K M A R K H E A V Y>; bindings = <&uc 0x2714 0 &uc 0xFE0F 0>; };  // checkmark.heavy = ✔
-    seq_e_cheese { sequence = <E C H E E S E>; bindings = <&uc 0x1F9C0 0>; };  // cheese = 🧀
-    seq_e_child { sequence = <E C H I L D>; bindings = <&uc 0x1F9D2 0>; };  // child = 🧒
+    // seq_e_cheese { sequence = <E C H E E S E>; bindings = <&uc 0x1F9C0 0>; };  // cheese = 🧀
+    // seq_e_child { sequence = <E C H I L D>; bindings = <&uc 0x1F9D2 0>; };  // child = 🧒
     seq_e_chocolate { sequence = <E C H O C O L A T E>; bindings = <&uc 0x1F36B 0>; };  // chocolate = 🍫
     seq_e_circle_black { sequence = <E C I R C L E B L A C K>; bindings = <&uc 0x26AB 0 &uc 0xFE0F 0>; };  // circle.black = ⚫
     seq_e_circle_blue { sequence = <E C I R C L E B L U E>; bindings = <&uc 0x1F535 0>; };  // circle.blue = 🔵
@@ -134,7 +134,7 @@
     seq_e_circle_red { sequence = <E C I R C L E R E D>; bindings = <&uc 0x1F534 0>; };  // circle.red = 🔴
     seq_e_circle_white { sequence = <E C I R C L E W H I T E>; bindings = <&uc 0x26AA 0 &uc 0xFE0F 0>; };  // circle.white = ⚪
     seq_e_circle_yellow { sequence = <E C I R C L E Y E L L O W>; bindings = <&uc 0x1F7E1 0>; };  // circle.yellow = 🟡
-    seq_e_city { sequence = <E C I T Y>; bindings = <&uc 0x1F3D9 0 &uc 0xFE0F 0>; };  // city = 🏙
+    // seq_e_city { sequence = <E C I T Y>; bindings = <&uc 0x1F3D9 0 &uc 0xFE0F 0>; };  // city = 🏙
     seq_e_clamp { sequence = <E C L A M P>; bindings = <&uc 0x1F5DC 0 &uc 0xFE0F 0>; };  // clamp = 🗜
     seq_e_clip { sequence = <E C L I P DOT>; bindings = <&uc 0x1F4CE 0>; };  // clip = 📎
     seq_e_clipboard { sequence = <E C L I P B O A R D>; bindings = <&uc 0x1F4CB 0 &uc 0xFE0F 0>; };  // clipboard = 📋
@@ -145,7 +145,7 @@
     seq_e_cloud_rain { sequence = <E C L O U D R A I N>; bindings = <&uc 0x1F327 0 &uc 0xFE0F 0>; };  // cloud.rain = 🌧
     seq_e_cloud_storm { sequence = <E C L O U D S T O R M>; bindings = <&uc 0x26C8 0 &uc 0xFE0F 0>; };  // cloud.storm = ⛈
     seq_e_cloud_sun { sequence = <E C L O U D S U N>; bindings = <&uc 0x26C5 0 &uc 0xFE0F 0>; };  // cloud.sun = ⛅
-    seq_e_coat { sequence = <E C O A T>; bindings = <&uc 0x1F9E5 0>; };  // coat = 🧥
+    // seq_e_coat { sequence = <E C O A T>; bindings = <&uc 0x1F9E5 0>; };  // coat = 🧥
     seq_e_coffee { sequence = <E C O F F E E>; bindings = <&uc 0x2615 0 &uc 0xFE0F 0>; };  // coffee = ☕
     seq_e_coin { sequence = <E C O I N>; bindings = <&uc 0x1FA99 0>; };  // coin = 🪙
     seq_e_comet { sequence = <E C O M E T>; bindings = <&uc 0x2604 0 &uc 0xFE0F 0>; };  // comet = ☄
@@ -155,36 +155,36 @@
     seq_e_construction { sequence = <E C O N S T R U C T I O N>; bindings = <&uc 0x1F6A7 0>; };  // construction = 🚧
     seq_e_cookie { sequence = <E C O O K I E>; bindings = <&uc 0x1F36A 0>; };  // cookie = 🍪
     seq_e_copyright { sequence = <E C O P Y R I G H T>; bindings = <&uc 0xA9 0 &uc 0xFE0F 0>; };  // copyright = ©
-    seq_e_coral { sequence = <E C O R A L>; bindings = <&uc 0x1FAB8 0>; };  // coral = 🪸
+    // seq_e_coral { sequence = <E C O R A L>; bindings = <&uc 0x1FAB8 0>; };  // coral = 🪸
     seq_e_corn { sequence = <E C O R N>; bindings = <&uc 0x1F33D 0>; };  // corn = 🌽
-    seq_e_couch { sequence = <E C O U C H>; bindings = <&uc 0x1F6CB 0 &uc 0xFE0F 0>; };  // couch = 🛋
-    seq_e_cow { sequence = <E C O W>; bindings = <&uc 0x1F404 0>; };  // cow = 🐄
+    // seq_e_couch { sequence = <E C O U C H>; bindings = <&uc 0x1F6CB 0 &uc 0xFE0F 0>; };  // couch = 🛋
+    // seq_e_cow { sequence = <E C O W>; bindings = <&uc 0x1F404 0>; };  // cow = 🐄
     seq_e_crab { sequence = <E C R A B>; bindings = <&uc 0x1F980 0>; };  // crab = 🦀
     seq_e_crane { sequence = <E C R A N E>; bindings = <&uc 0x1F3D7 0 &uc 0xFE0F 0>; };  // crane = 🏗
     seq_e_crayon { sequence = <E C R A Y O N>; bindings = <&uc 0x1F58D 0 &uc 0xFE0F 0>; };  // crayon = 🖍
     seq_e_cricket { sequence = <E C R I C K E T>; bindings = <&uc 0x1F997 0>; };  // cricket = 🦗
     seq_e_crossmark { sequence = <E C R O S S M A R K>; bindings = <&uc 0x274C 0 &uc 0xFE0F 0>; };  // crossmark = ❌
-    seq_e_crown { sequence = <E C R O W N>; bindings = <&uc 0x1F451 0>; };  // crown = 👑
+    // seq_e_crown { sequence = <E C R O W N>; bindings = <&uc 0x1F451 0>; };  // crown = 👑
     seq_e_cupcake { sequence = <E C U P C A K E>; bindings = <&uc 0x1F9C1 0>; };  // cupcake = 🧁
-    seq_e_curry { sequence = <E C U R R Y>; bindings = <&uc 0x1F35B 0>; };  // curry = 🍛
+    // seq_e_curry { sequence = <E C U R R Y>; bindings = <&uc 0x1F35B 0>; };  // curry = 🍛
     seq_e_customs { sequence = <E C U S T O M S>; bindings = <&uc 0x1F6C3 0>; };  // customs = 🛃
-    seq_e_cutlery { sequence = <E C U T L E R Y>; bindings = <&uc 0x1F374 0>; };  // cutlery = 🍴
+    // seq_e_cutlery { sequence = <E C U T L E R Y>; bindings = <&uc 0x1F374 0>; };  // cutlery = 🍴
     seq_e_darts { sequence = <E D A R T S>; bindings = <&uc 0x1F3AF 0>; };  // darts = 🎯
-    seq_e_deer { sequence = <E D E E R>; bindings = <&uc 0x1F98C 0>; };  // deer = 🦌
+    // seq_e_deer { sequence = <E D E E R>; bindings = <&uc 0x1F98C 0>; };  // deer = 🦌
     seq_e_die { sequence = <E D I E>; bindings = <&uc 0x1F3B2 0>; };  // die = 🎲
     seq_e_discoball { sequence = <E D I S C O B A L L>; bindings = <&uc 0x1FAA9 0>; };  // discoball = 🪩
-    seq_e_dodo { sequence = <E D O D O>; bindings = <&uc 0x1F9A4 0>; };  // dodo = 🦤
+    // seq_e_dodo { sequence = <E D O D O>; bindings = <&uc 0x1F9A4 0>; };  // dodo = 🦤
     seq_e_dog { sequence = <E D O G DOT>; bindings = <&uc 0x1F415 0 &uc 0xFE0F 0>; };  // dog = 🐕
     seq_e_dog_face { sequence = <E D O G F A C E>; bindings = <&uc 0x1F436 0>; };  // dog.face = 🐶
     seq_e_dollar { sequence = <E D O L L A R>; bindings = <&uc 0x1F4B2 0>; };  // dollar = 💲
     seq_e_donut { sequence = <E D O N U T>; bindings = <&uc 0x1F369 0>; };  // donut = 🍩
     seq_e_door { sequence = <E D O O R>; bindings = <&uc 0x1F6AA 0>; };  // door = 🚪
     seq_e_dove_peace { sequence = <E D O V E P E A C E>; bindings = <&uc 0x1F54A 0 &uc 0xFE0F 0>; };  // dove.peace = 🕊
-    seq_e_dress { sequence = <E D R E S S>; bindings = <&uc 0x1F457 0>; };  // dress = 👗
+    // seq_e_dress { sequence = <E D R E S S>; bindings = <&uc 0x1F457 0>; };  // dress = 👗
     seq_e_drop { sequence = <E D R O P DOT>; bindings = <&uc 0x1F4A7 0>; };  // drop = 💧
     seq_e_drops { sequence = <E D R O P S>; bindings = <&uc 0x1F4A6 0>; };  // drops = 💦
     seq_e_drum { sequence = <E D R U M>; bindings = <&uc 0x1F941 0>; };  // drum = 🥁
-    seq_e_duck { sequence = <E D U C K>; bindings = <&uc 0x1F986 0>; };  // duck = 🦆
+    // seq_e_duck { sequence = <E D U C K>; bindings = <&uc 0x1F986 0>; };  // duck = 🦆
     seq_e_eagle { sequence = <E E A G L E>; bindings = <&uc 0x1F985 0>; };  // eagle = 🦅
     seq_e_ear { sequence = <E E A R>; bindings = <&uc 0x1F442 0 &uc 0xFE0F 0>; };  // ear = 👂
     seq_e_egg { sequence = <E E G G>; bindings = <&uc 0x1F95A 0>; };  // egg = 🥚
@@ -198,7 +198,7 @@
     seq_e_eye { sequence = <E E Y E DOT>; bindings = <&uc 0x1F441 0 &uc 0xFE0F 0>; };  // eye = 👁
     seq_e_eyes { sequence = <E E Y E S>; bindings = <&uc 0x1F440 0>; };  // eyes = 👀
     seq_e_face_angry { sequence = <E F A C E A N G R Y DOT>; bindings = <&uc 0x1F620 0>; };  // face.angry = 😠
-    seq_e_face_angry_red { sequence = <E F A C E A N G R Y R E D>; bindings = <&uc 0x1F621 0>; };  // face.angry.red = 😡
+    // seq_e_face_angry_red { sequence = <E F A C E A N G R Y R E D>; bindings = <&uc 0x1F621 0>; };  // face.angry.red = 😡
     seq_e_face_anguish { sequence = <E F A C E A N G U I S H>; bindings = <&uc 0x1F627 0>; };  // face.anguish = 😧
     seq_e_face_astonish { sequence = <E F A C E A S T O N I S H>; bindings = <&uc 0x1F632 0>; };  // face.astonish = 😲
     seq_e_face_bandage { sequence = <E F A C E B A N D A G E>; bindings = <&uc 0x1F915 0>; };  // face.bandage = 🤕
@@ -209,7 +209,7 @@
     seq_e_face_concern { sequence = <E F A C E C O N C E R N>; bindings = <&uc 0x1F626 0>; };  // face.concern = 😦
     seq_e_face_cool { sequence = <E F A C E C O O L>; bindings = <&uc 0x1F60E 0>; };  // face.cool = 😎
     seq_e_face_cover { sequence = <E F A C E C O V E R>; bindings = <&uc 0x1F92D 0>; };  // face.cover = 🤭
-    seq_e_face_cowboy { sequence = <E F A C E C O W B O Y>; bindings = <&uc 0x1F920 0>; };  // face.cowboy = 🤠
+    // seq_e_face_cowboy { sequence = <E F A C E C O W B O Y>; bindings = <&uc 0x1F920 0>; };  // face.cowboy = 🤠
     seq_e_face_cry { sequence = <E F A C E C R Y>; bindings = <&uc 0x1F62D 0>; };  // face.cry = 😭
     seq_e_face_diagonal { sequence = <E F A C E D I A G O N A L>; bindings = <&uc 0x1FAE4 0>; };  // face.diagonal = 🫤
     seq_e_face_disguise { sequence = <E F A C E D I S G U I S E>; bindings = <&uc 0x1F978 0>; };  // face.disguise = 🥸
@@ -243,7 +243,7 @@
     seq_e_face_meh { sequence = <E F A C E M E H>; bindings = <&uc 0x1F612 0>; };  // face.meh = 😒
     seq_e_face_melt { sequence = <E F A C E M E L T>; bindings = <&uc 0x1FAE0 0>; };  // face.melt = 🫠
     seq_e_face_money { sequence = <E F A C E M O N E Y>; bindings = <&uc 0x1F911 0>; };  // face.money = 🤑
-    seq_e_face_monocle { sequence = <E F A C E M O N O C L E>; bindings = <&uc 0x1F9D0 0>; };  // face.monocle = 🧐
+    // seq_e_face_monocle { sequence = <E F A C E M O N O C L E>; bindings = <&uc 0x1F9D0 0>; };  // face.monocle = 🧐
     seq_e_face_nausea { sequence = <E F A C E N A U S E A>; bindings = <&uc 0x1F922 0>; };  // face.nausea = 🤢
     seq_e_face_nerd { sequence = <E F A C E N E R D>; bindings = <&uc 0x1F913 0>; };  // face.nerd = 🤓
     seq_e_face_neutral { sequence = <E F A C E N E U T R A L>; bindings = <&uc 0x1F610 0 &uc 0xFE0F 0>; };  // face.neutral = 😐
@@ -299,45 +299,45 @@
     seq_e_faith_yinyang { sequence = <E F A I T H Y I N Y A N G>; bindings = <&uc 0x262F 0 &uc 0xFE0F 0>; };  // faith.yinyang = ☯
     seq_e_family { sequence = <E F A M I L Y>; bindings = <&uc 0x1F46A 0 &uc 0xFE0F 0>; };  // family = 👪
     seq_e_fax { sequence = <E F A X>; bindings = <&uc 0x1F4E0 0>; };  // fax = 📠
-    seq_e_feather { sequence = <E F E A T H E R>; bindings = <&uc 0x1FAB6 0>; };  // feather = 🪶
+    // seq_e_feather { sequence = <E F E A T H E R>; bindings = <&uc 0x1FAB6 0>; };  // feather = 🪶
     seq_e_filedividers { sequence = <E F I L E D I V I D E R S>; bindings = <&uc 0x1F5C2 0 &uc 0xFE0F 0>; };  // filedividers = 🗂
-    seq_e_film { sequence = <E F I L M>; bindings = <&uc 0x1F39E 0 &uc 0xFE0F 0>; };  // film = 🎞
+    // seq_e_film { sequence = <E F I L M>; bindings = <&uc 0x1F39E 0 &uc 0xFE0F 0>; };  // film = 🎞
     seq_e_finger_b { sequence = <E F I N G E R B>; bindings = <&uc 0x1F447 0 &uc 0xFE0F 0>; };  // finger.b = 👇
     seq_e_finger_l { sequence = <E F I N G E R L>; bindings = <&uc 0x1F448 0 &uc 0xFE0F 0>; };  // finger.l = 👈
     seq_e_finger_r { sequence = <E F I N G E R R>; bindings = <&uc 0x1F449 0 &uc 0xFE0F 0>; };  // finger.r = 👉
     seq_e_finger_t { sequence = <E F I N G E R T>; bindings = <&uc 0x1F446 0 &uc 0xFE0F 0>; };  // finger.t = 👆
     seq_e_fingers_cross { sequence = <E F I N G E R S C R O S S>; bindings = <&uc 0x1F91E 0>; };  // fingers.cross = 🤞
     seq_e_fire { sequence = <E F I R E DOT>; bindings = <&uc 0x1F525 0>; };  // fire = 🔥
-    seq_e_firecracker { sequence = <E F I R E C R A C K E R>; bindings = <&uc 0x1F9E8 0>; };  // firecracker = 🧨
+    // seq_e_firecracker { sequence = <E F I R E C R A C K E R>; bindings = <&uc 0x1F9E8 0>; };  // firecracker = 🧨
     seq_e_fish { sequence = <E F I S H>; bindings = <&uc 0x1F41F 0 &uc 0xFE0F 0>; };  // fish = 🐟
     seq_e_flag_goal { sequence = <E F L A G G O A L>; bindings = <&uc 0x1F3C1 0>; };  // flag.goal = 🏁
     seq_e_flag_red { sequence = <E F L A G R E D>; bindings = <&uc 0x1F6A9 0>; };  // flag.red = 🚩
-    seq_e_flamingo { sequence = <E F L A M I N G O>; bindings = <&uc 0x1F9A9 0>; };  // flamingo = 🦩
+    // seq_e_flamingo { sequence = <E F L A M I N G O>; bindings = <&uc 0x1F9A9 0>; };  // flamingo = 🦩
     seq_e_flashlight { sequence = <E F L A S H L I G H T>; bindings = <&uc 0x1F526 0>; };  // flashlight = 🔦
     seq_e_floppy { sequence = <E F L O P P Y>; bindings = <&uc 0x1F4BE 0>; };  // floppy = 💾
-    seq_e_flower_pink { sequence = <E F L O W E R P I N K>; bindings = <&uc 0x1F338 0>; };  // flower.pink = 🌸
+    // seq_e_flower_pink { sequence = <E F L O W E R P I N K>; bindings = <&uc 0x1F338 0>; };  // flower.pink = 🌸
     seq_e_flower_rose { sequence = <E F L O W E R R O S E>; bindings = <&uc 0x1F339 0>; };  // flower.rose = 🌹
     seq_e_flower_sun { sequence = <E F L O W E R S U N>; bindings = <&uc 0x1F33B 0>; };  // flower.sun = 🌻
     seq_e_flower_wilted { sequence = <E F L O W E R W I L T E D>; bindings = <&uc 0x1F940 0>; };  // flower.wilted = 🥀
-    seq_e_fly { sequence = <E F L Y>; bindings = <&uc 0x1FAB0 0>; };  // fly = 🪰
+    // seq_e_fly { sequence = <E F L Y>; bindings = <&uc 0x1FAB0 0>; };  // fly = 🪰
     seq_e_folder { sequence = <E F O L D E R>; bindings = <&uc 0x1F4C1 0>; };  // folder = 📁
     seq_e_foot { sequence = <E F O O T>; bindings = <&uc 0x1F9B6 0>; };  // foot = 🦶
     seq_e_forex { sequence = <E F O R E X>; bindings = <&uc 0x1F4B1 0>; };  // forex = 💱
-    seq_e_fountain { sequence = <E F O U N T A I N>; bindings = <&uc 0x26F2 0 &uc 0xFE0F 0>; };  // fountain = ⛲
-    seq_e_fox { sequence = <E F O X>; bindings = <&uc 0x1F98A 0>; };  // fox = 🦊
+    // seq_e_fountain { sequence = <E F O U N T A I N>; bindings = <&uc 0x26F2 0 &uc 0xFE0F 0>; };  // fountain = ⛲
+    // seq_e_fox { sequence = <E F O X>; bindings = <&uc 0x1F98A 0>; };  // fox = 🦊
     seq_e_fries { sequence = <E F R I E S>; bindings = <&uc 0x1F35F 0>; };  // fries = 🍟
-    seq_e_fuelpump { sequence = <E F U E L P U M P>; bindings = <&uc 0x26FD 0 &uc 0xFE0F 0>; };  // fuelpump = ⛽
+    // seq_e_fuelpump { sequence = <E F U E L P U M P>; bindings = <&uc 0x26FD 0 &uc 0xFE0F 0>; };  // fuelpump = ⛽
     seq_e_gear { sequence = <E G E A R>; bindings = <&uc 0x2699 0 &uc 0xFE0F 0>; };  // gear = ⚙
     seq_e_gem { sequence = <E G E M>; bindings = <&uc 0x1F48E 0>; };  // gem = 💎
     seq_e_genie { sequence = <E G E N I E>; bindings = <&uc 0x1F9DE 0>; };  // genie = 🧞
     seq_e_ghost { sequence = <E G H O S T>; bindings = <&uc 0x1F47B 0>; };  // ghost = 👻
     seq_e_giraffe { sequence = <E G I R A F F E>; bindings = <&uc 0x1F992 0>; };  // giraffe = 🦒
-    seq_e_girl { sequence = <E G I R L>; bindings = <&uc 0x1F467 0>; };  // girl = 👧
+    // seq_e_girl { sequence = <E G I R L>; bindings = <&uc 0x1F467 0>; };  // girl = 👧
     seq_e_glasses { sequence = <E G L A S S E S DOT>; bindings = <&uc 0x1F453 0 &uc 0xFE0F 0>; };  // glasses = 👓
     seq_e_glasses_sun { sequence = <E G L A S S E S S U N>; bindings = <&uc 0x1F576 0 &uc 0xFE0F 0>; };  // glasses.sun = 🕶
-    seq_e_globe_am { sequence = <E G L O B E A M>; bindings = <&uc 0x1F30E 0 &uc 0xFE0F 0>; };  // globe.am = 🌎
-    seq_e_globe_as_au { sequence = <E G L O B E A S A U>; bindings = <&uc 0x1F30F 0 &uc 0xFE0F 0>; };  // globe.as.au = 🌏
-    seq_e_globe_eu_af { sequence = <E G L O B E E U A F>; bindings = <&uc 0x1F30D 0 &uc 0xFE0F 0>; };  // globe.eu.af = 🌍
+    // seq_e_globe_am { sequence = <E G L O B E A M>; bindings = <&uc 0x1F30E 0 &uc 0xFE0F 0>; };  // globe.am = 🌎
+    // seq_e_globe_as_au { sequence = <E G L O B E A S A U>; bindings = <&uc 0x1F30F 0 &uc 0xFE0F 0>; };  // globe.as.au = 🌏
+    // seq_e_globe_eu_af { sequence = <E G L O B E E U A F>; bindings = <&uc 0x1F30D 0 &uc 0xFE0F 0>; };  // globe.eu.af = 🌍
     seq_e_goal { sequence = <E G O A L>; bindings = <&uc 0x1F945 0>; };  // goal = 🥅
     seq_e_goat { sequence = <E G O A T>; bindings = <&uc 0x1F410 0>; };  // goat = 🐐
     seq_e_grapes { sequence = <E G R A P E S>; bindings = <&uc 0x1F347 0>; };  // grapes = 🍇
@@ -346,19 +346,19 @@
     seq_e_hammer { sequence = <E H A M M E R>; bindings = <&uc 0x1F528 0>; };  // hammer = 🔨
     seq_e_hand_call { sequence = <E H A N D C A L L>; bindings = <&uc 0x1F919 0>; };  // hand.call = 🤙
     seq_e_hand_ok { sequence = <E H A N D O K>; bindings = <&uc 0x1F44C 0>; };  // hand.ok = 👌
-    seq_e_hand_part { sequence = <E H A N D P A R T>; bindings = <&uc 0x1F596 0>; };  // hand.part = 🖖
+    // seq_e_hand_part { sequence = <E H A N D P A R T>; bindings = <&uc 0x1F596 0>; };  // hand.part = 🖖
     seq_e_hand_peace { sequence = <E H A N D P E A C E>; bindings = <&uc 0x270C 0 &uc 0xFE0F 0>; };  // hand.peace = ✌
     seq_e_hand_raised { sequence = <E H A N D R A I S E D>; bindings = <&uc 0x270B 0 &uc 0xFE0F 0>; };  // hand.raised = ✋
-    seq_e_hand_rock { sequence = <E H A N D R O C K>; bindings = <&uc 0x1F918 0>; };  // hand.rock = 🤘
+    // seq_e_hand_rock { sequence = <E H A N D R O C K>; bindings = <&uc 0x1F918 0>; };  // hand.rock = 🤘
     seq_e_hand_splay { sequence = <E H A N D S P L A Y>; bindings = <&uc 0x1F590 0 &uc 0xFE0F 0>; };  // hand.splay = 🖐
     seq_e_hand_wave { sequence = <E H A N D W A V E>; bindings = <&uc 0x1F44B 0>; };  // hand.wave = 👋
     seq_e_hands_clap { sequence = <E H A N D S C L A P>; bindings = <&uc 0x1F44F 0>; };  // hands.clap = 👏
     seq_e_hands_folded { sequence = <E H A N D S F O L D E D>; bindings = <&uc 0x1F64F 0>; };  // hands.folded = 🙏
     seq_e_hands_heart { sequence = <E H A N D S H E A R T>; bindings = <&uc 0x1FAF6 0>; };  // hands.heart = 🫶
-    seq_e_hands_palms { sequence = <E H A N D S P A L M S>; bindings = <&uc 0x1F932 0>; };  // hands.palms = 🤲
+    // seq_e_hands_palms { sequence = <E H A N D S P A L M S>; bindings = <&uc 0x1F932 0>; };  // hands.palms = 🤲
     seq_e_hands_raised { sequence = <E H A N D S R A I S E D>; bindings = <&uc 0x1F64C 0>; };  // hands.raised = 🙌
     seq_e_hands_shake { sequence = <E H A N D S S H A K E>; bindings = <&uc 0x1F91D 0>; };  // hands.shake = 🤝
-    seq_e_hash { sequence = <E H A S H>; bindings = <&uc 0x23 0 &uc 0xFE0F 0>; };  // hash = #
+    // seq_e_hash { sequence = <E H A S H>; bindings = <&uc 0x23 0 &uc 0xFE0F 0>; };  // hash = #
     seq_e_heart { sequence = <E H E A R T DOT>; bindings = <&uc 0x2764 0 &uc 0xFE0F 0>; };  // heart = ❤
     seq_e_heart_black { sequence = <E H E A R T B L A C K>; bindings = <&uc 0x1F5A4 0>; };  // heart.black = 🖤
     seq_e_heart_broken { sequence = <E H E A R T B R O K E N>; bindings = <&uc 0x1F494 0>; };  // heart.broken = 💔
@@ -366,7 +366,7 @@
     seq_e_helix { sequence = <E H E L I X>; bindings = <&uc 0x1F9EC 0>; };  // helix = 🧬
     seq_e_hippo { sequence = <E H I P P O>; bindings = <&uc 0x1F99B 0>; };  // hippo = 🦛
     seq_e_hole { sequence = <E H O L E>; bindings = <&uc 0x1F573 0 &uc 0xFE0F 0>; };  // hole = 🕳
-    seq_e_honey { sequence = <E H O N E Y>; bindings = <&uc 0x1F36F 0>; };  // honey = 🍯
+    // seq_e_honey { sequence = <E H O N E Y>; bindings = <&uc 0x1F36F 0>; };  // honey = 🍯
     seq_e_hook { sequence = <E H O O K>; bindings = <&uc 0x1FA9D 0>; };  // hook = 🪝
     seq_e_horse { sequence = <E H O R S E>; bindings = <&uc 0x1F40E 0>; };  // horse = 🐎
     seq_e_hospital { sequence = <E H O S P I T A L>; bindings = <&uc 0x1F3E5 0>; };  // hospital = 🏥
@@ -387,7 +387,7 @@
     seq_e_key { sequence = <E K E Y DOT>; bindings = <&uc 0x1F511 0>; };  // key = 🔑
     seq_e_keyboard { sequence = <E K E Y B O A R D>; bindings = <&uc 0x2328 0 &uc 0xFE0F 0>; };  // keyboard = ⌨
     seq_e_kiss { sequence = <E K I S S DOT>; bindings = <&uc 0x1F48F 0>; };  // kiss = 💏
-    seq_e_kissmark { sequence = <E K I S S M A R K>; bindings = <&uc 0x1F48B 0>; };  // kissmark = 💋
+    // seq_e_kissmark { sequence = <E K I S S M A R K>; bindings = <&uc 0x1F48B 0>; };  // kissmark = 💋
     seq_e_kite { sequence = <E K I T E>; bindings = <&uc 0x1FA81 0>; };  // kite = 🪁
     seq_e_kiwi { sequence = <E K I W I>; bindings = <&uc 0x1F95D 0>; };  // kiwi = 🥝
     seq_e_knife { sequence = <E K N I F E>; bindings = <&uc 0x1F52A 0>; };  // knife = 🔪
@@ -401,27 +401,27 @@
     seq_e_lightbulb { sequence = <E L I G H T B U L B>; bindings = <&uc 0x1F4A1 0>; };  // lightbulb = 💡
     seq_e_lightning { sequence = <E L I G H T N I N G>; bindings = <&uc 0x26A1 0 &uc 0xFE0F 0>; };  // lightning = ⚡
     seq_e_lion { sequence = <E L I O N>; bindings = <&uc 0x1F981 0>; };  // lion = 🦁
-    seq_e_llama { sequence = <E L L A M A>; bindings = <&uc 0x1F999 0>; };  // llama = 🦙
+    // seq_e_llama { sequence = <E L L A M A>; bindings = <&uc 0x1F999 0>; };  // llama = 🦙
     seq_e_lobster { sequence = <E L O B S T E R>; bindings = <&uc 0x1F99E 0>; };  // lobster = 🦞
     seq_e_lock { sequence = <E L O C K DOT>; bindings = <&uc 0x1F512 0 &uc 0xFE0F 0>; };  // lock = 🔒
     seq_e_lock_open { sequence = <E L O C K O P E N>; bindings = <&uc 0x1F513 0 &uc 0xFE0F 0>; };  // lock.open = 🔓
     seq_e_luggage { sequence = <E L U G G A G E>; bindings = <&uc 0x1F9F3 0>; };  // luggage = 🧳
-    seq_e_lungs { sequence = <E L U N G S>; bindings = <&uc 0x1FAC1 0>; };  // lungs = 🫁
-    seq_e_mage { sequence = <E M A G E>; bindings = <&uc 0x1F9D9 0>; };  // mage = 🧙
+    // seq_e_lungs { sequence = <E L U N G S>; bindings = <&uc 0x1FAC1 0>; };  // lungs = 🫁
+    // seq_e_mage { sequence = <E M A G E>; bindings = <&uc 0x1F9D9 0>; };  // mage = 🧙
     seq_e_magnet { sequence = <E M A G N E T>; bindings = <&uc 0x1F9F2 0>; };  // magnet = 🧲
     seq_e_magnify_l { sequence = <E M A G N I F Y L>; bindings = <&uc 0x1F50D 0 &uc 0xFE0F 0>; };  // magnify.l = 🔍
     seq_e_magnify_r { sequence = <E M A G N I F Y R>; bindings = <&uc 0x1F50E 0>; };  // magnify.r = 🔎
     seq_e_mail { sequence = <E M A I L>; bindings = <&uc 0x2709 0 &uc 0xFE0F 0>; };  // mail = ✉
-    seq_e_man { sequence = <E M A N DOT>; bindings = <&uc 0x1F468 0>; };  // man = 👨
-    seq_e_mango { sequence = <E M A N G O>; bindings = <&uc 0x1F96D 0>; };  // mango = 🥭
+    // seq_e_man { sequence = <E M A N DOT>; bindings = <&uc 0x1F468 0>; };  // man = 👨
+    // seq_e_mango { sequence = <E M A N G O>; bindings = <&uc 0x1F96D 0>; };  // mango = 🥭
     seq_e_masks { sequence = <E M A S K S>; bindings = <&uc 0x1F3AD 0 &uc 0xFE0F 0>; };  // masks = 🎭
     seq_e_mate { sequence = <E M A T E>; bindings = <&uc 0x1F9C9 0>; };  // mate = 🧉
     seq_e_matryoshka { sequence = <E M A T R Y O S H K A>; bindings = <&uc 0x1FA86 0>; };  // matryoshka = 🪆
     seq_e_meat { sequence = <E M E A T>; bindings = <&uc 0x1F969 0>; };  // meat = 🥩
     seq_e_medal_first { sequence = <E M E D A L F I R S T>; bindings = <&uc 0x1F947 0>; };  // medal.first = 🥇
-    seq_e_medal_second { sequence = <E M E D A L S E C O N D>; bindings = <&uc 0x1F948 0>; };  // medal.second = 🥈
+    // seq_e_medal_second { sequence = <E M E D A L S E C O N D>; bindings = <&uc 0x1F948 0>; };  // medal.second = 🥈
     seq_e_medal_sports { sequence = <E M E D A L S P O R T S>; bindings = <&uc 0x1F3C5 0>; };  // medal.sports = 🏅
-    seq_e_medal_third { sequence = <E M E D A L T H I R D>; bindings = <&uc 0x1F949 0>; };  // medal.third = 🥉
+    // seq_e_medal_third { sequence = <E M E D A L T H I R D>; bindings = <&uc 0x1F949 0>; };  // medal.third = 🥉
     seq_e_megaphone { sequence = <E M E G A P H O N E DOT>; bindings = <&uc 0x1F4E2 0>; };  // megaphone = 📢
     seq_e_megaphone_simple { sequence = <E M E G A P H O N E S I M P L E>; bindings = <&uc 0x1F4E3 0>; };  // megaphone.simple = 📣
     seq_e_melon { sequence = <E M E L O N>; bindings = <&uc 0x1F348 0>; };  // melon = 🍈
@@ -434,7 +434,7 @@
     seq_e_moon_crescent { sequence = <E M O O N C R E S C E N T>; bindings = <&uc 0x1F319 0>; };  // moon.crescent = 🌙
     seq_e_moon_full { sequence = <E M O O N F U L L>; bindings = <&uc 0x1F315 0 &uc 0xFE0F 0>; };  // moon.full = 🌕
     seq_e_mortarboard { sequence = <E M O R T A R B O A R D>; bindings = <&uc 0x1F393 0 &uc 0xFE0F 0>; };  // mortarboard = 🎓
-    seq_e_motorway { sequence = <E M O T O R W A Y>; bindings = <&uc 0x1F6E3 0 &uc 0xFE0F 0>; };  // motorway = 🛣
+    // seq_e_motorway { sequence = <E M O T O R W A Y>; bindings = <&uc 0x1F6E3 0 &uc 0xFE0F 0>; };  // motorway = 🛣
     seq_e_mouse { sequence = <E M O U S E DOT>; bindings = <&uc 0x1F401 0>; };  // mouse = 🐁
     seq_e_mouse_face { sequence = <E M O U S E F A C E>; bindings = <&uc 0x1F42D 0>; };  // mouse.face = 🐭
     seq_e_mouth { sequence = <E M O U T H DOT>; bindings = <&uc 0x1F444 0>; };  // mouth = 👄
@@ -448,23 +448,23 @@
     seq_e_oil { sequence = <E O I L>; bindings = <&uc 0x1F6E2 0 &uc 0xFE0F 0>; };  // oil = 🛢
     seq_e_olive { sequence = <E O L I V E>; bindings = <&uc 0x1FAD2 0>; };  // olive = 🫒
     seq_e_onion { sequence = <E O N I O N>; bindings = <&uc 0x1F9C5 0>; };  // onion = 🧅
-    seq_e_orangutan { sequence = <E O R A N G U T A N>; bindings = <&uc 0x1F9A7 0>; };  // orangutan = 🦧
+    // seq_e_orangutan { sequence = <E O R A N G U T A N>; bindings = <&uc 0x1F9A7 0>; };  // orangutan = 🦧
     seq_e_orca { sequence = <E O R C A>; bindings = <&uc 0x1FACD 0>; };  // orca = 🫍
     seq_e_owl { sequence = <E O W L>; bindings = <&uc 0x1F989 0>; };  // owl = 🦉
-    seq_e_ox { sequence = <E O X>; bindings = <&uc 0x1F402 0>; };  // ox = 🐂
+    // seq_e_ox { sequence = <E O X>; bindings = <&uc 0x1F402 0>; };  // ox = 🐂
     seq_e_package { sequence = <E P A C K A G E>; bindings = <&uc 0x1F4E6 0 &uc 0xFE0F 0>; };  // package = 📦
     seq_e_page { sequence = <E P A G E DOT>; bindings = <&uc 0x1F4C4 0>; };  // page = 📄
     seq_e_page_curl { sequence = <E P A G E C U R L>; bindings = <&uc 0x1F4C3 0>; };  // page.curl = 📃
     seq_e_page_pencil { sequence = <E P A G E P E N C I L>; bindings = <&uc 0x1F4DD 0>; };  // page.pencil = 📝
     seq_e_pages_tabs { sequence = <E P A G E S T A B S>; bindings = <&uc 0x1F4D1 0>; };  // pages.tabs = 📑
     seq_e_palette { sequence = <E P A L E T T E>; bindings = <&uc 0x1F3A8 0>; };  // palette = 🎨
-    seq_e_pancakes { sequence = <E P A N C A K E S>; bindings = <&uc 0x1F95E 0>; };  // pancakes = 🥞
+    // seq_e_pancakes { sequence = <E P A N C A K E S>; bindings = <&uc 0x1F95E 0>; };  // pancakes = 🥞
     seq_e_panda { sequence = <E P A N D A>; bindings = <&uc 0x1F43C 0>; };  // panda = 🐼
     seq_e_parachute { sequence = <E P A R A C H U T E>; bindings = <&uc 0x1FA82 0>; };  // parachute = 🪂
     seq_e_park { sequence = <E P A R K>; bindings = <&uc 0x1F3DE 0 &uc 0xFE0F 0>; };  // park = 🏞
     seq_e_party { sequence = <E P A R T Y>; bindings = <&uc 0x1F389 0>; };  // party = 🎉
-    seq_e_peach { sequence = <E P E A C H>; bindings = <&uc 0x1F351 0>; };  // peach = 🍑
-    seq_e_pear { sequence = <E P E A R>; bindings = <&uc 0x1F350 0>; };  // pear = 🍐
+    // seq_e_peach { sequence = <E P E A C H>; bindings = <&uc 0x1F351 0>; };  // peach = 🍑
+    // seq_e_pear { sequence = <E P E A R>; bindings = <&uc 0x1F350 0>; };  // pear = 🍐
     seq_e_pen_ball { sequence = <E P E N B A L L>; bindings = <&uc 0x1F58A 0 &uc 0xFE0F 0>; };  // pen.ball = 🖊
     seq_e_pen_fountain { sequence = <E P E N F O U N T A I N>; bindings = <&uc 0x1F58B 0 &uc 0xFE0F 0>; };  // pen.fountain = 🖋
     seq_e_pencil { sequence = <E P E N C I L>; bindings = <&uc 0x270F 0 &uc 0xFE0F 0>; };  // pencil = ✏
@@ -473,29 +473,29 @@
     seq_e_petri { sequence = <E P E T R I>; bindings = <&uc 0x1F9EB 0>; };  // petri = 🧫
     seq_e_phone { sequence = <E P H O N E DOT>; bindings = <&uc 0x1F4F1 0>; };  // phone = 📱
     seq_e_phone_arrow { sequence = <E P H O N E A R R O W>; bindings = <&uc 0x1F4F2 0>; };  // phone.arrow = 📲
-    seq_e_phone_signal { sequence = <E P H O N E S I G N A L>; bindings = <&uc 0x1F4F6 0>; };  // phone.signal = 📶
+    // seq_e_phone_signal { sequence = <E P H O N E S I G N A L>; bindings = <&uc 0x1F4F6 0>; };  // phone.signal = 📶
     seq_e_piano { sequence = <E P I A N O>; bindings = <&uc 0x1F3B9 0>; };  // piano = 🎹
     seq_e_pick { sequence = <E P I C K>; bindings = <&uc 0x26CF 0 &uc 0xFE0F 0>; };  // pick = ⛏
     seq_e_pie { sequence = <E P I E>; bindings = <&uc 0x1F967 0>; };  // pie = 🥧
-    seq_e_pig { sequence = <E P I G>; bindings = <&uc 0x1F416 0>; };  // pig = 🐖
+    // seq_e_pig { sequence = <E P I G>; bindings = <&uc 0x1F416 0>; };  // pig = 🐖
     seq_e_pill { sequence = <E P I L L>; bindings = <&uc 0x1F48A 0>; };  // pill = 💊
     seq_e_pin { sequence = <E P I N DOT>; bindings = <&uc 0x1F4CC 0>; };  // pin = 📌
     seq_e_pin_round { sequence = <E P I N R O U N D>; bindings = <&uc 0x1F4CD 0>; };  // pin.round = 📍
     seq_e_pizza { sequence = <E P I Z Z A>; bindings = <&uc 0x1F355 0>; };  // pizza = 🍕
     seq_e_plant { sequence = <E P L A N T>; bindings = <&uc 0x1FAB4 0>; };  // plant = 🪴
     seq_e_plaster { sequence = <E P L A S T E R>; bindings = <&uc 0x1FA79 0>; };  // plaster = 🩹
-    seq_e_playback_down { sequence = <E P L A Y B A C K D O W N>; bindings = <&uc 0x23EC 0 &uc 0xFE0F 0>; };  // playback.down = ⏬
-    seq_e_playback_forward { sequence = <E P L A Y B A C K F O R W A R D>; bindings = <&uc 0x23E9 0 &uc 0xFE0F 0>; };  // playback.forward = ⏩
-    seq_e_playback_repeat { sequence = <E P L A Y B A C K R E P E A T DOT>; bindings = <&uc 0x1F501 0>; };  // playback.repeat = 🔁
-    seq_e_playback_repeat_v { sequence = <E P L A Y B A C K R E P E A T V>; bindings = <&uc 0x1F503 0>; };  // playback.repeat.v = 🔃
-    seq_e_playback_rewind { sequence = <E P L A Y B A C K R E W I N D>; bindings = <&uc 0x23EA 0 &uc 0xFE0F 0>; };  // playback.rewind = ⏪
-    seq_e_playback_shuffle { sequence = <E P L A Y B A C K S H U F F L E>; bindings = <&uc 0x1F500 0>; };  // playback.shuffle = 🔀
-    seq_e_playback_up { sequence = <E P L A Y B A C K U P>; bindings = <&uc 0x23EB 0 &uc 0xFE0F 0>; };  // playback.up = ⏫
+    // seq_e_playback_down { sequence = <E P L A Y B A C K D O W N>; bindings = <&uc 0x23EC 0 &uc 0xFE0F 0>; };  // playback.down = ⏬
+    // seq_e_playback_forward { sequence = <E P L A Y B A C K F O R W A R D>; bindings = <&uc 0x23E9 0 &uc 0xFE0F 0>; };  // playback.forward = ⏩
+    // seq_e_playback_repeat { sequence = <E P L A Y B A C K R E P E A T DOT>; bindings = <&uc 0x1F501 0>; };  // playback.repeat = 🔁
+    // seq_e_playback_repeat_v { sequence = <E P L A Y B A C K R E P E A T V>; bindings = <&uc 0x1F503 0>; };  // playback.repeat.v = 🔃
+    // seq_e_playback_rewind { sequence = <E P L A Y B A C K R E W I N D>; bindings = <&uc 0x23EA 0 &uc 0xFE0F 0>; };  // playback.rewind = ⏪
+    // seq_e_playback_shuffle { sequence = <E P L A Y B A C K S H U F F L E>; bindings = <&uc 0x1F500 0>; };  // playback.shuffle = 🔀
+    // seq_e_playback_up { sequence = <E P L A Y B A C K U P>; bindings = <&uc 0x23EB 0 &uc 0xFE0F 0>; };  // playback.up = ⏫
     seq_e_plunger { sequence = <E P L U N G E R>; bindings = <&uc 0x1FAA0 0>; };  // plunger = 🪠
     seq_e_policeofficer { sequence = <E P O L I C E O F F I C E R>; bindings = <&uc 0x1F46E 0>; };  // policeofficer = 👮
     seq_e_poo { sequence = <E P O O>; bindings = <&uc 0x1F4A9 0>; };  // poo = 💩
     seq_e_popcorn { sequence = <E P O P C O R N>; bindings = <&uc 0x1F37F 0>; };  // popcorn = 🍿
-    seq_e_pouch { sequence = <E P O U C H>; bindings = <&uc 0x1F45D 0>; };  // pouch = 👝
+    // seq_e_pouch { sequence = <E P O U C H>; bindings = <&uc 0x1F45D 0>; };  // pouch = 👝
     seq_e_powerplug { sequence = <E P O W E R P L U G>; bindings = <&uc 0x1F50C 0>; };  // powerplug = 🔌
     seq_e_present { sequence = <E P R E S E N T>; bindings = <&uc 0x1F381 0>; };  // present = 🎁
     seq_e_printer { sequence = <E P R I N T E R>; bindings = <&uc 0x1F5A8 0 &uc 0xFE0F 0>; };  // printer = 🖨
@@ -513,7 +513,7 @@
     seq_e_receipt { sequence = <E R E C E I P T>; bindings = <&uc 0x1F9FE 0>; };  // receipt = 🧾
     seq_e_recycling { sequence = <E R E C Y C L I N G>; bindings = <&uc 0x267B 0 &uc 0xFE0F 0>; };  // recycling = ♻
     seq_e_reg { sequence = <E R E G>; bindings = <&uc 0xAE 0 &uc 0xFE0F 0>; };  // reg = ®
-    seq_e_rhino { sequence = <E R H I N O>; bindings = <&uc 0x1F98F 0>; };  // rhino = 🦏
+    // seq_e_rhino { sequence = <E R H I N O>; bindings = <&uc 0x1F98F 0>; };  // rhino = 🦏
     seq_e_rice { sequence = <E R I C E>; bindings = <&uc 0x1F35A 0>; };  // rice = 🍚
     seq_e_ring { sequence = <E R I N G>; bindings = <&uc 0x1F48D 0>; };  // ring = 💍
     seq_e_robot { sequence = <E R O B O T>; bindings = <&uc 0x1F916 0>; };  // robot = 🤖
@@ -530,9 +530,9 @@
     seq_e_saw { sequence = <E S A W>; bindings = <&uc 0x1FA9A 0>; };  // saw = 🪚
     seq_e_school { sequence = <E S C H O O L>; bindings = <&uc 0x1F3EB 0>; };  // school = 🏫
     seq_e_scissors { sequence = <E S C I S S O R S>; bindings = <&uc 0x2702 0 &uc 0xFE0F 0>; };  // scissors = ✂
-    seq_e_scooter { sequence = <E S C O O T E R>; bindings = <&uc 0x1F6F4 0>; };  // scooter = 🛴
+    // seq_e_scooter { sequence = <E S C O O T E R>; bindings = <&uc 0x1F6F4 0>; };  // scooter = 🛴
     seq_e_screwdriver { sequence = <E S C R E W D R I V E R>; bindings = <&uc 0x1FA9B 0>; };  // screwdriver = 🪛
-    seq_e_seal { sequence = <E S E A L>; bindings = <&uc 0x1F9AD 0>; };  // seal = 🦭
+    // seq_e_seal { sequence = <E S E A L>; bindings = <&uc 0x1F9AD 0>; };  // seal = 🦭
     seq_e_seat { sequence = <E S E A T>; bindings = <&uc 0x1F4BA 0>; };  // seat = 💺
     seq_e_seedling { sequence = <E S E E D L I N G>; bindings = <&uc 0x1F331 0>; };  // seedling = 🌱
     seq_e_shark { sequence = <E S H A R K>; bindings = <&uc 0x1F988 0>; };  // shark = 🦈
@@ -542,40 +542,40 @@
     seq_e_shower { sequence = <E S H O W E R>; bindings = <&uc 0x1F6BF 0>; };  // shower = 🚿
     seq_e_skull { sequence = <E S K U L L DOT>; bindings = <&uc 0x1F480 0>; };  // skull = 💀
     seq_e_skull_bones { sequence = <E S K U L L B O N E S>; bindings = <&uc 0x2620 0 &uc 0xFE0F 0>; };  // skull.bones = ☠
-    seq_e_sled { sequence = <E S L E D>; bindings = <&uc 0x1F6F7 0>; };  // sled = 🛷
+    // seq_e_sled { sequence = <E S L E D>; bindings = <&uc 0x1F6F7 0>; };  // sled = 🛷
     seq_e_sloth { sequence = <E S L O T H>; bindings = <&uc 0x1F9A5 0>; };  // sloth = 🦥
     seq_e_snail { sequence = <E S N A I L>; bindings = <&uc 0x1F40C 0>; };  // snail = 🐌
     seq_e_snake { sequence = <E S N A K E>; bindings = <&uc 0x1F40D 0>; };  // snake = 🐍
     seq_e_snowflake { sequence = <E S N O W F L A K E>; bindings = <&uc 0x2744 0 &uc 0xFE0F 0>; };  // snowflake = ❄
     seq_e_snowman { sequence = <E S N O W M A N>; bindings = <&uc 0x26C4 0 &uc 0xFE0F 0>; };  // snowman = ⛄
     seq_e_soap { sequence = <E S O A P>; bindings = <&uc 0x1F9FC 0>; };  // soap = 🧼
-    seq_e_socks { sequence = <E S O C K S>; bindings = <&uc 0x1F9E6 0>; };  // socks = 🧦
+    // seq_e_socks { sequence = <E S O C K S>; bindings = <&uc 0x1F9E6 0>; };  // socks = 🧦
     seq_e_soup { sequence = <E S O U P>; bindings = <&uc 0x1F372 0>; };  // soup = 🍲
-    seq_e_spaghetti { sequence = <E S P A G H E T T I>; bindings = <&uc 0x1F35D 0>; };  // spaghetti = 🍝
+    // seq_e_spaghetti { sequence = <E S P A G H E T T I>; bindings = <&uc 0x1F35D 0>; };  // spaghetti = 🍝
     seq_e_sparkles { sequence = <E S P A R K L E S>; bindings = <&uc 0x2728 0 &uc 0xFE0F 0>; };  // sparkles = ✨
     seq_e_speaker { sequence = <E S P E A K E R>; bindings = <&uc 0x1F508 0 &uc 0xFE0F 0>; };  // speaker = 🔈
     seq_e_spider { sequence = <E S P I D E R DOT>; bindings = <&uc 0x1F577 0 &uc 0xFE0F 0>; };  // spider = 🕷
     seq_e_spiderweb { sequence = <E S P I D E R W E B>; bindings = <&uc 0x1F578 0 &uc 0xFE0F 0>; };  // spiderweb = 🕸
     seq_e_spoon { sequence = <E S P O O N>; bindings = <&uc 0x1F944 0>; };  // spoon = 🥄
-    seq_e_squid { sequence = <E S Q U I D>; bindings = <&uc 0x1F991 0>; };  // squid = 🦑
+    // seq_e_squid { sequence = <E S Q U I D>; bindings = <&uc 0x1F991 0>; };  // squid = 🦑
     seq_e_star { sequence = <E S T A R DOT>; bindings = <&uc 0x2B50 0 &uc 0xFE0F 0>; };  // star = ⭐
     seq_e_star_glow { sequence = <E S T A R G L O W>; bindings = <&uc 0x1F31F 0>; };  // star.glow = 🌟
-    seq_e_stethoscope { sequence = <E S T E T H O S C O P E>; bindings = <&uc 0x1FA7A 0>; };  // stethoscope = 🩺
+    // seq_e_stethoscope { sequence = <E S T E T H O S C O P E>; bindings = <&uc 0x1FA7A 0>; };  // stethoscope = 🩺
     seq_e_sun { sequence = <E S U N DOT>; bindings = <&uc 0x2600 0 &uc 0xFE0F 0>; };  // sun = ☀
-    seq_e_sun_face { sequence = <E S U N F A C E>; bindings = <&uc 0x1F31E 0>; };  // sun.face = 🌞
-    seq_e_sunrise { sequence = <E S U N R I S E>; bindings = <&uc 0x1F305 0>; };  // sunrise = 🌅
+    // seq_e_sun_face { sequence = <E S U N F A C E>; bindings = <&uc 0x1F31E 0>; };  // sun.face = 🌞
+    // seq_e_sunrise { sequence = <E S U N R I S E>; bindings = <&uc 0x1F305 0>; };  // sunrise = 🌅
     seq_e_superhero { sequence = <E S U P E R H E R O>; bindings = <&uc 0x1F9B8 0>; };  // superhero = 🦸
-    seq_e_sushi { sequence = <E S U S H I>; bindings = <&uc 0x1F363 0>; };  // sushi = 🍣
-    seq_e_swan { sequence = <E S W A N>; bindings = <&uc 0x1F9A2 0>; };  // swan = 🦢
-    seq_e_syringe { sequence = <E S Y R I N G E>; bindings = <&uc 0x1F489 0>; };  // syringe = 💉
-    seq_e_taco { sequence = <E T A C O>; bindings = <&uc 0x1F32E 0>; };  // taco = 🌮
-    seq_e_tap { sequence = <E T A P>; bindings = <&uc 0x1F6B0 0>; };  // tap = 🚰
+    // seq_e_sushi { sequence = <E S U S H I>; bindings = <&uc 0x1F363 0>; };  // sushi = 🍣
+    // seq_e_swan { sequence = <E S W A N>; bindings = <&uc 0x1F9A2 0>; };  // swan = 🦢
+    // seq_e_syringe { sequence = <E S Y R I N G E>; bindings = <&uc 0x1F489 0>; };  // syringe = 💉
+    // seq_e_taco { sequence = <E T A C O>; bindings = <&uc 0x1F32E 0>; };  // taco = 🌮
+    // seq_e_tap { sequence = <E T A P>; bindings = <&uc 0x1F6B0 0>; };  // tap = 🚰
     seq_e_taxi { sequence = <E T A X I>; bindings = <&uc 0x1F695 0>; };  // taxi = 🚕
-    seq_e_teacup { sequence = <E T E A C U P>; bindings = <&uc 0x1F375 0>; };  // teacup = 🍵
-    seq_e_teapot { sequence = <E T E A P O T>; bindings = <&uc 0x1FAD6 0>; };  // teapot = 🫖
-    seq_e_teddy { sequence = <E T E D D Y>; bindings = <&uc 0x1F9F8 0>; };  // teddy = 🧸
+    // seq_e_teacup { sequence = <E T E A C U P>; bindings = <&uc 0x1F375 0>; };  // teacup = 🍵
+    // seq_e_teapot { sequence = <E T E A P O T>; bindings = <&uc 0x1FAD6 0>; };  // teapot = 🫖
+    // seq_e_teddy { sequence = <E T E D D Y>; bindings = <&uc 0x1F9F8 0>; };  // teddy = 🧸
     seq_e_telescope { sequence = <E T E L E S C O P E>; bindings = <&uc 0x1F52D 0>; };  // telescope = 🔭
-    seq_e_tengu { sequence = <E T E N G U>; bindings = <&uc 0x1F47A 0>; };  // tengu = 👺
+    // seq_e_tengu { sequence = <E T E N G U>; bindings = <&uc 0x1F47A 0>; };  // tengu = 👺
     seq_e_tent { sequence = <E T E N T>; bindings = <&uc 0x26FA 0 &uc 0xFE0F 0>; };  // tent = ⛺
     seq_e_testtube { sequence = <E T E S T T U B E>; bindings = <&uc 0x1F9EA 0>; };  // testtube = 🧪
     seq_e_thermometer { sequence = <E T H E R M O M E T E R>; bindings = <&uc 0x1F321 0 &uc 0xFE0F 0>; };  // thermometer = 🌡
@@ -586,20 +586,20 @@
     seq_e_toiletpaper { sequence = <E T O I L E T P A P E R>; bindings = <&uc 0x1F9FB 0>; };  // toiletpaper = 🧻
     seq_e_tomato { sequence = <E T O M A T O>; bindings = <&uc 0x1F345 0>; };  // tomato = 🍅
     seq_e_toolbox { sequence = <E T O O L B O X>; bindings = <&uc 0x1F9F0 0>; };  // toolbox = 🧰
-    seq_e_toothbrush { sequence = <E T O O T H B R U S H>; bindings = <&uc 0x1FAA5 0>; };  // toothbrush = 🪥
+    // seq_e_toothbrush { sequence = <E T O O T H B R U S H>; bindings = <&uc 0x1FAA5 0>; };  // toothbrush = 🪥
     seq_e_trackball { sequence = <E T R A C K B A L L>; bindings = <&uc 0x1F5B2 0 &uc 0xFE0F 0>; };  // trackball = 🖲
     seq_e_train { sequence = <E T R A I N DOT>; bindings = <&uc 0x1F686 0>; };  // train = 🚆
     seq_e_train_steam { sequence = <E T R A I N S T E A M>; bindings = <&uc 0x1F682 0>; };  // train.steam = 🚂
-    seq_e_transgender { sequence = <E T R A N S G E N D E R>; bindings = <&uc 0x26A7 0 &uc 0xFE0F 0>; };  // transgender = ⚧
+    // seq_e_transgender { sequence = <E T R A N S G E N D E R>; bindings = <&uc 0x26A7 0 &uc 0xFE0F 0>; };  // transgender = ⚧
     seq_e_treasure { sequence = <E T R E A S U R E>; bindings = <&uc 0x1FA8E 0>; };  // treasure = 🪎
     seq_e_tree_evergreen { sequence = <E T R E E E V E R G R E E N>; bindings = <&uc 0x1F332 0>; };  // tree.evergreen = 🌲
-    seq_e_tree_palm { sequence = <E T R E E P A L M>; bindings = <&uc 0x1F334 0>; };  // tree.palm = 🌴
+    // seq_e_tree_palm { sequence = <E T R E E P A L M>; bindings = <&uc 0x1F334 0>; };  // tree.palm = 🌴
     seq_e_tree_xmas { sequence = <E T R E E X M A S>; bindings = <&uc 0x1F384 0>; };  // tree.xmas = 🎄
     seq_e_triangle_l { sequence = <E T R I A N G L E L>; bindings = <&uc 0x25C0 0 &uc 0xFE0F 0>; };  // triangle.l = ◀
     seq_e_triangle_r { sequence = <E T R I A N G L E R>; bindings = <&uc 0x25B6 0 &uc 0xFE0F 0>; };  // triangle.r = ▶
     seq_e_trophy { sequence = <E T R O P H Y>; bindings = <&uc 0x1F3C6 0 &uc 0xFE0F 0>; };  // trophy = 🏆
     seq_e_truck { sequence = <E T R U C K>; bindings = <&uc 0x1F69A 0>; };  // truck = 🚚
-    seq_e_tv { sequence = <E T V>; bindings = <&uc 0x1F4FA 0 &uc 0xFE0F 0>; };  // tv = 📺
+    // seq_e_tv { sequence = <E T V>; bindings = <&uc 0x1F4FA 0 &uc 0xFE0F 0>; };  // tv = 📺
     seq_e_ufo { sequence = <E U F O>; bindings = <&uc 0x1F6F8 0>; };  // ufo = 🛸
     seq_e_unicorn { sequence = <E U N I C O R N>; bindings = <&uc 0x1F984 0>; };  // unicorn = 🦄
     seq_e_volcano { sequence = <E V O L C A N O>; bindings = <&uc 0x1F30B 0>; };  // volcano = 🌋
@@ -608,13 +608,13 @@
     seq_e_watch { sequence = <E W A T C H DOT>; bindings = <&uc 0x231A 0 &uc 0xFE0F 0>; };  // watch = ⌚
     seq_e_watch_stop { sequence = <E W A T C H S T O P>; bindings = <&uc 0x23F1 0 &uc 0xFE0F 0>; };  // watch.stop = ⏱
     seq_e_wave { sequence = <E W A V E>; bindings = <&uc 0x1F30A 0>; };  // wave = 🌊
-    seq_e_wc { sequence = <E W C>; bindings = <&uc 0x1F6BE 0>; };  // wc = 🚾
+    // seq_e_wc { sequence = <E W C>; bindings = <&uc 0x1F6BE 0>; };  // wc = 🚾
     seq_e_wheel { sequence = <E W H E E L>; bindings = <&uc 0x1F6DE 0>; };  // wheel = 🛞
     seq_e_wind { sequence = <E W I N D DOT>; bindings = <&uc 0x1F32C 0 &uc 0xFE0F 0>; };  // wind = 🌬
-    seq_e_window { sequence = <E W I N D O W>; bindings = <&uc 0x1FA9F 0>; };  // window = 🪟
+    // seq_e_window { sequence = <E W I N D O W>; bindings = <&uc 0x1FA9F 0>; };  // window = 🪟
     seq_e_wine { sequence = <E W I N E>; bindings = <&uc 0x1F377 0>; };  // wine = 🍷
     seq_e_wireless { sequence = <E W I R E L E S S>; bindings = <&uc 0x1F6DC 0>; };  // wireless = 🛜
-    seq_e_wolf { sequence = <E W O L F>; bindings = <&uc 0x1F43A 0>; };  // wolf = 🐺
+    // seq_e_wolf { sequence = <E W O L F>; bindings = <&uc 0x1F43A 0>; };  // wolf = 🐺
     seq_e_wood { sequence = <E W O O D>; bindings = <&uc 0x1FAB5 0>; };  // wood = 🪵
     seq_e_worm { sequence = <E W O R M>; bindings = <&uc 0x1FAB1 0>; };  // worm = 🪱
     seq_e_wrench { sequence = <E W R E N C H>; bindings = <&uc 0x1F527 0>; };  // wrench = 🔧
