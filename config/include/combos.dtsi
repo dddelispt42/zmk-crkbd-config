@@ -16,7 +16,35 @@ ZMK_COMBO(bspc, &kp BSPC, RM3 RM4, 0, COMBO_TIMEOUT, 150)
 ZMK_COMBO(ctrlbspc, &kp LC(BSPC), RM1 RM2, 0, COMBO_TIMEOUT, 150)
 ZMK_COMBO(del, &kp DEL, RT3 RT4, 0, COMBO_TIMEOUT, 150)
 ZMK_COMBO(repeat_right, &key_repeat, RM0 RM1, 0, COMBO_TIMEOUT, 150)
-ZMK_COMBO(sz, &kp RA(S), LB2 LB1, 0, COMBO_TIMEOUT, 100)
+/*
+ * sz: ß / ẞ on the QWERTY C+V chord.
+ *
+ * This used to be &kp RA(S), i.e. RightAlt+S, relying on the pt_PT layout's
+ * AltGr+S. That only ever worked reliably on Linux: Windows 11 types nothing on
+ * a single AltGr+S and needs the chord pressed twice, and Android has no AltGr
+ * layout with ß on S at all, so there it did nothing.
+ *
+ * Sending the code point through &uc moves the job to the host helper, which
+ * knows how to enter a character on its own platform. What each host needs:
+ *
+ *   Linux    fcitx5, with the unicode addon enabled
+ *   Windows  WinCompose installed - the boot default mode is WIN_COMPOSE;
+ *            without WinCompose nothing is emitted
+ *   Android  Fcitx5 for Android set as the active IME (not the Gboard default)
+ *
+ * The mode follows the Bluetooth profile, so picking it on the BLUETH layer
+ * sets both together (bt_win / bt_linux* in macros.dtsi).
+ *
+ * The second cell is the Shift result: &uc takes (unshifted, shifted), so
+ * plain C+V gives ß and Shift+C+V gives ẞ:
+ *
+ *   &uc 0x00DF 0x1E9E     ß  U+00DF  LATIN SMALL LETTER SHARP S
+ *                          ẞ  U+1E9E  LATIN CAPITAL LETTER SHARP S
+ *
+ * With a plain `&uc 0x00DF` a shifted chord would still emit ß, which is worse
+ * than nothing. Both code points fit ZMK's uint32_t binding cells.
+ */
+ZMK_COMBO(sz, &uc 0x00DF 0x1E9E, LB2 LB1, 0, COMBO_TIMEOUT, 100)  // C+V -> ß, Shift+C+V -> ẞ
 ZMK_COMBO(pup, &kp PG_UP, LT1 LT0, 0, COMBO_TIMEOUT, 150)
 ZMK_COMBO(down, &kp PG_DN, LM1 LM0, 0, COMBO_TIMEOUT, 150)
 ZMK_COMBO(prtwin, &kp PSCRN, LB4 LB3, 0, COMBO_TIMEOUT, 150)

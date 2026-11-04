@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Structural audit of keyd/x390.conf.
+"""Structural audit of keyd/pt_pt.conf.
 
 keyd's own `keyd check` validates syntax only - it accepts a config that binds a
 key twice (last wins, silently), references a layer that does not exist until
@@ -24,7 +24,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-CONF = ROOT / "keyd/x390.conf"
+CONF = ROOT / "keyd/pt_pt.conf"
 KEYD_SRC = ROOT / ".research/keyd-src"
 KEYS_C = KEYD_SRC / "src/keys.c"
 CONFIG_H = KEYD_SRC / "src/config.h"
@@ -238,7 +238,7 @@ def main() -> int:
                    if not any(f"[{c}]" in w for c in composites)]
 
     # ---- report ----------------------------------------------------------
-    print(f"keyd/x390.conf: {len(text.splitlines())} lines, "
+    print(f"keyd/pt_pt.conf: {len(text.splitlines())} lines, "
           f"{len(plain)} plain layers of {limit} allowed")
     print(f"  sections: {', '.join(sorted(n for n in layers if n not in ('ids','global')))}")
 

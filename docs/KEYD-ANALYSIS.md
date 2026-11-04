@@ -1,12 +1,12 @@
-# keyd for the X390 internal keyboard — design brief
+# keyd for a conventional pt_PT keyboard — design brief
 
-This is the analysis behind `keyd/x390.conf`. It records **what carries over, what
+This is the analysis behind `keyd/pt_pt.conf`. It records **what carries over, what
 cannot, and why**, so the config does not have to be reverse-engineered later.
 
-The target hardware is the internal keyboard of a Lenovo ThinkPad X390 Yoga. It is
-used when the split board is left at home, so the goal is *not* a replacement — it
-is to keep the highest-value parts of the ZMK layout reachable on a conventional
-6-row laptop keyboard with no thumb cluster.
+The target hardware is a conventional 6-row pt_PT keyboard (internal or external).
+It is used when the split board is left at home, so the goal is *not* a
+replacement — it is to keep the highest-value parts of the ZMK layout reachable
+on a conventional 6-row keyboard with no thumb cluster.
 
 Everything here was checked against the repo and against keyd's own sources, which
 are vendored at `.research/keyd-src` (upstream `rvaiya/keyd`, v2.6.0). Claims about
@@ -28,7 +28,7 @@ carries six behaviours that are structurally unlike the rest:
 | `RH1` | `&mo SYMBOL` | momentary layer for programming punctuation |
 | `RH2` | `&key_repeat` | repeat last keypress |
 
-The X390 keyboard has **no thumb keys at all**. Its bottom row is
+A conventional 6-row keyboard has **no thumb keys at all**. Its bottom row is
 `Ctrl Fn Win Alt Space AltGr arrows`, and its physical layout is a standard
 PT/ISO-style 6-row matrix. So all six thumb behaviours must either move onto a
 non-thumb key or be dropped.
@@ -148,7 +148,7 @@ The generated sign-off macros follow all of this:
   nearest is a `command()` shelling out to a helper, which is not worth it. Dropped.
 * **No pointing/scroll layer.** keyd cannot emit relative motion events; the ZMK
   MOUSE layer (`&mmv`, `&mkp`, `&msc`) is not reproducible. Dropped.
-* **No BLE/USB switching.** keyd cannot change the laptop's radio state; the
+* **No BLE/USB switching.** keyd cannot change the keyboard's radio state; the
   BLUETH layer's `&bt`, `&out`, `&bootloader` have no meaning. Dropped.
 
 ---
@@ -241,9 +241,15 @@ combos:
   three-finger ones. Set to a value near ZMK's `SPLIT_COMBO_TIMEOUT` (75 ms) as a
   compromise, and document which chords get harder.
 * **Three-key chords** (`LM3 LM2 LM1` etc.) are supported by keyd (`config.c`
-  rejects more than 4), but are much harder to hit reliably on a laptop keyboard
-  whose key spacing differs from the split board. Implement the two-key chords
-  and document the rest as omitted.
+  rejects more than 4), but are much harder to hit reliably on a conventional
+  6-row keyboard whose key spacing differs from the split board. Implement the
+  two-key chords and document the rest as omitted.
+* **ß is the one place the two mechanisms genuinely differ.** ZMK's `sz` combo
+  sends the code point U+00DF through `&uc`, so a host helper (fcitx5,
+  WinCompose) types it; keyd binds `s = ß` on `[pt_altgr]` (and `s = ẞ` on
+  `[pt_altgr+pt_shift]`), which the host's own pt_PT layout resolves natively.
+  The output is identical, the mechanism is not — which is the general
+  difference between the two configs rather than a defect in either.
 
 ### 3.5 Unicode compose and modifiers
 

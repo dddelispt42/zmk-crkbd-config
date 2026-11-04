@@ -3,7 +3,7 @@
 
 Reads keyd's own compose table (.research/keyd-src/data/keyd.compose) and the
 generated ZMK leader sequence files, and reports which code points keyd can
-actually emit. Used to write the honest coverage numbers in keyd/x390.conf.
+actually emit. Used to write the honest coverage numbers in keyd/pt_pt.conf.
 
 Run from the repo root:  python3 keyd/tools/coverage.py
 """

@@ -346,9 +346,18 @@
          * the reconnect that follows.
          *
          * Profile 0 is the Windows machine (WinCompose), profiles 1-4 are Linux
-         * machines running fcitx5, which uses the "alt" input sequence
-         * (Ctrl+Shift held, U, hex, Space) - hence UC_MODE_LINUX_ALT rather
-         * than UC_MODE_LINUX, which is the IBus convention.
+         * machines running fcitx5.
+         *
+         * The Linux profiles use UC_MODE_LINUX: tap LC(LS(U)), then the hex
+         * digits, then SPACE. fcitx5's Direct Unicode mode is Control+Shift+U
+         * and it does NOT require the modifier to be held while the digits are
+         * typed - that is confirmed by a working fcitx5 setup.
+         *
+         * UC_MODE_LINUX_ALT is the held-modifier variant (press+hold LC(LSHFT),
+         * tap U, hex, tap SPACE, release). It was briefly switched to on the
+         * theory that fcitx5's modifier-carrying-key guard made the tap form
+         * unusable; that theory was wrong and the change was reverted. Do not
+         * "fix" this to LINUX_ALT without a failing test on a real machine.
          */
         ZMK_MACRO(bt_win,           // profile 0 = Windows
                 wait-ms = <MACRO_WAIT>;

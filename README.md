@@ -66,25 +66,60 @@ Press it, then a short sequence:
 | **emoji** | leader, `E`, then the name | `E H E A R T` → ❤, `E T H U M B U P` → 👍 |
 | **Greek** | leader, `G`, then one letter | `G G` → γ, `G G`+Shift → Γ |
 | **sign-offs** | leader, two or three letters | `O B R` → "Obrigado,\nHeiko" |
-| **unicode mode** | leader, `U X L/W/M` | switch the input method to Linux/Windows/macOS |
+| **unicode mode** | leader, `U X L/W/M` | switch the input method to Linux+Android/Windows/macOS |
 
-### Unicode input needs a host-side helper on Windows and Linux
+### Unicode input needs a host-side helper
 
-Every symbol, emoji, Greek letter and ACCENT mark is typed by entering a code
-point, and each OS does that differently. The mode is switched with
-`leader` `U X L` / `U X W` / `U X M`, and **Windows is the boot default**.
+Every symbol, emoji, Greek letter, ACCENT mark and the ß chord is typed by
+entering a code point, and each OS does that differently. The mode is switched
+with `leader` `U X L` / `U X W` / `U X M`, and **Windows is the boot default**.
 
 | mode | needs | can reach |
 |---|---|---|
 | `UXW` Windows | [WinCompose](https://github.com/ell1010/wincompose) installed | everything |
-| `UXL` Linux | an input method (fcitx5) | everything |
+| `UXL` Linux / Android | an input method (fcitx5) | everything |
 | `UXM` macOS | nothing | everything |
+
+On Linux and Android the mode is the Linux one: `Ctrl`+`Shift`+`U`, then the
+hex digits, then `Space` (`UC_MODE_LINUX`). The modifier is tapped and released
+first - fcitx5 does not need it held while the digits are typed.
 
 **Windows requires WinCompose.** Without it the keyboard still sends the
 sequence but nothing appears - for *any* symbol, not just some. Install it and
 it runs at startup. If you prefer no extra software, `UC_MODE_WIN_ALT`
 (HexNumpad) works out of the box but cannot reach code points above U+FFFF,
 which excludes most emoji.
+
+### ß is C+V, and it is a code point now
+
+**C+V on QWERTY types ß**, and **Shift+C+V types ẞ** (U+1E9E, capital sharp S).
+The chord is unchanged; what it sends is not. It used to send the pt_PT
+`AltGr`+`S` key, which only works where the host layout defines that key:
+
+* **Linux** is fine - the pt_PT layout has ß on `AltGr`+`S`.
+* **Windows 11** was not: the raw chord did not reliably produce ß there.
+* **Android** was worse: there is no pt_PT `AltGr`+`S` at all, so no native key
+  combination can produce ß. The chord did nothing.
+
+So the board now sends the code point **U+00DF** through the same unicode path
+as every other symbol, and the host helper types it. That makes the chord behave
+identically on all three platforms, at the cost of requiring the helper:
+
+| platform | what ß needs |
+|---|---|
+| Windows 11 | WinCompose installed (`UXW`, the boot default) |
+| Linux | fcitx5 (`UXL`) |
+| Android | Fcitx5 for Android installed and selected as the active IME |
+
+The Android entry matters more than it looks: Gboard ships as the default IME on
+most Android devices, and Fcitx5 does nothing until it is explicitly selected.
+
+Android uses the same Linux unicode mode as Linux, so `UXL` is the mode
+for both. Switching is per connected machine: the BLUETH layer profile keys set
+the profile and the mode together (`#0` Windows, `#1`-`#4` Linux), and
+`leader` `U X L/W/M` overrides the mode by hand. See
+[config/include/combos.dtsi](config/include/combos.dtsi) for the binding and
+`bt_win`/`bt_linux*` in `config/include/macros.dtsi` for the profile macros.
 
 ### The vector arrows and harpoons never attach to the letter
 
@@ -159,27 +194,30 @@ the result, which is what keeps the tables below the code rather than beside it.
 `symbols-gen` re-fetches typst's tables. The enabled set is preserved, so it is
 only needed to pick up new symbols upstream.
 
-## Using the laptop keyboard (keyd)
+## Using a conventional keyboard (keyd)
 
-When the split board stays at home, `keyd/` carries the same layout onto the
-Lenovo X390 Yoga's internal keyboard. keyd has no thumb cluster, so the six
-thumb behaviours are relocated to CapsLock (leader), Tab (NUMNAV), right AltGr
-(SYMBOL) and Backspace; `key_repeat`, the MOUSE layer and the BLUETH layer are
-dropped because keyd cannot express them.
+When the split board stays at home, `keyd/` carries the same layout onto any
+conventional 6-row pt_PT keyboard — a laptop's internal one or an external
+one. keyd has no thumb cluster, so the six thumb behaviours are relocated to
+CapsLock (leader), Tab (NUMNAV), right AltGr (SYMBOL) and Backspace;
+`key_repeat`, the MOUSE layer and the BLUETH layer are dropped because keyd
+cannot express them. The config targets a pt_PT keymap; the vendor special keys
+(mic mute, wifi, bluetooth, keyboard backlight) are bound only where the keyboard
+actually has them.
 
-* [docs/KEYD-X390.md](docs/KEYD-X390.md) — how to install it and reach each
+* [docs/KEYD-GUIDE.md](docs/KEYD-GUIDE.md) — how to install it and reach each
   feature; what is and is not possible.
 * [docs/KEYD-ANALYSIS.md](docs/KEYD-ANALYSIS.md) — the design reasoning and the
   keyd/ZMK differences that matter.
 * [docs/KEYD-VERIFICATION.md](docs/KEYD-VERIFICATION.md) — adversarial review,
   with the six defects it found and how each was fixed.
 
-`keyd/x390.conf` is generated — do not edit it by hand:
+`keyd/pt_pt.conf` is generated — do not edit it by hand:
 
 ```sh
-python3 keyd/tools/gen_x390.py          # regenerate from the ZMK sources
-python3 keyd/tools/gen_x390.py --check  # fail if the file is stale
-python3 keyd/tools/audit.py             # checks keyd check does not do
+python3 keyd/tools/gen_pt_pt.py          # regenerate from the ZMK sources
+python3 keyd/tools/gen_pt_pt.py --check  # fail if the file is stale
+python3 keyd/tools/audit.py              # checks keyd check does not do
 ```
 
 ## Repository layout

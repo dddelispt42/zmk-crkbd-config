@@ -1,4 +1,4 @@
-# keyd/x390.conf — adversarial verification
+# keyd/pt_pt.conf — adversarial verification
 
 Verified against keyd sources only (`.research/keyd-src`), keyd binary
 (`bin/keyd`), and ZMK sources. Method: static reading of `src/`, plus a
@@ -13,8 +13,8 @@ runtime defects and one documentation/instruction defect survive every check.
 
 | # | Item | Result |
 |---|------|--------|
-| 1 | `keyd check keyd/x390.conf` exit 0 | **PASS** |
-| 2 | `gen_x390.py --check` current; deterministic | **PASS** |
+| 1 | `keyd check keyd/pt_pt.conf` exit 0 | **PASS** |
+| 2 | `gen_pt_pt.py --check` current; deterministic | **PASS** |
 | 3 | audit.py genuinely detects dup key / bad key / bad layer | **PASS** (all three fire) |
 | 4 | `macro(Best space regards comma enter Heiko)` types "Best regards,\nHeiko" | **PASS** (fragile, see D5) |
 | 5 | `macro(∑)` compiles to a working key sequence | **PASS** (U+2211 present) |
@@ -28,8 +28,8 @@ runtime defects and one documentation/instruction defect survive every check.
 ## 1. `keyd check` — PASS
 
 ```
-$ .research/keyd-src/bin/keyd check keyd/x390.conf
-Parsing keyd/x390.conf
+$ .research/keyd-src/bin/keyd check keyd/pt_pt.conf
+Parsing keyd/pt_pt.conf
 
 No errors found.
 exit 0
@@ -37,7 +37,7 @@ exit 0
 
 ## 2. Generator freshness and determinism — PASS
 
-`python3 keyd/tools/gen_x390.py --check` prints `keyd/x390.conf is current`,
+`python3 keyd/tools/gen_pt_pt.py --check` prints `keyd/pt_pt.conf is current`,
 exit 0. Ran the generator twice and compared output byte-for-byte: identical
 (md5 `611d2039eedd2ae0a94cf91bee4b3749`). Note `diff`/`cmp` are absent on this
 host; comparison was done in Python.
@@ -99,7 +99,7 @@ character. keyd documents the opposite convention — `keyd.scdoc:628-629`:
 "`macro(space)` inserts a space but `macro(s pace)` writes 'space'". So a token
 spelled `comma` means "press the comma key", not "type the word comma". The
 config happens to want a comma, so it is correct today; but the generator's
-`_esc` docstring (`gen_x390.py:80-81`) asserts the reasoning backwards, and any
+`_esc` docstring (`gen_pt_pt.py:80-81`) asserts the reasoning backwards, and any
 literal text containing the word "comma", "space", "enter" or "tab" would be
 silently replaced by the keypress. The generator already special-cases space,
 newline and tab for this reason and treats comma the same way — consistent, but
@@ -161,7 +161,7 @@ layers. See defect D1.
 OP_OVERLOAD_TIMEOUT, { ARG_LAYER, ARG_DESCRIPTOR, ARG_TIMEOUT } }`). So
 `a = overloadt(meta, a, 200)` is well-formed.
 
-But the config's claim is false. `keyd/x390.conf:346-348` says:
+But the config's claim is false. `keyd/pt_pt.conf:346-348` says:
 
 > ZMK's &hm/&hms ... use flavor=tap-preferred with require-prior-idle-ms, which
 > keyd has no equivalent for.
@@ -203,7 +203,7 @@ merging, does not detect duplicate bindings, and does not simulate key output.
 
 ### D1 — `[numnav:shift]` and `[numnav:control]` do not create modifier layers; the digit row is dead. SEVERITY: HIGH
 
-`keyd/x390.conf:475` (`[numnav:shift]`) and `:487` (`[numnav:control]`).
+`keyd/pt_pt.conf:475` (`[numnav:shift]`) and `:487` (`[numnav:control]`).
 
 keyd's `config_add_layer` (`config.c:445-470`) strtoks the section name on `:`
 to get `numnav`, finds that layer already exists, and **returns 1 without
@@ -211,7 +211,7 @@ creating or modifying anything** (`config.c:459-460`). The section's bindings
 are then routed by `config.c:978` (`"%s.%s = %s"` with `layername` = the same
 strtok'd name) straight into the plain `numnav` layer's keymap. Since "the most
 recent one takes precedence" (`keyd.scdoc:268`), the digit bindings at
-`keyd/x390.conf:404-413` are overwritten.
+`keyd/pt_pt.conf:404-413` are overwritten.
 
 Proof — parsed layer table shows no `numnav:shift` layer at all:
 
@@ -238,7 +238,7 @@ with explicit `layer(...)` on a key.
 
 ### D2 — Footer claims keyd has no prior-idle equivalent. It does. SEVERITY: HIGH
 
-`keyd/x390.conf:346-347`: "require-prior-idle-ms, which keyd has no equivalent
+`keyd/pt_pt.conf:346-347`: "require-prior-idle-ms, which keyd has no equivalent
 for."
 
 `overloadi(<action1>, <action2>, <idle timeout>)` is exactly that:
@@ -255,7 +255,7 @@ equivalence).
 
 ### D3 — "4 Outlook headings" and "37 of 49" arithmetic is inconsistent with the dropped list. SEVERITY: LOW
 
-`keyd/x390.conf:893-897`. The note claims "9 sign-offs, 4 Outlook headings, 25
+`keyd/pt_pt.conf:893-897`. The note claims "9 sign-offs, 4 Outlook headings, 25
 Greek letters" (= 38) ported, but only 3 headings exist in keyd (`[leader_a]`
 c=Actions, g=Agenda; `[leader_o_b]` j=Objective — lines 743, 744, 786). `ao`
 (`A O` → `&m_ao`, `behaviors.dtsi:124`) is dropped and is not named in the
@@ -266,7 +266,7 @@ list.
 
 ### D4 — `esc = noop` in `[leader_math]` / `[leader_emoji]` does not leave the layer. SEVERITY: MEDIUM
 
-`keyd/x390.conf:861` and `:883`, commented "Leave the layer."
+`keyd/pt_pt.conf:861` and `:883`, commented "Leave the layer."
 
 `noop` is a keycode (`keys.c:269`, `KEYD_NOOP` = 195), not an action; binding a
 key to it makes that key do nothing (`keyboard.c:74`). It does not deactivate a
@@ -280,7 +280,7 @@ the comment to "swallow".
 
 ### D5 — The escape-hatch instruction "type the name's code point" is wrong. SEVERITY: HIGH
 
-`keyd/x390.conf:812-814` and the generator header at `gen_x390.py:345-347`:
+`keyd/pt_pt.conf:812-814` and the generator header at `gen_pt_pt.py:345-347`:
 "type the name's code point".
 
 keyd's compose sequences are **base36 table indices**, not code points
@@ -295,7 +295,7 @@ describes, or bind the glyphs directly.
 
 ### D6 — "3167 interior nodes" is not a computed value. SEVERITY: INFO
 
-`keyd/x390.conf:801` and `gen_x390.py:340`. Recomputing over the 951 names gives
+`keyd/pt_pt.conf:801` and `gen_pt_pt.py:340`. Recomputing over the 951 names gives
 947 distinct names and **3151** interior trie nodes. The argument (the set does
 not fit in 32 layers, `config.h:15`) is sound either way; only the figure is
 stale/approximate and presented as measured.
@@ -318,8 +318,8 @@ stale/approximate and presented as measured.
 
 ## Resolution log — all defects addressed
 
-Each defect below was fixed in `keyd/tools/gen_x390.py` and the config
-regenerated. Re-run `keyd/tools/gen_x390.py --check` and
+Each defect below was fixed in `keyd/tools/gen_pt_pt.py` and the config
+regenerated. Re-run `keyd/tools/gen_pt_pt.py --check` and
 `keyd/tools/audit.py` to confirm.
 
 ### D1 — `[numnav:shift]` silently discarded — FIXED
@@ -371,7 +371,7 @@ as a real way out; releasing capslock also exits.
 
 "Type the code point" was wrong: keyd's compose sequences are base-36 *indices*,
 so `∑` is `<Cancel><5><y><9>` and typing `2211` yields `ఆ`. The config and
-`docs/KEYD-X390.md` now document the correct hatch,
+`docs/KEYD-GUIDE.md` now document the correct hatch,
 `keyd do 'macro(<glyph>)'`, which runs keyd's real `macro_parse` in the daemon.
 
 ### D6 — "3167 interior nodes" — FIXED

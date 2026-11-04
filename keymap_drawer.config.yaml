@@ -127,7 +127,7 @@ draw_config:
     material: https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/{}/default/48px.svg
   use_local_cache: true
 parse_config:
-  zmk_additional_includes: 
+  zmk_additional_includes:
     - "zmk-helpers/include"
     # The refactored keymaps live in config/ and include shared files via
     # config-relative paths (keys.h, include/*.dtsi), and keys.h in turn pulls
@@ -193,6 +193,13 @@ parse_config:
     "&uc UC_VULGAR_FRACTION_SEVEN_EIGHTHS": "⅞"
     "&uc UC_VULGAR_FRACTION_ONE_NINTH": "⅑"
     "&uc UC_VULGAR_FRACTION_ONE_TENTH": "⅒"
+    # Sharp S, on the QWERTY C+V chord (combo_sz in combos.dtsi). It used to be
+    # the raw `RA(S)` binding; it is now a code point, so the alias had to move
+    # with it. Without this entry keymap-drawer finds no match and echoes the
+    # binding verbatim, which printed "&uc 0x00DF 0x1E9E" in the combo diagram
+    # instead of the glyph. The Shift result (U+1E9E) is not drawn: the legend
+    # is a single string and the unshifted glyph is the one worth seeing.
+    "&uc 0x00DF 0x1E9E": "ß"
     "&key_repeat": "$$mdi:repeat$$"
     "&sys_reset": "$$mdi:restart$$"
     "&bootloader": "$$mdi:cog-transfer$$"
@@ -619,7 +626,9 @@ parse_config:
     RCTRL: $$mdi:apple-keyboard-control$$
     LCTRL: $$mdi:apple-keyboard-control$$
     LEFT_CONTROL: $$mdi:apple-keyboard-control$$
-    RA(S): 'ß'
+    # RA(S) was the sharp-S combo's binding until it became a code point; the
+    # glyph is now mapped in raw_binding_map above, so this entry is gone. It is
+    # an exact-match key, and no binding in the keymap spells RA(S) any more.
     # LC(LA(LS(J))): $$mdi:face$$
     Meh-J: $$mdi:face$$
   zmk_combos:

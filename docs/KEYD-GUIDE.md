@@ -1,9 +1,9 @@
-# keyd on the X390 internal keyboard
+# keyd on a conventional pt_PT keyboard
 
-This is the practical guide to `keyd/x390.conf`: how to install it, how to reach
+This is the practical guide to `keyd/pt_pt.conf`: how to install it, how to reach
 the features that ZMK puts on thumb keys, and an honest account of what is not
 possible. The design reasoning is in [KEYD-ANALYSIS.md](KEYD-ANALYSIS.md); the
-generated config is `keyd/x390.conf`, produced by `keyd/tools/gen_x390.py`.
+generated config is `keyd/pt_pt.conf`, produced by `keyd/tools/gen_pt_pt.py`.
 
 ---
 
@@ -21,10 +21,10 @@ where your thumbs rest.**
 | `RH1` SYMBOL | programming punctuation | **right AltGr** |
 | `RH2` key_repeat | repeat last key | **dropped** |
 
-CapsLock and Tab are adjacent on the X390's bottom-left, so the two layer keys
-sit together exactly as the ZMK thumb cluster did. Right AltGr is the spare key
-under your right thumb. That is the closest a laptop keyboard gets to a thumb
-cluster.
+CapsLock and Tab are adjacent on a conventional keyboard's bottom-left, so the
+two layer keys sit together exactly as the ZMK thumb cluster did. Right AltGr is
+the spare key under your right thumb. That is the closest a 6-row keyboard gets
+to a thumb cluster.
 
 ---
 
@@ -36,16 +36,16 @@ sudo pacman -S keyd
 
 # copy the config into place
 sudo mkdir -p /etc/keyd
-sudo cp keyd/x390.conf /etc/keyd/
+sudo cp keyd/pt_pt.conf /etc/keyd/
 
 # validate BEFORE enabling the daemon
-sudo keyd check /etc/keyd/x390.conf
+sudo keyd check /etc/keyd/pt_pt.conf
 
 sudo systemctl enable --now keyd
 ```
 
-Then find the internal keyboard's id and exclude your split boards so keyd
-leaves them alone:
+Then find the keyboard's id and exclude your split boards so keyd leaves them
+alone:
 
 ```sh
 sudo keyd monitor        # press a key on each device, note the id
@@ -59,7 +59,7 @@ Put each split-board id in the `[ids]` exclude list at the top of the config
 Two scripts in `keyd/tools/` are part of the deliverable:
 
 ```sh
-python3 keyd/tools/gen_x390.py --check   # config matches its generator
+python3 keyd/tools/gen_pt_pt.py --check   # config matches its generator
 python3 keyd/tools/audit.py              # structural checks keyd check misses
 python3 keyd/tools/coverage.py           # unicode coverage of the symbol sets
 ```
@@ -116,8 +116,8 @@ Home/End/PgUp/PgDn/Insert on the home row.
 ### MEDIA — from SYMBOL
 
 Hold right AltGr, then `right AltGr` again for MEDIA: volume on `u`/`j`,
-brightness on `k`/`l`, and the ThinkPad's own keys (mic mute, wifi, bluetooth,
-keyboard backlight) on the left hand.
+brightness on `k`/`l`, and the vendor media/special keys if your keyboard has
+them (mic mute, wifi, bluetooth, keyboard backlight) on the left hand.
 
 ### Chords (replacing ZMK combos)
 
@@ -132,6 +132,13 @@ Two-key chords on the base layer, matching ZMK's positions:
 | `j` + `k` | Delete |
 | `x` + `c` | Ctrl-A |
 | `c` + `v` | Ctrl-Z |
+
+The chord set matches ZMK's, with one deliberate divergence in mechanism. ZMK's
+`C`+`V` chord now sends the code point U+00DF through the `&uc` unicode
+behaviour, so the host helper types ß; keyd instead maps `s` on `[pt_altgr]`
+straight to the character (`s = ß`, with `s = ẞ` on `[pt_altgr+pt_shift]`),
+which the host layout resolves natively. Same output, different mechanism —
+keyd remaps the host layout, the ZMK board cannot.
 
 ---
 
@@ -172,7 +179,7 @@ These are limits of what keyd *is*, not of this config:
 | ZMK feature | why keyd cannot do it |
 |---|---|
 | **MOUSE layer** | keyd remaps keys; it cannot emit relative pointer motion. `&mmv`, `&mkp`, `&msc` have no equivalent. |
-| **BLUETH layer** | keyd cannot change the laptop's radio state. `&bt`, `&out`, `&bootloader` are meaningless. |
+| **BLUETH layer** | keyd cannot change the keyboard's radio state. `&bt`, `&out`, `&bootloader` are meaningless. |
 | **key_repeat** | keyd has no "repeat last key" action. |
 | **Home-row mods** | *Not* a limitation after all — keyd has `lettermod`, which is ZMK's prior-idle guard under another name. See below. |
 | **WMCFG / MSOUTL / MACROS layers** | These drive AHK/Outlook macros that only work on machines running the user's AutoHotkey scripts. The four Outlook *heading* macros are reproduced as leader sequences. |
@@ -247,7 +254,7 @@ no second source of truth.
   layer that you did not bind does its base-layer action, it does not do nothing.
 * **One chord timeout.** ZMK has three tiers (50/75/175 ms); keyd has one global
   value. It is set to 75 ms. The three-finger ZMK chords are therefore omitted —
-  on a laptop's key spacing they are hard to hit reliably anyway.
+  on a conventional keyboard's key spacing they are hard to hit reliably anyway.
 * **Modifiers are not consumed.** ZMK's mod-morphs swallow the modifier that
   triggered them; keyd's modifier layers leave it held. This only matters when
   chaining shortcuts.

@@ -182,6 +182,14 @@ ZMK_MOD_MORPH(num_sub_N0, bindings = <&kp N0 &uc UC_SUBSCRIPT_ZERO>; mods = <(MO
             //   UXL = Linux / fcitx5
             //   UXW = Windows (needs WinCompose installed)
             //   UXM = macOS
+            //
+            // UXL uses UC_SET_LINUX, the tap-and-release form: tap
+            // LC(LS(U)), then the hex digits, then SPACE. fcitx5's Direct
+            // Unicode mode is Control+Shift+U, and the modifier does NOT have
+            // to be held while the digits are typed - that was checked against
+            // a working fcitx5 setup. UC_SET_LINUX_ALT is the held-modifier
+            // variant; an attempt to switch to it was therefore reverted, so do
+            // not "fix" this to ALT without a failing test on a real machine.
             uxl { sequence = <U X L>; bindings = <&uc UC_SET_LINUX>; };
             uxw { sequence = <U X W>; bindings = <&uc UC_SET_WIN_COMPOSE>; };
             uxm { sequence = <U X M>; bindings = <&uc UC_SET_MACOS>; };
